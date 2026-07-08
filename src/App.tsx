@@ -628,9 +628,16 @@ function CharacterDetail({
 </div>
 
           <div className="character-actions">
-            <button onClick={longRest}>Long Rest</button>
-            <button onClick={() => navigate("/characters")}>Listeye Dön</button>
-          </div>
+  <button onClick={longRest}>Long Rest</button>
+
+  <button
+    onClick={() => navigate(`/characters/${activeCharacter.id}/edit`)}
+  >
+    Düzenle
+  </button>
+
+  <button onClick={() => navigate("/characters")}>Listeye Dön</button>
+</div>
         </aside>
       </div>
     </PageShell>
@@ -987,6 +994,424 @@ function Builder({
           <button className="primary-action" type="submit">
             Karakteri Kaydet
           </button>
+        </section>
+      </form>
+    </PageShell>
+  );
+}
+
+function CharacterEditor({
+  characters,
+  onUpdateCharacter,
+  rulesetData,
+  isRulesetLoading,
+  rulesetError,
+}: {
+  characters: Character[];
+  onUpdateCharacter: (character: Character) => void;
+  rulesetData: RulesetData | null;
+  isRulesetLoading: boolean;
+  rulesetError: string | null;
+}) {
+  const { characterId } = useParams();
+  const navigate = useNavigate();
+
+  const character = characters.find((item) => item.id === characterId);
+
+  const [draft, setDraft] = useState<CharacterDraft>(emptyDraft);
+
+  useEffect(() => {
+    if (!character) {
+      return;
+    }
+
+    setDraft({
+      name: character.name,
+      playerName: character.playerName,
+      ruleset: character.ruleset,
+      race: character.race,
+      className: character.className,
+      subclass: character.subclass,
+      background: character.background,
+      level: character.level,
+      abilities: character.abilities,
+      maxHp: character.maxHp,
+      armorClass: character.armorClass,
+      notes: character.notes,
+    });
+  }, [character]);
+
+  const selectedRace = useMemo(() => {
+    return rulesetData?.races.find((race) => race.name === draft.race) ?? null;
+  }, [rulesetData, draft.race]);
+
+  const selectedClass = useMemo(() => {
+    return (
+      rulesetData?.classes.find(
+        (classItem) => classItem.name === draft.className
+      ) ?? null
+    );
+  }, [rulesetData, draft.className]);
+
+  function updateDraft<K extends keyof CharacterDraft>(
+    key: K,
+    value: CharacterDraft[K]
+  ) {
+    setDraft((current) => ({
+      ...current,
+      [key]: value,
+    }));
+  }
+
+  function updateAbility(
+    ability: keyof CharacterDraft["abilities"],
+    value: number
+  ) {
+    setDraft((current) => ({
+      ...current,
+      abilities: {
+        ...current.abilities,
+        [ability]: value,
+      },
+    }));
+  }
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!character) {
+      return;
+    }
+
+    if (!draft.name.trim()) {
+      alert("Karakter adı lazım kankam. İsimsiz kahraman ancak yan NPC olur.");
+      return;
+    }
+
+    if (!draft.className.trim()) {
+      alert("Class seçmeden karakter olmaz. Sistem bile buna güler.");
+      return;
+    }
+
+    const updatedCharacter: Character = {
+      ...character,
+      ...draft,
+      currentHp: Math.min(character.currentHp, draft.maxHp),
+      updatedAt: new Date().toISOString(),
+    };
+
+    onUpdateCharacter(updatedCharacter);
+    navigate(`/characters/${character.id}`);
+  }
+
+  const previewCharacter = useMemo(
+    () => createCharacterFromDraft(draft),
+    [draft]
+  );
+
+  if (!character) {
+    return (
+      <PageShell
+        eyebrow="Character Editor"
+        title="Karakter Bulunamadı"
+        description="Düzenlenecek karakter ya silindi ya da Git conflict görüp kaçtı."
+      >
+        <button
+          className="primary-action"
+          onClick={() => navigate("/characters")}
+        >
+          Karakterlere Dön
+        </button>
+      </PageShell>
+    );
+  }
+
+  return (
+    <PageShell
+      eyebrow="Character Editor"
+      title={`${character.name} Düzenle`}
+      description="Karakter bilgilerini güncelle. D&D karakterleri zaten sabit kalmaz, oyuncular da durduk yere fikir değiştirir."
+    >
+      <form className="builder-form" onSubmit={handleSubmit}>
+        <section className="form-panel">
+          <h2>Temel Bilgiler</h2>
+
+          <div className="form-grid">
+            <label>
+              Karakter Adı
+              <input
+                value={draft.name}
+                onChange={(event) => updateDraft("name", event.target.value)}
+                placeholder="Sora, Tengiz, Akai..."
+              />
+            </label>
+
+            <label>
+              Oyuncu
+              <input
+                value={draft.playerName}
+                onChange={(event) =>
+                  updateDraft("playerName", event.target.value)
+                }
+                placeholder="Oyuncu adı"
+              />
+            </label>
+
+            <label>
+              Ruleset
+              <select
+                value={draft.ruleset}
+                onChange={(event) =>
+                  updateDraft(
+                    "ruleset",
+                    event.target.value as CharacterDraft["ruleset"]
+                  )
+                }
+              >
+                <option value="dnd_2014">D&D 2014</option>
+                <option value="dnd_2024">D&D 2024</option>
+                <option value="homebrew">Homebrew</option>
+              </select>
+            </label>
+
+            <label>
+              Level
+              <input
+                type="number"
+                min={1}
+                max={20}
+                value={draft.level}
+                onChange={(event) =>
+                  updateDraft("level", Number(event.target.value))
+                }
+              />
+            </label>
+
+            <label>
+              Race
+              {draft.ruleset === "dnd_2014" ? (
+                <select
+                  value={draft.race}
+                  disabled={isRulesetLoading || !!rulesetError || !rulesetData}
+                  onChange={(event) => updateDraft("race", event.target.value)}
+                >
+                  <option value="">
+                    {isRulesetLoading
+                      ? "Race data yükleniyor..."
+                      : "Race seç"}
+                  </option>
+
+                  {rulesetData?.races.map((race) => (
+                    <option key={race.id} value={race.name}>
+                      {race.name}
+                    </option>
+                  ))}
+                </select>
+              ) : (
+                <input
+                  value={draft.race}
+                  onChange={(event) => updateDraft("race", event.target.value)}
+                  placeholder="Custom race..."
+                />
+              )}
+            </label>
+
+            <label>
+              Class
+              {draft.ruleset === "dnd_2014" ? (
+                <select
+                  value={draft.className}
+                  disabled={isRulesetLoading || !!rulesetError || !rulesetData}
+                  onChange={(event) =>
+                    updateDraft("className", event.target.value)
+                  }
+                >
+                  <option value="">
+                    {isRulesetLoading
+                      ? "Class data yükleniyor..."
+                      : "Class seç"}
+                  </option>
+
+                  {rulesetData?.classes.map((classItem) => (
+                    <option key={classItem.id} value={classItem.name}>
+                      {classItem.name}
+                    </option>
+                  ))}
+                </select>
+              ) : (
+                <input
+                  value={draft.className}
+                  onChange={(event) =>
+                    updateDraft("className", event.target.value)
+                  }
+                  placeholder="Custom class..."
+                />
+              )}
+            </label>
+
+            <label>
+              Subclass
+              <input
+                value={draft.subclass}
+                onChange={(event) =>
+                  updateDraft("subclass", event.target.value)
+                }
+                placeholder="Desert Domain..."
+              />
+            </label>
+
+            <label>
+              Background
+              <input
+                value={draft.background}
+                onChange={(event) =>
+                  updateDraft("background", event.target.value)
+                }
+                placeholder="Acolyte, Sailor..."
+              />
+            </label>
+          </div>
+
+          {rulesetError ? (
+            <div className="empty-panel">
+              <h2>Ruleset data yüklenemedi</h2>
+              <p>{rulesetError}</p>
+            </div>
+          ) : null}
+
+          {selectedRace || selectedClass ? (
+            <div className="preview-stats">
+              {selectedRace ? (
+                <>
+                  <span>Race: {selectedRace.name}</span>
+                  <span>Speed {selectedRace.speed} ft</span>
+                  <span>Size {selectedRace.size}</span>
+                  <span>
+                    Bonus{" "}
+                    {Object.entries(selectedRace.abilityBonuses)
+                      .map(
+                        ([ability, bonus]) =>
+                          `${ability.toUpperCase()} +${bonus}`
+                      )
+                      .join(", ")}
+                  </span>
+                </>
+              ) : null}
+
+              {selectedClass ? (
+                <>
+                  <span>Class: {selectedClass.name}</span>
+                  <span>Hit Die d{selectedClass.hitDie}</span>
+                  <span>
+                    Saves{" "}
+                    {selectedClass.savingThrows
+                      .map((save) => save.toUpperCase())
+                      .join(", ")}
+                  </span>
+                  <span>
+                    Spell{" "}
+                    {selectedClass.spellcastingAbility
+                      ? selectedClass.spellcastingAbility.toUpperCase()
+                      : "None"}
+                  </span>
+                </>
+              ) : null}
+            </div>
+          ) : null}
+        </section>
+
+        <section className="form-panel">
+          <h2>Ability Scores</h2>
+
+          <div className="ability-editor">
+            {Object.entries(draft.abilities).map(([ability, score]) => (
+              <label className="ability-input" key={ability}>
+                <span>{ability.toUpperCase()}</span>
+
+                <input
+                  type="number"
+                  min={1}
+                  max={30}
+                  value={score}
+                  onChange={(event) =>
+                    updateAbility(
+                      ability as keyof CharacterDraft["abilities"],
+                      Number(event.target.value)
+                    )
+                  }
+                />
+
+                <strong>{formatModifier(getAbilityModifier(score))}</strong>
+              </label>
+            ))}
+          </div>
+        </section>
+
+        <section className="form-panel">
+          <h2>Combat</h2>
+
+          <div className="form-grid">
+            <label>
+              Max HP
+              <input
+                type="number"
+                min={1}
+                value={draft.maxHp}
+                onChange={(event) =>
+                  updateDraft("maxHp", Number(event.target.value))
+                }
+              />
+            </label>
+
+            <label>
+              Armor Class
+              <input
+                type="number"
+                min={1}
+                value={draft.armorClass}
+                onChange={(event) =>
+                  updateDraft("armorClass", Number(event.target.value))
+                }
+              />
+            </label>
+          </div>
+
+          <label>
+            Notlar
+            <textarea
+              value={draft.notes}
+              onChange={(event) => updateDraft("notes", event.target.value)}
+              placeholder="Lore, özel homebrew kurallar, DM notları..."
+              rows={4}
+            />
+          </label>
+        </section>
+
+        <section className="form-panel preview-panel">
+          <h2>Önizleme</h2>
+
+          <div className="preview-stats">
+            <span>PB +{getProficiencyBonus(previewCharacter.level)}</span>
+            <span>AC {previewCharacter.armorClass}</span>
+            <span>HP {previewCharacter.maxHp}</span>
+            <span>Init {formatModifier(getInitiative(previewCharacter))}</span>
+            <span>PP {getPassivePerception(previewCharacter)}</span>
+            <span>DC {getSpellSaveDc(previewCharacter)}</span>
+            <span>
+              Spell Attack{" "}
+              {formatModifier(getSpellAttackBonus(previewCharacter))}
+            </span>
+          </div>
+
+          <div className="character-actions">
+            <button className="primary-action" type="submit">
+              Değişiklikleri Kaydet
+            </button>
+
+            <button type="button" onClick={() => navigate(`/characters/${character.id}`)}>
+              Vazgeç
+            </button>
+          </div>
         </section>
       </form>
     </PageShell>
@@ -1622,6 +2047,19 @@ function handleWipeCharacters() {
               />
             }
           />
+
+          <Route
+  path="/characters/:characterId/edit"
+  element={
+    <CharacterEditor
+      characters={characters}
+      rulesetData={rulesetData}
+      isRulesetLoading={isRulesetLoading}
+      rulesetError={rulesetError}
+      onUpdateCharacter={handleUpdateCharacter}
+    />
+  }
+/>
 
           <Route
             path="/characters/:characterId"
