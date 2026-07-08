@@ -1,0 +1,36 @@
+import type { AbilityKey } from "../character/character.types";
+
+export interface SkillChoices {
+  choose: number;
+  from: string[];
+}
+
+export interface DndClassData {
+  id: string;
+  name: string;
+  hitDie: number;
+  primaryAbilities: AbilityKey[];
+  savingThrows: AbilityKey[];
+  spellcastingAbility: AbilityKey | null;
+  armorProficiencies: string[];
+  weaponProficiencies: string[];
+  skillChoices: SkillChoices;
+  description: string;
+}
+
+export interface DndRaceData {
+  id: string;
+  name: string;
+  speed: number;
+  size: "Small" | "Medium" | "Large" | string;
+  abilityBonuses: Partial<Record<AbilityKey, number>>;
+  traits: string[];
+  description: string;
+}
+
+export interface RulesetData {
+  id: "dnd_2014" | "dnd_2024" | "homebrew";
+  name: string;
+  classes: DndClassData[];
+  races: DndRaceData[];
+}

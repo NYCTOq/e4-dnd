@@ -1,0 +1,89 @@
+[
+  {
+    "id": "cleric",
+    "name": "Cleric",
+    "hitDie": 8,
+    "primaryAbilities": ["wis"],
+    "savingThrows": ["wis", "cha"],
+    "spellcastingAbility": "wis",
+    "armorProficiencies": ["Light Armor", "Medium Armor", "Shields"],
+    "weaponProficiencies": ["Simple Weapons"],
+    "skillChoices": {
+      "choose": 2,
+      "from": ["History", "Insight", "Medicine", "Persuasion", "Religion"]
+    },
+    "description": "Divine magic user focused on healing, support, protection and sacred power."
+  },
+  {
+    "id": "fighter",
+    "name": "Fighter",
+    "hitDie": 10,
+    "primaryAbilities": ["str", "dex"],
+    "savingThrows": ["str", "con"],
+    "spellcastingAbility": null,
+    "armorProficiencies": ["Light Armor", "Medium Armor", "Heavy Armor", "Shields"],
+    "weaponProficiencies": ["Simple Weapons", "Martial Weapons"],
+    "skillChoices": {
+      "choose": 2,
+      "from": [
+        "Acrobatics",
+        "Animal Handling",
+        "Athletics",
+        "History",
+        "Insight",
+        "Intimidation",
+        "Perception",
+        "Survival"
+      ]
+    },
+    "description": "Martial combat expert with strong weapon, armor and tactical flexibility."
+  },
+  {
+    "id": "wizard",
+    "name": "Wizard",
+    "hitDie": 6,
+    "primaryAbilities": ["int"],
+    "savingThrows": ["int", "wis"],
+    "spellcastingAbility": "int",
+    "armorProficiencies": [],
+    "weaponProficiencies": ["Daggers", "Darts", "Slings", "Quarterstaffs", "Light Crossbows"],
+    "skillChoices": {
+      "choose": 2,
+      "from": ["Arcana", "History", "Insight", "Investigation", "Medicine", "Religion"]
+    },
+    "description": "Arcane spellcaster who learns and prepares spells from a spellbook."
+  },
+  {
+    "id": "rogue",
+    "name": "Rogue",
+    "hitDie": 8,
+    "primaryAbilities": ["dex"],
+    "savingThrows": ["dex", "int"],
+    "spellcastingAbility": null,
+    "armorProficiencies": ["Light Armor"],
+    "weaponProficiencies": [
+      "Simple Weapons",
+      "Hand Crossbows",
+      "Longswords",
+      "Rapiers",
+      "Shortswords"
+    ],
+    "skillChoices": {
+      "choose": 4,
+      "from": [
+        "Acrobatics",
+        "Athletics",
+        "Deception",
+        "Insight",
+        "Intimidation",
+        "Investigation",
+        "Perception",
+        "Performance",
+        "Persuasion",
+        "Sleight of Hand",
+        "Stealth"
+      ]
+    },
+    "description": "Skill-focused adventurer with stealth, precision and dirty little problem-solving habits."
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "id": "human",
+    "name": "Human",
+    "speed": 30,
+    "size": "Medium",
+    "abilityBonuses": {
+      "str": 1,
+      "dex": 1,
+      "con": 1,
+      "int": 1,
+      "wis": 1,
+      "cha": 1
+    },
+    "traits": ["Languages: Common and one extra language"],
+    "description": "Versatile and annoyingly everywhere. Humans, the default setting of fantasy."
+  },
+  {
+    "id": "elf",
+    "name": "Elf",
+    "speed": 30,
+    "size": "Medium",
+    "abilityBonuses": {
+      "dex": 2
+    },
+    "traits": ["Darkvision", "Keen Senses", "Fey Ancestry", "Trance"],
+    "description": "Graceful, long-lived and somehow still dramatic after several centuries."
+  },
+  {
+    "id": "dwarf",
+    "name": "Dwarf",
+    "speed": 25,
+    "size": "Medium",
+    "abilityBonuses": {
+      "con": 2
+    },
+    "traits": ["Darkvision", "Dwarven Resilience", "Dwarven Combat Training", "Stonecunning"],
+    "description": "Durable, stubborn and built like someone compressed a tank into a person."
+  },
+  {
+    "id": "halfling",
+    "name": "Halfling",
+    "speed": 25,
+    "size": "Small",
+    "abilityBonuses": {
+      "dex": 2
+    },
+    "traits": ["Lucky", "Brave", "Halfling Nimbleness"],
+    "description": "Small, lucky and statistically too dangerous for their height."
+  },
+  {
+    "id": "tiefling",
+    "name": "Tiefling",
+    "speed": 30,
+    "size": "Medium",
+    "abilityBonuses": {
+      "int": 1,
+      "cha": 2
+    },
+    "traits": ["Darkvision", "Hellish Resistance", "Infernal Legacy"],
+    "description": "Infernal heritage, dramatic silhouette and automatic main-character energy."
+  }
+]
