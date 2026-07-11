@@ -1,5 +1,6 @@
 import type {
   DndClassData,
+  DndItemData,
   DndRaceData,
   DndSpellData,
   RulesetData,
@@ -16,10 +17,11 @@ async function loadJson<T>(path: string): Promise<T> {
 }
 
 export async function loadDnd2014Ruleset(): Promise<RulesetData> {
-  const [classes, races, spells] = await Promise.all([
+  const [classes, races, spells, items] = await Promise.all([
     loadJson<DndClassData[]>("/data/dnd_2014/classes.json"),
     loadJson<DndRaceData[]>("/data/dnd_2014/races.json"),
     loadJson<DndSpellData[]>("/data/dnd_2014/spells.json"),
+    loadJson<DndItemData[]>("/data/dnd_2014/items.json"),
   ]);
 
   return {
@@ -28,5 +30,6 @@ export async function loadDnd2014Ruleset(): Promise<RulesetData> {
     classes,
     races,
     spells,
+    items,
   };
 }

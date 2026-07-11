@@ -44,10 +44,36 @@ export interface DndSpellData {
   higherLevels?: string;
 }
 
+export type DndItemCategory = "weapon" | "armor" | "shield" | "gear";
+export type DndArmorType = "light" | "medium" | "heavy";
+
+export interface DndItemData {
+  id: string;
+  name: string;
+  category: DndItemCategory;
+  cost: string;
+  weight: number;
+  description: string;
+
+  armorClass?: number;
+  armorClassBonus?: number;
+  armorType?: DndArmorType;
+  dexBonusMax?: number;
+  strengthRequirement?: number;
+  stealthDisadvantage?: boolean;
+
+  damage?: string;
+  damageType?: string;
+  properties?: string[];
+  range?: string;
+  tags?: string[];
+}
+
 export interface RulesetData {
   id: "dnd_2014" | "dnd_2024" | "homebrew";
   name: string;
   classes: DndClassData[];
   races: DndRaceData[];
   spells: DndSpellData[];
+  items: DndItemData[];
 }

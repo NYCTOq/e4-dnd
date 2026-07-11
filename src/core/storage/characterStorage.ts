@@ -1,4 +1,8 @@
-import type { Character, CharacterSpellSlot } from "../character/character.types";
+import type {
+  Character,
+  CharacterInventoryItem,
+  CharacterSpellSlot,
+} from "../character/character.types";
 
 const STORAGE_KEY = "e4_dnd_characters_v1";
 
@@ -68,12 +72,47 @@ function hydrateSpellSlots(character: Character): CharacterSpellSlot[] {
   });
 }
 
+function hydrateInventory(character: Character): CharacterInventoryItem[] {
+  if (!Array.isArray(character.inventory)) {
+    return [];
+  }
+
+  return character.inventory
+    .filter(
+      (item) =>
+        typeof item.itemId === "string" &&
+        typeof item.quantity === "number" &&
+        item.quantity > 0,
+    )
+    .map((item) => ({
+      itemId: item.itemId,
+      quantity: Math.max(1, Math.floor(item.quantity)),
+      notes: item.notes ?? "",
+    }));
+}
+
 function hydrateCharacter(character: Character): Character {
+  const inventory = hydrateInventory(character);
+  const inventoryItemIds = new Set(inventory.map((item) => item.itemId));
+
   return {
     ...character,
     knownSpellIds: character.knownSpellIds ?? [],
     preparedSpellIds: character.preparedSpellIds ?? [],
     spellSlots: hydrateSpellSlots(character),
+    inventory,
+    equippedArmorId:
+      character.equippedArmorId && inventoryItemIds.has(character.equippedArmorId)
+        ? character.equippedArmorId
+        : null,
+    equippedShieldId:
+      character.equippedShieldId && inventoryItemIds.has(character.equippedShieldId)
+        ? character.equippedShieldId
+        : null,
+    equippedWeaponIds: Array.isArray(character.equippedWeaponIds)
+      ? character.equippedWeaponIds.filter((itemId) => inventoryItemIds.has(itemId))
+      : [],
+    gold: typeof character.gold === "number" ? Math.max(0, character.gold) : 0,
   };
 }
 

@@ -10,6 +10,12 @@ export interface CharacterSpellSlot {
   used: number;
 }
 
+export interface CharacterInventoryItem {
+  itemId: string;
+  quantity: number;
+  notes?: string;
+}
+
 export type CharacterCondition =
   | "Blessed"
   | "Poisoned"
@@ -45,6 +51,12 @@ export interface Character {
   preparedSpellIds: string[];
   spellSlots: CharacterSpellSlot[];
 
+  inventory: CharacterInventoryItem[];
+  equippedArmorId: string | null;
+  equippedShieldId: string | null;
+  equippedWeaponIds: string[];
+  gold: number;
+
   conditions: CharacterCondition[];
   notes: string;
 
@@ -71,6 +83,12 @@ export interface CharacterDraft {
   knownSpellIds: string[];
   preparedSpellIds: string[];
   spellSlots: CharacterSpellSlot[];
+
+  inventory: CharacterInventoryItem[];
+  equippedArmorId: string | null;
+  equippedShieldId: string | null;
+  equippedWeaponIds: string[];
+  gold: number;
 
   notes: string;
 }

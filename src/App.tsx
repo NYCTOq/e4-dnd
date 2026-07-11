@@ -9,7 +9,7 @@ import {
 import { motion } from "framer-motion";
 import type { DiceRollResult } from "./core/dice/dice.types";
 import { rollDice } from "./core/dice/diceRoller";
-import type { DndSpellData, RulesetData } from "./core/rulesets/ruleset.types";
+import type { DndItemData, DndSpellData, RulesetData } from "./core/rulesets/ruleset.types";
 import { loadDnd2014Ruleset } from "./core/rulesets/rulesetLoader";
 
 import type {
@@ -39,6 +39,7 @@ const navItems = [
   { to: "/play-mode", label: "Play Mode" },
   { to: "/dice", label: "Zar" },
   { to: "/spellbook", label: "Spellbook" },
+  { to: "/inventory", label: "Inventory" },
   { to: "/backup", label: "Yedek" },
   { to: "/library", label: "Library" },
   { to: "/homebrew-lab", label: "Homebrew" },
@@ -66,6 +67,11 @@ const emptyDraft: CharacterDraft = {
   knownSpellIds: [],
   preparedSpellIds: [],
   spellSlots: [],
+  inventory: [],
+  equippedArmorId: null,
+  equippedShieldId: null,
+  equippedWeaponIds: [],
+  gold: 0,
   notes: "",
 };
 
@@ -146,6 +152,147 @@ function resetSpellSlots(
     ...slot,
     used: 0,
   }));
+}
+
+function getInventoryQuantity(
+  inventory: Character["inventory"],
+  itemId: string,
+) {
+  return inventory.find((entry) => entry.itemId === itemId)?.quantity ?? 0;
+}
+
+function setInventoryItemQuantity(
+  inventory: Character["inventory"],
+  itemId: string,
+  quantity: number,
+): Character["inventory"] {
+  const safeQuantity = Math.max(0, Math.floor(quantity));
+
+  if (safeQuantity <= 0) {
+    return inventory.filter((entry) => entry.itemId !== itemId);
+  }
+
+  const hasItem = inventory.some((entry) => entry.itemId === itemId);
+
+  if (!hasItem) {
+    return [...inventory, { itemId, quantity: safeQuantity }];
+  }
+
+  return inventory.map((entry) =>
+    entry.itemId === itemId ? { ...entry, quantity: safeQuantity } : entry,
+  );
+}
+
+function getCharacterInventoryItems(
+  inventory: Character["inventory"],
+  items: DndItemData[] | undefined,
+) {
+  const itemMap = new Map((items ?? []).map((item) => [item.id, item]));
+
+  return inventory
+    .map((entry) => ({
+      entry,
+      item: itemMap.get(entry.itemId) ?? null,
+    }))
+    .filter((entry): entry is { entry: Character["inventory"][number]; item: DndItemData } =>
+      Boolean(entry.item),
+    )
+    .sort((a, b) => a.item.name.localeCompare(b.item.name));
+}
+
+function getInventoryWeight(
+  inventory: Character["inventory"],
+  items: DndItemData[] | undefined,
+) {
+  return getCharacterInventoryItems(inventory, items).reduce(
+    (total, { entry, item }) => total + entry.quantity * item.weight,
+    0,
+  );
+}
+
+function getEquippedItems(character: Character, items: DndItemData[] | undefined) {
+  const itemMap = new Map((items ?? []).map((item) => [item.id, item]));
+
+  return {
+    armor: character.equippedArmorId
+      ? itemMap.get(character.equippedArmorId) ?? null
+      : null,
+    shield: character.equippedShieldId
+      ? itemMap.get(character.equippedShieldId) ?? null
+      : null,
+    weapons: character.equippedWeaponIds
+      .map((itemId) => itemMap.get(itemId) ?? null)
+      .filter((item): item is DndItemData => Boolean(item)),
+  };
+}
+
+function calculateSuggestedArmorClass(
+  character: Pick<Character, "abilities" | "equippedArmorId" | "equippedShieldId">,
+  items: DndItemData[] | undefined,
+) {
+  const itemMap = new Map((items ?? []).map((item) => [item.id, item]));
+  const armor = character.equippedArmorId
+    ? itemMap.get(character.equippedArmorId)
+    : null;
+  const shield = character.equippedShieldId
+    ? itemMap.get(character.equippedShieldId)
+    : null;
+  const dexModifier = getAbilityModifier(character.abilities.dex);
+
+  let armorClass = 10 + dexModifier;
+
+  if (armor?.category === "armor" && armor.armorClass) {
+    if (armor.armorType === "heavy") {
+      armorClass = armor.armorClass;
+    } else if (armor.armorType === "medium") {
+      armorClass = armor.armorClass + Math.min(armor.dexBonusMax ?? 2, dexModifier);
+    } else {
+      armorClass = armor.armorClass + dexModifier;
+    }
+  }
+
+  if (shield?.category === "shield") {
+    armorClass += shield.armorClassBonus ?? 2;
+  }
+
+  return armorClass;
+}
+
+function getItemCategoryLabel(category: DndItemData["category"]) {
+  const labels: Record<DndItemData["category"], string> = {
+    weapon: "Weapon",
+    armor: "Armor",
+    shield: "Shield",
+    gear: "Gear",
+  };
+
+  return labels[category];
+}
+
+function getItemRulesSummary(item: DndItemData) {
+  if (item.category === "weapon") {
+    return [item.damage, item.damageType, item.range ? `Range ${item.range}` : null]
+      .filter(Boolean)
+      .join(" • ");
+  }
+
+  if (item.category === "armor") {
+    const dexText = item.armorType === "heavy"
+      ? "No Dex"
+      : item.armorType === "medium"
+        ? `Dex max ${item.dexBonusMax ?? 2}`
+        : "Dex full";
+
+    return [`AC ${item.armorClass}`, item.armorType, dexText]
+      .filter(Boolean)
+      .join(" • ");
+  }
+
+  if (item.category === "shield") {
+    return `+${item.armorClassBonus ?? 2} AC`;
+  }
+
+  return item.tags?.join(" • ") ?? "Utility";
 }
 
 function createCharacterFromDraft(draft: CharacterDraft): Character {
@@ -512,6 +659,19 @@ function CharacterDetail({
     activeCharacter.level,
     activeCharacter.className,
   );
+  const inventoryDetails = getCharacterInventoryItems(
+    activeCharacter.inventory ?? [],
+    rulesetData?.items,
+  );
+  const equippedItems = getEquippedItems(activeCharacter, rulesetData?.items);
+  const totalInventoryWeight = getInventoryWeight(
+    activeCharacter.inventory ?? [],
+    rulesetData?.items,
+  );
+  const suggestedArmorClass = calculateSuggestedArmorClass(
+    activeCharacter,
+    rulesetData?.items,
+  );
 
   function updateHp(amount: number) {
     const nextHp = Math.max(
@@ -747,6 +907,63 @@ function CharacterDetail({
               {activeCharacter.notes ||
                 "Not yok. Karakterin gizemli olması güzel ama app’in boş kalması değil."}
             </p>
+          </div>
+
+          <div className="character-equipment-panel">
+            <div className="spell-selector-head">
+              <div>
+                <span className="mini-label">Equipment</span>
+                <h2>Envanter & Kuşanılanlar</h2>
+              </div>
+
+              <div className="spell-selector-counts">
+                <span>{activeCharacter.gold ?? 0} gp</span>
+                <span>{inventoryDetails.length} item</span>
+                <span>{totalInventoryWeight.toFixed(1)} lb</span>
+              </div>
+            </div>
+
+            <div className="inventory-equipped-grid detail-equipped-grid">
+              <div>
+                <span>Armor</span>
+                <strong>{equippedItems.armor?.name ?? "None"}</strong>
+              </div>
+              <div>
+                <span>Shield</span>
+                <strong>{equippedItems.shield?.name ?? "None"}</strong>
+              </div>
+              <div>
+                <span>Weapons</span>
+                <strong>
+                  {equippedItems.weapons.map((item) => item.name).join(", ") || "None"}
+                </strong>
+              </div>
+              <div>
+                <span>Suggested AC</span>
+                <strong>{suggestedArmorClass}</strong>
+              </div>
+            </div>
+
+            {inventoryDetails.length === 0 ? (
+              <div className="spell-selector-note">
+                Envanter boş. Kahraman cebinde umutla geziyor, o da 0 gp.
+              </div>
+            ) : (
+              <div className="inventory-detail-list">
+                {inventoryDetails.map(({ entry, item }) => (
+                  <article className="inventory-detail-item" key={item.id}>
+                    <div>
+                      <strong>{item.name}</strong>
+                      <span>{getItemCategoryLabel(item.category)} • {getItemRulesSummary(item)}</span>
+                    </div>
+                    <div>
+                      <b>x{entry.quantity}</b>
+                      <small>{(entry.quantity * item.weight).toFixed(1)} lb</small>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="character-detail-spellbook">
@@ -1430,6 +1647,323 @@ function CharacterSpellSelector({
   );
 }
 
+
+function CharacterInventoryManager({
+  title,
+  description,
+  rulesetData,
+  isRulesetLoading,
+  rulesetError,
+  inventory,
+  equippedArmorId,
+  equippedShieldId,
+  equippedWeaponIds,
+  gold,
+  abilities,
+  armorClass,
+  onChange,
+}: {
+  title: string;
+  description: string;
+  rulesetData: RulesetData | null;
+  isRulesetLoading: boolean;
+  rulesetError: string | null;
+  inventory: Character["inventory"];
+  equippedArmorId: string | null;
+  equippedShieldId: string | null;
+  equippedWeaponIds: string[];
+  gold: number;
+  abilities: Character["abilities"];
+  armorClass: number;
+  onChange: (next: {
+    inventory: Character["inventory"];
+    equippedArmorId: string | null;
+    equippedShieldId: string | null;
+    equippedWeaponIds: string[];
+    gold: number;
+  }) => void;
+}) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [categoryFilter, setCategoryFilter] = useState<"all" | DndItemData["category"]>("all");
+
+  const ownedItems = useMemo(
+    () => getCharacterInventoryItems(inventory, rulesetData?.items),
+    [inventory, rulesetData],
+  );
+
+  const totalWeight = useMemo(
+    () => getInventoryWeight(inventory, rulesetData?.items),
+    [inventory, rulesetData],
+  );
+
+  const suggestedAc = useMemo(
+    () =>
+      calculateSuggestedArmorClass(
+        { abilities, equippedArmorId, equippedShieldId },
+        rulesetData?.items,
+      ),
+    [abilities, equippedArmorId, equippedShieldId, rulesetData],
+  );
+
+  const filteredItems = useMemo(() => {
+    const normalizedSearch = searchTerm.trim().toLowerCase();
+
+    return (rulesetData?.items ?? []).filter((item) => {
+      const matchesCategory = categoryFilter === "all" || item.category === categoryFilter;
+      const matchesSearch =
+        normalizedSearch.length === 0 ||
+        [
+          item.name,
+          item.category,
+          item.description,
+          item.damage,
+          item.damageType,
+          item.armorType,
+          item.properties?.join(" "),
+          item.tags?.join(" "),
+        ]
+          .join(" ")
+          .toLowerCase()
+          .includes(normalizedSearch);
+
+      return matchesCategory && matchesSearch;
+    });
+  }, [rulesetData, categoryFilter, searchTerm]);
+
+  function emit(next: Partial<{
+    inventory: Character["inventory"];
+    equippedArmorId: string | null;
+    equippedShieldId: string | null;
+    equippedWeaponIds: string[];
+    gold: number;
+  }>) {
+    onChange({
+      inventory,
+      equippedArmorId,
+      equippedShieldId,
+      equippedWeaponIds,
+      gold,
+      ...next,
+    });
+  }
+
+  function updateItemQuantity(itemId: string, quantity: number) {
+    const nextInventory = setInventoryItemQuantity(inventory, itemId, quantity);
+    const nextItemIds = new Set(nextInventory.map((entry) => entry.itemId));
+
+    emit({
+      inventory: nextInventory,
+      equippedArmorId: equippedArmorId && nextItemIds.has(equippedArmorId) ? equippedArmorId : null,
+      equippedShieldId: equippedShieldId && nextItemIds.has(equippedShieldId) ? equippedShieldId : null,
+      equippedWeaponIds: equippedWeaponIds.filter((id) => nextItemIds.has(id)),
+    });
+  }
+
+  function toggleEquip(item: DndItemData) {
+    const quantity = getInventoryQuantity(inventory, item.id);
+    const nextInventory = quantity > 0 ? inventory : setInventoryItemQuantity(inventory, item.id, 1);
+
+    if (item.category === "armor") {
+      emit({
+        inventory: nextInventory,
+        equippedArmorId: equippedArmorId === item.id ? null : item.id,
+      });
+      return;
+    }
+
+    if (item.category === "shield") {
+      emit({
+        inventory: nextInventory,
+        equippedShieldId: equippedShieldId === item.id ? null : item.id,
+      });
+      return;
+    }
+
+    if (item.category === "weapon") {
+      const isEquipped = equippedWeaponIds.includes(item.id);
+      emit({
+        inventory: nextInventory,
+        equippedWeaponIds: isEquipped
+          ? equippedWeaponIds.filter((id) => id !== item.id)
+          : [...equippedWeaponIds, item.id].slice(-2),
+      });
+    }
+  }
+
+  function isEquipped(item: DndItemData) {
+    return (
+      equippedArmorId === item.id ||
+      equippedShieldId === item.id ||
+      equippedWeaponIds.includes(item.id)
+    );
+  }
+
+  return (
+    <section className="form-panel character-inventory-manager">
+      <div className="inventory-manager-head">
+        <div>
+          <h2>{title}</h2>
+          <p>{description}</p>
+        </div>
+
+        <div className="inventory-summary-grid">
+          <div>
+            <strong>{gold}</strong>
+            <span>Gold</span>
+          </div>
+          <div>
+            <strong>{ownedItems.length}</strong>
+            <span>Items</span>
+          </div>
+          <div>
+            <strong>{totalWeight.toFixed(1)}</strong>
+            <span>lb</span>
+          </div>
+          <div>
+            <strong>{suggestedAc}</strong>
+            <span>Suggested AC</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="form-grid inventory-gold-grid">
+        <label>
+          Gold
+          <input
+            type="number"
+            min={0}
+            value={gold}
+            onChange={(event) => emit({ gold: Math.max(0, Number(event.target.value)) })}
+          />
+        </label>
+
+        <label>
+          Manual AC
+          <input type="number" min={1} value={armorClass} readOnly />
+        </label>
+      </div>
+
+      {isRulesetLoading ? (
+        <div className="empty-panel">
+          <h2>Item data yükleniyor...</h2>
+          <p>Envanter rafları diziliyor. Sandık simülasyonu, insanlığın zirvesi.</p>
+        </div>
+      ) : rulesetError ? (
+        <div className="empty-panel">
+          <h2>Item data yüklenemedi</h2>
+          <p>{rulesetError}</p>
+        </div>
+      ) : rulesetData ? (
+        <>
+          <div className="inventory-equipped-panel">
+            <span className="mini-label">Equipped</span>
+            <div className="inventory-equipped-grid">
+              <div>
+                <span>Armor</span>
+                <strong>{ownedItems.find(({ item }) => item.id === equippedArmorId)?.item.name ?? "None"}</strong>
+              </div>
+              <div>
+                <span>Shield</span>
+                <strong>{ownedItems.find(({ item }) => item.id === equippedShieldId)?.item.name ?? "None"}</strong>
+              </div>
+              <div>
+                <span>Weapons</span>
+                <strong>
+                  {equippedWeaponIds
+                    .map((itemId) => ownedItems.find(({ item }) => item.id === itemId)?.item.name)
+                    .filter(Boolean)
+                    .join(", ") || "None"}
+                </strong>
+              </div>
+            </div>
+          </div>
+
+          <div className="spell-selector-filters">
+            <label>
+              Ara
+              <input
+                value={searchTerm}
+                onChange={(event) => setSearchTerm(event.target.value)}
+                placeholder="Longsword, shield, holy symbol..."
+              />
+            </label>
+
+            <label>
+              Category
+              <select
+                value={categoryFilter}
+                onChange={(event) =>
+                  setCategoryFilter(event.target.value as "all" | DndItemData["category"])
+                }
+              >
+                <option value="all">Tümü</option>
+                <option value="weapon">Weapon</option>
+                <option value="armor">Armor</option>
+                <option value="shield">Shield</option>
+                <option value="gear">Gear</option>
+              </select>
+            </label>
+          </div>
+
+          {filteredItems.length === 0 ? (
+            <div className="empty-panel">
+              <h2>Item bulunamadı.</h2>
+              <p>Filtreler itemları sürgüne göndermiş olabilir. Klasik dijital zalimlik.</p>
+            </div>
+          ) : (
+            <div className="inventory-item-list">
+              {filteredItems.map((item) => {
+                const quantity = getInventoryQuantity(inventory, item.id);
+                const equipped = isEquipped(item);
+
+                return (
+                  <article
+                    className={quantity > 0 ? "inventory-item-row selected" : "inventory-item-row"}
+                    key={item.id}
+                  >
+                    <div>
+                      <div className="character-spell-row-head">
+                        <strong>{item.name}</strong>
+                        <span>{getItemCategoryLabel(item.category)}</span>
+                      </div>
+                      <p>{item.description}</p>
+                      <div className="library-pill-row">
+                        <span>{getItemRulesSummary(item)}</span>
+                        <span>{item.cost}</span>
+                        <span>{item.weight} lb</span>
+                        {item.stealthDisadvantage ? <span>Stealth Disadv.</span> : null}
+                        {item.strengthRequirement ? <span>STR {item.strengthRequirement}</span> : null}
+                      </div>
+                    </div>
+
+                    <div className="inventory-row-actions">
+                      <div className="inventory-qty-controls">
+                        <button type="button" onClick={() => updateItemQuantity(item.id, quantity - 1)}>-</button>
+                        <strong>{quantity}</strong>
+                        <button type="button" onClick={() => updateItemQuantity(item.id, quantity + 1)}>+</button>
+                      </div>
+
+                      {item.category !== "gear" ? (
+                        <button
+                          type="button"
+                          className={equipped ? "active" : ""}
+                          onClick={() => toggleEquip(item)}
+                        >
+                          {equipped ? "Equipped" : "Equip"}
+                        </button>
+                      ) : null}
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          )}
+        </>
+      ) : null}
+    </section>
+  );
+}
+
 function Builder({
   onCreateCharacter,
   rulesetData,
@@ -1777,6 +2311,31 @@ function Builder({
           }
         />
 
+        <CharacterInventoryManager
+          title="Inventory & Equipment"
+          description="Karakterin itemlarını, altınını ve kuşandığı ekipmanı seç. AC şimdilik manuel kalıyor, öneri olarak gösteriyoruz. Çünkü D&D kuralları bile bazen kendinden utanmalı."
+          rulesetData={rulesetData}
+          isRulesetLoading={isRulesetLoading}
+          rulesetError={rulesetError}
+          inventory={draft.inventory}
+          equippedArmorId={draft.equippedArmorId}
+          equippedShieldId={draft.equippedShieldId}
+          equippedWeaponIds={draft.equippedWeaponIds}
+          gold={draft.gold}
+          abilities={draft.abilities}
+          armorClass={draft.armorClass}
+          onChange={(next) =>
+            setDraft((current) => ({
+              ...current,
+              inventory: next.inventory,
+              equippedArmorId: next.equippedArmorId,
+              equippedShieldId: next.equippedShieldId,
+              equippedWeaponIds: next.equippedWeaponIds,
+              gold: next.gold,
+            }))
+          }
+        />
+
         <section className="form-panel preview-panel">
           <h2>Önizleme</h2>
 
@@ -1846,6 +2405,11 @@ function CharacterEditor({
         character.level,
         character.className,
       ),
+      inventory: character.inventory ?? [],
+      equippedArmorId: character.equippedArmorId ?? null,
+      equippedShieldId: character.equippedShieldId ?? null,
+      equippedWeaponIds: character.equippedWeaponIds ?? [],
+      gold: character.gold ?? 0,
       notes: character.notes,
     });
   }, [character]);
@@ -2213,6 +2777,31 @@ function CharacterEditor({
               ...current,
               knownSpellIds: next.knownSpellIds,
               preparedSpellIds: next.preparedSpellIds,
+            }))
+          }
+        />
+
+        <CharacterInventoryManager
+          title="Inventory & Equipment"
+          description="Karakterin itemlarını ve kuşandığı ekipmanı güncelle. Çanta yönetimi, kahramanlığın en az havalı ama en gerekli tarafı."
+          rulesetData={rulesetData}
+          isRulesetLoading={isRulesetLoading}
+          rulesetError={rulesetError}
+          inventory={draft.inventory}
+          equippedArmorId={draft.equippedArmorId}
+          equippedShieldId={draft.equippedShieldId}
+          equippedWeaponIds={draft.equippedWeaponIds}
+          gold={draft.gold}
+          abilities={draft.abilities}
+          armorClass={draft.armorClass}
+          onChange={(next) =>
+            setDraft((current) => ({
+              ...current,
+              inventory: next.inventory,
+              equippedArmorId: next.equippedArmorId,
+              equippedShieldId: next.equippedShieldId,
+              equippedWeaponIds: next.equippedWeaponIds,
+              gold: next.gold,
             }))
           }
         />
@@ -2664,6 +3253,11 @@ function Library({
                 <strong>{rulesetData.spells.length}</strong>
                 <span>Spells</span>
               </div>
+
+              <div>
+                <strong>{rulesetData.items.length}</strong>
+                <span>Items</span>
+              </div>
             </div>
           </section>
 
@@ -2768,6 +3362,34 @@ function Library({
                     <span>{spell.range}</span>
                     {spell.concentration ? <span>Concentration</span> : null}
                     {spell.ritual ? <span>Ritual</span> : null}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="library-section-card">
+            <div className="library-section-head">
+              <div>
+                <span className="mini-label">Items</span>
+                <h2>Item Listesi</h2>
+              </div>
+            </div>
+
+            <div className="library-list-grid">
+              {rulesetData.items.slice(0, 8).map((item) => (
+                <article className="library-item-card" key={item.id}>
+                  <div className="library-item-top">
+                    <h3>{item.name}</h3>
+                    <span>{getItemCategoryLabel(item.category)}</span>
+                  </div>
+
+                  <p>{item.description}</p>
+
+                  <div className="library-pill-row">
+                    <span>{getItemRulesSummary(item)}</span>
+                    <span>{item.cost}</span>
+                    <span>{item.weight} lb</span>
                   </div>
                 </article>
               ))}
@@ -2950,6 +3572,136 @@ function Spellbook({
                     ))}
                     {spell.concentration ? <span>Concentration</span> : null}
                     {spell.ritual ? <span>Ritual</span> : null}
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          )}
+        </>
+      ) : null}
+    </PageShell>
+  );
+}
+
+
+function Inventory({
+  rulesetData,
+  isRulesetLoading,
+  rulesetError,
+}: {
+  rulesetData: RulesetData | null;
+  isRulesetLoading: boolean;
+  rulesetError: string | null;
+}) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [categoryFilter, setCategoryFilter] = useState<"all" | DndItemData["category"]>("all");
+
+  const filteredItems = useMemo(() => {
+    const normalizedSearch = searchTerm.trim().toLowerCase();
+
+    return (rulesetData?.items ?? []).filter((item) => {
+      const matchesCategory = categoryFilter === "all" || item.category === categoryFilter;
+      const matchesSearch =
+        normalizedSearch.length === 0 ||
+        [
+          item.name,
+          item.category,
+          item.description,
+          item.damage,
+          item.damageType,
+          item.armorType,
+          item.properties?.join(" "),
+          item.tags?.join(" "),
+        ]
+          .join(" ")
+          .toLowerCase()
+          .includes(normalizedSearch);
+
+      return matchesCategory && matchesSearch;
+    });
+  }, [rulesetData, searchTerm, categoryFilter]);
+
+  return (
+    <PageShell
+      eyebrow="Inventory Library"
+      title="Inventory"
+      description="D&D 2014 silah, zırh, shield ve gear datası. Evet, çanta düzenlemeyi de yazılıma çevirdik. Medeniyet böyle ilerliyor sanırım."
+    >
+      {isRulesetLoading ? (
+        <div className="empty-panel">
+          <h2>Item data yükleniyor...</h2>
+          <p>Market rafları diziliyor. Fantastik kapitalizm beklemede.</p>
+        </div>
+      ) : rulesetError ? (
+        <div className="empty-panel">
+          <h2>Item data yüklenemedi</h2>
+          <p>{rulesetError}</p>
+        </div>
+      ) : rulesetData ? (
+        <>
+          <div className="character-filter-panel">
+            <label>
+              Ara
+              <input
+                value={searchTerm}
+                onChange={(event) => setSearchTerm(event.target.value)}
+                placeholder="Longsword, armor, potion..."
+              />
+            </label>
+
+            <label>
+              Category
+              <select
+                value={categoryFilter}
+                onChange={(event) =>
+                  setCategoryFilter(event.target.value as "all" | DndItemData["category"])
+                }
+              >
+                <option value="all">Tümü</option>
+                <option value="weapon">Weapon</option>
+                <option value="armor">Armor</option>
+                <option value="shield">Shield</option>
+                <option value="gear">Gear</option>
+              </select>
+            </label>
+
+            <div className="filter-result-count">
+              <strong>{filteredItems.length}</strong>
+              <span>sonuç</span>
+            </div>
+          </div>
+
+          {filteredItems.length === 0 ? (
+            <div className="empty-panel">
+              <h2>Item bulunamadı.</h2>
+              <p>Arama yine evrenin anlamını kaçırdı. Daha yumuşak filtre dene.</p>
+            </div>
+          ) : (
+            <div className="inventory-library-grid">
+              {filteredItems.map((item) => (
+                <motion.article
+                  className="inventory-library-card"
+                  key={item.id}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="library-item-top">
+                    <div>
+                      <span className="mini-label">{getItemCategoryLabel(item.category)}</span>
+                      <h2>{item.name}</h2>
+                    </div>
+                    <span>{item.cost}</span>
+                  </div>
+
+                  <p>{item.description}</p>
+
+                  <div className="spell-meta-grid">
+                    <span>{getItemRulesSummary(item)}</span>
+                    <span>Weight {item.weight} lb</span>
+                    {item.damage ? <span>Damage {item.damage}</span> : null}
+                    {item.damageType ? <span>{item.damageType}</span> : null}
+                    {item.properties?.length ? <span>{item.properties.join(", ")}</span> : null}
+                    {item.tags?.length ? <span>{item.tags.join(", ")}</span> : null}
+                    {item.stealthDisadvantage ? <span>Stealth Disadvantage</span> : null}
                   </div>
                 </motion.article>
               ))}
@@ -3158,6 +3910,17 @@ function App() {
               />
             }
           />
+          <Route
+            path="/inventory"
+            element={
+              <Inventory
+                rulesetData={rulesetData}
+                isRulesetLoading={isRulesetLoading}
+                rulesetError={rulesetError}
+              />
+            }
+          />
+
           <Route
             path="/backup"
             element={
