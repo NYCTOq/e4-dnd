@@ -1985,3 +1985,227 @@ textarea {
     justify-items: start;
   }
 }
+
+/* Builder V2 Mega Update */
+.builder-v2-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.builder-stepper {
+  position: sticky;
+  top: 22px;
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(18px);
+}
+
+.builder-stepper button {
+  text-align: left;
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: inherit;
+  cursor: pointer;
+}
+
+.builder-stepper button.active {
+  border-color: rgba(210, 220, 255, 0.75);
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18);
+}
+
+.builder-stepper strong {
+  font-size: 0.92rem;
+}
+
+.builder-stepper span {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.builder-v2-form {
+  gap: 18px;
+}
+
+.builder-step-head {
+  padding: 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.builder-step-head h2,
+.builder-step-head p {
+  margin: 6px 0 0;
+}
+
+.builder-step-head p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.builder-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.builder-choice-card {
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.builder-choice-card h3 {
+  margin: 6px 0;
+}
+
+.builder-choice-card p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.panel-heading-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.panel-heading-row h2,
+.panel-heading-row p {
+  margin: 0;
+}
+
+.panel-heading-row p {
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.ability-editor-v2 .ability-input strong {
+  font-size: 1.2rem;
+}
+
+.builder-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.builder-summary-grid div {
+  display: grid;
+  gap: 4px;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.builder-summary-grid span {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.builder-summary-grid strong {
+  font-size: 1.15rem;
+}
+
+.builder-review-panel > p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.builder-review-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 18px 0;
+}
+
+.builder-review-hero h2,
+.builder-review-hero p {
+  margin: 6px 0 0;
+}
+
+.builder-navigation-bar {
+  position: sticky;
+  bottom: 14px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 22px;
+  background: rgba(8, 12, 26, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+}
+
+.builder-navigation-bar > div {
+  display: grid;
+  gap: 2px;
+  text-align: center;
+}
+
+.builder-navigation-bar span {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.78rem;
+}
+
+.builder-navigation-bar button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+@media (max-width: 980px) {
+  .builder-v2-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .builder-stepper {
+    position: static;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .builder-choice-grid,
+  .builder-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .builder-stepper {
+    grid-template-columns: 1fr;
+  }
+
+  .builder-navigation-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .builder-navigation-bar button {
+    width: 100%;
+  }
+}
