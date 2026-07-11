@@ -40,6 +40,7 @@ const navItems = [
   { to: "/dice", label: "Zar" },
   { to: "/spellbook", label: "Spellbook" },
   { to: "/inventory", label: "Inventory" },
+  { to: "/campaigns", label: "Campaigns" },
   { to: "/backup", label: "Yedek" },
   { to: "/library", label: "Library" },
   { to: "/homebrew-lab", label: "Homebrew" },
@@ -75,6 +76,89 @@ const emptyDraft: CharacterDraft = {
   gold: 0,
   notes: "",
 };
+
+
+type CampaignNote = {
+  id: string;
+  title: string;
+  body: string;
+  createdAt: string;
+};
+
+type CampaignNpc = {
+  id: string;
+  name: string;
+  role: string;
+  notes: string;
+  createdAt: string;
+};
+
+type CampaignQuest = {
+  id: string;
+  title: string;
+  status: "active" | "completed" | "failed";
+  notes: string;
+  createdAt: string;
+};
+
+type Campaign = {
+  id: string;
+  name: string;
+  description: string;
+  characterIds: string[];
+  sessionNotes: CampaignNote[];
+  npcNotes: CampaignNpc[];
+  quests: CampaignQuest[];
+  createdAt: string;
+  updatedAt: string;
+};
+
+const CAMPAIGNS_STORAGE_KEY = "e4_dnd_campaigns_v1";
+
+function loadCampaigns(): Campaign[] {
+  try {
+    const raw = localStorage.getItem(CAMPAIGNS_STORAGE_KEY);
+
+    if (!raw) {
+      return [];
+    }
+
+    const parsed = JSON.parse(raw);
+
+    if (!Array.isArray(parsed)) {
+      return [];
+    }
+
+    return parsed.map((campaign) => ({
+      id: typeof campaign.id === "string" ? campaign.id : crypto.randomUUID(),
+      name: typeof campaign.name === "string" ? campaign.name : "Unnamed Campaign",
+      description:
+        typeof campaign.description === "string" ? campaign.description : "",
+      characterIds: Array.isArray(campaign.characterIds)
+        ? campaign.characterIds.filter((id: unknown) => typeof id === "string")
+        : [],
+      sessionNotes: Array.isArray(campaign.sessionNotes)
+        ? campaign.sessionNotes
+        : [],
+      npcNotes: Array.isArray(campaign.npcNotes) ? campaign.npcNotes : [],
+      quests: Array.isArray(campaign.quests) ? campaign.quests : [],
+      createdAt:
+        typeof campaign.createdAt === "string"
+          ? campaign.createdAt
+          : new Date().toISOString(),
+      updatedAt:
+        typeof campaign.updatedAt === "string"
+          ? campaign.updatedAt
+          : new Date().toISOString(),
+    }));
+  } catch {
+    return [];
+  }
+}
+
+function saveCampaigns(campaigns: Campaign[]) {
+  localStorage.setItem(CAMPAIGNS_STORAGE_KEY, JSON.stringify(campaigns));
+}
 
 const FULL_CASTER_CLASSES = new Set([
   "bard",
@@ -4046,24 +4130,1183 @@ function Inventory({
   );
 }
 
-function HomebrewLab() {
+
+const HOMEBREW_SPELLS_STORAGE_KEY = "e4_dnd_homebrew_spells_v1";
+const HOMEBREW_ITEMS_STORAGE_KEY = "e4_dnd_homebrew_items_v1";
+
+function parseTextList(value: string) {
+  return value
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+
+function Campaigns({
+  characters,
+  campaigns,
+  onCreateCampaign,
+  onUpdateCampaign,
+  onDeleteCampaign,
+}: {
+  characters: Character[];
+  campaigns: Campaign[];
+  onCreateCampaign: (name: string, description: string) => void;
+  onUpdateCampaign: (campaign: Campaign) => void;
+  onDeleteCampaign: (id: string) => void;
+}) {
+  const [selectedCampaignId, setSelectedCampaignId] = useState<string | null>(
+    campaigns[0]?.id ?? null,
+  );
+  const [newCampaignName, setNewCampaignName] = useState("");
+  const [newCampaignDescription, setNewCampaignDescription] = useState("");
+  const [sessionTitle, setSessionTitle] = useState("");
+  const [sessionBody, setSessionBody] = useState("");
+  const [npcName, setNpcName] = useState("");
+  const [npcRole, setNpcRole] = useState("");
+  const [npcNotes, setNpcNotes] = useState("");
+  const [questTitle, setQuestTitle] = useState("");
+  const [questNotes, setQuestNotes] = useState("");
+
+  useEffect(() => {
+    if (!selectedCampaignId && campaigns[0]) {
+      setSelectedCampaignId(campaigns[0].id);
+      return;
+    }
+
+    if (
+      selectedCampaignId &&
+      !campaigns.some((campaign) => campaign.id === selectedCampaignId)
+    ) {
+      setSelectedCampaignId(campaigns[0]?.id ?? null);
+    }
+  }, [campaigns, selectedCampaignId]);
+
+  const selectedCampaign = campaigns.find(
+    (campaign) => campaign.id === selectedCampaignId,
+  );
+
+  const partyCharacters = useMemo(() => {
+    if (!selectedCampaign) {
+      return [];
+    }
+
+    return selectedCampaign.characterIds
+      .map((id) => characters.find((character) => character.id === id))
+      .filter((character): character is Character => Boolean(character));
+  }, [characters, selectedCampaign]);
+
+  const partySummary = useMemo(() => {
+    const totalHp = partyCharacters.reduce(
+      (sum, character) => sum + character.currentHp,
+      0,
+    );
+    const totalMaxHp = partyCharacters.reduce(
+      (sum, character) => sum + character.maxHp,
+      0,
+    );
+    const averageLevel =
+      partyCharacters.length === 0
+        ? 0
+        : partyCharacters.reduce((sum, character) => sum + character.level, 0) /
+          partyCharacters.length;
+
+    return {
+      totalHp,
+      totalMaxHp,
+      averageLevel,
+    };
+  }, [partyCharacters]);
+
+  function createCampaign(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!newCampaignName.trim()) {
+      alert("Campaign adı lazım kankam. Adsız kampanya biraz vergi dairesi dosyası gibi duruyor.");
+      return;
+    }
+
+    onCreateCampaign(newCampaignName.trim(), newCampaignDescription.trim());
+    setNewCampaignName("");
+    setNewCampaignDescription("");
+  }
+
+  function toggleCampaignCharacter(characterId: string) {
+    if (!selectedCampaign) {
+      return;
+    }
+
+    const hasCharacter = selectedCampaign.characterIds.includes(characterId);
+
+    onUpdateCampaign({
+      ...selectedCampaign,
+      characterIds: hasCharacter
+        ? selectedCampaign.characterIds.filter((id) => id !== characterId)
+        : [...selectedCampaign.characterIds, characterId],
+      updatedAt: new Date().toISOString(),
+    });
+  }
+
+  function addSessionNote(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!selectedCampaign || !sessionTitle.trim()) {
+      return;
+    }
+
+    const now = new Date().toISOString();
+
+    onUpdateCampaign({
+      ...selectedCampaign,
+      sessionNotes: [
+        {
+          id: crypto.randomUUID(),
+          title: sessionTitle.trim(),
+          body: sessionBody.trim(),
+          createdAt: now,
+        },
+        ...selectedCampaign.sessionNotes,
+      ],
+      updatedAt: now,
+    });
+
+    setSessionTitle("");
+    setSessionBody("");
+  }
+
+  function addNpc(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!selectedCampaign || !npcName.trim()) {
+      return;
+    }
+
+    const now = new Date().toISOString();
+
+    onUpdateCampaign({
+      ...selectedCampaign,
+      npcNotes: [
+        {
+          id: crypto.randomUUID(),
+          name: npcName.trim(),
+          role: npcRole.trim() || "NPC",
+          notes: npcNotes.trim(),
+          createdAt: now,
+        },
+        ...selectedCampaign.npcNotes,
+      ],
+      updatedAt: now,
+    });
+
+    setNpcName("");
+    setNpcRole("");
+    setNpcNotes("");
+  }
+
+  function addQuest(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!selectedCampaign || !questTitle.trim()) {
+      return;
+    }
+
+    const now = new Date().toISOString();
+
+    onUpdateCampaign({
+      ...selectedCampaign,
+      quests: [
+        {
+          id: crypto.randomUUID(),
+          title: questTitle.trim(),
+          status: "active",
+          notes: questNotes.trim(),
+          createdAt: now,
+        },
+        ...selectedCampaign.quests,
+      ],
+      updatedAt: now,
+    });
+
+    setQuestTitle("");
+    setQuestNotes("");
+  }
+
+  function updateQuestStatus(
+    questId: string,
+    status: CampaignQuest["status"],
+  ) {
+    if (!selectedCampaign) {
+      return;
+    }
+
+    onUpdateCampaign({
+      ...selectedCampaign,
+      quests: selectedCampaign.quests.map((quest) =>
+        quest.id === questId ? { ...quest, status } : quest,
+      ),
+      updatedAt: new Date().toISOString(),
+    });
+  }
+
+  function removeFromCampaign(collection: "sessionNotes" | "npcNotes" | "quests", id: string) {
+    if (!selectedCampaign) {
+      return;
+    }
+
+    onUpdateCampaign({
+      ...selectedCampaign,
+      [collection]: selectedCampaign[collection].filter((item) => item.id !== id),
+      updatedAt: new Date().toISOString(),
+    });
+  }
+
   return (
     <PageShell
-      eyebrow="Homebrew Lab"
-      title="Homebrew"
-      description="Custom race, class, subclass, feat, spell ve item üretim laboratuvarı."
+      eyebrow="Campaign Command Center"
+      title="Campaigns"
+      description="Parti, session notları, NPC kayıtları ve quest takibi. DM kaosunu en azından kartlara ayırıyoruz. Medeniyet dediğin bu kadar kırılgan."
     >
-      <div className="lab-grid">
-        {["Race", "Class", "Subclass", "Feat", "Spell", "Item"].map((item) => (
-          <motion.div className="lab-card" key={item} whileHover={{ y: -5 }}>
-            <span>Custom</span>
-            <strong>{item}</strong>
-          </motion.div>
-        ))}
+      <div className="campaign-layout">
+        <aside className="campaign-sidebar-card">
+          <form className="campaign-create-form" onSubmit={createCampaign}>
+            <span className="mini-label">New Campaign</span>
+            <input
+              value={newCampaignName}
+              onChange={(event) => setNewCampaignName(event.target.value)}
+              placeholder="Alabasta Arc"
+            />
+            <textarea
+              value={newCampaignDescription}
+              onChange={(event) =>
+                setNewCampaignDescription(event.target.value)
+              }
+              placeholder="Kampanya kısa açıklaması..."
+              rows={3}
+            />
+            <button className="primary-action" type="submit">
+              Campaign Oluştur
+            </button>
+          </form>
+
+          <div className="campaign-list">
+            {campaigns.length === 0 ? (
+              <div className="empty-panel compact-empty">
+                <h2>Campaign yok.</h2>
+                <p>Henüz kimse dünyayı kurtarmaya kalkmamış. Şaşırtıcı ölçüde huzurlu.</p>
+              </div>
+            ) : (
+              campaigns.map((campaign) => (
+                <button
+                  className={
+                    campaign.id === selectedCampaignId
+                      ? "campaign-list-item active"
+                      : "campaign-list-item"
+                  }
+                  key={campaign.id}
+                  onClick={() => setSelectedCampaignId(campaign.id)}
+                >
+                  <strong>{campaign.name}</strong>
+                  <span>{campaign.characterIds.length} karakter</span>
+                </button>
+              ))
+            )}
+          </div>
+        </aside>
+
+        {!selectedCampaign ? (
+          <div className="empty-panel campaign-empty-main">
+            <h2>Bir campaign seç.</h2>
+            <p>Sol taraftan kampanya oluştur veya seç. Evet, organizasyon diye bir kavram hâlâ var.</p>
+          </div>
+        ) : (
+          <div className="campaign-main">
+            <section className="campaign-hero-card">
+              <div>
+                <span className="mini-label">Active Campaign</span>
+                <h2>{selectedCampaign.name}</h2>
+                <p>
+                  {selectedCampaign.description ||
+                    "Açıklama yok. Gizemli kampanya mı, unutkan DM mi, bunu tarih yazacak."}
+                </p>
+              </div>
+
+              <button
+                className="danger-action"
+                onClick={() => onDeleteCampaign(selectedCampaign.id)}
+              >
+                Campaign Sil
+              </button>
+            </section>
+
+            <section className="campaign-stat-grid">
+              <div>
+                <span>Party Size</span>
+                <strong>{partyCharacters.length}</strong>
+              </div>
+              <div>
+                <span>Party HP</span>
+                <strong>
+                  {partySummary.totalHp}/{partySummary.totalMaxHp}
+                </strong>
+              </div>
+              <div>
+                <span>Average Level</span>
+                <strong>{partySummary.averageLevel.toFixed(1)}</strong>
+              </div>
+              <div>
+                <span>Active Quests</span>
+                <strong>
+                  {
+                    selectedCampaign.quests.filter(
+                      (quest) => quest.status === "active",
+                    ).length
+                  }
+                </strong>
+              </div>
+            </section>
+
+            <section className="campaign-card">
+              <div className="campaign-section-head">
+                <div>
+                  <span className="mini-label">Party</span>
+                  <h2>Karakterleri Bağla</h2>
+                </div>
+              </div>
+
+              {characters.length === 0 ? (
+                <div className="empty-panel compact-empty">
+                  <h2>Karakter yok.</h2>
+                  <p>Önce karakter oluştur. Parti boşsa macera da biraz PowerPoint sunumu gibi kalıyor.</p>
+                </div>
+              ) : (
+                <div className="campaign-character-grid">
+                  {characters.map((character) => {
+                    const selected = selectedCampaign.characterIds.includes(
+                      character.id,
+                    );
+
+                    return (
+                      <button
+                        className={
+                          selected
+                            ? "campaign-character-pill active"
+                            : "campaign-character-pill"
+                        }
+                        key={character.id}
+                        onClick={() => toggleCampaignCharacter(character.id)}
+                      >
+                        <strong>{character.name}</strong>
+                        <span>
+                          Lv. {character.level} • {character.className || "Class yok"}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+            </section>
+
+            <div className="campaign-grid-two">
+              <section className="campaign-card">
+                <div className="campaign-section-head">
+                  <div>
+                    <span className="mini-label">Party Dashboard</span>
+                    <h2>Aktif Parti</h2>
+                  </div>
+                </div>
+
+                {partyCharacters.length === 0 ? (
+                  <div className="empty-panel compact-empty">
+                    <h2>Parti boş.</h2>
+                    <p>Henüz kimse bu felakete dahil edilmemiş.</p>
+                  </div>
+                ) : (
+                  <div className="party-character-list">
+                    {partyCharacters.map((character) => (
+                      <article className="party-character-card" key={character.id}>
+                        <div>
+                          <strong>{character.name}</strong>
+                          <span>
+                            {character.race || "Race yok"} • {character.className || "Class yok"}
+                          </span>
+                        </div>
+                        <div>
+                          <b>HP {character.currentHp}/{character.maxHp}</b>
+                          <span>AC {character.armorClass} • PB +{getProficiencyBonus(character.level)}</span>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                )}
+              </section>
+
+              <section className="campaign-card">
+                <form className="campaign-mini-form" onSubmit={addSessionNote}>
+                  <div className="campaign-section-head">
+                    <div>
+                      <span className="mini-label">Session Notes</span>
+                      <h2>Oturum Notu</h2>
+                    </div>
+                    <button type="submit">Ekle</button>
+                  </div>
+                  <input
+                    value={sessionTitle}
+                    onChange={(event) => setSessionTitle(event.target.value)}
+                    placeholder="Session 4 - Rainbase"
+                  />
+                  <textarea
+                    value={sessionBody}
+                    onChange={(event) => setSessionBody(event.target.value)}
+                    placeholder="Bu oturumda ne oldu? Kim kimi kandırdı? Kim gereksiz risk aldı?"
+                    rows={4}
+                  />
+                </form>
+
+                <div className="campaign-note-list">
+                  {selectedCampaign.sessionNotes.map((note) => (
+                    <article className="campaign-note-card" key={note.id}>
+                      <div>
+                        <strong>{note.title}</strong>
+                        <p>{note.body || "Not boş. Minimalizm mi üşengeçlik mi, bilemedim."}</p>
+                      </div>
+                      <button onClick={() => removeFromCampaign("sessionNotes", note.id)}>
+                        Sil
+                      </button>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            </div>
+
+            <div className="campaign-grid-two">
+              <section className="campaign-card">
+                <form className="campaign-mini-form" onSubmit={addNpc}>
+                  <div className="campaign-section-head">
+                    <div>
+                      <span className="mini-label">NPC Notes</span>
+                      <h2>NPC Ekle</h2>
+                    </div>
+                    <button type="submit">Ekle</button>
+                  </div>
+                  <div className="form-grid compact-form-grid">
+                    <input
+                      value={npcName}
+                      onChange={(event) => setNpcName(event.target.value)}
+                      placeholder="NPC adı"
+                    />
+                    <input
+                      value={npcRole}
+                      onChange={(event) => setNpcRole(event.target.value)}
+                      placeholder="Rol / Ünvan"
+                    />
+                  </div>
+                  <textarea
+                    value={npcNotes}
+                    onChange={(event) => setNpcNotes(event.target.value)}
+                    placeholder="NPC notları, motivasyon, ses tonu, şüpheli davranışlar..."
+                    rows={4}
+                  />
+                </form>
+
+                <div className="campaign-note-list">
+                  {selectedCampaign.npcNotes.map((npc) => (
+                    <article className="campaign-note-card" key={npc.id}>
+                      <div>
+                        <strong>{npc.name}</strong>
+                        <span>{npc.role}</span>
+                        <p>{npc.notes || "Not yok. NPC de düz vatandaş çıktı, üzücü."}</p>
+                      </div>
+                      <button onClick={() => removeFromCampaign("npcNotes", npc.id)}>
+                        Sil
+                      </button>
+                    </article>
+                  ))}
+                </div>
+              </section>
+
+              <section className="campaign-card">
+                <form className="campaign-mini-form" onSubmit={addQuest}>
+                  <div className="campaign-section-head">
+                    <div>
+                      <span className="mini-label">Quest Tracker</span>
+                      <h2>Quest Ekle</h2>
+                    </div>
+                    <button type="submit">Ekle</button>
+                  </div>
+                  <input
+                    value={questTitle}
+                    onChange={(event) => setQuestTitle(event.target.value)}
+                    placeholder="Vivi'yi kurtar"
+                  />
+                  <textarea
+                    value={questNotes}
+                    onChange={(event) => setQuestNotes(event.target.value)}
+                    placeholder="Quest detayları..."
+                    rows={4}
+                  />
+                </form>
+
+                <div className="campaign-note-list">
+                  {selectedCampaign.quests.map((quest) => (
+                    <article className="campaign-note-card" key={quest.id}>
+                      <div>
+                        <strong>{quest.title}</strong>
+                        <span>{quest.status}</span>
+                        <p>{quest.notes || "Not yok. Görev tanımı bile performans kaygısı yaşıyor."}</p>
+                        <div className="quest-status-row">
+                          {(["active", "completed", "failed"] as const).map(
+                            (status) => (
+                              <button
+                                className={quest.status === status ? "active" : ""}
+                                key={status}
+                                onClick={() => updateQuestStatus(quest.id, status)}
+                              >
+                                {status}
+                              </button>
+                            ),
+                          )}
+                        </div>
+                      </div>
+                      <button onClick={() => removeFromCampaign("quests", quest.id)}>
+                        Sil
+                      </button>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            </div>
+          </div>
+        )}
       </div>
     </PageShell>
   );
 }
+
+function loadHomebrewSpells(): DndSpellData[] {
+  try {
+    const raw = localStorage.getItem(HOMEBREW_SPELLS_STORAGE_KEY);
+
+    if (!raw) {
+      return [];
+    }
+
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? (parsed as DndSpellData[]) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveHomebrewSpells(spells: DndSpellData[]) {
+  localStorage.setItem(HOMEBREW_SPELLS_STORAGE_KEY, JSON.stringify(spells));
+}
+
+function loadHomebrewItems(): DndItemData[] {
+  try {
+    const raw = localStorage.getItem(HOMEBREW_ITEMS_STORAGE_KEY);
+
+    if (!raw) {
+      return [];
+    }
+
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? (parsed as DndItemData[]) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveHomebrewItems(items: DndItemData[]) {
+  localStorage.setItem(HOMEBREW_ITEMS_STORAGE_KEY, JSON.stringify(items));
+}
+
+function HomebrewLab({
+  homebrewSpells,
+  homebrewItems,
+  onCreateHomebrewSpell,
+  onDeleteHomebrewSpell,
+  onCreateHomebrewItem,
+  onDeleteHomebrewItem,
+}: {
+  homebrewSpells: DndSpellData[];
+  homebrewItems: DndItemData[];
+  onCreateHomebrewSpell: (spell: DndSpellData) => void;
+  onDeleteHomebrewSpell: (id: string) => void;
+  onCreateHomebrewItem: (item: DndItemData) => void;
+  onDeleteHomebrewItem: (id: string) => void;
+}) {
+  const [spellForm, setSpellForm] = useState({
+    name: "",
+    level: 0,
+    school: "Evocation",
+    castingTime: "1 action",
+    range: "60 feet",
+    componentsText: "V, S",
+    duration: "Instantaneous",
+    concentration: false,
+    ritual: false,
+    classesText: "Cleric, Wizard",
+    description: "",
+    higherLevels: "",
+  });
+
+  const [itemForm, setItemForm] = useState({
+    name: "",
+    category: "gear" as DndItemData["category"],
+    cost: "",
+    weight: 0,
+    description: "",
+    armorClass: "",
+    armorClassBonus: "",
+    armorType: "light",
+    dexBonusMax: "",
+    damage: "",
+    damageType: "",
+    propertiesText: "",
+    range: "",
+  });
+
+  function updateSpellForm<K extends keyof typeof spellForm>(
+    key: K,
+    value: (typeof spellForm)[K],
+  ) {
+    setSpellForm((current) => ({
+      ...current,
+      [key]: value,
+    }));
+  }
+
+  function updateItemForm<K extends keyof typeof itemForm>(
+    key: K,
+    value: (typeof itemForm)[K],
+  ) {
+    setItemForm((current) => ({
+      ...current,
+      [key]: value,
+    }));
+  }
+
+  function handleCreateSpell(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!spellForm.name.trim()) {
+      alert("Spell adı lazım kankam. Büyü isimsiz olunca DM bile anlamıyor.");
+      return;
+    }
+
+    if (!spellForm.description.trim()) {
+      alert("Spell açıklaması lazım. Sadece havalı isimle büyü olmuyor, maalesef.");
+      return;
+    }
+
+    onCreateHomebrewSpell({
+      id: `homebrew-spell-${crypto.randomUUID()}`,
+      name: spellForm.name.trim(),
+      level: spellForm.level,
+      school: spellForm.school.trim() || "Homebrew",
+      castingTime: spellForm.castingTime.trim() || "1 action",
+      range: spellForm.range.trim() || "Self",
+      components: parseTextList(spellForm.componentsText),
+      duration: spellForm.duration.trim() || "Instantaneous",
+      concentration: spellForm.concentration,
+      ritual: spellForm.ritual,
+      classes: parseTextList(spellForm.classesText),
+      description: spellForm.description.trim(),
+      higherLevels: spellForm.higherLevels.trim() || undefined,
+    });
+
+    setSpellForm((current) => ({
+      ...current,
+      name: "",
+      description: "",
+      higherLevels: "",
+    }));
+  }
+
+  function handleCreateItem(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!itemForm.name.trim()) {
+      alert("Item adı lazım. Çantaya 'şey' diye item koyarsak barbar bile güler.");
+      return;
+    }
+
+    const armorClass = Number(itemForm.armorClass);
+    const armorClassBonus = Number(itemForm.armorClassBonus);
+    const dexBonusMax = Number(itemForm.dexBonusMax);
+
+    onCreateHomebrewItem({
+      id: `homebrew-item-${crypto.randomUUID()}`,
+      name: itemForm.name.trim(),
+      category: itemForm.category,
+      cost: itemForm.cost.trim() || "Custom",
+      weight: Number.isFinite(itemForm.weight) ? itemForm.weight : 0,
+      description: itemForm.description.trim() || "Homebrew item.",
+      armorClass:
+        itemForm.category === "armor" && Number.isFinite(armorClass)
+          ? armorClass
+          : undefined,
+      armorClassBonus:
+        itemForm.category === "shield" && Number.isFinite(armorClassBonus)
+          ? armorClassBonus
+          : undefined,
+      armorType:
+        itemForm.category === "armor"
+          ? (itemForm.armorType as "light" | "medium" | "heavy")
+          : undefined,
+      dexBonusMax:
+        itemForm.category === "armor" && Number.isFinite(dexBonusMax)
+          ? dexBonusMax
+          : undefined,
+      damage: itemForm.category === "weapon" ? itemForm.damage.trim() : undefined,
+      damageType:
+        itemForm.category === "weapon" ? itemForm.damageType.trim() : undefined,
+      properties:
+        itemForm.category === "weapon"
+          ? parseTextList(itemForm.propertiesText)
+          : undefined,
+      range: itemForm.category === "weapon" ? itemForm.range.trim() : undefined,
+      tags: ["homebrew"],
+    });
+
+    setItemForm((current) => ({
+      ...current,
+      name: "",
+      description: "",
+      damage: "",
+      damageType: "",
+      propertiesText: "",
+      range: "",
+    }));
+  }
+
+  return (
+    <PageShell
+      eyebrow="Homebrew Lab"
+      title="Homebrew"
+      description="Custom spell ve item üret, sonra bunları Spellbook ve Inventory içinde kullan. DM yetkisi verdik, sonuçlarına katlanacağız."
+    >
+      <div className="homebrew-summary-grid">
+        <div className="homebrew-summary-card">
+          <span className="mini-label">Custom Spells</span>
+          <strong>{homebrewSpells.length}</strong>
+          <p>Spellbook, Builder ve karakter detayında kullanılabilir.</p>
+        </div>
+
+        <div className="homebrew-summary-card">
+          <span className="mini-label">Custom Items</span>
+          <strong>{homebrewItems.length}</strong>
+          <p>Inventory listesine karışır. Evet, artık kılıç da uydurabiliyoruz.</p>
+        </div>
+      </div>
+
+      <div className="homebrew-layout">
+        <form className="homebrew-form-card" onSubmit={handleCreateSpell}>
+          <div className="homebrew-card-head">
+            <div>
+              <span className="mini-label">Creator</span>
+              <h2>Custom Spell</h2>
+            </div>
+            <button className="primary-action" type="submit">
+              Spell Kaydet
+            </button>
+          </div>
+
+          <div className="form-grid">
+            <label>
+              Spell Name
+              <input
+                value={spellForm.name}
+                onChange={(event) => updateSpellForm("name", event.target.value)}
+                placeholder="Sandstorm Verdict"
+              />
+            </label>
+
+            <label>
+              Level
+              <select
+                value={spellForm.level}
+                onChange={(event) =>
+                  updateSpellForm("level", Number(event.target.value))
+                }
+              >
+                <option value={0}>Cantrip</option>
+                <option value={1}>Level 1</option>
+                <option value={2}>Level 2</option>
+                <option value={3}>Level 3</option>
+                <option value={4}>Level 4</option>
+                <option value={5}>Level 5</option>
+              </select>
+            </label>
+
+            <label>
+              School
+              <input
+                value={spellForm.school}
+                onChange={(event) => updateSpellForm("school", event.target.value)}
+                placeholder="Evocation"
+              />
+            </label>
+
+            <label>
+              Classes
+              <input
+                value={spellForm.classesText}
+                onChange={(event) =>
+                  updateSpellForm("classesText", event.target.value)
+                }
+                placeholder="Cleric, Wizard"
+              />
+            </label>
+
+            <label>
+              Casting Time
+              <input
+                value={spellForm.castingTime}
+                onChange={(event) =>
+                  updateSpellForm("castingTime", event.target.value)
+                }
+                placeholder="1 action"
+              />
+            </label>
+
+            <label>
+              Range
+              <input
+                value={spellForm.range}
+                onChange={(event) => updateSpellForm("range", event.target.value)}
+                placeholder="60 feet"
+              />
+            </label>
+
+            <label>
+              Duration
+              <input
+                value={spellForm.duration}
+                onChange={(event) =>
+                  updateSpellForm("duration", event.target.value)
+                }
+                placeholder="Instantaneous"
+              />
+            </label>
+
+            <label>
+              Components
+              <input
+                value={spellForm.componentsText}
+                onChange={(event) =>
+                  updateSpellForm("componentsText", event.target.value)
+                }
+                placeholder="V, S, M"
+              />
+            </label>
+          </div>
+
+          <div className="homebrew-toggle-row">
+            <label>
+              <input
+                type="checkbox"
+                checked={spellForm.concentration}
+                onChange={(event) =>
+                  updateSpellForm("concentration", event.target.checked)
+                }
+              />
+              Concentration
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                checked={spellForm.ritual}
+                onChange={(event) => updateSpellForm("ritual", event.target.checked)}
+              />
+              Ritual
+            </label>
+          </div>
+
+          <label>
+            Description
+            <textarea
+              value={spellForm.description}
+              onChange={(event) =>
+                updateSpellForm("description", event.target.value)
+              }
+              rows={5}
+              placeholder="Spell ne yapıyor? Zar, save, damage, condition..."
+            />
+          </label>
+
+          <label>
+            Higher Levels
+            <textarea
+              value={spellForm.higherLevels}
+              onChange={(event) =>
+                updateSpellForm("higherLevels", event.target.value)
+              }
+              rows={3}
+              placeholder="Higher level cast açıklaması varsa buraya. Yoksa boş bırak."
+            />
+          </label>
+        </form>
+
+        <form className="homebrew-form-card" onSubmit={handleCreateItem}>
+          <div className="homebrew-card-head">
+            <div>
+              <span className="mini-label">Creator</span>
+              <h2>Custom Item</h2>
+            </div>
+            <button className="primary-action" type="submit">
+              Item Kaydet
+            </button>
+          </div>
+
+          <div className="form-grid">
+            <label>
+              Item Name
+              <input
+                value={itemForm.name}
+                onChange={(event) => updateItemForm("name", event.target.value)}
+                placeholder="Shirodai Blade"
+              />
+            </label>
+
+            <label>
+              Category
+              <select
+                value={itemForm.category}
+                onChange={(event) =>
+                  updateItemForm(
+                    "category",
+                    event.target.value as DndItemData["category"],
+                  )
+                }
+              >
+                <option value="weapon">Weapon</option>
+                <option value="armor">Armor</option>
+                <option value="shield">Shield</option>
+                <option value="gear">Gear</option>
+              </select>
+            </label>
+
+            <label>
+              Cost
+              <input
+                value={itemForm.cost}
+                onChange={(event) => updateItemForm("cost", event.target.value)}
+                placeholder="50 gp"
+              />
+            </label>
+
+            <label>
+              Weight
+              <input
+                type="number"
+                min={0}
+                value={itemForm.weight}
+                onChange={(event) =>
+                  updateItemForm("weight", Number(event.target.value))
+                }
+              />
+            </label>
+          </div>
+
+          {itemForm.category === "armor" ? (
+            <div className="form-grid compact-form-grid">
+              <label>
+                Armor AC
+                <input
+                  value={itemForm.armorClass}
+                  onChange={(event) =>
+                    updateItemForm("armorClass", event.target.value)
+                  }
+                  placeholder="12"
+                />
+              </label>
+
+              <label>
+                Armor Type
+                <select
+                  value={itemForm.armorType}
+                  onChange={(event) =>
+                    updateItemForm("armorType", event.target.value)
+                  }
+                >
+                  <option value="light">Light</option>
+                  <option value="medium">Medium</option>
+                  <option value="heavy">Heavy</option>
+                </select>
+              </label>
+
+              <label>
+                Dex Bonus Max
+                <input
+                  value={itemForm.dexBonusMax}
+                  onChange={(event) =>
+                    updateItemForm("dexBonusMax", event.target.value)
+                  }
+                  placeholder="2"
+                />
+              </label>
+            </div>
+          ) : null}
+
+          {itemForm.category === "shield" ? (
+            <label>
+              AC Bonus
+              <input
+                value={itemForm.armorClassBonus}
+                onChange={(event) =>
+                  updateItemForm("armorClassBonus", event.target.value)
+                }
+                placeholder="2"
+              />
+            </label>
+          ) : null}
+
+          {itemForm.category === "weapon" ? (
+            <div className="form-grid compact-form-grid">
+              <label>
+                Damage
+                <input
+                  value={itemForm.damage}
+                  onChange={(event) => updateItemForm("damage", event.target.value)}
+                  placeholder="1d8"
+                />
+              </label>
+
+              <label>
+                Damage Type
+                <input
+                  value={itemForm.damageType}
+                  onChange={(event) =>
+                    updateItemForm("damageType", event.target.value)
+                  }
+                  placeholder="slashing"
+                />
+              </label>
+
+              <label>
+                Properties
+                <input
+                  value={itemForm.propertiesText}
+                  onChange={(event) =>
+                    updateItemForm("propertiesText", event.target.value)
+                  }
+                  placeholder="Finesse, Light"
+                />
+              </label>
+
+              <label>
+                Range
+                <input
+                  value={itemForm.range}
+                  onChange={(event) => updateItemForm("range", event.target.value)}
+                  placeholder="80/320"
+                />
+              </label>
+            </div>
+          ) : null}
+
+          <label>
+            Description
+            <textarea
+              value={itemForm.description}
+              onChange={(event) =>
+                updateItemForm("description", event.target.value)
+              }
+              rows={5}
+              placeholder="Item ne işe yarıyor? Bonus, hasar, özel kural..."
+            />
+          </label>
+        </form>
+      </div>
+
+      <div className="homebrew-created-grid">
+        <section className="homebrew-created-card">
+          <div className="homebrew-card-head">
+            <div>
+              <span className="mini-label">Saved</span>
+              <h2>Custom Spells</h2>
+            </div>
+          </div>
+
+          {homebrewSpells.length === 0 ? (
+            <div className="empty-panel compact-empty">
+              <h2>Spell yok.</h2>
+              <p>DM henüz gerçeklik yasalarını bozmadı. Nadiren güzel.</p>
+            </div>
+          ) : (
+            <div className="homebrew-list">
+              {homebrewSpells.map((spell) => (
+                <article className="homebrew-list-item" key={spell.id}>
+                  <div>
+                    <span className="mini-label">
+                      {spell.level === 0 ? "Cantrip" : `Level ${spell.level}`} • {spell.school}
+                    </span>
+                    <h3>{spell.name}</h3>
+                    <p>{spell.description}</p>
+                    <div className="library-pill-row">
+                      <span>{spell.classes.join(", ") || "No class"}</span>
+                      {spell.concentration ? <span>Concentration</span> : null}
+                      {spell.ritual ? <span>Ritual</span> : null}
+                    </div>
+                  </div>
+
+                  <button onClick={() => onDeleteHomebrewSpell(spell.id)}>
+                    Sil
+                  </button>
+                </article>
+              ))}
+            </div>
+          )}
+        </section>
+
+        <section className="homebrew-created-card">
+          <div className="homebrew-card-head">
+            <div>
+              <span className="mini-label">Saved</span>
+              <h2>Custom Items</h2>
+            </div>
+          </div>
+
+          {homebrewItems.length === 0 ? (
+            <div className="empty-panel compact-empty">
+              <h2>Item yok.</h2>
+              <p>Çanta boş. Maceracı için utanç, performans için avantaj.</p>
+            </div>
+          ) : (
+            <div className="homebrew-list">
+              {homebrewItems.map((item) => (
+                <article className="homebrew-list-item" key={item.id}>
+                  <div>
+                    <span className="mini-label">
+                      {item.category} • {item.weight} lb
+                    </span>
+                    <h3>{item.name}</h3>
+                    <p>{item.description}</p>
+                    <div className="library-pill-row">
+                      <span>{item.cost}</span>
+                      {item.damage ? <span>{item.damage} {item.damageType}</span> : null}
+                      {item.armorClass ? <span>AC {item.armorClass}</span> : null}
+                      {item.armorClassBonus ? (
+                        <span>AC +{item.armorClassBonus}</span>
+                      ) : null}
+                    </div>
+                  </div>
+
+                  <button onClick={() => onDeleteHomebrewItem(item.id)}>
+                    Sil
+                  </button>
+                </article>
+              ))}
+            </div>
+          )}
+        </section>
+      </div>
+    </PageShell>
+  );
+}
+
 
 function App() {
   const [characters, setCharacters] = useState<Character[]>(() =>
@@ -4073,6 +5316,28 @@ function App() {
   const [rulesetData, setRulesetData] = useState<RulesetData | null>(null);
   const [isRulesetLoading, setIsRulesetLoading] = useState(true);
   const [rulesetError, setRulesetError] = useState<string | null>(null);
+
+  const [homebrewSpells, setHomebrewSpells] = useState<DndSpellData[]>(() =>
+    loadHomebrewSpells(),
+  );
+  const [homebrewItems, setHomebrewItems] = useState<DndItemData[]>(() =>
+    loadHomebrewItems(),
+  );
+  const [campaigns, setCampaigns] = useState<Campaign[]>(() =>
+    loadCampaigns(),
+  );
+
+  const effectiveRulesetData = useMemo<RulesetData | null>(() => {
+    if (!rulesetData) {
+      return null;
+    }
+
+    return {
+      ...rulesetData,
+      spells: [...rulesetData.spells, ...homebrewSpells],
+      items: [...rulesetData.items, ...homebrewItems],
+    };
+  }, [rulesetData, homebrewSpells, homebrewItems]);
 
   useEffect(() => {
     let isMounted = true;
@@ -4111,6 +5376,19 @@ function App() {
     saveCharacters(characters);
   }, [characters]);
 
+
+  useEffect(() => {
+    saveHomebrewSpells(homebrewSpells);
+  }, [homebrewSpells]);
+
+  useEffect(() => {
+    saveHomebrewItems(homebrewItems);
+  }, [homebrewItems]);
+
+  useEffect(() => {
+    saveCampaigns(campaigns);
+  }, [campaigns]);
+
   function handleCreateCharacter(draft: CharacterDraft) {
     const character = createCharacterFromDraft(draft);
     setCharacters((current) => [character, ...current]);
@@ -4147,6 +5425,79 @@ function App() {
 
   function handleWipeCharacters() {
     setCharacters([]);
+  }
+
+
+  function handleCreateCampaign(name: string, description: string) {
+    const now = new Date().toISOString();
+
+    setCampaigns((current) => [
+      {
+        id: crypto.randomUUID(),
+        name,
+        description,
+        characterIds: [],
+        sessionNotes: [],
+        npcNotes: [],
+        quests: [],
+        createdAt: now,
+        updatedAt: now,
+      },
+      ...current,
+    ]);
+  }
+
+  function handleUpdateCampaign(updatedCampaign: Campaign) {
+    setCampaigns((current) =>
+      current.map((campaign) =>
+        campaign.id === updatedCampaign.id ? updatedCampaign : campaign,
+      ),
+    );
+  }
+
+  function handleDeleteCampaign(id: string) {
+    const campaign = campaigns.find((item) => item.id === id);
+
+    if (!campaign) {
+      return;
+    }
+
+    const confirmed = confirm(`${campaign.name} silinsin mi? Campaign mezarlığına uğurluyoruz.`);
+
+    if (!confirmed) {
+      return;
+    }
+
+    setCampaigns((current) => current.filter((item) => item.id !== id));
+  }
+
+
+  function handleCreateHomebrewSpell(spell: DndSpellData) {
+    setHomebrewSpells((current) => [spell, ...current]);
+  }
+
+  function handleDeleteHomebrewSpell(id: string) {
+    const confirmed = confirm("Bu custom spell silinsin mi? Evren biraz sadeleşecek.");
+
+    if (!confirmed) {
+      return;
+    }
+
+    setHomebrewSpells((current) => current.filter((spell) => spell.id !== id));
+  }
+
+  function handleCreateHomebrewItem(item: DndItemData) {
+    setHomebrewItems((current) => [item, ...current]);
+  }
+
+  function handleDeleteHomebrewItem(id: string) {
+    const confirmed = confirm("Bu custom item silinsin mi? Çanta biraz hafifleyecek.");
+
+    if (!confirmed) {
+      return;
+    }
+
+    setHomebrewItems((current) => current.filter((item) => item.id !== id));
   }
 
   return (
@@ -4199,7 +5550,7 @@ function App() {
             element={
               <CharacterEditor
                 characters={characters}
-                rulesetData={rulesetData}
+                rulesetData={effectiveRulesetData}
                 isRulesetLoading={isRulesetLoading}
                 rulesetError={rulesetError}
                 onUpdateCharacter={handleUpdateCharacter}
@@ -4212,7 +5563,7 @@ function App() {
             element={
               <CharacterDetail
                 characters={characters}
-                rulesetData={rulesetData}
+                rulesetData={effectiveRulesetData}
                 onUpdateCharacter={handleUpdateCharacter}
                 onDeleteCharacter={handleDeleteCharacter}
               />
@@ -4224,7 +5575,7 @@ function App() {
             element={
               <Builder
                 onCreateCharacter={handleCreateCharacter}
-                rulesetData={rulesetData}
+                rulesetData={effectiveRulesetData}
                 isRulesetLoading={isRulesetLoading}
                 rulesetError={rulesetError}
               />
@@ -4237,7 +5588,7 @@ function App() {
             path="/spellbook"
             element={
               <Spellbook
-                rulesetData={rulesetData}
+                rulesetData={effectiveRulesetData}
                 isRulesetLoading={isRulesetLoading}
                 rulesetError={rulesetError}
               />
@@ -4247,9 +5598,22 @@ function App() {
             path="/inventory"
             element={
               <Inventory
-                rulesetData={rulesetData}
+                rulesetData={effectiveRulesetData}
                 isRulesetLoading={isRulesetLoading}
                 rulesetError={rulesetError}
+              />
+            }
+          />
+
+          <Route
+            path="/campaigns"
+            element={
+              <Campaigns
+                characters={characters}
+                campaigns={campaigns}
+                onCreateCampaign={handleCreateCampaign}
+                onUpdateCampaign={handleUpdateCampaign}
+                onDeleteCampaign={handleDeleteCampaign}
               />
             }
           />
@@ -4268,13 +5632,25 @@ function App() {
             path="/library"
             element={
               <Library
-                rulesetData={rulesetData}
+                rulesetData={effectiveRulesetData}
                 isRulesetLoading={isRulesetLoading}
                 rulesetError={rulesetError}
               />
             }
           />
-          <Route path="/homebrew-lab" element={<HomebrewLab />} />
+          <Route
+            path="/homebrew-lab"
+            element={
+              <HomebrewLab
+                homebrewSpells={homebrewSpells}
+                homebrewItems={homebrewItems}
+                onCreateHomebrewSpell={handleCreateHomebrewSpell}
+                onDeleteHomebrewSpell={handleDeleteHomebrewSpell}
+                onCreateHomebrewItem={handleCreateHomebrewItem}
+                onDeleteHomebrewItem={handleDeleteHomebrewItem}
+              />
+            }
+          />
         </Routes>
       </main>
 
