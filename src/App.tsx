@@ -9,7 +9,7 @@ import {
 import { motion } from "framer-motion";
 import type { DiceRollResult } from "./core/dice/dice.types";
 import { rollDice } from "./core/dice/diceRoller";
-import type { RulesetData } from "./core/rulesets/ruleset.types";
+import type { DndSpellData, RulesetData } from "./core/rulesets/ruleset.types";
 import { loadDnd2014Ruleset } from "./core/rulesets/rulesetLoader";
 
 import type {
@@ -63,6 +63,8 @@ const emptyDraft: CharacterDraft = {
   },
   maxHp: 10,
   armorClass: 10,
+  knownSpellIds: [],
+  preparedSpellIds: [],
   notes: "",
 };
 
@@ -349,10 +351,12 @@ function Characters({
 
 function CharacterDetail({
   characters,
+  rulesetData,
   onUpdateCharacter,
   onDeleteCharacter,
 }: {
   characters: Character[];
+  rulesetData: RulesetData | null;
   onUpdateCharacter: (character: Character) => void;
   onDeleteCharacter: (id: string) => boolean;
 }) {
@@ -404,6 +408,14 @@ function CharacterDetail({
     "Cursed",
   ];
 
+  const knownSpellIds = activeCharacter.knownSpellIds ?? [];
+  const preparedSpellIds = activeCharacter.preparedSpellIds ?? [];
+  const preparedSpellIdSet = new Set(preparedSpellIds);
+
+  const characterSpells =
+    rulesetData?.spells.filter((spell) => knownSpellIds.includes(spell.id)) ?? [];
+
+
   function updateHp(amount: number) {
     const nextHp = Math.max(
       0,
@@ -433,6 +445,21 @@ function CharacterDetail({
       conditions: hasCondition
         ? activeCharacter.conditions.filter((item) => item !== condition)
         : [...activeCharacter.conditions, condition],
+      updatedAt: new Date().toISOString(),
+    });
+  }
+
+  function togglePreparedSpell(spellId: string) {
+    const hasPreparedSpell = preparedSpellIds.includes(spellId);
+
+    onUpdateCharacter({
+      ...activeCharacter,
+      knownSpellIds: knownSpellIds.includes(spellId)
+        ? knownSpellIds
+        : [...knownSpellIds, spellId],
+      preparedSpellIds: hasPreparedSpell
+        ? preparedSpellIds.filter((id) => id !== spellId)
+        : [...preparedSpellIds, spellId],
       updatedAt: new Date().toISOString(),
     });
   }
@@ -569,6 +596,65 @@ function CharacterDetail({
               {activeCharacter.notes ||
                 "Not yok. Karakterin gizemli olması güzel ama app’in boş kalması değil."}
             </p>
+          </div>
+
+          <div className="character-detail-spellbook">
+            <div className="spell-selector-head">
+              <div>
+                <span className="mini-label">Character Spellbook</span>
+                <h2>Seçili Büyüler</h2>
+              </div>
+
+              <div className="spell-selector-counts">
+                <span>{knownSpellIds.length} known</span>
+                <span>{preparedSpellIds.length} prepared</span>
+              </div>
+            </div>
+
+            {characterSpells.length === 0 ? (
+              <div className="spell-selector-note">
+                Bu karaktere henüz spell eklenmedi. Cleric olup dua kitabını
+                evde unutmak gibi, hoş değil ama düzeltilebilir.
+              </div>
+            ) : (
+              <div className="character-detail-spell-grid">
+                {characterSpells.map((spell) => {
+                  const isPrepared = preparedSpellIdSet.has(spell.id);
+
+                  return (
+                    <article className="detail-spell-card" key={spell.id}>
+                      <div className="library-item-top">
+                        <div>
+                          <span className="mini-label">{spell.school}</span>
+                          <h3>{spell.name}</h3>
+                        </div>
+
+                        <span>{getSpellLevelLabel(spell)}</span>
+                      </div>
+
+                      <div className="spell-meta-grid">
+                        <span>Cast: {spell.castingTime}</span>
+                        <span>Range: {spell.range}</span>
+                        <span>Duration: {spell.duration}</span>
+                        <span>Comp: {spell.components.join(", ")}</span>
+                      </div>
+
+                      <p>{spell.description}</p>
+
+                      <div className="spell-row-actions detail-spell-actions">
+                        <button
+                          type="button"
+                          className={isPrepared ? "active" : ""}
+                          onClick={() => togglePreparedSpell(spell.id)}
+                        >
+                          {isPrepared ? "Prepared" : "Prepare"}
+                        </button>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </section>
 
@@ -765,6 +851,248 @@ function CharacterDetail({
         </aside>
       </div>
     </PageShell>
+  );
+}
+
+
+function getSpellLevelLabel(spell: DndSpellData) {
+  return spell.level === 0 ? "Cantrip" : `Level ${spell.level}`;
+}
+
+function CharacterSpellSelector({
+  title,
+  description,
+  rulesetData,
+  isRulesetLoading,
+  rulesetError,
+  className,
+  knownSpellIds,
+  preparedSpellIds,
+  onChange,
+}: {
+  title: string;
+  description: string;
+  rulesetData: RulesetData | null;
+  isRulesetLoading: boolean;
+  rulesetError: string | null;
+  className: string;
+  knownSpellIds: string[];
+  preparedSpellIds: string[];
+  onChange: (next: {
+    knownSpellIds: string[];
+    preparedSpellIds: string[];
+  }) => void;
+}) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [levelFilter, setLevelFilter] = useState("all");
+
+  const normalizedClassName = className.trim().toLowerCase();
+
+  const filteredSpells = useMemo(() => {
+    if (!rulesetData) {
+      return [];
+    }
+
+    const normalizedSearch = searchTerm.trim().toLowerCase();
+
+    return rulesetData.spells.filter((spell) => {
+      const matchesClass =
+        normalizedClassName.length === 0 ||
+        spell.classes.some(
+          (spellClass) => spellClass.toLowerCase() === normalizedClassName,
+        );
+
+      const matchesLevel =
+        levelFilter === "all" || spell.level === Number(levelFilter);
+
+      const matchesSearch =
+        normalizedSearch.length === 0 ||
+        [
+          spell.name,
+          spell.school,
+          spell.description,
+          spell.classes.join(" "),
+          spell.higherLevels ?? "",
+        ]
+          .join(" ")
+          .toLowerCase()
+          .includes(normalizedSearch);
+
+      return matchesClass && matchesLevel && matchesSearch;
+    });
+  }, [rulesetData, searchTerm, levelFilter, normalizedClassName]);
+
+  const knownSpellIdSet = useMemo(
+    () => new Set(knownSpellIds),
+    [knownSpellIds],
+  );
+
+  const preparedSpellIdSet = useMemo(
+    () => new Set(preparedSpellIds),
+    [preparedSpellIds],
+  );
+
+  function toggleKnownSpell(spellId: string) {
+    const isKnown = knownSpellIdSet.has(spellId);
+
+    if (isKnown) {
+      onChange({
+        knownSpellIds: knownSpellIds.filter((id) => id !== spellId),
+        preparedSpellIds: preparedSpellIds.filter((id) => id !== spellId),
+      });
+      return;
+    }
+
+    onChange({
+      knownSpellIds: [...knownSpellIds, spellId],
+      preparedSpellIds,
+    });
+  }
+
+  function togglePreparedSpell(spellId: string) {
+    const isPrepared = preparedSpellIdSet.has(spellId);
+
+    if (isPrepared) {
+      onChange({
+        knownSpellIds,
+        preparedSpellIds: preparedSpellIds.filter((id) => id !== spellId),
+      });
+      return;
+    }
+
+    onChange({
+      knownSpellIds: knownSpellIdSet.has(spellId)
+        ? knownSpellIds
+        : [...knownSpellIds, spellId],
+      preparedSpellIds: [...preparedSpellIds, spellId],
+    });
+  }
+
+  return (
+    <section className="form-panel character-spell-selector">
+      <div className="spell-selector-head">
+        <div>
+          <h2>{title}</h2>
+          <p>{description}</p>
+        </div>
+
+        <div className="spell-selector-counts">
+          <span>{knownSpellIds.length} known</span>
+          <span>{preparedSpellIds.length} prepared</span>
+        </div>
+      </div>
+
+      {isRulesetLoading ? (
+        <div className="empty-panel">
+          <h2>Spell data yükleniyor...</h2>
+          <p>Büyüleri toparlıyoruz. Raflar yine dramatik biçimde gıcırdıyor.</p>
+        </div>
+      ) : rulesetError ? (
+        <div className="empty-panel">
+          <h2>Spell data yüklenemedi</h2>
+          <p>{rulesetError}</p>
+        </div>
+      ) : rulesetData ? (
+        <>
+          <div className="spell-selector-filters">
+            <label>
+              Ara
+              <input
+                value={searchTerm}
+                onChange={(event) => setSearchTerm(event.target.value)}
+                placeholder="Bless, Fireball, healing..."
+              />
+            </label>
+
+            <label>
+              Level
+              <select
+                value={levelFilter}
+                onChange={(event) => setLevelFilter(event.target.value)}
+              >
+                <option value="all">Tümü</option>
+                <option value="0">Cantrip</option>
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((level) => (
+                  <option key={level} value={level}>
+                    Level {level}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+
+          {normalizedClassName.length === 0 ? (
+            <div className="spell-selector-note">
+              Class seçersen liste otomatik daralır. App sonunda bağlamdan bir
+              şey anlamaya başladı, insanlık adına ürkütücü.
+            </div>
+          ) : null}
+
+          {filteredSpells.length === 0 ? (
+            <div className="empty-panel">
+              <h2>Uygun spell bulunamadı.</h2>
+              <p>
+                Class, level veya arama filtresi fazla sert olabilir. Büyüleri
+                sorgu odasına almış gibiyiz.
+              </p>
+            </div>
+          ) : (
+            <div className="character-spell-list">
+              {filteredSpells.map((spell) => {
+                const isKnown = knownSpellIdSet.has(spell.id);
+                const isPrepared = preparedSpellIdSet.has(spell.id);
+
+                return (
+                  <article
+                    className={
+                      isKnown
+                        ? "character-spell-row selected"
+                        : "character-spell-row"
+                    }
+                    key={spell.id}
+                  >
+                    <div>
+                      <div className="character-spell-row-head">
+                        <strong>{spell.name}</strong>
+                        <span>{getSpellLevelLabel(spell)}</span>
+                      </div>
+
+                      <p>{spell.description}</p>
+
+                      <div className="library-pill-row">
+                        <span>{spell.school}</span>
+                        <span>{spell.castingTime}</span>
+                        <span>{spell.range}</span>
+                        {spell.concentration ? <span>Concentration</span> : null}
+                        {spell.ritual ? <span>Ritual</span> : null}
+                      </div>
+                    </div>
+
+                    <div className="spell-row-actions">
+                      <button
+                        type="button"
+                        className={isKnown ? "active" : ""}
+                        onClick={() => toggleKnownSpell(spell.id)}
+                      >
+                        {isKnown ? "Known" : "Add"}
+                      </button>
+
+                      <button
+                        type="button"
+                        className={isPrepared ? "active" : ""}
+                        onClick={() => togglePreparedSpell(spell.id)}
+                      >
+                        {isPrepared ? "Prepared" : "Prepare"}
+                      </button>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          )}
+        </>
+      ) : null}
+    </section>
   );
 }
 
@@ -1097,6 +1425,24 @@ function Builder({
           </label>
         </section>
 
+        <CharacterSpellSelector
+          title="Karakter Spellbook"
+          description="Bu karakterin bildiği ve hazırladığı büyüleri seç. Spell slot yok, şimdilik sadece kitap rafını kuruyoruz."
+          rulesetData={rulesetData}
+          isRulesetLoading={isRulesetLoading}
+          rulesetError={rulesetError}
+          className={draft.className}
+          knownSpellIds={draft.knownSpellIds}
+          preparedSpellIds={draft.preparedSpellIds}
+          onChange={(next) =>
+            setDraft((current) => ({
+              ...current,
+              knownSpellIds: next.knownSpellIds,
+              preparedSpellIds: next.preparedSpellIds,
+            }))
+          }
+        />
+
         <section className="form-panel preview-panel">
           <h2>Önizleme</h2>
 
@@ -1159,6 +1505,8 @@ function CharacterEditor({
       abilities: character.abilities,
       maxHp: character.maxHp,
       armorClass: character.armorClass,
+      knownSpellIds: character.knownSpellIds ?? [],
+      preparedSpellIds: character.preparedSpellIds ?? [],
       notes: character.notes,
     });
   }, [character]);
@@ -1506,6 +1854,24 @@ function CharacterEditor({
             />
           </label>
         </section>
+
+        <CharacterSpellSelector
+          title="Karakter Spellbook"
+          description="Bu karakterin spell listesini güncelle. Oyuncular zaten her seviye atlayınca kimlik krizi geçiriyor."
+          rulesetData={rulesetData}
+          isRulesetLoading={isRulesetLoading}
+          rulesetError={rulesetError}
+          className={draft.className}
+          knownSpellIds={draft.knownSpellIds}
+          preparedSpellIds={draft.preparedSpellIds}
+          onChange={(next) =>
+            setDraft((current) => ({
+              ...current,
+              knownSpellIds: next.knownSpellIds,
+              preparedSpellIds: next.preparedSpellIds,
+            }))
+          }
+        />
 
         <section className="form-panel preview-panel">
           <h2>Önizleme</h2>
@@ -2417,6 +2783,7 @@ function App() {
             element={
               <CharacterDetail
                 characters={characters}
+                rulesetData={rulesetData}
                 onUpdateCharacter={handleUpdateCharacter}
                 onDeleteCharacter={handleDeleteCharacter}
               />

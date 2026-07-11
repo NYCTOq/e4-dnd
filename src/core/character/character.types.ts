@@ -35,6 +35,9 @@ export interface Character {
   tempHp: number;
   armorClass: number;
 
+  knownSpellIds: string[];
+  preparedSpellIds: string[];
+
   conditions: CharacterCondition[];
   notes: string;
 
@@ -57,5 +60,9 @@ export interface CharacterDraft {
 
   maxHp: number;
   armorClass: number;
+
+  knownSpellIds: string[];
+  preparedSpellIds: string[];
+
   notes: string;
 }
