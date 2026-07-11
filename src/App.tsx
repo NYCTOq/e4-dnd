@@ -224,14 +224,18 @@ function Characters({
               </div>
 
               <div className="character-actions">
-                <button onClick={() => navigate(`/characters/${character.id}`)}>
-                  Detay
-                </button>
+  <button onClick={() => navigate(`/characters/${character.id}`)}>
+    Detay
+  </button>
 
-                <button onClick={() => onDeleteCharacter(character.id)}>
-                  Sil
-                </button>
-              </div>
+  <button onClick={() => navigate(`/characters/${character.id}/edit`)}>
+    Düzenle
+  </button>
+
+  <button onClick={() => onDeleteCharacter(character.id)}>
+    Sil
+  </button>
+</div>
             </motion.article>
           ))}
         </div>
