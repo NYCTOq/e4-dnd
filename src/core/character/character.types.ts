@@ -4,6 +4,8 @@ export type AbilityKey = "str" | "dex" | "con" | "int" | "wis" | "cha";
 
 export type AbilityScores = Record<AbilityKey, number>;
 
+export type ArmorClassMode = "manual" | "auto";
+
 export interface CharacterSpellSlot {
   level: number;
   max: number;
@@ -46,6 +48,7 @@ export interface Character {
   currentHp: number;
   tempHp: number;
   armorClass: number;
+  armorClassMode: ArmorClassMode;
 
   knownSpellIds: string[];
   preparedSpellIds: string[];
@@ -79,6 +82,7 @@ export interface CharacterDraft {
 
   maxHp: number;
   armorClass: number;
+  armorClassMode: ArmorClassMode;
 
   knownSpellIds: string[];
   preparedSpellIds: string[];

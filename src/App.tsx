@@ -64,6 +64,7 @@ const emptyDraft: CharacterDraft = {
   },
   maxHp: 10,
   armorClass: 10,
+  armorClassMode: "manual",
   knownSpellIds: [],
   preparedSpellIds: [],
   spellSlots: [],
@@ -256,6 +257,45 @@ function calculateSuggestedArmorClass(
   }
 
   return armorClass;
+}
+
+function calculateEffectiveArmorClass(
+  character: Pick<Character, "abilities" | "armorClass" | "armorClassMode" | "equippedArmorId" | "equippedShieldId">,
+  items: DndItemData[] | undefined,
+) {
+  if (character.armorClassMode !== "auto") {
+    return character.armorClass;
+  }
+
+  return calculateSuggestedArmorClass(character, items);
+}
+
+function getWeaponAbilityModifier(character: Character, weapon: DndItemData) {
+  const properties = weapon.properties?.map((property) => property.toLowerCase()) ?? [];
+  const isRanged = Boolean(weapon.range) || properties.includes("ammunition") || properties.includes("thrown");
+  const strengthModifier = getAbilityModifier(character.abilities.str);
+  const dexterityModifier = getAbilityModifier(character.abilities.dex);
+
+  if (properties.includes("finesse")) {
+    return Math.max(strengthModifier, dexterityModifier);
+  }
+
+  if (isRanged) {
+    return dexterityModifier;
+  }
+
+  return strengthModifier;
+}
+
+function getWeaponAttackBonus(character: Character, weapon: DndItemData) {
+  return getWeaponAbilityModifier(character, weapon) + getProficiencyBonus(character.level);
+}
+
+function getWeaponDamageSummary(character: Character, weapon: DndItemData) {
+  const abilityModifier = getWeaponAbilityModifier(character, weapon);
+  const modifierText = abilityModifier === 0 ? "" : ` ${formatModifier(abilityModifier)}`;
+
+  return `${weapon.damage ?? "1"}${modifierText} ${weapon.damageType ?? "damage"}`;
 }
 
 function getItemCategoryLabel(category: DndItemData["category"]) {
@@ -672,6 +712,15 @@ function CharacterDetail({
     activeCharacter,
     rulesetData?.items,
   );
+  const effectiveArmorClass = calculateEffectiveArmorClass(
+    activeCharacter,
+    rulesetData?.items,
+  );
+  const equippedWeaponAttacks = equippedItems.weapons.map((weapon) => ({
+    weapon,
+    attackBonus: getWeaponAttackBonus(activeCharacter, weapon),
+    damage: getWeaponDamageSummary(activeCharacter, weapon),
+  }));
 
   function updateHp(amount: number) {
     const nextHp = Math.max(
@@ -870,7 +919,8 @@ function CharacterDetail({
           <div className="detail-stat-grid">
             <div>
               <span>Armor Class</span>
-              <strong>{activeCharacter.armorClass}</strong>
+              <strong>{effectiveArmorClass}</strong>
+              <em>{activeCharacter.armorClassMode === "auto" ? "Auto" : "Manual"}</em>
             </div>
 
             <div>
@@ -939,10 +989,35 @@ function CharacterDetail({
                 </strong>
               </div>
               <div>
+                <span>Effective AC</span>
+                <strong>{effectiveArmorClass}</strong>
+              </div>
+              <div>
                 <span>Suggested AC</span>
                 <strong>{suggestedArmorClass}</strong>
               </div>
+              <div>
+                <span>AC Mode</span>
+                <strong>{activeCharacter.armorClassMode === "auto" ? "Auto" : "Manual"}</strong>
+              </div>
             </div>
+
+            {equippedWeaponAttacks.length > 0 ? (
+              <div className="weapon-attack-list">
+                {equippedWeaponAttacks.map(({ weapon, attackBonus, damage }) => (
+                  <article className="weapon-attack-card" key={weapon.id}>
+                    <div>
+                      <strong>{weapon.name}</strong>
+                      <span>{weapon.damage} • {weapon.damageType} • {weapon.properties?.join(", ") || "Standard"}</span>
+                    </div>
+                    <div>
+                      <b>{formatModifier(attackBonus)}</b>
+                      <small>{damage}</small>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            ) : null}
 
             {inventoryDetails.length === 0 ? (
               <div className="spell-selector-note">
@@ -1661,6 +1736,7 @@ function CharacterInventoryManager({
   gold,
   abilities,
   armorClass,
+  armorClassMode,
   onChange,
 }: {
   title: string;
@@ -1675,12 +1751,15 @@ function CharacterInventoryManager({
   gold: number;
   abilities: Character["abilities"];
   armorClass: number;
+  armorClassMode: Character["armorClassMode"];
   onChange: (next: {
     inventory: Character["inventory"];
     equippedArmorId: string | null;
     equippedShieldId: string | null;
     equippedWeaponIds: string[];
     gold: number;
+    armorClass: number;
+    armorClassMode: Character["armorClassMode"];
   }) => void;
 }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -1704,6 +1783,8 @@ function CharacterInventoryManager({
       ),
     [abilities, equippedArmorId, equippedShieldId, rulesetData],
   );
+
+  const effectiveAc = armorClassMode === "auto" ? suggestedAc : armorClass;
 
   const filteredItems = useMemo(() => {
     const normalizedSearch = searchTerm.trim().toLowerCase();
@@ -1736,6 +1817,8 @@ function CharacterInventoryManager({
     equippedShieldId: string | null;
     equippedWeaponIds: string[];
     gold: number;
+    armorClass: number;
+    armorClassMode: Character["armorClassMode"];
   }>) {
     onChange({
       inventory,
@@ -1743,6 +1826,8 @@ function CharacterInventoryManager({
       equippedShieldId,
       equippedWeaponIds,
       gold,
+      armorClass,
+      armorClassMode,
       ...next,
     });
   }
@@ -1820,8 +1905,8 @@ function CharacterInventoryManager({
             <span>lb</span>
           </div>
           <div>
-            <strong>{suggestedAc}</strong>
-            <span>Suggested AC</span>
+            <strong>{effectiveAc}</strong>
+            <span>Effective AC</span>
           </div>
         </div>
       </div>
@@ -1838,8 +1923,32 @@ function CharacterInventoryManager({
         </label>
 
         <label>
+          AC Mode
+          <select
+            value={armorClassMode}
+            onChange={(event) =>
+              emit({ armorClassMode: event.target.value as Character["armorClassMode"] })
+            }
+          >
+            <option value="manual">Manual</option>
+            <option value="auto">Auto from equipment</option>
+          </select>
+        </label>
+
+        <label>
           Manual AC
-          <input type="number" min={1} value={armorClass} readOnly />
+          <input
+            type="number"
+            min={1}
+            value={armorClass}
+            disabled={armorClassMode === "auto"}
+            onChange={(event) => emit({ armorClass: Number(event.target.value) })}
+          />
+        </label>
+
+        <label>
+          Suggested AC
+          <input type="number" min={1} value={suggestedAc} readOnly />
         </label>
       </div>
 
@@ -2025,7 +2134,10 @@ function Builder({
       return;
     }
 
-    onCreateCharacter(draft);
+    onCreateCharacter({
+      ...draft,
+      armorClass: calculateEffectiveArmorClass(draft, rulesetData?.items),
+    });
     setDraft(emptyDraft);
   }
 
@@ -2324,6 +2436,7 @@ function Builder({
           gold={draft.gold}
           abilities={draft.abilities}
           armorClass={draft.armorClass}
+          armorClassMode={draft.armorClassMode}
           onChange={(next) =>
             setDraft((current) => ({
               ...current,
@@ -2332,6 +2445,8 @@ function Builder({
               equippedShieldId: next.equippedShieldId,
               equippedWeaponIds: next.equippedWeaponIds,
               gold: next.gold,
+              armorClass: next.armorClass,
+              armorClassMode: next.armorClassMode,
             }))
           }
         />
@@ -2341,7 +2456,7 @@ function Builder({
 
           <div className="preview-stats">
             <span>PB +{getProficiencyBonus(previewCharacter.level)}</span>
-            <span>AC {previewCharacter.armorClass}</span>
+            <span>AC {calculateEffectiveArmorClass(draft, rulesetData?.items)}</span>
             <span>HP {previewCharacter.maxHp}</span>
             <span>Init {formatModifier(getInitiative(previewCharacter))}</span>
             <span>PP {getPassivePerception(previewCharacter)}</span>
@@ -2398,6 +2513,7 @@ function CharacterEditor({
       abilities: character.abilities,
       maxHp: character.maxHp,
       armorClass: character.armorClass,
+      armorClassMode: character.armorClassMode === "auto" ? "auto" : "manual",
       knownSpellIds: character.knownSpellIds ?? [],
       preparedSpellIds: character.preparedSpellIds ?? [],
       spellSlots: normalizeSpellSlots(
@@ -2469,6 +2585,7 @@ function CharacterEditor({
     const updatedCharacter: Character = {
       ...character,
       ...draft,
+      armorClass: calculateEffectiveArmorClass(draft, rulesetData?.items),
       currentHp: Math.min(character.currentHp, draft.maxHp),
       spellSlots: normalizeSpellSlots(
         draft.spellSlots,
@@ -2794,6 +2911,7 @@ function CharacterEditor({
           gold={draft.gold}
           abilities={draft.abilities}
           armorClass={draft.armorClass}
+          armorClassMode={draft.armorClassMode}
           onChange={(next) =>
             setDraft((current) => ({
               ...current,
@@ -2802,6 +2920,8 @@ function CharacterEditor({
               equippedShieldId: next.equippedShieldId,
               equippedWeaponIds: next.equippedWeaponIds,
               gold: next.gold,
+              armorClass: next.armorClass,
+              armorClassMode: next.armorClassMode,
             }))
           }
         />
@@ -2811,7 +2931,7 @@ function CharacterEditor({
 
           <div className="preview-stats">
             <span>PB +{getProficiencyBonus(previewCharacter.level)}</span>
-            <span>AC {previewCharacter.armorClass}</span>
+            <span>AC {calculateEffectiveArmorClass(draft, rulesetData?.items)}</span>
             <span>HP {previewCharacter.maxHp}</span>
             <span>Init {formatModifier(getInitiative(previewCharacter))}</span>
             <span>PP {getPassivePerception(previewCharacter)}</span>

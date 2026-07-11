@@ -1906,3 +1906,82 @@ textarea {
     justify-items: start;
   }
 }
+
+/* Combat Calculator V2 */
+.detail-stat-grid em {
+  display: block;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.weapon-attack-list {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.weapon-attack-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: rgba(7, 11, 24, 0.38);
+}
+
+.weapon-attack-card div:first-child {
+  display: grid;
+  gap: 4px;
+}
+
+.weapon-attack-card strong {
+  color: #fff;
+}
+
+.weapon-attack-card span,
+.weapon-attack-card small {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.76rem;
+}
+
+.weapon-attack-card div:last-child {
+  min-width: 110px;
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+}
+
+.weapon-attack-card b {
+  color: #fff;
+  font-size: 1.15rem;
+}
+
+.inventory-gold-grid {
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+}
+
+.inventory-gold-grid input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .inventory-gold-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weapon-attack-card {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .weapon-attack-card div:last-child {
+    justify-items: start;
+  }
+}

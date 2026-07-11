@@ -113,6 +113,7 @@ function hydrateCharacter(character: Character): Character {
       ? character.equippedWeaponIds.filter((itemId) => inventoryItemIds.has(itemId))
       : [],
     gold: typeof character.gold === "number" ? Math.max(0, character.gold) : 0,
+    armorClassMode: character.armorClassMode === "auto" ? "auto" : "manual",
   };
 }
 
