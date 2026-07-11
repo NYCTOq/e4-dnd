@@ -201,6 +201,8 @@ function Characters({
                 <strong className="level-badge">Lv. {character.level}</strong>
               </div>
 
+              
+
               <p>
                 {character.race || "Unknown Race"} •{" "}
                 {character.className || "Unknown Class"}
@@ -241,9 +243,11 @@ function Characters({
 function CharacterDetail({
   characters,
   onUpdateCharacter,
+  onDeleteCharacter,
 }: {
   characters: Character[];
   onUpdateCharacter: (character: Character) => void;
+  onDeleteCharacter: (id: string) => void;
 }) {
   const { characterId } = useParams();
   const navigate = useNavigate();
@@ -338,6 +342,10 @@ function CharacterDetail({
     });
   }
 
+  function deleteCurrentCharacter() {
+  onDeleteCharacter(activeCharacter.id);
+}
+
   function quickCharacterRoll(label: string, modifier: number) {
   const result = rollDice({
     count: 1,
@@ -387,6 +395,22 @@ function CharacterDetail({
               Lv. {activeCharacter.level}
             </strong>
           </div>
+
+          <div className="character-actions detail-actions">
+  <button
+    onClick={() => navigate(`/characters/${activeCharacter.id}/edit`)}
+  >
+    Düzenle
+  </button>
+
+  <button onClick={deleteCurrentCharacter}>
+    Sil
+  </button>
+
+  <button onClick={() => navigate("/characters")}>
+    Listeye Dön
+  </button>
+</div>
 
           <div className="ability-detail-grid">
             {Object.entries(activeCharacter.abilities).map(
@@ -629,14 +653,6 @@ function CharacterDetail({
 
           <div className="character-actions">
   <button onClick={longRest}>Long Rest</button>
-
-  <button
-    onClick={() => navigate(`/characters/${activeCharacter.id}/edit`)}
-  >
-    Düzenle
-  </button>
-
-  <button onClick={() => navigate("/characters")}>Listeye Dön</button>
 </div>
         </aside>
       </div>
@@ -2062,14 +2078,15 @@ function handleWipeCharacters() {
 />
 
           <Route
-            path="/characters/:characterId"
-            element={
-              <CharacterDetail
-                characters={characters}
-                onUpdateCharacter={handleUpdateCharacter}
-              />
-            }
-          />
+  path="/characters/:characterId"
+  element={
+    <CharacterDetail
+      characters={characters}
+      onUpdateCharacter={handleUpdateCharacter}
+      onDeleteCharacter={handleDeleteCharacter}
+    />
+  }
+/>
 
           <Route
             path="/builder"
