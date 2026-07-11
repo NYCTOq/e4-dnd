@@ -7,6 +7,85 @@ import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception
 import { PageShell } from "../../shared/layout/PageShell";
 import { calculateEffectiveArmorClass, calculateSuggestedArmorClass, getCharacterInventoryItems, getEquippedItems, getInventoryWeight, getItemCategoryLabel, getItemRulesSummary, getSpellGroupTitle, getSpellLevelGroups, getSpellLevelLabel, getWeaponAttackBonus, getWeaponDamageSummary, isSpellReadyToCast, normalizeHitDice, normalizeSpellSlots, resetDeathSaves, resetHitDice, resetSpellSlots, sortSpellsByLevelAndName } from "./characterShared";
 
+interface CharacterCastHistoryItem {
+  id: string;
+  spellName: string;
+  levelLabel: string;
+  summary: string;
+  details: string[];
+  createdAt: string;
+}
+
+function parseDiceNotation(notation?: string) {
+  const match = notation?.trim().toLowerCase().match(/^(\d*)d(\d+)([+-]\d+)?$/);
+
+  if (!match) {
+    return null;
+  }
+
+  return {
+    count: match[1] ? Number(match[1]) : 1,
+    sides: Number(match[2]),
+    modifier: match[3] ? Number(match[3]) : 0,
+  };
+}
+
+function getBasicSpellRoll(spell: DndSpellData) {
+  const basicRolls: Record<
+    string,
+    { effectType: string; attackType: string; damageDice?: string; healingDice?: string; damageType?: string; saveAbility?: string }
+  > = {
+    "cure-wounds": { effectType: "Healing", attackType: "automatic", healingDice: "1d8" },
+    "healing-word": { effectType: "Healing", attackType: "automatic", healingDice: "1d4" },
+    "guiding-bolt": { effectType: "Damage", attackType: "spell-attack", damageDice: "4d6", damageType: "radiant" },
+    "magic-missile": { effectType: "Damage", attackType: "automatic", damageDice: "3d4+3", damageType: "force" },
+    fireball: { effectType: "Damage", attackType: "saving-throw", damageDice: "8d6", damageType: "fire", saveAbility: "dex" },
+    "spirit-guardians": { effectType: "Damage", attackType: "saving-throw", damageDice: "3d8", damageType: "radiant", saveAbility: "wis" },
+    "inflict-wounds": { effectType: "Damage", attackType: "spell-attack", damageDice: "3d10", damageType: "necrotic" },
+    "burning-hands": { effectType: "Damage", attackType: "saving-throw", damageDice: "3d6", damageType: "fire", saveAbility: "dex" },
+    "scorching-ray": { effectType: "Damage", attackType: "spell-attack", damageDice: "2d6", damageType: "fire" },
+    "sacred-flame": { effectType: "Damage", attackType: "saving-throw", damageDice: "1d8", damageType: "radiant", saveAbility: "dex" },
+    "fire-bolt": { effectType: "Damage", attackType: "spell-attack", damageDice: "1d10", damageType: "fire" },
+    "ray-of-frost": { effectType: "Damage", attackType: "spell-attack", damageDice: "1d8", damageType: "cold" },
+    "shocking-grasp": { effectType: "Damage", attackType: "spell-attack", damageDice: "1d8", damageType: "lightning" },
+    "produce-flame": { effectType: "Damage", attackType: "spell-attack", damageDice: "1d8", damageType: "fire" },
+    "thorn-whip": { effectType: "Damage", attackType: "spell-attack", damageDice: "1d6", damageType: "piercing" },
+    "poison-spray": { effectType: "Damage", attackType: "saving-throw", damageDice: "1d12", damageType: "poison", saveAbility: "con" },
+  };
+
+  return basicRolls[spell.id] ?? null;
+}
+
+function getSpellEffectValue(spell: DndSpellData) {
+  const fallback = getBasicSpellRoll(spell);
+
+  return {
+    effectType: spell.effectType ?? fallback?.effectType,
+    attackType: spell.attackType ?? fallback?.attackType,
+    damageDice: spell.damageDice ?? fallback?.damageDice,
+    damageType: spell.damageType ?? fallback?.damageType,
+    healingDice: spell.healingDice ?? fallback?.healingDice,
+    saveAbility: spell.saveAbility ?? fallback?.saveAbility,
+    conditionEffect: spell.conditionEffect,
+  };
+}
+
+function getResolutionLabel(attackType?: string) {
+  if (attackType === "spell-attack") {
+    return "Spell Attack";
+  }
+
+  if (attackType === "saving-throw") {
+    return "Saving Throw";
+  }
+
+  if (attackType === "automatic") {
+    return "Automatic";
+  }
+
+  return "Effect";
+}
+
 export function CharacterDetail({
   characters,
   rulesetData,
@@ -33,6 +112,8 @@ export function CharacterDetail({
       createdAt: string;
     }[]
   >([]);
+
+  const [castHistory, setCastHistory] = useState<CharacterCastHistoryItem[]>([]);
 
   if (!character) {
     return (
@@ -293,42 +374,164 @@ export function CharacterDetail({
 
 
   function castSpell(spell: DndSpellData) {
+    const effect = getSpellEffectValue(spell);
     const nextConditions =
       spell.concentration &&
       !activeCharacter.conditions.includes("Concentration")
         ? [...activeCharacter.conditions, "Concentration" as const]
         : activeCharacter.conditions;
 
-    if (spell.level === 0) {
-      onUpdateCharacter({
-        ...activeCharacter,
-        conditions: nextConditions,
-        updatedAt: new Date().toISOString(),
-      });
+    if (spell.level > 0) {
+      const slot = activeSpellSlots.find(
+        (spellSlot) => spellSlot.level === spell.level,
+      );
 
-      alert(`${spell.name} cast edildi. Cantrip olduğu için slot harcamadı.`);
-      return;
+      if (!slot || slot.used >= slot.max) {
+        alert(`${spell.name} için Level ${spell.level} slot kalmadı. Büyü bürokrasisi yine kazandı.`);
+        return;
+      }
     }
 
-    const slot = activeSpellSlots.find(
-      (spellSlot) => spellSlot.level === spell.level,
-    );
+    const details: string[] = [];
+    const castSummaryParts: string[] = [];
+    const createdAt = new Date().toISOString();
 
-    if (!slot || slot.used >= slot.max) {
-      alert(`${spell.name} için Level ${spell.level} slot kalmadı. Büyü bürokrasisi yine kazandı.`);
-      return;
+    if (spell.level === 0) {
+      castSummaryParts.push("Cantrip, slot harcamadı");
+    } else {
+      castSummaryParts.push(`Level ${spell.level} slot harcandı`);
+    }
+
+    if (spell.concentration) {
+      castSummaryParts.push("Concentration aktif");
+    }
+
+    if (effect.attackType === "spell-attack") {
+      const attackRoll = rollDice({
+        count: 1,
+        sides: 20,
+        modifier: getSpellAttackBonus(activeCharacter),
+      });
+
+      details.push(
+        `Spell Attack: ${attackRoll.notation} → [${attackRoll.rolls.join(", ")}] = ${attackRoll.total}`,
+      );
+
+      setCharacterRollHistory((current) =>
+        [
+          {
+            id: attackRoll.id,
+            label: `${spell.name} Attack`,
+            notation: attackRoll.notation,
+            rolls: attackRoll.rolls,
+            total: attackRoll.total,
+            createdAt: attackRoll.createdAt,
+          },
+          ...current,
+        ].slice(0, 8),
+      );
+    }
+
+    if (effect.attackType === "saving-throw") {
+      details.push(
+        `Save: ${String(effect.saveAbility ?? "?").toUpperCase()} vs DC ${getSpellSaveDc(activeCharacter)}`,
+      );
+    }
+
+    const damageDice = parseDiceNotation(effect.damageDice);
+
+    if (damageDice) {
+      const damageRoll = rollDice(damageDice);
+      const damageLabel = effect.damageType ? ` ${effect.damageType}` : "";
+
+      details.push(
+        `Damage: ${damageRoll.notation}${damageLabel} → [${damageRoll.rolls.join(", ")}] = ${damageRoll.total}`,
+      );
+      castSummaryParts.push(`${damageRoll.total}${damageLabel} damage`);
+
+      setCharacterRollHistory((current) =>
+        [
+          {
+            id: damageRoll.id,
+            label: `${spell.name} Damage`,
+            notation: damageRoll.notation,
+            rolls: damageRoll.rolls,
+            total: damageRoll.total,
+            createdAt: damageRoll.createdAt,
+          },
+          ...current,
+        ].slice(0, 8),
+      );
+    }
+
+    const healingDice = parseDiceNotation(effect.healingDice);
+
+    if (healingDice) {
+      const healingRoll = rollDice(healingDice);
+
+      details.push(
+        `Healing: ${healingRoll.notation} → [${healingRoll.rolls.join(", ")}] = ${healingRoll.total}`,
+      );
+      castSummaryParts.push(`${healingRoll.total} healing`);
+
+      setCharacterRollHistory((current) =>
+        [
+          {
+            id: healingRoll.id,
+            label: `${spell.name} Healing`,
+            notation: healingRoll.notation,
+            rolls: healingRoll.rolls,
+            total: healingRoll.total,
+            createdAt: healingRoll.createdAt,
+          },
+          ...current,
+        ].slice(0, 8),
+      );
+    }
+
+    if (!damageDice && effect.damageDice) {
+      details.push(`Damage dice okunamadı: ${effect.damageDice}`);
+    }
+
+    if (!healingDice && effect.healingDice) {
+      details.push(`Healing dice okunamadı: ${effect.healingDice}`);
+    }
+
+    if (effect.conditionEffect) {
+      details.push(`Condition Effect: ${effect.conditionEffect}`);
+    }
+
+    if (!effect.damageDice && !effect.healingDice && effect.attackType !== "spell-attack" && effect.attackType !== "saving-throw") {
+      details.push(`${getResolutionLabel(effect.attackType)} spell cast edildi. Roll gerektiren effect tanımlı değil.`);
     }
 
     onUpdateCharacter({
       ...activeCharacter,
-      spellSlots: activeSpellSlots.map((spellSlot) =>
-        spellSlot.level === spell.level
-          ? { ...spellSlot, used: spellSlot.used + 1 }
-          : spellSlot,
-      ),
+      spellSlots:
+        spell.level === 0
+          ? activeSpellSlots
+          : activeSpellSlots.map((spellSlot) =>
+              spellSlot.level === spell.level
+                ? { ...spellSlot, used: spellSlot.used + 1 }
+                : spellSlot,
+            ),
       conditions: nextConditions,
-      updatedAt: new Date().toISOString(),
+      updatedAt: createdAt,
     });
+
+    setCastHistory((current) =>
+      [
+        {
+          id: crypto.randomUUID(),
+          spellName: spell.name,
+          levelLabel: getSpellLevelLabel(spell),
+          summary: castSummaryParts.join(" · "),
+          details,
+          createdAt,
+        },
+        ...current,
+      ].slice(0, 10),
+    );
   }
 
   function canCastSpell(spell: DndSpellData) {
@@ -822,6 +1025,37 @@ export function CharacterDetail({
                         <small>{getSpellLevelLabel(spell)}</small>
                       </button>
                     ))}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className="cast-history-panel">
+            <span className="mini-label">Cast History</span>
+
+            {castHistory.length === 0 ? (
+              <div className="spell-slot-empty">
+                Henüz cast sonucu yok. Büyüler sessiz, bu da nadiren iyi haber.
+              </div>
+            ) : (
+              <div className="cast-history-list">
+                {castHistory.map((cast) => (
+                  <div className="cast-history-item" key={cast.id}>
+                    <div>
+                      <strong>{cast.spellName}</strong>
+                      <span>{cast.levelLabel}</span>
+                    </div>
+
+                    <p>{cast.summary}</p>
+
+                    {cast.details.length > 0 ? (
+                      <ul>
+                        {cast.details.map((detail) => (
+                          <li key={detail}>{detail}</li>
+                        ))}
+                      </ul>
+                    ) : null}
                   </div>
                 ))}
               </div>
