@@ -4,6 +4,12 @@ export type AbilityKey = "str" | "dex" | "con" | "int" | "wis" | "cha";
 
 export type AbilityScores = Record<AbilityKey, number>;
 
+export interface CharacterSpellSlot {
+  level: number;
+  max: number;
+  used: number;
+}
+
 export type CharacterCondition =
   | "Blessed"
   | "Poisoned"
@@ -37,6 +43,7 @@ export interface Character {
 
   knownSpellIds: string[];
   preparedSpellIds: string[];
+  spellSlots: CharacterSpellSlot[];
 
   conditions: CharacterCondition[];
   notes: string;
@@ -63,6 +70,7 @@ export interface CharacterDraft {
 
   knownSpellIds: string[];
   preparedSpellIds: string[];
+  spellSlots: CharacterSpellSlot[];
 
   notes: string;
 }

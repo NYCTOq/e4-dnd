@@ -65,8 +65,88 @@ const emptyDraft: CharacterDraft = {
   armorClass: 10,
   knownSpellIds: [],
   preparedSpellIds: [],
+  spellSlots: [],
   notes: "",
 };
+
+const FULL_CASTER_CLASSES = new Set([
+  "bard",
+  "cleric",
+  "druid",
+  "sorcerer",
+  "wizard",
+]);
+
+const FULL_CASTER_SLOT_TABLE: Record<number, number[]> = {
+  1: [2],
+  2: [3],
+  3: [4, 2],
+  4: [4, 3],
+  5: [4, 3, 2],
+  6: [4, 3, 3],
+  7: [4, 3, 3, 1],
+  8: [4, 3, 3, 2],
+  9: [4, 3, 3, 3, 1],
+  10: [4, 3, 3, 3, 2],
+  11: [4, 3, 3, 3, 2, 1],
+  12: [4, 3, 3, 3, 2, 1],
+  13: [4, 3, 3, 3, 2, 1, 1],
+  14: [4, 3, 3, 3, 2, 1, 1],
+  15: [4, 3, 3, 3, 2, 1, 1, 1],
+  16: [4, 3, 3, 3, 2, 1, 1, 1],
+  17: [4, 3, 3, 3, 2, 1, 1, 1, 1],
+  18: [4, 3, 3, 3, 3, 1, 1, 1, 1],
+  19: [4, 3, 3, 3, 3, 2, 1, 1, 1],
+  20: [4, 3, 3, 3, 3, 2, 2, 1, 1],
+};
+
+function getDefaultSpellSlots(
+  level: number,
+  className: string,
+): Character["spellSlots"] {
+  const normalizedClassName = className.trim().toLowerCase();
+
+  if (!FULL_CASTER_CLASSES.has(normalizedClassName)) {
+    return [];
+  }
+
+  const safeLevel = Math.min(20, Math.max(1, Math.floor(level)));
+  const slots = FULL_CASTER_SLOT_TABLE[safeLevel] ?? [];
+
+  return slots.map((max, index) => ({
+    level: index + 1,
+    max,
+    used: 0,
+  }));
+}
+
+function normalizeSpellSlots(
+  currentSlots: Character["spellSlots"] | undefined,
+  level: number,
+  className: string,
+): Character["spellSlots"] {
+  const defaults = getDefaultSpellSlots(level, className);
+
+  return defaults.map((defaultSlot) => {
+    const currentSlot = currentSlots?.find(
+      (slot) => slot.level === defaultSlot.level,
+    );
+
+    return {
+      ...defaultSlot,
+      used: Math.min(defaultSlot.max, Math.max(0, currentSlot?.used ?? 0)),
+    };
+  });
+}
+
+function resetSpellSlots(
+  spellSlots: Character["spellSlots"],
+): Character["spellSlots"] {
+  return spellSlots.map((slot) => ({
+    ...slot,
+    used: 0,
+  }));
+}
 
 function createCharacterFromDraft(draft: CharacterDraft): Character {
   const now = new Date().toISOString();
@@ -74,6 +154,11 @@ function createCharacterFromDraft(draft: CharacterDraft): Character {
   return {
     id: crypto.randomUUID(),
     ...draft,
+    spellSlots: normalizeSpellSlots(
+      draft.spellSlots,
+      draft.level,
+      draft.className,
+    ),
     currentHp: draft.maxHp,
     tempHp: 0,
     conditions: [],
@@ -414,7 +499,19 @@ function CharacterDetail({
 
   const characterSpells =
     rulesetData?.spells.filter((spell) => knownSpellIds.includes(spell.id)) ?? [];
-
+  const characterSpellGroups = getSpellLevelGroups(characterSpells);
+  const castReadyCharacterSpells = sortSpellsByLevelAndName(
+    characterSpells.filter((spell) =>
+      isSpellReadyToCast(spell, preparedSpellIdSet),
+    ),
+  );
+  const castReadySpellGroups = getSpellLevelGroups(castReadyCharacterSpells);
+  const knownCantripCount = characterSpells.filter((spell) => spell.level === 0).length;
+  const activeSpellSlots = normalizeSpellSlots(
+    activeCharacter.spellSlots,
+    activeCharacter.level,
+    activeCharacter.className,
+  );
 
   function updateHp(amount: number) {
     const nextHp = Math.max(
@@ -464,11 +561,65 @@ function CharacterDetail({
     });
   }
 
+
+
+  function castSpell(spell: DndSpellData) {
+    const nextConditions =
+      spell.concentration &&
+      !activeCharacter.conditions.includes("Concentration")
+        ? [...activeCharacter.conditions, "Concentration" as const]
+        : activeCharacter.conditions;
+
+    if (spell.level === 0) {
+      onUpdateCharacter({
+        ...activeCharacter,
+        conditions: nextConditions,
+        updatedAt: new Date().toISOString(),
+      });
+
+      alert(`${spell.name} cast edildi. Cantrip olduğu için slot harcamadı.`);
+      return;
+    }
+
+    const slot = activeSpellSlots.find(
+      (spellSlot) => spellSlot.level === spell.level,
+    );
+
+    if (!slot || slot.used >= slot.max) {
+      alert(`${spell.name} için Level ${spell.level} slot kalmadı. Büyü bürokrasisi yine kazandı.`);
+      return;
+    }
+
+    onUpdateCharacter({
+      ...activeCharacter,
+      spellSlots: activeSpellSlots.map((spellSlot) =>
+        spellSlot.level === spell.level
+          ? { ...spellSlot, used: spellSlot.used + 1 }
+          : spellSlot,
+      ),
+      conditions: nextConditions,
+      updatedAt: new Date().toISOString(),
+    });
+  }
+
+  function canCastSpell(spell: DndSpellData) {
+    if (spell.level === 0) {
+      return true;
+    }
+
+    const slot = activeSpellSlots.find(
+      (spellSlot) => spellSlot.level === spell.level,
+    );
+
+    return !!slot && slot.used < slot.max;
+  }
+
   function longRest() {
     onUpdateCharacter({
       ...activeCharacter,
       currentHp: activeCharacter.maxHp,
       tempHp: 0,
+      spellSlots: resetSpellSlots(activeSpellSlots),
       conditions: activeCharacter.conditions.filter(
         (item) => item === "Cursed",
       ),
@@ -607,6 +758,7 @@ function CharacterDetail({
 
               <div className="spell-selector-counts">
                 <span>{knownSpellIds.length} known</span>
+                <span>{knownCantripCount} cantrip</span>
                 <span>{preparedSpellIds.length} prepared</span>
               </div>
             </div>
@@ -617,42 +769,82 @@ function CharacterDetail({
                 evde unutmak gibi, hoş değil ama düzeltilebilir.
               </div>
             ) : (
-              <div className="character-detail-spell-grid">
-                {characterSpells.map((spell) => {
-                  const isPrepared = preparedSpellIdSet.has(spell.id);
+              <div className="character-detail-spell-groups">
+                {characterSpellGroups.map((group) => (
+                  <div className="spell-level-group" key={group.level}>
+                    <h3 className="spell-level-title">
+                      {getSpellGroupTitle(group.level)}
+                    </h3>
 
-                  return (
-                    <article className="detail-spell-card" key={spell.id}>
-                      <div className="library-item-top">
-                        <div>
-                          <span className="mini-label">{spell.school}</span>
-                          <h3>{spell.name}</h3>
-                        </div>
+                    <div className="character-detail-spell-grid">
+                      {group.spells.map((spell) => {
+                        const isPrepared = preparedSpellIdSet.has(spell.id);
+                        const isCantrip = spell.level === 0;
+                        const isReady = isSpellReadyToCast(
+                          spell,
+                          preparedSpellIdSet,
+                        );
 
-                        <span>{getSpellLevelLabel(spell)}</span>
-                      </div>
+                        return (
+                          <article className="detail-spell-card" key={spell.id}>
+                            <div className="library-item-top">
+                              <div>
+                                <span className="mini-label">{spell.school}</span>
+                                <h3>{spell.name}</h3>
+                              </div>
 
-                      <div className="spell-meta-grid">
-                        <span>Cast: {spell.castingTime}</span>
-                        <span>Range: {spell.range}</span>
-                        <span>Duration: {spell.duration}</span>
-                        <span>Comp: {spell.components.join(", ")}</span>
-                      </div>
+                              <span>{getSpellLevelLabel(spell)}</span>
+                            </div>
 
-                      <p>{spell.description}</p>
+                            <div className="spell-meta-grid">
+                              <span>Cast: {spell.castingTime}</span>
+                              <span>Range: {spell.range}</span>
+                              <span>Duration: {spell.duration}</span>
+                              <span>Comp: {spell.components.join(", ")}</span>
+                              {spell.concentration ? <span>Concentration</span> : null}
+                              {spell.ritual ? <span>Ritual</span> : null}
+                            </div>
 
-                      <div className="spell-row-actions detail-spell-actions">
-                        <button
-                          type="button"
-                          className={isPrepared ? "active" : ""}
-                          onClick={() => togglePreparedSpell(spell.id)}
-                        >
-                          {isPrepared ? "Prepared" : "Prepare"}
-                        </button>
-                      </div>
-                    </article>
-                  );
-                })}
+                            <details className="spell-description-toggle">
+                              <summary>Details</summary>
+                              <p>{spell.description}</p>
+
+                              {spell.higherLevels ? (
+                                <p className="spell-higher-levels">
+                                  {spell.higherLevels}
+                                </p>
+                              ) : null}
+                            </details>
+
+                            <div className="spell-row-actions detail-spell-actions">
+                              {isCantrip ? (
+                                <span className="spell-status-pill active">
+                                  Always Ready
+                                </span>
+                              ) : (
+                                <button
+                                  type="button"
+                                  className={isPrepared ? "active" : ""}
+                                  onClick={() => togglePreparedSpell(spell.id)}
+                                >
+                                  {isPrepared ? "Prepared" : "Prepare"}
+                                </button>
+                              )}
+
+                              <button
+                                type="button"
+                                disabled={!isReady || !canCastSpell(spell)}
+                                onClick={() => castSpell(spell)}
+                              >
+                                {isCantrip ? "Cast" : `Cast L${spell.level}`}
+                              </button>
+                            </div>
+                          </article>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
               </div>
             )}
           </div>
@@ -686,6 +878,86 @@ function CharacterDetail({
               onChange={(event) => updateTempHp(Number(event.target.value))}
             />
           </label>
+
+
+          <div className="spell-slot-panel">
+            <div className="spell-slot-head">
+              <span className="mini-label">Spell Slots</span>
+              <button
+                type="button"
+                onClick={() =>
+                  onUpdateCharacter({
+                    ...activeCharacter,
+                    spellSlots: resetSpellSlots(activeSpellSlots),
+                    updatedAt: new Date().toISOString(),
+                  })
+                }
+              >
+                Restore Slots
+              </button>
+            </div>
+
+            {activeSpellSlots.length === 0 ? (
+              <div className="spell-slot-empty">
+                Bu karakter için slot yok. Ya caster değil ya da sistem henüz
+                onu ciddiye almıyor.
+              </div>
+            ) : (
+              <div className="spell-slot-grid">
+                {activeSpellSlots.map((slot) => {
+                  const remaining = slot.max - slot.used;
+
+                  return (
+                    <div className="spell-slot-card" key={slot.level}>
+                      <span>Level {slot.level}</span>
+                      <strong>
+                        {remaining}/{slot.max}
+                      </strong>
+                      <div className="spell-slot-bar">
+                        <span
+                          style={{
+                            width: `${Math.round((remaining / slot.max) * 100)}%`,
+                          }}
+                        />
+                      </div>
+                      <small>{slot.used} used</small>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+
+
+          <div className="prepared-cast-panel">
+            <span className="mini-label">Prepared Cast</span>
+
+            {castReadyCharacterSpells.length === 0 ? (
+              <div className="spell-slot-empty">
+                Cast edilecek büyü yok. Büyücü var, evrak yok. Bürokrasi kazanıyor.
+              </div>
+            ) : (
+              <div className="prepared-cast-list">
+                {castReadySpellGroups.map((group) => (
+                  <div className="prepared-cast-group" key={group.level}>
+                    <strong>{getSpellGroupTitle(group.level)}</strong>
+
+                    {group.spells.map((spell) => (
+                      <button
+                        key={spell.id}
+                        type="button"
+                        disabled={!canCastSpell(spell)}
+                        onClick={() => castSpell(spell)}
+                      >
+                        <span>{spell.name}</span>
+                        <small>{getSpellLevelLabel(spell)}</small>
+                      </button>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
 
           <div className="condition-picker">
             {conditionOptions.map((condition) => (
@@ -859,6 +1131,39 @@ function getSpellLevelLabel(spell: DndSpellData) {
   return spell.level === 0 ? "Cantrip" : `Level ${spell.level}`;
 }
 
+function getSpellGroupTitle(level: number) {
+  return level === 0 ? "Cantrips" : `Level ${level} Spells`;
+}
+
+function sortSpellsByLevelAndName(spells: DndSpellData[]) {
+  return [...spells].sort((firstSpell, secondSpell) => {
+    if (firstSpell.level !== secondSpell.level) {
+      return firstSpell.level - secondSpell.level;
+    }
+
+    return firstSpell.name.localeCompare(secondSpell.name);
+  });
+}
+
+function getSpellLevelGroups(spells: DndSpellData[]) {
+  const sortedSpells = sortSpellsByLevelAndName(spells);
+  const levels = Array.from(
+    new Set(sortedSpells.map((spell) => spell.level)),
+  ).sort((firstLevel, secondLevel) => firstLevel - secondLevel);
+
+  return levels.map((level) => ({
+    level,
+    spells: sortedSpells.filter((spell) => spell.level === level),
+  }));
+}
+
+function isSpellReadyToCast(
+  spell: DndSpellData,
+  preparedSpellIdSet: Set<string>,
+) {
+  return spell.level === 0 || preparedSpellIdSet.has(spell.id);
+}
+
 function CharacterSpellSelector({
   title,
   description,
@@ -932,6 +1237,13 @@ function CharacterSpellSelector({
     [preparedSpellIds],
   );
 
+  const filteredSpellGroups = getSpellLevelGroups(filteredSpells);
+
+  const knownCantripCount =
+    rulesetData?.spells.filter(
+      (spell) => spell.level === 0 && knownSpellIdSet.has(spell.id),
+    ).length ?? 0;
+
   function toggleKnownSpell(spellId: string) {
     const isKnown = knownSpellIdSet.has(spellId);
 
@@ -978,6 +1290,7 @@ function CharacterSpellSelector({
 
         <div className="spell-selector-counts">
           <span>{knownSpellIds.length} known</span>
+          <span>{knownCantripCount} cantrip</span>
           <span>{preparedSpellIds.length} prepared</span>
         </div>
       </div>
@@ -1038,56 +1351,77 @@ function CharacterSpellSelector({
             </div>
           ) : (
             <div className="character-spell-list">
-              {filteredSpells.map((spell) => {
-                const isKnown = knownSpellIdSet.has(spell.id);
-                const isPrepared = preparedSpellIdSet.has(spell.id);
+              {filteredSpellGroups.map((group) => (
+                <div className="spell-level-group" key={group.level}>
+                  <h3 className="spell-level-title">
+                    {getSpellGroupTitle(group.level)}
+                  </h3>
 
-                return (
-                  <article
-                    className={
-                      isKnown
-                        ? "character-spell-row selected"
-                        : "character-spell-row"
-                    }
-                    key={spell.id}
-                  >
-                    <div>
-                      <div className="character-spell-row-head">
-                        <strong>{spell.name}</strong>
-                        <span>{getSpellLevelLabel(spell)}</span>
-                      </div>
+                  {group.spells.map((spell) => {
+                    const isKnown = knownSpellIdSet.has(spell.id);
+                    const isPrepared = preparedSpellIdSet.has(spell.id);
+                    const isCantrip = spell.level === 0;
 
-                      <p>{spell.description}</p>
-
-                      <div className="library-pill-row">
-                        <span>{spell.school}</span>
-                        <span>{spell.castingTime}</span>
-                        <span>{spell.range}</span>
-                        {spell.concentration ? <span>Concentration</span> : null}
-                        {spell.ritual ? <span>Ritual</span> : null}
-                      </div>
-                    </div>
-
-                    <div className="spell-row-actions">
-                      <button
-                        type="button"
-                        className={isKnown ? "active" : ""}
-                        onClick={() => toggleKnownSpell(spell.id)}
+                    return (
+                      <article
+                        className={
+                          isKnown
+                            ? "character-spell-row selected"
+                            : "character-spell-row"
+                        }
+                        key={spell.id}
                       >
-                        {isKnown ? "Known" : "Add"}
-                      </button>
+                        <div>
+                          <div className="character-spell-row-head">
+                            <strong>{spell.name}</strong>
+                            <span>{getSpellLevelLabel(spell)}</span>
+                          </div>
 
-                      <button
-                        type="button"
-                        className={isPrepared ? "active" : ""}
-                        onClick={() => togglePreparedSpell(spell.id)}
-                      >
-                        {isPrepared ? "Prepared" : "Prepare"}
-                      </button>
-                    </div>
-                  </article>
-                );
-              })}
+                          <p>{spell.description}</p>
+
+                          <div className="library-pill-row">
+                            <span>{spell.school}</span>
+                            <span>{spell.castingTime}</span>
+                            <span>{spell.range}</span>
+                            {spell.concentration ? <span>Concentration</span> : null}
+                            {spell.ritual ? <span>Ritual</span> : null}
+                          </div>
+                        </div>
+
+                        <div className="spell-row-actions">
+                          <button
+                            type="button"
+                            className={isKnown ? "active" : ""}
+                            onClick={() => toggleKnownSpell(spell.id)}
+                          >
+                            {isKnown ? "Known" : "Add"}
+                          </button>
+
+                          {isCantrip ? (
+                            <span
+                              className={
+                                isKnown
+                                  ? "spell-status-pill active"
+                                  : "spell-status-pill"
+                              }
+                            >
+                              Always Ready
+                            </span>
+                          ) : (
+                            <button
+                              type="button"
+                              className={isPrepared ? "active" : ""}
+                              onClick={() => togglePreparedSpell(spell.id)}
+                            >
+                              {isPrepared ? "Prepared" : "Prepare"}
+                            </button>
+                          )}
+                        </div>
+                      </article>
+                    );
+                  })}
+                </div>
+              ))}
             </div>
           )}
         </>
@@ -1427,7 +1761,7 @@ function Builder({
 
         <CharacterSpellSelector
           title="Karakter Spellbook"
-          description="Bu karakterin bildiği ve hazırladığı büyüleri seç. Spell slot yok, şimdilik sadece kitap rafını kuruyoruz."
+          description="Bu karakterin bildiği cantripleri ve hazırladığı büyüleri seç. Slotlar karakter detayında takip ediliyor."
           rulesetData={rulesetData}
           isRulesetLoading={isRulesetLoading}
           rulesetError={rulesetError}
@@ -1507,6 +1841,11 @@ function CharacterEditor({
       armorClass: character.armorClass,
       knownSpellIds: character.knownSpellIds ?? [],
       preparedSpellIds: character.preparedSpellIds ?? [],
+      spellSlots: normalizeSpellSlots(
+        character.spellSlots,
+        character.level,
+        character.className,
+      ),
       notes: character.notes,
     });
   }, [character]);
@@ -1567,6 +1906,11 @@ function CharacterEditor({
       ...character,
       ...draft,
       currentHp: Math.min(character.currentHp, draft.maxHp),
+      spellSlots: normalizeSpellSlots(
+        draft.spellSlots,
+        draft.level,
+        draft.className,
+      ),
       updatedAt: new Date().toISOString(),
     };
 

@@ -1483,3 +1483,212 @@ textarea {
   }
 }
 
+/* Spell Slots & Casting V3 */
+.spell-slot-panel,
+.prepared-cast-panel {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.spell-slot-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.spell-slot-head button {
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  color: #f7f8ff;
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+.spell-slot-head button:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.spell-slot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.spell-slot-card {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(8, 12, 26, 0.54);
+}
+
+.spell-slot-card span,
+.spell-slot-card small {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.spell-slot-card strong {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.spell-slot-empty {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.prepared-cast-list {
+  display: grid;
+  gap: 8px;
+}
+
+.prepared-cast-list button {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  color: #f7f8ff;
+  background: rgba(8, 12, 26, 0.6);
+  cursor: pointer;
+}
+
+.prepared-cast-list button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.prepared-cast-list button:disabled,
+.detail-spell-actions button:disabled {
+  opacity: 0.44;
+  cursor: not-allowed;
+}
+
+.prepared-cast-list span {
+  font-weight: 900;
+}
+
+.prepared-cast-list small {
+  color: rgba(255, 255, 255, 0.62);
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .spell-slot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Big Update 4: Spellbook polish, cantrips and concentration UX */
+.character-detail-spell-groups,
+.character-spell-list {
+  display: grid;
+  gap: 18px;
+}
+
+.spell-level-group {
+  display: grid;
+  gap: 12px;
+}
+
+.spell-level-title {
+  margin: 0;
+  padding: 0 2px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.spell-status-pill {
+  display: inline-grid;
+  min-height: 34px;
+  place-items: center;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.spell-status-pill.active {
+  color: #f7f8ff;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.spell-description-toggle {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.spell-description-toggle summary {
+  cursor: pointer;
+  width: fit-content;
+  padding: 7px 12px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.76);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.spell-description-toggle p {
+  margin: 0;
+}
+
+.spell-higher-levels {
+  padding-top: 8px;
+  color: rgba(255, 255, 255, 0.64);
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.spell-slot-bar {
+  width: 100%;
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.spell-slot-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.prepared-cast-group {
+  display: grid;
+  gap: 7px;
+}
+
+.prepared-cast-group > strong {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.detail-spell-card .spell-meta-grid {
+  margin-top: 10px;
+}
+
+.character-spell-row .spell-status-pill {
+  white-space: nowrap;
+}
