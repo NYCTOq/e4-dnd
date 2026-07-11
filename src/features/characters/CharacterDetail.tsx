@@ -5,7 +5,7 @@ import type { RulesetData, DndSpellData } from "../../core/rulesets/ruleset.type
 import type { Character } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellAttackBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
-import { calculateEffectiveArmorClass, calculateSuggestedArmorClass, getCharacterInventoryItems, getEquippedItems, getInventoryWeight, getItemCategoryLabel, getItemRulesSummary, getSpellGroupTitle, getSpellLevelGroups, getSpellLevelLabel, getWeaponAttackBonus, getWeaponDamageSummary, isSpellReadyToCast, normalizeSpellSlots, resetSpellSlots, sortSpellsByLevelAndName } from "./characterShared";
+import { calculateEffectiveArmorClass, calculateSuggestedArmorClass, getCharacterInventoryItems, getEquippedItems, getInventoryWeight, getItemCategoryLabel, getItemRulesSummary, getSpellGroupTitle, getSpellLevelGroups, getSpellLevelLabel, getWeaponAttackBonus, getWeaponDamageSummary, isSpellReadyToCast, normalizeHitDice, normalizeSpellSlots, resetDeathSaves, resetHitDice, resetSpellSlots, sortSpellsByLevelAndName } from "./characterShared";
 
 export function CharacterDetail({
   characters,
@@ -107,6 +107,18 @@ export function CharacterDetail({
     attackBonus: getWeaponAttackBonus(activeCharacter, weapon),
     damage: getWeaponDamageSummary(activeCharacter, weapon),
   }));
+  const selectedClass = rulesetData?.classes.find(
+    (classItem) => classItem.name === activeCharacter.className,
+  );
+  const activeHitDice = normalizeHitDice(
+    activeCharacter.hitDice,
+    activeCharacter.level,
+    activeCharacter.className,
+    selectedClass?.hitDie,
+  );
+  const activeDeathSaves = activeCharacter.deathSaves ?? resetDeathSaves();
+  const activeExhaustion = activeCharacter.exhaustion ?? 0;
+  const activeConditionDurations = activeCharacter.conditionDurations ?? {};
 
   function updateHp(amount: number) {
     const nextHp = Math.max(
@@ -129,14 +141,136 @@ export function CharacterDetail({
     });
   }
 
+  function updateDeathSave(type: "successes" | "failures", amount: number) {
+    const nextDeathSaves = {
+      ...activeDeathSaves,
+      [type]: Math.min(3, Math.max(0, activeDeathSaves[type] + amount)),
+    };
+
+    onUpdateCharacter({
+      ...activeCharacter,
+      deathSaves: nextDeathSaves,
+      updatedAt: new Date().toISOString(),
+    });
+  }
+
+  function clearDeathSaves() {
+    onUpdateCharacter({
+      ...activeCharacter,
+      deathSaves: resetDeathSaves(),
+      updatedAt: new Date().toISOString(),
+    });
+  }
+
+  function updateExhaustion(amount: number) {
+    onUpdateCharacter({
+      ...activeCharacter,
+      exhaustion: Math.min(6, Math.max(0, activeExhaustion + amount)),
+      updatedAt: new Date().toISOString(),
+    });
+  }
+
+  function spendHitDie(die: number) {
+    const hitDiePool = activeHitDice.find((pool) => pool.die === die);
+
+    if (!hitDiePool || hitDiePool.used >= hitDiePool.max) {
+      alert(`d${die} hit die kalmadı. Karakterin dinlenmeye bile bütçesi yetmiyor.`);
+      return;
+    }
+
+    const result = rollDice({
+      count: 1,
+      sides: die,
+      modifier: getAbilityModifier(activeCharacter.abilities.con),
+    });
+    const healedAmount = Math.max(0, result.total);
+    const nextHp = Math.min(activeCharacter.maxHp, activeCharacter.currentHp + healedAmount);
+
+    onUpdateCharacter({
+      ...activeCharacter,
+      currentHp: nextHp,
+      hitDice: activeHitDice.map((pool) =>
+        pool.die === die ? { ...pool, used: pool.used + 1 } : pool,
+      ),
+      updatedAt: new Date().toISOString(),
+    });
+
+    setCharacterRollHistory((current) =>
+      [
+        {
+          id: result.id,
+          label: `Short Rest d${die}`,
+          notation: result.notation,
+          rolls: result.rolls,
+          total: healedAmount,
+          createdAt: result.createdAt,
+        },
+        ...current,
+      ].slice(0, 8),
+    );
+  }
+
+  function updateConditionDuration(
+    condition: Character["conditions"][number],
+    value: number,
+  ) {
+    const nextDurations = {
+      ...activeConditionDurations,
+      [condition]: Math.max(0, Math.floor(value)),
+    };
+
+    onUpdateCharacter({
+      ...activeCharacter,
+      conditionDurations: nextDurations,
+      updatedAt: new Date().toISOString(),
+    });
+  }
+
+  function advanceConditionRound() {
+    const nextDurations = { ...activeConditionDurations };
+    const expiredConditions = new Set<Character["conditions"][number]>();
+
+    for (const condition of activeCharacter.conditions) {
+      const duration = nextDurations[condition];
+
+      if (typeof duration !== "number" || duration <= 0) {
+        continue;
+      }
+
+      const nextDuration = duration - 1;
+
+      if (nextDuration <= 0) {
+        delete nextDurations[condition];
+        expiredConditions.add(condition);
+      } else {
+        nextDurations[condition] = nextDuration;
+      }
+    }
+
+    onUpdateCharacter({
+      ...activeCharacter,
+      conditions: activeCharacter.conditions.filter(
+        (condition) => !expiredConditions.has(condition),
+      ),
+      conditionDurations: nextDurations,
+      updatedAt: new Date().toISOString(),
+    });
+  }
+
   function toggleCondition(condition: Character["conditions"][number]) {
     const hasCondition = activeCharacter.conditions.includes(condition);
+    const nextDurations = { ...activeConditionDurations };
+
+    if (hasCondition) {
+      delete nextDurations[condition];
+    }
 
     onUpdateCharacter({
       ...activeCharacter,
       conditions: hasCondition
         ? activeCharacter.conditions.filter((item) => item !== condition)
         : [...activeCharacter.conditions, condition],
+      conditionDurations: nextDurations,
       updatedAt: new Date().toISOString(),
     });
   }
@@ -215,6 +349,10 @@ export function CharacterDetail({
       currentHp: activeCharacter.maxHp,
       tempHp: 0,
       spellSlots: resetSpellSlots(activeSpellSlots),
+      hitDice: resetHitDice(activeHitDice),
+      deathSaves: resetDeathSaves(),
+      exhaustion: Math.max(0, activeExhaustion - 1),
+      conditionDurations: {},
       conditions: activeCharacter.conditions.filter(
         (item) => item === "Cursed",
       ),
@@ -557,6 +695,59 @@ export function CharacterDetail({
             />
           </label>
 
+          <div className="advanced-character-panel">
+            <div className="spell-slot-head">
+              <span className="mini-label">Advanced Tools</span>
+              <button type="button" onClick={clearDeathSaves}>Clear Saves</button>
+            </div>
+
+            <div className="death-save-grid">
+              <div>
+                <span>Death Successes</span>
+                <strong>{activeDeathSaves.successes}/3</strong>
+                <div className="tiny-button-row">
+                  <button type="button" onClick={() => updateDeathSave("successes", -1)}>-</button>
+                  <button type="button" onClick={() => updateDeathSave("successes", 1)}>+</button>
+                </div>
+              </div>
+
+              <div>
+                <span>Death Failures</span>
+                <strong>{activeDeathSaves.failures}/3</strong>
+                <div className="tiny-button-row">
+                  <button type="button" onClick={() => updateDeathSave("failures", -1)}>-</button>
+                  <button type="button" onClick={() => updateDeathSave("failures", 1)}>+</button>
+                </div>
+              </div>
+
+              <div>
+                <span>Exhaustion</span>
+                <strong>{activeExhaustion}/6</strong>
+                <div className="tiny-button-row">
+                  <button type="button" onClick={() => updateExhaustion(-1)}>-</button>
+                  <button type="button" onClick={() => updateExhaustion(1)}>+</button>
+                </div>
+              </div>
+            </div>
+
+            <div className="hit-dice-panel">
+              <span className="mini-label">Short Rest</span>
+              {activeHitDice.map((pool) => {
+                const remaining = pool.max - pool.used;
+
+                return (
+                  <button
+                    key={pool.die}
+                    type="button"
+                    disabled={remaining <= 0 || activeCharacter.currentHp >= activeCharacter.maxHp}
+                    onClick={() => spendHitDie(pool.die)}
+                  >
+                    Spend d{pool.die} Hit Die · {remaining}/{pool.max} left
+                  </button>
+                );
+              })}
+            </div>
+          </div>
 
           <div className="spell-slot-panel">
             <div className="spell-slot-head">
@@ -649,6 +840,33 @@ export function CharacterDetail({
                 {condition}
               </button>
             ))}
+          </div>
+
+          <div className="condition-duration-panel">
+            <div className="spell-slot-head">
+              <span className="mini-label">Condition Rounds</span>
+              <button type="button" onClick={advanceConditionRound}>Round End</button>
+            </div>
+
+            {activeCharacter.conditions.length === 0 ? (
+              <div className="spell-slot-empty">Aktif condition yok. Nadir bir masa huzuru.</div>
+            ) : (
+              <div className="condition-duration-list">
+                {activeCharacter.conditions.map((condition) => (
+                  <label key={condition}>
+                    <span>{condition}</span>
+                    <input
+                      type="number"
+                      min={0}
+                      value={activeConditionDurations[condition] ?? 0}
+                      onChange={(event) =>
+                        updateConditionDuration(condition, Number(event.target.value))
+                      }
+                    />
+                  </label>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="character-roll-result">

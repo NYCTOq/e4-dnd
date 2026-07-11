@@ -42,6 +42,14 @@ export interface DndSpellData {
   classes: string[];
   description: string;
   higherLevels?: string;
+
+  effectType?: string;
+  attackType?: string;
+  damageDice?: string;
+  damageType?: string;
+  healingDice?: string;
+  saveAbility?: AbilityKey;
+  conditionEffect?: string;
 }
 
 export type DndItemCategory = "weapon" | "armor" | "shield" | "gear";

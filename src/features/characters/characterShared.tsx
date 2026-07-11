@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import type { DndItemData, DndSpellData, RulesetData } from "../../core/rulesets/ruleset.types";
-import type { Character, CharacterDraft } from "../../core/character/character.types";
+import type { Character, CharacterDraft, CharacterHitDiePool } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getProficiencyBonus } from "../../core/character/characterCalculator";
 
 export const emptyDraft: CharacterDraft = {
@@ -31,6 +31,13 @@ export const emptyDraft: CharacterDraft = {
   equippedShieldId: null,
   equippedWeaponIds: [],
   gold: 0,
+  deathSaves: {
+    successes: 0,
+    failures: 0,
+  },
+  hitDice: [{ die: 8, max: 1, used: 0 }],
+  exhaustion: 0,
+  conditionDurations: {},
   notes: "",
 };
 
@@ -65,6 +72,55 @@ export const FULL_CASTER_SLOT_TABLE: Record<number, number[]> = {
   19: [4, 3, 3, 3, 3, 2, 1, 1, 1],
   20: [4, 3, 3, 3, 3, 2, 2, 1, 1],
 };
+
+const HIT_DIE_BY_CLASS: Record<string, number> = {
+  barbarian: 12,
+  fighter: 10,
+  paladin: 10,
+  ranger: 10,
+  bard: 8,
+  cleric: 8,
+  druid: 8,
+  monk: 8,
+  rogue: 8,
+  warlock: 8,
+  sorcerer: 6,
+  wizard: 6,
+};
+
+export function getHitDieForClass(className: string, fallbackDie?: number) {
+  return fallbackDie ?? HIT_DIE_BY_CLASS[className.trim().toLowerCase()] ?? 8;
+}
+
+export function normalizeHitDice(
+  currentHitDice: CharacterHitDiePool[] | undefined,
+  level: number,
+  className: string,
+  fallbackDie?: number,
+): CharacterHitDiePool[] {
+  const safeLevel = Math.min(20, Math.max(1, Math.floor(level)));
+  const die = getHitDieForClass(className, fallbackDie);
+  const existingPool = currentHitDice?.find((pool) => pool.die === die) ?? currentHitDice?.[0];
+
+  return [
+    {
+      die,
+      max: safeLevel,
+      used: Math.min(safeLevel, Math.max(0, existingPool?.used ?? 0)),
+    },
+  ];
+}
+
+export function resetHitDice(hitDice: CharacterHitDiePool[]) {
+  return hitDice.map((pool) => ({ ...pool, used: 0 }));
+}
+
+export function resetDeathSaves() {
+  return {
+    successes: 0,
+    failures: 0,
+  };
+}
 
 export function getDefaultSpellSlots(
   level: number,
@@ -305,6 +361,10 @@ export function createCharacterFromDraft(draft: CharacterDraft): Character {
       draft.level,
       draft.className,
     ),
+    hitDice: normalizeHitDice(draft.hitDice, draft.level, draft.className),
+    deathSaves: resetDeathSaves(),
+    exhaustion: 0,
+    conditionDurations: {},
     currentHp: draft.maxHp,
     tempHp: 0,
     conditions: [],

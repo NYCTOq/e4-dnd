@@ -1577,6 +1577,89 @@ function saveHomebrewItems(items: DndItemData[]) {
   localStorage.setItem(HOMEBREW_ITEMS_STORAGE_KEY, JSON.stringify(items));
 }
 
+const SPELL_CLASS_OPTIONS = [
+  "Bard",
+  "Cleric",
+  "Druid",
+  "Paladin",
+  "Ranger",
+  "Sorcerer",
+  "Warlock",
+  "Wizard",
+];
+
+const SPELL_SCHOOL_OPTIONS = [
+  "Abjuration",
+  "Conjuration",
+  "Divination",
+  "Enchantment",
+  "Evocation",
+  "Illusion",
+  "Necromancy",
+  "Transmutation",
+];
+
+const SPELL_EFFECT_OPTIONS = [
+  "Damage",
+  "Healing",
+  "Buff",
+  "Debuff",
+  "Utility",
+  "Defense",
+  "Movement",
+  "Summon",
+];
+
+const DAMAGE_TYPE_OPTIONS = [
+  "acid",
+  "bludgeoning",
+  "cold",
+  "fire",
+  "force",
+  "lightning",
+  "necrotic",
+  "piercing",
+  "poison",
+  "psychic",
+  "radiant",
+  "slashing",
+  "thunder",
+];
+
+const SAVE_ABILITY_OPTIONS = ["str", "dex", "con", "int", "wis", "cha"];
+
+const ATTACK_TYPE_OPTIONS = [
+  { value: "spell-attack", label: "Spell Attack" },
+  { value: "saving-throw", label: "Saving Throw" },
+  { value: "automatic", label: "Automatic" },
+];
+
+const CONDITION_EFFECT_OPTIONS: Character["conditions"] = [
+  "Blessed",
+  "Poisoned",
+  "Prone",
+  "Invisible",
+  "Stunned",
+  "Restrained",
+  "Concentration",
+  "Rage",
+  "Haki",
+  "Cursed",
+];
+
+const WEAPON_PROPERTY_OPTIONS = [
+  "Finesse",
+  "Light",
+  "Heavy",
+  "Two-Handed",
+  "Versatile",
+  "Ranged",
+  "Thrown",
+  "Reach",
+  "Loading",
+  "Ammunition",
+];
+
 function HomebrewLab({
   homebrewSpells,
   homebrewItems,
@@ -1602,7 +1685,14 @@ function HomebrewLab({
     duration: "Instantaneous",
     concentration: false,
     ritual: false,
-    classesText: "Cleric, Wizard",
+    classes: ["Cleric"],
+    effectType: "Damage",
+    attackType: "saving-throw",
+    damageDice: "",
+    damageType: "radiant",
+    healingDice: "",
+    saveAbility: "dex",
+    conditionEffect: "",
     description: "",
     higherLevels: "",
   });
@@ -1614,12 +1704,12 @@ function HomebrewLab({
     weight: 0,
     description: "",
     armorClass: "",
-    armorClassBonus: "",
+    armorClassBonus: "2",
     armorType: "light",
     dexBonusMax: "",
     damage: "",
-    damageType: "",
-    propertiesText: "",
+    damageType: "slashing",
+    properties: [] as string[],
     range: "",
   });
 
@@ -1643,6 +1733,72 @@ function HomebrewLab({
     }));
   }
 
+  function toggleSpellClass(className: string) {
+    setSpellForm((current) => {
+      const hasClass = current.classes.includes(className);
+      const nextClasses = hasClass
+        ? current.classes.filter((item) => item !== className)
+        : [...current.classes, className];
+
+      return {
+        ...current,
+        classes: nextClasses,
+      };
+    });
+  }
+
+  function toggleItemProperty(property: string) {
+    setItemForm((current) => {
+      const hasProperty = current.properties.includes(property);
+      const nextProperties = hasProperty
+        ? current.properties.filter((item) => item !== property)
+        : [...current.properties, property];
+
+      return {
+        ...current,
+        properties: nextProperties,
+      };
+    });
+  }
+
+  function getSpellEffectSummary() {
+    const parts: string[] = [];
+
+    parts.push(`Effect: ${spellForm.effectType}`);
+    parts.push(
+      `Resolution: ${ATTACK_TYPE_OPTIONS.find((item) => item.value === spellForm.attackType)?.label ?? spellForm.attackType}`,
+    );
+
+    if (spellForm.damageDice.trim()) {
+      parts.push(`Damage: ${spellForm.damageDice.trim()} ${spellForm.damageType}`);
+    }
+
+    if (spellForm.healingDice.trim()) {
+      parts.push(`Healing: ${spellForm.healingDice.trim()}`);
+    }
+
+    if (spellForm.attackType === "saving-throw") {
+      parts.push(`Save: ${spellForm.saveAbility.toUpperCase()}`);
+    }
+
+    if (spellForm.conditionEffect) {
+      parts.push(`Condition: ${spellForm.conditionEffect}`);
+    }
+
+    return parts.join(" • ");
+  }
+
+  function buildSpellDescription() {
+    const effectSummary = getSpellEffectSummary();
+    const description = spellForm.description.trim();
+
+    if (!description) {
+      return effectSummary;
+    }
+
+    return `${description}\n\n${effectSummary}`;
+  }
+
   function handleCreateSpell(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
@@ -1651,8 +1807,13 @@ function HomebrewLab({
       return;
     }
 
-    if (!spellForm.description.trim()) {
-      alert("Spell açıklaması lazım. Sadece havalı isimle büyü olmuyor, maalesef.");
+    if (spellForm.classes.length === 0) {
+      alert("Bu büyüyü en az bir class kullanabilsin. Yoksa büyü değil, dekoratif PDF olur.");
+      return;
+    }
+
+    if (!spellForm.description.trim() && !spellForm.damageDice.trim() && !spellForm.healingDice.trim()) {
+      alert("Spell etkisi lazım. En az açıklama, damage ya da healing gir. Boş büyüyle evren ikna olmuyor.");
       return;
     }
 
@@ -1667,9 +1828,19 @@ function HomebrewLab({
       duration: spellForm.duration.trim() || "Instantaneous",
       concentration: spellForm.concentration,
       ritual: spellForm.ritual,
-      classes: parseTextList(spellForm.classesText),
-      description: spellForm.description.trim(),
+      classes: spellForm.classes,
+      description: buildSpellDescription(),
       higherLevels: spellForm.higherLevels.trim() || undefined,
+      effectType: spellForm.effectType,
+      attackType: spellForm.attackType,
+      damageDice: spellForm.damageDice.trim() || undefined,
+      damageType: spellForm.damageDice.trim() ? spellForm.damageType : undefined,
+      healingDice: spellForm.healingDice.trim() || undefined,
+      saveAbility:
+        spellForm.attackType === "saving-throw"
+          ? (spellForm.saveAbility as "str" | "dex" | "con" | "int" | "wis" | "cha")
+          : undefined,
+      conditionEffect: spellForm.conditionEffect || undefined,
     });
 
     setSpellForm((current) => ({
@@ -1677,6 +1848,9 @@ function HomebrewLab({
       name: "",
       description: "",
       higherLevels: "",
+      damageDice: "",
+      healingDice: "",
+      conditionEffect: "",
     }));
   }
 
@@ -1719,9 +1893,7 @@ function HomebrewLab({
       damageType:
         itemForm.category === "weapon" ? itemForm.damageType.trim() : undefined,
       properties:
-        itemForm.category === "weapon"
-          ? parseTextList(itemForm.propertiesText)
-          : undefined,
+        itemForm.category === "weapon" ? itemForm.properties : undefined,
       range: itemForm.category === "weapon" ? itemForm.range.trim() : undefined,
       tags: ["homebrew"],
     });
@@ -1731,9 +1903,8 @@ function HomebrewLab({
       name: "",
       description: "",
       damage: "",
-      damageType: "",
-      propertiesText: "",
       range: "",
+      properties: [],
     }));
   }
 
@@ -1761,7 +1932,7 @@ function HomebrewLab({
         <form className="homebrew-form-card" onSubmit={handleCreateSpell}>
           <div className="homebrew-card-head">
             <div>
-              <span className="mini-label">Creator</span>
+              <span className="mini-label">Creator V2</span>
               <h2>Custom Spell</h2>
             </div>
             <button className="primary-action" type="submit">
@@ -1793,27 +1964,35 @@ function HomebrewLab({
                 <option value={3}>Level 3</option>
                 <option value={4}>Level 4</option>
                 <option value={5}>Level 5</option>
+                <option value={6}>Level 6</option>
+                <option value={7}>Level 7</option>
+                <option value={8}>Level 8</option>
+                <option value={9}>Level 9</option>
               </select>
             </label>
 
             <label>
               School
-              <input
+              <select
                 value={spellForm.school}
                 onChange={(event) => updateSpellForm("school", event.target.value)}
-                placeholder="Evocation"
-              />
+              >
+                {SPELL_SCHOOL_OPTIONS.map((school) => (
+                  <option key={school} value={school}>{school}</option>
+                ))}
+              </select>
             </label>
 
             <label>
-              Classes
-              <input
-                value={spellForm.classesText}
-                onChange={(event) =>
-                  updateSpellForm("classesText", event.target.value)
-                }
-                placeholder="Cleric, Wizard"
-              />
+              Effect Type
+              <select
+                value={spellForm.effectType}
+                onChange={(event) => updateSpellForm("effectType", event.target.value)}
+              >
+                {SPELL_EFFECT_OPTIONS.map((effect) => (
+                  <option key={effect} value={effect}>{effect}</option>
+                ))}
+              </select>
             </label>
 
             <label>
@@ -1859,6 +2038,101 @@ function HomebrewLab({
             </label>
           </div>
 
+          <div className="homebrew-builder-block">
+            <span className="mini-label">Classes</span>
+            <div className="homebrew-choice-grid">
+              {SPELL_CLASS_OPTIONS.map((className) => (
+                <label className="homebrew-check-card" key={className}>
+                  <input
+                    type="checkbox"
+                    checked={spellForm.classes.includes(className)}
+                    onChange={() => toggleSpellClass(className)}
+                  />
+                  {className}
+                </label>
+              ))}
+            </div>
+          </div>
+
+          <div className="homebrew-builder-block">
+            <span className="mini-label">Effect Builder</span>
+            <div className="form-grid compact-form-grid">
+              <label>
+                Resolution
+                <select
+                  value={spellForm.attackType}
+                  onChange={(event) => updateSpellForm("attackType", event.target.value)}
+                >
+                  {ATTACK_TYPE_OPTIONS.map((option) => (
+                    <option key={option.value} value={option.value}>{option.label}</option>
+                  ))}
+                </select>
+              </label>
+
+              {spellForm.attackType === "saving-throw" ? (
+                <label>
+                  Save Ability
+                  <select
+                    value={spellForm.saveAbility}
+                    onChange={(event) => updateSpellForm("saveAbility", event.target.value)}
+                  >
+                    {SAVE_ABILITY_OPTIONS.map((ability) => (
+                      <option key={ability} value={ability}>{ability.toUpperCase()}</option>
+                    ))}
+                  </select>
+                </label>
+              ) : null}
+
+              <label>
+                Damage Dice
+                <input
+                  value={spellForm.damageDice}
+                  onChange={(event) => updateSpellForm("damageDice", event.target.value)}
+                  placeholder="2d8"
+                />
+              </label>
+
+              <label>
+                Damage Type
+                <select
+                  value={spellForm.damageType}
+                  onChange={(event) => updateSpellForm("damageType", event.target.value)}
+                >
+                  {DAMAGE_TYPE_OPTIONS.map((type) => (
+                    <option key={type} value={type}>{type}</option>
+                  ))}
+                </select>
+              </label>
+
+              <label>
+                Healing Dice
+                <input
+                  value={spellForm.healingDice}
+                  onChange={(event) => updateSpellForm("healingDice", event.target.value)}
+                  placeholder="1d8 + spellcasting mod"
+                />
+              </label>
+
+              <label>
+                Condition Effect
+                <select
+                  value={spellForm.conditionEffect}
+                  onChange={(event) => updateSpellForm("conditionEffect", event.target.value)}
+                >
+                  <option value="">No condition</option>
+                  {CONDITION_EFFECT_OPTIONS.map((condition) => (
+                    <option key={condition} value={condition}>{condition}</option>
+                  ))}
+                </select>
+              </label>
+            </div>
+
+            <div className="homebrew-effect-preview">
+              <strong>Effect Preview</strong>
+              <span>{getSpellEffectSummary()}</span>
+            </div>
+          </div>
+
           <div className="homebrew-toggle-row">
             <label>
               <input
@@ -1889,7 +2163,7 @@ function HomebrewLab({
                 updateSpellForm("description", event.target.value)
               }
               rows={5}
-              placeholder="Spell ne yapıyor? Zar, save, damage, condition..."
+              placeholder="Spell ne yapıyor? Özel kural, hedef, alan, yan etki..."
             />
           </label>
 
@@ -1909,7 +2183,7 @@ function HomebrewLab({
         <form className="homebrew-form-card" onSubmit={handleCreateItem}>
           <div className="homebrew-card-head">
             <div>
-              <span className="mini-label">Creator</span>
+              <span className="mini-label">Creator V2</span>
               <h2>Custom Item</h2>
             </div>
             <button className="primary-action" type="submit">
@@ -2021,46 +2295,52 @@ function HomebrewLab({
           ) : null}
 
           {itemForm.category === "weapon" ? (
-            <div className="form-grid compact-form-grid">
-              <label>
-                Damage
-                <input
-                  value={itemForm.damage}
-                  onChange={(event) => updateItemForm("damage", event.target.value)}
-                  placeholder="1d8"
-                />
-              </label>
+            <div className="homebrew-builder-block">
+              <div className="form-grid compact-form-grid">
+                <label>
+                  Damage
+                  <input
+                    value={itemForm.damage}
+                    onChange={(event) => updateItemForm("damage", event.target.value)}
+                    placeholder="1d8"
+                  />
+                </label>
 
-              <label>
-                Damage Type
-                <input
-                  value={itemForm.damageType}
-                  onChange={(event) =>
-                    updateItemForm("damageType", event.target.value)
-                  }
-                  placeholder="slashing"
-                />
-              </label>
+                <label>
+                  Damage Type
+                  <select
+                    value={itemForm.damageType}
+                    onChange={(event) => updateItemForm("damageType", event.target.value)}
+                  >
+                    {DAMAGE_TYPE_OPTIONS.map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </label>
 
-              <label>
-                Properties
-                <input
-                  value={itemForm.propertiesText}
-                  onChange={(event) =>
-                    updateItemForm("propertiesText", event.target.value)
-                  }
-                  placeholder="Finesse, Light"
-                />
-              </label>
+                <label>
+                  Range
+                  <input
+                    value={itemForm.range}
+                    onChange={(event) => updateItemForm("range", event.target.value)}
+                    placeholder="80/320"
+                  />
+                </label>
+              </div>
 
-              <label>
-                Range
-                <input
-                  value={itemForm.range}
-                  onChange={(event) => updateItemForm("range", event.target.value)}
-                  placeholder="80/320"
-                />
-              </label>
+              <span className="mini-label">Weapon Properties</span>
+              <div className="homebrew-choice-grid">
+                {WEAPON_PROPERTY_OPTIONS.map((property) => (
+                  <label className="homebrew-check-card" key={property}>
+                    <input
+                      type="checkbox"
+                      checked={itemForm.properties.includes(property)}
+                      onChange={() => toggleItemProperty(property)}
+                    />
+                    {property}
+                  </label>
+                ))}
+              </div>
             </div>
           ) : null}
 
@@ -2106,6 +2386,9 @@ function HomebrewLab({
                       <span>{spell.classes.join(", ") || "No class"}</span>
                       {spell.concentration ? <span>Concentration</span> : null}
                       {spell.ritual ? <span>Ritual</span> : null}
+                      {spell.damageDice ? <span>{spell.damageDice} {spell.damageType}</span> : null}
+                      {spell.healingDice ? <span>Heal {spell.healingDice}</span> : null}
+                      {spell.conditionEffect ? <span>{spell.conditionEffect}</span> : null}
                     </div>
                   </div>
 
@@ -2148,6 +2431,9 @@ function HomebrewLab({
                       {item.armorClassBonus ? (
                         <span>AC +{item.armorClassBonus}</span>
                       ) : null}
+                      {item.properties?.map((property) => (
+                        <span key={property}>{property}</span>
+                      ))}
                     </div>
                   </div>
 
@@ -2163,7 +2449,6 @@ function HomebrewLab({
     </PageShell>
   );
 }
-
 
 function App() {
   const [characters, setCharacters] = useState<Character[]>(() =>

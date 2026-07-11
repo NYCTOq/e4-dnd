@@ -1,5 +1,7 @@
 import type {
   Character,
+  CharacterConditionDurations,
+  CharacterHitDiePool,
   CharacterInventoryItem,
   CharacterSpellSlot,
 } from "../character/character.types";
@@ -36,6 +38,31 @@ const FULL_CASTER_SLOT_TABLE: Record<number, number[]> = {
   19: [4, 3, 3, 3, 3, 2, 1, 1, 1],
   20: [4, 3, 3, 3, 3, 2, 2, 1, 1],
 };
+
+const HIT_DIE_BY_CLASS: Record<string, number> = {
+  barbarian: 12,
+  fighter: 10,
+  paladin: 10,
+  ranger: 10,
+  bard: 8,
+  cleric: 8,
+  druid: 8,
+  monk: 8,
+  rogue: 8,
+  warlock: 8,
+  sorcerer: 6,
+  wizard: 6,
+};
+
+function clampNumber(value: unknown, min: number, max: number, fallback: number) {
+  return typeof value === "number" && Number.isFinite(value)
+    ? Math.min(max, Math.max(min, Math.floor(value)))
+    : fallback;
+}
+
+function inferHitDie(className: string) {
+  return HIT_DIE_BY_CLASS[className.trim().toLowerCase()] ?? 8;
+}
 
 function getDefaultSpellSlots(level: number, className: string): CharacterSpellSlot[] {
   const normalizedClassName = className.trim().toLowerCase();
@@ -91,6 +118,35 @@ function hydrateInventory(character: Character): CharacterInventoryItem[] {
     }));
 }
 
+function hydrateHitDice(character: Character): CharacterHitDiePool[] {
+  const die = inferHitDie(character.className);
+  const level = clampNumber(character.level, 1, 20, 1);
+  const existing = Array.isArray(character.hitDice) ? character.hitDice : [];
+  const existingPool = existing.find((pool) => pool.die === die) ?? existing[0];
+
+  return [
+    {
+      die,
+      max: level,
+      used: Math.min(level, Math.max(0, existingPool?.used ?? 0)),
+    },
+  ];
+}
+
+function hydrateConditionDurations(character: Character): CharacterConditionDurations {
+  const durations = character.conditionDurations ?? {};
+  const activeConditions = new Set(character.conditions ?? []);
+
+  return Object.fromEntries(
+    Object.entries(durations)
+      .filter(([condition]) => activeConditions.has(condition as Character["conditions"][number]))
+      .map(([condition, rounds]) => [
+        condition,
+        clampNumber(rounds, 0, 999, 0),
+      ]),
+  ) as CharacterConditionDurations;
+}
+
 function hydrateCharacter(character: Character): Character {
   const inventory = hydrateInventory(character);
   const inventoryItemIds = new Set(inventory.map((item) => item.itemId));
@@ -114,6 +170,13 @@ function hydrateCharacter(character: Character): Character {
       : [],
     gold: typeof character.gold === "number" ? Math.max(0, character.gold) : 0,
     armorClassMode: character.armorClassMode === "auto" ? "auto" : "manual",
+    deathSaves: {
+      successes: clampNumber(character.deathSaves?.successes, 0, 3, 0),
+      failures: clampNumber(character.deathSaves?.failures, 0, 3, 0),
+    },
+    hitDice: hydrateHitDice(character),
+    exhaustion: clampNumber(character.exhaustion, 0, 6, 0),
+    conditionDurations: hydrateConditionDurations(character),
   };
 }
 

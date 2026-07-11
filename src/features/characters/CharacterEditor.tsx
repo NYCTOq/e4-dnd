@@ -4,7 +4,7 @@ import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import type { Character, CharacterDraft } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellAttackBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
-import { CharacterInventoryManager, CharacterSpellSelector, calculateEffectiveArmorClass, createCharacterFromDraft, emptyDraft, normalizeSpellSlots } from "./characterShared";
+import { CharacterInventoryManager, CharacterSpellSelector, calculateEffectiveArmorClass, createCharacterFromDraft, emptyDraft, normalizeHitDice, normalizeSpellSlots } from "./characterShared";
 
 export function CharacterEditor({
   characters,
@@ -56,6 +56,14 @@ export function CharacterEditor({
       equippedShieldId: character.equippedShieldId ?? null,
       equippedWeaponIds: character.equippedWeaponIds ?? [],
       gold: character.gold ?? 0,
+      deathSaves: character.deathSaves ?? { successes: 0, failures: 0 },
+      hitDice: normalizeHitDice(
+        character.hitDice,
+        character.level,
+        character.className,
+      ),
+      exhaustion: character.exhaustion ?? 0,
+      conditionDurations: character.conditionDurations ?? {},
       notes: character.notes,
     });
   }, [character]);
@@ -119,6 +127,11 @@ export function CharacterEditor({
       currentHp: Math.min(character.currentHp, draft.maxHp),
       spellSlots: normalizeSpellSlots(
         draft.spellSlots,
+        draft.level,
+        draft.className,
+      ),
+      hitDice: normalizeHitDice(
+        draft.hitDice,
         draft.level,
         draft.className,
       ),

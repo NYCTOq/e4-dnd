@@ -18,6 +18,17 @@ export interface CharacterInventoryItem {
   notes?: string;
 }
 
+export interface CharacterDeathSaves {
+  successes: number;
+  failures: number;
+}
+
+export interface CharacterHitDiePool {
+  die: number;
+  max: number;
+  used: number;
+}
+
 export type CharacterCondition =
   | "Blessed"
   | "Poisoned"
@@ -29,6 +40,8 @@ export type CharacterCondition =
   | "Rage"
   | "Haki"
   | "Cursed";
+
+export type CharacterConditionDurations = Partial<Record<CharacterCondition, number>>;
 
 export interface Character {
   id: string;
@@ -59,6 +72,11 @@ export interface Character {
   equippedShieldId: string | null;
   equippedWeaponIds: string[];
   gold: number;
+
+  deathSaves: CharacterDeathSaves;
+  hitDice: CharacterHitDiePool[];
+  exhaustion: number;
+  conditionDurations: CharacterConditionDurations;
 
   conditions: CharacterCondition[];
   notes: string;
@@ -93,6 +111,11 @@ export interface CharacterDraft {
   equippedShieldId: string | null;
   equippedWeaponIds: string[];
   gold: number;
+
+  deathSaves: CharacterDeathSaves;
+  hitDice: CharacterHitDiePool[];
+  exhaustion: number;
+  conditionDurations: CharacterConditionDurations;
 
   notes: string;
 }
