@@ -1,0 +1,121 @@
+/* Character filters + Spellbook styles: paste at the end of src/App.css */
+
+.character-filter-panel {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.5fr) minmax(160px, 0.8fr) minmax(160px, 0.8fr) auto;
+  gap: 14px;
+  align-items: end;
+  margin: 26px 0;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(18px);
+}
+
+.character-filter-panel label {
+  display: grid;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.character-filter-panel input,
+.character-filter-panel select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  outline: none;
+  color: #f7f8ff;
+  background: rgba(8, 12, 26, 0.72);
+}
+
+.character-filter-panel input:focus,
+.character-filter-panel select:focus {
+  border-color: rgba(210, 220, 255, 0.62);
+}
+
+.filter-result-count {
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  padding: 8px 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.filter-result-count strong {
+  line-height: 1;
+  font-size: 1.25rem;
+}
+
+.filter-result-count span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.spell-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.spell-card {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.075);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+}
+
+.spell-card h3 {
+  margin: 4px 0 0;
+  font-size: 24px;
+  letter-spacing: -0.045em;
+}
+
+.spell-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.spell-meta-grid span,
+.spell-higher-levels {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(8, 12, 26, 0.44);
+  padding: 10px 12px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.88rem;
+}
+
+.spell-higher-levels {
+  line-height: 1.55;
+}
+
+.detail-actions {
+  margin: 18px 0 22px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .character-filter-panel,
+  .spell-grid,
+  .spell-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-result-count {
+    justify-items: start;
+  }
+}

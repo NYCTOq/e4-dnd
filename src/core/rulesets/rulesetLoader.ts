@@ -1,4 +1,9 @@
-import type { DndClassData, DndRaceData, RulesetData } from "./ruleset.types";
+import type {
+  DndClassData,
+  DndRaceData,
+  DndSpellData,
+  RulesetData,
+} from "./ruleset.types";
 
 async function loadJson<T>(path: string): Promise<T> {
   const response = await fetch(path);
@@ -11,9 +16,10 @@ async function loadJson<T>(path: string): Promise<T> {
 }
 
 export async function loadDnd2014Ruleset(): Promise<RulesetData> {
-  const [classes, races] = await Promise.all([
+  const [classes, races, spells] = await Promise.all([
     loadJson<DndClassData[]>("/data/dnd_2014/classes.json"),
     loadJson<DndRaceData[]>("/data/dnd_2014/races.json"),
+    loadJson<DndSpellData[]>("/data/dnd_2014/spells.json"),
   ]);
 
   return {
@@ -21,5 +27,6 @@ export async function loadDnd2014Ruleset(): Promise<RulesetData> {
     name: "D&D 2014",
     classes,
     races,
+    spells,
   };
 }

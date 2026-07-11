@@ -38,6 +38,7 @@ const navItems = [
   { to: "/builder", label: "Builder" },
   { to: "/play-mode", label: "Play Mode" },
   { to: "/dice", label: "Zar" },
+  { to: "/spellbook", label: "Spellbook" },
   { to: "/backup", label: "Yedek" },
   { to: "/library", label: "Library" },
   { to: "/homebrew-lab", label: "Homebrew" },
@@ -166,14 +167,14 @@ function Characters({
   onDeleteCharacter,
 }: {
   characters: Character[];
-  onDeleteCharacter: (id: string) => void;
+  onDeleteCharacter: (id: string) => boolean;
 }) {
   const navigate = useNavigate();
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [rulesetFilter, setRulesetFilter] = useState<"all" | Character["ruleset"]>(
-    "all"
-  );
+  const [rulesetFilter, setRulesetFilter] = useState<
+    "all" | Character["ruleset"]
+  >("all");
   const [classFilter, setClassFilter] = useState("all");
 
   const availableClasses = useMemo(() => {
@@ -181,8 +182,8 @@ function Characters({
       new Set(
         characters
           .map((character) => character.className)
-          .filter((className) => className.trim().length > 0)
-      )
+          .filter((className) => className.trim().length > 0),
+      ),
     ).sort((a, b) => a.localeCompare(b));
   }, [characters]);
 
@@ -221,8 +222,7 @@ function Characters({
       title="Karakterler"
       description="Kayıtlı karakterlerin burada listelenir. Şimdilik local kayıt var, cloud yok, huzur var."
     >
-
-            <div className="character-filter-panel">
+      <div className="character-filter-panel">
         <label>
           Ara
           <input
@@ -237,7 +237,9 @@ function Characters({
           <select
             value={rulesetFilter}
             onChange={(event) =>
-              setRulesetFilter(event.target.value as "all" | Character["ruleset"])
+              setRulesetFilter(
+                event.target.value as "all" | Character["ruleset"],
+              )
             }
           >
             <option value="all">Tümü</option>
@@ -270,29 +272,29 @@ function Characters({
       </div>
 
       {characters.length === 0 ? (
-  <div className="empty-panel">
-    <h2>Henüz karakter yok.</h2>
-    <p>
-      Builder ekranından karakter oluştur. App’in boş bakışları da
-      böylece sona ersin.
-    </p>
-  </div>
-) : filteredCharacters.length === 0 ? (
-  <div className="empty-panel">
-    <h2>Sonuç bulunamadı.</h2>
-    <p>
-      Filtreler fazla sert olmuş olabilir. Karakterler bile bu kadar
-      yargılanmayı hak etmiyor.
-    </p>
-  </div>
-) : (
-  <div className="character-grid">
-    {filteredCharacters.map((character) => (
-      <motion.article
-        className="character-card"
-        key={character.id}
-        whileHover={{ y: -6 }}
-      >
+        <div className="empty-panel">
+          <h2>Henüz karakter yok.</h2>
+          <p>
+            Builder ekranından karakter oluştur. App’in boş bakışları da böylece
+            sona ersin.
+          </p>
+        </div>
+      ) : filteredCharacters.length === 0 ? (
+        <div className="empty-panel">
+          <h2>Sonuç bulunamadı.</h2>
+          <p>
+            Filtreler fazla sert olmuş olabilir. Karakterler bile bu kadar
+            yargılanmayı hak etmiyor.
+          </p>
+        </div>
+      ) : (
+        <div className="character-grid">
+          {filteredCharacters.map((character) => (
+            <motion.article
+              className="character-card"
+              key={character.id}
+              whileHover={{ y: -6 }}
+            >
               <div className="character-card-top">
                 <div>
                   <span className="mini-label">{character.ruleset}</span>
@@ -301,8 +303,6 @@ function Characters({
 
                 <strong className="level-badge">Lv. {character.level}</strong>
               </div>
-
-              
 
               <p>
                 {character.race || "Unknown Race"} •{" "}
@@ -325,18 +325,20 @@ function Characters({
               </div>
 
               <div className="character-actions">
-  <button onClick={() => navigate(`/characters/${character.id}`)}>
-    Detay
-  </button>
+                <button onClick={() => navigate(`/characters/${character.id}`)}>
+                  Detay
+                </button>
 
-  <button onClick={() => navigate(`/characters/${character.id}/edit`)}>
-    Düzenle
-  </button>
+                <button
+                  onClick={() => navigate(`/characters/${character.id}/edit`)}
+                >
+                  Düzenle
+                </button>
 
-  <button onClick={() => onDeleteCharacter(character.id)}>
-    Sil
-  </button>
-</div>
+                <button onClick={() => onDeleteCharacter(character.id)}>
+                  Sil
+                </button>
+              </div>
             </motion.article>
           ))}
         </div>
@@ -352,7 +354,7 @@ function CharacterDetail({
 }: {
   characters: Character[];
   onUpdateCharacter: (character: Character) => void;
-  onDeleteCharacter: (id: string) => void;
+  onDeleteCharacter: (id: string) => boolean;
 }) {
   const { characterId } = useParams();
   const navigate = useNavigate();
@@ -405,7 +407,7 @@ function CharacterDetail({
   function updateHp(amount: number) {
     const nextHp = Math.max(
       0,
-      Math.min(activeCharacter.maxHp, activeCharacter.currentHp + amount)
+      Math.min(activeCharacter.maxHp, activeCharacter.currentHp + amount),
     );
 
     onUpdateCharacter({
@@ -441,37 +443,41 @@ function CharacterDetail({
       currentHp: activeCharacter.maxHp,
       tempHp: 0,
       conditions: activeCharacter.conditions.filter(
-        (item) => item === "Cursed"
+        (item) => item === "Cursed",
       ),
       updatedAt: new Date().toISOString(),
     });
   }
 
   function deleteCurrentCharacter() {
-  onDeleteCharacter(activeCharacter.id);
-}
+    const deleted = onDeleteCharacter(activeCharacter.id);
+
+    if (deleted) {
+      navigate("/characters");
+    }
+  }
 
   function quickCharacterRoll(label: string, modifier: number) {
-  const result = rollDice({
-    count: 1,
-    sides: 20,
-    modifier,
-  });
+    const result = rollDice({
+      count: 1,
+      sides: 20,
+      modifier,
+    });
 
-  setCharacterRollHistory((current) =>
-    [
-      {
-        id: result.id,
-        label,
-        notation: result.notation,
-        rolls: result.rolls,
-        total: result.total,
-        createdAt: result.createdAt,
-      },
-      ...current,
-    ].slice(0, 8)
-  );
-}
+    setCharacterRollHistory((current) =>
+      [
+        {
+          id: result.id,
+          label,
+          notation: result.notation,
+          rolls: result.rolls,
+          total: result.total,
+          createdAt: result.createdAt,
+        },
+        ...current,
+      ].slice(0, 8),
+    );
+  }
 
   return (
     <PageShell
@@ -496,26 +502,20 @@ function CharacterDetail({
               </p>
             </div>
 
-            <strong className="level-badge">
-              Lv. {activeCharacter.level}
-            </strong>
+            <strong className="level-badge">Lv. {activeCharacter.level}</strong>
           </div>
 
           <div className="character-actions detail-actions">
-  <button
-    onClick={() => navigate(`/characters/${activeCharacter.id}/edit`)}
-  >
-    Düzenle
-  </button>
+            <button
+              onClick={() => navigate(`/characters/${activeCharacter.id}/edit`)}
+            >
+              Düzenle
+            </button>
 
-  <button onClick={deleteCurrentCharacter}>
-    Sil
-  </button>
+            <button onClick={deleteCurrentCharacter}>Sil</button>
 
-  <button onClick={() => navigate("/characters")}>
-    Listeye Dön
-  </button>
-</div>
+            <button onClick={() => navigate("/characters")}>Listeye Dön</button>
+          </div>
 
           <div className="ability-detail-grid">
             {Object.entries(activeCharacter.abilities).map(
@@ -525,7 +525,7 @@ function CharacterDetail({
                   <strong>{score}</strong>
                   <em>{formatModifier(getAbilityModifier(score))}</em>
                 </div>
-              )
+              ),
             )}
           </div>
 
@@ -616,149 +616,152 @@ function CharacterDetail({
           </div>
 
           <div className="character-roll-result">
-  <span className="mini-label">Latest Roll</span>
+            <span className="mini-label">Latest Roll</span>
 
-  {characterRollHistory[0] ? (
-    <>
-      <strong className="character-roll-total">
-        {characterRollHistory[0].total}
-      </strong>
+            {characterRollHistory[0] ? (
+              <>
+                <strong className="character-roll-total">
+                  {characterRollHistory[0].total}
+                </strong>
 
-      <p>
-        {activeCharacter.name} - {characterRollHistory[0].label}
-        <br />
-        {characterRollHistory[0].notation} → [
-        {characterRollHistory[0].rolls.join(", ")}]
-      </p>
-    </>
-  ) : (
-    <>
-      <strong className="character-roll-total">--</strong>
-      <p>Henüz karakter üzerinden zar atılmadı. Kader beklemede.</p>
-    </>
-  )}
-</div>
+                <p>
+                  {activeCharacter.name} - {characterRollHistory[0].label}
+                  <br />
+                  {characterRollHistory[0].notation} → [
+                  {characterRollHistory[0].rolls.join(", ")}]
+                </p>
+              </>
+            ) : (
+              <>
+                <strong className="character-roll-total">--</strong>
+                <p>Henüz karakter üzerinden zar atılmadı. Kader beklemede.</p>
+              </>
+            )}
+          </div>
 
           <div className="quick-roll-panel">
-  <span className="mini-label">Quick Rolls</span>
-  <div className="character-roll-history">
-  <span className="mini-label">Roll History</span>
+            <span className="mini-label">Quick Rolls</span>
+            <div className="character-roll-history">
+              <span className="mini-label">Roll History</span>
 
-  {characterRollHistory.length === 0 ? (
-    <div className="character-roll-empty">
-      Geçmiş boş. Henüz kimse kaderle pazarlık yapmamış.
-    </div>
-  ) : (
-    characterRollHistory.map((roll) => (
-      <div className="character-roll-item" key={roll.id}>
-        <div>
-          <strong>{roll.label}</strong>
-          <span>
-            {roll.notation} → [{roll.rolls.join(", ")}]
-          </span>
-        </div>
+              {characterRollHistory.length === 0 ? (
+                <div className="character-roll-empty">
+                  Geçmiş boş. Henüz kimse kaderle pazarlık yapmamış.
+                </div>
+              ) : (
+                characterRollHistory.map((roll) => (
+                  <div className="character-roll-item" key={roll.id}>
+                    <div>
+                      <strong>{roll.label}</strong>
+                      <span>
+                        {roll.notation} → [{roll.rolls.join(", ")}]
+                      </span>
+                    </div>
 
-        <b>{roll.total}</b>
-      </div>
-    ))
-  )}
-</div>
+                    <b>{roll.total}</b>
+                  </div>
+                ))
+              )}
+            </div>
 
-  <div className="quick-roll-grid">
-    <button
-      onClick={() =>
-        quickCharacterRoll("Initiative", getInitiative(activeCharacter))
-      }
-    >
-      Initiative
-    </button>
+            <div className="quick-roll-grid">
+              <button
+                onClick={() =>
+                  quickCharacterRoll(
+                    "Initiative",
+                    getInitiative(activeCharacter),
+                  )
+                }
+              >
+                Initiative
+              </button>
 
-    <button
-      onClick={() =>
-        quickCharacterRoll(
-          "STR Check",
-          getAbilityModifier(activeCharacter.abilities.str)
-        )
-      }
-    >
-      STR
-    </button>
+              <button
+                onClick={() =>
+                  quickCharacterRoll(
+                    "STR Check",
+                    getAbilityModifier(activeCharacter.abilities.str),
+                  )
+                }
+              >
+                STR
+              </button>
 
-    <button
-      onClick={() =>
-        quickCharacterRoll(
-          "DEX Check",
-          getAbilityModifier(activeCharacter.abilities.dex)
-        )
-      }
-    >
-      DEX
-    </button>
+              <button
+                onClick={() =>
+                  quickCharacterRoll(
+                    "DEX Check",
+                    getAbilityModifier(activeCharacter.abilities.dex),
+                  )
+                }
+              >
+                DEX
+              </button>
 
-    <button
-      onClick={() =>
-        quickCharacterRoll(
-          "CON Check",
-          getAbilityModifier(activeCharacter.abilities.con)
-        )
-      }
-    >
-      CON
-    </button>
+              <button
+                onClick={() =>
+                  quickCharacterRoll(
+                    "CON Check",
+                    getAbilityModifier(activeCharacter.abilities.con),
+                  )
+                }
+              >
+                CON
+              </button>
 
-    <button
-      onClick={() =>
-        quickCharacterRoll(
-          "INT Check",
-          getAbilityModifier(activeCharacter.abilities.int)
-        )
-      }
-    >
-      INT
-    </button>
+              <button
+                onClick={() =>
+                  quickCharacterRoll(
+                    "INT Check",
+                    getAbilityModifier(activeCharacter.abilities.int),
+                  )
+                }
+              >
+                INT
+              </button>
 
-    <button
-      onClick={() =>
-        quickCharacterRoll(
-          "WIS Check",
-          getAbilityModifier(activeCharacter.abilities.wis)
-        )
-      }
-    >
-      WIS
-    </button>
+              <button
+                onClick={() =>
+                  quickCharacterRoll(
+                    "WIS Check",
+                    getAbilityModifier(activeCharacter.abilities.wis),
+                  )
+                }
+              >
+                WIS
+              </button>
 
-    <button
-      onClick={() =>
-        quickCharacterRoll(
-          "CHA Check",
-          getAbilityModifier(activeCharacter.abilities.cha)
-        )
-      }
-    >
-      CHA
-    </button>
+              <button
+                onClick={() =>
+                  quickCharacterRoll(
+                    "CHA Check",
+                    getAbilityModifier(activeCharacter.abilities.cha),
+                  )
+                }
+              >
+                CHA
+              </button>
 
-    <button
-      onClick={() =>
-        quickCharacterRoll(
-          "Spell Attack",
-          getSpellAttackBonus(activeCharacter)
-        )
-      }
-    >
-      Spell
-    </button>
+              <button
+                onClick={() =>
+                  quickCharacterRoll(
+                    "Spell Attack",
+                    getSpellAttackBonus(activeCharacter),
+                  )
+                }
+              >
+                Spell
+              </button>
 
-    <button onClick={() => quickCharacterRoll("Death Save", 0)}>
-      Death
-    </button>
-  </div>
-</div>
+              <button onClick={() => quickCharacterRoll("Death Save", 0)}>
+                Death
+              </button>
+            </div>
+          </div>
 
           <div className="character-actions">
-  <button onClick={longRest}>Long Rest</button>
-</div>
+            <button onClick={longRest}>Long Rest</button>
+          </div>
         </aside>
       </div>
     </PageShell>
@@ -785,14 +788,14 @@ function Builder({
   const selectedClass = useMemo(() => {
     return (
       rulesetData?.classes.find(
-        (classItem) => classItem.name === draft.className
+        (classItem) => classItem.name === draft.className,
       ) ?? null
     );
   }, [rulesetData, draft.className]);
 
   function updateDraft<K extends keyof CharacterDraft>(
     key: K,
-    value: CharacterDraft[K]
+    value: CharacterDraft[K],
   ) {
     setDraft((current) => ({
       ...current,
@@ -802,7 +805,7 @@ function Builder({
 
   function updateAbility(
     ability: keyof CharacterDraft["abilities"],
-    value: number
+    value: number,
   ) {
     setDraft((current) => ({
       ...current,
@@ -832,7 +835,7 @@ function Builder({
 
   const previewCharacter = useMemo(
     () => createCharacterFromDraft(draft),
-    [draft]
+    [draft],
   );
 
   return (
@@ -873,7 +876,7 @@ function Builder({
                 onChange={(event) =>
                   updateDraft(
                     "ruleset",
-                    event.target.value as CharacterDraft["ruleset"]
+                    event.target.value as CharacterDraft["ruleset"],
                   )
                 }
               >
@@ -905,9 +908,7 @@ function Builder({
                   onChange={(event) => updateDraft("race", event.target.value)}
                 >
                   <option value="">
-                    {isRulesetLoading
-                      ? "Race data yükleniyor..."
-                      : "Race seç"}
+                    {isRulesetLoading ? "Race data yükleniyor..." : "Race seç"}
                   </option>
 
                   {rulesetData?.races.map((race) => (
@@ -996,11 +997,11 @@ function Builder({
                   <span>Speed {selectedRace.speed} ft</span>
                   <span>Size {selectedRace.size}</span>
                   <span>
-                    Bonus {" "}
+                    Bonus{" "}
                     {Object.entries(selectedRace.abilityBonuses)
                       .map(
                         ([ability, bonus]) =>
-                          `${ability.toUpperCase()} +${bonus}`
+                          `${ability.toUpperCase()} +${bonus}`,
                       )
                       .join(", ")}
                   </span>
@@ -1012,13 +1013,13 @@ function Builder({
                   <span>Class: {selectedClass.name}</span>
                   <span>Hit Die d{selectedClass.hitDie}</span>
                   <span>
-                    Saves {" "}
+                    Saves{" "}
                     {selectedClass.savingThrows
                       .map((save) => save.toUpperCase())
                       .join(", ")}
                   </span>
                   <span>
-                    Spell {" "}
+                    Spell{" "}
                     {selectedClass.spellcastingAbility
                       ? selectedClass.spellcastingAbility.toUpperCase()
                       : "None"}
@@ -1045,7 +1046,7 @@ function Builder({
                   onChange={(event) =>
                     updateAbility(
                       ability as keyof CharacterDraft["abilities"],
-                      Number(event.target.value)
+                      Number(event.target.value),
                     )
                   }
                 />
@@ -1169,14 +1170,14 @@ function CharacterEditor({
   const selectedClass = useMemo(() => {
     return (
       rulesetData?.classes.find(
-        (classItem) => classItem.name === draft.className
+        (classItem) => classItem.name === draft.className,
       ) ?? null
     );
   }, [rulesetData, draft.className]);
 
   function updateDraft<K extends keyof CharacterDraft>(
     key: K,
-    value: CharacterDraft[K]
+    value: CharacterDraft[K],
   ) {
     setDraft((current) => ({
       ...current,
@@ -1186,7 +1187,7 @@ function CharacterEditor({
 
   function updateAbility(
     ability: keyof CharacterDraft["abilities"],
-    value: number
+    value: number,
   ) {
     setDraft((current) => ({
       ...current,
@@ -1227,7 +1228,7 @@ function CharacterEditor({
 
   const previewCharacter = useMemo(
     () => createCharacterFromDraft(draft),
-    [draft]
+    [draft],
   );
 
   if (!character) {
@@ -1285,7 +1286,7 @@ function CharacterEditor({
                 onChange={(event) =>
                   updateDraft(
                     "ruleset",
-                    event.target.value as CharacterDraft["ruleset"]
+                    event.target.value as CharacterDraft["ruleset"],
                   )
                 }
               >
@@ -1317,9 +1318,7 @@ function CharacterEditor({
                   onChange={(event) => updateDraft("race", event.target.value)}
                 >
                   <option value="">
-                    {isRulesetLoading
-                      ? "Race data yükleniyor..."
-                      : "Race seç"}
+                    {isRulesetLoading ? "Race data yükleniyor..." : "Race seç"}
                   </option>
 
                   {rulesetData?.races.map((race) => (
@@ -1412,7 +1411,7 @@ function CharacterEditor({
                     {Object.entries(selectedRace.abilityBonuses)
                       .map(
                         ([ability, bonus]) =>
-                          `${ability.toUpperCase()} +${bonus}`
+                          `${ability.toUpperCase()} +${bonus}`,
                       )
                       .join(", ")}
                   </span>
@@ -1457,7 +1456,7 @@ function CharacterEditor({
                   onChange={(event) =>
                     updateAbility(
                       ability as keyof CharacterDraft["abilities"],
-                      Number(event.target.value)
+                      Number(event.target.value),
                     )
                   }
                 />
@@ -1529,7 +1528,10 @@ function CharacterEditor({
               Değişiklikleri Kaydet
             </button>
 
-            <button type="button" onClick={() => navigate(`/characters/${character.id}`)}>
+            <button
+              type="button"
+              onClick={() => navigate(`/characters/${character.id}`)}
+            >
               Vazgeç
             </button>
           </div>
@@ -1562,11 +1564,16 @@ function PlayMode() {
         </div>
 
         <div className="condition-row">
-          {["Blessed", "Poisoned", "Prone", "Concentration", "Rage", "Haki"].map(
-            (condition) => (
-              <button key={condition}>{condition}</button>
-            )
-          )}
+          {[
+            "Blessed",
+            "Poisoned",
+            "Prone",
+            "Concentration",
+            "Rage",
+            "Haki",
+          ].map((condition) => (
+            <button key={condition}>{condition}</button>
+          ))}
         </div>
       </div>
     </PageShell>
@@ -1759,7 +1766,9 @@ function DataBackup({
       const parsed = JSON.parse(text);
 
       if (!Array.isArray(parsed)) {
-        alert("Bu dosya karakter listesi değil. JSON var ama karakter yok, çok şiirsel ve işe yaramaz.");
+        alert(
+          "Bu dosya karakter listesi değil. JSON var ama karakter yok, çok şiirsel ve işe yaramaz.",
+        );
         return;
       }
 
@@ -1776,12 +1785,14 @@ function DataBackup({
       });
 
       if (!looksValid) {
-        alert("Bu JSON bizim karakter formatımıza benzemiyor. Yani evet, yine format cehennemi.");
+        alert(
+          "Bu JSON bizim karakter formatımıza benzemiyor. Yani evet, yine format cehennemi.",
+        );
         return;
       }
 
       const confirmed = confirm(
-        "Bu işlem mevcut karakter listesinin üstüne yazacak. Devam edilsin mi?"
+        "Bu işlem mevcut karakter listesinin üstüne yazacak. Devam edilsin mi?",
       );
 
       if (!confirmed) {
@@ -1791,7 +1802,9 @@ function DataBackup({
       onImportCharacters(parsed as Character[]);
       event.target.value = "";
     } catch {
-      alert("JSON okunamadı. Dosya bozuk olabilir ya da dijital goblinler yemiştir.");
+      alert(
+        "JSON okunamadı. Dosya bozuk olabilir ya da dijital goblinler yemiştir.",
+      );
     }
   }
 
@@ -1802,7 +1815,7 @@ function DataBackup({
     }
 
     const confirmed = confirm(
-      "Tüm karakterler silinsin mi? Bu işlem geri alınamaz. Dramatik müzik burada giriyor."
+      "Tüm karakterler silinsin mi? Bu işlem geri alınamaz. Dramatik müzik burada giriyor.",
     );
 
     if (!confirmed) {
@@ -1823,9 +1836,9 @@ function DataBackup({
           <span className="mini-label">Local Data</span>
           <h2>{characters.length} karakter kayıtlı</h2>
           <p>
-            Karakterler şu an bu tarayıcının localStorage alanında duruyor.
-            Yani cihazda kalıyor, cloud'a gitmiyor. Gizlilik güzel, veri kaybı
-            riski ise çirkin. O yüzden yedek alıyoruz.
+            Karakterler şu an bu tarayıcının localStorage alanında duruyor. Yani
+            cihazda kalıyor, cloud'a gitmiyor. Gizlilik güzel, veri kaybı riski
+            ise çirkin. O yüzden yedek alıyoruz.
           </p>
 
           <div className="backup-actions">
@@ -1938,8 +1951,8 @@ function Library({
               </div>
 
               <div>
-                <strong>0</strong>
-                <span>Spells, sıradaki bela</span>
+                <strong>{rulesetData.spells.length}</strong>
+                <span>Spells</span>
               </div>
             </div>
           </section>
@@ -2009,7 +2022,7 @@ function Library({
                       {Object.entries(race.abilityBonuses)
                         .map(
                           ([ability, bonus]) =>
-                            `${ability.toUpperCase()} +${bonus}`
+                            `${ability.toUpperCase()} +${bonus}`,
                         )
                         .join(", ")}
                     </span>
@@ -2018,7 +2031,221 @@ function Library({
               ))}
             </div>
           </section>
+
+          <section className="library-section-card">
+            <div className="library-section-head">
+              <div>
+                <span className="mini-label">Spells</span>
+                <h2>Spell Listesi</h2>
+              </div>
+            </div>
+
+            <div className="library-list-grid">
+              {rulesetData.spells.slice(0, 8).map((spell) => (
+                <article className="library-item-card" key={spell.id}>
+                  <div className="library-item-top">
+                    <h3>{spell.name}</h3>
+                    <span>
+                      {spell.level === 0 ? "Cantrip" : `Lv. ${spell.level}`}
+                    </span>
+                  </div>
+
+                  <p>{spell.description}</p>
+
+                  <div className="library-pill-row">
+                    <span>{spell.school}</span>
+                    <span>{spell.castingTime}</span>
+                    <span>{spell.range}</span>
+                    {spell.concentration ? <span>Concentration</span> : null}
+                    {spell.ritual ? <span>Ritual</span> : null}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
         </div>
+      ) : null}
+    </PageShell>
+  );
+}
+
+function Spellbook({
+  rulesetData,
+  isRulesetLoading,
+  rulesetError,
+}: {
+  rulesetData: RulesetData | null;
+  isRulesetLoading: boolean;
+  rulesetError: string | null;
+}) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [levelFilter, setLevelFilter] = useState("all");
+  const [classFilter, setClassFilter] = useState("all");
+
+  const availableSpellClasses = useMemo(() => {
+    if (!rulesetData) {
+      return [];
+    }
+
+    return Array.from(
+      new Set(rulesetData.spells.flatMap((spell) => spell.classes)),
+    ).sort((a, b) => a.localeCompare(b));
+  }, [rulesetData]);
+
+  const filteredSpells = useMemo(() => {
+    if (!rulesetData) {
+      return [];
+    }
+
+    const normalizedSearch = searchTerm.trim().toLowerCase();
+
+    return rulesetData.spells.filter((spell) => {
+      const matchesSearch =
+        normalizedSearch.length === 0 ||
+        [
+          spell.name,
+          spell.school,
+          spell.castingTime,
+          spell.range,
+          spell.duration,
+          spell.description,
+          spell.higherLevels ?? "",
+          spell.classes.join(" "),
+        ]
+          .join(" ")
+          .toLowerCase()
+          .includes(normalizedSearch);
+
+      const matchesLevel =
+        levelFilter === "all" || spell.level === Number(levelFilter);
+
+      const matchesClass =
+        classFilter === "all" || spell.classes.includes(classFilter);
+
+      return matchesSearch && matchesLevel && matchesClass;
+    });
+  }, [rulesetData, searchTerm, levelFilter, classFilter]);
+
+  return (
+    <PageShell
+      eyebrow="Spellbook"
+      title="Büyüler"
+      description="D&D 2014 spell data pack içindeki büyüleri ara, filtrele ve masa ortasında panik yapmadan bul. Büyük ilerleme, insanlık için küçük bir Fireball."
+    >
+      {isRulesetLoading ? (
+        <div className="empty-panel">
+          <h2>Spell data yükleniyor...</h2>
+          <p>Büyü kitabını açıyoruz. Toz çıkarsa şaşırma.</p>
+        </div>
+      ) : rulesetError ? (
+        <div className="empty-panel">
+          <h2>Spell data yüklenemedi</h2>
+          <p>{rulesetError}</p>
+        </div>
+      ) : rulesetData ? (
+        <>
+          <div className="character-filter-panel">
+            <label>
+              Ara
+              <input
+                value={searchTerm}
+                onChange={(event) => setSearchTerm(event.target.value)}
+                placeholder="Bless, Fireball, cleric, concentration..."
+              />
+            </label>
+
+            <label>
+              Level
+              <select
+                value={levelFilter}
+                onChange={(event) => setLevelFilter(event.target.value)}
+              >
+                <option value="all">Tümü</option>
+                <option value="0">Cantrip</option>
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((level) => (
+                  <option key={level} value={level}>
+                    Level {level}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label>
+              Class
+              <select
+                value={classFilter}
+                onChange={(event) => setClassFilter(event.target.value)}
+              >
+                <option value="all">Tümü</option>
+
+                {availableSpellClasses.map((className) => (
+                  <option key={className} value={className}>
+                    {className}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <div className="filter-result-count">
+              <strong>{filteredSpells.length}</strong>
+              <span>spell</span>
+            </div>
+          </div>
+
+          {filteredSpells.length === 0 ? (
+            <div className="empty-panel">
+              <h2>Büyü bulunamadı.</h2>
+              <p>
+                Filtreler fazla agresif. Büyüler bile bu kadar baskıya
+                dayanamaz.
+              </p>
+            </div>
+          ) : (
+            <div className="spell-grid">
+              {filteredSpells.map((spell) => (
+                <motion.article
+                  className="spell-card"
+                  key={spell.id}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="library-item-top">
+                    <div>
+                      <span className="mini-label">{spell.school}</span>
+                      <h3>{spell.name}</h3>
+                    </div>
+
+                    <span>
+                      {spell.level === 0 ? "Cantrip" : `Lv. ${spell.level}`}
+                    </span>
+                  </div>
+
+                  <div className="spell-meta-grid">
+                    <span>Cast: {spell.castingTime}</span>
+                    <span>Range: {spell.range}</span>
+                    <span>Duration: {spell.duration}</span>
+                    <span>Comp: {spell.components.join(", ")}</span>
+                  </div>
+
+                  <p>{spell.description}</p>
+
+                  {spell.higherLevels ? (
+                    <p className="spell-higher-levels">
+                      <strong>Higher Levels:</strong> {spell.higherLevels}
+                    </p>
+                  ) : null}
+
+                  <div className="library-pill-row">
+                    {spell.classes.map((className) => (
+                      <span key={className}>{className}</span>
+                    ))}
+                    {spell.concentration ? <span>Concentration</span> : null}
+                    {spell.ritual ? <span>Ritual</span> : null}
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          )}
+        </>
       ) : null}
     </PageShell>
   );
@@ -2045,7 +2272,7 @@ function HomebrewLab() {
 
 function App() {
   const [characters, setCharacters] = useState<Character[]>(() =>
-    loadCharacters()
+    loadCharacters(),
   );
 
   const [rulesetData, setRulesetData] = useState<RulesetData | null>(null);
@@ -2066,7 +2293,9 @@ function App() {
       } catch (error) {
         if (isMounted) {
           setRulesetError(
-            error instanceof Error ? error.message : "Ruleset data yüklenemedi."
+            error instanceof Error
+              ? error.message
+              : "Ruleset data yüklenemedi.",
           );
         }
       } finally {
@@ -2095,34 +2324,35 @@ function App() {
   function handleUpdateCharacter(updatedCharacter: Character) {
     setCharacters((current) =>
       current.map((character) =>
-        character.id === updatedCharacter.id ? updatedCharacter : character
-      )
+        character.id === updatedCharacter.id ? updatedCharacter : character,
+      ),
     );
   }
 
-  function handleDeleteCharacter(id: string) {
-  const character = characters.find((item) => item.id === id);
+  function handleDeleteCharacter(id: string): boolean {
+    const character = characters.find((item) => item.id === id);
 
-  if (!character) {
-    return;
+    if (!character) {
+      return false;
+    }
+
+    const confirmed = confirm(`${character.name} silinsin mi? Geri dönüş yok.`);
+
+    if (!confirmed) {
+      return false;
+    }
+
+    setCharacters((current) => current.filter((item) => item.id !== id));
+    return true;
   }
 
-  const confirmed = confirm(`${character.name} silinsin mi? Geri dönüş yok.`);
-
-  if (!confirmed) {
-    return;
+  function handleImportCharacters(importedCharacters: Character[]) {
+    setCharacters(importedCharacters);
   }
 
-  setCharacters((current) => current.filter((item) => item.id !== id));
-}
-
-function handleImportCharacters(importedCharacters: Character[]) {
-  setCharacters(importedCharacters);
-}
-
-function handleWipeCharacters() {
-  setCharacters([]);
-}
+  function handleWipeCharacters() {
+    setCharacters([]);
+  }
 
   return (
     <div className="app">
@@ -2170,28 +2400,28 @@ function handleWipeCharacters() {
           />
 
           <Route
-  path="/characters/:characterId/edit"
-  element={
-    <CharacterEditor
-      characters={characters}
-      rulesetData={rulesetData}
-      isRulesetLoading={isRulesetLoading}
-      rulesetError={rulesetError}
-      onUpdateCharacter={handleUpdateCharacter}
-    />
-  }
-/>
+            path="/characters/:characterId/edit"
+            element={
+              <CharacterEditor
+                characters={characters}
+                rulesetData={rulesetData}
+                isRulesetLoading={isRulesetLoading}
+                rulesetError={rulesetError}
+                onUpdateCharacter={handleUpdateCharacter}
+              />
+            }
+          />
 
           <Route
-  path="/characters/:characterId"
-  element={
-    <CharacterDetail
-      characters={characters}
-      onUpdateCharacter={handleUpdateCharacter}
-      onDeleteCharacter={handleDeleteCharacter}
-    />
-  }
-/>
+            path="/characters/:characterId"
+            element={
+              <CharacterDetail
+                characters={characters}
+                onUpdateCharacter={handleUpdateCharacter}
+                onDeleteCharacter={handleDeleteCharacter}
+              />
+            }
+          />
 
           <Route
             path="/builder"
@@ -2208,15 +2438,25 @@ function handleWipeCharacters() {
           <Route path="/play-mode" element={<PlayMode />} />
           <Route path="/dice" element={<Dice />} />
           <Route
-  path="/backup"
-  element={
-    <DataBackup
-      characters={characters}
-      onImportCharacters={handleImportCharacters}
-      onWipeCharacters={handleWipeCharacters}
-    />
-  }
-/>
+            path="/spellbook"
+            element={
+              <Spellbook
+                rulesetData={rulesetData}
+                isRulesetLoading={isRulesetLoading}
+                rulesetError={rulesetError}
+              />
+            }
+          />
+          <Route
+            path="/backup"
+            element={
+              <DataBackup
+                characters={characters}
+                onImportCharacters={handleImportCharacters}
+                onWipeCharacters={handleWipeCharacters}
+              />
+            }
+          />
           <Route
             path="/library"
             element={

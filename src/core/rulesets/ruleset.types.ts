@@ -28,9 +28,26 @@ export interface DndRaceData {
   description: string;
 }
 
+export interface DndSpellData {
+  id: string;
+  name: string;
+  level: number;
+  school: string;
+  castingTime: string;
+  range: string;
+  components: string[];
+  duration: string;
+  concentration: boolean;
+  ritual: boolean;
+  classes: string[];
+  description: string;
+  higherLevels?: string;
+}
+
 export interface RulesetData {
   id: "dnd_2014" | "dnd_2024" | "homebrew";
   name: string;
   classes: DndClassData[];
   races: DndRaceData[];
+  spells: DndSpellData[];
 }
