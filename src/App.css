@@ -3138,3 +3138,81 @@ textarea {
   font-style: normal;
   font-weight: 800;
 }
+
+/* Monster Combat Tools V1 */
+.monster-combat-tools {
+  display: grid;
+  gap: 14px;
+  margin: 16px 0;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.monster-hp-tracker {
+  display: grid;
+  gap: 12px;
+}
+
+.monster-hp-tracker strong {
+  display: block;
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.monster-hp-buttons,
+.monster-roll-button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.monster-hp-buttons button,
+.monster-roll-button-grid button {
+  min-height: 34px;
+  padding: 7px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  color: #f7f8ff;
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.monster-hp-buttons button:hover,
+.monster-roll-button-grid button:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.monster-quick-rolls {
+  display: grid;
+  gap: 10px;
+}
+
+.monster-roll-result {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(8, 12, 26, 0.55);
+}
+
+.monster-roll-result strong {
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.monster-roll-result span,
+.monster-roll-result.muted {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 720px) {
+  .monster-hp-buttons,
+  .monster-roll-button-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

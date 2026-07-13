@@ -886,7 +886,7 @@ function Spellbook({
                     {spell.concentration ? <span>Concentration</span> : null}
                     {spell.ritual ? <span>Ritual</span> : null}
                   </div>
-                </motion.article>
+                  </motion.article>
               ))}
             </div>
           )}
@@ -905,6 +905,41 @@ function formatMonsterModifier(score: number) {
   return modifier >= 0 ? `+${modifier}` : `${modifier}`;
 }
 
+
+type MonsterCombatState = {
+  currentHp: number;
+  rollHistory: DiceRollResult[];
+};
+
+function getMonsterMainAttackModifier(monster: DndMonsterData) {
+  const strModifier = getMonsterAbilityModifier(monster.abilities.str);
+  const dexModifier = getMonsterAbilityModifier(monster.abilities.dex);
+  return Math.max(strModifier, dexModifier) + monster.proficiencyBonus;
+}
+
+function parseFirstDiceExpression(text: string) {
+  const match = text.match(/(\d+)d(\d+)(?:\s*([+-])\s*(\d+))?/i);
+
+  if (!match) {
+    return null;
+  }
+
+  const count = Number(match[1]);
+  const sides = Number(match[2]);
+  const modifierValue = match[4] ? Number(match[4]) : 0;
+  const modifier = match[3] === "-" ? -modifierValue : modifierValue;
+
+  if (!Number.isFinite(count) || !Number.isFinite(sides)) {
+    return null;
+  }
+
+  return {
+    count,
+    sides,
+    modifier,
+  };
+}
+
 function MonsterLibrary({
   rulesetData,
   isRulesetLoading,
@@ -917,6 +952,9 @@ function MonsterLibrary({
   const [searchTerm, setSearchTerm] = useState("");
   const [typeFilter, setTypeFilter] = useState("all");
   const [crFilter, setCrFilter] = useState("all");
+  const [monsterCombatState, setMonsterCombatState] = useState<
+    Record<string, MonsterCombatState>
+  >({});
 
   const monsters = rulesetData?.monsters ?? [];
 
@@ -971,6 +1009,97 @@ function MonsterLibrary({
       return matchesSearch && matchesType && matchesCr;
     });
   }, [monsters, searchTerm, typeFilter, crFilter]);
+
+  function getMonsterCombatState(monster: DndMonsterData) {
+    return (
+      monsterCombatState[monster.id] ?? {
+        currentHp: monster.hitPoints,
+        rollHistory: [],
+      }
+    );
+  }
+
+  function updateMonsterHp(monster: DndMonsterData, amount: number) {
+    setMonsterCombatState((current) => {
+      const state = current[monster.id] ?? {
+        currentHp: monster.hitPoints,
+        rollHistory: [],
+      };
+
+      return {
+        ...current,
+        [monster.id]: {
+          ...state,
+          currentHp: Math.max(
+            0,
+            Math.min(monster.hitPoints, state.currentHp + amount),
+          ),
+        },
+      };
+    });
+  }
+
+  function resetMonsterCombat(monster: DndMonsterData) {
+    setMonsterCombatState((current) => ({
+      ...current,
+      [monster.id]: {
+        currentHp: monster.hitPoints,
+        rollHistory: [],
+      },
+    }));
+  }
+
+  function addMonsterRoll(monster: DndMonsterData, label: string, result: DiceRollResult) {
+    setMonsterCombatState((current) => {
+      const state = current[monster.id] ?? {
+        currentHp: monster.hitPoints,
+        rollHistory: [],
+      };
+
+      return {
+        ...current,
+        [monster.id]: {
+          ...state,
+          rollHistory: [
+            {
+              ...result,
+              notation: `${label}: ${result.notation}`,
+            },
+            ...state.rollHistory,
+          ].slice(0, 6),
+        },
+      };
+    });
+  }
+
+  function rollMonsterCheck(
+    monster: DndMonsterData,
+    label: string,
+    modifier: number,
+  ) {
+    addMonsterRoll(
+      monster,
+      label,
+      rollDice({
+        count: 1,
+        sides: 20,
+        modifier,
+      }),
+    );
+  }
+
+  function rollMonsterDamage(monster: DndMonsterData) {
+    const parsedDamage = parseFirstDiceExpression(monster.actions.join(" "));
+
+    if (!parsedDamage) {
+      alert(
+        "Bu monster action içinde otomatik okunabilir damage dice bulamadım. Evet, metin parse etmek hâlâ küçük bir lanet.",
+      );
+      return;
+    }
+
+    addMonsterRoll(monster, "Damage", rollDice(parsedDamage));
+  }
 
   return (
     <PageShell
@@ -1069,99 +1198,228 @@ function MonsterLibrary({
             </div>
           ) : (
             <div className="monster-card-grid">
-              {filteredMonsters.map((monster) => (
-                <motion.article
-                  className="monster-card"
-                  key={monster.id}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="monster-card-head">
-                    <div>
-                      <span className="mini-label">
-                        {monster.size} {monster.type}
-                      </span>
-                      <h2>{monster.name}</h2>
-                      <p>{monster.alignment}</p>
-                    </div>
+              {filteredMonsters.map((monster) => {
+                const combatState = getMonsterCombatState(monster);
+                const latestMonsterRoll = combatState.rollHistory[0];
+                const attackModifier = getMonsterMainAttackModifier(monster);
 
-                    <strong className="level-badge">
-                      CR {monster.challengeRating}
-                    </strong>
-                  </div>
-
-                  <div className="monster-core-grid">
-                    <div>
-                      <span>AC</span>
-                      <strong>{monster.armorClass}</strong>
-                    </div>
-
-                    <div>
-                      <span>HP</span>
-                      <strong>{monster.hitPoints}</strong>
-                      <em>{monster.hitDice}</em>
-                    </div>
-
-                    <div>
-                      <span>Speed</span>
-                      <strong>{monster.speed}</strong>
-                    </div>
-
-                    <div>
-                      <span>PB</span>
-                      <strong>+{monster.proficiencyBonus}</strong>
-                    </div>
-                  </div>
-
-                  <div className="monster-ability-grid">
-                    {Object.entries(monster.abilities).map(
-                      ([ability, score]) => (
-                        <div key={ability}>
-                          <span>{ability.toUpperCase()}</span>
-                          <strong>{score}</strong>
-                          <em>{formatMonsterModifier(score)}</em>
-                        </div>
-                      ),
-                    )}
-                  </div>
-
-                  <div className="monster-meta-block">
-                    <p>
-                      <strong>Senses:</strong> {monster.senses}
-                    </p>
-                    <p>
-                      <strong>Languages:</strong> {monster.languages}
-                    </p>
-                  </div>
-
-                  <details className="monster-details">
-                    <summary>Traits & Actions</summary>
-
-                    {monster.traits.length > 0 ? (
+                return (
+                  <motion.article
+                    className="monster-card"
+                    key={monster.id}
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="monster-card-head">
                       <div>
-                        <h3>Traits</h3>
-                        {monster.traits.map((trait) => (
-                          <p key={trait}>{trait}</p>
-                        ))}
+                        <span className="mini-label">
+                          {monster.size} {monster.type}
+                        </span>
+                        <h2>{monster.name}</h2>
+                        <p>{monster.alignment}</p>
+                      </div>
+
+                      <strong className="level-badge">
+                        CR {monster.challengeRating}
+                      </strong>
+                    </div>
+
+                    <div className="monster-core-grid">
+                      <div>
+                        <span>AC</span>
+                        <strong>{monster.armorClass}</strong>
+                      </div>
+
+                      <div>
+                        <span>HP</span>
+                        <strong>{monster.hitPoints}</strong>
+                        <em>{monster.hitDice}</em>
+                      </div>
+
+                      <div>
+                        <span>Speed</span>
+                        <strong>{monster.speed}</strong>
+                      </div>
+
+                      <div>
+                        <span>PB</span>
+                        <strong>+{monster.proficiencyBonus}</strong>
+                      </div>
+                    </div>
+
+                    <div className="monster-combat-panel">
+                      <div className="monster-combat-head">
+                        <div>
+                          <span className="mini-label">Combat HP</span>
+                          <strong>
+                            {combatState.currentHp}/{monster.hitPoints}
+                          </strong>
+                        </div>
+
+                        <button onClick={() => resetMonsterCombat(monster)}>
+                          Reset
+                        </button>
+                      </div>
+
+                      <div className="hp-button-grid monster-hp-grid">
+                        <button onClick={() => updateMonsterHp(monster, -10)}>
+                          -10
+                        </button>
+                        <button onClick={() => updateMonsterHp(monster, -5)}>
+                          -5
+                        </button>
+                        <button onClick={() => updateMonsterHp(monster, -1)}>
+                          -1
+                        </button>
+                        <button onClick={() => updateMonsterHp(monster, 1)}>
+                          +1
+                        </button>
+                        <button onClick={() => updateMonsterHp(monster, 5)}>
+                          +5
+                        </button>
+                        <button onClick={() => updateMonsterHp(monster, 10)}>
+                          +10
+                        </button>
+                      </div>
+
+                      <div className="monster-roll-buttons">
+                        <button
+                          onClick={() =>
+                            rollMonsterCheck(
+                              monster,
+                              "Initiative",
+                              getMonsterAbilityModifier(monster.abilities.dex),
+                            )
+                          }
+                        >
+                          Initiative
+                        </button>
+
+                        <button
+                          onClick={() =>
+                            rollMonsterCheck(monster, "Attack", attackModifier)
+                          }
+                        >
+                          Attack {attackModifier >= 0 ? "+" : ""}
+                          {attackModifier}
+                        </button>
+
+                        <button onClick={() => rollMonsterDamage(monster)}>
+                          Damage
+                        </button>
+
+                        <button
+                          onClick={() =>
+                            rollMonsterCheck(
+                              monster,
+                              "STR",
+                              getMonsterAbilityModifier(monster.abilities.str),
+                            )
+                          }
+                        >
+                          STR
+                        </button>
+
+                        <button
+                          onClick={() =>
+                            rollMonsterCheck(
+                              monster,
+                              "DEX",
+                              getMonsterAbilityModifier(monster.abilities.dex),
+                            )
+                          }
+                        >
+                          DEX
+                        </button>
+
+                        <button
+                          onClick={() =>
+                            rollMonsterCheck(
+                              monster,
+                              "CON",
+                              getMonsterAbilityModifier(monster.abilities.con),
+                            )
+                          }
+                        >
+                          CON
+                        </button>
+                      </div>
+
+                      {latestMonsterRoll ? (
+                        <div className="monster-latest-roll">
+                          <span className="mini-label">Latest Monster Roll</span>
+                          <strong>{latestMonsterRoll.total}</strong>
+                          <p>
+                            {latestMonsterRoll.notation} → [
+                            {latestMonsterRoll.rolls.join(", ")}]
+                            {latestMonsterRoll.modifier !== 0
+                              ? ` ${
+                                  latestMonsterRoll.modifier > 0 ? "+" : ""
+                                }${latestMonsterRoll.modifier}`
+                              : ""}
+                          </p>
+                        </div>
+                      ) : (
+                        <div className="monster-latest-roll">
+                          <span className="mini-label">Latest Monster Roll</span>
+                          <strong>--</strong>
+                          <p>Henüz roll yok. Canavar bile beklemede.</p>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="monster-ability-grid">
+                      {Object.entries(monster.abilities).map(
+                        ([ability, score]) => (
+                          <div key={ability}>
+                            <span>{ability.toUpperCase()}</span>
+                            <strong>{score}</strong>
+                            <em>{formatMonsterModifier(score)}</em>
+                          </div>
+                        ),
+                      )}
+                    </div>
+
+                    <div className="monster-meta-block">
+                      <p>
+                        <strong>Senses:</strong> {monster.senses}
+                      </p>
+                      <p>
+                        <strong>Languages:</strong> {monster.languages}
+                      </p>
+                    </div>
+
+                    <details className="monster-details">
+                      <summary>Traits & Actions</summary>
+
+                      {monster.traits.length > 0 ? (
+                        <div>
+                          <h3>Traits</h3>
+                          {monster.traits.map((trait) => (
+                            <p key={trait}>{trait}</p>
+                          ))}
+                        </div>
+                      ) : null}
+
+                      {monster.actions.length > 0 ? (
+                        <div>
+                          <h3>Actions</h3>
+                          {monster.actions.map((action) => (
+                            <p key={action}>{action}</p>
+                          ))}
+                        </div>
+                      ) : null}
+                    </details>
+
+                    <p className="monster-description">{monster.description}</p>
+
+                    {monster.source ? (
+                      <div className="library-pill-row">
+                        <span>{monster.source}</span>
                       </div>
                     ) : null}
-
-                    <div>
-                      <h3>Actions</h3>
-                      {monster.actions.map((action) => (
-                        <p key={action}>{action}</p>
-                      ))}
-                    </div>
-                  </details>
-
-                  <p className="monster-description">{monster.description}</p>
-
-                  {monster.source ? (
-                    <div className="library-pill-row">
-                      <span>{monster.source}</span>
-                    </div>
-                  ) : null}
-                </motion.article>
-              ))}
+                  </motion.article>
+                );
+              })}
             </div>
           )}
         </>
@@ -1304,7 +1562,7 @@ function Inventory({
                       <span>Stealth Disadvantage</span>
                     ) : null}
                   </div>
-                </motion.article>
+                  </motion.article>
               ))}
             </div>
           )}
