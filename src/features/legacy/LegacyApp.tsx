@@ -34,193 +34,21 @@ import {
   getItemCategoryLabel,
   getItemRulesSummary,
 } from "../characters/characterShared";
-
-type CampaignNote = {
-  id: string;
-  title: string;
-  body: string;
-  createdAt: string;
-};
-
-type CampaignNpc = {
-  id: string;
-  name: string;
-  role: string;
-  notes: string;
-  createdAt: string;
-};
-
-type CampaignQuest = {
-  id: string;
-  title: string;
-  status: "active" | "completed" | "failed";
-  notes: string;
-  createdAt: string;
-};
-
-type CampaignEncounterParticipant = {
-  id: string;
-  sourceType: "character" | "monster";
-  sourceId: string;
-  name: string;
-  armorClass: number;
-  maxHp: number;
-  currentHp: number;
-  initiative: number | null;
-  initiativeModifier: number;
-  notes: string;
-};
-
-type CampaignEncounter = {
-  id: string;
-  name: string;
-  round: number;
-  activeTurnIndex: number;
-  isActive: boolean;
-  participants: CampaignEncounterParticipant[];
-  createdAt: string;
-  updatedAt: string;
-};
-
-type Campaign = {
-  id: string;
-  name: string;
-  description: string;
-  characterIds: string[];
-  sessionNotes: CampaignNote[];
-  npcNotes: CampaignNpc[];
-  quests: CampaignQuest[];
-  encounters: CampaignEncounter[];
-  createdAt: string;
-  updatedAt: string;
-};
-
-const CAMPAIGNS_STORAGE_KEY = "e4_dnd_campaigns_v1";
-
-function loadCampaigns(): Campaign[] {
-  try {
-    const raw = localStorage.getItem(CAMPAIGNS_STORAGE_KEY);
-
-    if (!raw) {
-      return [];
-    }
-
-    const parsed = JSON.parse(raw);
-
-    if (!Array.isArray(parsed)) {
-      return [];
-    }
-
-    return parsed.map((campaign) => ({
-      id: typeof campaign.id === "string" ? campaign.id : crypto.randomUUID(),
-      name:
-        typeof campaign.name === "string" ? campaign.name : "Unnamed Campaign",
-      description:
-        typeof campaign.description === "string" ? campaign.description : "",
-      characterIds: Array.isArray(campaign.characterIds)
-        ? campaign.characterIds.filter((id: unknown) => typeof id === "string")
-        : [],
-      sessionNotes: Array.isArray(campaign.sessionNotes)
-        ? campaign.sessionNotes
-        : [],
-      npcNotes: Array.isArray(campaign.npcNotes) ? campaign.npcNotes : [],
-      quests: Array.isArray(campaign.quests) ? campaign.quests : [],
-      encounters: Array.isArray(campaign.encounters)
-        ? campaign.encounters.map((encounter: Partial<CampaignEncounter>) => ({
-            id:
-              typeof encounter.id === "string"
-                ? encounter.id
-                : crypto.randomUUID(),
-            name:
-              typeof encounter.name === "string"
-                ? encounter.name
-                : "Unnamed Encounter",
-            round:
-              typeof encounter.round === "number" && encounter.round > 0
-                ? encounter.round
-                : 1,
-            activeTurnIndex:
-              typeof encounter.activeTurnIndex === "number"
-                ? encounter.activeTurnIndex
-                : 0,
-            isActive:
-              typeof encounter.isActive === "boolean"
-                ? encounter.isActive
-                : true,
-            participants: Array.isArray(encounter.participants)
-              ? encounter.participants
-                  .filter(
-                    (participant: Partial<CampaignEncounterParticipant>) =>
-                      typeof participant.id === "string" &&
-                      typeof participant.name === "string",
-                  )
-                  .map((participant: Partial<CampaignEncounterParticipant>) => ({
-                    id: participant.id,
-                    sourceType:
-                      participant.sourceType === "character" ||
-                      participant.sourceType === "monster"
-                        ? participant.sourceType
-                        : "monster",
-                    sourceId:
-                      typeof participant.sourceId === "string"
-                        ? participant.sourceId
-                        : "",
-                    name: participant.name,
-                    armorClass:
-                      typeof participant.armorClass === "number"
-                        ? participant.armorClass
-                        : 10,
-                    maxHp:
-                      typeof participant.maxHp === "number"
-                        ? participant.maxHp
-                        : 1,
-                    currentHp:
-                      typeof participant.currentHp === "number"
-                        ? participant.currentHp
-                        : typeof participant.maxHp === "number"
-                          ? participant.maxHp
-                          : 1,
-                    initiative:
-                      typeof participant.initiative === "number"
-                        ? participant.initiative
-                        : null,
-                    initiativeModifier:
-                      typeof participant.initiativeModifier === "number"
-                        ? participant.initiativeModifier
-                        : 0,
-                    notes:
-                      typeof participant.notes === "string"
-                        ? participant.notes
-                        : "",
-                  }))
-              : [],
-            createdAt:
-              typeof encounter.createdAt === "string"
-                ? encounter.createdAt
-                : new Date().toISOString(),
-            updatedAt:
-              typeof encounter.updatedAt === "string"
-                ? encounter.updatedAt
-                : new Date().toISOString(),
-          }))
-        : [],
-      createdAt:
-        typeof campaign.createdAt === "string"
-          ? campaign.createdAt
-          : new Date().toISOString(),
-      updatedAt:
-        typeof campaign.updatedAt === "string"
-          ? campaign.updatedAt
-          : new Date().toISOString(),
-    }));
-  } catch {
-    return [];
-  }
-}
-
-function saveCampaigns(campaigns: Campaign[]) {
-  localStorage.setItem(CAMPAIGNS_STORAGE_KEY, JSON.stringify(campaigns));
-}
+import type {
+  Campaign,
+  CampaignEncounter,
+  CampaignQuest,
+} from "../campaigns/campaignTypes";
+import { loadCampaigns, saveCampaigns } from "../campaigns/campaignStorage";
+import type { MonsterCombatState } from "../monsters/monsterUtils";
+import {
+  formatMonsterModifier,
+  getMonsterAbilityModifier,
+  getMonsterMainAttackModifier,
+  loadFavoriteMonsterIds,
+  parseFirstDiceExpression,
+  saveFavoriteMonsterIds,
+} from "../monsters/monsterUtils";
 
 function PlayMode() {
   return (
@@ -998,73 +826,6 @@ function Spellbook({
       ) : null}
     </PageShell>
   );
-}
-
-function getMonsterAbilityModifier(score: number) {
-  return Math.floor((score - 10) / 2);
-}
-
-function formatMonsterModifier(score: number) {
-  const modifier = getMonsterAbilityModifier(score);
-  return modifier >= 0 ? `+${modifier}` : `${modifier}`;
-}
-
-
-type MonsterCombatState = {
-  currentHp: number;
-  rollHistory: DiceRollResult[];
-};
-
-function getMonsterMainAttackModifier(monster: DndMonsterData) {
-  const strModifier = getMonsterAbilityModifier(monster.abilities.str);
-  const dexModifier = getMonsterAbilityModifier(monster.abilities.dex);
-  return Math.max(strModifier, dexModifier) + monster.proficiencyBonus;
-}
-
-function parseFirstDiceExpression(text: string) {
-  const match = text.match(/(\d+)d(\d+)(?:\s*([+-])\s*(\d+))?/i);
-
-  if (!match) {
-    return null;
-  }
-
-  const count = Number(match[1]);
-  const sides = Number(match[2]);
-  const modifierValue = match[4] ? Number(match[4]) : 0;
-  const modifier = match[3] === "-" ? -modifierValue : modifierValue;
-
-  if (!Number.isFinite(count) || !Number.isFinite(sides)) {
-    return null;
-  }
-
-  return {
-    count,
-    sides,
-    modifier,
-  };
-}
-
-const FAVORITE_MONSTERS_STORAGE_KEY = "e4_dnd_favorite_monsters_v1";
-
-function loadFavoriteMonsterIds() {
-  try {
-    const raw = localStorage.getItem(FAVORITE_MONSTERS_STORAGE_KEY);
-
-    if (!raw) {
-      return [];
-    }
-
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed)
-      ? parsed.filter((id): id is string => typeof id === "string")
-      : [];
-  } catch {
-    return [];
-  }
-}
-
-function saveFavoriteMonsterIds(ids: string[]) {
-  localStorage.setItem(FAVORITE_MONSTERS_STORAGE_KEY, JSON.stringify(ids));
 }
 
 function MonsterLibrary({
