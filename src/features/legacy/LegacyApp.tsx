@@ -58,6 +58,30 @@ type CampaignQuest = {
   createdAt: string;
 };
 
+type CampaignEncounterParticipant = {
+  id: string;
+  sourceType: "character" | "monster";
+  sourceId: string;
+  name: string;
+  armorClass: number;
+  maxHp: number;
+  currentHp: number;
+  initiative: number | null;
+  initiativeModifier: number;
+  notes: string;
+};
+
+type CampaignEncounter = {
+  id: string;
+  name: string;
+  round: number;
+  activeTurnIndex: number;
+  isActive: boolean;
+  participants: CampaignEncounterParticipant[];
+  createdAt: string;
+  updatedAt: string;
+};
+
 type Campaign = {
   id: string;
   name: string;
@@ -66,6 +90,7 @@ type Campaign = {
   sessionNotes: CampaignNote[];
   npcNotes: CampaignNpc[];
   quests: CampaignQuest[];
+  encounters: CampaignEncounter[];
   createdAt: string;
   updatedAt: string;
 };
@@ -100,6 +125,85 @@ function loadCampaigns(): Campaign[] {
         : [],
       npcNotes: Array.isArray(campaign.npcNotes) ? campaign.npcNotes : [],
       quests: Array.isArray(campaign.quests) ? campaign.quests : [],
+      encounters: Array.isArray(campaign.encounters)
+        ? campaign.encounters.map((encounter: Partial<CampaignEncounter>) => ({
+            id:
+              typeof encounter.id === "string"
+                ? encounter.id
+                : crypto.randomUUID(),
+            name:
+              typeof encounter.name === "string"
+                ? encounter.name
+                : "Unnamed Encounter",
+            round:
+              typeof encounter.round === "number" && encounter.round > 0
+                ? encounter.round
+                : 1,
+            activeTurnIndex:
+              typeof encounter.activeTurnIndex === "number"
+                ? encounter.activeTurnIndex
+                : 0,
+            isActive:
+              typeof encounter.isActive === "boolean"
+                ? encounter.isActive
+                : true,
+            participants: Array.isArray(encounter.participants)
+              ? encounter.participants
+                  .filter(
+                    (participant: Partial<CampaignEncounterParticipant>) =>
+                      typeof participant.id === "string" &&
+                      typeof participant.name === "string",
+                  )
+                  .map((participant: Partial<CampaignEncounterParticipant>) => ({
+                    id: participant.id,
+                    sourceType:
+                      participant.sourceType === "character" ||
+                      participant.sourceType === "monster"
+                        ? participant.sourceType
+                        : "monster",
+                    sourceId:
+                      typeof participant.sourceId === "string"
+                        ? participant.sourceId
+                        : "",
+                    name: participant.name,
+                    armorClass:
+                      typeof participant.armorClass === "number"
+                        ? participant.armorClass
+                        : 10,
+                    maxHp:
+                      typeof participant.maxHp === "number"
+                        ? participant.maxHp
+                        : 1,
+                    currentHp:
+                      typeof participant.currentHp === "number"
+                        ? participant.currentHp
+                        : typeof participant.maxHp === "number"
+                          ? participant.maxHp
+                          : 1,
+                    initiative:
+                      typeof participant.initiative === "number"
+                        ? participant.initiative
+                        : null,
+                    initiativeModifier:
+                      typeof participant.initiativeModifier === "number"
+                        ? participant.initiativeModifier
+                        : 0,
+                    notes:
+                      typeof participant.notes === "string"
+                        ? participant.notes
+                        : "",
+                  }))
+              : [],
+            createdAt:
+              typeof encounter.createdAt === "string"
+                ? encounter.createdAt
+                : new Date().toISOString(),
+            updatedAt:
+              typeof encounter.updatedAt === "string"
+                ? encounter.updatedAt
+                : new Date().toISOString(),
+          }))
+        : [],
       createdAt:
         typeof campaign.createdAt === "string"
           ? campaign.createdAt
@@ -2012,12 +2116,14 @@ function parseTextList(value: string) {
 function Campaigns({
   characters,
   campaigns,
+  rulesetData,
   onCreateCampaign,
   onUpdateCampaign,
   onDeleteCampaign,
 }: {
   characters: Character[];
   campaigns: Campaign[];
+  rulesetData: RulesetData | null;
   onCreateCampaign: (name: string, description: string) => void;
   onUpdateCampaign: (campaign: Campaign) => void;
   onDeleteCampaign: (id: string) => void;
@@ -2034,6 +2140,13 @@ function Campaigns({
   const [npcNotes, setNpcNotes] = useState("");
   const [questTitle, setQuestTitle] = useState("");
   const [questNotes, setQuestNotes] = useState("");
+  const [selectedEncounterId, setSelectedEncounterId] = useState<string | null>(
+    null,
+  );
+  const [newEncounterName, setNewEncounterName] = useState("");
+  const [monsterToAddId, setMonsterToAddId] = useState("");
+
+  const availableMonsters = rulesetData?.monsters ?? [];
 
   useEffect(() => {
     if (!selectedCampaignId && campaigns[0]) {
@@ -2052,6 +2165,27 @@ function Campaigns({
   const selectedCampaign = campaigns.find(
     (campaign) => campaign.id === selectedCampaignId,
   );
+
+  useEffect(() => {
+    if (!selectedCampaign) {
+      setSelectedEncounterId(null);
+      return;
+    }
+
+    if (!selectedEncounterId && selectedCampaign.encounters[0]) {
+      setSelectedEncounterId(selectedCampaign.encounters[0].id);
+      return;
+    }
+
+    if (
+      selectedEncounterId &&
+      !selectedCampaign.encounters.some(
+        (encounter) => encounter.id === selectedEncounterId,
+      )
+    ) {
+      setSelectedEncounterId(selectedCampaign.encounters[0]?.id ?? null);
+    }
+  }, [selectedCampaign, selectedEncounterId]);
 
   const partyCharacters = useMemo(() => {
     if (!selectedCampaign) {
@@ -2084,6 +2218,30 @@ function Campaigns({
       averageLevel,
     };
   }, [partyCharacters]);
+
+  const selectedEncounter = selectedCampaign?.encounters.find(
+    (encounter) => encounter.id === selectedEncounterId,
+  );
+
+  const sortedEncounterParticipants = useMemo(() => {
+    if (!selectedEncounter) {
+      return [];
+    }
+
+    return [...selectedEncounter.participants].sort((first, second) => {
+      const firstInitiative = first.initiative ?? -999;
+      const secondInitiative = second.initiative ?? -999;
+
+      if (secondInitiative !== firstInitiative) {
+        return secondInitiative - firstInitiative;
+      }
+
+      return second.initiativeModifier - first.initiativeModifier;
+    });
+  }, [selectedEncounter]);
+
+  const activeEncounterParticipant =
+    sortedEncounterParticipants[selectedEncounter?.activeTurnIndex ?? 0] ?? null;
 
   function createCampaign(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -2231,6 +2389,256 @@ function Campaigns({
     });
   }
 
+  function createEncounter(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!selectedCampaign) {
+      return;
+    }
+
+    const now = new Date().toISOString();
+    const encounter: CampaignEncounter = {
+      id: crypto.randomUUID(),
+      name: newEncounterName.trim() || `Encounter ${selectedCampaign.encounters.length + 1}`,
+      round: 1,
+      activeTurnIndex: 0,
+      isActive: true,
+      participants: [],
+      createdAt: now,
+      updatedAt: now,
+    };
+
+    onUpdateCampaign({
+      ...selectedCampaign,
+      encounters: [encounter, ...selectedCampaign.encounters],
+      updatedAt: now,
+    });
+
+    setSelectedEncounterId(encounter.id);
+    setNewEncounterName("");
+  }
+
+  function updateSelectedEncounter(
+    updater: (encounter: CampaignEncounter) => CampaignEncounter,
+  ) {
+    if (!selectedCampaign || !selectedEncounter) {
+      return;
+    }
+
+    const updatedEncounter = updater(selectedEncounter);
+    const now = new Date().toISOString();
+
+    onUpdateCampaign({
+      ...selectedCampaign,
+      encounters: selectedCampaign.encounters.map((encounter) =>
+        encounter.id === selectedEncounter.id
+          ? {
+              ...updatedEncounter,
+              updatedAt: now,
+            }
+          : encounter,
+      ),
+      updatedAt: now,
+    });
+  }
+
+  function deleteEncounter(encounterId: string) {
+    if (!selectedCampaign) {
+      return;
+    }
+
+    const confirmed = confirm(
+      "Bu encounter silinsin mi? Goblin sendikası buna bozulabilir.",
+    );
+
+    if (!confirmed) {
+      return;
+    }
+
+    onUpdateCampaign({
+      ...selectedCampaign,
+      encounters: selectedCampaign.encounters.filter(
+        (encounter) => encounter.id !== encounterId,
+      ),
+      updatedAt: new Date().toISOString(),
+    });
+  }
+
+  function addCharacterToEncounter(character: Character) {
+    if (!selectedEncounter) {
+      return;
+    }
+
+    const alreadyAdded = selectedEncounter.participants.some(
+      (participant) =>
+        participant.sourceType === "character" &&
+        participant.sourceId === character.id,
+    );
+
+    if (alreadyAdded) {
+      return;
+    }
+
+    const dexModifier = getMonsterAbilityModifier(character.abilities.dex);
+
+    updateSelectedEncounter((encounter) => ({
+      ...encounter,
+      participants: [
+        ...encounter.participants,
+        {
+          id: crypto.randomUUID(),
+          sourceType: "character",
+          sourceId: character.id,
+          name: character.name,
+          armorClass: character.armorClass,
+          maxHp: character.maxHp,
+          currentHp: character.currentHp,
+          initiative: null,
+          initiativeModifier: dexModifier,
+          notes: `${character.race || "Race yok"} • ${
+            character.className || "Class yok"
+          }`,
+        },
+      ],
+    }));
+  }
+
+  function addMonsterToEncounter() {
+    if (!selectedEncounter || !monsterToAddId) {
+      return;
+    }
+
+    const monster = availableMonsters.find((item) => item.id === monsterToAddId);
+
+    if (!monster) {
+      return;
+    }
+
+    const dexModifier = getMonsterAbilityModifier(monster.abilities.dex);
+
+    updateSelectedEncounter((encounter) => ({
+      ...encounter,
+      participants: [
+        ...encounter.participants,
+        {
+          id: crypto.randomUUID(),
+          sourceType: "monster",
+          sourceId: monster.id,
+          name: monster.name,
+          armorClass: monster.armorClass,
+          maxHp: monster.hitPoints,
+          currentHp: monster.hitPoints,
+          initiative: null,
+          initiativeModifier: dexModifier,
+          notes: `${monster.size} ${monster.type} • CR ${monster.challengeRating}`,
+        },
+      ],
+    }));
+  }
+
+  function updateEncounterParticipantHp(participantId: string, amount: number) {
+    updateSelectedEncounter((encounter) => ({
+      ...encounter,
+      participants: encounter.participants.map((participant) =>
+        participant.id === participantId
+          ? {
+              ...participant,
+              currentHp: Math.max(
+                0,
+                Math.min(participant.maxHp, participant.currentHp + amount),
+              ),
+            }
+          : participant,
+      ),
+    }));
+  }
+
+  function removeEncounterParticipant(participantId: string) {
+    updateSelectedEncounter((encounter) => ({
+      ...encounter,
+      participants: encounter.participants.filter(
+        (participant) => participant.id !== participantId,
+      ),
+      activeTurnIndex: Math.min(
+        encounter.activeTurnIndex,
+        Math.max(0, encounter.participants.length - 2),
+      ),
+    }));
+  }
+
+  function rollEncounterInitiative() {
+    updateSelectedEncounter((encounter) => {
+      const rolledParticipants = encounter.participants.map((participant) => {
+        const result = rollDice({
+          count: 1,
+          sides: 20,
+          modifier: participant.initiativeModifier,
+        });
+
+        return {
+          ...participant,
+          initiative: result.total,
+        };
+      });
+
+      return {
+        ...encounter,
+        round: 1,
+        activeTurnIndex: 0,
+        isActive: true,
+        participants: rolledParticipants.sort((first, second) => {
+          const firstInitiative = first.initiative ?? -999;
+          const secondInitiative = second.initiative ?? -999;
+
+          if (secondInitiative !== firstInitiative) {
+            return secondInitiative - firstInitiative;
+          }
+
+          return second.initiativeModifier - first.initiativeModifier;
+        }),
+      };
+    });
+  }
+
+  function nextEncounterTurn() {
+    updateSelectedEncounter((encounter) => {
+      if (encounter.participants.length === 0) {
+        return encounter;
+      }
+
+      const nextTurnIndex = encounter.activeTurnIndex + 1;
+      const shouldAdvanceRound = nextTurnIndex >= encounter.participants.length;
+
+      return {
+        ...encounter,
+        activeTurnIndex: shouldAdvanceRound ? 0 : nextTurnIndex,
+        round: shouldAdvanceRound ? encounter.round + 1 : encounter.round,
+        isActive: true,
+      };
+    });
+  }
+
+  function resetEncounter() {
+    updateSelectedEncounter((encounter) => ({
+      ...encounter,
+      round: 1,
+      activeTurnIndex: 0,
+      isActive: true,
+      participants: encounter.participants.map((participant) => ({
+        ...participant,
+        currentHp: participant.maxHp,
+        initiative: null,
+      })),
+    }));
+  }
+
+  function toggleEncounterActive() {
+    updateSelectedEncounter((encounter) => ({
+      ...encounter,
+      isActive: !encounter.isActive,
+    }));
+  }
+
   return (
     <PageShell
       eyebrow="Campaign Command Center"
@@ -2339,6 +2747,283 @@ function Campaigns({
                     ).length
                   }
                 </strong>
+              </div>
+            </section>
+
+            <section className="campaign-card encounter-tracker-card">
+              <div className="campaign-section-head">
+                <div>
+                  <span className="mini-label">Encounter Tracker</span>
+                  <h2>Encounter Yönetimi</h2>
+                </div>
+              </div>
+
+              <div className="encounter-layout">
+                <aside className="encounter-sidebar">
+                  <form className="campaign-mini-form" onSubmit={createEncounter}>
+                    <input
+                      value={newEncounterName}
+                      onChange={(event) => setNewEncounterName(event.target.value)}
+                      placeholder="Rainbase Ambush"
+                    />
+                    <button className="primary-action" type="submit">
+                      Encounter Oluştur
+                    </button>
+                  </form>
+
+                  <div className="encounter-list">
+                    {selectedCampaign.encounters.length === 0 ? (
+                      <div className="empty-panel compact-empty">
+                        <h2>Encounter yok.</h2>
+                        <p>
+                          Henüz kimse kimseye saldırmıyor. D&D için şüpheli
+                          derecede sağlıklı.
+                        </p>
+                      </div>
+                    ) : (
+                      selectedCampaign.encounters.map((encounter) => (
+                        <button
+                          className={
+                            encounter.id === selectedEncounterId
+                              ? "encounter-list-item active"
+                              : "encounter-list-item"
+                          }
+                          key={encounter.id}
+                          onClick={() => setSelectedEncounterId(encounter.id)}
+                        >
+                          <strong>{encounter.name}</strong>
+                          <span>
+                            Round {encounter.round} •{" "}
+                            {encounter.participants.length} participant
+                          </span>
+                        </button>
+                      ))
+                    )}
+                  </div>
+                </aside>
+
+                {!selectedEncounter ? (
+                  <div className="empty-panel encounter-empty">
+                    <h2>Bir encounter seç veya oluştur.</h2>
+                    <p>
+                      Canavarları savaşa sokmadan önce küçük bir form dolduruyoruz.
+                      Bürokrasi fantastik evrenlere de bulaştı.
+                    </p>
+                  </div>
+                ) : (
+                  <div className="encounter-main">
+                    <div className="encounter-hero">
+                      <div>
+                        <span className="mini-label">
+                          {selectedEncounter.isActive ? "Active" : "Paused"}
+                        </span>
+                        <h2>{selectedEncounter.name}</h2>
+                        <p>
+                          Round {selectedEncounter.round}
+                          {activeEncounterParticipant
+                            ? ` • Sıradaki: ${activeEncounterParticipant.name}`
+                            : " • Henüz initiative yok"}
+                        </p>
+                      </div>
+
+                      <div className="encounter-action-row">
+                        <button type="button" onClick={rollEncounterInitiative}>
+                          Initiative Roll
+                        </button>
+                        <button type="button" onClick={nextEncounterTurn}>
+                          Next Turn
+                        </button>
+                        <button type="button" onClick={toggleEncounterActive}>
+                          {selectedEncounter.isActive ? "Pause" : "Resume"}
+                        </button>
+                        <button type="button" onClick={resetEncounter}>
+                          Reset
+                        </button>
+                        <button
+                          className="danger-action compact-danger"
+                          type="button"
+                          onClick={() => deleteEncounter(selectedEncounter.id)}
+                        >
+                          Sil
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="encounter-add-grid">
+                      <section className="encounter-add-card">
+                        <span className="mini-label">Party</span>
+                        <h3>Karakter Ekle</h3>
+                        {partyCharacters.length === 0 ? (
+                          <p>Önce party'ye karakter bağla. Savaş boş sandalyelerle dönmüyor.</p>
+                        ) : (
+                          <div className="encounter-pick-list">
+                            {partyCharacters.map((character) => (
+                              <button
+                                key={character.id}
+                                type="button"
+                                onClick={() => addCharacterToEncounter(character)}
+                              >
+                                {character.name}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </section>
+
+                      <section className="encounter-add-card">
+                        <span className="mini-label">Monsters / NPCs</span>
+                        <h3>Monster Ekle</h3>
+                        <div className="encounter-monster-picker">
+                          <select
+                            value={monsterToAddId}
+                            onChange={(event) => setMonsterToAddId(event.target.value)}
+                          >
+                            <option value="">Monster seç</option>
+                            {availableMonsters.map((monster) => (
+                              <option key={monster.id} value={monster.id}>
+                                {monster.name} • CR {monster.challengeRating}
+                              </option>
+                            ))}
+                          </select>
+                          <button type="button" onClick={addMonsterToEncounter}>
+                            Ekle
+                          </button>
+                        </div>
+                      </section>
+                    </div>
+
+                    {selectedEncounter.participants.length === 0 ? (
+                      <div className="empty-panel compact-empty">
+                        <h2>Participant yok.</h2>
+                        <p>
+                          Encounter var ama içinde kimse yok. Bu da teknik olarak
+                          toplantı, savaş değil.
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="encounter-turn-list">
+                        {sortedEncounterParticipants.map((participant, index) => {
+                          const isActiveTurn =
+                            selectedEncounter.activeTurnIndex === index;
+                          const hpPercent =
+                            participant.maxHp > 0
+                              ? Math.round(
+                                  (participant.currentHp / participant.maxHp) * 100,
+                                )
+                              : 0;
+
+                          return (
+                            <article
+                              className={
+                                isActiveTurn
+                                  ? "encounter-participant-card active-turn"
+                                  : "encounter-participant-card"
+                              }
+                              key={participant.id}
+                            >
+                              <div className="encounter-participant-head">
+                                <div>
+                                  <span className="mini-label">
+                                    {participant.sourceType === "character"
+                                      ? "Character"
+                                      : "Monster / NPC"}
+                                  </span>
+                                  <h3>{participant.name}</h3>
+                                  <p>{participant.notes}</p>
+                                </div>
+
+                                <div className="initiative-badge">
+                                  <span>Init</span>
+                                  <strong>
+                                    {participant.initiative ?? "—"}
+                                  </strong>
+                                  <em>
+                                    {participant.initiativeModifier >= 0
+                                      ? `+${participant.initiativeModifier}`
+                                      : participant.initiativeModifier}
+                                  </em>
+                                </div>
+                              </div>
+
+                              <div className="encounter-stat-row">
+                                <span>AC {participant.armorClass}</span>
+                                <span>
+                                  HP {participant.currentHp}/{participant.maxHp}
+                                </span>
+                                <span>{hpPercent}%</span>
+                              </div>
+
+                              <div className="encounter-hp-bar">
+                                <div style={{ width: `${hpPercent}%` }} />
+                              </div>
+
+                              <div className="hp-button-grid monster-hp-grid">
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    updateEncounterParticipantHp(participant.id, -10)
+                                  }
+                                >
+                                  -10
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    updateEncounterParticipantHp(participant.id, -5)
+                                  }
+                                >
+                                  -5
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    updateEncounterParticipantHp(participant.id, -1)
+                                  }
+                                >
+                                  -1
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    updateEncounterParticipantHp(participant.id, 1)
+                                  }
+                                >
+                                  +1
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    updateEncounterParticipantHp(participant.id, 5)
+                                  }
+                                >
+                                  +5
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    updateEncounterParticipantHp(participant.id, 10)
+                                  }
+                                >
+                                  +10
+                                </button>
+                              </div>
+
+                              <button
+                                className="danger-action compact-danger"
+                                type="button"
+                                onClick={() =>
+                                  removeEncounterParticipant(participant.id)
+                                }
+                              >
+                                Participant Sil
+                              </button>
+                            </article>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             </section>
 
@@ -4439,6 +5124,7 @@ function App() {
         sessionNotes: [],
         npcNotes: [],
         quests: [],
+        encounters: [],
         createdAt: now,
         updatedAt: now,
       },
@@ -4655,6 +5341,7 @@ function App() {
               <Campaigns
                 characters={characters}
                 campaigns={campaigns}
+                rulesetData={effectiveRulesetData}
                 onCreateCampaign={handleCreateCampaign}
                 onUpdateCampaign={handleUpdateCampaign}
                 onDeleteCampaign={handleDeleteCampaign}
