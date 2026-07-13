@@ -1,16 +1,20 @@
 import { useEffect, useMemo, useState } from "react";
-import {
-  NavLink,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import { motion } from "framer-motion";
 import type { DiceRollResult } from "../../core/dice/dice.types";
 import { rollDice } from "../../core/dice/diceRoller";
-import type { DndItemData, DndSpellData, RulesetData } from "../../core/rulesets/ruleset.types";
+import type {
+  DndItemData,
+  DndMonsterData,
+  DndSpellData,
+  RulesetData,
+} from "../../core/rulesets/ruleset.types";
 import { loadDnd2014Ruleset } from "../../core/rulesets/rulesetLoader";
 
-import type { Character, CharacterDraft } from "../../core/character/character.types";
+import type {
+  Character,
+  CharacterDraft,
+} from "../../core/character/character.types";
 import { getProficiencyBonus } from "../../core/character/characterCalculator";
 import {
   exportCharacters,
@@ -26,8 +30,10 @@ import { Builder } from "../builder/Builder";
 import { createCharacterFromDraft } from "../characters/characterShared";
 import { PageShell } from "../../shared/layout/PageShell";
 import { navItems } from "../../shared/navigation/navItems";
-import { getItemCategoryLabel, getItemRulesSummary } from "../characters/characterShared";
-
+import {
+  getItemCategoryLabel,
+  getItemRulesSummary,
+} from "../characters/characterShared";
 
 type CampaignNote = {
   id: string;
@@ -82,7 +88,8 @@ function loadCampaigns(): Campaign[] {
 
     return parsed.map((campaign) => ({
       id: typeof campaign.id === "string" ? campaign.id : crypto.randomUUID(),
-      name: typeof campaign.name === "string" ? campaign.name : "Unnamed Campaign",
+      name:
+        typeof campaign.name === "string" ? campaign.name : "Unnamed Campaign",
       description:
         typeof campaign.description === "string" ? campaign.description : "",
       characterIds: Array.isArray(campaign.characterIds)
@@ -110,9 +117,6 @@ function loadCampaigns(): Campaign[] {
 function saveCampaigns(campaigns: Campaign[]) {
   localStorage.setItem(CAMPAIGNS_STORAGE_KEY, JSON.stringify(campaigns));
 }
-
-
-
 
 function PlayMode() {
   return (
@@ -694,7 +698,9 @@ function Library({
                   <p>{monster.description}</p>
 
                   <div className="library-pill-row">
-                    <span>{monster.size} {monster.type}</span>
+                    <span>
+                      {monster.size} {monster.type}
+                    </span>
                     <span>AC {monster.armorClass}</span>
                     <span>HP {monster.hitPoints}</span>
                   </div>
@@ -890,8 +896,6 @@ function Spellbook({
   );
 }
 
-
-
 function getMonsterAbilityModifier(score: number) {
   return Math.floor((score - 10) / 2);
 }
@@ -977,7 +981,10 @@ function MonsterLibrary({
       {isRulesetLoading ? (
         <div className="empty-panel">
           <h2>Monster data yükleniyor...</h2>
-          <p>Canavarları kafeslerinden çıkarıyoruz. Muhtemelen iyi bir fikir değildir.</p>
+          <p>
+            Canavarları kafeslerinden çıkarıyoruz. Muhtemelen iyi bir fikir
+            değildir.
+          </p>
         </div>
       ) : rulesetError ? (
         <div className="empty-panel">
@@ -1055,7 +1062,10 @@ function MonsterLibrary({
           {filteredMonsters.length === 0 ? (
             <div className="empty-panel">
               <h2>Monster bulunamadı.</h2>
-              <p>Filtreler fazla acımasız olmuş olabilir. Canavarlar bile bu kadar sorgulanmayı hak etmiyor.</p>
+              <p>
+                Filtreler fazla acımasız olmuş olabilir. Canavarlar bile bu
+                kadar sorgulanmayı hak etmiyor.
+              </p>
             </div>
           ) : (
             <div className="monster-card-grid">
@@ -1074,7 +1084,9 @@ function MonsterLibrary({
                       <p>{monster.alignment}</p>
                     </div>
 
-                    <strong className="level-badge">CR {monster.challengeRating}</strong>
+                    <strong className="level-badge">
+                      CR {monster.challengeRating}
+                    </strong>
                   </div>
 
                   <div className="monster-core-grid">
@@ -1101,13 +1113,15 @@ function MonsterLibrary({
                   </div>
 
                   <div className="monster-ability-grid">
-                    {Object.entries(monster.abilities).map(([ability, score]) => (
-                      <div key={ability}>
-                        <span>{ability.toUpperCase()}</span>
-                        <strong>{score}</strong>
-                        <em>{formatMonsterModifier(score)}</em>
-                      </div>
-                    ))}
+                    {Object.entries(monster.abilities).map(
+                      ([ability, score]) => (
+                        <div key={ability}>
+                          <span>{ability.toUpperCase()}</span>
+                          <strong>{score}</strong>
+                          <em>{formatMonsterModifier(score)}</em>
+                        </div>
+                      ),
+                    )}
                   </div>
 
                   <div className="monster-meta-block">
@@ -1166,13 +1180,16 @@ function Inventory({
   rulesetError: string | null;
 }) {
   const [searchTerm, setSearchTerm] = useState("");
-  const [categoryFilter, setCategoryFilter] = useState<"all" | DndItemData["category"]>("all");
+  const [categoryFilter, setCategoryFilter] = useState<
+    "all" | DndItemData["category"]
+  >("all");
 
   const filteredItems = useMemo(() => {
     const normalizedSearch = searchTerm.trim().toLowerCase();
 
     return (rulesetData?.items ?? []).filter((item) => {
-      const matchesCategory = categoryFilter === "all" || item.category === categoryFilter;
+      const matchesCategory =
+        categoryFilter === "all" || item.category === categoryFilter;
       const matchesSearch =
         normalizedSearch.length === 0 ||
         [
@@ -1226,7 +1243,9 @@ function Inventory({
               <select
                 value={categoryFilter}
                 onChange={(event) =>
-                  setCategoryFilter(event.target.value as "all" | DndItemData["category"])
+                  setCategoryFilter(
+                    event.target.value as "all" | DndItemData["category"],
+                  )
                 }
               >
                 <option value="all">Tümü</option>
@@ -1246,7 +1265,9 @@ function Inventory({
           {filteredItems.length === 0 ? (
             <div className="empty-panel">
               <h2>Item bulunamadı.</h2>
-              <p>Arama yine evrenin anlamını kaçırdı. Daha yumuşak filtre dene.</p>
+              <p>
+                Arama yine evrenin anlamını kaçırdı. Daha yumuşak filtre dene.
+              </p>
             </div>
           ) : (
             <div className="inventory-library-grid">
@@ -1258,7 +1279,9 @@ function Inventory({
                 >
                   <div className="library-item-top">
                     <div>
-                      <span className="mini-label">{getItemCategoryLabel(item.category)}</span>
+                      <span className="mini-label">
+                        {getItemCategoryLabel(item.category)}
+                      </span>
                       <h2>{item.name}</h2>
                     </div>
                     <span>{item.cost}</span>
@@ -1271,9 +1294,15 @@ function Inventory({
                     <span>Weight {item.weight} lb</span>
                     {item.damage ? <span>Damage {item.damage}</span> : null}
                     {item.damageType ? <span>{item.damageType}</span> : null}
-                    {item.properties?.length ? <span>{item.properties.join(", ")}</span> : null}
-                    {item.tags?.length ? <span>{item.tags.join(", ")}</span> : null}
-                    {item.stealthDisadvantage ? <span>Stealth Disadvantage</span> : null}
+                    {item.properties?.length ? (
+                      <span>{item.properties.join(", ")}</span>
+                    ) : null}
+                    {item.tags?.length ? (
+                      <span>{item.tags.join(", ")}</span>
+                    ) : null}
+                    {item.stealthDisadvantage ? (
+                      <span>Stealth Disadvantage</span>
+                    ) : null}
                   </div>
                 </motion.article>
               ))}
@@ -1285,9 +1314,9 @@ function Inventory({
   );
 }
 
-
 const HOMEBREW_SPELLS_STORAGE_KEY = "e4_dnd_homebrew_spells_v1";
 const HOMEBREW_ITEMS_STORAGE_KEY = "e4_dnd_homebrew_items_v1";
+const HOMEBREW_MONSTERS_STORAGE_KEY = "e4_dnd_homebrew_monsters_v1";
 
 function parseTextList(value: string) {
   return value
@@ -1295,7 +1324,6 @@ function parseTextList(value: string) {
     .map((item) => item.trim())
     .filter(Boolean);
 }
-
 
 function Campaigns({
   characters,
@@ -1377,7 +1405,9 @@ function Campaigns({
     event.preventDefault();
 
     if (!newCampaignName.trim()) {
-      alert("Campaign adı lazım kankam. Adsız kampanya biraz vergi dairesi dosyası gibi duruyor.");
+      alert(
+        "Campaign adı lazım kankam. Adsız kampanya biraz vergi dairesi dosyası gibi duruyor.",
+      );
       return;
     }
 
@@ -1486,10 +1516,7 @@ function Campaigns({
     setQuestNotes("");
   }
 
-  function updateQuestStatus(
-    questId: string,
-    status: CampaignQuest["status"],
-  ) {
+  function updateQuestStatus(questId: string, status: CampaignQuest["status"]) {
     if (!selectedCampaign) {
       return;
     }
@@ -1503,14 +1530,19 @@ function Campaigns({
     });
   }
 
-  function removeFromCampaign(collection: "sessionNotes" | "npcNotes" | "quests", id: string) {
+  function removeFromCampaign(
+    collection: "sessionNotes" | "npcNotes" | "quests",
+    id: string,
+  ) {
     if (!selectedCampaign) {
       return;
     }
 
     onUpdateCampaign({
       ...selectedCampaign,
-      [collection]: selectedCampaign[collection].filter((item) => item.id !== id),
+      [collection]: selectedCampaign[collection].filter(
+        (item) => item.id !== id,
+      ),
       updatedAt: new Date().toISOString(),
     });
   }
@@ -1547,7 +1579,10 @@ function Campaigns({
             {campaigns.length === 0 ? (
               <div className="empty-panel compact-empty">
                 <h2>Campaign yok.</h2>
-                <p>Henüz kimse dünyayı kurtarmaya kalkmamış. Şaşırtıcı ölçüde huzurlu.</p>
+                <p>
+                  Henüz kimse dünyayı kurtarmaya kalkmamış. Şaşırtıcı ölçüde
+                  huzurlu.
+                </p>
               </div>
             ) : (
               campaigns.map((campaign) => (
@@ -1571,7 +1606,10 @@ function Campaigns({
         {!selectedCampaign ? (
           <div className="empty-panel campaign-empty-main">
             <h2>Bir campaign seç.</h2>
-            <p>Sol taraftan kampanya oluştur veya seç. Evet, organizasyon diye bir kavram hâlâ var.</p>
+            <p>
+              Sol taraftan kampanya oluştur veya seç. Evet, organizasyon diye
+              bir kavram hâlâ var.
+            </p>
           </div>
         ) : (
           <div className="campaign-main">
@@ -1631,7 +1669,10 @@ function Campaigns({
               {characters.length === 0 ? (
                 <div className="empty-panel compact-empty">
                   <h2>Karakter yok.</h2>
-                  <p>Önce karakter oluştur. Parti boşsa macera da biraz PowerPoint sunumu gibi kalıyor.</p>
+                  <p>
+                    Önce karakter oluştur. Parti boşsa macera da biraz
+                    PowerPoint sunumu gibi kalıyor.
+                  </p>
                 </div>
               ) : (
                 <div className="campaign-character-grid">
@@ -1652,7 +1693,8 @@ function Campaigns({
                       >
                         <strong>{character.name}</strong>
                         <span>
-                          Lv. {character.level} • {character.className || "Class yok"}
+                          Lv. {character.level} •{" "}
+                          {character.className || "Class yok"}
                         </span>
                       </button>
                     );
@@ -1678,16 +1720,25 @@ function Campaigns({
                 ) : (
                   <div className="party-character-list">
                     {partyCharacters.map((character) => (
-                      <article className="party-character-card" key={character.id}>
+                      <article
+                        className="party-character-card"
+                        key={character.id}
+                      >
                         <div>
                           <strong>{character.name}</strong>
                           <span>
-                            {character.race || "Race yok"} • {character.className || "Class yok"}
+                            {character.race || "Race yok"} •{" "}
+                            {character.className || "Class yok"}
                           </span>
                         </div>
                         <div>
-                          <b>HP {character.currentHp}/{character.maxHp}</b>
-                          <span>AC {character.armorClass} • PB +{getProficiencyBonus(character.level)}</span>
+                          <b>
+                            HP {character.currentHp}/{character.maxHp}
+                          </b>
+                          <span>
+                            AC {character.armorClass} • PB +
+                            {getProficiencyBonus(character.level)}
+                          </span>
                         </div>
                       </article>
                     ))}
@@ -1722,9 +1773,16 @@ function Campaigns({
                     <article className="campaign-note-card" key={note.id}>
                       <div>
                         <strong>{note.title}</strong>
-                        <p>{note.body || "Not boş. Minimalizm mi üşengeçlik mi, bilemedim."}</p>
+                        <p>
+                          {note.body ||
+                            "Not boş. Minimalizm mi üşengeçlik mi, bilemedim."}
+                        </p>
                       </div>
-                      <button onClick={() => removeFromCampaign("sessionNotes", note.id)}>
+                      <button
+                        onClick={() =>
+                          removeFromCampaign("sessionNotes", note.id)
+                        }
+                      >
                         Sil
                       </button>
                     </article>
@@ -1769,9 +1827,14 @@ function Campaigns({
                       <div>
                         <strong>{npc.name}</strong>
                         <span>{npc.role}</span>
-                        <p>{npc.notes || "Not yok. NPC de düz vatandaş çıktı, üzücü."}</p>
+                        <p>
+                          {npc.notes ||
+                            "Not yok. NPC de düz vatandaş çıktı, üzücü."}
+                        </p>
                       </div>
-                      <button onClick={() => removeFromCampaign("npcNotes", npc.id)}>
+                      <button
+                        onClick={() => removeFromCampaign("npcNotes", npc.id)}
+                      >
                         Sil
                       </button>
                     </article>
@@ -1807,14 +1870,21 @@ function Campaigns({
                       <div>
                         <strong>{quest.title}</strong>
                         <span>{quest.status}</span>
-                        <p>{quest.notes || "Not yok. Görev tanımı bile performans kaygısı yaşıyor."}</p>
+                        <p>
+                          {quest.notes ||
+                            "Not yok. Görev tanımı bile performans kaygısı yaşıyor."}
+                        </p>
                         <div className="quest-status-row">
                           {(["active", "completed", "failed"] as const).map(
                             (status) => (
                               <button
-                                className={quest.status === status ? "active" : ""}
+                                className={
+                                  quest.status === status ? "active" : ""
+                                }
                                 key={status}
-                                onClick={() => updateQuestStatus(quest.id, status)}
+                                onClick={() =>
+                                  updateQuestStatus(quest.id, status)
+                                }
                               >
                                 {status}
                               </button>
@@ -1822,7 +1892,9 @@ function Campaigns({
                           )}
                         </div>
                       </div>
-                      <button onClick={() => removeFromCampaign("quests", quest.id)}>
+                      <button
+                        onClick={() => removeFromCampaign("quests", quest.id)}
+                      >
                         Sil
                       </button>
                     </article>
@@ -1873,6 +1945,25 @@ function loadHomebrewItems(): DndItemData[] {
 
 function saveHomebrewItems(items: DndItemData[]) {
   localStorage.setItem(HOMEBREW_ITEMS_STORAGE_KEY, JSON.stringify(items));
+}
+
+function loadHomebrewMonsters(): DndMonsterData[] {
+  try {
+    const raw = localStorage.getItem(HOMEBREW_MONSTERS_STORAGE_KEY);
+
+    if (!raw) {
+      return [];
+    }
+
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? (parsed as DndMonsterData[]) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveHomebrewMonsters(monsters: DndMonsterData[]) {
+  localStorage.setItem(HOMEBREW_MONSTERS_STORAGE_KEY, JSON.stringify(monsters));
 }
 
 const SPELL_CLASS_OPTIONS = [
@@ -1958,20 +2049,92 @@ const WEAPON_PROPERTY_OPTIONS = [
   "Ammunition",
 ];
 
+const MONSTER_SIZE_OPTIONS = [
+  "Tiny",
+  "Small",
+  "Medium",
+  "Large",
+  "Huge",
+  "Gargantuan",
+];
+
+const MONSTER_TYPE_OPTIONS = [
+  "aberration",
+  "beast",
+  "celestial",
+  "construct",
+  "dragon",
+  "elemental",
+  "fey",
+  "fiend",
+  "giant",
+  "humanoid",
+  "monstrosity",
+  "ooze",
+  "plant",
+  "undead",
+];
+
+const MONSTER_CR_OPTIONS = [
+  "0",
+  "1/8",
+  "1/4",
+  "1/2",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+];
+
+function getMonsterProficiencyBonusByCr(challengeRating: string) {
+  const numericCr = challengeRating.includes("/")
+    ? challengeRating
+        .split("/")
+        .map(Number)
+        .reduce((top, bottom) => top / bottom)
+    : Number(challengeRating);
+
+  if (!Number.isFinite(numericCr) || numericCr < 5) {
+    return 2;
+  }
+
+  if (numericCr < 9) {
+    return 3;
+  }
+
+  if (numericCr < 13) {
+    return 4;
+  }
+
+  return 5;
+}
+
 function HomebrewLab({
   homebrewSpells,
   homebrewItems,
+  homebrewMonsters,
   onCreateHomebrewSpell,
   onDeleteHomebrewSpell,
   onCreateHomebrewItem,
   onDeleteHomebrewItem,
+  onCreateHomebrewMonster,
+  onDeleteHomebrewMonster,
 }: {
   homebrewSpells: DndSpellData[];
   homebrewItems: DndItemData[];
+  homebrewMonsters: DndMonsterData[];
   onCreateHomebrewSpell: (spell: DndSpellData) => void;
   onDeleteHomebrewSpell: (id: string) => void;
   onCreateHomebrewItem: (item: DndItemData) => void;
   onDeleteHomebrewItem: (id: string) => void;
+  onCreateHomebrewMonster: (monster: DndMonsterData) => void;
+  onDeleteHomebrewMonster: (id: string) => void;
 }) {
   const [spellForm, setSpellForm] = useState({
     name: "",
@@ -2011,6 +2174,31 @@ function HomebrewLab({
     range: "",
   });
 
+  const [monsterForm, setMonsterForm] = useState({
+    name: "",
+    size: "Medium",
+    type: "humanoid",
+    alignment: "unaligned",
+    armorClass: 12,
+    hitPoints: 7,
+    hitDice: "2d8",
+    speed: "30 ft.",
+    abilities: {
+      str: 10,
+      dex: 10,
+      con: 10,
+      int: 10,
+      wis: 10,
+      cha: 10,
+    },
+    challengeRating: "1/4",
+    senses: "passive Perception 10",
+    languages: "—",
+    traitsText: "",
+    actionsText: "",
+    description: "",
+  });
+
   function updateSpellForm<K extends keyof typeof spellForm>(
     key: K,
     value: (typeof spellForm)[K],
@@ -2028,6 +2216,29 @@ function HomebrewLab({
     setItemForm((current) => ({
       ...current,
       [key]: value,
+    }));
+  }
+
+  function updateMonsterForm<K extends keyof typeof monsterForm>(
+    key: K,
+    value: (typeof monsterForm)[K],
+  ) {
+    setMonsterForm((current) => ({
+      ...current,
+      [key]: value,
+    }));
+  }
+
+  function updateMonsterAbility(
+    ability: keyof typeof monsterForm.abilities,
+    value: number,
+  ) {
+    setMonsterForm((current) => ({
+      ...current,
+      abilities: {
+        ...current.abilities,
+        [ability]: value,
+      },
     }));
   }
 
@@ -2068,7 +2279,9 @@ function HomebrewLab({
     );
 
     if (spellForm.damageDice.trim()) {
-      parts.push(`Damage: ${spellForm.damageDice.trim()} ${spellForm.damageType}`);
+      parts.push(
+        `Damage: ${spellForm.damageDice.trim()} ${spellForm.damageType}`,
+      );
     }
 
     if (spellForm.healingDice.trim()) {
@@ -2106,12 +2319,20 @@ function HomebrewLab({
     }
 
     if (spellForm.classes.length === 0) {
-      alert("Bu büyüyü en az bir class kullanabilsin. Yoksa büyü değil, dekoratif PDF olur.");
+      alert(
+        "Bu büyüyü en az bir class kullanabilsin. Yoksa büyü değil, dekoratif PDF olur.",
+      );
       return;
     }
 
-    if (!spellForm.description.trim() && !spellForm.damageDice.trim() && !spellForm.healingDice.trim()) {
-      alert("Spell etkisi lazım. En az açıklama, damage ya da healing gir. Boş büyüyle evren ikna olmuyor.");
+    if (
+      !spellForm.description.trim() &&
+      !spellForm.damageDice.trim() &&
+      !spellForm.healingDice.trim()
+    ) {
+      alert(
+        "Spell etkisi lazım. En az açıklama, damage ya da healing gir. Boş büyüyle evren ikna olmuyor.",
+      );
       return;
     }
 
@@ -2132,11 +2353,14 @@ function HomebrewLab({
       effectType: spellForm.effectType,
       attackType: spellForm.attackType,
       damageDice: spellForm.damageDice.trim() || undefined,
-      damageType: spellForm.damageDice.trim() ? spellForm.damageType : undefined,
+      damageType: spellForm.damageDice.trim()
+        ? spellForm.damageType
+        : undefined,
       healingDice: spellForm.healingDice.trim() || undefined,
       saveAbility:
         spellForm.attackType === "saving-throw"
-          ? (spellForm.saveAbility as "str" | "dex" | "con" | "int" | "wis" | "cha")
+          ? (spellForm.saveAbility as
+              "str" | "dex" | "con" | "int" | "wis" | "cha")
           : undefined,
       conditionEffect: spellForm.conditionEffect || undefined,
     });
@@ -2156,7 +2380,9 @@ function HomebrewLab({
     event.preventDefault();
 
     if (!itemForm.name.trim()) {
-      alert("Item adı lazım. Çantaya 'şey' diye item koyarsak barbar bile güler.");
+      alert(
+        "Item adı lazım. Çantaya 'şey' diye item koyarsak barbar bile güler.",
+      );
       return;
     }
 
@@ -2187,7 +2413,8 @@ function HomebrewLab({
         itemForm.category === "armor" && Number.isFinite(dexBonusMax)
           ? dexBonusMax
           : undefined,
-      damage: itemForm.category === "weapon" ? itemForm.damage.trim() : undefined,
+      damage:
+        itemForm.category === "weapon" ? itemForm.damage.trim() : undefined,
       damageType:
         itemForm.category === "weapon" ? itemForm.damageType.trim() : undefined,
       properties:
@@ -2203,6 +2430,72 @@ function HomebrewLab({
       damage: "",
       range: "",
       properties: [],
+    }));
+  }
+
+  function handleCreateMonster(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!monsterForm.name.trim()) {
+      alert(
+        "Monster/NPC adı lazım kankam. İsimsiz yaratık ancak vergi dairesi olur.",
+      );
+      return;
+    }
+
+    const armorClass = Number(monsterForm.armorClass);
+    const hitPoints = Number(monsterForm.hitPoints);
+
+    const traits = monsterForm.traitsText.trim()
+      ? monsterForm.traitsText
+          .split("\n")
+          .map((trait) => trait.trim())
+          .filter(Boolean)
+      : [];
+
+    const actions = monsterForm.actionsText.trim()
+      ? monsterForm.actionsText
+          .split("\n")
+          .map((action) => action.trim())
+          .filter(Boolean)
+      : [];
+
+    onCreateHomebrewMonster({
+      id: `homebrew-monster-${crypto.randomUUID()}`,
+      name: monsterForm.name.trim(),
+      source: "Homebrew",
+      size: monsterForm.size,
+      type: monsterForm.type,
+      alignment: monsterForm.alignment.trim() || "unaligned",
+      armorClass: Number.isFinite(armorClass) ? armorClass : 10,
+      hitPoints: Number.isFinite(hitPoints) ? hitPoints : 10,
+      hitDice: monsterForm.hitDice.trim() || "2d8",
+      speed: monsterForm.speed.trim() || "30 ft.",
+      challengeRating: monsterForm.challengeRating,
+      proficiencyBonus: getMonsterProficiencyBonusByCr(
+        monsterForm.challengeRating,
+      ),
+      abilities: {
+        str: Number(monsterForm.abilities.str),
+        dex: Number(monsterForm.abilities.dex),
+        con: Number(monsterForm.abilities.con),
+        int: Number(monsterForm.abilities.int),
+        wis: Number(monsterForm.abilities.wis),
+        cha: Number(monsterForm.abilities.cha),
+      },
+      senses: monsterForm.senses.trim() || "passive Perception 10",
+      languages: monsterForm.languages.trim() || "—",
+      traits,
+      actions,
+      description: monsterForm.description.trim() || "Homebrew monster/NPC.",
+    });
+
+    setMonsterForm((current) => ({
+      ...current,
+      name: "",
+      description: "",
+      traitsText: "",
+      actionsText: "",
     }));
   }
 
@@ -2222,7 +2515,9 @@ function HomebrewLab({
         <div className="homebrew-summary-card">
           <span className="mini-label">Custom Items</span>
           <strong>{homebrewItems.length}</strong>
-          <p>Inventory listesine karışır. Evet, artık kılıç da uydurabiliyoruz.</p>
+          <p>
+            Inventory listesine karışır. Evet, artık kılıç da uydurabiliyoruz.
+          </p>
         </div>
       </div>
 
@@ -2243,7 +2538,9 @@ function HomebrewLab({
               Spell Name
               <input
                 value={spellForm.name}
-                onChange={(event) => updateSpellForm("name", event.target.value)}
+                onChange={(event) =>
+                  updateSpellForm("name", event.target.value)
+                }
                 placeholder="Sandstorm Verdict"
               />
             </label>
@@ -2273,10 +2570,14 @@ function HomebrewLab({
               School
               <select
                 value={spellForm.school}
-                onChange={(event) => updateSpellForm("school", event.target.value)}
+                onChange={(event) =>
+                  updateSpellForm("school", event.target.value)
+                }
               >
                 {SPELL_SCHOOL_OPTIONS.map((school) => (
-                  <option key={school} value={school}>{school}</option>
+                  <option key={school} value={school}>
+                    {school}
+                  </option>
                 ))}
               </select>
             </label>
@@ -2285,10 +2586,14 @@ function HomebrewLab({
               Effect Type
               <select
                 value={spellForm.effectType}
-                onChange={(event) => updateSpellForm("effectType", event.target.value)}
+                onChange={(event) =>
+                  updateSpellForm("effectType", event.target.value)
+                }
               >
                 {SPELL_EFFECT_OPTIONS.map((effect) => (
-                  <option key={effect} value={effect}>{effect}</option>
+                  <option key={effect} value={effect}>
+                    {effect}
+                  </option>
                 ))}
               </select>
             </label>
@@ -2308,7 +2613,9 @@ function HomebrewLab({
               Range
               <input
                 value={spellForm.range}
-                onChange={(event) => updateSpellForm("range", event.target.value)}
+                onChange={(event) =>
+                  updateSpellForm("range", event.target.value)
+                }
                 placeholder="60 feet"
               />
             </label>
@@ -2359,10 +2666,14 @@ function HomebrewLab({
                 Resolution
                 <select
                   value={spellForm.attackType}
-                  onChange={(event) => updateSpellForm("attackType", event.target.value)}
+                  onChange={(event) =>
+                    updateSpellForm("attackType", event.target.value)
+                  }
                 >
                   {ATTACK_TYPE_OPTIONS.map((option) => (
-                    <option key={option.value} value={option.value}>{option.label}</option>
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
                   ))}
                 </select>
               </label>
@@ -2372,10 +2683,14 @@ function HomebrewLab({
                   Save Ability
                   <select
                     value={spellForm.saveAbility}
-                    onChange={(event) => updateSpellForm("saveAbility", event.target.value)}
+                    onChange={(event) =>
+                      updateSpellForm("saveAbility", event.target.value)
+                    }
                   >
                     {SAVE_ABILITY_OPTIONS.map((ability) => (
-                      <option key={ability} value={ability}>{ability.toUpperCase()}</option>
+                      <option key={ability} value={ability}>
+                        {ability.toUpperCase()}
+                      </option>
                     ))}
                   </select>
                 </label>
@@ -2385,7 +2700,9 @@ function HomebrewLab({
                 Damage Dice
                 <input
                   value={spellForm.damageDice}
-                  onChange={(event) => updateSpellForm("damageDice", event.target.value)}
+                  onChange={(event) =>
+                    updateSpellForm("damageDice", event.target.value)
+                  }
                   placeholder="2d8"
                 />
               </label>
@@ -2394,10 +2711,14 @@ function HomebrewLab({
                 Damage Type
                 <select
                   value={spellForm.damageType}
-                  onChange={(event) => updateSpellForm("damageType", event.target.value)}
+                  onChange={(event) =>
+                    updateSpellForm("damageType", event.target.value)
+                  }
                 >
                   {DAMAGE_TYPE_OPTIONS.map((type) => (
-                    <option key={type} value={type}>{type}</option>
+                    <option key={type} value={type}>
+                      {type}
+                    </option>
                   ))}
                 </select>
               </label>
@@ -2406,7 +2727,9 @@ function HomebrewLab({
                 Healing Dice
                 <input
                   value={spellForm.healingDice}
-                  onChange={(event) => updateSpellForm("healingDice", event.target.value)}
+                  onChange={(event) =>
+                    updateSpellForm("healingDice", event.target.value)
+                  }
                   placeholder="1d8 + spellcasting mod"
                 />
               </label>
@@ -2415,11 +2738,15 @@ function HomebrewLab({
                 Condition Effect
                 <select
                   value={spellForm.conditionEffect}
-                  onChange={(event) => updateSpellForm("conditionEffect", event.target.value)}
+                  onChange={(event) =>
+                    updateSpellForm("conditionEffect", event.target.value)
+                  }
                 >
                   <option value="">No condition</option>
                   {CONDITION_EFFECT_OPTIONS.map((condition) => (
-                    <option key={condition} value={condition}>{condition}</option>
+                    <option key={condition} value={condition}>
+                      {condition}
+                    </option>
                   ))}
                 </select>
               </label>
@@ -2447,7 +2774,9 @@ function HomebrewLab({
               <input
                 type="checkbox"
                 checked={spellForm.ritual}
-                onChange={(event) => updateSpellForm("ritual", event.target.checked)}
+                onChange={(event) =>
+                  updateSpellForm("ritual", event.target.checked)
+                }
               />
               Ritual
             </label>
@@ -2599,7 +2928,9 @@ function HomebrewLab({
                   Damage
                   <input
                     value={itemForm.damage}
-                    onChange={(event) => updateItemForm("damage", event.target.value)}
+                    onChange={(event) =>
+                      updateItemForm("damage", event.target.value)
+                    }
                     placeholder="1d8"
                   />
                 </label>
@@ -2608,10 +2939,14 @@ function HomebrewLab({
                   Damage Type
                   <select
                     value={itemForm.damageType}
-                    onChange={(event) => updateItemForm("damageType", event.target.value)}
+                    onChange={(event) =>
+                      updateItemForm("damageType", event.target.value)
+                    }
                   >
                     {DAMAGE_TYPE_OPTIONS.map((type) => (
-                      <option key={type} value={type}>{type}</option>
+                      <option key={type} value={type}>
+                        {type}
+                      </option>
                     ))}
                   </select>
                 </label>
@@ -2620,7 +2955,9 @@ function HomebrewLab({
                   Range
                   <input
                     value={itemForm.range}
-                    onChange={(event) => updateItemForm("range", event.target.value)}
+                    onChange={(event) =>
+                      updateItemForm("range", event.target.value)
+                    }
                     placeholder="80/320"
                   />
                 </label>
@@ -2654,6 +2991,220 @@ function HomebrewLab({
             />
           </label>
         </form>
+
+        <form
+          className="homebrew-form-card homebrew-wide-form"
+          onSubmit={handleCreateMonster}
+        >
+          <div className="homebrew-card-head">
+            <div>
+              <span className="mini-label">Creator V1</span>
+              <h2>Custom Monster / NPC</h2>
+            </div>
+            <button className="primary-action" type="submit">
+              Monster Kaydet
+            </button>
+          </div>
+
+          <div className="form-grid compact-form-grid">
+            <label>
+              Name
+              <input
+                value={monsterForm.name}
+                onChange={(event) =>
+                  updateMonsterForm("name", event.target.value)
+                }
+                placeholder="Sand Revenant, Royal Guard Captain..."
+              />
+            </label>
+
+            <label>
+              Size
+              <select
+                value={monsterForm.size}
+                onChange={(event) =>
+                  updateMonsterForm("size", event.target.value)
+                }
+              >
+                {MONSTER_SIZE_OPTIONS.map((size) => (
+                  <option key={size} value={size}>
+                    {size}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label>
+              Type
+              <select
+                value={monsterForm.type}
+                onChange={(event) =>
+                  updateMonsterForm("type", event.target.value)
+                }
+              >
+                {MONSTER_TYPE_OPTIONS.map((type) => (
+                  <option key={type} value={type}>
+                    {type}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label>
+              Alignment
+              <input
+                value={monsterForm.alignment}
+                onChange={(event) =>
+                  updateMonsterForm("alignment", event.target.value)
+                }
+                placeholder="lawful neutral"
+              />
+            </label>
+
+            <label>
+              AC
+              <input
+                type="number"
+                min={1}
+                value={monsterForm.armorClass}
+                onChange={(event) =>
+                  updateMonsterForm("armorClass", Number(event.target.value))
+                }
+              />
+            </label>
+
+            <label>
+              HP
+              <input
+                type="number"
+                min={1}
+                value={monsterForm.hitPoints}
+                onChange={(event) =>
+                  updateMonsterForm("hitPoints", Number(event.target.value))
+                }
+              />
+            </label>
+
+            <label>
+              Hit Dice
+              <input
+                value={monsterForm.hitDice}
+                onChange={(event) =>
+                  updateMonsterForm("hitDice", event.target.value)
+                }
+                placeholder="4d8+4"
+              />
+            </label>
+
+            <label>
+              CR
+              <select
+                value={monsterForm.challengeRating}
+                onChange={(event) =>
+                  updateMonsterForm("challengeRating", event.target.value)
+                }
+              >
+                {MONSTER_CR_OPTIONS.map((cr) => (
+                  <option key={cr} value={cr}>
+                    CR {cr}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+
+          <div className="monster-ability-grid homebrew-ability-editor">
+            {Object.entries(monsterForm.abilities).map(([ability, score]) => (
+              <label key={ability}>
+                <span>{ability.toUpperCase()}</span>
+                <input
+                  type="number"
+                  min={1}
+                  max={30}
+                  value={score}
+                  onChange={(event) =>
+                    updateMonsterAbility(
+                      ability as keyof typeof monsterForm.abilities,
+                      Number(event.target.value),
+                    )
+                  }
+                />
+                <em>{formatMonsterModifier(score)}</em>
+              </label>
+            ))}
+          </div>
+
+          <div className="form-grid compact-form-grid">
+            <label>
+              Speed
+              <input
+                value={monsterForm.speed}
+                onChange={(event) =>
+                  updateMonsterForm("speed", event.target.value)
+                }
+                placeholder="30 ft., fly 40 ft."
+              />
+            </label>
+
+            <label>
+              Senses
+              <input
+                value={monsterForm.senses}
+                onChange={(event) =>
+                  updateMonsterForm("senses", event.target.value)
+                }
+                placeholder="darkvision 60 ft., passive Perception 12"
+              />
+            </label>
+
+            <label>
+              Languages
+              <input
+                value={monsterForm.languages}
+                onChange={(event) =>
+                  updateMonsterForm("languages", event.target.value)
+                }
+                placeholder="Common, Draconic"
+              />
+            </label>
+          </div>
+
+          <label>
+            Traits
+            <textarea
+              value={monsterForm.traitsText}
+              onChange={(event) =>
+                updateMonsterForm("traitsText", event.target.value)
+              }
+              rows={4}
+              placeholder="Virgülle ayır: Pack Tactics..., Sunlight Sensitivity..."
+            />
+          </label>
+
+          <label>
+            Actions
+            <textarea
+              value={monsterForm.actionsText}
+              onChange={(event) =>
+                updateMonsterForm("actionsText", event.target.value)
+              }
+              rows={5}
+              placeholder="Virgülle ayır: Scimitar. Melee Weapon Attack..., Sand Burst. Ranged Spell Attack..."
+            />
+          </label>
+
+          <label>
+            Description
+            <textarea
+              value={monsterForm.description}
+              onChange={(event) =>
+                updateMonsterForm("description", event.target.value)
+              }
+              rows={4}
+              placeholder="Lore, taktik, masadaki rolü..."
+            />
+          </label>
+        </form>
       </div>
 
       <div className="homebrew-created-grid">
@@ -2676,7 +3227,8 @@ function HomebrewLab({
                 <article className="homebrew-list-item" key={spell.id}>
                   <div>
                     <span className="mini-label">
-                      {spell.level === 0 ? "Cantrip" : `Level ${spell.level}`} • {spell.school}
+                      {spell.level === 0 ? "Cantrip" : `Level ${spell.level}`} •{" "}
+                      {spell.school}
                     </span>
                     <h3>{spell.name}</h3>
                     <p>{spell.description}</p>
@@ -2684,9 +3236,17 @@ function HomebrewLab({
                       <span>{spell.classes.join(", ") || "No class"}</span>
                       {spell.concentration ? <span>Concentration</span> : null}
                       {spell.ritual ? <span>Ritual</span> : null}
-                      {spell.damageDice ? <span>{spell.damageDice} {spell.damageType}</span> : null}
-                      {spell.healingDice ? <span>Heal {spell.healingDice}</span> : null}
-                      {spell.conditionEffect ? <span>{spell.conditionEffect}</span> : null}
+                      {spell.damageDice ? (
+                        <span>
+                          {spell.damageDice} {spell.damageType}
+                        </span>
+                      ) : null}
+                      {spell.healingDice ? (
+                        <span>Heal {spell.healingDice}</span>
+                      ) : null}
+                      {spell.conditionEffect ? (
+                        <span>{spell.conditionEffect}</span>
+                      ) : null}
                     </div>
                   </div>
 
@@ -2724,8 +3284,14 @@ function HomebrewLab({
                     <p>{item.description}</p>
                     <div className="library-pill-row">
                       <span>{item.cost}</span>
-                      {item.damage ? <span>{item.damage} {item.damageType}</span> : null}
-                      {item.armorClass ? <span>AC {item.armorClass}</span> : null}
+                      {item.damage ? (
+                        <span>
+                          {item.damage} {item.damageType}
+                        </span>
+                      ) : null}
+                      {item.armorClass ? (
+                        <span>AC {item.armorClass}</span>
+                      ) : null}
                       {item.armorClassBonus ? (
                         <span>AC +{item.armorClassBonus}</span>
                       ) : null}
@@ -2736,6 +3302,50 @@ function HomebrewLab({
                   </div>
 
                   <button onClick={() => onDeleteHomebrewItem(item.id)}>
+                    Sil
+                  </button>
+                </article>
+              ))}
+            </div>
+          )}
+        </section>
+
+        <section className="homebrew-created-card">
+          <div className="homebrew-card-head">
+            <div>
+              <span className="mini-label">Saved</span>
+              <h2>Custom Monsters / NPCs</h2>
+            </div>
+          </div>
+
+          {homebrewMonsters.length === 0 ? (
+            <div className="empty-panel compact-empty">
+              <h2>Monster yok.</h2>
+              <p>
+                Henüz kimseyi oyuncuların üstüne salmadık. Nadir bir barış anı.
+              </p>
+            </div>
+          ) : (
+            <div className="homebrew-list">
+              {homebrewMonsters.map((monster) => (
+                <article className="homebrew-list-item" key={monster.id}>
+                  <div>
+                    <span className="mini-label">
+                      {monster.size} {monster.type} • CR{" "}
+                      {monster.challengeRating}
+                    </span>
+                    <h3>{monster.name}</h3>
+                    <p>{monster.description}</p>
+                    <div className="library-pill-row">
+                      <span>AC {monster.armorClass}</span>
+                      <span>HP {monster.hitPoints}</span>
+                      <span>{monster.hitDice}</span>
+                      <span>PB +{monster.proficiencyBonus}</span>
+                      <span>{monster.source ?? "Homebrew"}</span>
+                    </div>
+                  </div>
+
+                  <button onClick={() => onDeleteHomebrewMonster(monster.id)}>
                     Sil
                   </button>
                 </article>
@@ -2763,9 +3373,10 @@ function App() {
   const [homebrewItems, setHomebrewItems] = useState<DndItemData[]>(() =>
     loadHomebrewItems(),
   );
-  const [campaigns, setCampaigns] = useState<Campaign[]>(() =>
-    loadCampaigns(),
+  const [homebrewMonsters, setHomebrewMonsters] = useState<DndMonsterData[]>(
+    () => loadHomebrewMonsters(),
   );
+  const [campaigns, setCampaigns] = useState<Campaign[]>(() => loadCampaigns());
 
   const effectiveRulesetData = useMemo<RulesetData | null>(() => {
     if (!rulesetData) {
@@ -2776,8 +3387,9 @@ function App() {
       ...rulesetData,
       spells: [...rulesetData.spells, ...homebrewSpells],
       items: [...rulesetData.items, ...homebrewItems],
+      monsters: [...rulesetData.monsters, ...homebrewMonsters],
     };
-  }, [rulesetData, homebrewSpells, homebrewItems]);
+  }, [rulesetData, homebrewSpells, homebrewItems, homebrewMonsters]);
 
   useEffect(() => {
     let isMounted = true;
@@ -2816,7 +3428,6 @@ function App() {
     saveCharacters(characters);
   }, [characters]);
 
-
   useEffect(() => {
     saveHomebrewSpells(homebrewSpells);
   }, [homebrewSpells]);
@@ -2824,6 +3435,10 @@ function App() {
   useEffect(() => {
     saveHomebrewItems(homebrewItems);
   }, [homebrewItems]);
+
+  useEffect(() => {
+    saveHomebrewMonsters(homebrewMonsters);
+  }, [homebrewMonsters]);
 
   useEffect(() => {
     saveCampaigns(campaigns);
@@ -2867,7 +3482,6 @@ function App() {
     setCharacters([]);
   }
 
-
   function handleCreateCampaign(name: string, description: string) {
     const now = new Date().toISOString();
 
@@ -2902,7 +3516,9 @@ function App() {
       return;
     }
 
-    const confirmed = confirm(`${campaign.name} silinsin mi? Campaign mezarlığına uğurluyoruz.`);
+    const confirmed = confirm(
+      `${campaign.name} silinsin mi? Campaign mezarlığına uğurluyoruz.`,
+    );
 
     if (!confirmed) {
       return;
@@ -2911,13 +3527,14 @@ function App() {
     setCampaigns((current) => current.filter((item) => item.id !== id));
   }
 
-
   function handleCreateHomebrewSpell(spell: DndSpellData) {
     setHomebrewSpells((current) => [spell, ...current]);
   }
 
   function handleDeleteHomebrewSpell(id: string) {
-    const confirmed = confirm("Bu custom spell silinsin mi? Evren biraz sadeleşecek.");
+    const confirmed = confirm(
+      "Bu custom spell silinsin mi? Evren biraz sadeleşecek.",
+    );
 
     if (!confirmed) {
       return;
@@ -2931,13 +3548,33 @@ function App() {
   }
 
   function handleDeleteHomebrewItem(id: string) {
-    const confirmed = confirm("Bu custom item silinsin mi? Çanta biraz hafifleyecek.");
+    const confirmed = confirm(
+      "Bu custom item silinsin mi? Çanta biraz hafifleyecek.",
+    );
 
     if (!confirmed) {
       return;
     }
 
     setHomebrewItems((current) => current.filter((item) => item.id !== id));
+  }
+
+  function handleCreateHomebrewMonster(monster: DndMonsterData) {
+    setHomebrewMonsters((current) => [monster, ...current]);
+  }
+
+  function handleDeleteHomebrewMonster(id: string) {
+    const confirmed = confirm(
+      "Bu custom monster/NPC silinsin mi? Oyuncular kısa süreliğine güvende kalacak.",
+    );
+
+    if (!confirmed) {
+      return;
+    }
+
+    setHomebrewMonsters((current) =>
+      current.filter((monster) => monster.id !== id),
+    );
   }
 
   return (
@@ -3095,10 +3732,13 @@ function App() {
               <HomebrewLab
                 homebrewSpells={homebrewSpells}
                 homebrewItems={homebrewItems}
+                homebrewMonsters={homebrewMonsters}
                 onCreateHomebrewSpell={handleCreateHomebrewSpell}
                 onDeleteHomebrewSpell={handleDeleteHomebrewSpell}
                 onCreateHomebrewItem={handleCreateHomebrewItem}
                 onDeleteHomebrewItem={handleDeleteHomebrewItem}
+                onCreateHomebrewMonster={handleCreateHomebrewMonster}
+                onDeleteHomebrewMonster={handleDeleteHomebrewMonster}
               />
             }
           />
