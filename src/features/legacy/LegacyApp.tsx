@@ -532,6 +532,11 @@ function Library({
                 <strong>{rulesetData.items.length}</strong>
                 <span>Items</span>
               </div>
+
+              <div>
+                <strong>{rulesetData.monsters.length}</strong>
+                <span>Monsters</span>
+              </div>
             </div>
           </section>
 
@@ -664,6 +669,34 @@ function Library({
                     <span>{getItemRulesSummary(item)}</span>
                     <span>{item.cost}</span>
                     <span>{item.weight} lb</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="library-section-card">
+            <div className="library-section-head">
+              <div>
+                <span className="mini-label">Monsters</span>
+                <h2>Monster Önizleme</h2>
+              </div>
+            </div>
+
+            <div className="library-list-grid">
+              {rulesetData.monsters.slice(0, 8).map((monster) => (
+                <article className="library-item-card" key={monster.id}>
+                  <div className="library-item-top">
+                    <h3>{monster.name}</h3>
+                    <span>CR {monster.challengeRating}</span>
+                  </div>
+
+                  <p>{monster.description}</p>
+
+                  <div className="library-pill-row">
+                    <span>{monster.size} {monster.type}</span>
+                    <span>AC {monster.armorClass}</span>
+                    <span>HP {monster.hitPoints}</span>
                   </div>
                 </article>
               ))}
@@ -857,6 +890,271 @@ function Spellbook({
   );
 }
 
+
+
+function getMonsterAbilityModifier(score: number) {
+  return Math.floor((score - 10) / 2);
+}
+
+function formatMonsterModifier(score: number) {
+  const modifier = getMonsterAbilityModifier(score);
+  return modifier >= 0 ? `+${modifier}` : `${modifier}`;
+}
+
+function MonsterLibrary({
+  rulesetData,
+  isRulesetLoading,
+  rulesetError,
+}: {
+  rulesetData: RulesetData | null;
+  isRulesetLoading: boolean;
+  rulesetError: string | null;
+}) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [typeFilter, setTypeFilter] = useState("all");
+  const [crFilter, setCrFilter] = useState("all");
+
+  const monsters = rulesetData?.monsters ?? [];
+
+  const monsterTypes = useMemo(() => {
+    return Array.from(new Set(monsters.map((monster) => monster.type))).sort(
+      (a, b) => a.localeCompare(b),
+    );
+  }, [monsters]);
+
+  const challengeRatings = useMemo(() => {
+    return Array.from(
+      new Set(monsters.map((monster) => monster.challengeRating)),
+    ).sort((a, b) => {
+      const parseCr = (value: string) => {
+        if (value.includes("/")) {
+          const [top, bottom] = value.split("/").map(Number);
+          return top / bottom;
+        }
+
+        return Number(value);
+      };
+
+      return parseCr(a) - parseCr(b);
+    });
+  }, [monsters]);
+
+  const filteredMonsters = useMemo(() => {
+    const normalizedSearch = searchTerm.trim().toLowerCase();
+
+    return monsters.filter((monster) => {
+      const matchesSearch =
+        normalizedSearch.length === 0 ||
+        [
+          monster.name,
+          monster.type,
+          monster.size,
+          monster.alignment,
+          monster.description,
+          monster.challengeRating,
+          monster.source ?? "",
+          monster.traits.join(" "),
+          monster.actions.join(" "),
+        ]
+          .join(" ")
+          .toLowerCase()
+          .includes(normalizedSearch);
+
+      const matchesType = typeFilter === "all" || monster.type === typeFilter;
+      const matchesCr =
+        crFilter === "all" || monster.challengeRating === crFilter;
+
+      return matchesSearch && matchesType && matchesCr;
+    });
+  }, [monsters, searchTerm, typeFilter, crFilter]);
+
+  return (
+    <PageShell
+      eyebrow="Monster Library"
+      title="Monsters & NPCs"
+      description="Hazır yaratık ve NPC stat block arşivi. Encounter modülü şimdilik bekliyor ama canavarları rafa diziyoruz, çünkü kaosun da kataloglanması gerekir."
+    >
+      {isRulesetLoading ? (
+        <div className="empty-panel">
+          <h2>Monster data yükleniyor...</h2>
+          <p>Canavarları kafeslerinden çıkarıyoruz. Muhtemelen iyi bir fikir değildir.</p>
+        </div>
+      ) : rulesetError ? (
+        <div className="empty-panel">
+          <h2>Monster data yüklenemedi</h2>
+          <p>{rulesetError}</p>
+        </div>
+      ) : (
+        <>
+          <div className="monster-library-summary">
+            <div>
+              <span className="mini-label">Total</span>
+              <strong>{monsters.length}</strong>
+              <p>monster / NPC</p>
+            </div>
+
+            <div>
+              <span className="mini-label">Types</span>
+              <strong>{monsterTypes.length}</strong>
+              <p>kategori</p>
+            </div>
+
+            <div>
+              <span className="mini-label">Filtered</span>
+              <strong>{filteredMonsters.length}</strong>
+              <p>sonuç</p>
+            </div>
+          </div>
+
+          <div className="character-filter-panel monster-filter-panel">
+            <label>
+              Ara
+              <input
+                value={searchTerm}
+                onChange={(event) => setSearchTerm(event.target.value)}
+                placeholder="Goblin, undead, desert, guard..."
+              />
+            </label>
+
+            <label>
+              Type
+              <select
+                value={typeFilter}
+                onChange={(event) => setTypeFilter(event.target.value)}
+              >
+                <option value="all">Tümü</option>
+                {monsterTypes.map((type) => (
+                  <option key={type} value={type}>
+                    {type}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label>
+              CR
+              <select
+                value={crFilter}
+                onChange={(event) => setCrFilter(event.target.value)}
+              >
+                <option value="all">Tümü</option>
+                {challengeRatings.map((challengeRating) => (
+                  <option key={challengeRating} value={challengeRating}>
+                    CR {challengeRating}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <div className="filter-result-count">
+              <strong>{filteredMonsters.length}</strong>
+              <span>sonuç</span>
+            </div>
+          </div>
+
+          {filteredMonsters.length === 0 ? (
+            <div className="empty-panel">
+              <h2>Monster bulunamadı.</h2>
+              <p>Filtreler fazla acımasız olmuş olabilir. Canavarlar bile bu kadar sorgulanmayı hak etmiyor.</p>
+            </div>
+          ) : (
+            <div className="monster-card-grid">
+              {filteredMonsters.map((monster) => (
+                <motion.article
+                  className="monster-card"
+                  key={monster.id}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="monster-card-head">
+                    <div>
+                      <span className="mini-label">
+                        {monster.size} {monster.type}
+                      </span>
+                      <h2>{monster.name}</h2>
+                      <p>{monster.alignment}</p>
+                    </div>
+
+                    <strong className="level-badge">CR {monster.challengeRating}</strong>
+                  </div>
+
+                  <div className="monster-core-grid">
+                    <div>
+                      <span>AC</span>
+                      <strong>{monster.armorClass}</strong>
+                    </div>
+
+                    <div>
+                      <span>HP</span>
+                      <strong>{monster.hitPoints}</strong>
+                      <em>{monster.hitDice}</em>
+                    </div>
+
+                    <div>
+                      <span>Speed</span>
+                      <strong>{monster.speed}</strong>
+                    </div>
+
+                    <div>
+                      <span>PB</span>
+                      <strong>+{monster.proficiencyBonus}</strong>
+                    </div>
+                  </div>
+
+                  <div className="monster-ability-grid">
+                    {Object.entries(monster.abilities).map(([ability, score]) => (
+                      <div key={ability}>
+                        <span>{ability.toUpperCase()}</span>
+                        <strong>{score}</strong>
+                        <em>{formatMonsterModifier(score)}</em>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="monster-meta-block">
+                    <p>
+                      <strong>Senses:</strong> {monster.senses}
+                    </p>
+                    <p>
+                      <strong>Languages:</strong> {monster.languages}
+                    </p>
+                  </div>
+
+                  <details className="monster-details">
+                    <summary>Traits & Actions</summary>
+
+                    {monster.traits.length > 0 ? (
+                      <div>
+                        <h3>Traits</h3>
+                        {monster.traits.map((trait) => (
+                          <p key={trait}>{trait}</p>
+                        ))}
+                      </div>
+                    ) : null}
+
+                    <div>
+                      <h3>Actions</h3>
+                      {monster.actions.map((action) => (
+                        <p key={action}>{action}</p>
+                      ))}
+                    </div>
+                  </details>
+
+                  <p className="monster-description">{monster.description}</p>
+
+                  {monster.source ? (
+                    <div className="library-pill-row">
+                      <span>{monster.source}</span>
+                    </div>
+                  ) : null}
+                </motion.article>
+              ))}
+            </div>
+          )}
+        </>
+      )}
+    </PageShell>
+  );
+}
 
 function Inventory({
   rulesetData,
@@ -2736,6 +3034,17 @@ function App() {
               />
             }
           />
+          <Route
+            path="/monsters"
+            element={
+              <MonsterLibrary
+                rulesetData={effectiveRulesetData}
+                isRulesetLoading={isRulesetLoading}
+                rulesetError={rulesetError}
+              />
+            }
+          />
+
           <Route
             path="/inventory"
             element={

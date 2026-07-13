@@ -6,6 +6,7 @@ export const navItems = [
   { to: "/dice", label: "Zar" },
   { to: "/spellbook", label: "Spellbook" },
   { to: "/inventory", label: "Inventory" },
+  { to: "/monsters", label: "Monsters" },
   { to: "/campaigns", label: "Campaigns" },
   { to: "/backup", label: "Yedek" },
   { to: "/library", label: "Library" },

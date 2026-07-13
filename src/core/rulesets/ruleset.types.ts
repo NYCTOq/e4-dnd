@@ -55,6 +55,27 @@ export interface DndSpellData {
 export type DndItemCategory = "weapon" | "armor" | "shield" | "gear";
 export type DndArmorType = "light" | "medium" | "heavy";
 
+export interface DndMonsterData {
+  id: string;
+  name: string;
+  size: string;
+  type: string;
+  alignment: string;
+  armorClass: number;
+  hitPoints: number;
+  hitDice: string;
+  speed: string;
+  abilities: Record<AbilityKey, number>;
+  challengeRating: string;
+  proficiencyBonus: number;
+  senses: string;
+  languages: string;
+  traits: string[];
+  actions: string[];
+  description: string;
+  source?: string;
+}
+
 export interface DndItemData {
   id: string;
   name: string;
@@ -84,4 +105,5 @@ export interface RulesetData {
   races: DndRaceData[];
   spells: DndSpellData[];
   items: DndItemData[];
+  monsters: DndMonsterData[];
 }
