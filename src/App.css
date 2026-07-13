@@ -3342,3 +3342,44 @@ textarea {
     justify-content: flex-start;
   }
 }
+
+/* Homebrew Monster Creator V2 */
+.monster-builder-block {
+  margin-top: 18px;
+}
+
+.homebrew-card-head.inline-head {
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+.homebrew-card-head.inline-head h3 {
+  margin: 4px 0 0;
+  font-size: 1.05rem;
+}
+
+.homebrew-card-head.inline-head button {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 12px;
+  color: #101524;
+  background: #f7f8ff;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.monster-builder-block .homebrew-effect-preview span {
+  white-space: pre-wrap;
+  line-height: 1.45;
+}
+
+@media (max-width: 780px) {
+  .homebrew-card-head.inline-head {
+    align-items: stretch;
+  }
+
+  .homebrew-card-head.inline-head button {
+    width: 100%;
+  }
+}

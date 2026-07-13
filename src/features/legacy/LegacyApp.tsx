@@ -2880,6 +2880,15 @@ function HomebrewLab({
     languages: "—",
     traitsText: "",
     actionsText: "",
+    traitName: "",
+    traitDescription: "",
+    actionName: "",
+    actionAttackType: "melee-weapon",
+    actionAbility: "str",
+    actionDamageDice: "1d6",
+    actionDamageType: "slashing",
+    actionReachRange: "5 ft.",
+    actionDescription: "",
     description: "",
   });
 
@@ -2923,6 +2932,104 @@ function HomebrewLab({
         ...current.abilities,
         [ability]: value,
       },
+    }));
+  }
+
+  function appendMonsterTextBlock(
+    key: "traitsText" | "actionsText",
+    value: string,
+  ) {
+    if (!value.trim()) {
+      return;
+    }
+
+    setMonsterForm((current) => ({
+      ...current,
+      [key]: current[key].trim()
+        ? `${current[key].trim()}\n${value.trim()}`
+        : value.trim(),
+    }));
+  }
+
+  function addMonsterTraitFromBuilder() {
+    if (!monsterForm.traitName.trim() && !monsterForm.traitDescription.trim()) {
+      alert("Trait adı ya da açıklaması lazım. Boş trait, bürokratik sis efekti gibi duruyor.");
+      return;
+    }
+
+    const line = monsterForm.traitName.trim()
+      ? `${monsterForm.traitName.trim()}. ${
+          monsterForm.traitDescription.trim() || "Homebrew trait."
+        }`
+      : monsterForm.traitDescription.trim();
+
+    appendMonsterTextBlock("traitsText", line);
+    setMonsterForm((current) => ({
+      ...current,
+      traitName: "",
+      traitDescription: "",
+    }));
+  }
+
+  function getMonsterActionAttackLabel() {
+    if (monsterForm.actionAttackType === "melee-weapon") {
+      return "Melee Weapon Attack";
+    }
+
+    if (monsterForm.actionAttackType === "ranged-weapon") {
+      return "Ranged Weapon Attack";
+    }
+
+    if (monsterForm.actionAttackType === "melee-spell") {
+      return "Melee Spell Attack";
+    }
+
+    if (monsterForm.actionAttackType === "ranged-spell") {
+      return "Ranged Spell Attack";
+    }
+
+    return "Action";
+  }
+
+  function getMonsterActionAttackBonus() {
+    const ability = monsterForm.actionAbility as keyof typeof monsterForm.abilities;
+    return (
+      getMonsterAbilityModifier(Number(monsterForm.abilities[ability])) +
+      getMonsterProficiencyBonusByCr(monsterForm.challengeRating)
+    );
+  }
+
+  function buildMonsterActionLine() {
+    const actionName = monsterForm.actionName.trim() || "Homebrew Action";
+    const actionDescription = monsterForm.actionDescription.trim();
+    const damageText = monsterForm.actionDamageDice.trim()
+      ? ` Hit: ${monsterForm.actionDamageDice.trim()} ${monsterForm.actionDamageType} damage.`
+      : "";
+
+    if (monsterForm.actionAttackType === "utility") {
+      return `${actionName}. ${actionDescription || "The creature uses a custom utility action."}`;
+    }
+
+    return `${actionName}. ${getMonsterActionAttackLabel()}: ${
+      getMonsterActionAttackBonus() >= 0 ? "+" : ""
+    }${getMonsterActionAttackBonus()} to hit, reach/range ${
+      monsterForm.actionReachRange.trim() || "5 ft."
+    }.${damageText}${actionDescription ? ` ${actionDescription}` : ""}`;
+  }
+
+  function addMonsterActionFromBuilder() {
+    if (!monsterForm.actionName.trim() && !monsterForm.actionDescription.trim()) {
+      alert("Action adı ya da açıklaması lazım. Canavar aksiyonsuz kalırsa toplantıya katılmış gibi olur.");
+      return;
+    }
+
+    appendMonsterTextBlock("actionsText", buildMonsterActionLine());
+    setMonsterForm((current) => ({
+      ...current,
+      actionName: "",
+      actionDescription: "",
+      actionDamageDice: "1d6",
+      actionReachRange: "5 ft.",
     }));
   }
 
@@ -3180,6 +3287,12 @@ function HomebrewLab({
       description: "",
       traitsText: "",
       actionsText: "",
+      traitName: "",
+      traitDescription: "",
+      actionName: "",
+      actionDescription: "",
+      actionDamageDice: "1d6",
+      actionReachRange: "5 ft.",
     }));
   }
 
@@ -3853,6 +3966,154 @@ function HomebrewLab({
             </label>
           </div>
 
+          <div className="homebrew-builder-block monster-builder-block">
+            <div className="homebrew-card-head inline-head">
+              <div>
+                <span className="mini-label">Trait Builder</span>
+                <h3>Trait Ekle</h3>
+              </div>
+              <button type="button" onClick={addMonsterTraitFromBuilder}>
+                Trait Ekle
+              </button>
+            </div>
+
+            <div className="form-grid compact-form-grid">
+              <label>
+                Trait Name
+                <input
+                  value={monsterForm.traitName}
+                  onChange={(event) =>
+                    updateMonsterForm("traitName", event.target.value)
+                  }
+                  placeholder="Pack Tactics"
+                />
+              </label>
+
+              <label>
+                Trait Description
+                <input
+                  value={monsterForm.traitDescription}
+                  onChange={(event) =>
+                    updateMonsterForm("traitDescription", event.target.value)
+                  }
+                  placeholder="The creature has advantage..."
+                />
+              </label>
+            </div>
+          </div>
+
+          <div className="homebrew-builder-block monster-builder-block">
+            <div className="homebrew-card-head inline-head">
+              <div>
+                <span className="mini-label">Action Builder</span>
+                <h3>Attack / Action Ekle</h3>
+              </div>
+              <button type="button" onClick={addMonsterActionFromBuilder}>
+                Action Ekle
+              </button>
+            </div>
+
+            <div className="form-grid compact-form-grid">
+              <label>
+                Action Name
+                <input
+                  value={monsterForm.actionName}
+                  onChange={(event) =>
+                    updateMonsterForm("actionName", event.target.value)
+                  }
+                  placeholder="Scimitar, Sand Burst..."
+                />
+              </label>
+
+              <label>
+                Action Type
+                <select
+                  value={monsterForm.actionAttackType}
+                  onChange={(event) =>
+                    updateMonsterForm("actionAttackType", event.target.value)
+                  }
+                >
+                  <option value="melee-weapon">Melee Weapon Attack</option>
+                  <option value="ranged-weapon">Ranged Weapon Attack</option>
+                  <option value="melee-spell">Melee Spell Attack</option>
+                  <option value="ranged-spell">Ranged Spell Attack</option>
+                  <option value="utility">Utility / Special</option>
+                </select>
+              </label>
+
+              <label>
+                Ability
+                <select
+                  value={monsterForm.actionAbility}
+                  onChange={(event) =>
+                    updateMonsterForm("actionAbility", event.target.value)
+                  }
+                >
+                  {SAVE_ABILITY_OPTIONS.map((ability) => (
+                    <option key={ability} value={ability}>
+                      {ability.toUpperCase()}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <label>
+                Damage Dice
+                <input
+                  value={monsterForm.actionDamageDice}
+                  onChange={(event) =>
+                    updateMonsterForm("actionDamageDice", event.target.value)
+                  }
+                  placeholder="1d6+2"
+                />
+              </label>
+
+              <label>
+                Damage Type
+                <select
+                  value={monsterForm.actionDamageType}
+                  onChange={(event) =>
+                    updateMonsterForm("actionDamageType", event.target.value)
+                  }
+                >
+                  {DAMAGE_TYPE_OPTIONS.map((type) => (
+                    <option key={type} value={type}>
+                      {type}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <label>
+                Reach / Range
+                <input
+                  value={monsterForm.actionReachRange}
+                  onChange={(event) =>
+                    updateMonsterForm("actionReachRange", event.target.value)
+                  }
+                  placeholder="5 ft. veya 80/320 ft."
+                />
+              </label>
+            </div>
+
+            <label>
+              Action Extra Text
+              <textarea
+                value={monsterForm.actionDescription}
+                onChange={(event) =>
+                  updateMonsterForm("actionDescription", event.target.value)
+                }
+                rows={3}
+                placeholder="Hit sonrası ekstra efekt, save, prone, grapple..."
+              />
+            </label>
+
+            <div className="homebrew-effect-preview">
+              <strong>Action Preview</strong>
+              <span>{buildMonsterActionLine()}</span>
+            </div>
+          </div>
+
           <label>
             Traits
             <textarea
@@ -3861,7 +4122,7 @@ function HomebrewLab({
                 updateMonsterForm("traitsText", event.target.value)
               }
               rows={4}
-              placeholder="Virgülle ayır: Pack Tactics..., Sunlight Sensitivity..."
+              placeholder="Her satıra bir trait: Pack Tactics. ..., Sunlight Sensitivity. ..."
             />
           </label>
 
@@ -3873,7 +4134,7 @@ function HomebrewLab({
                 updateMonsterForm("actionsText", event.target.value)
               }
               rows={5}
-              placeholder="Virgülle ayır: Scimitar. Melee Weapon Attack..., Sand Burst. Ranged Spell Attack..."
+              placeholder="Her satıra bir action: Scimitar. Melee Weapon Attack... Hit: 1d6+2 slashing damage."
             />
           </label>
 
