@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { NavLink, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes, useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import type { DiceRollResult } from "../../core/dice/dice.types";
 import { rollDice } from "../../core/dice/diceRoller";
@@ -940,6 +940,29 @@ function parseFirstDiceExpression(text: string) {
   };
 }
 
+const FAVORITE_MONSTERS_STORAGE_KEY = "e4_dnd_favorite_monsters_v1";
+
+function loadFavoriteMonsterIds() {
+  try {
+    const raw = localStorage.getItem(FAVORITE_MONSTERS_STORAGE_KEY);
+
+    if (!raw) {
+      return [];
+    }
+
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed)
+      ? parsed.filter((id): id is string => typeof id === "string")
+      : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveFavoriteMonsterIds(ids: string[]) {
+  localStorage.setItem(FAVORITE_MONSTERS_STORAGE_KEY, JSON.stringify(ids));
+}
+
 function MonsterLibrary({
   rulesetData,
   isRulesetLoading,
@@ -949,14 +972,35 @@ function MonsterLibrary({
   isRulesetLoading: boolean;
   rulesetError: string | null;
 }) {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [typeFilter, setTypeFilter] = useState("all");
   const [crFilter, setCrFilter] = useState("all");
+  const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
+  const [favoriteMonsterIds, setFavoriteMonsterIds] = useState<string[]>(() =>
+    loadFavoriteMonsterIds(),
+  );
   const [monsterCombatState, setMonsterCombatState] = useState<
     Record<string, MonsterCombatState>
   >({});
 
   const monsters = rulesetData?.monsters ?? [];
+
+  useEffect(() => {
+    saveFavoriteMonsterIds(favoriteMonsterIds);
+  }, [favoriteMonsterIds]);
+
+  function toggleFavoriteMonster(monsterId: string) {
+    setFavoriteMonsterIds((current) =>
+      current.includes(monsterId)
+        ? current.filter((id) => id !== monsterId)
+        : [...current, monsterId],
+    );
+  }
+
+  const favoriteMonsterCount = monsters.filter((monster) =>
+    favoriteMonsterIds.includes(monster.id),
+  ).length;
 
   const monsterTypes = useMemo(() => {
     return Array.from(new Set(monsters.map((monster) => monster.type))).sort(
@@ -1005,10 +1049,19 @@ function MonsterLibrary({
       const matchesType = typeFilter === "all" || monster.type === typeFilter;
       const matchesCr =
         crFilter === "all" || monster.challengeRating === crFilter;
+      const matchesFavorite =
+        !showFavoritesOnly || favoriteMonsterIds.includes(monster.id);
 
-      return matchesSearch && matchesType && matchesCr;
+      return matchesSearch && matchesType && matchesCr && matchesFavorite;
     });
-  }, [monsters, searchTerm, typeFilter, crFilter]);
+  }, [
+    monsters,
+    searchTerm,
+    typeFilter,
+    crFilter,
+    showFavoritesOnly,
+    favoriteMonsterIds,
+  ]);
 
   function getMonsterCombatState(monster: DndMonsterData) {
     return (
@@ -1140,6 +1193,12 @@ function MonsterLibrary({
               <strong>{filteredMonsters.length}</strong>
               <p>sonuç</p>
             </div>
+
+            <div>
+              <span className="mini-label">Favorites</span>
+              <strong>{favoriteMonsterCount}</strong>
+              <p>favori</p>
+            </div>
           </div>
 
           <div className="character-filter-panel monster-filter-panel">
@@ -1182,6 +1241,17 @@ function MonsterLibrary({
               </select>
             </label>
 
+            <label className="checkbox-filter-row">
+              Favoriler
+              <button
+                type="button"
+                className={showFavoritesOnly ? "active" : ""}
+                onClick={() => setShowFavoritesOnly((current) => !current)}
+              >
+                {showFavoritesOnly ? "Sadece favoriler" : "Tümü"}
+              </button>
+            </label>
+
             <div className="filter-result-count">
               <strong>{filteredMonsters.length}</strong>
               <span>sonuç</span>
@@ -1202,10 +1272,11 @@ function MonsterLibrary({
                 const combatState = getMonsterCombatState(monster);
                 const latestMonsterRoll = combatState.rollHistory[0];
                 const attackModifier = getMonsterMainAttackModifier(monster);
+                const isFavorite = favoriteMonsterIds.includes(monster.id);
 
                 return (
                   <motion.article
-                    className="monster-card"
+                    className={isFavorite ? "monster-card favorite-monster-card" : "monster-card"}
                     key={monster.id}
                     whileHover={{ y: -5 }}
                   >
@@ -1218,9 +1289,23 @@ function MonsterLibrary({
                         <p>{monster.alignment}</p>
                       </div>
 
-                      <strong className="level-badge">
-                        CR {monster.challengeRating}
-                      </strong>
+                      <div className="monster-card-actions">
+                        <strong className="level-badge">
+                          CR {monster.challengeRating}
+                        </strong>
+                        <button
+                          type="button"
+                          onClick={() => toggleFavoriteMonster(monster.id)}
+                        >
+                          {isFavorite ? "★ Favori" : "☆ Favori"}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => navigate(`/monsters/${monster.id}`)}
+                        >
+                          Detay
+                        </button>
+                      </div>
                     </div>
 
                     <div className="monster-core-grid">
@@ -1424,6 +1509,347 @@ function MonsterLibrary({
           )}
         </>
       )}
+    </PageShell>
+  );
+}
+
+
+function MonsterDetail({
+  rulesetData,
+  isRulesetLoading,
+  rulesetError,
+}: {
+  rulesetData: RulesetData | null;
+  isRulesetLoading: boolean;
+  rulesetError: string | null;
+}) {
+  const { monsterId } = useParams();
+  const navigate = useNavigate();
+  const monster = rulesetData?.monsters.find((item) => item.id === monsterId);
+  const [favoriteMonsterIds, setFavoriteMonsterIds] = useState<string[]>(() =>
+    loadFavoriteMonsterIds(),
+  );
+  const [combatState, setCombatState] = useState<MonsterCombatState | null>(
+    null,
+  );
+
+  useEffect(() => {
+    saveFavoriteMonsterIds(favoriteMonsterIds);
+  }, [favoriteMonsterIds]);
+
+  useEffect(() => {
+    if (monster) {
+      setCombatState((current) =>
+        current ?? {
+          currentHp: monster.hitPoints,
+          rollHistory: [],
+        },
+      );
+    }
+  }, [monster]);
+
+  if (isRulesetLoading) {
+    return (
+      <PageShell
+        eyebrow="Monster Detail"
+        title="Monster yükleniyor"
+        description="Stat block çağırıyoruz. Canavar bile loading state yaşıyor."
+      >
+        <div className="empty-panel">
+          <h2>Data yükleniyor...</h2>
+          <p>Beklemedeyiz. Dramatik ama teknik.</p>
+        </div>
+      </PageShell>
+    );
+  }
+
+  if (rulesetError) {
+    return (
+      <PageShell
+        eyebrow="Monster Detail"
+        title="Monster data yüklenemedi"
+        description="Bir yerlerde JSON inledi."
+      >
+        <div className="empty-panel">
+          <h2>Data yüklenemedi</h2>
+          <p>{rulesetError}</p>
+        </div>
+      </PageShell>
+    );
+  }
+
+  if (!monster || !combatState) {
+    return (
+      <PageShell
+        eyebrow="Monster Detail"
+        title="Monster bulunamadı"
+        description="Ya silindi ya da boyut kapısından kaçtı. İkisi de sinir bozucu."
+      >
+        <button className="primary-action" onClick={() => navigate("/monsters")}>
+          Monster listesine dön
+        </button>
+      </PageShell>
+    );
+  }
+
+  const activeMonster = monster;
+  const activeCombatState = combatState;
+
+  const isFavorite = favoriteMonsterIds.includes(activeMonster.id);
+  const latestMonsterRoll = activeCombatState.rollHistory[0];
+  const attackModifier = getMonsterMainAttackModifier(activeMonster);
+
+  function toggleFavoriteMonster(monsterIdToToggle: string) {
+    setFavoriteMonsterIds((current) =>
+      current.includes(monsterIdToToggle)
+        ? current.filter((id) => id !== monsterIdToToggle)
+        : [...current, monsterIdToToggle],
+    );
+  }
+
+  function updateMonsterHp(amount: number) {
+    setCombatState((current) => {
+      const state = current ?? {
+        currentHp: activeMonster.hitPoints,
+        rollHistory: [],
+      };
+
+      return {
+        ...state,
+        currentHp: Math.max(
+          0,
+          Math.min(activeMonster.hitPoints, state.currentHp + amount),
+        ),
+      };
+    });
+  }
+
+  function resetMonsterCombat() {
+    setCombatState({
+      currentHp: activeMonster.hitPoints,
+      rollHistory: [],
+    });
+  }
+
+  function addMonsterRoll(label: string, result: DiceRollResult) {
+    setCombatState((current) => {
+      const state = current ?? {
+        currentHp: activeMonster.hitPoints,
+        rollHistory: [],
+      };
+
+      return {
+        ...state,
+        rollHistory: [
+          {
+            ...result,
+            notation: `${label}: ${result.notation}`,
+          },
+          ...state.rollHistory,
+        ].slice(0, 12),
+      };
+    });
+  }
+
+  function rollMonsterCheck(label: string, modifier: number) {
+    addMonsterRoll(
+      label,
+      rollDice({
+        count: 1,
+        sides: 20,
+        modifier,
+      }),
+    );
+  }
+
+  function rollMonsterDamage() {
+    const parsedDamage = parseFirstDiceExpression(activeMonster.actions.join(" "));
+
+    if (!parsedDamage) {
+      alert(
+        "Bu monster action içinde otomatik okunabilir damage dice bulamadım. Metin parse etmek yine medeniyeti yordu.",
+      );
+      return;
+    }
+
+    addMonsterRoll("Damage", rollDice(parsedDamage));
+  }
+
+  return (
+    <PageShell
+      eyebrow="Monster Detail"
+      title={activeMonster.name}
+      description={`${activeMonster.size} ${activeMonster.type} • ${activeMonster.alignment} • CR ${activeMonster.challengeRating}`}
+    >
+      <div className="monster-detail-layout">
+        <section className="monster-detail-main-card">
+          <div className="monster-card-head">
+            <div>
+              <span className="mini-label">{activeMonster.source ?? "Monster"}</span>
+              <h2>{activeMonster.name}</h2>
+              <p>{activeMonster.description}</p>
+            </div>
+
+            <div className="monster-card-actions">
+              <strong className="level-badge">CR {activeMonster.challengeRating}</strong>
+              <button onClick={() => toggleFavoriteMonster(activeMonster.id)}>
+                {isFavorite ? "★ Favori" : "☆ Favori"}
+              </button>
+              <button onClick={() => navigate("/monsters")}>Listeye Dön</button>
+            </div>
+          </div>
+
+          <div className="monster-core-grid monster-detail-core-grid">
+            <div>
+              <span>Armor Class</span>
+              <strong>{activeMonster.armorClass}</strong>
+            </div>
+            <div>
+              <span>Hit Points</span>
+              <strong>{activeMonster.hitPoints}</strong>
+              <em>{activeMonster.hitDice}</em>
+            </div>
+            <div>
+              <span>Speed</span>
+              <strong>{activeMonster.speed}</strong>
+            </div>
+            <div>
+              <span>Proficiency</span>
+              <strong>+{activeMonster.proficiencyBonus}</strong>
+            </div>
+          </div>
+
+          <div className="monster-ability-grid monster-detail-ability-grid">
+            {Object.entries(activeMonster.abilities).map(([ability, score]) => (
+              <div key={ability}>
+                <span>{ability.toUpperCase()}</span>
+                <strong>{score}</strong>
+                <em>{formatMonsterModifier(score)}</em>
+              </div>
+            ))}
+          </div>
+
+          <div className="monster-detail-section-grid">
+            <section className="monster-detail-section-card">
+              <span className="mini-label">Senses</span>
+              <p>{activeMonster.senses}</p>
+            </section>
+            <section className="monster-detail-section-card">
+              <span className="mini-label">Languages</span>
+              <p>{activeMonster.languages}</p>
+            </section>
+          </div>
+
+          <section className="monster-detail-section-card">
+            <span className="mini-label">Traits</span>
+            {activeMonster.traits.length > 0 ? (
+              activeMonster.traits.map((trait) => <p key={trait}>{trait}</p>)
+            ) : (
+              <p>Trait yok. Canavar sade yaşamı seçmiş.</p>
+            )}
+          </section>
+
+          <section className="monster-detail-section-card">
+            <span className="mini-label">Actions</span>
+            {activeMonster.actions.length > 0 ? (
+              activeMonster.actions.map((action) => <p key={action}>{action}</p>)
+            ) : (
+              <p>Action yok. Pasif agresif bir stat block.</p>
+            )}
+          </section>
+        </section>
+
+        <aside className="monster-detail-combat-card">
+          <span className="mini-label">Combat Tools</span>
+          <div className="hp-display">
+            <strong>
+              {activeCombatState.currentHp}/{activeMonster.hitPoints}
+            </strong>
+            <span>Monster HP</span>
+          </div>
+
+          <div className="hp-button-grid monster-hp-grid">
+            <button onClick={() => updateMonsterHp(-10)}>-10</button>
+            <button onClick={() => updateMonsterHp(-5)}>-5</button>
+            <button onClick={() => updateMonsterHp(-1)}>-1</button>
+            <button onClick={() => updateMonsterHp(1)}>+1</button>
+            <button onClick={() => updateMonsterHp(5)}>+5</button>
+            <button onClick={() => updateMonsterHp(10)}>+10</button>
+          </div>
+
+          <div className="monster-roll-buttons detail-monster-roll-buttons">
+            <button
+              onClick={() =>
+                rollMonsterCheck(
+                  "Initiative",
+                  getMonsterAbilityModifier(activeMonster.abilities.dex),
+                )
+              }
+            >
+              Initiative
+            </button>
+            <button onClick={() => rollMonsterCheck("Attack", attackModifier)}>
+              Attack {attackModifier >= 0 ? "+" : ""}
+              {attackModifier}
+            </button>
+            <button onClick={rollMonsterDamage}>Damage</button>
+            {Object.entries(activeMonster.abilities).map(([ability, score]) => (
+              <button
+                key={ability}
+                onClick={() =>
+                  rollMonsterCheck(
+                    `${ability.toUpperCase()} Check`,
+                    getMonsterAbilityModifier(score),
+                  )
+                }
+              >
+                {ability.toUpperCase()}
+              </button>
+            ))}
+          </div>
+
+          <button className="secondary-action" onClick={resetMonsterCombat}>
+            Combat Reset
+          </button>
+
+          <div className="monster-latest-roll detail-monster-latest-roll">
+            <span className="mini-label">Latest Monster Roll</span>
+            {latestMonsterRoll ? (
+              <>
+                <strong>{latestMonsterRoll.total}</strong>
+                <p>
+                  {latestMonsterRoll.notation} → [
+                  {latestMonsterRoll.rolls.join(", ")}]
+                  {latestMonsterRoll.modifier !== 0
+                    ? ` ${latestMonsterRoll.modifier > 0 ? "+" : ""}${
+                        latestMonsterRoll.modifier
+                      }`
+                    : ""}
+                </p>
+              </>
+            ) : (
+              <>
+                <strong>--</strong>
+                <p>Henüz roll yok. Canavar bile sıra bekliyor.</p>
+              </>
+            )}
+          </div>
+
+          <div className="monster-roll-history-list">
+            <span className="mini-label">Roll History</span>
+            {activeCombatState.rollHistory.length === 0 ? (
+              <p>Geçmiş boş. Stat block henüz suç işlememiş.</p>
+            ) : (
+              activeCombatState.rollHistory.map((roll) => (
+                <div className="monster-roll-history-item" key={roll.id}>
+                  <span>{roll.notation}</span>
+                  <strong>{roll.total}</strong>
+                </div>
+              ))
+            )}
+          </div>
+        </aside>
+      </div>
     </PageShell>
   );
 }
@@ -3929,6 +4355,17 @@ function App() {
               />
             }
           />
+          <Route
+            path="/monsters/:monsterId"
+            element={
+              <MonsterDetail
+                rulesetData={effectiveRulesetData}
+                isRulesetLoading={isRulesetLoading}
+                rulesetError={rulesetError}
+              />
+            }
+          />
+
           <Route
             path="/monsters"
             element={
