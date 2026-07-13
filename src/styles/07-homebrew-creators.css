@@ -1,0 +1,55 @@
+/* Homebrew Creator V2 */
+.homebrew-builder-block {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.homebrew-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.homebrew-check-card {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(8, 12, 26, 0.48);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.homebrew-check-card input {
+  width: 16px;
+  height: 16px;
+  accent-color: #d8e1ff;
+}
+
+.homebrew-effect-preview {
+  display: grid;
+  gap: 6px;
+  padding: 13px 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.homebrew-effect-preview strong {
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.homebrew-effect-preview span {
+  color: rgba(255, 255, 255, 0.74);
+  line-height: 1.45;
+}

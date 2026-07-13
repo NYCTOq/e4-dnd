@@ -1,0 +1,50 @@
+/* Full Backup V1 */
+.backup-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.backup-overview-grid div {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.backup-overview-grid strong,
+.backup-overview-grid span {
+  display: block;
+}
+
+.backup-overview-grid strong {
+  font-size: 30px;
+  letter-spacing: -0.06em;
+}
+
+.backup-overview-grid span {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.backup-danger-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.danger-action-strong {
+  border-color: rgba(255, 70, 95, 0.7);
+  background: rgba(255, 70, 95, 0.22);
+}
+
+@media (max-width: 760px) {
+  .backup-overview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

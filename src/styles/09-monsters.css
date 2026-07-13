@@ -1,0 +1,428 @@
+/* Monster / NPC Library V1 */
+.monster-library-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.monster-library-summary > div {
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(18px);
+}
+
+.monster-library-summary strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.monster-library-summary p {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.monster-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.monster-card {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(18px);
+}
+
+.monster-card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.monster-card-head h2 {
+  margin: 4px 0;
+}
+
+.monster-card-head p,
+.monster-description {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.monster-core-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.monster-core-grid > div,
+.monster-ability-grid > div {
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.monster-core-grid span,
+.monster-ability-grid span {
+  display: block;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.monster-core-grid strong,
+.monster-ability-grid strong {
+  display: block;
+  margin-top: 4px;
+}
+
+.monster-core-grid em,
+.monster-ability-grid em {
+  display: block;
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+.monster-ability-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.monster-meta-block {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.14);
+}
+
+.monster-meta-block p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.monster-details {
+  margin: 14px 0;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.monster-details summary {
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.monster-details h3 {
+  margin: 14px 0 8px;
+}
+
+.monster-details p {
+  margin: 8px 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+@media (max-width: 760px) {
+  .monster-library-summary,
+  .monster-card-grid,
+  .monster-core-grid,
+  .monster-ability-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Homebrew Monster Creator V1 */
+.homebrew-wide-form {
+  grid-column: 1 / -1;
+}
+
+.homebrew-ability-editor {
+  margin: 18px 0;
+}
+
+.homebrew-ability-editor label {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.homebrew-ability-editor input {
+  width: 100%;
+  min-height: 38px;
+  padding: 0 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #f7f8ff;
+  background: rgba(8, 12, 26, 0.72);
+}
+
+.homebrew-ability-editor em {
+  color: rgba(255, 255, 255, 0.66);
+  font-style: normal;
+  font-weight: 800;
+}
+
+/* Monster Combat Tools V1 */
+.monster-combat-tools {
+  display: grid;
+  gap: 14px;
+  margin: 16px 0;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.monster-hp-tracker {
+  display: grid;
+  gap: 12px;
+}
+
+.monster-hp-tracker strong {
+  display: block;
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.monster-hp-buttons,
+.monster-roll-button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.monster-hp-buttons button,
+.monster-roll-button-grid button {
+  min-height: 34px;
+  padding: 7px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  color: #f7f8ff;
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.monster-hp-buttons button:hover,
+.monster-roll-button-grid button:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.monster-quick-rolls {
+  display: grid;
+  gap: 10px;
+}
+
+.monster-roll-result {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(8, 12, 26, 0.55);
+}
+
+.monster-roll-result strong {
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.monster-roll-result span,
+.monster-roll-result.muted {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 720px) {
+  .monster-hp-buttons,
+  .monster-roll-button-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+/* Monster / NPC Detail + Favorites V2 */
+.monster-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.monster-card-actions button,
+.checkbox-filter-row button,
+.secondary-action {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: #f7f8ff;
+  background: rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.monster-card-actions button:hover,
+.checkbox-filter-row button:hover,
+.secondary-action:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.checkbox-filter-row button.active,
+.favorite-monster-card {
+  border-color: rgba(255, 230, 120, 0.42);
+  box-shadow: 0 0 0 1px rgba(255, 230, 120, 0.15), 0 18px 60px rgba(255, 230, 120, 0.08);
+}
+
+.monster-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.monster-detail-main-card,
+.monster-detail-combat-card,
+.monster-detail-section-card {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  padding: 20px;
+}
+
+.monster-detail-core-grid {
+  margin: 20px 0;
+}
+
+.monster-detail-ability-grid {
+  margin-bottom: 18px;
+}
+
+.monster-detail-section-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.monster-detail-section-card {
+  margin-bottom: 14px;
+}
+
+.monster-detail-section-card p {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.monster-detail-combat-card {
+  position: sticky;
+  top: 22px;
+}
+
+.detail-monster-roll-buttons {
+  margin: 16px 0;
+}
+
+.detail-monster-latest-roll {
+  margin-top: 16px;
+}
+
+.monster-roll-history-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.monster-roll-history-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.monster-roll-history-item span {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+@media (max-width: 1100px) {
+  .monster-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .monster-detail-combat-card {
+    position: static;
+  }
+}
+
+@media (max-width: 700px) {
+  .monster-detail-section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .monster-card-actions {
+    justify-content: flex-start;
+  }
+}
+
+/* Homebrew Monster Creator V2 */
+.monster-builder-block {
+  margin-top: 18px;
+}
+
+.homebrew-card-head.inline-head {
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+.homebrew-card-head.inline-head h3 {
+  margin: 4px 0 0;
+  font-size: 1.05rem;
+}
+
+.homebrew-card-head.inline-head button {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 12px;
+  color: #101524;
+  background: #f7f8ff;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.monster-builder-block .homebrew-effect-preview span {
+  white-space: pre-wrap;
+  line-height: 1.45;
+}
+
+@media (max-width: 780px) {
+  .homebrew-card-head.inline-head {
+    align-items: stretch;
+  }
+
+  .homebrew-card-head.inline-head button {
+    width: 100%;
+  }
+}

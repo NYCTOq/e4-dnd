@@ -1,0 +1,146 @@
+/* Level Up Assistant V1 */
+.level-up-launch-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  margin: 18px 0 24px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.065);
+}
+
+.level-up-launch-card > div:first-child strong,
+.level-up-confirm-bar strong {
+  display: block;
+  color: #f7f8ff;
+  font-size: 1.2rem;
+}
+
+.level-up-launch-card > div:first-child p {
+  margin: 6px 0 0;
+}
+
+.level-up-panel {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 14px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.level-up-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.level-up-summary-grid div,
+.level-up-section {
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 18px;
+  background: rgba(8, 12, 26, 0.42);
+}
+
+.level-up-summary-grid div {
+  padding: 14px;
+}
+
+.level-up-summary-grid span,
+.level-up-confirm-bar span {
+  display: block;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.level-up-summary-grid strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+.level-up-section {
+  padding: 16px;
+}
+
+.level-up-section h3 {
+  margin: 4px 0 0;
+}
+
+.level-up-choice-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.level-up-choice-grid button.active {
+  color: #070b16;
+  background: var(--text);
+}
+
+.level-up-inline-control {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.level-up-manual-field {
+  max-width: 220px;
+  margin-top: 12px;
+}
+
+.level-up-ability-selects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.level-up-checklist ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+}
+
+.level-up-confirm-bar {
+  position: sticky;
+  bottom: 12px;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  background: rgba(8, 12, 26, 0.92);
+  backdrop-filter: blur(18px);
+}
+
+.level-cap-card {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 760px) {
+  .level-up-launch-card,
+  .level-up-summary-grid,
+  .level-up-ability-selects {
+    grid-template-columns: 1fr;
+  }
+
+  .level-up-launch-card > button {
+    width: 100%;
+  }
+
+  .level-up-confirm-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

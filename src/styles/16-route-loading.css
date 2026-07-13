@@ -1,0 +1,33 @@
+/* Route-based code splitting loading state */
+.route-loading {
+  min-height: min(520px, calc(100vh - 150px));
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 16px;
+  color: var(--text);
+  text-align: center;
+}
+
+.route-loading-orb {
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.22), transparent 26%),
+    rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow);
+  font-size: 21px;
+  font-weight: 950;
+  letter-spacing: -0.08em;
+  animation: diceFloat 1.8s ease-in-out infinite;
+}
+
+.route-loading strong {
+  color: var(--muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}

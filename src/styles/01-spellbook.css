@@ -1,0 +1,514 @@
+/* Character filters + Spellbook styles: paste at the end of src/App.css */
+
+.character-filter-panel {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.5fr) minmax(160px, 0.8fr) minmax(160px, 0.8fr) auto;
+  gap: 14px;
+  align-items: end;
+  margin: 26px 0;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(18px);
+}
+
+.character-filter-panel label {
+  display: grid;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.character-filter-panel input,
+.character-filter-panel select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  outline: none;
+  color: #f7f8ff;
+  background: rgba(8, 12, 26, 0.72);
+}
+
+.character-filter-panel input:focus,
+.character-filter-panel select:focus {
+  border-color: rgba(210, 220, 255, 0.62);
+}
+
+.filter-result-count {
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  padding: 8px 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.filter-result-count strong {
+  line-height: 1;
+  font-size: 1.25rem;
+}
+
+.filter-result-count span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.spell-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.spell-card {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.075);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+}
+
+.spell-card h3 {
+  margin: 4px 0 0;
+  font-size: 24px;
+  letter-spacing: -0.045em;
+}
+
+.spell-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.spell-meta-grid span,
+.spell-higher-levels {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(8, 12, 26, 0.44);
+  padding: 10px 12px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.88rem;
+}
+
+.spell-higher-levels {
+  line-height: 1.55;
+}
+
+.detail-actions {
+  margin: 18px 0 22px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .character-filter-panel,
+  .spell-grid,
+  .spell-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-result-count {
+    justify-items: start;
+  }
+}
+
+.character-spell-selector {
+  display: grid;
+  gap: 18px;
+}
+
+.spell-selector-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.spell-selector-head p {
+  max-width: 760px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.spell-selector-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.spell-selector-counts span,
+.spell-selector-note {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.spell-selector-note {
+  border-radius: 16px;
+  line-height: 1.55;
+}
+
+.spell-selector-filters {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(160px, 0.35fr);
+  gap: 14px;
+}
+
+.spell-selector-filters label {
+  display: grid;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.spell-selector-filters input,
+.spell-selector-filters select {
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  outline: none;
+  color: #f7f8ff;
+  background: rgba(8, 12, 26, 0.72);
+}
+
+.character-spell-list,
+.character-detail-spell-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.character-spell-row,
+.detail-spell-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.character-spell-row.selected,
+.detail-spell-card:has(.detail-spell-actions .active) {
+  border-color: rgba(210, 220, 255, 0.55);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.character-spell-row-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.character-spell-row-head strong {
+  font-size: 1.02rem;
+}
+
+.character-spell-row-head span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.76rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.character-spell-row p,
+.detail-spell-card p {
+  margin: 0 0 12px;
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.55;
+}
+
+.spell-row-actions {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-width: 120px;
+}
+
+.spell-row-actions button {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 13px;
+  color: #f7f8ff;
+  background: rgba(255, 255, 255, 0.08);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.spell-row-actions button.active {
+  border-color: rgba(210, 220, 255, 0.72);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.character-detail-spellbook {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.detail-spell-card {
+  grid-template-columns: 1fr;
+}
+
+.detail-spell-actions {
+  display: flex;
+  min-width: 0;
+}
+
+@media (max-width: 760px) {
+  .spell-selector-head,
+  .character-spell-row {
+    grid-template-columns: 1fr;
+  }
+
+  .spell-selector-head {
+    display: grid;
+  }
+
+  .spell-selector-counts {
+    justify-content: flex-start;
+  }
+
+  .spell-selector-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .spell-row-actions {
+    grid-template-columns: 1fr 1fr;
+    min-width: 0;
+  }
+}
+
+/* Spell Slots & Casting V3 */
+.spell-slot-panel,
+.prepared-cast-panel {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.spell-slot-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.spell-slot-head button {
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  color: #f7f8ff;
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+.spell-slot-head button:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.spell-slot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.spell-slot-card {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(8, 12, 26, 0.54);
+}
+
+.spell-slot-card span,
+.spell-slot-card small {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.spell-slot-card strong {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.spell-slot-empty {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.prepared-cast-list {
+  display: grid;
+  gap: 8px;
+}
+
+.prepared-cast-list button {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  color: #f7f8ff;
+  background: rgba(8, 12, 26, 0.6);
+  cursor: pointer;
+}
+
+.prepared-cast-list button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.prepared-cast-list button:disabled,
+.detail-spell-actions button:disabled {
+  opacity: 0.44;
+  cursor: not-allowed;
+}
+
+.prepared-cast-list span {
+  font-weight: 900;
+}
+
+.prepared-cast-list small {
+  color: rgba(255, 255, 255, 0.62);
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .spell-slot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Big Update 4: Spellbook polish, cantrips and concentration UX */
+.character-detail-spell-groups,
+.character-spell-list {
+  display: grid;
+  gap: 18px;
+}
+
+.spell-level-group {
+  display: grid;
+  gap: 12px;
+}
+
+.spell-level-title {
+  margin: 0;
+  padding: 0 2px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.spell-status-pill {
+  display: inline-grid;
+  min-height: 34px;
+  place-items: center;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.spell-status-pill.active {
+  color: #f7f8ff;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.spell-description-toggle {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.spell-description-toggle summary {
+  cursor: pointer;
+  width: fit-content;
+  padding: 7px 12px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.76);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.spell-description-toggle p {
+  margin: 0;
+}
+
+.spell-higher-levels {
+  padding-top: 8px;
+  color: rgba(255, 255, 255, 0.64);
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.spell-slot-bar {
+  width: 100%;
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.spell-slot-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.prepared-cast-group {
+  display: grid;
+  gap: 7px;
+}
+
+.prepared-cast-group > strong {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.detail-spell-card .spell-meta-grid {
+  margin-top: 10px;
+}
+
+.character-spell-row .spell-status-pill {
+  white-space: nowrap;
+}

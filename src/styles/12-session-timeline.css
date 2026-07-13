@@ -1,0 +1,127 @@
+/* Session Timeline V1 */
+.session-timeline-card {
+  display: grid;
+  gap: 20px;
+}
+
+.timeline-section-head {
+  align-items: flex-start;
+}
+
+.timeline-section-head p {
+  max-width: 720px;
+  margin: 8px 0 0;
+}
+
+.timeline-toggle.active {
+  background: var(--text);
+  color: #070b16;
+}
+
+.session-timeline-layout,
+.timeline-form,
+.timeline-entry-list {
+  display: grid;
+  gap: 16px;
+}
+
+.timeline-form {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.timeline-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.timeline-form-actions,
+.timeline-entry-head > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.timeline-entry {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.timeline-entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.timeline-entry-head span {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.timeline-entry-head h3 {
+  margin: 6px 0 0;
+  font-size: 26px;
+  letter-spacing: -0.045em;
+}
+
+.timeline-summary {
+  margin: 16px 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.timeline-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.timeline-entry-grid > div,
+.timeline-notes {
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: rgba(8, 12, 26, 0.38);
+}
+
+.timeline-entry-grid strong,
+.timeline-notes strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.timeline-entry-grid ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.timeline-notes {
+  margin-top: 12px;
+}
+
+.timeline-notes p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 900px) {
+  .timeline-fields-grid,
+  .timeline-entry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-section-head,
+  .timeline-entry-head {
+    display: grid;
+  }
+}

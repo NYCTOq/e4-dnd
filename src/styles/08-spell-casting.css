@@ -1,0 +1,52 @@
+/* Spell Casting V4 */
+.cast-history-panel {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.cast-history-list {
+  display: grid;
+  gap: 12px;
+}
+
+.cast-history-item {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: rgba(8, 12, 26, 0.48);
+}
+
+.cast-history-item > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.cast-history-item strong {
+  color: #f7f8ff;
+}
+
+.cast-history-item span,
+.cast-history-item p,
+.cast-history-item li {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.cast-history-item p {
+  margin: 0;
+}
+
+.cast-history-item ul {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding-left: 18px;
+}

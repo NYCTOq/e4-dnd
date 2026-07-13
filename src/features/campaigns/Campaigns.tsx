@@ -11,6 +11,12 @@ import type {
   CampaignQuest,
 } from "./campaignTypes";
 import { getMonsterAbilityModifier } from "../monsters/monsterUtils";
+import { EncounterDifficultyPanel } from "./EncounterDifficultyPanel";
+import { EncounterCombatRolls } from "./EncounterCombatRolls";
+import { EncounterConditionTracker } from "./EncounterConditionTracker";
+import { EncounterLootGenerator } from "./EncounterLootGenerator";
+import { EncounterToolSettings } from "./EncounterToolSettings";
+import { SessionTimeline } from "./SessionTimeline";
 
 export function Campaigns({
   characters,
@@ -288,6 +294,45 @@ export function Campaigns({
     });
   }
 
+
+  function updateTimelineEntries(entries: Campaign["timelineEntries"]) {
+    if (!selectedCampaign) {
+      return;
+    }
+
+    onUpdateCampaign({
+      ...selectedCampaign,
+      timelineEntries: entries,
+      updatedAt: new Date().toISOString(),
+    });
+  }
+
+  function toggleTimelineEnabled(enabled: boolean) {
+    if (!selectedCampaign) {
+      return;
+    }
+
+    onUpdateCampaign({
+      ...selectedCampaign,
+      timelineEnabled: enabled,
+      updatedAt: new Date().toISOString(),
+    });
+  }
+
+  function updateEncounterTools(
+    encounterTools: Campaign["encounterTools"],
+  ) {
+    if (!selectedCampaign) {
+      return;
+    }
+
+    onUpdateCampaign({
+      ...selectedCampaign,
+      encounterTools,
+      updatedAt: new Date().toISOString(),
+    });
+  }
+
   function createEncounter(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
@@ -303,6 +348,7 @@ export function Campaigns({
       activeTurnIndex: 0,
       isActive: true,
       participants: [],
+      rewards: [],
       createdAt: now,
       updatedAt: now,
     };
@@ -397,6 +443,7 @@ export function Campaigns({
           notes: `${character.race || "Race yok"} • ${
             character.className || "Class yok"
           }`,
+          conditions: [],
         },
       ],
     }));
@@ -430,6 +477,7 @@ export function Campaigns({
           initiative: null,
           initiativeModifier: dexModifier,
           notes: `${monster.size} ${monster.type} • CR ${monster.challengeRating}`,
+          conditions: [],
         },
       ],
     }));
@@ -445,6 +493,65 @@ export function Campaigns({
               currentHp: Math.max(
                 0,
                 Math.min(participant.maxHp, participant.currentHp + amount),
+              ),
+            }
+          : participant,
+      ),
+    }));
+  }
+
+  function addEncounterCondition(
+    participantId: string,
+    name: string,
+    remainingRounds: number | null,
+  ) {
+    updateSelectedEncounter((encounter) => ({
+      ...encounter,
+      participants: encounter.participants.map((participant) =>
+        participant.id === participantId
+          ? {
+              ...participant,
+              conditions: [
+                ...participant.conditions,
+                { id: crypto.randomUUID(), name, remainingRounds },
+              ],
+            }
+          : participant,
+      ),
+    }));
+  }
+
+  function removeEncounterCondition(participantId: string, conditionId: string) {
+    updateSelectedEncounter((encounter) => ({
+      ...encounter,
+      participants: encounter.participants.map((participant) =>
+        participant.id === participantId
+          ? {
+              ...participant,
+              conditions: participant.conditions.filter(
+                (condition) => condition.id !== conditionId,
+              ),
+            }
+          : participant,
+      ),
+    }));
+  }
+
+  function changeEncounterConditionRounds(
+    participantId: string,
+    conditionId: string,
+    remainingRounds: number | null,
+  ) {
+    updateSelectedEncounter((encounter) => ({
+      ...encounter,
+      participants: encounter.participants.map((participant) =>
+        participant.id === participantId
+          ? {
+              ...participant,
+              conditions: participant.conditions.map((condition) =>
+                condition.id === conditionId
+                  ? { ...condition, remainingRounds }
+                  : condition,
               ),
             }
           : participant,
@@ -513,6 +620,25 @@ export function Campaigns({
         activeTurnIndex: shouldAdvanceRound ? 0 : nextTurnIndex,
         round: shouldAdvanceRound ? encounter.round + 1 : encounter.round,
         isActive: true,
+        participants: shouldAdvanceRound
+          ? encounter.participants.map((participant) => ({
+              ...participant,
+              conditions: participant.conditions
+                .map((condition) =>
+                  condition.remainingRounds === null
+                    ? condition
+                    : {
+                        ...condition,
+                        remainingRounds: condition.remainingRounds - 1,
+                      },
+                )
+                .filter(
+                  (condition) =>
+                    condition.remainingRounds === null ||
+                    condition.remainingRounds > 0,
+                ),
+            }))
+          : encounter.participants,
       };
     });
   }
@@ -649,6 +775,13 @@ export function Campaigns({
               </div>
             </section>
 
+            <SessionTimeline
+              entries={selectedCampaign.timelineEntries}
+              enabled={selectedCampaign.timelineEnabled}
+              onToggleEnabled={toggleTimelineEnabled}
+              onChange={updateTimelineEntries}
+            />
+
             <section className="campaign-card encounter-tracker-card">
               <div className="campaign-section-head">
                 <div>
@@ -747,6 +880,33 @@ export function Campaigns({
                         </button>
                       </div>
                     </div>
+
+                    <EncounterToolSettings
+                      value={selectedCampaign.encounterTools}
+                      onChange={updateEncounterTools}
+                    />
+
+                    {selectedCampaign.encounterTools.difficulty ? (
+                      <EncounterDifficultyPanel
+                      encounter={selectedEncounter}
+                      campaignParty={partyCharacters}
+                      monsters={availableMonsters}
+                      />
+                    ) : null}
+
+                    {selectedCampaign.encounterTools.loot ? (
+                      <EncounterLootGenerator
+                      encounter={selectedEncounter}
+                      monsters={availableMonsters}
+                      items={rulesetData?.items ?? []}
+                      onChange={(rewards) =>
+                        updateSelectedEncounter((encounter) => ({
+                          ...encounter,
+                          rewards,
+                        }))
+                      }
+                      />
+                    ) : null}
 
                     <div className="encounter-add-grid">
                       <section className="encounter-add-card">
@@ -906,6 +1066,55 @@ export function Campaigns({
                                   +10
                                 </button>
                               </div>
+
+                              {selectedCampaign.encounterTools.conditions ? (
+                                <EncounterConditionTracker
+                                  participant={participant}
+                                onAdd={(name, remainingRounds) =>
+                                  addEncounterCondition(
+                                    participant.id,
+                                    name,
+                                    remainingRounds,
+                                  )
+                                }
+                                onRemove={(conditionId) =>
+                                  removeEncounterCondition(
+                                    participant.id,
+                                    conditionId,
+                                  )
+                                }
+                                onChangeRounds={(conditionId, remainingRounds) =>
+                                  changeEncounterConditionRounds(
+                                    participant.id,
+                                    conditionId,
+                                    remainingRounds,
+                                  )
+                                }
+                                />
+                              ) : null}
+
+                              {selectedCampaign.encounterTools.combatRolls ? (
+                                <EncounterCombatRolls
+                                participant={participant}
+                                character={
+                                  participant.sourceType === "character"
+                                    ? characters.find(
+                                        (character) =>
+                                          character.id === participant.sourceId,
+                                      )
+                                    : undefined
+                                }
+                                monster={
+                                  participant.sourceType === "monster"
+                                    ? availableMonsters.find(
+                                        (monster) =>
+                                          monster.id === participant.sourceId,
+                                      )
+                                    : undefined
+                                }
+                                items={rulesetData?.items ?? []}
+                                />
+                              ) : null}
 
                               <button
                                 className="danger-action compact-danger"

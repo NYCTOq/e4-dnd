@@ -5,6 +5,7 @@ import type { RulesetData, DndSpellData } from "../../core/rulesets/ruleset.type
 import type { Character } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellAttackBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
+import { LevelUpAssistant } from "./LevelUpAssistant";
 import { calculateEffectiveArmorClass, calculateSuggestedArmorClass, getCharacterInventoryItems, getEquippedItems, getInventoryWeight, getItemCategoryLabel, getItemRulesSummary, getSpellGroupTitle, getSpellLevelGroups, getSpellLevelLabel, getWeaponAttackBonus, getWeaponDamageSummary, isSpellReadyToCast, normalizeHitDice, normalizeSpellSlots, resetDeathSaves, resetHitDice, resetSpellSlots, sortSpellsByLevelAndName } from "./characterShared";
 
 interface CharacterCastHistoryItem {
@@ -630,6 +631,12 @@ export function CharacterDetail({
 
             <button onClick={() => navigate("/characters")}>Listeye Dön</button>
           </div>
+
+          <LevelUpAssistant
+            character={activeCharacter}
+            rulesetData={rulesetData}
+            onUpdateCharacter={onUpdateCharacter}
+          />
 
           <div className="ability-detail-grid">
             {Object.entries(activeCharacter.abilities).map(

@@ -11,72 +11,11 @@ import {
   getMonsterAbilityModifier,
 } from "../monsters/monsterUtils";
 
-const HOMEBREW_SPELLS_STORAGE_KEY = "e4_dnd_homebrew_spells_v1";
-const HOMEBREW_ITEMS_STORAGE_KEY = "e4_dnd_homebrew_items_v1";
-const HOMEBREW_MONSTERS_STORAGE_KEY = "e4_dnd_homebrew_monsters_v1";
-
 function parseTextList(value: string) {
   return value
     .split(",")
     .map((item) => item.trim())
     .filter(Boolean);
-}
-
-export function loadHomebrewSpells(): DndSpellData[] {
-  try {
-    const raw = localStorage.getItem(HOMEBREW_SPELLS_STORAGE_KEY);
-
-    if (!raw) {
-      return [];
-    }
-
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? (parsed as DndSpellData[]) : [];
-  } catch {
-    return [];
-  }
-}
-
-export function saveHomebrewSpells(spells: DndSpellData[]) {
-  localStorage.setItem(HOMEBREW_SPELLS_STORAGE_KEY, JSON.stringify(spells));
-}
-
-export function loadHomebrewItems(): DndItemData[] {
-  try {
-    const raw = localStorage.getItem(HOMEBREW_ITEMS_STORAGE_KEY);
-
-    if (!raw) {
-      return [];
-    }
-
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? (parsed as DndItemData[]) : [];
-  } catch {
-    return [];
-  }
-}
-
-export function saveHomebrewItems(items: DndItemData[]) {
-  localStorage.setItem(HOMEBREW_ITEMS_STORAGE_KEY, JSON.stringify(items));
-}
-
-export function loadHomebrewMonsters(): DndMonsterData[] {
-  try {
-    const raw = localStorage.getItem(HOMEBREW_MONSTERS_STORAGE_KEY);
-
-    if (!raw) {
-      return [];
-    }
-
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? (parsed as DndMonsterData[]) : [];
-  } catch {
-    return [];
-  }
-}
-
-export function saveHomebrewMonsters(monsters: DndMonsterData[]) {
-  localStorage.setItem(HOMEBREW_MONSTERS_STORAGE_KEY, JSON.stringify(monsters));
 }
 
 const SPELL_CLASS_OPTIONS = [

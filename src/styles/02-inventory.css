@@ -1,0 +1,292 @@
+/* Inventory & Equipment V1 */
+.character-inventory-manager {
+  display: grid;
+  gap: 18px;
+}
+
+.inventory-manager-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.inventory-manager-head p {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.inventory-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(76px, 1fr));
+  gap: 10px;
+  min-width: min(100%, 430px);
+}
+
+.inventory-summary-grid div,
+.inventory-equipped-grid div {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.inventory-summary-grid strong,
+.inventory-equipped-grid strong {
+  display: block;
+  color: #f7f8ff;
+  font-size: 1.1rem;
+}
+
+.inventory-summary-grid span,
+.inventory-equipped-grid span {
+  display: block;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.inventory-gold-grid {
+  grid-template-columns: minmax(160px, 0.5fr) minmax(160px, 0.5fr);
+}
+
+.inventory-equipped-panel {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  background: rgba(10, 16, 34, 0.45);
+}
+
+.inventory-equipped-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.detail-equipped-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 14px 0;
+}
+
+.inventory-item-list,
+.inventory-detail-list {
+  display: grid;
+  gap: 12px;
+}
+
+.inventory-item-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.inventory-item-row.selected {
+  border-color: rgba(210, 220, 255, 0.44);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.inventory-item-row p {
+  margin: 8px 0 10px;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.inventory-row-actions {
+  display: grid;
+  justify-items: end;
+  gap: 10px;
+}
+
+.inventory-row-actions button,
+.inventory-qty-controls button {
+  border: 0;
+  border-radius: 999px;
+  padding: 9px 13px;
+  color: #f7f8ff;
+  background: rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+}
+
+.inventory-row-actions button.active {
+  color: #101426;
+  background: rgba(245, 247, 255, 0.9);
+}
+
+.inventory-qty-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(8, 12, 26, 0.48);
+}
+
+.inventory-qty-controls strong {
+  min-width: 24px;
+  text-align: center;
+}
+
+.character-equipment-panel {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.inventory-detail-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: rgba(8, 12, 26, 0.42);
+}
+
+.inventory-detail-item strong,
+.inventory-detail-item b {
+  display: block;
+  color: #f7f8ff;
+}
+
+.inventory-detail-item span,
+.inventory-detail-item small {
+  display: block;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.inventory-library-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.inventory-library-card {
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+}
+
+.inventory-library-card p {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+@media (max-width: 980px) {
+  .inventory-manager-head,
+  .inventory-item-row,
+  .inventory-detail-item {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .inventory-manager-head {
+    display: grid;
+  }
+
+  .inventory-summary-grid,
+  .inventory-equipped-grid,
+  .detail-equipped-grid,
+  .inventory-library-grid,
+  .inventory-gold-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inventory-row-actions {
+    justify-items: start;
+  }
+}
+
+/* Combat Calculator V2 */
+.detail-stat-grid em {
+  display: block;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.weapon-attack-list {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.weapon-attack-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: rgba(7, 11, 24, 0.38);
+}
+
+.weapon-attack-card div:first-child {
+  display: grid;
+  gap: 4px;
+}
+
+.weapon-attack-card strong {
+  color: #fff;
+}
+
+.weapon-attack-card span,
+.weapon-attack-card small {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.76rem;
+}
+
+.weapon-attack-card div:last-child {
+  min-width: 110px;
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+}
+
+.weapon-attack-card b {
+  color: #fff;
+  font-size: 1.15rem;
+}
+
+.inventory-gold-grid {
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+}
+
+.inventory-gold-grid input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .inventory-gold-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weapon-attack-card {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .weapon-attack-card div:last-child {
+    justify-items: start;
+  }
+}

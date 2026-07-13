@@ -1,0 +1,102 @@
+/* Advanced Character Tools V1 */
+.advanced-character-panel,
+.condition-duration-panel {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.death-save-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.death-save-grid > div {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(8, 12, 26, 0.46);
+}
+
+.death-save-grid span,
+.condition-duration-list span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.death-save-grid strong {
+  font-size: 1.2rem;
+}
+
+.tiny-button-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.tiny-button-row button,
+.hit-dice-panel button,
+.condition-duration-panel button {
+  min-height: 34px;
+  border: 0;
+  border-radius: 12px;
+  color: #f7f8ff;
+  background: rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+}
+
+.tiny-button-row button:hover,
+.hit-dice-panel button:hover,
+.condition-duration-panel button:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.hit-dice-panel {
+  display: grid;
+  gap: 10px;
+}
+
+.hit-dice-panel button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.condition-duration-list {
+  display: grid;
+  gap: 10px;
+}
+
+.condition-duration-list label {
+  display: grid;
+  grid-template-columns: 1fr 88px;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 14px;
+  background: rgba(8, 12, 26, 0.46);
+}
+
+.condition-duration-list input {
+  width: 100%;
+  min-height: 36px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  color: #f7f8ff;
+  background: rgba(8, 12, 26, 0.72);
+}
+
+@media (max-width: 720px) {
+  .death-save-grid {
+    grid-template-columns: 1fr;
+  }
+}

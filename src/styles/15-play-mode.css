@@ -1,0 +1,324 @@
+/* Play Mode V1 */
+.play-mode-v1 {
+  display: grid;
+  gap: 16px;
+}
+
+.play-mode-toolbar,
+.play-mode-hero,
+.play-mode-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+.play-mode-toolbar {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px;
+}
+
+.play-mode-toolbar label {
+  width: min(100%, 520px);
+}
+
+.play-mode-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px;
+}
+
+.play-mode-hero h2,
+.play-mode-hero p {
+  margin: 4px 0 0;
+}
+
+.play-mode-core-stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(78px, 1fr));
+  gap: 8px;
+}
+
+.play-mode-core-stats div {
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255,255,255,.06);
+  text-align: center;
+}
+
+.play-mode-core-stats span,
+.play-mode-core-stats strong {
+  display: block;
+}
+
+.play-mode-core-stats span {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.play-mode-core-stats strong {
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+.play-mode-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.play-mode-card {
+  padding: 20px;
+}
+
+.play-mode-hp-card,
+.play-mode-spell-card {
+  grid-column: span 2;
+}
+
+.play-mode-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.play-mode-section-head h2 {
+  margin: 3px 0 0;
+  font-size: 28px;
+}
+
+.play-mode-hp-number {
+  font-size: clamp(34px, 6vw, 62px);
+  letter-spacing: -.07em;
+}
+
+.play-mode-hp-bar {
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+}
+
+.play-mode-hp-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: rgba(255,255,255,.72);
+  transition: width .25s ease;
+}
+
+.play-mode-big-buttons {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.play-mode-big-buttons button {
+  min-height: 72px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.play-mode-temp-hp {
+  max-width: 220px;
+  margin-top: 14px;
+}
+
+.play-mode-condition-grid,
+.play-mode-roll-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.play-mode-condition-grid button,
+.play-mode-roll-grid button {
+  min-height: 54px;
+  border-radius: 16px;
+}
+
+.play-mode-condition-grid button.active {
+  background: var(--text);
+  color: #070b16;
+}
+
+.play-mode-roll-grid button {
+  display: grid;
+  gap: 2px;
+}
+
+.play-mode-roll-grid span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.play-mode-slot-grid,
+.play-mode-spell-list,
+.play-mode-roll-history,
+.play-mode-rest-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.play-mode-slot-row,
+.play-mode-roll-history div,
+.play-mode-weapon-roll {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255,255,255,.055);
+}
+
+.play-mode-slot-row span,
+.play-mode-slot-row strong,
+.play-mode-roll-history span,
+.play-mode-roll-history small {
+  display: block;
+}
+
+.play-mode-slot-row span,
+.play-mode-roll-history small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.play-mode-slot-row > div:last-child {
+  display: flex;
+  gap: 7px;
+}
+
+.play-mode-slot-row button {
+  min-width: 42px;
+  padding: 10px;
+}
+
+.play-mode-weapon-roll {
+  width: 100%;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.play-mode-weapon-roll span,
+.play-mode-weapon-roll small {
+  display: block;
+}
+
+.play-mode-weapon-roll small {
+  color: var(--muted);
+}
+
+.play-mode-roll-history {
+  margin-top: 12px;
+}
+
+.play-mode-roll-history strong {
+  font-size: 28px;
+}
+
+.play-mode-spell-group {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.play-mode-spell-group > strong {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.play-mode-spell-group button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 54px;
+  border-radius: 16px;
+  text-align: left;
+}
+
+.play-mode-spell-group small,
+.play-mode-rest-actions small {
+  color: var(--muted);
+}
+
+.play-mode-rest-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 16px;
+}
+
+.play-mode-v1.focus-mode .play-mode-toolbar,
+.play-mode-v1.focus-mode .play-mode-hero p,
+.play-mode-v1.focus-mode .mini-label {
+  display: none;
+}
+
+.play-mode-v1.focus-mode .play-mode-card {
+  box-shadow: none;
+}
+
+@media (max-width: 900px) {
+  .play-mode-toolbar,
+  .play-mode-hero {
+    display: grid;
+  }
+
+  .play-mode-core-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .play-mode-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .play-mode-hp-card,
+  .play-mode-spell-card {
+    grid-column: auto;
+  }
+
+  .play-mode-big-buttons {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .play-mode-condition-grid,
+  .play-mode-roll-grid,
+  .play-mode-spell-group {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .play-mode-core-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .play-mode-section-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .play-mode-condition-grid,
+  .play-mode-roll-grid,
+  .play-mode-spell-group {
+    grid-template-columns: 1fr;
+  }
+}

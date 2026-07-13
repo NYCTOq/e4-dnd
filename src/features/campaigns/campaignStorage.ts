@@ -34,6 +34,56 @@ export function loadCampaigns(): Campaign[] {
         : [],
       npcNotes: Array.isArray(campaign.npcNotes) ? campaign.npcNotes : [],
       quests: Array.isArray(campaign.quests) ? campaign.quests : [],
+      timelineEntries: Array.isArray(campaign.timelineEntries)
+        ? campaign.timelineEntries
+            .filter((entry: unknown) => Boolean(entry) && typeof entry === "object")
+            .map((entry: unknown) => {
+              const parsed = entry as {
+                id?: unknown; title?: unknown; sessionDate?: unknown; summary?: unknown;
+                events?: unknown; npcs?: unknown; questUpdates?: unknown; loot?: unknown;
+                casualties?: unknown; notes?: unknown; createdAt?: unknown; updatedAt?: unknown;
+              };
+              const strings = (value: unknown) =>
+                Array.isArray(value) ? value.filter((item): item is string => typeof item === "string") : [];
+              const now = new Date().toISOString();
+              return {
+                id: typeof parsed.id === "string" ? parsed.id : crypto.randomUUID(),
+                title: typeof parsed.title === "string" ? parsed.title : "Untitled Session",
+                sessionDate: typeof parsed.sessionDate === "string" ? parsed.sessionDate : now.slice(0, 10),
+                summary: typeof parsed.summary === "string" ? parsed.summary : "",
+                events: strings(parsed.events),
+                npcs: strings(parsed.npcs),
+                questUpdates: strings(parsed.questUpdates),
+                loot: strings(parsed.loot),
+                casualties: strings(parsed.casualties),
+                notes: typeof parsed.notes === "string" ? parsed.notes : "",
+                createdAt: typeof parsed.createdAt === "string" ? parsed.createdAt : now,
+                updatedAt: typeof parsed.updatedAt === "string" ? parsed.updatedAt : now,
+              };
+            })
+        : [],
+      timelineEnabled:
+        typeof campaign.timelineEnabled === "boolean"
+          ? campaign.timelineEnabled
+          : false,
+      encounterTools: {
+        difficulty:
+          typeof campaign.encounterTools?.difficulty === "boolean"
+            ? campaign.encounterTools.difficulty
+            : false,
+        loot:
+          typeof campaign.encounterTools?.loot === "boolean"
+            ? campaign.encounterTools.loot
+            : false,
+        conditions:
+          typeof campaign.encounterTools?.conditions === "boolean"
+            ? campaign.encounterTools.conditions
+            : false,
+        combatRolls:
+          typeof campaign.encounterTools?.combatRolls === "boolean"
+            ? campaign.encounterTools.combatRolls
+            : false,
+      },
       encounters: Array.isArray(campaign.encounters)
         ? campaign.encounters.map((encounter: Partial<CampaignEncounter>) => ({
             id:
@@ -101,7 +151,76 @@ export function loadCampaigns(): Campaign[] {
                       typeof participant.notes === "string"
                         ? participant.notes
                         : "",
+                    conditions: Array.isArray(participant.conditions)
+                      ? participant.conditions
+                          .filter((condition: unknown) =>
+                            Boolean(condition) &&
+                            typeof condition === "object" &&
+                            typeof (condition as { name?: unknown }).name === "string",
+                          )
+                          .map((condition: unknown) => {
+                            const parsed = condition as {
+                              id?: unknown;
+                              name?: unknown;
+                              remainingRounds?: unknown;
+                            };
+
+                            return {
+                              id:
+                                typeof parsed.id === "string"
+                                  ? parsed.id
+                                  : crypto.randomUUID(),
+                              name: String(parsed.name),
+                              remainingRounds:
+                                typeof parsed.remainingRounds === "number" &&
+                                parsed.remainingRounds > 0
+                                  ? parsed.remainingRounds
+                                  : null,
+                            };
+                          })
+                      : [],
                   }))
+              : [],
+            rewards: Array.isArray(encounter.rewards)
+              ? encounter.rewards
+                  .filter((reward: unknown) => Boolean(reward) && typeof reward === "object")
+                  .map((reward: unknown) => {
+                    const parsed = reward as {
+                      id?: unknown;
+                      type?: unknown;
+                      name?: unknown;
+                      quantity?: unknown;
+                      valueGp?: unknown;
+                      itemId?: unknown;
+                      notes?: unknown;
+                      createdAt?: unknown;
+                    };
+
+                    return {
+                      id: typeof parsed.id === "string" ? parsed.id : crypto.randomUUID(),
+                      type:
+                        parsed.type === "currency" ||
+                        parsed.type === "item" ||
+                        parsed.type === "manual"
+                          ? parsed.type
+                          : "manual",
+                      name: typeof parsed.name === "string" ? parsed.name : "Unnamed Reward",
+                      quantity:
+                        typeof parsed.quantity === "number" && parsed.quantity > 0
+                          ? parsed.quantity
+                          : 1,
+                      valueGp:
+                        typeof parsed.valueGp === "number" && parsed.valueGp >= 0
+                          ? parsed.valueGp
+                          : 0,
+                      itemId: typeof parsed.itemId === "string" ? parsed.itemId : undefined,
+                      notes: typeof parsed.notes === "string" ? parsed.notes : "",
+                      createdAt:
+                        typeof parsed.createdAt === "string"
+                          ? parsed.createdAt
+                          : new Date().toISOString(),
+                    };
+                  })
               : [],
             createdAt:
               typeof encounter.createdAt === "string"

@@ -1,0 +1,141 @@
+/* Homebrew Lab V1 */
+.homebrew-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.homebrew-summary-card,
+.homebrew-form-card,
+.homebrew-created-card {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.075);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.18);
+}
+
+.homebrew-summary-card {
+  padding: 22px;
+}
+
+.homebrew-summary-card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  line-height: 1;
+}
+
+.homebrew-summary-card p {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.homebrew-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+  margin-top: 24px;
+}
+
+.homebrew-form-card,
+.homebrew-created-card {
+  padding: 20px;
+}
+
+.homebrew-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.homebrew-card-head h2 {
+  margin: 4px 0 0;
+}
+
+.homebrew-toggle-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.homebrew-toggle-row label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 800;
+}
+
+.compact-form-grid {
+  margin: 14px 0;
+}
+
+.homebrew-created-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.homebrew-list {
+  display: grid;
+  gap: 14px;
+}
+
+.homebrew-list-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: start;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 18px;
+  background: rgba(8, 12, 26, 0.34);
+}
+
+.homebrew-list-item h3 {
+  margin: 6px 0 8px;
+}
+
+.homebrew-list-item p {
+  margin: 0 0 12px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.homebrew-list-item button {
+  border: 1px solid rgba(255, 120, 120, 0.32);
+  color: #ffd6d6;
+  background: rgba(255, 80, 80, 0.12);
+}
+
+.compact-empty {
+  padding: 18px;
+}
+
+@media (max-width: 1100px) {
+  .homebrew-layout,
+  .homebrew-created-grid,
+  .homebrew-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .homebrew-card-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .homebrew-list-item {
+    grid-template-columns: 1fr;
+  }
+}
