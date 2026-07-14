@@ -17,6 +17,7 @@ import { EncounterConditionTracker } from "./EncounterConditionTracker";
 import { EncounterLootGenerator } from "./EncounterLootGenerator";
 import { EncounterToolSettings } from "./EncounterToolSettings";
 import { SessionTimeline } from "./SessionTimeline";
+import { CampaignDashboard } from "./CampaignDashboard";
 
 export function Campaigns({
   characters,
@@ -775,14 +776,22 @@ export function Campaigns({
               </div>
             </section>
 
+            <CampaignDashboard
+              campaign={selectedCampaign}
+              partyCharacters={partyCharacters}
+              selectedEncounter={selectedEncounter}
+            />
+
+            <div id="campaign-timeline" className="campaign-scroll-anchor">
             <SessionTimeline
               entries={selectedCampaign.timelineEntries}
               enabled={selectedCampaign.timelineEnabled}
               onToggleEnabled={toggleTimelineEnabled}
               onChange={updateTimelineEntries}
             />
+            </div>
 
-            <section className="campaign-card encounter-tracker-card">
+            <section id="campaign-encounters" className="campaign-card encounter-tracker-card campaign-scroll-anchor">
               <div className="campaign-section-head">
                 <div>
                   <span className="mini-label">Encounter Tracker</span>
@@ -1135,7 +1144,7 @@ export function Campaigns({
               </div>
             </section>
 
-            <section className="campaign-card">
+            <section id="campaign-party" className="campaign-card campaign-scroll-anchor">
               <div className="campaign-section-head">
                 <div>
                   <span className="mini-label">Party</span>
@@ -1180,7 +1189,7 @@ export function Campaigns({
               )}
             </section>
 
-            <div className="campaign-grid-two">
+            <div id="campaign-records" className="campaign-grid-two campaign-scroll-anchor">
               <section className="campaign-card">
                 <div className="campaign-section-head">
                   <div>

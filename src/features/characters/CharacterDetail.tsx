@@ -632,11 +632,22 @@ export function CharacterDetail({
             <button onClick={() => navigate("/characters")}>Listeye Dön</button>
           </div>
 
-          <LevelUpAssistant
-            character={activeCharacter}
-            rulesetData={rulesetData}
-            onUpdateCharacter={onUpdateCharacter}
-          />
+          <details className="character-sheet-section character-sheet-level-up">
+            <summary>
+              <span>
+                <b>Level Up Assistant</b>
+                <small>Seviye artırma, HP ve ASI işlemleri</small>
+              </span>
+              <em>İsteğe bağlı</em>
+            </summary>
+            <div className="character-sheet-section-body">
+              <LevelUpAssistant
+                character={activeCharacter}
+                rulesetData={rulesetData}
+                onUpdateCharacter={onUpdateCharacter}
+              />
+            </div>
+          </details>
 
           <div className="ability-detail-grid">
             {Object.entries(activeCharacter.abilities).map(
@@ -693,7 +704,16 @@ export function CharacterDetail({
             </p>
           </div>
 
-          <div className="character-equipment-panel">
+          <details className="character-sheet-section" open>
+            <summary>
+              <span>
+                <b>Envanter & Ekipman</b>
+                <small>{inventoryDetails.length} item · {totalInventoryWeight.toFixed(1)} lb</small>
+              </span>
+              <em>{activeCharacter.gold ?? 0} gp</em>
+            </summary>
+            <div className="character-sheet-section-body">
+              <div className="character-equipment-panel">
             <div className="spell-selector-head">
               <div>
                 <span className="mini-label">Equipment</span>
@@ -773,8 +793,19 @@ export function CharacterDetail({
                 ))}
               </div>
             )}
-          </div>
+              </div>
+            </div>
+          </details>
 
+          <details className="character-sheet-section">
+            <summary>
+              <span>
+                <b>Karakter Büyü Kitabı</b>
+                <small>{knownSpellIds.length} bilinen · {preparedSpellIds.length} hazırlanmış</small>
+              </span>
+              <em>{knownCantripCount} cantrip</em>
+            </summary>
+            <div className="character-sheet-section-body">
           <div className="character-detail-spellbook">
             <div className="spell-selector-head">
               <div>
@@ -874,6 +905,8 @@ export function CharacterDetail({
               </div>
             )}
           </div>
+            </div>
+          </details>
         </section>
 
         <aside className="play-card">
@@ -905,6 +938,15 @@ export function CharacterDetail({
             />
           </label>
 
+          <details className="character-sheet-section character-sheet-side-section">
+            <summary>
+              <span>
+                <b>Gelişmiş Durum</b>
+                <small>Death save, exhaustion ve short rest</small>
+              </span>
+              <em>{activeExhaustion}/6</em>
+            </summary>
+            <div className="character-sheet-section-body">
           <div className="advanced-character-panel">
             <div className="spell-slot-head">
               <span className="mini-label">Advanced Tools</span>
@@ -958,7 +1000,18 @@ export function CharacterDetail({
               })}
             </div>
           </div>
+            </div>
+          </details>
 
+          <details className="character-sheet-section character-sheet-side-section" open>
+            <summary>
+              <span>
+                <b>Spell Slots</b>
+                <small>Büyü kaynaklarını takip et</small>
+              </span>
+              <em>{activeSpellSlots.reduce((sum, slot) => sum + slot.max - slot.used, 0)} kalan</em>
+            </summary>
+            <div className="character-sheet-section-body">
           <div className="spell-slot-panel">
             <div className="spell-slot-head">
               <span className="mini-label">Spell Slots</span>
@@ -1006,8 +1059,18 @@ export function CharacterDetail({
               </div>
             )}
           </div>
+            </div>
+          </details>
 
-
+          <details className="character-sheet-section character-sheet-side-section">
+            <summary>
+              <span>
+                <b>Hazır Büyüler</b>
+                <small>Hızlı cast ve geçmiş</small>
+              </span>
+              <em>{castReadyCharacterSpells.length}</em>
+            </summary>
+            <div className="character-sheet-section-body">
           <div className="prepared-cast-panel">
             <span className="mini-label">Prepared Cast</span>
 
@@ -1068,7 +1131,18 @@ export function CharacterDetail({
               </div>
             )}
           </div>
+            </div>
+          </details>
 
+          <details className="character-sheet-section character-sheet-side-section">
+            <summary>
+              <span>
+                <b>Conditions</b>
+                <small>Durumlar ve round süreleri</small>
+              </span>
+              <em>{activeCharacter.conditions.length} aktif</em>
+            </summary>
+            <div className="character-sheet-section-body">
           <div className="condition-picker">
             {conditionOptions.map((condition) => (
               <button
@@ -1109,7 +1183,18 @@ export function CharacterDetail({
               </div>
             )}
           </div>
+            </div>
+          </details>
 
+          <details className="character-sheet-section character-sheet-side-section" open>
+            <summary>
+              <span>
+                <b>Quick Rolls</b>
+                <small>Check, initiative ve zar geçmişi</small>
+              </span>
+              <em>{characterRollHistory[0]?.total ?? "--"}</em>
+            </summary>
+            <div className="character-sheet-section-body">
           <div className="character-roll-result">
             <span className="mini-label">Latest Roll</span>
 
@@ -1253,9 +1338,12 @@ export function CharacterDetail({
               </button>
             </div>
           </div>
+            </div>
+          </details>
 
-          <div className="character-actions">
+          <div className="character-actions character-sheet-rest-actions">
             <button onClick={longRest}>Long Rest</button>
+            <button onClick={() => navigate(`/play-mode`)}>Play Mode'a Geç</button>
           </div>
         </aside>
       </div>
