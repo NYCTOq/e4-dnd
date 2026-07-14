@@ -1,0 +1,13 @@
+Yeni:
+src/features/combat-tracker/CombatTrackerPage.tsx
+src/features/combat-tracker/combatTrackerStorage.ts
+src/features/combat-tracker/combatTrackerStorage.test.ts
+src/styles/37-combat-tracker.css
+
+Güncellenen:
+src/features/legacy/AppRoutes.tsx
+src/shared/navigation/navItems.ts
+src/shared/release/releaseNotes.ts
+src/App.css
+package.json
+package-lock.json

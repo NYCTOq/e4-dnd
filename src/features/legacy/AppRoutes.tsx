@@ -103,6 +103,9 @@ const QuestJournalPage = lazy(() =>
 const LootTrackerPage = lazy(() =>
   import("../loot/LootTrackerPage").then((module) => ({ default: module.LootTrackerPage })),
 );
+const CombatTrackerPage = lazy(() =>
+  import("../combat-tracker/CombatTrackerPage").then((module) => ({ default: module.CombatTrackerPage })),
+);
 
 import type { BackupImportOptions, FullBackupData } from "../backup/fullBackup";
 
@@ -281,6 +284,10 @@ export function AppRoutes({
       <Route
         path="/loot"
         element={<LootTrackerPage campaigns={campaigns} characters={characters} />}
+      />
+      <Route
+        path="/combat"
+        element={<CombatTrackerPage campaigns={campaigns} characters={characters} monsters={effectiveRulesetData?.monsters ?? []} />}
       />
 
       <Route

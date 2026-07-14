@@ -1,0 +1,15 @@
+E4 D&D Initiative + Combat Tracker V1
+
+1. Bu klasörün içeriğini D:\Projects\e4_dnd klasörüne kopyalayın.
+2. Mevcut dosyaların üzerine yazılmasını onaylayın.
+3. PowerShell komutları:
+
+cd D:\Projects\e4_dnd
+npm.cmd install
+npm.cmd run check
+
+git add -A
+git commit -m "feat: add initiative and combat tracker"
+git push
+
+Paket node_modules, dist ve dev-dist içermez.

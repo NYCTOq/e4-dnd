@@ -20,6 +20,7 @@ export const navItems: readonly NavItem[] = [
   { to: "/factions", label: "Factions", shortLabel: "Örgüt", icon: "⚑", group: "Oyun" },
   { to: "/quests", label: "Quest Journal", shortLabel: "Görev", icon: "☑", group: "Oyun" },
   { to: "/loot", label: "Loot Tracker", shortLabel: "Ganimet", icon: "◉", group: "Oyun" },
+  { to: "/combat", label: "Combat Tracker", shortLabel: "Savaş", icon: "⚔", group: "Oyun" },
   { to: "/dice", label: "Zar", shortLabel: "Zar", icon: "◆", group: "Oyun", mobile: true },
   { to: "/search", label: "Global Arama", shortLabel: "Ara", icon: "⌕", group: "İçerik" },
   { to: "/collections", label: "Koleksiyonlar", shortLabel: "Etiket", icon: "#", group: "İçerik" },

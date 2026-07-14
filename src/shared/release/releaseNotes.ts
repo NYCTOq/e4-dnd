@@ -15,6 +15,20 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.12.0",
+    date: "2026-07-14",
+    title: "Initiative ve combat tracker",
+    summary: "Karakter, NPC ve canavarlar; sıra, round, HP, geçici HP ve koşullarıyla canlı bir savaş ekranında toplandı.",
+    changes: [
+      { text: "Yeni Initiative + Combat Tracker sayfası", category: "Özellik" },
+      { text: "Karakter, NPC, canavar ve özel savaşçı ekleme", category: "Özellik" },
+      { text: "Initiative sıralaması, aktif sıra ve otomatik round ilerletme", category: "Özellik" },
+      { text: "Hasar, iyileştirme, geçici HP ve yenilgi durumu takibi", category: "İyileştirme" },
+      { text: "On farklı koşulu savaşçı bazında yönetme", category: "İyileştirme" },
+      { text: "Combat veri motoru için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.11.0",
     date: "2026-07-14",
     title: "Loot ve treasure tracker",
