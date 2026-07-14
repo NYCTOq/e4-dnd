@@ -1,18 +1,16 @@
-E4 D&D CI Build & Test Automation V1
+GitHub Pages Release / Deployment Automation V1
 
-EKLENEN DOSYALAR
+Güncellenen dosyalar:
 - .github/workflows/ci.yml
-- CI.md
-
-GUNCELLENEN DOSYALAR
-- package.json
+- vite.config.ts
+- src/main.tsx
 - README.md
 
-YAPILANLAR
-- GitHub Actions CI pipeline eklendi.
-- main push, pull request ve manuel çalıştırma desteği eklendi.
-- Node.js 22 ve npm cache kullanımı eklendi.
-- Lint, test ve production build otomatikleştirildi.
-- Başarılı dist çıktısı 14 günlük artifact olarak yükleniyor.
-- Lint komutu node_modules yerine yalnızca src klasörünü tarayacak şekilde düzeltildi.
-- npm run check komutu eklendi.
+Yeni dosyalar:
+- DEPLOYMENT.md
+
+Önemli:
+- Yerel geliştirme base yolu `/` olarak kalır.
+- GitHub Actions build sırasında VITE_BASE_PATH=/e4-dnd/ kullanır.
+- CI başarılı olmadan deployment başlamaz.
+- dist/index.html, route yenilemeleri için dist/404.html olarak kopyalanır.

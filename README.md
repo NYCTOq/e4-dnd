@@ -46,3 +46,7 @@ Pipeline sırasıyla bağımlılıkları kurar, kaynak dosyaları lint eder, tes
 | `npm.cmd run test:watch` | Testleri izleme modunda çalıştırır |
 | `npm.cmd run build` | TypeScript kontrolü ve production build |
 | `npm.cmd run check` | Lint + test + build |
+
+## GitHub Pages Otomatik Dağıtım
+
+CI başarılı olduğunda `main` branch otomatik olarak GitHub Pages'e yayınlanır. İlk kurulum ve ayrıntılar için `DEPLOYMENT.md` dosyasına bakın.
