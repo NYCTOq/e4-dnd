@@ -5,8 +5,9 @@ import type {
   DndSpellData,
 } from "../../core/rulesets/ruleset.types";
 import type { Campaign } from "../campaigns/campaignTypes";
+import { DEFAULT_APP_SETTINGS, sanitizeAppSettings, type AppSettings } from "../../shared/settings/appSettings";
 
-export const FULL_BACKUP_VERSION = 1;
+export const FULL_BACKUP_VERSION = 2;
 
 export type E4FullBackup = {
   format: "e4-dnd-full-backup";
@@ -19,6 +20,7 @@ export type E4FullBackup = {
     homebrewItems: DndItemData[];
     homebrewMonsters: DndMonsterData[];
     favoriteMonsterIds: string[];
+    appSettings: AppSettings;
   };
 };
 
@@ -109,6 +111,10 @@ export function parseFullBackup(value: unknown): E4FullBackup {
   const favoriteMonsterIds = Array.isArray(data.favoriteMonsterIds)
     ? data.favoriteMonsterIds
     : null;
+  const appSettings =
+    value.version >= 2
+      ? sanitizeAppSettings(data.appSettings)
+      : DEFAULT_APP_SETTINGS;
 
   if (
     !characters ||
@@ -141,5 +147,21 @@ export function parseFullBackup(value: unknown): E4FullBackup {
     throw new Error("Yedekte geçersiz favori canavar kaydı var.");
   }
 
-  return value as E4FullBackup;
+  return {
+    format: "e4-dnd-full-backup",
+    version: value.version,
+    exportedAt:
+      typeof value.exportedAt === "string"
+        ? value.exportedAt
+        : new Date().toISOString(),
+    data: {
+      characters: characters as Character[],
+      campaigns: campaigns as Campaign[],
+      homebrewSpells: homebrewSpells as DndSpellData[],
+      homebrewItems: homebrewItems as DndItemData[],
+      homebrewMonsters: homebrewMonsters as DndMonsterData[],
+      favoriteMonsterIds: favoriteMonsterIds as string[],
+      appSettings,
+    },
+  };
 }

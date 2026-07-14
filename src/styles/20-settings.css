@@ -1,0 +1,264 @@
+.settings-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.settings-card {
+  display: grid;
+  align-content: start;
+  gap: 22px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+.settings-card-wide {
+  grid-column: 1 / -1;
+}
+
+.settings-card-head,
+.settings-preview-row,
+.settings-reset-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.settings-card h2 {
+  margin: 4px 0 0;
+  font-size: clamp(24px, 3vw, 38px);
+}
+
+.settings-live-pill {
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.settings-field-group {
+  display: grid;
+  gap: 12px;
+}
+
+.settings-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.settings-accent-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.settings-choice,
+.settings-profile-card {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.055);
+  text-align: left;
+}
+
+.settings-choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+}
+
+.settings-choice-text {
+  display: grid;
+  justify-items: start;
+  align-content: start;
+}
+
+.settings-choice small,
+.settings-profile-card span,
+.settings-preview-row span {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.settings-choice.active,
+.settings-profile-card.active {
+  border-color: color-mix(in srgb, var(--accent) 70%, white 15%);
+  background: color-mix(in srgb, var(--accent) 17%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.settings-swatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  box-shadow: 0 0 20px currentColor;
+}
+
+.settings-swatch.violet { background: #a890ff; }
+.settings-swatch.blue { background: #69a6ff; }
+.settings-swatch.emerald { background: #60d9aa; }
+.settings-swatch.amber { background: #ffc464; }
+
+.settings-inline-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.settings-wide-field {
+  max-width: 620px;
+}
+
+.settings-context-note {
+  margin: -10px 0 0;
+}
+
+.settings-preview-row {
+  align-items: center;
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid var(--line);
+}
+
+.settings-preview-row strong,
+.settings-preview-row span {
+  display: block;
+}
+
+.settings-preview-row span {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.settings-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.settings-profile-card {
+  display: grid;
+  gap: 8px;
+  min-height: 130px;
+  padding: 18px;
+}
+
+.settings-profile-card strong {
+  font-size: 20px;
+}
+
+.settings-reset-card {
+  align-items: center;
+}
+
+.settings-reset-card .danger-action {
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+html[data-accent="violet"] {
+  --accent: #a9b7ff;
+  --accent-strong: #b936ff;
+}
+
+html[data-accent="blue"] {
+  --accent: #80b5ff;
+  --accent-strong: #2f7dff;
+}
+
+html[data-accent="emerald"] {
+  --accent: #75ddb7;
+  --accent-strong: #16a978;
+}
+
+html[data-accent="amber"] {
+  --accent: #ffd07a;
+  --accent-strong: #f0962d;
+}
+
+html[data-font-scale="small"] {
+  font-size: 14px;
+}
+
+html[data-font-scale="normal"] {
+  font-size: 16px;
+}
+
+html[data-font-scale="large"] {
+  font-size: 18px;
+}
+
+html[data-density="compact"] {
+  --radius: 22px;
+}
+
+html[data-density="compact"] .content {
+  padding-top: 24px;
+}
+
+html[data-density="compact"] :is(
+  .hero-card,
+  .status-card,
+  .form-panel,
+  .detail-main-card,
+  .play-card,
+  .campaign-card,
+  .settings-card
+) {
+  padding: 18px;
+}
+
+html[data-density="compact"] button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+html[data-motion="reduced"] *,
+html[data-motion="reduced"] *::before,
+html[data-motion="reduced"] *::after {
+  animation: none !important;
+  scroll-behavior: auto !important;
+  transition-duration: 0.01ms !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-motion="system"] *,
+  html[data-motion="system"] *::before,
+  html[data-motion="system"] *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .settings-layout,
+  .settings-profile-grid,
+  .settings-accent-grid,
+  .settings-inline-fields,
+  .settings-choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-card-wide {
+    grid-column: auto;
+  }
+
+  .settings-reset-card,
+  .settings-preview-row {
+    display: grid;
+  }
+
+  .settings-reset-card .danger-action,
+  .settings-preview-row button {
+    width: 100%;
+  }
+}

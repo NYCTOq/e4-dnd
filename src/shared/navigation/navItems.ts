@@ -1,14 +1,28 @@
-export const navItems = [
-  { to: "/", label: "Dashboard" },
-  { to: "/characters", label: "Karakterler" },
-  { to: "/builder", label: "Builder" },
-  { to: "/play-mode", label: "Play Mode" },
-  { to: "/dice", label: "Zar" },
-  { to: "/spellbook", label: "Spellbook" },
-  { to: "/inventory", label: "Inventory" },
-  { to: "/monsters", label: "Monsters" },
-  { to: "/campaigns", label: "Campaigns" },
-  { to: "/backup", label: "Yedek" },
-  { to: "/library", label: "Library" },
-  { to: "/homebrew-lab", label: "Homebrew" },
+export type NavGroup = "Oyun" | "İçerik" | "Yönetim";
+
+export type NavItem = {
+  to: string;
+  label: string;
+  shortLabel: string;
+  icon: string;
+  group: NavGroup;
+  mobile?: boolean;
+};
+
+export const navItems: readonly NavItem[] = [
+  { to: "/", label: "Dashboard", shortLabel: "Ana", icon: "⌂", group: "Oyun", mobile: true },
+  { to: "/play-mode", label: "Play Mode", shortLabel: "Oyna", icon: "▶", group: "Oyun", mobile: true },
+  { to: "/characters", label: "Karakterler", shortLabel: "Karakter", icon: "◈", group: "Oyun", mobile: true },
+  { to: "/campaigns", label: "Campaigns", shortLabel: "Campaign", icon: "✦", group: "Oyun", mobile: true },
+  { to: "/dice", label: "Zar", shortLabel: "Zar", icon: "◆", group: "Oyun", mobile: true },
+  { to: "/builder", label: "Character Builder", shortLabel: "Builder", icon: "+", group: "İçerik" },
+  { to: "/spellbook", label: "Spellbook", shortLabel: "Spells", icon: "✧", group: "İçerik" },
+  { to: "/inventory", label: "Inventory", shortLabel: "Eşya", icon: "▣", group: "İçerik" },
+  { to: "/monsters", label: "Monsters", shortLabel: "Monster", icon: "♜", group: "İçerik" },
+  { to: "/homebrew-lab", label: "Homebrew Lab", shortLabel: "Homebrew", icon: "⚗", group: "İçerik" },
+  { to: "/library", label: "Ruleset Library", shortLabel: "Library", icon: "▤", group: "Yönetim" },
+  { to: "/backup", label: "Yedek & Kurtarma", shortLabel: "Yedek", icon: "↥", group: "Yönetim" },
+  { to: "/settings", label: "Ayarlar", shortLabel: "Ayarlar", icon: "⚙", group: "Yönetim" },
 ] as const;
+
+export const navGroups: readonly NavGroup[] = ["Oyun", "İçerik", "Yönetim"];

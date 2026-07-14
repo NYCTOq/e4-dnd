@@ -1,25 +1,22 @@
-E4 D&D - PWA Update Notification + Cache Management V1
-
-Güncellenen dosyalar:
-- vite.config.ts
-- src/main.tsx
-- src/shared/layout/AppFrame.tsx
-- src/App.css
+E4 D&D Global Settings + Personalization V1
 
 Yeni dosyalar:
-- src/shared/pwa/PwaUpdateManager.tsx
-- src/styles/17-pwa-update.css
+- src/shared/settings/appSettings.ts
+- src/shared/settings/AppSettingsProvider.tsx
+- src/features/settings/Settings.tsx
+- src/styles/20-settings.css
 
-Özellikler:
-- Kullanıcı onaylı PWA güncelleme bildirimi
-- Güncelle ve yeniden başlat / Sonra seçenekleri
-- Çevrimdışı kullanım hazır bildirimi
-- Saatlik service worker güncelleme kontrolü
-- Eski Workbox cache'lerini otomatik temizleme
-- Karakter/campaign verilerine dokunmadan PWA cache sıfırlama
-
-PWA Install & First Run Polish V1:
-- src/shared/pwa/PwaInstallGuide.tsx (new)
-- src/shared/layout/AppFrame.tsx
-- src/styles/18-pwa-install-guide.css (new)
+Güncellenen dosyalar:
+- src/main.tsx
 - src/App.css
+- src/shared/layout/AppFrame.tsx
+- src/shared/navigation/navItems.ts
+- src/features/legacy/AppRoutes.tsx
+- src/features/legacy/LegacyApp.tsx
+- src/features/backup/fullBackup.ts
+- src/features/backup/DataBackup.tsx
+
+Build sonucu:
+- npm run build başarılı
+- PWA service worker ve manifest üretildi
+- Route code splitting korunuyor

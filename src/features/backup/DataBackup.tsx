@@ -7,6 +7,7 @@ import type {
 import { exportCharacters } from "../../core/storage/characterStorage";
 import { PageShell } from "../../shared/layout/PageShell";
 import type { Campaign } from "../campaigns/campaignTypes";
+import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import { loadFavoriteMonsterIds } from "../monsters/monsterUtils";
 import {
   exportFullBackup,
@@ -37,6 +38,7 @@ export function DataBackup({
   onWipeCharacters,
   onWipeAllData,
 }: DataBackupProps) {
+  const { settings } = useAppSettings();
   const totalHomebrew =
     homebrewSpells.length + homebrewItems.length + homebrewMonsters.length;
 
@@ -48,6 +50,7 @@ export function DataBackup({
       homebrewItems,
       homebrewMonsters,
       favoriteMonsterIds: loadFavoriteMonsterIds(),
+      appSettings: settings,
     });
   }
 
@@ -150,11 +153,11 @@ export function DataBackup({
     >
       <div className="backup-layout">
         <section className="backup-card backup-primary backup-wide">
-          <span className="mini-label">Full Backup V1</span>
+          <span className="mini-label">Full Backup V2</span>
           <h2>Tüm E4 D&D verisini yedekle</h2>
           <p>
             Karakterler, campaign kayıtları, encounter ve timeline verileri,
-            homebrew içerikler ve favori canavarlar tek JSON dosyasına alınır.
+            homebrew içerikler, favori canavarlar ve uygulama tercihleri tek JSON dosyasına alınır.
           </p>
 
           <div className="backup-overview-grid">
@@ -209,6 +212,7 @@ export function DataBackup({
             <div><strong>Characters</strong><span>Statlar, büyüler, inventory ve level bilgileri.</span></div>
             <div><strong>Campaigns</strong><span>Encounter, timeline, quest, NPC ve session kayıtları.</span></div>
             <div><strong>Homebrew</strong><span>Custom spell, item ve monster içerikleri.</span></div>
+            <div><strong>Ayarlar</strong><span>Görünüm, açılış ekranı ve DM varsayılanları.</span></div>
           </div>
         </section>
       </div>

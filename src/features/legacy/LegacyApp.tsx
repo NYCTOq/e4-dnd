@@ -30,8 +30,10 @@ import { AppFrame } from "../../shared/layout/AppFrame";
 import { AppRoutes } from "./AppRoutes";
 import type { FullBackupData } from "../backup/fullBackup";
 import { saveFavoriteMonsterIds } from "../monsters/monsterUtils";
+import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 
 function App() {
+  const { settings, updateSettings, resetSettings } = useAppSettings();
   const [characters, setCharacters] = useState<Character[]>(() =>
     loadCharacters(),
   );
@@ -163,6 +165,7 @@ function App() {
     setHomebrewItems(data.homebrewItems);
     setHomebrewMonsters(data.homebrewMonsters);
     saveFavoriteMonsterIds(data.favoriteMonsterIds);
+    updateSettings(data.appSettings);
   }
 
   function handleWipeAllData() {
@@ -172,6 +175,7 @@ function App() {
     setHomebrewItems([]);
     setHomebrewMonsters([]);
     saveFavoriteMonsterIds([]);
+    resetSettings();
   }
 
   function handleCreateCampaign(name: string, description: string) {
@@ -189,12 +193,27 @@ function App() {
         encounters: [],
         timelineEntries: [],
         timelineEnabled: false,
-        encounterTools: {
-          difficulty: false,
-          loot: false,
-          conditions: false,
-          combatRolls: false,
-        },
+        encounterTools:
+          settings.campaignToolProfile === "full"
+            ? {
+                difficulty: true,
+                loot: true,
+                conditions: true,
+                combatRolls: true,
+              }
+            : settings.campaignToolProfile === "balanced"
+              ? {
+                  difficulty: true,
+                  loot: false,
+                  conditions: true,
+                  combatRolls: false,
+                }
+              : {
+                  difficulty: false,
+                  loot: false,
+                  conditions: false,
+                  combatRolls: false,
+                },
         createdAt: now,
         updatedAt: now,
       },

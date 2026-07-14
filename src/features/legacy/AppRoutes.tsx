@@ -64,6 +64,9 @@ const DataBackup = lazy(() =>
 const Library = lazy(() =>
   import("../library/Library").then((module) => ({ default: module.Library })),
 );
+const Settings = lazy(() =>
+  import("../settings/Settings").then((module) => ({ default: module.Settings })),
+);
 
 import type { FullBackupData } from "../backup/fullBackup";
 
@@ -130,7 +133,19 @@ export function AppRoutes({
       }
     >
       <Routes>
-      <Route path="/" element={<Dashboard />} />
+      <Route
+        path="/"
+        element={
+          <Dashboard
+            characters={characters}
+            campaigns={campaigns}
+            rulesetData={effectiveRulesetData}
+            homebrewCount={
+              homebrewSpells.length + homebrewItems.length + homebrewMonsters.length
+            }
+          />
+        }
+      />
 
       <Route
         path="/characters"
@@ -276,6 +291,8 @@ export function AppRoutes({
           />
         }
       />
+
+      <Route path="/settings" element={<Settings />} />
 
       <Route
         path="/homebrew-lab"
