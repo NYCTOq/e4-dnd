@@ -1,4 +1,4 @@
-export interface DiceRollResult {
+﻿export interface DiceRollResult {
   id: string;
   notation: string;
   count: number;

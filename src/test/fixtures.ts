@@ -1,4 +1,4 @@
-import type { Character } from "../core/character/character.types";
+﻿import type { Character } from "../core/character/character.types";
 import type { CampaignEncounter } from "../features/campaigns/campaignTypes";
 import type { DndMonsterData } from "../core/rulesets/ruleset.types";
 
@@ -79,3 +79,4 @@ export function makeMonster(overrides: Partial<DndMonsterData> = {}): DndMonster
     ...overrides,
   };
 }
+

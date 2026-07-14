@@ -245,13 +245,13 @@ export function buildGlobalSearchEntries({
 export function searchGlobalEntries(
   entries: readonly GlobalSearchEntry[],
   query: string,
-  category: GlobalSearchCategory | "Tümü" = "Tümü",
+  category: GlobalSearchCategory | "all" = "all",
 ) {
   const normalizedQuery = normalizeSearchText(query.trim());
   const words = normalizedQuery.split(/\s+/).filter(Boolean);
 
   return entries
-    .filter((entry) => category === "Tümü" || entry.category === category)
+    .filter((entry) => category === "all" || entry.category === category)
     .map((entry) => {
       if (!normalizedQuery) return { entry, score: 1 };
 

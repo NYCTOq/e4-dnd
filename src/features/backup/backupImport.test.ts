@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { mergeRecordsById, mergeUniqueStrings } from "./backupImport";
 
 describe("backup import merging", () => {
@@ -15,3 +15,4 @@ describe("backup import merging", () => {
     expect(mergeUniqueStrings(["a", "b"], ["b", "c"])).toEqual(["a", "b", "c"]);
   });
 });
+

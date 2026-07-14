@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { calculateEncounterDifficulty } from "./encounterDifficulty";
 import { makeCharacter, makeEncounter, makeMonster } from "../../test/fixtures";
 
@@ -58,3 +58,4 @@ describe("calculateEncounterDifficulty", () => {
     expect(result.difficulty).toBe("Trivial");
   });
 });
+

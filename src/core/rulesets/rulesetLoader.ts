@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   DndClassData,
   DndItemData,
   DndMonsterData,
@@ -36,3 +36,4 @@ export async function loadDnd2014Ruleset(): Promise<RulesetData> {
     monsters,
   };
 }
+

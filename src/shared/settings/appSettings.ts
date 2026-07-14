@@ -1,4 +1,4 @@
-export type AccentTheme = "violet" | "blue" | "emerald" | "amber";
+﻿export type AccentTheme = "violet" | "blue" | "emerald" | "amber";
 export type UiDensity = "comfortable" | "compact";
 export type MotionPreference = "system" | "full" | "reduced";
 export type FontScale = "small" | "normal" | "large";
@@ -67,3 +67,4 @@ export function sanitizeAppSettings(value: unknown): AppSettings {
       : DEFAULT_APP_SETTINGS.campaignToolProfile,
   };
 }
+

@@ -1,4 +1,4 @@
-import type { Character } from "../../core/character/character.types";
+﻿import type { Character } from "../../core/character/character.types";
 import type { DndMonsterData } from "../../core/rulesets/ruleset.types";
 import type { CampaignEncounter } from "./campaignTypes";
 
@@ -240,3 +240,4 @@ export function calculateEncounterDifficulty({
     partySource,
   };
 }
+

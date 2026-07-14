@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { readJsonSafely, writeJsonSafely } from "../../core/storage/safeStorage";
 import { useDebouncedEffect } from "./useDebouncedEffect";
 
@@ -16,3 +16,4 @@ export function usePersistentState<T>(key: string, defaultValue: T) {
 
   return [value, setValue] as const;
 }
+

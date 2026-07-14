@@ -1,4 +1,4 @@
-import type { DiceRollResult } from "../../core/dice/dice.types";
+﻿import type { DiceRollResult } from "../../core/dice/dice.types";
 import type { DndMonsterData } from "../../core/rulesets/ruleset.types";
 import { readJsonSafely, writeJsonSafely } from "../../core/storage/safeStorage";
 
@@ -58,3 +58,4 @@ export function loadFavoriteMonsterIds() {
 export function saveFavoriteMonsterIds(ids: string[]) {
   writeJsonSafely(FAVORITE_MONSTERS_STORAGE_KEY, ids);
 }
+

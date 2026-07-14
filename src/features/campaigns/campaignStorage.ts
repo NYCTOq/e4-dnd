@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   Campaign,
   CampaignEncounter,
   CampaignEncounterParticipant,
@@ -242,3 +242,4 @@ export function loadCampaigns(): Campaign[] {
 export function saveCampaigns(campaigns: Campaign[]) {
   writeJsonSafely(CAMPAIGNS_STORAGE_KEY, campaigns);
 }
+

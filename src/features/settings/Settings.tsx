@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+﻿import { useNavigate } from "react-router-dom";
 import { PageShell } from "../../shared/layout/PageShell";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import {
@@ -13,13 +13,13 @@ import {
 const accentOptions: Array<{ value: AccentTheme; label: string }> = [
   { value: "violet", label: "Mor" },
   { value: "blue", label: "Mavi" },
-  { value: "emerald", label: "Zümrüt" },
+  { value: "emerald", label: "ZÃ¼mrÃ¼t" },
   { value: "amber", label: "Kehribar" },
 ];
 
 const densityOptions: Array<{ value: UiDensity; label: string; note: string }> = [
   { value: "comfortable", label: "Rahat", note: "Daha ferah kartlar ve butonlar." },
-  { value: "compact", label: "Kompakt", note: "Aynı ekranda daha çok bilgi." },
+  { value: "compact", label: "Kompakt", note: "AynÄ± ekranda daha Ã§ok bilgi." },
 ];
 
 const motionOptions: Array<{
@@ -27,15 +27,15 @@ const motionOptions: Array<{
   label: string;
   note: string;
 }> = [
-  { value: "system", label: "Sisteme uy", note: "Windows veya tarayıcı tercihini kullanır." },
-  { value: "full", label: "Tam", note: "Geçişler ve arka plan hareketleri açık." },
-  { value: "reduced", label: "Azaltılmış", note: "Animasyonların çoğunu kapatır." },
+  { value: "system", label: "Sisteme uy", note: "Windows veya tarayÄ±cÄ± tercihini kullanÄ±r." },
+  { value: "full", label: "Tam", note: "GeÃ§iÅŸler ve arka plan hareketleri aÃ§Ä±k." },
+  { value: "reduced", label: "AzaltÄ±lmÄ±ÅŸ", note: "AnimasyonlarÄ±n Ã§oÄŸunu kapatÄ±r." },
 ];
 
 const fontOptions: Array<{ value: FontScale; label: string }> = [
-  { value: "small", label: "Küçük" },
+  { value: "small", label: "KÃ¼Ã§Ã¼k" },
   { value: "normal", label: "Normal" },
-  { value: "large", label: "Büyük" },
+  { value: "large", label: "BÃ¼yÃ¼k" },
 ];
 
 const campaignProfiles: Array<{
@@ -46,17 +46,17 @@ const campaignProfiles: Array<{
   {
     value: "simple",
     label: "Sade",
-    note: "Yeni campaignlerde tüm ekstra encounter araçları kapalı.",
+    note: "Yeni campaignlerde tÃ¼m ekstra encounter araÃ§larÄ± kapalÄ±.",
   },
   {
     value: "balanced",
     label: "Dengeli",
-    note: "Difficulty ve condition takibi açık; rolls ve loot kapalı.",
+    note: "Difficulty ve condition takibi aÃ§Ä±k; rolls ve loot kapalÄ±.",
   },
   {
     value: "full",
     label: "Tam",
-    note: "Yeni campaignlerde bütün DM araçları açık.",
+    note: "Yeni campaignlerde bÃ¼tÃ¼n DM araÃ§larÄ± aÃ§Ä±k.",
   },
 ];
 
@@ -68,16 +68,16 @@ export function Settings() {
     <PageShell
       eyebrow="Uygulama tercihleri"
       title="Ayarlar"
-      description="E4 D&D'nin görünümünü ve varsayılan davranışlarını masanın çalışma biçimine göre düzenle. Her şeyi açmak zorunda değilsin; yazılımın da sınır öğrenmesi sağlıklı."
+      description="E4 D&D'nin gÃ¶rÃ¼nÃ¼mÃ¼nÃ¼ ve varsayÄ±lan davranÄ±ÅŸlarÄ±nÄ± masanÄ±n Ã§alÄ±ÅŸma biÃ§imine gÃ¶re dÃ¼zenle. Her ÅŸeyi aÃ§mak zorunda deÄŸilsin; yazÄ±lÄ±mÄ±n da sÄ±nÄ±r Ã¶ÄŸrenmesi saÄŸlÄ±klÄ±."
     >
       <div className="settings-layout">
         <section className="settings-card">
           <div className="settings-card-head">
             <div>
-              <span className="mini-label">Görünüm</span>
-              <h2>Arayüz tarzı</h2>
+              <span className="mini-label">GÃ¶rÃ¼nÃ¼m</span>
+              <h2>ArayÃ¼z tarzÄ±</h2>
             </div>
-            <span className="settings-live-pill">Canlı uygulanır</span>
+            <span className="settings-live-pill">CanlÄ± uygulanÄ±r</span>
           </div>
 
           <div className="settings-field-group">
@@ -102,7 +102,7 @@ export function Settings() {
           </div>
 
           <div className="settings-field-group">
-            <strong>Bilgi yoğunluğu</strong>
+            <strong>Bilgi yoÄŸunluÄŸu</strong>
             <div className="settings-choice-grid">
               {densityOptions.map((option) => (
                 <button
@@ -124,7 +124,7 @@ export function Settings() {
 
           <div className="settings-inline-fields">
             <label>
-              Yazı boyutu
+              YazÄ± boyutu
               <select
                 value={settings.fontScale}
                 onChange={(event) =>
@@ -164,13 +164,13 @@ export function Settings() {
         <section className="settings-card">
           <div className="settings-card-head">
             <div>
-              <span className="mini-label">Başlangıç</span>
-              <h2>Açılış davranışı</h2>
+              <span className="mini-label">BaÅŸlangÄ±Ã§</span>
+              <h2>AÃ§Ä±lÄ±ÅŸ davranÄ±ÅŸÄ±</h2>
             </div>
           </div>
 
           <label className="settings-wide-field">
-            Yeni uygulama oturumunda açılacak ekran
+            Yeni uygulama oturumunda aÃ§Ä±lacak ekran
             <select
               value={settings.startRoute}
               onChange={(event) => updateSettings({ startRoute: event.target.value })}
@@ -189,10 +189,10 @@ export function Settings() {
                 {START_ROUTE_OPTIONS.find((item) => item.value === settings.startRoute)
                   ?.label ?? "Dashboard"}
               </strong>
-              <span>Bir sonraki yeni tarayıcı/PWA oturumunda açılır.</span>
+              <span>Bir sonraki yeni tarayÄ±cÄ±/PWA oturumunda aÃ§Ä±lÄ±r.</span>
             </div>
             <button type="button" onClick={() => navigate(settings.startRoute)}>
-              Şimdi aç
+              Åimdi aÃ§
             </button>
           </div>
         </section>
@@ -200,15 +200,15 @@ export function Settings() {
         <section className="settings-card settings-card-wide">
           <div className="settings-card-head">
             <div>
-              <span className="mini-label">DM varsayılanları</span>
-              <h2>Yeni campaign araç profili</h2>
+              <span className="mini-label">DM varsayÄ±lanlarÄ±</span>
+              <h2>Yeni campaign araÃ§ profili</h2>
             </div>
           </div>
 
           <p>
-            Bu tercih yalnızca bundan sonra oluşturulan campaignleri etkiler. Mevcut
-            campaign ayarlarını değiştirmez; çünkü kullanıcının arkasından düğme çevirmek
-            yazılımın yapmaması gereken nadir şeylerden biri.
+            Bu tercih yalnÄ±zca bundan sonra oluÅŸturulan campaignleri etkiler. Mevcut
+            campaign ayarlarÄ±nÄ± deÄŸiÅŸtirmez; Ã§Ã¼nkÃ¼ kullanÄ±cÄ±nÄ±n arkasÄ±ndan dÃ¼ÄŸme Ã§evirmek
+            yazÄ±lÄ±mÄ±n yapmamasÄ± gereken nadir ÅŸeylerden biri.
           </p>
 
           <div className="settings-profile-grid">
@@ -234,25 +234,26 @@ export function Settings() {
 
         <section className="settings-card settings-card-wide settings-reset-card">
           <div>
-            <span className="mini-label">Sıfırlama</span>
-            <h2>Tercihleri varsayılana döndür</h2>
+            <span className="mini-label">SÄ±fÄ±rlama</span>
+            <h2>Tercihleri varsayÄ±lana dÃ¶ndÃ¼r</h2>
             <p>
-              Karakterlere, campaignlere veya homebrew verilerine dokunmaz. Yalnızca bu
-              sayfadaki uygulama tercihlerini sıfırlar.
+              Karakterlere, campaignlere veya homebrew verilerine dokunmaz. YalnÄ±zca bu
+              sayfadaki uygulama tercihlerini sÄ±fÄ±rlar.
             </p>
           </div>
           <button
             type="button"
             className="danger-action"
             onClick={() => {
-              const confirmed = confirm("Uygulama tercihleri sıfırlansın mı?");
+              const confirmed = confirm("Uygulama tercihleri sÄ±fÄ±rlansÄ±n mÄ±?");
               if (confirmed) resetSettings();
             }}
           >
-            Ayarları sıfırla
+            AyarlarÄ± sÄ±fÄ±rla
           </button>
         </section>
       </div>
     </PageShell>
   );
 }
+

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+﻿import { useEffect, useRef, useState } from "react";
 import { readJsonSafely, writeJsonSafely } from "../../core/storage/safeStorage";
 
 type AutosavedEnvelope<T> = {
@@ -86,3 +86,4 @@ export function useAutosavedDraft<T>(
     hasRestoredDraft: Boolean(restoredAtRef.current),
   };
 }
+

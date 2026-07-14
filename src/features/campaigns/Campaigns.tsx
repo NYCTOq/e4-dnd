@@ -1,4 +1,4 @@
-import type * as React from "react";
+﻿import type * as React from "react";
 import { useEffect, useMemo, useState } from "react";
 import { rollDice } from "../../core/dice/diceRoller";
 import type { Character } from "../../core/character/character.types";
@@ -164,7 +164,7 @@ export function Campaigns({
 
     if (!newCampaignName.trim()) {
       alert(
-        "Campaign adı lazım kankam. Adsız kampanya biraz vergi dairesi dosyası gibi duruyor.",
+        "Campaign adÄ± lazÄ±m kankam. AdsÄ±z kampanya biraz vergi dairesi dosyasÄ± gibi duruyor.",
       );
       return;
     }
@@ -408,7 +408,7 @@ export function Campaigns({
     }
 
     const confirmed = confirm(
-      "Bu encounter silinsin mi? Goblin sendikası buna bozulabilir.",
+      "Bu encounter silinsin mi? Goblin sendikasÄ± buna bozulabilir.",
     );
 
     if (!confirmed) {
@@ -455,7 +455,7 @@ export function Campaigns({
           currentHp: character.currentHp,
           initiative: null,
           initiativeModifier: dexModifier,
-          notes: `${character.race || "Race yok"} • ${
+          notes: `${character.race || "Race yok"} â€¢ ${
             character.className || "Class yok"
           }`,
           conditions: [],
@@ -491,7 +491,7 @@ export function Campaigns({
           currentHp: monster.hitPoints,
           initiative: null,
           initiativeModifier: dexModifier,
-          notes: `${monster.size} ${monster.type} • CR ${monster.challengeRating}`,
+          notes: `${monster.size} ${monster.type} â€¢ CR ${monster.challengeRating}`,
           conditions: [],
         },
       ],
@@ -683,7 +683,7 @@ export function Campaigns({
     <PageShell
       eyebrow="Campaign Command Center"
       title="Campaigns"
-      description="Parti, session notları, NPC kayıtları ve quest takibi. DM kaosunu en azından kartlara ayırıyoruz. Medeniyet dediğin bu kadar kırılgan."
+      description="Parti, session notlarÄ±, NPC kayÄ±tlarÄ± ve quest takibi. DM kaosunu en azÄ±ndan kartlara ayÄ±rÄ±yoruz. Medeniyet dediÄŸin bu kadar kÄ±rÄ±lgan."
     >
       <div className="campaign-layout">
         <aside className="campaign-sidebar-card">
@@ -699,10 +699,10 @@ export function Campaigns({
               onChange={(event) =>
                 setNewCampaignDescription(event.target.value)
               }
-              placeholder="Kampanya kısa açıklaması..."
+              placeholder="Kampanya kÄ±sa aÃ§Ä±klamasÄ±..."
               rows={3}
             />
-            <div className="campaign-template-picker" role="radiogroup" aria-label="Campaign şablonu">
+            <div className="campaign-template-picker" role="radiogroup" aria-label="Campaign ÅŸablonu">
               {CAMPAIGN_TEMPLATES.map((template) => (
                 <button
                   aria-checked={selectedTemplateId === template.id}
@@ -719,12 +719,12 @@ export function Campaigns({
                   <span>{template.eyebrow}</span>
                   <strong>{template.name}</strong>
                   <small>{template.description}</small>
-                  <em>{template.highlights.join(" • ")}</em>
+                  <em>{template.highlights.join(" â€¢ ")}</em>
                 </button>
               ))}
             </div>
             <button className="primary-action" type="submit">
-              Campaign Oluştur
+              Campaign OluÅŸtur
             </button>
           </form>
 
@@ -733,7 +733,7 @@ export function Campaigns({
               <div className="empty-panel compact-empty">
                 <h2>Campaign yok.</h2>
                 <p>
-                  Henüz kimse dünyayı kurtarmaya kalkmamış. Şaşırtıcı ölçüde
+                  HenÃ¼z kimse dÃ¼nyayÄ± kurtarmaya kalkmamÄ±ÅŸ. ÅaÅŸÄ±rtÄ±cÄ± Ã¶lÃ§Ã¼de
                   huzurlu.
                 </p>
               </div>
@@ -758,10 +758,10 @@ export function Campaigns({
 
         {!selectedCampaign ? (
           <div className="empty-panel campaign-empty-main">
-            <h2>Bir campaign seç.</h2>
+            <h2>Bir campaign seÃ§.</h2>
             <p>
-              Sol taraftan kampanya oluştur veya seç. Evet, organizasyon diye
-              bir kavram hâlâ var.
+              Sol taraftan kampanya oluÅŸtur veya seÃ§. Evet, organizasyon diye
+              bir kavram hÃ¢lÃ¢ var.
             </p>
           </div>
         ) : (
@@ -772,7 +772,7 @@ export function Campaigns({
                 <h2>{selectedCampaign.name}</h2>
                 <p>
                   {selectedCampaign.description ||
-                    "Açıklama yok. Gizemli kampanya mı, unutkan DM mi, bunu tarih yazacak."}
+                    "AÃ§Ä±klama yok. Gizemli kampanya mÄ±, unutkan DM mi, bunu tarih yazacak."}
                 </p>
               </div>
 
@@ -831,7 +831,7 @@ export function Campaigns({
               <div className="campaign-section-head">
                 <div>
                   <span className="mini-label">Encounter Tracker</span>
-                  <h2>Encounter Yönetimi</h2>
+                  <h2>Encounter YÃ¶netimi</h2>
                 </div>
               </div>
 
@@ -844,7 +844,7 @@ export function Campaigns({
                       placeholder="Rainbase Ambush"
                     />
                     <button className="primary-action" type="submit">
-                      Encounter Oluştur
+                      Encounter OluÅŸtur
                     </button>
                   </form>
 
@@ -853,8 +853,8 @@ export function Campaigns({
                       <div className="empty-panel compact-empty">
                         <h2>Encounter yok.</h2>
                         <p>
-                          Henüz kimse kimseye saldırmıyor. D&D için şüpheli
-                          derecede sağlıklı.
+                          HenÃ¼z kimse kimseye saldÄ±rmÄ±yor. D&D iÃ§in ÅŸÃ¼pheli
+                          derecede saÄŸlÄ±klÄ±.
                         </p>
                       </div>
                     ) : (
@@ -870,7 +870,7 @@ export function Campaigns({
                         >
                           <strong>{encounter.name}</strong>
                           <span>
-                            Round {encounter.round} •{" "}
+                            Round {encounter.round} â€¢{" "}
                             {encounter.participants.length} participant
                           </span>
                         </button>
@@ -881,10 +881,10 @@ export function Campaigns({
 
                 {!selectedEncounter ? (
                   <div className="empty-panel encounter-empty">
-                    <h2>Bir encounter seç veya oluştur.</h2>
+                    <h2>Bir encounter seÃ§ veya oluÅŸtur.</h2>
                     <p>
-                      Canavarları savaşa sokmadan önce küçük bir form dolduruyoruz.
-                      Bürokrasi fantastik evrenlere de bulaştı.
+                      CanavarlarÄ± savaÅŸa sokmadan Ã¶nce kÃ¼Ã§Ã¼k bir form dolduruyoruz.
+                      BÃ¼rokrasi fantastik evrenlere de bulaÅŸtÄ±.
                     </p>
                   </div>
                 ) : (
@@ -898,8 +898,8 @@ export function Campaigns({
                         <p>
                           Round {selectedEncounter.round}
                           {activeEncounterParticipant
-                            ? ` • Sıradaki: ${activeEncounterParticipant.name}`
-                            : " • Henüz initiative yok"}
+                            ? ` â€¢ SÄ±radaki: ${activeEncounterParticipant.name}`
+                            : " â€¢ HenÃ¼z initiative yok"}
                         </p>
                       </div>
 
@@ -958,7 +958,7 @@ export function Campaigns({
                         <span className="mini-label">Party</span>
                         <h3>Karakter Ekle</h3>
                         {partyCharacters.length === 0 ? (
-                          <p>Önce party'ye karakter bağla. Savaş boş sandalyelerle dönmüyor.</p>
+                          <p>Ã–nce party'ye karakter baÄŸla. SavaÅŸ boÅŸ sandalyelerle dÃ¶nmÃ¼yor.</p>
                         ) : (
                           <div className="encounter-pick-list">
                             {partyCharacters.map((character) => (
@@ -982,10 +982,10 @@ export function Campaigns({
                             value={monsterToAddId}
                             onChange={(event) => setMonsterToAddId(event.target.value)}
                           >
-                            <option value="">Monster seç</option>
+                            <option value="">Monster seÃ§</option>
                             {availableMonsters.map((monster) => (
                               <option key={monster.id} value={monster.id}>
-                                {monster.name} • CR {monster.challengeRating}
+                                {monster.name} â€¢ CR {monster.challengeRating}
                               </option>
                             ))}
                           </select>
@@ -1000,8 +1000,8 @@ export function Campaigns({
                       <div className="empty-panel compact-empty">
                         <h2>Participant yok.</h2>
                         <p>
-                          Encounter var ama içinde kimse yok. Bu da teknik olarak
-                          toplantı, savaş değil.
+                          Encounter var ama iÃ§inde kimse yok. Bu da teknik olarak
+                          toplantÄ±, savaÅŸ deÄŸil.
                         </p>
                       </div>
                     ) : (
@@ -1039,7 +1039,7 @@ export function Campaigns({
                                 <div className="initiative-badge">
                                   <span>Init</span>
                                   <strong>
-                                    {participant.initiative ?? "—"}
+                                    {participant.initiative ?? "â€”"}
                                   </strong>
                                   <em>
                                     {participant.initiativeModifier >= 0
@@ -1184,7 +1184,7 @@ export function Campaigns({
               <div className="campaign-section-head">
                 <div>
                   <span className="mini-label">Party</span>
-                  <h2>Karakterleri Bağla</h2>
+                  <h2>Karakterleri BaÄŸla</h2>
                 </div>
               </div>
 
@@ -1192,8 +1192,8 @@ export function Campaigns({
                 <div className="empty-panel compact-empty">
                   <h2>Karakter yok.</h2>
                   <p>
-                    Önce karakter oluştur. Parti boşsa macera da biraz
-                    PowerPoint sunumu gibi kalıyor.
+                    Ã–nce karakter oluÅŸtur. Parti boÅŸsa macera da biraz
+                    PowerPoint sunumu gibi kalÄ±yor.
                   </p>
                 </div>
               ) : (
@@ -1215,7 +1215,7 @@ export function Campaigns({
                       >
                         <strong>{character.name}</strong>
                         <span>
-                          Lv. {character.level} •{" "}
+                          Lv. {character.level} â€¢{" "}
                           {character.className || "Class yok"}
                         </span>
                       </button>
@@ -1236,8 +1236,8 @@ export function Campaigns({
 
                 {partyCharacters.length === 0 ? (
                   <div className="empty-panel compact-empty">
-                    <h2>Parti boş.</h2>
-                    <p>Henüz kimse bu felakete dahil edilmemiş.</p>
+                    <h2>Parti boÅŸ.</h2>
+                    <p>HenÃ¼z kimse bu felakete dahil edilmemiÅŸ.</p>
                   </div>
                 ) : (
                   <div className="party-character-list">
@@ -1249,7 +1249,7 @@ export function Campaigns({
                         <div>
                           <strong>{character.name}</strong>
                           <span>
-                            {character.race || "Race yok"} •{" "}
+                            {character.race || "Race yok"} â€¢{" "}
                             {character.className || "Class yok"}
                           </span>
                         </div>
@@ -1258,7 +1258,7 @@ export function Campaigns({
                             HP {character.currentHp}/{character.maxHp}
                           </b>
                           <span>
-                            AC {character.armorClass} • PB +
+                            AC {character.armorClass} â€¢ PB +
                             {getProficiencyBonus(character.level)}
                           </span>
                         </div>
@@ -1285,7 +1285,7 @@ export function Campaigns({
                   <textarea
                     value={sessionBody}
                     onChange={(event) => setSessionBody(event.target.value)}
-                    placeholder="Bu oturumda ne oldu? Kim kimi kandırdı? Kim gereksiz risk aldı?"
+                    placeholder="Bu oturumda ne oldu? Kim kimi kandÄ±rdÄ±? Kim gereksiz risk aldÄ±?"
                     rows={4}
                   />
                 </form>
@@ -1297,7 +1297,7 @@ export function Campaigns({
                         <strong>{note.title}</strong>
                         <p>
                           {note.body ||
-                            "Not boş. Minimalizm mi üşengeçlik mi, bilemedim."}
+                            "Not boÅŸ. Minimalizm mi Ã¼ÅŸengeÃ§lik mi, bilemedim."}
                         </p>
                       </div>
                       <button
@@ -1327,18 +1327,18 @@ export function Campaigns({
                     <input
                       value={npcName}
                       onChange={(event) => setNpcName(event.target.value)}
-                      placeholder="NPC adı"
+                      placeholder="NPC adÄ±"
                     />
                     <input
                       value={npcRole}
                       onChange={(event) => setNpcRole(event.target.value)}
-                      placeholder="Rol / Ünvan"
+                      placeholder="Rol / Ãœnvan"
                     />
                   </div>
                   <textarea
                     value={npcNotes}
                     onChange={(event) => setNpcNotes(event.target.value)}
-                    placeholder="NPC notları, motivasyon, ses tonu, şüpheli davranışlar..."
+                    placeholder="NPC notlarÄ±, motivasyon, ses tonu, ÅŸÃ¼pheli davranÄ±ÅŸlar..."
                     rows={4}
                   />
                 </form>
@@ -1351,7 +1351,7 @@ export function Campaigns({
                         <span>{npc.role}</span>
                         <p>
                           {npc.notes ||
-                            "Not yok. NPC de düz vatandaş çıktı, üzücü."}
+                            "Not yok. NPC de dÃ¼z vatandaÅŸ Ã§Ä±ktÄ±, Ã¼zÃ¼cÃ¼."}
                         </p>
                       </div>
                       <button
@@ -1381,7 +1381,7 @@ export function Campaigns({
                   <textarea
                     value={questNotes}
                     onChange={(event) => setQuestNotes(event.target.value)}
-                    placeholder="Quest detayları..."
+                    placeholder="Quest detaylarÄ±..."
                     rows={4}
                   />
                 </form>
@@ -1394,7 +1394,7 @@ export function Campaigns({
                         <span>{quest.status}</span>
                         <p>
                           {quest.notes ||
-                            "Not yok. Görev tanımı bile performans kaygısı yaşıyor."}
+                            "Not yok. GÃ¶rev tanÄ±mÄ± bile performans kaygÄ±sÄ± yaÅŸÄ±yor."}
                         </p>
                         <div className="quest-status-row">
                           {(["active", "completed", "failed"] as const).map(
@@ -1430,3 +1430,4 @@ export function Campaigns({
     </PageShell>
   );
 }
+

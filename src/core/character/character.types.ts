@@ -1,4 +1,4 @@
-export type RulesetId = "dnd_2014" | "dnd_2024" | "homebrew";
+﻿export type RulesetId = "dnd_2014" | "dnd_2024" | "homebrew";
 
 export type AbilityKey = "str" | "dex" | "con" | "int" | "wis" | "cha";
 
@@ -119,3 +119,4 @@ export interface CharacterDraft {
 
   notes: string;
 }
+

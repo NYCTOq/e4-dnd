@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+﻿import { useMemo } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import type { AbilityKey, Character } from "../../core/character/character.types";
 import {
@@ -61,13 +61,13 @@ export function CharacterCompare({ characters }: { characters: Character[] }) {
     return (
       <PageShell
         eyebrow="Build Lab"
-        title="Karakter Karşılaştır"
-        description="Karşılaştırma için en az iki karakter gerekiyor. Tek karakterle düello yapmak biraz fazla içsel kalıyor."
+        title="Karakter KarÅŸÄ±laÅŸtÄ±r"
+        description="KarÅŸÄ±laÅŸtÄ±rma iÃ§in en az iki karakter gerekiyor. Tek karakterle dÃ¼ello yapmak biraz fazla iÃ§sel kalÄ±yor."
       >
         <div className="empty-panel">
-          <h2>İkinci karakter gerekli.</h2>
-          <p>Karakter listesinden mevcut karakteri kopyalayabilir veya Builder ile yeni bir tane oluşturabilirsin.</p>
-          <button type="button" onClick={() => navigate("/characters")}>Karakterlere dön</button>
+          <h2>Ä°kinci karakter gerekli.</h2>
+          <p>Karakter listesinden mevcut karakteri kopyalayabilir veya Builder ile yeni bir tane oluÅŸturabilirsin.</p>
+          <button type="button" onClick={() => navigate("/characters")}>Karakterlere dÃ¶n</button>
         </div>
       </PageShell>
     );
@@ -80,8 +80,8 @@ export function CharacterCompare({ characters }: { characters: Character[] }) {
   return (
     <PageShell
       eyebrow="Build Lab"
-      title="Karakter Karşılaştır"
-      description="İki karakteri temel istatistikler, yetenek skorları, büyüler ve ekipman açısından yan yana incele. Farklı değerler vurgulanır."
+      title="Karakter KarÅŸÄ±laÅŸtÄ±r"
+      description="Ä°ki karakteri temel istatistikler, yetenek skorlarÄ±, bÃ¼yÃ¼ler ve ekipman aÃ§Ä±sÄ±ndan yan yana incele. FarklÄ± deÄŸerler vurgulanÄ±r."
     >
       <div className="compare-picker-panel">
         <label>
@@ -92,7 +92,7 @@ export function CharacterCompare({ characters }: { characters: Character[] }) {
           >
             {characters.map((character) => (
               <option key={character.id} value={character.id} disabled={character.id === right.id}>
-                {character.name} • Lv. {character.level}
+                {character.name} â€¢ Lv. {character.level}
               </option>
             ))}
           </select>
@@ -102,20 +102,20 @@ export function CharacterCompare({ characters }: { characters: Character[] }) {
           type="button"
           className="compare-swap-button"
           onClick={() => updateSelection(right.id, left.id)}
-          aria-label="Karakterlerin yerini değiştir"
+          aria-label="Karakterlerin yerini deÄŸiÅŸtir"
         >
-          ⇄
+          â‡„
         </button>
 
         <label>
-          Sağ karakter
+          SaÄŸ karakter
           <select
             value={right.id}
             onChange={(event) => updateSelection(left.id, event.target.value)}
           >
             {characters.map((character) => (
               <option key={character.id} value={character.id} disabled={character.id === left.id}>
-                {character.name} • Lv. {character.level}
+                {character.name} â€¢ Lv. {character.level}
               </option>
             ))}
           </select>
@@ -128,18 +128,18 @@ export function CharacterCompare({ characters }: { characters: Character[] }) {
             <span className="mini-label">{character.ruleset}</span>
             <h2>{character.name}</h2>
             <p>
-              {character.race || "Unknown Race"} • {character.className || "Unknown Class"}
-              {character.subclass ? ` • ${character.subclass}` : ""}
+              {character.race || "Unknown Race"} â€¢ {character.className || "Unknown Class"}
+              {character.subclass ? ` â€¢ ${character.subclass}` : ""}
             </p>
             <button type="button" onClick={() => navigate(`/characters/${character.id}`)}>
-              Karakteri aç
+              Karakteri aÃ§
             </button>
           </article>
         ))}
       </div>
 
       <section className="compare-section">
-        <h2>Temel savaş değerleri</h2>
+        <h2>Temel savaÅŸ deÄŸerleri</h2>
         <div className="compare-table">
           <div className="compare-label">Seviye</div>
           <DifferenceValue left={left.level} right={right.level} />
@@ -163,7 +163,7 @@ export function CharacterCompare({ characters }: { characters: Character[] }) {
       </section>
 
       <section className="compare-section">
-        <h2>Ability skorları</h2>
+        <h2>Ability skorlarÄ±</h2>
         <div className="compare-ability-grid">
           {(Object.keys(ABILITY_LABELS) as AbilityKey[]).map((ability) => {
             const leftScore = left.abilities[ability];
@@ -188,11 +188,11 @@ export function CharacterCompare({ characters }: { characters: Character[] }) {
       </section>
 
       <section className="compare-section">
-        <h2>Kaynaklar ve içerik</h2>
+        <h2>Kaynaklar ve iÃ§erik</h2>
         <div className="compare-table">
-          <div className="compare-label">Bilinen büyü</div>
+          <div className="compare-label">Bilinen bÃ¼yÃ¼</div>
           <DifferenceValue left={left.knownSpellIds.length} right={right.knownSpellIds.length} />
-          <div className="compare-label">Hazır büyü</div>
+          <div className="compare-label">HazÄ±r bÃ¼yÃ¼</div>
           <DifferenceValue left={left.preparedSpellIds.length} right={right.preparedSpellIds.length} />
           <div className="compare-label">Toplam spell slot</div>
           <DifferenceValue
@@ -201,7 +201,7 @@ export function CharacterCompare({ characters }: { characters: Character[] }) {
           />
           <div className="compare-label">Inventory adedi</div>
           <DifferenceValue left={getTotalInventoryQuantity(left)} right={getTotalInventoryQuantity(right)} />
-          <div className="compare-label">Kuşanılmış silah</div>
+          <div className="compare-label">KuÅŸanÄ±lmÄ±ÅŸ silah</div>
           <DifferenceValue left={left.equippedWeaponIds.length} right={right.equippedWeaponIds.length} />
           <div className="compare-label">Gold</div>
           <DifferenceValue left={left.gold} right={right.gold} />
@@ -214,3 +214,4 @@ export function CharacterCompare({ characters }: { characters: Character[] }) {
     </PageShell>
   );
 }
+

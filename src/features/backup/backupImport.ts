@@ -1,4 +1,4 @@
-export function mergeRecordsById<T extends { id: string }>(
+﻿export function mergeRecordsById<T extends { id: string }>(
   current: T[],
   incoming: T[],
 ): T[] {
@@ -10,3 +10,4 @@ export function mergeRecordsById<T extends { id: string }>(
 export function mergeUniqueStrings(current: string[], incoming: string[]): string[] {
   return Array.from(new Set([...current, ...incoming]));
 }
+

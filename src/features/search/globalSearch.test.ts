@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { makeCharacter, makeMonster } from "../../test/fixtures";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
-import { buildGlobalSearchEntries, searchGlobalEntries } from "./globalSearch";
+import { buildGlobalSearchEntries, searchGlobalEntries } from "./globalSearchEngine";
 
 const rulesetData: RulesetData = {
   id: "dnd_2014",

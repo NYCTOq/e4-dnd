@@ -13,10 +13,10 @@ import {
   buildGlobalSearchEntries,
   searchGlobalEntries,
   type GlobalSearchCategory,
-} from "./globalSearch";
+} from "./globalSearchEngine";
 
-const CATEGORIES: readonly (GlobalSearchCategory | "Tümü")[] = [
-  "Tümü",
+const CATEGORIES: readonly (GlobalSearchCategory | "all")[] = [
+  "all",
   "Sayfa",
   "Karakter",
   "Campaign",
@@ -26,8 +26,8 @@ const CATEGORIES: readonly (GlobalSearchCategory | "Tümü")[] = [
   "Yardım",
 ];
 
-const CATEGORY_LABELS: Record<GlobalSearchCategory | "Tümü", string> = {
-  Tümü: "Tümü",
+const CATEGORY_LABELS: Record<GlobalSearchCategory | "all", string> = {
+  all: "Tümü",
   Sayfa: "Sayfalar",
   Karakter: "Karakterler",
   Campaign: "Campaigns",
@@ -60,10 +60,10 @@ export function GlobalSearch({
 }: GlobalSearchProps) {
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get("q") ?? "";
-  const rawCategory = searchParams.get("category") ?? "Tümü";
-  const category = CATEGORIES.includes(rawCategory as GlobalSearchCategory | "Tümü")
-    ? (rawCategory as GlobalSearchCategory | "Tümü")
-    : "Tümü";
+  const rawCategory = searchParams.get("category") ?? "all";
+  const category = CATEGORIES.includes(rawCategory as GlobalSearchCategory | "all")
+    ? (rawCategory as GlobalSearchCategory | "all")
+    : "all";
   const deferredQuery = useDeferredValue(query);
 
   const entries = useMemo(
@@ -94,7 +94,7 @@ export function GlobalSearch({
   function updateSearch(nextQuery: string, nextCategory = category) {
     const params = new URLSearchParams();
     if (nextQuery) params.set("q", nextQuery);
-    if (nextCategory !== "Tümü") params.set("category", nextCategory);
+    if (nextCategory !== "all") params.set("category", nextCategory);
     setSearchParams(params, { replace: true });
   }
 
@@ -133,7 +133,7 @@ export function GlobalSearch({
               onClick={() => updateSearch(query, item)}
             >
               <span>{CATEGORY_LABELS[item]}</span>
-              {item === "Tümü" ? entries.length : categoryCounts[item] ?? 0}
+              {item === "all" ? entries.length : categoryCounts[item] ?? 0}
             </button>
           ))}
         </div>

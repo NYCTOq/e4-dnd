@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from "react";
+﻿import { useEffect, useMemo, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { navItems } from "./navItems";
 
@@ -10,11 +10,11 @@ function getPageLabel(pathname: string) {
   }
 
   if (pathname.startsWith("/characters/")) {
-    return pathname.endsWith("/edit") ? "Karakter Düzenle" : "Karakter Detayı";
+    return pathname.endsWith("/edit") ? "Karakter DÃ¼zenle" : "Karakter DetayÄ±";
   }
 
   if (pathname.startsWith("/monsters/")) {
-    return "Canavar Detayı";
+    return "Canavar DetayÄ±";
   }
 
   return "E4 D&D";
@@ -39,7 +39,7 @@ export function RouteAccessibility() {
 
     const timeoutId = window.setTimeout(() => {
       if (liveRegionRef.current) {
-        liveRegionRef.current.textContent = `${pageLabel} sayfası açıldı.`;
+        liveRegionRef.current.textContent = `${pageLabel} sayfasÄ± aÃ§Ä±ldÄ±.`;
       }
     }, 80);
 
@@ -56,3 +56,4 @@ export function RouteAccessibility() {
     />
   );
 }
+

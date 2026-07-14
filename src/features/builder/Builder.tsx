@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+﻿import { useMemo, useState } from "react";
 import { AutosaveStatus } from "../../shared/forms/AutosaveStatus";
 import { useAutosavedDraft } from "../../shared/state/useAutosavedDraft";
 import type { RulesetData, DndSpellData } from "../../core/rulesets/ruleset.types";
@@ -43,13 +43,13 @@ export function Builder({
   const [activeStepIndex, setActiveStepIndex] = useState(0);
 
   const builderSteps = [
-    { id: "basic", title: "Basic", description: "İsim, oyuncu ve temel kimlik." },
-    { id: "class", title: "Race & Class", description: "Tür, sınıf, seviye ve arka plan." },
-    { id: "abilities", title: "Abilities", description: "Altı ability skoru ve modifierlar." },
+    { id: "basic", title: "Basic", description: "Ä°sim, oyuncu ve temel kimlik." },
+    { id: "class", title: "Race & Class", description: "TÃ¼r, sÄ±nÄ±f, seviye ve arka plan." },
+    { id: "abilities", title: "Abilities", description: "AltÄ± ability skoru ve modifierlar." },
     { id: "combat", title: "Combat", description: "HP, AC ve notlar." },
-    { id: "spells", title: "Spells", description: "Known, prepared ve cantrip seçimi." },
-    { id: "equipment", title: "Equipment", description: "Inventory, gold ve kuşanılan ekipman." },
-    { id: "review", title: "Review", description: "Son kontrol ve kayıt." },
+    { id: "spells", title: "Spells", description: "Known, prepared ve cantrip seÃ§imi." },
+    { id: "equipment", title: "Equipment", description: "Inventory, gold ve kuÅŸanÄ±lan ekipman." },
+    { id: "review", title: "Review", description: "Son kontrol ve kayÄ±t." },
   ] as const;
 
   const activeStep = builderSteps[activeStepIndex];
@@ -139,12 +139,12 @@ export function Builder({
 
   function goNext() {
     if (activeStep.id === "basic" && !draft.name.trim()) {
-      alert("Karakter adı lazım kankam. İsimsiz kahraman ancak yan NPC olur.");
+      alert("Karakter adÄ± lazÄ±m kankam. Ä°simsiz kahraman ancak yan NPC olur.");
       return;
     }
 
     if (activeStep.id === "class" && !draft.className.trim()) {
-      alert("Class seçmeden karakter olmaz. Sistem bile buna güler.");
+      alert("Class seÃ§meden karakter olmaz. Sistem bile buna gÃ¼ler.");
       return;
     }
 
@@ -155,13 +155,13 @@ export function Builder({
     event.preventDefault();
 
     if (!draft.name.trim()) {
-      alert("Karakter adı lazım kankam. İsimsiz kahraman ancak yan NPC olur.");
+      alert("Karakter adÄ± lazÄ±m kankam. Ä°simsiz kahraman ancak yan NPC olur.");
       goToStep(0);
       return;
     }
 
     if (!draft.className.trim()) {
-      alert("Class seçmeden karakter olmaz. Sistem bile buna güler.");
+      alert("Class seÃ§meden karakter olmaz. Sistem bile buna gÃ¼ler.");
       goToStep(1);
       return;
     }
@@ -183,7 +183,7 @@ export function Builder({
     <PageShell
       eyebrow="Character Builder"
       title="Yeni Karakter"
-      description="Builder artık adım adım ilerliyor. Tek sayfada karakter, spell, inventory ve varoluş krizi taşımıyoruz."
+      description="Builder artÄ±k adÄ±m adÄ±m ilerliyor. Tek sayfada karakter, spell, inventory ve varoluÅŸ krizi taÅŸÄ±mÄ±yoruz."
     >
       <div className="builder-v2-layout">
         <aside className="builder-stepper">
@@ -207,11 +207,11 @@ export function Builder({
             <p>{activeStep.description}</p>
           </div>
           <AutosaveStatus
-            label="Karakter taslağı"
+            label="Karakter taslaÄŸÄ±"
             lastSavedAt={lastSavedAt}
             restoredAt={restoredAt}
             onClear={() => {
-              const confirmed = confirm("Karakter taslağı temizlensin mi?");
+              const confirmed = confirm("Karakter taslaÄŸÄ± temizlensin mi?");
               if (confirmed) {
                 clearDraft(emptyDraft);
                 setActiveStepIndex(0);
@@ -225,7 +225,7 @@ export function Builder({
 
               <div className="form-grid">
                 <label>
-                  Karakter Adı
+                  Karakter AdÄ±
                   <input
                     value={draft.name}
                     onChange={(event) => updateDraft("name", event.target.value)}
@@ -238,7 +238,7 @@ export function Builder({
                   <input
                     value={draft.playerName}
                     onChange={(event) => updateDraft("playerName", event.target.value)}
-                    placeholder="Oyuncu adı"
+                    placeholder="Oyuncu adÄ±"
                   />
                 </label>
 
@@ -289,7 +289,7 @@ export function Builder({
                       onChange={(event) => updateDraft("race", event.target.value)}
                     >
                       <option value="">
-                        {isRulesetLoading ? "Race data yükleniyor..." : "Race seç"}
+                        {isRulesetLoading ? "Race data yÃ¼kleniyor..." : "Race seÃ§"}
                       </option>
 
                       {rulesetData?.races.map((race) => (
@@ -319,8 +319,8 @@ export function Builder({
                     >
                       <option value="">
                         {isRulesetLoading
-                          ? "Class data yükleniyor..."
-                          : "Class seç"}
+                          ? "Class data yÃ¼kleniyor..."
+                          : "Class seÃ§"}
                       </option>
 
                       {rulesetData?.classes.map((classItem) => (
@@ -361,7 +361,7 @@ export function Builder({
 
               {rulesetError ? (
                 <div className="empty-panel">
-                  <h2>Ruleset data yüklenemedi</h2>
+                  <h2>Ruleset data yÃ¼klenemedi</h2>
                   <p>{rulesetError}</p>
                 </div>
               ) : null}
@@ -421,7 +421,7 @@ export function Builder({
               <div className="panel-heading-row">
                 <div>
                   <h2>Ability Scores</h2>
-                  <p>Skorları gir, modifierlar otomatik hesaplanır. Matematik yine yazılıma kaldı, insanlık rahat.</p>
+                  <p>SkorlarÄ± gir, modifierlar otomatik hesaplanÄ±r. Matematik yine yazÄ±lÄ±ma kaldÄ±, insanlÄ±k rahat.</p>
                 </div>
 
                 <button type="button" onClick={applyStandardArray}>
@@ -508,7 +508,7 @@ export function Builder({
                 <textarea
                   value={draft.notes}
                   onChange={(event) => updateDraft("notes", event.target.value)}
-                  placeholder="Lore, özel homebrew kurallar, DM notları..."
+                  placeholder="Lore, Ã¶zel homebrew kurallar, DM notlarÄ±..."
                   rows={4}
                 />
               </label>
@@ -518,7 +518,7 @@ export function Builder({
           {activeStep.id === "spells" ? (
             <CharacterSpellSelector
               title="Karakter Spellbook"
-              description="Bu karakterin bildiği cantripleri ve hazırladığı büyüleri seç. Slotlar karakter detayında takip ediliyor."
+              description="Bu karakterin bildiÄŸi cantripleri ve hazÄ±rladÄ±ÄŸÄ± bÃ¼yÃ¼leri seÃ§. Slotlar karakter detayÄ±nda takip ediliyor."
               rulesetData={rulesetData}
               isRulesetLoading={isRulesetLoading}
               rulesetError={rulesetError}
@@ -538,7 +538,7 @@ export function Builder({
           {activeStep.id === "equipment" ? (
             <CharacterInventoryManager
               title="Inventory & Equipment"
-              description="Karakterin itemlarını, altınını ve kuşandığı ekipmanı seç. AC auto ise zırh ve shield hesaba katılır."
+              description="Karakterin itemlarÄ±nÄ±, altÄ±nÄ±nÄ± ve kuÅŸandÄ±ÄŸÄ± ekipmanÄ± seÃ§. AC auto ise zÄ±rh ve shield hesaba katÄ±lÄ±r."
               rulesetData={rulesetData}
               isRulesetLoading={isRulesetLoading}
               rulesetError={rulesetError}
@@ -568,14 +568,14 @@ export function Builder({
           {activeStep.id === "review" ? (
             <section className="form-panel preview-panel builder-review-panel">
               <h2>Review & Save</h2>
-              <p>Kaydetmeden önce son kontrol. Sonra “Ben bunu böyle mi yapmışım?” demek yine mümkün ama en azından app uyarmış olur.</p>
+              <p>Kaydetmeden Ã¶nce son kontrol. Sonra â€œBen bunu bÃ¶yle mi yapmÄ±ÅŸÄ±m?â€ demek yine mÃ¼mkÃ¼n ama en azÄ±ndan app uyarmÄ±ÅŸ olur.</p>
 
               <div className="builder-review-hero">
                 <div>
                   <span className="mini-label">Character</span>
-                  <h2>{draft.name || "İsimsiz Karakter"}</h2>
+                  <h2>{draft.name || "Ä°simsiz Karakter"}</h2>
                   <p>
-                    {draft.race || "Unknown Race"} • {draft.className || "Unknown Class"} • Level {draft.level}
+                    {draft.race || "Unknown Race"} â€¢ {draft.className || "Unknown Class"} â€¢ Level {draft.level}
                   </p>
                 </div>
                 <strong className="level-badge">AC {effectiveArmorClass}</strong>
@@ -646,7 +646,7 @@ export function Builder({
               </button>
             ) : (
               <button className="primary-action" type="button" onClick={goNext}>
-                İleri
+                Ä°leri
               </button>
             )}
           </div>
@@ -655,4 +655,5 @@ export function Builder({
     </PageShell>
   );
 }
+
 

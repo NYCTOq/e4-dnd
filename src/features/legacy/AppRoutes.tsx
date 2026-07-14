@@ -80,7 +80,7 @@ const HelpCenter = lazy(() =>
   import("../help/HelpCenter").then((module) => ({ default: module.HelpCenter })),
 );
 const GlobalSearch = lazy(() =>
-  import("../search/GlobalSearch").then((module) => ({ default: module.GlobalSearch })),
+  import("../search/GlobalSearchPage").then((module) => ({ default: module.GlobalSearch })),
 );
 
 import type { BackupImportOptions, FullBackupData } from "../backup/fullBackup";

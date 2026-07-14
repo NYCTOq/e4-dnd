@@ -1,4 +1,4 @@
-import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
+﻿import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import type { Character } from "../../core/character/character.types";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
@@ -46,7 +46,7 @@ export function CommandPalette({
     const pageCommands: CommandItem[] = navItems.map((item) => ({
       id: `page-${item.to}`,
       label: item.label,
-      subtitle: `${item.group} sayfasına git`,
+      subtitle: `${item.group} sayfasÄ±na git`,
       group: "Sayfalar",
       icon: item.icon,
       keywords: `${item.label} ${item.shortLabel} ${item.group}`,
@@ -56,47 +56,47 @@ export function CommandPalette({
     const actionCommands: CommandItem[] = [
       {
         id: "action-global-search",
-        label: "Global aramayı aç",
-        subtitle: "Tüm içeriklerde ayrıntılı arama yap",
-        group: "Hızlı Aksiyonlar",
-        icon: "⌕",
-        keywords: "global arama search tüm içerikler",
+        label: "Global aramayÄ± aÃ§",
+        subtitle: "TÃ¼m iÃ§eriklerde ayrÄ±ntÄ±lÄ± arama yap",
+        group: "HÄ±zlÄ± Aksiyonlar",
+        icon: "âŒ•",
+        keywords: "global arama search tÃ¼m iÃ§erikler",
         to: "/search",
       },
       {
         id: "action-new-character",
-        label: "Yeni karakter oluştur",
-        subtitle: "Character Builder'ı aç",
-        group: "Hızlı Aksiyonlar",
+        label: "Yeni karakter oluÅŸtur",
+        subtitle: "Character Builder'Ä± aÃ§",
+        group: "HÄ±zlÄ± Aksiyonlar",
         icon: "+",
-        keywords: "yeni karakter oluştur builder",
+        keywords: "yeni karakter oluÅŸtur builder",
         to: "/builder",
       },
       {
         id: "action-play",
-        label: "Play Mode'u aç",
-        subtitle: "Masa kullanım ekranına git",
-        group: "Hızlı Aksiyonlar",
-        icon: "▶",
+        label: "Play Mode'u aÃ§",
+        subtitle: "Masa kullanÄ±m ekranÄ±na git",
+        group: "HÄ±zlÄ± Aksiyonlar",
+        icon: "â–¶",
         keywords: "oyna play mode masa combat",
         to: "/play-mode",
       },
       {
         id: "action-dice",
         label: "Zar at",
-        subtitle: "Dice Roller'ı aç",
-        group: "Hızlı Aksiyonlar",
-        icon: "◆",
+        subtitle: "Dice Roller'Ä± aÃ§",
+        group: "HÄ±zlÄ± Aksiyonlar",
+        icon: "â—†",
         keywords: "zar dice roll at",
         to: "/dice",
       },
       {
         id: "action-backup",
         label: "Tam yedek al",
-        subtitle: "Yedek ve kurtarma ekranına git",
-        group: "Hızlı Aksiyonlar",
-        icon: "↥",
-        keywords: "backup yedek export dışa aktar",
+        subtitle: "Yedek ve kurtarma ekranÄ±na git",
+        group: "HÄ±zlÄ± Aksiyonlar",
+        icon: "â†¥",
+        keywords: "backup yedek export dÄ±ÅŸa aktar",
         to: "/backup",
       },
     ];
@@ -104,9 +104,9 @@ export function CommandPalette({
     const characterCommands: CommandItem[] = characters.map((character) => ({
       id: `character-${character.id}`,
       label: character.name,
-      subtitle: `${character.className || "Sınıfsız"} · Seviye ${character.level} · Karakter`,
+      subtitle: `${character.className || "SÄ±nÄ±fsÄ±z"} Â· Seviye ${character.level} Â· Karakter`,
       group: "Karakterler",
-      icon: "◈",
+      icon: "â—ˆ",
       keywords: `${character.name} ${character.playerName} ${character.className} ${character.race} ${character.subclass}`,
       to: `/characters/${character.id}`,
     }));
@@ -114,9 +114,9 @@ export function CommandPalette({
     const campaignCommands: CommandItem[] = campaigns.map((campaign) => ({
       id: `campaign-${campaign.id}`,
       label: campaign.name,
-      subtitle: `${campaign.characterIds.length} karakter · ${campaign.quests.filter((quest) => quest.status === "active").length} aktif quest`,
+      subtitle: `${campaign.characterIds.length} karakter Â· ${campaign.quests.filter((quest) => quest.status === "active").length} aktif quest`,
       group: "Campaigns",
-      icon: "✦",
+      icon: "âœ¦",
       keywords: `${campaign.name} ${campaign.description} campaign quest encounter`,
       to: `/campaigns?campaign=${campaign.id}`,
     }));
@@ -124,19 +124,19 @@ export function CommandPalette({
     const spellCommands: CommandItem[] = (rulesetData?.spells ?? []).map((spell) => ({
       id: `spell-${spell.id}`,
       label: spell.name,
-      subtitle: `${spell.level === 0 ? "Cantrip" : `${spell.level}. seviye`} · ${spell.school}`,
-      group: "Büyüler",
-      icon: "✧",
-      keywords: `${spell.name} ${spell.school} ${spell.classes.join(" ")} spell büyü`,
+      subtitle: `${spell.level === 0 ? "Cantrip" : `${spell.level}. seviye`} Â· ${spell.school}`,
+      group: "BÃ¼yÃ¼ler",
+      icon: "âœ§",
+      keywords: `${spell.name} ${spell.school} ${spell.classes.join(" ")} spell bÃ¼yÃ¼`,
       to: `/spellbook?search=${encodeURIComponent(spell.name)}`,
     }));
 
     const monsterCommands: CommandItem[] = (rulesetData?.monsters ?? []).map((monster) => ({
       id: `monster-${monster.id}`,
       label: monster.name,
-      subtitle: `CR ${monster.challengeRating} · ${monster.type}`,
+      subtitle: `CR ${monster.challengeRating} Â· ${monster.type}`,
       group: "Canavarlar",
-      icon: "♜",
+      icon: "â™œ",
       keywords: `${monster.name} ${monster.type} ${monster.size} ${monster.challengeRating} monster canavar`,
       to: `/monsters/${monster.id}`,
     }));
@@ -156,7 +156,7 @@ export function CommandPalette({
 
     if (!normalizedQuery) {
       return commands
-        .filter((command) => command.group === "Hızlı Aksiyonlar" || command.group === "Sayfalar")
+        .filter((command) => command.group === "HÄ±zlÄ± Aksiyonlar" || command.group === "Sayfalar")
         .slice(0, MAX_RESULTS);
     }
 
@@ -255,11 +255,11 @@ export function CommandPalette({
         type="button"
         className="command-palette-trigger"
         onClick={() => setIsOpen(true)}
-        aria-label="Hızlı komut menüsünü aç"
-        title="Hızlı komutlar (Ctrl + K)"
+        aria-label="HÄ±zlÄ± komut menÃ¼sÃ¼nÃ¼ aÃ§"
+        title="HÄ±zlÄ± komutlar (Ctrl + K)"
       >
-        <span aria-hidden="true">⌘</span>
-        <span>Hızlı Git</span>
+        <span aria-hidden="true">âŒ˜</span>
+        <span>HÄ±zlÄ± Git</span>
         <kbd>Ctrl K</kbd>
       </button>
     );
@@ -277,17 +277,17 @@ export function CommandPalette({
         className="command-palette"
         role="dialog"
         aria-modal="true"
-        aria-label="Hızlı komut menüsü"
+        aria-label="HÄ±zlÄ± komut menÃ¼sÃ¼"
       >
         <div className="command-palette-search">
-          <span aria-hidden="true">⌕</span>
+          <span aria-hidden="true">âŒ•</span>
           <input
             ref={inputRef}
             type="search"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Sayfa, karakter, campaign, büyü veya canavar ara..."
+            placeholder="Sayfa, karakter, campaign, bÃ¼yÃ¼ veya canavar ara..."
             aria-label="Komut ara"
             aria-controls="command-palette-results"
             aria-activedescendant={filteredCommands[activeIndex]?.id}
@@ -318,18 +318,19 @@ export function CommandPalette({
             ))
           ) : (
             <div className="command-palette-empty">
-              <strong>Sonuç bulunamadı.</strong>
-              <span>Aramayı biraz sadeleştir. Bazen büyü adları bile insanlardan daha karmaşık.</span>
+              <strong>SonuÃ§ bulunamadÄ±.</strong>
+              <span>AramayÄ± biraz sadeleÅŸtir. Bazen bÃ¼yÃ¼ adlarÄ± bile insanlardan daha karmaÅŸÄ±k.</span>
             </div>
           )}
         </div>
 
         <footer className="command-palette-footer">
-          <span><kbd>↑</kbd><kbd>↓</kbd> gezin</span>
-          <span><kbd>Enter</kbd> aç</span>
+          <span><kbd>â†‘</kbd><kbd>â†“</kbd> gezin</span>
+          <span><kbd>Enter</kbd> aÃ§</span>
           <span><kbd>Esc</kbd> kapat</span>
         </footer>
       </section>
     </div>
   );
 }
+

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import type { Character, CharacterDraft } from "../../core/character/character.types";
@@ -111,12 +111,12 @@ export function CharacterEditor({
     }
 
     if (!draft.name.trim()) {
-      alert("Karakter adı lazım kankam. İsimsiz kahraman ancak yan NPC olur.");
+      alert("Karakter adÄ± lazÄ±m kankam. Ä°simsiz kahraman ancak yan NPC olur.");
       return;
     }
 
     if (!draft.className.trim()) {
-      alert("Class seçmeden karakter olmaz. Sistem bile buna güler.");
+      alert("Class seÃ§meden karakter olmaz. Sistem bile buna gÃ¼ler.");
       return;
     }
 
@@ -151,14 +151,14 @@ export function CharacterEditor({
     return (
       <PageShell
         eyebrow="Character Editor"
-        title="Karakter Bulunamadı"
-        description="Düzenlenecek karakter ya silindi ya da Git conflict görüp kaçtı."
+        title="Karakter BulunamadÄ±"
+        description="DÃ¼zenlenecek karakter ya silindi ya da Git conflict gÃ¶rÃ¼p kaÃ§tÄ±."
       >
         <button
           className="primary-action"
           onClick={() => navigate("/characters")}
         >
-          Karakterlere Dön
+          Karakterlere DÃ¶n
         </button>
       </PageShell>
     );
@@ -167,8 +167,8 @@ export function CharacterEditor({
   return (
     <PageShell
       eyebrow="Character Editor"
-      title={`${character.name} Düzenle`}
-      description="Karakter bilgilerini güncelle. D&D karakterleri zaten sabit kalmaz, oyuncular da durduk yere fikir değiştirir."
+      title={`${character.name} DÃ¼zenle`}
+      description="Karakter bilgilerini gÃ¼ncelle. D&D karakterleri zaten sabit kalmaz, oyuncular da durduk yere fikir deÄŸiÅŸtirir."
     >
       <form className="builder-form" onSubmit={handleSubmit}>
         <section className="form-panel">
@@ -176,7 +176,7 @@ export function CharacterEditor({
 
           <div className="form-grid">
             <label>
-              Karakter Adı
+              Karakter AdÄ±
               <input
                 value={draft.name}
                 onChange={(event) => updateDraft("name", event.target.value)}
@@ -191,7 +191,7 @@ export function CharacterEditor({
                 onChange={(event) =>
                   updateDraft("playerName", event.target.value)
                 }
-                placeholder="Oyuncu adı"
+                placeholder="Oyuncu adÄ±"
               />
             </label>
 
@@ -234,7 +234,7 @@ export function CharacterEditor({
                   onChange={(event) => updateDraft("race", event.target.value)}
                 >
                   <option value="">
-                    {isRulesetLoading ? "Race data yükleniyor..." : "Race seç"}
+                    {isRulesetLoading ? "Race data yÃ¼kleniyor..." : "Race seÃ§"}
                   </option>
 
                   {rulesetData?.races.map((race) => (
@@ -264,8 +264,8 @@ export function CharacterEditor({
                 >
                   <option value="">
                     {isRulesetLoading
-                      ? "Class data yükleniyor..."
-                      : "Class seç"}
+                      ? "Class data yÃ¼kleniyor..."
+                      : "Class seÃ§"}
                   </option>
 
                   {rulesetData?.classes.map((classItem) => (
@@ -310,7 +310,7 @@ export function CharacterEditor({
 
           {rulesetError ? (
             <div className="empty-panel">
-              <h2>Ruleset data yüklenemedi</h2>
+              <h2>Ruleset data yÃ¼klenemedi</h2>
               <p>{rulesetError}</p>
             </div>
           ) : null}
@@ -417,7 +417,7 @@ export function CharacterEditor({
             <textarea
               value={draft.notes}
               onChange={(event) => updateDraft("notes", event.target.value)}
-              placeholder="Lore, özel homebrew kurallar, DM notları..."
+              placeholder="Lore, Ã¶zel homebrew kurallar, DM notlarÄ±..."
               rows={4}
             />
           </label>
@@ -425,7 +425,7 @@ export function CharacterEditor({
 
         <CharacterSpellSelector
           title="Karakter Spellbook"
-          description="Bu karakterin spell listesini güncelle. Oyuncular zaten her seviye atlayınca kimlik krizi geçiriyor."
+          description="Bu karakterin spell listesini gÃ¼ncelle. Oyuncular zaten her seviye atlayÄ±nca kimlik krizi geÃ§iriyor."
           rulesetData={rulesetData}
           isRulesetLoading={isRulesetLoading}
           rulesetError={rulesetError}
@@ -443,7 +443,7 @@ export function CharacterEditor({
 
         <CharacterInventoryManager
           title="Inventory & Equipment"
-          description="Karakterin itemlarını ve kuşandığı ekipmanı güncelle. Çanta yönetimi, kahramanlığın en az havalı ama en gerekli tarafı."
+          description="Karakterin itemlarÄ±nÄ± ve kuÅŸandÄ±ÄŸÄ± ekipmanÄ± gÃ¼ncelle. Ã‡anta yÃ¶netimi, kahramanlÄ±ÄŸÄ±n en az havalÄ± ama en gerekli tarafÄ±."
           rulesetData={rulesetData}
           isRulesetLoading={isRulesetLoading}
           rulesetError={rulesetError}
@@ -470,7 +470,7 @@ export function CharacterEditor({
         />
 
         <section className="form-panel preview-panel">
-          <h2>Önizleme</h2>
+          <h2>Ã–nizleme</h2>
 
           <div className="preview-stats">
             <span>PB +{getProficiencyBonus(previewCharacter.level)}</span>
@@ -487,14 +487,14 @@ export function CharacterEditor({
 
           <div className="character-actions">
             <button className="primary-action" type="submit">
-              Değişiklikleri Kaydet
+              DeÄŸiÅŸiklikleri Kaydet
             </button>
 
             <button
               type="button"
               onClick={() => navigate(`/characters/${character.id}`)}
             >
-              Vazgeç
+              VazgeÃ§
             </button>
           </div>
         </section>
@@ -502,4 +502,5 @@ export function CharacterEditor({
     </PageShell>
   );
 }
+
 

@@ -1,4 +1,4 @@
-import { useDeferredValue, useMemo, useState } from "react";
+﻿import { useDeferredValue, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import type { Character } from "../../core/character/character.types";
@@ -135,7 +135,7 @@ export function Characters({
     <PageShell
       eyebrow="Character Vault"
       title="Karakterler"
-      description="Kayıtlı karakterlerin burada listelenir. Filtreler artık hatırlanıyor; uygulama nihayet insan hafızasına bel bağlamayı bıraktı."
+      description="KayÄ±tlÄ± karakterlerin burada listelenir. Filtreler artÄ±k hatÄ±rlanÄ±yor; uygulama nihayet insan hafÄ±zasÄ±na bel baÄŸlamayÄ± bÄ±raktÄ±."
     >
       <div className="character-filter-panel filter-panel-extended">
         <label>
@@ -143,7 +143,7 @@ export function Characters({
           <input
             value={searchTerm}
             onChange={(event) => setSearchTerm(event.target.value)}
-            placeholder="İsim, class, race, background..."
+            placeholder="Ä°sim, class, race, background..."
           />
         </label>
 
@@ -157,7 +157,7 @@ export function Characters({
               )
             }
           >
-            <option value="all">Tümü</option>
+            <option value="all">TÃ¼mÃ¼</option>
             <option value="dnd_2014">D&D 2014</option>
             <option value="dnd_2024">D&D 2024</option>
             <option value="homebrew">Homebrew</option>
@@ -170,7 +170,7 @@ export function Characters({
             value={classFilter}
             onChange={(event) => setClassFilter(event.target.value)}
           >
-            <option value="all">Tümü</option>
+            <option value="all">TÃ¼mÃ¼</option>
             {availableClasses.map((className) => (
               <option key={className} value={className}>
                 {className}
@@ -180,23 +180,23 @@ export function Characters({
         </label>
 
         <label>
-          Sırala
+          SÄ±rala
           <select
             value={sortOrder}
             onChange={(event) =>
               setSortOrder(event.target.value as CharacterSort)
             }
           >
-            <option value="recent">Kayıt sırası</option>
-            <option value="name">İsim A-Z</option>
-            <option value="level-desc">Seviye yüksekten</option>
-            <option value="level-asc">Seviye düşükten</option>
+            <option value="recent">KayÄ±t sÄ±rasÄ±</option>
+            <option value="name">Ä°sim A-Z</option>
+            <option value="level-desc">Seviye yÃ¼ksekten</option>
+            <option value="level-asc">Seviye dÃ¼ÅŸÃ¼kten</option>
           </select>
         </label>
 
         <div className="filter-result-count">
           <strong>{filteredCharacters.length}</strong>
-          <span>sonuç</span>
+          <span>sonuÃ§</span>
         </div>
 
         <button
@@ -205,19 +205,19 @@ export function Characters({
           onClick={resetFilters}
           disabled={!hasActiveFilters}
         >
-          Filtreleri sıfırla
+          Filtreleri sÄ±fÄ±rla
         </button>
       </div>
 
       {characters.length === 0 ? (
         <div className="empty-panel">
-          <h2>Henüz karakter yok.</h2>
-          <p>Builder ekranından karakter oluştur. Boş kasa kimseyi etkilemiyor.</p>
+          <h2>HenÃ¼z karakter yok.</h2>
+          <p>Builder ekranÄ±ndan karakter oluÅŸtur. BoÅŸ kasa kimseyi etkilemiyor.</p>
         </div>
       ) : filteredCharacters.length === 0 ? (
         <div className="empty-panel">
-          <h2>Sonuç bulunamadı.</h2>
-          <p>Filtreleri sıfırla; karakterler muhtemelen hâlâ burada.</p>
+          <h2>SonuÃ§ bulunamadÄ±.</h2>
+          <p>Filtreleri sÄ±fÄ±rla; karakterler muhtemelen hÃ¢lÃ¢ burada.</p>
         </div>
       ) : (
         <div className="character-grid">
@@ -236,9 +236,9 @@ export function Characters({
               </div>
 
               <p>
-                {character.race || "Unknown Race"} •{" "}
+                {character.race || "Unknown Race"} â€¢{" "}
                 {character.className || "Unknown Class"}
-                {character.subclass ? ` • ${character.subclass}` : ""}
+                {character.subclass ? ` â€¢ ${character.subclass}` : ""}
               </p>
 
               <div className="stat-row">
@@ -262,10 +262,10 @@ export function Characters({
                 <button
                   onClick={() => navigate(`/characters/${character.id}/edit`)}
                 >
-                  Düzenle
+                  DÃ¼zenle
                 </button>
                 <button type="button" onClick={() => toggleCompareCharacter(character.id)}>
-                  {compareIds.includes(character.id) ? "Seçimi kaldır" : "Karşılaştır"}
+                  {compareIds.includes(character.id) ? "SeÃ§imi kaldÄ±r" : "KarÅŸÄ±laÅŸtÄ±r"}
                 </button>
                 <button type="button" onClick={() => duplicateCharacter(character.id)}>
                   Kopyala
@@ -282,10 +282,10 @@ export function Characters({
       {characters.length >= 2 ? (
         <div className="character-compare-toolbar">
           <p>
-            <strong>{compareIds.length}/2 karakter seçildi.</strong>{" "}
+            <strong>{compareIds.length}/2 karakter seÃ§ildi.</strong>{" "}
             {compareIds.length < 2
-              ? "Karşılaştırmak için iki kart seç."
-              : "Build farklarını yan yana açabilirsin."}
+              ? "KarÅŸÄ±laÅŸtÄ±rmak iÃ§in iki kart seÃ§."
+              : "Build farklarÄ±nÄ± yan yana aÃ§abilirsin."}
           </p>
           <div className="character-compare-toolbar-actions">
             <button type="button" onClick={() => setCompareIds([])} disabled={compareIds.length === 0}>
@@ -297,7 +297,7 @@ export function Characters({
               disabled={compareIds.length !== 2}
               onClick={() => navigate(`/characters/compare?ids=${compareIds.join(",")}`)}
             >
-              Karşılaştırmayı aç
+              KarÅŸÄ±laÅŸtÄ±rmayÄ± aÃ§
             </button>
           </div>
         </div>
@@ -305,3 +305,4 @@ export function Characters({
     </PageShell>
   );
 }
+

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import type {
   DndItemData,
   DndMonsterData,
@@ -88,7 +88,7 @@ function App() {
           setRulesetError(
             error instanceof Error
               ? error.message
-              : "Ruleset data yüklenemedi.",
+              : "Ruleset data yÃ¼klenemedi.",
           );
         }
       } finally {
@@ -131,7 +131,7 @@ function App() {
       return false;
     }
 
-    const confirmed = confirm(`${character.name} silinsin mi? Geri dönüş yok.`);
+    const confirmed = confirm(`${character.name} silinsin mi? Geri dÃ¶nÃ¼ÅŸ yok.`);
 
     if (!confirmed) {
       return false;
@@ -295,7 +295,7 @@ function App() {
     }
 
     const confirmed = confirm(
-      `${campaign.name} silinsin mi? Campaign mezarlığına uğurluyoruz.`,
+      `${campaign.name} silinsin mi? Campaign mezarlÄ±ÄŸÄ±na uÄŸurluyoruz.`,
     );
 
     if (!confirmed) {
@@ -311,7 +311,7 @@ function App() {
 
   function handleDeleteHomebrewSpell(id: string) {
     const confirmed = confirm(
-      "Bu custom spell silinsin mi? Evren biraz sadeleşecek.",
+      "Bu custom spell silinsin mi? Evren biraz sadeleÅŸecek.",
     );
 
     if (!confirmed) {
@@ -327,7 +327,7 @@ function App() {
 
   function handleDeleteHomebrewItem(id: string) {
     const confirmed = confirm(
-      "Bu custom item silinsin mi? Çanta biraz hafifleyecek.",
+      "Bu custom item silinsin mi? Ã‡anta biraz hafifleyecek.",
     );
 
     if (!confirmed) {
@@ -343,7 +343,7 @@ function App() {
 
   function handleDeleteHomebrewMonster(id: string) {
     const confirmed = confirm(
-      "Bu custom monster/NPC silinsin mi? Oyuncular kısa süreliğine güvende kalacak.",
+      "Bu custom monster/NPC silinsin mi? Oyuncular kÄ±sa sÃ¼reliÄŸine gÃ¼vende kalacak.",
     );
 
     if (!confirmed) {
@@ -393,3 +393,4 @@ function App() {
 }
 
 export default App;
+

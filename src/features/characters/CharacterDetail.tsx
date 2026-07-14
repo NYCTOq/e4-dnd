@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { rollDice } from "../../core/dice/diceRoller";
 import type { RulesetData, DndSpellData } from "../../core/rulesets/ruleset.types";
@@ -120,14 +120,14 @@ export function CharacterDetail({
     return (
       <PageShell
         eyebrow="Character Detail"
-        title="Karakter Bulunamadı"
-        description="Bu karakter ya silindi ya da boyut kapısından geçti. İkisi de rahatsız edici."
+        title="Karakter BulunamadÄ±"
+        description="Bu karakter ya silindi ya da boyut kapÄ±sÄ±ndan geÃ§ti. Ä°kisi de rahatsÄ±z edici."
       >
         <button
           className="primary-action"
           onClick={() => navigate("/characters")}
         >
-          Karakterlere Dön
+          Karakterlere DÃ¶n
         </button>
       </PageShell>
     );
@@ -256,7 +256,7 @@ export function CharacterDetail({
     const hitDiePool = activeHitDice.find((pool) => pool.die === die);
 
     if (!hitDiePool || hitDiePool.used >= hitDiePool.max) {
-      alert(`d${die} hit die kalmadı. Karakterin dinlenmeye bile bütçesi yetmiyor.`);
+      alert(`d${die} hit die kalmadÄ±. Karakterin dinlenmeye bile bÃ¼tÃ§esi yetmiyor.`);
       return;
     }
 
@@ -388,7 +388,7 @@ export function CharacterDetail({
       );
 
       if (!slot || slot.used >= slot.max) {
-        alert(`${spell.name} için Level ${spell.level} slot kalmadı. Büyü bürokrasisi yine kazandı.`);
+        alert(`${spell.name} iÃ§in Level ${spell.level} slot kalmadÄ±. BÃ¼yÃ¼ bÃ¼rokrasisi yine kazandÄ±.`);
         return;
       }
     }
@@ -398,9 +398,9 @@ export function CharacterDetail({
     const createdAt = new Date().toISOString();
 
     if (spell.level === 0) {
-      castSummaryParts.push("Cantrip, slot harcamadı");
+      castSummaryParts.push("Cantrip, slot harcamadÄ±");
     } else {
-      castSummaryParts.push(`Level ${spell.level} slot harcandı`);
+      castSummaryParts.push(`Level ${spell.level} slot harcandÄ±`);
     }
 
     if (spell.concentration) {
@@ -415,7 +415,7 @@ export function CharacterDetail({
       });
 
       details.push(
-        `Spell Attack: ${attackRoll.notation} → [${attackRoll.rolls.join(", ")}] = ${attackRoll.total}`,
+        `Spell Attack: ${attackRoll.notation} â†’ [${attackRoll.rolls.join(", ")}] = ${attackRoll.total}`,
       );
 
       setCharacterRollHistory((current) =>
@@ -446,7 +446,7 @@ export function CharacterDetail({
       const damageLabel = effect.damageType ? ` ${effect.damageType}` : "";
 
       details.push(
-        `Damage: ${damageRoll.notation}${damageLabel} → [${damageRoll.rolls.join(", ")}] = ${damageRoll.total}`,
+        `Damage: ${damageRoll.notation}${damageLabel} â†’ [${damageRoll.rolls.join(", ")}] = ${damageRoll.total}`,
       );
       castSummaryParts.push(`${damageRoll.total}${damageLabel} damage`);
 
@@ -471,7 +471,7 @@ export function CharacterDetail({
       const healingRoll = rollDice(healingDice);
 
       details.push(
-        `Healing: ${healingRoll.notation} → [${healingRoll.rolls.join(", ")}] = ${healingRoll.total}`,
+        `Healing: ${healingRoll.notation} â†’ [${healingRoll.rolls.join(", ")}] = ${healingRoll.total}`,
       );
       castSummaryParts.push(`${healingRoll.total} healing`);
 
@@ -491,11 +491,11 @@ export function CharacterDetail({
     }
 
     if (!damageDice && effect.damageDice) {
-      details.push(`Damage dice okunamadı: ${effect.damageDice}`);
+      details.push(`Damage dice okunamadÄ±: ${effect.damageDice}`);
     }
 
     if (!healingDice && effect.healingDice) {
-      details.push(`Healing dice okunamadı: ${effect.healingDice}`);
+      details.push(`Healing dice okunamadÄ±: ${effect.healingDice}`);
     }
 
     if (effect.conditionEffect) {
@@ -503,7 +503,7 @@ export function CharacterDetail({
     }
 
     if (!effect.damageDice && !effect.healingDice && effect.attackType !== "spell-attack" && effect.attackType !== "saving-throw") {
-      details.push(`${getResolutionLabel(effect.attackType)} spell cast edildi. Roll gerektiren effect tanımlı değil.`);
+      details.push(`${getResolutionLabel(effect.attackType)} spell cast edildi. Roll gerektiren effect tanÄ±mlÄ± deÄŸil.`);
     }
 
     onUpdateCharacter({
@@ -526,7 +526,7 @@ export function CharacterDetail({
           id: crypto.randomUUID(),
           spellName: spell.name,
           levelLabel: getSpellLevelLabel(spell),
-          summary: castSummaryParts.join(" · "),
+          summary: castSummaryParts.join(" Â· "),
           details,
           createdAt,
         },
@@ -598,9 +598,9 @@ export function CharacterDetail({
     <PageShell
       eyebrow="Character Detail"
       title={activeCharacter.name}
-      description={`${activeCharacter.race || "Unknown Race"} • ${
+      description={`${activeCharacter.race || "Unknown Race"} â€¢ ${
         activeCharacter.className || "Unknown Class"
-      } • Level ${activeCharacter.level}`}
+      } â€¢ Level ${activeCharacter.level}`}
     >
       <div className="detail-layout">
         <section className="detail-main-card">
@@ -612,7 +612,7 @@ export function CharacterDetail({
               <p>
                 {activeCharacter.background || "Background yok"}{" "}
                 {activeCharacter.subclass
-                  ? `• ${activeCharacter.subclass}`
+                  ? `â€¢ ${activeCharacter.subclass}`
                   : ""}
               </p>
             </div>
@@ -624,21 +624,21 @@ export function CharacterDetail({
             <button
               onClick={() => navigate(`/characters/${activeCharacter.id}/edit`)}
             >
-              Düzenle
+              DÃ¼zenle
             </button>
 
             <button onClick={deleteCurrentCharacter}>Sil</button>
 
-            <button onClick={() => navigate("/characters")}>Listeye Dön</button>
+            <button onClick={() => navigate("/characters")}>Listeye DÃ¶n</button>
           </div>
 
           <details className="character-sheet-section character-sheet-level-up">
             <summary>
               <span>
                 <b>Level Up Assistant</b>
-                <small>Seviye artırma, HP ve ASI işlemleri</small>
+                <small>Seviye artÄ±rma, HP ve ASI iÅŸlemleri</small>
               </span>
-              <em>İsteğe bağlı</em>
+              <em>Ä°steÄŸe baÄŸlÄ±</em>
             </summary>
             <div className="character-sheet-section-body">
               <LevelUpAssistant
@@ -700,7 +700,7 @@ export function CharacterDetail({
             <span className="mini-label">Notes</span>
             <p>
               {activeCharacter.notes ||
-                "Not yok. Karakterin gizemli olması güzel ama app’in boş kalması değil."}
+                "Not yok. Karakterin gizemli olmasÄ± gÃ¼zel ama appâ€™in boÅŸ kalmasÄ± deÄŸil."}
             </p>
           </div>
 
@@ -708,7 +708,7 @@ export function CharacterDetail({
             <summary>
               <span>
                 <b>Envanter & Ekipman</b>
-                <small>{inventoryDetails.length} item · {totalInventoryWeight.toFixed(1)} lb</small>
+                <small>{inventoryDetails.length} item Â· {totalInventoryWeight.toFixed(1)} lb</small>
               </span>
               <em>{activeCharacter.gold ?? 0} gp</em>
             </summary>
@@ -717,7 +717,7 @@ export function CharacterDetail({
             <div className="spell-selector-head">
               <div>
                 <span className="mini-label">Equipment</span>
-                <h2>Envanter & Kuşanılanlar</h2>
+                <h2>Envanter & KuÅŸanÄ±lanlar</h2>
               </div>
 
               <div className="spell-selector-counts">
@@ -762,7 +762,7 @@ export function CharacterDetail({
                   <article className="weapon-attack-card" key={weapon.id}>
                     <div>
                       <strong>{weapon.name}</strong>
-                      <span>{weapon.damage} • {weapon.damageType} • {weapon.properties?.join(", ") || "Standard"}</span>
+                      <span>{weapon.damage} â€¢ {weapon.damageType} â€¢ {weapon.properties?.join(", ") || "Standard"}</span>
                     </div>
                     <div>
                       <b>{formatModifier(attackBonus)}</b>
@@ -775,7 +775,7 @@ export function CharacterDetail({
 
             {inventoryDetails.length === 0 ? (
               <div className="spell-selector-note">
-                Envanter boş. Kahraman cebinde umutla geziyor, o da 0 gp.
+                Envanter boÅŸ. Kahraman cebinde umutla geziyor, o da 0 gp.
               </div>
             ) : (
               <div className="inventory-detail-list">
@@ -783,7 +783,7 @@ export function CharacterDetail({
                   <article className="inventory-detail-item" key={item.id}>
                     <div>
                       <strong>{item.name}</strong>
-                      <span>{getItemCategoryLabel(item.category)} • {getItemRulesSummary(item)}</span>
+                      <span>{getItemCategoryLabel(item.category)} â€¢ {getItemRulesSummary(item)}</span>
                     </div>
                     <div>
                       <b>x{entry.quantity}</b>
@@ -800,8 +800,8 @@ export function CharacterDetail({
           <details className="character-sheet-section">
             <summary>
               <span>
-                <b>Karakter Büyü Kitabı</b>
-                <small>{knownSpellIds.length} bilinen · {preparedSpellIds.length} hazırlanmış</small>
+                <b>Karakter BÃ¼yÃ¼ KitabÄ±</b>
+                <small>{knownSpellIds.length} bilinen Â· {preparedSpellIds.length} hazÄ±rlanmÄ±ÅŸ</small>
               </span>
               <em>{knownCantripCount} cantrip</em>
             </summary>
@@ -810,7 +810,7 @@ export function CharacterDetail({
             <div className="spell-selector-head">
               <div>
                 <span className="mini-label">Character Spellbook</span>
-                <h2>Seçili Büyüler</h2>
+                <h2>SeÃ§ili BÃ¼yÃ¼ler</h2>
               </div>
 
               <div className="spell-selector-counts">
@@ -822,8 +822,8 @@ export function CharacterDetail({
 
             {characterSpells.length === 0 ? (
               <div className="spell-selector-note">
-                Bu karaktere henüz spell eklenmedi. Cleric olup dua kitabını
-                evde unutmak gibi, hoş değil ama düzeltilebilir.
+                Bu karaktere henÃ¼z spell eklenmedi. Cleric olup dua kitabÄ±nÄ±
+                evde unutmak gibi, hoÅŸ deÄŸil ama dÃ¼zeltilebilir.
               </div>
             ) : (
               <div className="character-detail-spell-groups">
@@ -941,7 +941,7 @@ export function CharacterDetail({
           <details className="character-sheet-section character-sheet-side-section">
             <summary>
               <span>
-                <b>Gelişmiş Durum</b>
+                <b>GeliÅŸmiÅŸ Durum</b>
                 <small>Death save, exhaustion ve short rest</small>
               </span>
               <em>{activeExhaustion}/6</em>
@@ -994,7 +994,7 @@ export function CharacterDetail({
                     disabled={remaining <= 0 || activeCharacter.currentHp >= activeCharacter.maxHp}
                     onClick={() => spendHitDie(pool.die)}
                   >
-                    Spend d{pool.die} Hit Die · {remaining}/{pool.max} left
+                    Spend d{pool.die} Hit Die Â· {remaining}/{pool.max} left
                   </button>
                 );
               })}
@@ -1007,7 +1007,7 @@ export function CharacterDetail({
             <summary>
               <span>
                 <b>Spell Slots</b>
-                <small>Büyü kaynaklarını takip et</small>
+                <small>BÃ¼yÃ¼ kaynaklarÄ±nÄ± takip et</small>
               </span>
               <em>{activeSpellSlots.reduce((sum, slot) => sum + slot.max - slot.used, 0)} kalan</em>
             </summary>
@@ -1031,8 +1031,8 @@ export function CharacterDetail({
 
             {activeSpellSlots.length === 0 ? (
               <div className="spell-slot-empty">
-                Bu karakter için slot yok. Ya caster değil ya da sistem henüz
-                onu ciddiye almıyor.
+                Bu karakter iÃ§in slot yok. Ya caster deÄŸil ya da sistem henÃ¼z
+                onu ciddiye almÄ±yor.
               </div>
             ) : (
               <div className="spell-slot-grid">
@@ -1065,8 +1065,8 @@ export function CharacterDetail({
           <details className="character-sheet-section character-sheet-side-section">
             <summary>
               <span>
-                <b>Hazır Büyüler</b>
-                <small>Hızlı cast ve geçmiş</small>
+                <b>HazÄ±r BÃ¼yÃ¼ler</b>
+                <small>HÄ±zlÄ± cast ve geÃ§miÅŸ</small>
               </span>
               <em>{castReadyCharacterSpells.length}</em>
             </summary>
@@ -1076,7 +1076,7 @@ export function CharacterDetail({
 
             {castReadyCharacterSpells.length === 0 ? (
               <div className="spell-slot-empty">
-                Cast edilecek büyü yok. Büyücü var, evrak yok. Bürokrasi kazanıyor.
+                Cast edilecek bÃ¼yÃ¼ yok. BÃ¼yÃ¼cÃ¼ var, evrak yok. BÃ¼rokrasi kazanÄ±yor.
               </div>
             ) : (
               <div className="prepared-cast-list">
@@ -1106,7 +1106,7 @@ export function CharacterDetail({
 
             {castHistory.length === 0 ? (
               <div className="spell-slot-empty">
-                Henüz cast sonucu yok. Büyüler sessiz, bu da nadiren iyi haber.
+                HenÃ¼z cast sonucu yok. BÃ¼yÃ¼ler sessiz, bu da nadiren iyi haber.
               </div>
             ) : (
               <div className="cast-history-list">
@@ -1138,7 +1138,7 @@ export function CharacterDetail({
             <summary>
               <span>
                 <b>Conditions</b>
-                <small>Durumlar ve round süreleri</small>
+                <small>Durumlar ve round sÃ¼releri</small>
               </span>
               <em>{activeCharacter.conditions.length} aktif</em>
             </summary>
@@ -1190,7 +1190,7 @@ export function CharacterDetail({
             <summary>
               <span>
                 <b>Quick Rolls</b>
-                <small>Check, initiative ve zar geçmişi</small>
+                <small>Check, initiative ve zar geÃ§miÅŸi</small>
               </span>
               <em>{characterRollHistory[0]?.total ?? "--"}</em>
             </summary>
@@ -1207,14 +1207,14 @@ export function CharacterDetail({
                 <p>
                   {activeCharacter.name} - {characterRollHistory[0].label}
                   <br />
-                  {characterRollHistory[0].notation} → [
+                  {characterRollHistory[0].notation} â†’ [
                   {characterRollHistory[0].rolls.join(", ")}]
                 </p>
               </>
             ) : (
               <>
                 <strong className="character-roll-total">--</strong>
-                <p>Henüz karakter üzerinden zar atılmadı. Kader beklemede.</p>
+                <p>HenÃ¼z karakter Ã¼zerinden zar atÄ±lmadÄ±. Kader beklemede.</p>
               </>
             )}
           </div>
@@ -1226,7 +1226,7 @@ export function CharacterDetail({
 
               {characterRollHistory.length === 0 ? (
                 <div className="character-roll-empty">
-                  Geçmiş boş. Henüz kimse kaderle pazarlık yapmamış.
+                  GeÃ§miÅŸ boÅŸ. HenÃ¼z kimse kaderle pazarlÄ±k yapmamÄ±ÅŸ.
                 </div>
               ) : (
                 characterRollHistory.map((roll) => (
@@ -1234,7 +1234,7 @@ export function CharacterDetail({
                     <div>
                       <strong>{roll.label}</strong>
                       <span>
-                        {roll.notation} → [{roll.rolls.join(", ")}]
+                        {roll.notation} â†’ [{roll.rolls.join(", ")}]
                       </span>
                     </div>
 
@@ -1343,11 +1343,12 @@ export function CharacterDetail({
 
           <div className="character-actions character-sheet-rest-actions">
             <button onClick={longRest}>Long Rest</button>
-            <button onClick={() => navigate(`/play-mode`)}>Play Mode'a Geç</button>
+            <button onClick={() => navigate(`/play-mode`)}>Play Mode'a GeÃ§</button>
           </div>
         </aside>
       </div>
     </PageShell>
   );
 }
+
 

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+﻿import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { usePersistentState } from "../state/usePersistentState";
 
@@ -140,7 +140,7 @@ export function PwaInstallGuide() {
     <>
       {!isOnline ? (
         <div className="network-status-pill offline" role="status">
-          Çevrimdışı mod
+          Ã‡evrimdÄ±ÅŸÄ± mod
         </div>
       ) : null}
 
@@ -148,13 +148,13 @@ export function PwaInstallGuide() {
         <section className={`network-status-toast ${networkNotice}`} role="status">
           <strong>
             {networkNotice === "offline"
-              ? "Bağlantı kesildi"
-              : "Bağlantı geri geldi"}
+              ? "BaÄŸlantÄ± kesildi"
+              : "BaÄŸlantÄ± geri geldi"}
           </strong>
           <span>
             {networkNotice === "offline"
-              ? "Kayıtlı içeriklerle çalışmaya devam edebilirsin. Değişiklikler bu cihazda saklanır."
-              : "Uygulama yeniden çevrimiçi. PWA güncellemeleri tekrar kontrol edilebilir."}
+              ? "KayÄ±tlÄ± iÃ§eriklerle Ã§alÄ±ÅŸmaya devam edebilirsin. DeÄŸiÅŸiklikler bu cihazda saklanÄ±r."
+              : "Uygulama yeniden Ã§evrimiÃ§i. PWA gÃ¼ncellemeleri tekrar kontrol edilebilir."}
           </span>
           {networkNotice === "offline" ? (
             <button type="button" onClick={() => setNetworkNotice(null)}>
@@ -184,10 +184,10 @@ export function PwaInstallGuide() {
           >
             <div className="first-run-head">
               <div>
-                <span className="mini-label">İlk kullanım</span>
-                <h2 id="first-run-title">E4 D&D hazır</h2>
+                <span className="mini-label">Ä°lk kullanÄ±m</span>
+                <h2 id="first-run-title">E4 D&D hazÄ±r</h2>
                 <p>
-                  Verilerin bu cihazda tutulur. Uygulama çevrimdışı çalışabilir ve
+                  Verilerin bu cihazda tutulur. Uygulama Ã§evrimdÄ±ÅŸÄ± Ã§alÄ±ÅŸabilir ve
                   desteklenen cihazlarda normal bir uygulama gibi kurulabilir.
                 </p>
               </div>
@@ -198,26 +198,26 @@ export function PwaInstallGuide() {
                 aria-label="Rehberi kapat"
                 onClick={handleFinishGuide}
               >
-                ×
+                Ã—
               </button>
             </div>
 
             <div className="first-run-grid">
               <article>
                 <span>01</span>
-                <strong>Yerel ve hızlı</strong>
+                <strong>Yerel ve hÄ±zlÄ±</strong>
                 <p>
-                  Karakter, campaign ve homebrew kayıtları localStorage içinde
-                  saklanır. Aynı tarayıcı ve portu kullanmak gerekir.
+                  Karakter, campaign ve homebrew kayÄ±tlarÄ± localStorage iÃ§inde
+                  saklanÄ±r. AynÄ± tarayÄ±cÄ± ve portu kullanmak gerekir.
                 </p>
               </article>
 
               <article>
                 <span>02</span>
-                <strong>Yedeği unutma</strong>
+                <strong>YedeÄŸi unutma</strong>
                 <p>
-                  Backup sayfasından tam JSON yedeği al. Tarayıcı verisini
-                  temizlemek, insanlığın dijital hafıza kaybı yöntemidir.
+                  Backup sayfasÄ±ndan tam JSON yedeÄŸi al. TarayÄ±cÄ± verisini
+                  temizlemek, insanlÄ±ÄŸÄ±n dijital hafÄ±za kaybÄ± yÃ¶ntemidir.
                 </p>
               </article>
 
@@ -225,8 +225,8 @@ export function PwaInstallGuide() {
                 <span>03</span>
                 <strong>Masaya kur</strong>
                 <p>
-                  PWA kurulursa tam ekran açılır ve çevrimdışı kullanım daha
-                  rahat olur. Kurulum zorunlu değildir.
+                  PWA kurulursa tam ekran aÃ§Ä±lÄ±r ve Ã§evrimdÄ±ÅŸÄ± kullanÄ±m daha
+                  rahat olur. Kurulum zorunlu deÄŸildir.
                 </p>
               </article>
             </div>
@@ -234,46 +234,46 @@ export function PwaInstallGuide() {
             {isInstalled ? (
               <div className="install-state-card success">
                 <strong>Uygulama kurulu</strong>
-                <span>E4 D&D şu anda bağımsız uygulama modunda çalışıyor.</span>
+                <span>E4 D&D ÅŸu anda baÄŸÄ±msÄ±z uygulama modunda Ã§alÄ±ÅŸÄ±yor.</span>
               </div>
             ) : installEvent ? (
               <div className="install-state-card">
                 <div>
                   <strong>Bu cihaza kurulabilir</strong>
-                  <span>Tarayıcı kuruluma hazır. Kayıtların korunur.</span>
+                  <span>TarayÄ±cÄ± kuruluma hazÄ±r. KayÄ±tlarÄ±n korunur.</span>
                 </div>
                 <button
                   type="button"
                   onClick={handleInstall}
                   disabled={isInstalling}
                 >
-                  {isInstalling ? "Kuruluyor..." : "Uygulamayı yükle"}
+                  {isInstalling ? "Kuruluyor..." : "UygulamayÄ± yÃ¼kle"}
                 </button>
               </div>
             ) : isIos ? (
               <div className="install-state-card ios">
                 <strong>iPhone / iPad kurulumu</strong>
                 <span>
-                  Safari’de Paylaş düğmesine dokun, ardından “Ana Ekrana Ekle”
-                  seçeneğini kullan.
+                  Safariâ€™de PaylaÅŸ dÃ¼ÄŸmesine dokun, ardÄ±ndan â€œAna Ekrana Ekleâ€
+                  seÃ§eneÄŸini kullan.
                 </span>
               </div>
             ) : (
               <div className="install-state-card muted">
-                <strong>Kurulum düğmesi görünmüyor</strong>
+                <strong>Kurulum dÃ¼ÄŸmesi gÃ¶rÃ¼nmÃ¼yor</strong>
                 <span>
-                  Uygulama zaten kurulu olabilir veya tarayıcı PWA kurulumunu
-                  henüz sunmamış olabilir. Normal kullanım devam eder.
+                  Uygulama zaten kurulu olabilir veya tarayÄ±cÄ± PWA kurulumunu
+                  henÃ¼z sunmamÄ±ÅŸ olabilir. Normal kullanÄ±m devam eder.
                 </span>
               </div>
             )}
 
             <div className="first-run-actions">
               <Link className="secondary-action" to="/backup" onClick={handleFinishGuide}>
-                Backup sayfası
+                Backup sayfasÄ±
               </Link>
               <button type="button" onClick={handleFinishGuide}>
-                Anladım, devam et
+                AnladÄ±m, devam et
               </button>
             </div>
           </section>
@@ -282,3 +282,4 @@ export function PwaInstallGuide() {
     </>
   );
 }
+

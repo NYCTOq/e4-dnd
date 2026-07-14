@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+﻿import { useMemo, useState } from "react";
 import { AutosaveStatus } from "../../shared/forms/AutosaveStatus";
 import { useAutosavedDraft } from "../../shared/state/useAutosavedDraft";
 import type * as React from "react";
@@ -108,7 +108,7 @@ export function SessionTimeline({
   }
 
   function remove(id: string) {
-    if (confirm("Bu timeline kaydı silinsin mi? Tarih yine kazananların eline kalacak.")) {
+    if (confirm("Bu timeline kaydÄ± silinsin mi? Tarih yine kazananlarÄ±n eline kalacak.")) {
       onChange(entries.filter((entry) => entry.id !== id));
       if (editingId === id) {
         setEditingId(null);
@@ -123,27 +123,27 @@ export function SessionTimeline({
         <div>
           <span className="mini-label">Optional Campaign Module</span>
           <h2>Session Timeline</h2>
-          <p>Oturumların kronolojik özeti. Çünkü “geçen sefer ne olmuştu?” sorusu evrensel bir lanet.</p>
+          <p>OturumlarÄ±n kronolojik Ã¶zeti. Ã‡Ã¼nkÃ¼ â€œgeÃ§en sefer ne olmuÅŸtu?â€ sorusu evrensel bir lanet.</p>
         </div>
         <button type="button" className={enabled ? "timeline-toggle active" : "timeline-toggle"} onClick={() => onToggleEnabled(!enabled)}>
-          {enabled ? "Timeline Açık" : "Timeline Kapalı"}
+          {enabled ? "Timeline AÃ§Ä±k" : "Timeline KapalÄ±"}
         </button>
       </div>
 
       {!enabled ? (
         <div className="empty-panel compact-empty">
           <h2>Timeline gizli.</h2>
-          <p>Sade campaign görünümü korunuyor. Gerektiğinde tek tuşla açılır.</p>
+          <p>Sade campaign gÃ¶rÃ¼nÃ¼mÃ¼ korunuyor. GerektiÄŸinde tek tuÅŸla aÃ§Ä±lÄ±r.</p>
         </div>
       ) : (
         <div className="session-timeline-layout">
           <form className="timeline-form" onSubmit={submit}>
             <AutosaveStatus
-              label="Timeline taslağı"
+              label="Timeline taslaÄŸÄ±"
               lastSavedAt={lastSavedAt}
               restoredAt={restoredAt}
               onClear={() => {
-                const confirmed = confirm("Timeline taslağı temizlensin mi?");
+                const confirmed = confirm("Timeline taslaÄŸÄ± temizlensin mi?");
                 if (confirmed) {
                   setEditingId(null);
                   clearDraft(emptyDraft());
@@ -151,36 +151,36 @@ export function SessionTimeline({
               }}
             />
             <div className="form-grid compact-form-grid">
-              <label>Oturum Başlığı<input value={draft.title} onChange={(e) => setDraft({...draft, title: e.target.value})} placeholder="Session 8 - Rainbase Baskını" /></label>
+              <label>Oturum BaÅŸlÄ±ÄŸÄ±<input value={draft.title} onChange={(e) => setDraft({...draft, title: e.target.value})} placeholder="Session 8 - Rainbase BaskÄ±nÄ±" /></label>
               <label>Tarih<input type="date" value={draft.sessionDate} onChange={(e) => setDraft({...draft, sessionDate: e.target.value})} /></label>
             </div>
-            <label>Kısa Özet<textarea rows={3} value={draft.summary} onChange={(e) => setDraft({...draft, summary: e.target.value})} placeholder="Oturumun ana özeti..." /></label>
+            <label>KÄ±sa Ã–zet<textarea rows={3} value={draft.summary} onChange={(e) => setDraft({...draft, summary: e.target.value})} placeholder="Oturumun ana Ã¶zeti..." /></label>
             <div className="timeline-fields-grid">
-              <label>Önemli Olaylar<textarea rows={4} value={listText(draft.events)} onChange={(e) => setDraft({...draft, events: lines(e.target.value)})} placeholder="Her satıra bir olay" /></label>
-              <label>Karşılaşılan NPC'ler<textarea rows={4} value={listText(draft.npcs)} onChange={(e) => setDraft({...draft, npcs: lines(e.target.value)})} placeholder="Her satıra bir NPC" /></label>
-              <label>Quest Güncellemeleri<textarea rows={4} value={listText(draft.questUpdates)} onChange={(e) => setDraft({...draft, questUpdates: lines(e.target.value)})} placeholder="Her satıra bir güncelleme" /></label>
-              <label>Kazanılan Loot<textarea rows={4} value={listText(draft.loot)} onChange={(e) => setDraft({...draft, loot: lines(e.target.value)})} placeholder="Her satıra bir ödül" /></label>
-              <label>Kayıplar / Ayrılanlar<textarea rows={4} value={listText(draft.casualties)} onChange={(e) => setDraft({...draft, casualties: lines(e.target.value)})} placeholder="Ölüm, ayrılık veya önemli kayıp" /></label>
-              <label>DM Notları<textarea rows={4} value={draft.notes} onChange={(e) => setDraft({...draft, notes: e.target.value})} placeholder="Gizli veya genel notlar..." /></label>
+              <label>Ã–nemli Olaylar<textarea rows={4} value={listText(draft.events)} onChange={(e) => setDraft({...draft, events: lines(e.target.value)})} placeholder="Her satÄ±ra bir olay" /></label>
+              <label>KarÅŸÄ±laÅŸÄ±lan NPC'ler<textarea rows={4} value={listText(draft.npcs)} onChange={(e) => setDraft({...draft, npcs: lines(e.target.value)})} placeholder="Her satÄ±ra bir NPC" /></label>
+              <label>Quest GÃ¼ncellemeleri<textarea rows={4} value={listText(draft.questUpdates)} onChange={(e) => setDraft({...draft, questUpdates: lines(e.target.value)})} placeholder="Her satÄ±ra bir gÃ¼ncelleme" /></label>
+              <label>KazanÄ±lan Loot<textarea rows={4} value={listText(draft.loot)} onChange={(e) => setDraft({...draft, loot: lines(e.target.value)})} placeholder="Her satÄ±ra bir Ã¶dÃ¼l" /></label>
+              <label>KayÄ±plar / AyrÄ±lanlar<textarea rows={4} value={listText(draft.casualties)} onChange={(e) => setDraft({...draft, casualties: lines(e.target.value)})} placeholder="Ã–lÃ¼m, ayrÄ±lÄ±k veya Ã¶nemli kayÄ±p" /></label>
+              <label>DM NotlarÄ±<textarea rows={4} value={draft.notes} onChange={(e) => setDraft({...draft, notes: e.target.value})} placeholder="Gizli veya genel notlar..." /></label>
             </div>
             <div className="timeline-form-actions">
-              <button className="primary-action" type="submit">{editingId ? "Kaydı Güncelle" : "Timeline'a Ekle"}</button>
-              {editingId ? <button type="button" onClick={() => { setEditingId(null); clearDraft(emptyDraft()); }}>Vazgeç</button> : null}
+              <button className="primary-action" type="submit">{editingId ? "KaydÄ± GÃ¼ncelle" : "Timeline'a Ekle"}</button>
+              {editingId ? <button type="button" onClick={() => { setEditingId(null); clearDraft(emptyDraft()); }}>VazgeÃ§</button> : null}
             </div>
           </form>
 
           <div className="timeline-entry-list">
-            {sortedEntries.length === 0 ? <div className="empty-panel compact-empty"><h2>Henüz kayıt yok.</h2><p>Macera yaşandı ama tarihçi işe alınmamış.</p></div> : sortedEntries.map((entry) => (
+            {sortedEntries.length === 0 ? <div className="empty-panel compact-empty"><h2>HenÃ¼z kayÄ±t yok.</h2><p>Macera yaÅŸandÄ± ama tarihÃ§i iÅŸe alÄ±nmamÄ±ÅŸ.</p></div> : sortedEntries.map((entry) => (
               <article className="timeline-entry" key={entry.id}>
                 <div className="timeline-entry-head">
                   <div><span>{entry.sessionDate}</span><h3>{entry.title}</h3></div>
-                  <div><button type="button" onClick={() => edit(entry)}>Düzenle</button><button type="button" onClick={() => remove(entry.id)}>Sil</button></div>
+                  <div><button type="button" onClick={() => edit(entry)}>DÃ¼zenle</button><button type="button" onClick={() => remove(entry.id)}>Sil</button></div>
                 </div>
                 {entry.summary ? <p className="timeline-summary">{entry.summary}</p> : null}
                 <div className="timeline-entry-grid">
-                  {([['Önemli Olaylar', entry.events], ['NPC’ler', entry.npcs], ['Quest', entry.questUpdates], ['Loot', entry.loot], ['Kayıplar', entry.casualties]] as const).map(([title, items]) => items.length ? <div key={title}><strong>{title}</strong><ul>{items.map((item, index) => <li key={`${title}-${index}`}>{item}</li>)}</ul></div> : null)}
+                  {([['Ã–nemli Olaylar', entry.events], ['NPCâ€™ler', entry.npcs], ['Quest', entry.questUpdates], ['Loot', entry.loot], ['KayÄ±plar', entry.casualties]] as const).map(([title, items]) => items.length ? <div key={title}><strong>{title}</strong><ul>{items.map((item, index) => <li key={`${title}-${index}`}>{item}</li>)}</ul></div> : null)}
                 </div>
-                {entry.notes ? <div className="timeline-notes"><strong>DM Notları</strong><p>{entry.notes}</p></div> : null}
+                {entry.notes ? <div className="timeline-notes"><strong>DM NotlarÄ±</strong><p>{entry.notes}</p></div> : null}
               </article>
             ))}
           </div>
@@ -189,3 +189,4 @@ export function SessionTimeline({
     </section>
   );
 }
+

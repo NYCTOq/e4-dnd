@@ -1,4 +1,4 @@
-import type { RulesetData } from "../../core/rulesets/ruleset.types";
+﻿import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import { PageShell } from "../../shared/layout/PageShell";
 import {
   getItemCategoryLabel,
@@ -19,16 +19,16 @@ export function Library({
     <PageShell
       eyebrow="Ruleset Library"
       title="Library"
-      description="D&D 2014, D&D 2024 ve homebrew data pack içerikleri burada okunacak. Şimdilik ilk veri akışını D&D 2014 ile başlatıyoruz."
+      description="D&D 2014, D&D 2024 ve homebrew data pack iÃ§erikleri burada okunacak. Åimdilik ilk veri akÄ±ÅŸÄ±nÄ± D&D 2014 ile baÅŸlatÄ±yoruz."
     >
       {isRulesetLoading ? (
         <div className="empty-panel">
-          <h2>Data yükleniyor...</h2>
-          <p>Kural kitabını tarayıcıya yediriyoruz. Zavallı şey.</p>
+          <h2>Data yÃ¼kleniyor...</h2>
+          <p>Kural kitabÄ±nÄ± tarayÄ±cÄ±ya yediriyoruz. ZavallÄ± ÅŸey.</p>
         </div>
       ) : rulesetError ? (
         <div className="empty-panel">
-          <h2>Data yüklenemedi</h2>
+          <h2>Data yÃ¼klenemedi</h2>
           <p>{rulesetError}</p>
         </div>
       ) : rulesetData ? (
@@ -37,9 +37,9 @@ export function Library({
             <span className="mini-label">Loaded Ruleset</span>
             <h2>{rulesetData.name}</h2>
             <p>
-              Şu an app içine local JSON data pack üzerinden class ve race
-              verisi yüklendi. Bir sonraki hamlede Builder inputlarını bu
-              datadan besleyeceğiz.
+              Åu an app iÃ§ine local JSON data pack Ã¼zerinden class ve race
+              verisi yÃ¼klendi. Bir sonraki hamlede Builder inputlarÄ±nÄ± bu
+              datadan besleyeceÄŸiz.
             </p>
 
             <div className="library-counter-grid">
@@ -209,7 +209,7 @@ export function Library({
             <div className="library-section-head">
               <div>
                 <span className="mini-label">Monsters</span>
-                <h2>Monster Önizleme</h2>
+                <h2>Monster Ã–nizleme</h2>
               </div>
             </div>
 

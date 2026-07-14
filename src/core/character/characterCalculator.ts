@@ -1,4 +1,4 @@
-import type { AbilityKey, Character } from "./character.types";
+﻿import type { AbilityKey, Character } from "./character.types";
 
 export function getAbilityModifier(score: number): number {
   return Math.floor((score - 10) / 2);

@@ -1,4 +1,4 @@
-import type { AbilityKey } from "../character/character.types";
+﻿import type { AbilityKey } from "../character/character.types";
 
 export interface SkillChoices {
   choose: number;
@@ -107,3 +107,4 @@ export interface RulesetData {
   items: DndItemData[];
   monsters: DndMonsterData[];
 }
+

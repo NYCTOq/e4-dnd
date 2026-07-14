@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   DndItemData,
   DndMonsterData,
   DndSpellData,
@@ -44,3 +44,4 @@ export function loadHomebrewMonsters(): DndMonsterData[] {
 export function saveHomebrewMonsters(monsters: DndMonsterData[]) {
   saveArray(HOMEBREW_MONSTERS_STORAGE_KEY, monsters);
 }
+

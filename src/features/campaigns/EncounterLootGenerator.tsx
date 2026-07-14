@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+﻿import { useMemo, useState } from "react";
 import type { DndItemData, DndMonsterData } from "../../core/rulesets/ruleset.types";
 import type {
   CampaignEncounter,
@@ -110,7 +110,7 @@ export function EncounterLootGenerator({
     ).length;
 
     if (monsterCount === 0) {
-      alert("Önce encounter'a en az bir monster ekle. Boş odadan ganimet çıkarmak emlakçılık olur.");
+      alert("Ã–nce encounter'a en az bir monster ekle. BoÅŸ odadan ganimet Ã§Ä±karmak emlakÃ§Ä±lÄ±k olur.");
       return;
     }
 
@@ -124,7 +124,7 @@ export function EncounterLootGenerator({
         name: "Gold Pieces",
         quantity: gold,
         valueGp: 1,
-        notes: `Encounter XP tabanlı otomatik ödül (${monsterCount} monster).`,
+        notes: `Encounter XP tabanlÄ± otomatik Ã¶dÃ¼l (${monsterCount} monster).`,
       }),
     ];
 
@@ -142,7 +142,7 @@ export function EncounterLootGenerator({
           quantity: 1,
           valueGp: 0,
           itemId: item.id,
-          notes: item.description || `${item.category} ödülü`,
+          notes: item.description || `${item.category} Ã¶dÃ¼lÃ¼`,
         }),
       );
     }
@@ -161,7 +161,7 @@ export function EncounterLootGenerator({
         name,
         quantity: Math.max(1, Math.round(manualQuantity)),
         valueGp: Math.max(0, manualValue),
-        notes: "Manuel encounter ödülü",
+        notes: "Manuel encounter Ã¶dÃ¼lÃ¼",
       }),
       ...encounter.rewards,
     ]);
@@ -177,7 +177,7 @@ export function EncounterLootGenerator({
 
   function clearRewards() {
     if (encounter.rewards.length === 0) return;
-    if (!confirm("Bu encounter'ın tüm ödülleri silinsin mi? Hazine sandığı vergiye gidiyor.")) return;
+    if (!confirm("Bu encounter'Ä±n tÃ¼m Ã¶dÃ¼lleri silinsin mi? Hazine sandÄ±ÄŸÄ± vergiye gidiyor.")) return;
     onChange([]);
   }
 
@@ -186,32 +186,32 @@ export function EncounterLootGenerator({
       <div className="encounter-loot-head">
         <div>
           <span className="mini-label">Loot Generator</span>
-          <h3>Encounter Ödülleri</h3>
-          <p>Altın, eşya ve özel ödülleri üretip encounter kaydında saklar.</p>
+          <h3>Encounter Ã–dÃ¼lleri</h3>
+          <p>AltÄ±n, eÅŸya ve Ã¶zel Ã¶dÃ¼lleri Ã¼retip encounter kaydÄ±nda saklar.</p>
         </div>
 
         <div className="encounter-loot-summary">
-          <span>{encounter.rewards.length} kayıt</span>
+          <span>{encounter.rewards.length} kayÄ±t</span>
           <strong>{totalGold.toLocaleString("tr-TR")} GP</strong>
         </div>
       </div>
 
       <div className="encounter-loot-actions">
         <button type="button" className="primary-action" onClick={generateLoot}>
-          Hızlı Ödül Üret
+          HÄ±zlÄ± Ã–dÃ¼l Ãœret
         </button>
         <button type="button" onClick={clearRewards} disabled={encounter.rewards.length === 0}>
-          Ödülleri Temizle
+          Ã–dÃ¼lleri Temizle
         </button>
       </div>
 
       <form className="encounter-loot-form" onSubmit={addManualReward}>
         <label>
-          Ödül
+          Ã–dÃ¼l
           <input
             value={manualName}
             onChange={(event) => setManualName(event.target.value)}
-            placeholder="Kraliyet mührü, özel anahtar..."
+            placeholder="Kraliyet mÃ¼hrÃ¼, Ã¶zel anahtar..."
           />
         </label>
         <label>
@@ -238,7 +238,7 @@ export function EncounterLootGenerator({
 
       {encounter.rewards.length === 0 ? (
         <div className="encounter-loot-empty">
-          Henüz ödül yok. Oyuncuların sandığı açmadan önce üç kez tuzak kontrolü yapması için biraz daha zaman var.
+          HenÃ¼z Ã¶dÃ¼l yok. OyuncularÄ±n sandÄ±ÄŸÄ± aÃ§madan Ã¶nce Ã¼Ã§ kez tuzak kontrolÃ¼ yapmasÄ± iÃ§in biraz daha zaman var.
         </div>
       ) : (
         <div className="encounter-loot-list">
@@ -250,9 +250,9 @@ export function EncounterLootGenerator({
                 <small>{reward.notes}</small>
               </div>
               <div className="encounter-loot-value">
-                <b>×{reward.quantity}</b>
-                <em>{reward.valueGp > 0 ? `${(reward.valueGp * reward.quantity).toLocaleString("tr-TR")} GP` : "Özel"}</em>
-                <button type="button" onClick={() => removeReward(reward.id)}>Kaldır</button>
+                <b>Ã—{reward.quantity}</b>
+                <em>{reward.valueGp > 0 ? `${(reward.valueGp * reward.quantity).toLocaleString("tr-TR")} GP` : "Ã–zel"}</em>
+                <button type="button" onClick={() => removeReward(reward.id)}>KaldÄ±r</button>
               </div>
             </article>
           ))}
@@ -261,3 +261,4 @@ export function EncounterLootGenerator({
     </section>
   );
 }
+

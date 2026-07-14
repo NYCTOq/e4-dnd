@@ -1,4 +1,4 @@
-import { Component, type ErrorInfo, type ReactNode } from "react";
+﻿import { Component, type ErrorInfo, type ReactNode } from "react";
 import { downloadEmergencyStorageSnapshot } from "../../core/storage/safeStorage";
 
 type Props = { children: ReactNode };
@@ -10,7 +10,7 @@ export class AppErrorBoundary extends Component<Props, State> {
   static getDerivedStateFromError(error: unknown): State {
     return {
       hasError: true,
-      errorMessage: error instanceof Error ? error.message : "Bilinmeyen uygulama hatası",
+      errorMessage: error instanceof Error ? error.message : "Bilinmeyen uygulama hatasÄ±",
     };
   }
 
@@ -30,19 +30,19 @@ export class AppErrorBoundary extends Component<Props, State> {
     return (
       <main className="fatal-error-shell">
         <section className="fatal-error-card">
-          <span className="eyebrow">Güvenli Mod</span>
-          <h1>Bu ekran çöktü, verilerin değil.</h1>
+          <span className="eyebrow">GÃ¼venli Mod</span>
+          <h1>Bu ekran Ã§Ã¶ktÃ¼, verilerin deÄŸil.</h1>
           <p>
-            Hata uygulamanın geri kalanına yayılmadan durduruldu. Yenilemeden önce
-            localStorage verilerinin acil kopyasını indirebilirsin.
+            Hata uygulamanÄ±n geri kalanÄ±na yayÄ±lmadan durduruldu. Yenilemeden Ã¶nce
+            localStorage verilerinin acil kopyasÄ±nÄ± indirebilirsin.
           </p>
           <code>{this.state.errorMessage}</code>
           <div className="fatal-error-actions">
             <button type="button" onClick={downloadEmergencyStorageSnapshot}>
-              Acil veri kopyasını indir
+              Acil veri kopyasÄ±nÄ± indir
             </button>
             <button type="button" className="primary-action" onClick={this.resetView}>
-              Ana sayfada yeniden başlat
+              Ana sayfada yeniden baÅŸlat
             </button>
           </div>
         </section>
@@ -50,3 +50,4 @@ export class AppErrorBoundary extends Component<Props, State> {
     );
   }
 }
+

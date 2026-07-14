@@ -1,4 +1,4 @@
-export type NavGroup = "Oyun" | "İçerik" | "Yönetim";
+﻿export type NavGroup = "Oyun" | "Ä°Ã§erik" | "YÃ¶netim";
 
 export type NavItem = {
   to: string;
@@ -10,22 +10,23 @@ export type NavItem = {
 };
 
 export const navItems: readonly NavItem[] = [
-  { to: "/", label: "Dashboard", shortLabel: "Ana", icon: "⌂", group: "Oyun", mobile: true },
-  { to: "/play-mode", label: "Play Mode", shortLabel: "Oyna", icon: "▶", group: "Oyun", mobile: true },
-  { to: "/characters", label: "Karakterler", shortLabel: "Karakter", icon: "◈", group: "Oyun", mobile: true },
-  { to: "/campaigns", label: "Campaigns", shortLabel: "Campaign", icon: "✦", group: "Oyun", mobile: true },
-  { to: "/dice", label: "Zar", shortLabel: "Zar", icon: "◆", group: "Oyun", mobile: true },
-  { to: "/search", label: "Global Arama", shortLabel: "Ara", icon: "⌕", group: "İçerik" },
-  { to: "/builder", label: "Character Builder", shortLabel: "Builder", icon: "+", group: "İçerik" },
-  { to: "/spellbook", label: "Spellbook", shortLabel: "Spells", icon: "✧", group: "İçerik" },
-  { to: "/inventory", label: "Inventory", shortLabel: "Eşya", icon: "▣", group: "İçerik" },
-  { to: "/monsters", label: "Monsters", shortLabel: "Monster", icon: "♜", group: "İçerik" },
-  { to: "/homebrew-lab", label: "Homebrew Lab", shortLabel: "Homebrew", icon: "⚗", group: "İçerik" },
-  { to: "/library", label: "Ruleset Library", shortLabel: "Library", icon: "▤", group: "Yönetim" },
-  { to: "/backup", label: "Yedek & Kurtarma", shortLabel: "Yedek", icon: "↥", group: "Yönetim" },
-  { to: "/settings", label: "Ayarlar", shortLabel: "Ayarlar", icon: "⚙", group: "Yönetim" },
-  { to: "/updates", label: "Sürüm Geçmişi", shortLabel: "Sürümler", icon: "◴", group: "Yönetim" },
-  { to: "/help", label: "Yardım Merkezi", shortLabel: "Yardım", icon: "?", group: "Yönetim" },
+  { to: "/", label: "Dashboard", shortLabel: "Ana", icon: "âŒ‚", group: "Oyun", mobile: true },
+  { to: "/play-mode", label: "Play Mode", shortLabel: "Oyna", icon: "â–¶", group: "Oyun", mobile: true },
+  { to: "/characters", label: "Karakterler", shortLabel: "Karakter", icon: "â—ˆ", group: "Oyun", mobile: true },
+  { to: "/campaigns", label: "Campaigns", shortLabel: "Campaign", icon: "âœ¦", group: "Oyun", mobile: true },
+  { to: "/dice", label: "Zar", shortLabel: "Zar", icon: "â—†", group: "Oyun", mobile: true },
+  { to: "/search", label: "Global Arama", shortLabel: "Ara", icon: "âŒ•", group: "Ä°Ã§erik" },
+  { to: "/builder", label: "Character Builder", shortLabel: "Builder", icon: "+", group: "Ä°Ã§erik" },
+  { to: "/spellbook", label: "Spellbook", shortLabel: "Spells", icon: "âœ§", group: "Ä°Ã§erik" },
+  { to: "/inventory", label: "Inventory", shortLabel: "EÅŸya", icon: "â–£", group: "Ä°Ã§erik" },
+  { to: "/monsters", label: "Monsters", shortLabel: "Monster", icon: "â™œ", group: "Ä°Ã§erik" },
+  { to: "/homebrew-lab", label: "Homebrew Lab", shortLabel: "Homebrew", icon: "âš—", group: "Ä°Ã§erik" },
+  { to: "/library", label: "Ruleset Library", shortLabel: "Library", icon: "â–¤", group: "YÃ¶netim" },
+  { to: "/backup", label: "Yedek & Kurtarma", shortLabel: "Yedek", icon: "â†¥", group: "YÃ¶netim" },
+  { to: "/settings", label: "Ayarlar", shortLabel: "Ayarlar", icon: "âš™", group: "YÃ¶netim" },
+  { to: "/updates", label: "SÃ¼rÃ¼m GeÃ§miÅŸi", shortLabel: "SÃ¼rÃ¼mler", icon: "â—´", group: "YÃ¶netim" },
+  { to: "/help", label: "YardÄ±m Merkezi", shortLabel: "YardÄ±m", icon: "?", group: "YÃ¶netim" },
 ] as const;
 
-export const navGroups: readonly NavGroup[] = ["Oyun", "İçerik", "Yönetim"];
+export const navGroups: readonly NavGroup[] = ["Oyun", "Ä°Ã§erik", "YÃ¶netim"];
+

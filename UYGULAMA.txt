@@ -1,0 +1,7 @@
+1) PowerShell'de takili kalan komutu Ctrl+C ile iptal edin.
+2) Bu zipi D:\Projects\e4_dnd klasorune cikarin ve dosyalarin uzerine yazin.
+3) Asagidaki eski dosyalari silin:
+   Remove-Item src\features\search\GlobalSearch.tsx -Force -ErrorAction SilentlyContinue
+   Remove-Item src\features\search\GlobalSearch.ts -Force -ErrorAction SilentlyContinue
+   Remove-Item src\features\search\globalSearch.ts -Force -ErrorAction SilentlyContinue
+4) npm.cmd run check

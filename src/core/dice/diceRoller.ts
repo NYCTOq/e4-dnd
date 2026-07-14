@@ -1,4 +1,4 @@
-import type { DiceRollResult, RollInput } from "./dice.types";
+﻿import type { DiceRollResult, RollInput } from "./dice.types";
 
 export function rollDice(input: RollInput): DiceRollResult {
   const count = clampInteger(input.count, 1, 100);

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+﻿import { useMemo, useState } from "react";
 import { PageShell } from "../../shared/layout/PageShell";
 import {
   RELEASE_CATEGORIES,
@@ -8,7 +8,7 @@ import {
 
 export function ReleaseHistory() {
   const [query, setQuery] = useState("");
-  const [category, setCategory] = useState<ReleaseCategory | "Tümü">("Tümü");
+  const [category, setCategory] = useState<ReleaseCategory | "TÃ¼mÃ¼">("TÃ¼mÃ¼");
 
   const filteredReleases = useMemo(() => {
     const normalizedQuery = query.trim().toLocaleLowerCase("tr-TR");
@@ -16,7 +16,7 @@ export function ReleaseHistory() {
     return RELEASE_NOTES.map((release) => ({
       ...release,
       changes: release.changes.filter((change) => {
-        const matchesCategory = category === "Tümü" || change.category === category;
+        const matchesCategory = category === "TÃ¼mÃ¼" || change.category === category;
         const haystack = `${release.version} ${release.title} ${release.summary} ${change.text}`
           .toLocaleLowerCase("tr-TR");
         return matchesCategory && (!normalizedQuery || haystack.includes(normalizedQuery));
@@ -37,35 +37,35 @@ export function ReleaseHistory() {
 
   return (
     <PageShell
-      eyebrow="Güncellemeler"
-      title="Sürüm Geçmişi"
-      description="E4 D&D'nin hangi sürümde ne kazandığını, neyin düzeltildiğini ve hangi teknik işlerin sessizce hayat kurtardığını burada görebilirsin."
+      eyebrow="GÃ¼ncellemeler"
+      title="SÃ¼rÃ¼m GeÃ§miÅŸi"
+      description="E4 D&D'nin hangi sÃ¼rÃ¼mde ne kazandÄ±ÄŸÄ±nÄ±, neyin dÃ¼zeltildiÄŸini ve hangi teknik iÅŸlerin sessizce hayat kurtardÄ±ÄŸÄ±nÄ± burada gÃ¶rebilirsin."
     >
-      <section className="release-history-summary" aria-label="Sürüm özeti">
-        <div><strong>v{__APP_VERSION__}</strong><span>Mevcut sürüm</span></div>
-        <div><strong>{RELEASE_NOTES.length}</strong><span>Toplam sürüm</span></div>
-        <div><strong>{totalChanges}</strong><span>Kayıtlı değişiklik</span></div>
+      <section className="release-history-summary" aria-label="SÃ¼rÃ¼m Ã¶zeti">
+        <div><strong>v{__APP_VERSION__}</strong><span>Mevcut sÃ¼rÃ¼m</span></div>
+        <div><strong>{RELEASE_NOTES.length}</strong><span>Toplam sÃ¼rÃ¼m</span></div>
+        <div><strong>{totalChanges}</strong><span>KayÄ±tlÄ± deÄŸiÅŸiklik</span></div>
         <div><strong>{new Date(__BUILD_DATE__).toLocaleDateString("tr-TR")}</strong><span>Son build</span></div>
       </section>
 
-      <section className="release-history-filters" aria-label="Sürüm filtreleri">
+      <section className="release-history-filters" aria-label="SÃ¼rÃ¼m filtreleri">
         <label>
-          Sürüm notlarında ara
+          SÃ¼rÃ¼m notlarÄ±nda ara
           <input
             type="search"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="Örn. campaign, PWA, düzeltme..."
+            placeholder="Ã–rn. campaign, PWA, dÃ¼zeltme..."
           />
         </label>
 
-        <div className="release-category-filter" role="group" aria-label="Değişiklik türü">
-          {["Tümü", ...RELEASE_CATEGORIES].map((item) => (
+        <div className="release-category-filter" role="group" aria-label="DeÄŸiÅŸiklik tÃ¼rÃ¼">
+          {["TÃ¼mÃ¼", ...RELEASE_CATEGORIES].map((item) => (
             <button
               type="button"
               key={item}
               className={category === item ? "active" : ""}
-              onClick={() => setCategory(item as ReleaseCategory | "Tümü")}
+              onClick={() => setCategory(item as ReleaseCategory | "TÃ¼mÃ¼")}
             >
               {item}
             </button>
@@ -97,9 +97,10 @@ export function ReleaseHistory() {
             </ul>
           </article>
         )) : (
-          <div className="empty-panel">Bu filtrelerle eşleşen sürüm kaydı yok.</div>
+          <div className="empty-panel">Bu filtrelerle eÅŸleÅŸen sÃ¼rÃ¼m kaydÄ± yok.</div>
         )}
       </div>
     </PageShell>
   );
 }
+

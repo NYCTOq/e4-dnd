@@ -1,4 +1,4 @@
-export type RecoveryRecord = {
+﻿export type RecoveryRecord = {
   id: string;
   storageKey: string;
   rawValue: string;
@@ -71,12 +71,12 @@ export function readJsonSafely<T>(
     try {
       parsed = JSON.parse(raw);
     } catch {
-      quarantineStorageValue(storageKey, raw, "JSON verisi ayrıştırılamadı.");
+      quarantineStorageValue(storageKey, raw, "JSON verisi ayrÄ±ÅŸtÄ±rÄ±lamadÄ±.");
       return fallback;
     }
 
     if (validator && !validator(parsed)) {
-      quarantineStorageValue(storageKey, raw, "Veri beklenen formatta değildi.");
+      quarantineStorageValue(storageKey, raw, "Veri beklenen formatta deÄŸildi.");
       return fallback;
     }
 
@@ -148,3 +148,4 @@ export function downloadEmergencyStorageSnapshot() {
   link.click();
   URL.revokeObjectURL(url);
 }
+

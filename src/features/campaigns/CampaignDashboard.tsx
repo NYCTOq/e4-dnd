@@ -1,8 +1,8 @@
-import type { Character } from "../../core/character/character.types";
+﻿import type { Character } from "../../core/character/character.types";
 import type { Campaign, CampaignEncounter } from "./campaignTypes";
 
 function formatDate(value?: string) {
-  if (!value) return "Kayıt yok";
+  if (!value) return "KayÄ±t yok";
 
   return new Intl.DateTimeFormat("tr-TR", {
     day: "2-digit",
@@ -65,14 +65,14 @@ export function CampaignDashboard({
       <div className="campaign-overview-head">
         <div>
           <span className="mini-label">Command Overview</span>
-          <h2>Campaign Özeti</h2>
+          <h2>Campaign Ã–zeti</h2>
           <p>
-            Parti, encounter ve hikâye kayıtlarının tek bakışlık özeti. DM’in
-            sekiz farklı karta bakıp zihinsel tablo kurmasına gerek kalmasın.
+            Parti, encounter ve hikÃ¢ye kayÄ±tlarÄ±nÄ±n tek bakÄ±ÅŸlÄ±k Ã¶zeti. DMâ€™in
+            sekiz farklÄ± karta bakÄ±p zihinsel tablo kurmasÄ±na gerek kalmasÄ±n.
           </p>
         </div>
         <span className="campaign-overview-updated">
-          Son güncelleme: {formatDate(campaign.updatedAt)}
+          Son gÃ¼ncelleme: {formatDate(campaign.updatedAt)}
         </span>
       </div>
 
@@ -87,7 +87,7 @@ export function CampaignDashboard({
           <strong className="campaign-overview-value">{partyCharacters.length}</strong>
           <span className="campaign-overview-caption">aktif karakter</span>
           <div className="campaign-overview-metrics">
-            <span>{woundedCharacters.length} yaralı</span>
+            <span>{woundedCharacters.length} yaralÄ±</span>
             <span className={criticalCharacters.length > 0 ? "warning" : ""}>
               {criticalCharacters.length} kritik
             </span>
@@ -101,7 +101,7 @@ export function CampaignDashboard({
               type="button"
               onClick={() => scrollToSection("campaign-encounters")}
             >
-              Encounter’a Git
+              Encounterâ€™a Git
             </button>
           </div>
           {activeEncounter ? (
@@ -110,10 +110,10 @@ export function CampaignDashboard({
                 {activeEncounter.name}
               </strong>
               <span className="campaign-overview-caption">
-                Round {activeEncounter.round} • {activeEncounter.participants.length} participant
+                Round {activeEncounter.round} â€¢ {activeEncounter.participants.length} participant
               </span>
               <div className="campaign-overview-metrics">
-                <span>{activeEncounter.isActive ? "Devam ediyor" : "Duraklatıldı"}</span>
+                <span>{activeEncounter.isActive ? "Devam ediyor" : "DuraklatÄ±ldÄ±"}</span>
                 <span>{openConditions} condition</span>
               </div>
             </>
@@ -132,7 +132,7 @@ export function CampaignDashboard({
           <strong className="campaign-overview-value">{activeQuests.length}</strong>
           <span className="campaign-overview-caption">aktif quest</span>
           <div className="campaign-overview-metrics">
-            <span>{completedQuests.length} tamamlandı</span>
+            <span>{completedQuests.length} tamamlandÄ±</span>
             <span>{campaign.quests.length} toplam</span>
           </div>
         </article>
@@ -141,7 +141,7 @@ export function CampaignDashboard({
           <div className="campaign-overview-card-head">
             <span className="mini-label">Latest Story Beat</span>
             <button type="button" onClick={() => scrollToSection("campaign-timeline")}> 
-              Timeline’a Git
+              Timelineâ€™a Git
             </button>
           </div>
           {latestTimelineEntry || latestSessionNote ? (
@@ -157,11 +157,11 @@ export function CampaignDashboard({
               <p className="campaign-overview-preview">
                 {latestTimelineEntry?.summary ||
                   latestSessionNote?.body ||
-                  "Detay eklenmemiş."}
+                  "Detay eklenmemiÅŸ."}
               </p>
             </>
           ) : (
-            <p className="campaign-overview-empty">Henüz hikâye kaydı yok.</p>
+            <p className="campaign-overview-empty">HenÃ¼z hikÃ¢ye kaydÄ± yok.</p>
           )}
         </article>
 
@@ -172,13 +172,13 @@ export function CampaignDashboard({
               type="button"
               onClick={() => scrollToSection("campaign-encounters")}
             >
-              Loot’a Git
+              Lootâ€™a Git
             </button>
           </div>
           <strong className="campaign-overview-value">{totalRewards}</strong>
-          <span className="campaign-overview-caption">kayıtlı ödül</span>
+          <span className="campaign-overview-caption">kayÄ±tlÄ± Ã¶dÃ¼l</span>
           <div className="campaign-overview-metrics">
-            <span>{Math.round(totalRewardValue)} GP değer</span>
+            <span>{Math.round(totalRewardValue)} GP deÄŸer</span>
             <span>{campaign.encounters.length} encounter</span>
           </div>
         </article>
@@ -186,3 +186,4 @@ export function CampaignDashboard({
     </section>
   );
 }
+

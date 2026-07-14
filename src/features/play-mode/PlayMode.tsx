@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+﻿import { useMemo, useState } from "react";
 import type { AbilityKey, Character, CharacterCondition } from "../../core/character/character.types";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import { rollDice } from "../../core/dice/diceRoller";
@@ -83,9 +83,9 @@ export function PlayMode({
       <PageShell
         eyebrow="Table Mode"
         title="Play Mode"
-        description="Önce bir karakter oluşturmalısın. Uygulama kahramanı havadan üretmiyor, henüz."
+        description="Ã–nce bir karakter oluÅŸturmalÄ±sÄ±n. Uygulama kahramanÄ± havadan Ã¼retmiyor, henÃ¼z."
       >
-        <div className="empty-panel">Play Mode için kayıtlı karakter bulunamadı.</div>
+        <div className="empty-panel">Play Mode iÃ§in kayÄ±tlÄ± karakter bulunamadÄ±.</div>
       </PageShell>
     );
   }
@@ -261,7 +261,7 @@ export function PlayMode({
     <PageShell
       eyebrow="Table Mode"
       title="Play Mode"
-      description="Masada lazım olan şeyler. Geri kalanı karakter sayfasında usulca bekliyor."
+      description="Masada lazÄ±m olan ÅŸeyler. Geri kalanÄ± karakter sayfasÄ±nda usulca bekliyor."
     >
       <div className={`play-mode-v1 ${isFocusMode ? "focus-mode" : ""}`}>
         <header className="play-mode-toolbar">
@@ -273,14 +273,14 @@ export function PlayMode({
             >
               {characters.map((item) => (
                 <option value={item.id} key={item.id}>
-                  {item.name} · Lv. {item.level} {item.className}
+                  {item.name} Â· Lv. {item.level} {item.className}
                 </option>
               ))}
             </select>
           </label>
 
           <button onClick={() => setIsFocusMode((current) => !current)}>
-            {isFocusMode ? "Normal Görünüm" : "Odak Modu"}
+            {isFocusMode ? "Normal GÃ¶rÃ¼nÃ¼m" : "Odak Modu"}
           </button>
         </header>
 
@@ -305,7 +305,7 @@ export function PlayMode({
         <div className="play-mode-grid">
           <section className="play-mode-card play-mode-hp-card">
             <div className="play-mode-section-head">
-              <div><span className="mini-label">Hit Points</span><h2>Can Yönetimi</h2></div>
+              <div><span className="mini-label">Hit Points</span><h2>Can YÃ¶netimi</h2></div>
               <strong className="play-mode-hp-number">{activeCharacter.currentHp} / {activeCharacter.maxHp}</strong>
             </div>
 
@@ -352,17 +352,17 @@ export function PlayMode({
           <section className="play-mode-card">
             <div className="play-mode-section-head">
               <div><span className="mini-label">Spell Slots</span><h2>Kaynaklar</h2></div>
-              <button onClick={() => commit({ spellSlots: resetSpellSlots(spellSlots) })}>Slotları Yenile</button>
+              <button onClick={() => commit({ spellSlots: resetSpellSlots(spellSlots) })}>SlotlarÄ± Yenile</button>
             </div>
 
             <div className="play-mode-slot-grid">
               {spellSlots.length === 0 ? (
-                <p>Spell slot yok. Bazen sorun büyü değil, sınıf seçimidir.</p>
+                <p>Spell slot yok. Bazen sorun bÃ¼yÃ¼ deÄŸil, sÄ±nÄ±f seÃ§imidir.</p>
               ) : spellSlots.map((slot) => (
                 <div className="play-mode-slot-row" key={slot.level}>
                   <div><span>Level {slot.level}</span><strong>{slot.max - slot.used} / {slot.max}</strong></div>
                   <div>
-                    <button onClick={() => spendSlot(slot.level, 1)} disabled={slot.used >= slot.max}>−</button>
+                    <button onClick={() => spendSlot(slot.level, 1)} disabled={slot.used >= slot.max}>âˆ’</button>
                     <button onClick={() => spendSlot(slot.level, -1)} disabled={slot.used <= 0}>+</button>
                   </div>
                 </div>
@@ -372,7 +372,7 @@ export function PlayMode({
 
           <section className="play-mode-card">
             <div className="play-mode-section-head">
-              <div><span className="mini-label">Quick Rolls</span><h2>Hızlı Zarlar</h2></div>
+              <div><span className="mini-label">Quick Rolls</span><h2>HÄ±zlÄ± Zarlar</h2></div>
             </div>
 
             <div className="play-mode-roll-grid">
@@ -406,7 +406,7 @@ export function PlayMode({
             ))}
 
             <div className="play-mode-roll-history">
-              {rollHistory.length === 0 ? <p>Henüz zar atılmadı.</p> : rollHistory.map((roll) => (
+              {rollHistory.length === 0 ? <p>HenÃ¼z zar atÄ±lmadÄ±.</p> : rollHistory.map((roll) => (
                 <div key={roll.id}><span>{roll.label}<small>{roll.notation}</small></span><strong>{roll.total}</strong></div>
               ))}
             </div>
@@ -414,12 +414,12 @@ export function PlayMode({
 
           <section className="play-mode-card play-mode-spell-card">
             <div className="play-mode-section-head">
-              <div><span className="mini-label">Prepared Spells</span><h2>Hızlı Büyüler</h2></div>
-              <span>{spells.length} hazır</span>
+              <div><span className="mini-label">Prepared Spells</span><h2>HÄ±zlÄ± BÃ¼yÃ¼ler</h2></div>
+              <span>{spells.length} hazÄ±r</span>
             </div>
 
             <div className="play-mode-spell-list">
-              {spellGroups.length === 0 ? <p>Hazır büyü bulunamadı.</p> : spellGroups.map((group) => (
+              {spellGroups.length === 0 ? <p>HazÄ±r bÃ¼yÃ¼ bulunamadÄ±.</p> : spellGroups.map((group) => (
                 <div key={group.level} className="play-mode-spell-group">
                   <strong>{group.level === 0 ? "Cantrips" : `Level ${group.level}`}</strong>
                   {group.spells.map((spell) => {
@@ -427,7 +427,7 @@ export function PlayMode({
                     const disabled = spell.level > 0 && (!slot || slot.used >= slot.max);
                     return (
                       <button key={spell.id} disabled={disabled} onClick={() => castSpell(spell.id)}>
-                        <span>{spell.name}{spell.concentration ? " · C" : ""}</span>
+                        <span>{spell.name}{spell.concentration ? " Â· C" : ""}</span>
                         <small>{spell.level === 0 ? "Cantrip" : disabled ? "Slot yok" : "Cast"}</small>
                       </button>
                     );
@@ -446,7 +446,7 @@ export function PlayMode({
               {hitDice.map((pool) => (
                 <button key={pool.die} disabled={pool.used >= pool.max} onClick={() => shortRest(pool.die)}>
                   Short Rest d{pool.die}
-                  <small>{pool.max - pool.used} / {pool.max} kaldı</small>
+                  <small>{pool.max - pool.used} / {pool.max} kaldÄ±</small>
                 </button>
               ))}
               <button className="primary-action" onClick={longRest}>Long Rest</button>
@@ -457,3 +457,4 @@ export function PlayMode({
     </PageShell>
   );
 }
+

@@ -1,4 +1,4 @@
-import type { CampaignEncounterToolPreferences } from "./campaignTypes";
+﻿import type { CampaignEncounterToolPreferences } from "./campaignTypes";
 
 const TOOL_OPTIONS: Array<{
   key: keyof CampaignEncounterToolPreferences;
@@ -8,22 +8,22 @@ const TOOL_OPTIONS: Array<{
   {
     key: "difficulty",
     title: "Difficulty",
-    description: "XP eşikleri ve encounter zorluğu.",
+    description: "XP eÅŸikleri ve encounter zorluÄŸu.",
   },
   {
     key: "loot",
     title: "Loot",
-    description: "Otomatik ve manuel encounter ödülleri.",
+    description: "Otomatik ve manuel encounter Ã¶dÃ¼lleri.",
   },
   {
     key: "conditions",
     title: "Conditions",
-    description: "Participant bazlı süreli durum takibi.",
+    description: "Participant bazlÄ± sÃ¼reli durum takibi.",
   },
   {
     key: "combatRolls",
     title: "Combat Rolls",
-    description: "Karakter ve monster hızlı zar araçları.",
+    description: "Karakter ve monster hÄ±zlÄ± zar araÃ§larÄ±.",
   },
 ];
 
@@ -45,15 +45,15 @@ export function EncounterToolSettings({
       <div className="encounter-tool-settings-head">
         <div>
           <span className="mini-label">Optional DM Tools</span>
-          <h3>Encounter Modülleri</h3>
+          <h3>Encounter ModÃ¼lleri</h3>
           <p>
-            Temel initiative ve HP takibi her zaman açık. Geri kalan sistemleri
-            yalnızca masada işine yarıyorsa kullan.
+            Temel initiative ve HP takibi her zaman aÃ§Ä±k. Geri kalan sistemleri
+            yalnÄ±zca masada iÅŸine yarÄ±yorsa kullan.
           </p>
         </div>
 
         <div className="encounter-tool-settings-actions">
-          <span>{activeCount}/4 açık</span>
+          <span>{activeCount}/4 aÃ§Ä±k</span>
           <button
             type="button"
             onClick={() =>
@@ -78,7 +78,7 @@ export function EncounterToolSettings({
               })
             }
           >
-            Tümünü Aç
+            TÃ¼mÃ¼nÃ¼ AÃ§
           </button>
         </div>
       </div>
@@ -92,7 +92,7 @@ export function EncounterToolSettings({
             aria-pressed={value[tool.key]}
             onClick={() => toggle(tool.key)}
           >
-            <span>{value[tool.key] ? "Açık" : "Kapalı"}</span>
+            <span>{value[tool.key] ? "AÃ§Ä±k" : "KapalÄ±"}</span>
             <strong>{tool.title}</strong>
             <small>{tool.description}</small>
           </button>
@@ -101,3 +101,4 @@ export function EncounterToolSettings({
     </section>
   );
 }
+

@@ -1,4 +1,4 @@
-import { useDeferredValue, useMemo } from "react";
+﻿import { useDeferredValue, useMemo } from "react";
 import { motion } from "framer-motion";
 import type { DndItemData, RulesetData } from "../../core/rulesets/ruleset.types";
 import { PageShell } from "../../shared/layout/PageShell";
@@ -45,30 +45,30 @@ export function Inventory({ rulesetData, isRulesetLoading, rulesetError }: {
   }
 
   return (
-    <PageShell eyebrow="Inventory Library" title="Inventory" description="Eşyaları kaynağına, kategorisine ve ağırlığına göre süz. Çantayı yazılıma çevirdik, bari düzgün aransın.">
+    <PageShell eyebrow="Inventory Library" title="Inventory" description="EÅŸyalarÄ± kaynaÄŸÄ±na, kategorisine ve aÄŸÄ±rlÄ±ÄŸÄ±na gÃ¶re sÃ¼z. Ã‡antayÄ± yazÄ±lÄ±ma Ã§evirdik, bari dÃ¼zgÃ¼n aransÄ±n.">
       {isRulesetLoading ? (
-        <div className="empty-panel"><h2>Item data yükleniyor...</h2><p>Raflar diziliyor.</p></div>
+        <div className="empty-panel"><h2>Item data yÃ¼kleniyor...</h2><p>Raflar diziliyor.</p></div>
       ) : rulesetError ? (
-        <div className="empty-panel"><h2>Item data yüklenemedi</h2><p>{rulesetError}</p></div>
+        <div className="empty-panel"><h2>Item data yÃ¼klenemedi</h2><p>{rulesetError}</p></div>
       ) : rulesetData ? (
         <>
           <div className="character-filter-panel filter-panel-extended">
             <label>Ara<input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} placeholder="Longsword, armor, potion..." /></label>
             <label>Category<select value={categoryFilter} onChange={(event) => setCategoryFilter(event.target.value as "all" | DndItemData["category"])}>
-              <option value="all">Tümü</option><option value="weapon">Weapon</option><option value="armor">Armor</option><option value="shield">Shield</option><option value="gear">Gear</option>
+              <option value="all">TÃ¼mÃ¼</option><option value="weapon">Weapon</option><option value="armor">Armor</option><option value="shield">Shield</option><option value="gear">Gear</option>
             </select></label>
             <label>Kaynak<select value={sourceFilter} onChange={(event) => setSourceFilter(event.target.value as ItemSourceFilter)}>
-              <option value="all">Tümü</option><option value="official">Data pack</option><option value="homebrew">Homebrew</option>
+              <option value="all">TÃ¼mÃ¼</option><option value="official">Data pack</option><option value="homebrew">Homebrew</option>
             </select></label>
-            <label>Sırala<select value={sortOrder} onChange={(event) => setSortOrder(event.target.value as ItemSort)}>
-              <option value="name">İsim A-Z</option><option value="category">Kategori</option><option value="weight">Ağırlık</option>
+            <label>SÄ±rala<select value={sortOrder} onChange={(event) => setSortOrder(event.target.value as ItemSort)}>
+              <option value="name">Ä°sim A-Z</option><option value="category">Kategori</option><option value="weight">AÄŸÄ±rlÄ±k</option>
             </select></label>
-            <div className="filter-result-count"><strong>{filteredItems.length}</strong><span>sonuç</span></div>
-            <button type="button" className="filter-reset-button" onClick={resetFilters} disabled={!hasActiveFilters}>Filtreleri sıfırla</button>
+            <div className="filter-result-count"><strong>{filteredItems.length}</strong><span>sonuÃ§</span></div>
+            <button type="button" className="filter-reset-button" onClick={resetFilters} disabled={!hasActiveFilters}>Filtreleri sÄ±fÄ±rla</button>
           </div>
 
           {filteredItems.length === 0 ? (
-            <div className="empty-panel"><h2>Item bulunamadı.</h2><p>Filtreleri sıfırlamak çantayı yakmaktan daha güvenli.</p></div>
+            <div className="empty-panel"><h2>Item bulunamadÄ±.</h2><p>Filtreleri sÄ±fÄ±rlamak Ã§antayÄ± yakmaktan daha gÃ¼venli.</p></div>
           ) : (
             <div className="inventory-library-grid">
               {filteredItems.map((item) => {
@@ -76,7 +76,7 @@ export function Inventory({ rulesetData, isRulesetLoading, rulesetError }: {
                 return (
                   <motion.article className="inventory-library-card" key={item.id} whileHover={{ y: -5 }}>
                     <div className="library-item-top">
-                      <div><span className="mini-label">{getItemCategoryLabel(item.category)}{isHomebrew ? " • Homebrew" : ""}</span><h2>{item.name}</h2></div>
+                      <div><span className="mini-label">{getItemCategoryLabel(item.category)}{isHomebrew ? " â€¢ Homebrew" : ""}</span><h2>{item.name}</h2></div>
                       <span>{item.cost}</span>
                     </div>
                     <p>{item.description}</p>
@@ -98,3 +98,4 @@ export function Inventory({ rulesetData, isRulesetLoading, rulesetError }: {
     </PageShell>
   );
 }
+

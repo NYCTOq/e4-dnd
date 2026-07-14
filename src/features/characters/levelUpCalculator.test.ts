@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { applyAbilityIncrease, buildLeveledCharacter, getAverageHpGain } from "./levelUpCalculator";
 import { makeCharacter } from "../../test/fixtures";
 
@@ -33,3 +33,4 @@ describe("levelUpCalculator", () => {
     expect(leveled.updatedAt).toBe("2026-07-14T00:00:00.000Z");
   });
 });
+

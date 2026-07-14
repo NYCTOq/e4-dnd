@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   Character,
   CharacterConditionDurations,
   CharacterHitDiePool,
@@ -225,3 +225,4 @@ export function exportCharacters(characters: Character[]): void {
   link.click();
   URL.revokeObjectURL(url);
 }
+

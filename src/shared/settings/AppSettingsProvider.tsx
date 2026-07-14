@@ -1,4 +1,4 @@
-import {
+﻿import {
   createContext,
   useContext,
   useEffect,
@@ -67,8 +67,9 @@ export function useAppSettings() {
   const context = useContext(AppSettingsContext);
 
   if (!context) {
-    throw new Error("useAppSettings AppSettingsProvider içinde kullanılmalıdır.");
+    throw new Error("useAppSettings AppSettingsProvider iÃ§inde kullanÄ±lmalÄ±dÄ±r.");
   }
 
   return context;
 }
+

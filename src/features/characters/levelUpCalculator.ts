@@ -1,4 +1,4 @@
-import type { AbilityKey, Character } from "../../core/character/character.types";
+﻿import type { AbilityKey, Character } from "../../core/character/character.types";
 import { getAbilityModifier } from "../../core/character/characterCalculator";
 import { normalizeHitDice, normalizeSpellSlots } from "./characterShared";
 
@@ -74,3 +74,4 @@ export function buildLeveledCharacter(
     updatedAt: options.updatedAt ?? new Date().toISOString(),
   };
 }
+
