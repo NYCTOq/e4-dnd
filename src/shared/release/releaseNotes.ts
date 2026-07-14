@@ -15,6 +15,21 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.7.0",
+    date: "2026-07-14",
+    title: "NPC manager ve ilişki takibi",
+    summary:
+      "Campaign NPC'leri; roller, konumlar, tutumlar, gizli notlar ve birbirleriyle ilişkileriyle ayrı bir yönetim merkezinde toplandı.",
+    changes: [
+      { text: "Campaign bağlantılı yeni NPC Manager sayfası", category: "Özellik" },
+      { text: "NPC rolü, konumu, durumu, tutumu ve etiket alanları", category: "Özellik" },
+      { text: "Oyuncu bilgisi ile DM gizli notlarının ayrı tutulması", category: "Özellik" },
+      { text: "NPC'ler arasında adlandırılabilir ilişki bağlantıları", category: "Özellik" },
+      { text: "Campaign filtresi ve kapsamlı NPC araması", category: "İyileştirme" },
+      { text: "NPC veri motoru için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.6.0",
     date: "2026-07-14",
     title: "Session planner ve hızlı notlar",

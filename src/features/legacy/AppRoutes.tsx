@@ -88,6 +88,9 @@ const CollectionsPage = lazy(() =>
 const SessionPlannerPage = lazy(() =>
   import("../session-planner/SessionPlannerPage").then((module) => ({ default: module.SessionPlannerPage })),
 );
+const NpcManagerPage = lazy(() =>
+  import("../npc-manager/NpcManagerPage").then((module) => ({ default: module.NpcManagerPage })),
+);
 
 import type { BackupImportOptions, FullBackupData } from "../backup/fullBackup";
 
@@ -242,6 +245,11 @@ export function AppRoutes({
       <Route
         path="/session-planner"
         element={<SessionPlannerPage campaigns={campaigns} />}
+      />
+
+      <Route
+        path="/npcs"
+        element={<NpcManagerPage campaigns={campaigns} />}
       />
 
       <Route

@@ -1,0 +1,13 @@
+1. Zip içeriğini D:\Projects\e4_dnd klasörüne çıkarın ve dosyaların üzerine yazın.
+2. PowerShell açın.
+3. Aşağıdaki komutları çalıştırın:
+
+cd D:\Projects\e4_dnd
+npm.cmd install
+npm.cmd run check
+
+4. Kontroller geçerse:
+
+git add -A
+git commit -m "feat: add npc manager and relationship tracker"
+git push

@@ -1,0 +1,15 @@
+E4 D&D v1.7.0 - NPC Manager + Relationship Tracker V1
+
+Eklenen dosyalar:
+- src/features/npc-manager/NpcManagerPage.tsx
+- src/features/npc-manager/npcManagerStorage.ts
+- src/features/npc-manager/npcManagerStorage.test.ts
+- src/styles/32-npc-manager.css
+
+Güncellenen dosyalar:
+- src/features/legacy/AppRoutes.tsx
+- src/shared/navigation/navItems.ts
+- src/shared/release/releaseNotes.ts
+- src/App.css
+- package.json
+- package-lock.json
