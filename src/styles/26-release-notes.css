@@ -1,0 +1,148 @@
+.app-version-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.app-version-button span {
+  color: var(--text);
+  font-weight: 900;
+}
+
+.app-version-button small {
+  color: inherit;
+  font: inherit;
+}
+
+.release-notes-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(2, 5, 14, 0.78);
+  backdrop-filter: blur(14px);
+}
+
+.release-notes-dialog {
+  width: min(760px, 100%);
+  max-height: min(820px, calc(100vh - 40px));
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background: rgba(8, 12, 26, 0.96);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.release-notes-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.release-notes-head h2 {
+  margin-top: 4px;
+}
+
+.release-notes-head p {
+  max-width: 620px;
+  margin-bottom: 0;
+}
+
+.release-notes-head > button {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  font-size: 24px;
+}
+
+.release-notes-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.release-note-card {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.055);
+  padding: 18px;
+}
+
+.release-note-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.release-note-meta strong {
+  color: var(--accent);
+}
+
+.release-note-card h3 {
+  margin: 12px 0 8px;
+}
+
+.release-note-card ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.release-notes-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.release-notes-footer span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.release-notes-footer .primary-action {
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .app-version-button {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .release-notes-backdrop {
+    padding: 10px;
+  }
+
+  .release-notes-dialog {
+    max-height: calc(100vh - 20px);
+    padding: 18px;
+    border-radius: 24px;
+  }
+
+  .release-notes-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

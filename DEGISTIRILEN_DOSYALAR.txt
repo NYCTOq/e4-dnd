@@ -14,3 +14,16 @@ Yeni dosyalar:
 - GitHub Actions build sırasında VITE_BASE_PATH=/e4-dnd/ kullanır.
 - CI başarılı olmadan deployment başlamaz.
 - dist/index.html, route yenilemeleri için dist/404.html olarak kopyalanır.
+
+Release Versioning + Changelog V1
+- package.json
+- package-lock.json
+- vite.config.ts
+- src/vite-env.d.ts
+- src/shared/layout/AppFrame.tsx
+- src/shared/release/ReleaseNotes.tsx
+- src/shared/release/releaseNotes.ts
+- src/styles/26-release-notes.css
+- src/App.css
+- .github/workflows/release.yml
+- RELEASES.md
