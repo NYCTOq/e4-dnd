@@ -1,0 +1,12 @@
+E4 D&D Combat Log + Encounter Summary V1
+
+1. Bu klasörün içeriğini D:\Projects\e4_dnd içine kopyalayın.
+2. Mevcut dosyaların üzerine yazılmasına izin verin.
+3. PowerShell:
+   cd D:\Projects\e4_dnd
+   npm.cmd install
+   npm.cmd run check
+4. Kontrol temizse:
+   git add -A
+   git commit -m "feat: add combat log and encounter summary"
+   git push

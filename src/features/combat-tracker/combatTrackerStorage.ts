@@ -8,6 +8,19 @@ export type CombatEffect = {
   source: string;
 };
 
+export type CombatLogKind = "Sistem" | "Sıra" | "Hasar" | "İyileştirme" | "Etki" | "Not";
+
+export type CombatLogEntry = {
+  id: string;
+  kind: CombatLogKind;
+  round: number;
+  combatantId: string;
+  combatantName: string;
+  amount: number | null;
+  message: string;
+  createdAt: string;
+};
+
 export type Combatant = {
   id: string;
   sourceId: string;
@@ -31,11 +44,13 @@ export type CombatEncounter = {
   round: number;
   activeCombatantId: string;
   combatants: Combatant[];
+  log: CombatLogEntry[];
   createdAt: string;
   updatedAt: string;
 };
 
 const STORAGE_KEY = "e4_dnd_combat_tracker_v1";
+const LOG_KINDS: readonly CombatLogKind[] = ["Sistem", "Sıra", "Hasar", "İyileştirme", "Etki", "Not"];
 const KINDS: readonly CombatantKind[] = ["Karakter", "NPC", "Canavar", "Özel"];
 export const COMBAT_CONDITIONS: readonly CombatCondition[] = ["Blessed", "Poisoned", "Prone", "Invisible", "Stunned", "Restrained", "Concentration", "Rage", "Haki", "Cursed"];
 
@@ -45,6 +60,57 @@ function isRecord(value: unknown): value is Record<string, unknown> {
 
 function finiteNumber(value: unknown, fallback = 0) {
   return typeof value === "number" && Number.isFinite(value) ? value : fallback;
+}
+
+
+function sanitizeLogEntry(value: unknown): CombatLogEntry | null {
+  if (!isRecord(value) || typeof value.id !== "string" || !LOG_KINDS.includes(value.kind as CombatLogKind)) return null;
+  return {
+    id: value.id,
+    kind: value.kind as CombatLogKind,
+    round: Math.max(1, Math.floor(finiteNumber(value.round, 1))),
+    combatantId: typeof value.combatantId === "string" ? value.combatantId : "",
+    combatantName: typeof value.combatantName === "string" ? value.combatantName : "",
+    amount: value.amount === null ? null : Math.max(0, Math.floor(finiteNumber(value.amount))),
+    message: typeof value.message === "string" ? value.message : "",
+    createdAt: typeof value.createdAt === "string" ? value.createdAt : new Date().toISOString(),
+  };
+}
+
+export function createCombatLogEntry(
+  kind: CombatLogKind,
+  round: number,
+  message: string,
+  combatant?: Pick<Combatant, "id" | "name"> | null,
+  amount: number | null = null,
+): CombatLogEntry {
+  return {
+    id: crypto.randomUUID(),
+    kind,
+    round: Math.max(1, Math.floor(round)),
+    combatantId: combatant?.id ?? "",
+    combatantName: combatant?.name ?? "",
+    amount: amount === null ? null : Math.max(0, Math.floor(amount)),
+    message: message.trim(),
+    createdAt: new Date().toISOString(),
+  };
+}
+
+export function addCombatLog(encounter: CombatEncounter, entry: CombatLogEntry): CombatEncounter {
+  return { ...encounter, log: [entry, ...encounter.log].slice(0, 250) };
+}
+
+export function getCombatSummary(encounter: CombatEncounter) {
+  const damage = encounter.log.filter((entry) => entry.kind === "Hasar").reduce((total, entry) => total + (entry.amount ?? 0), 0);
+  const healing = encounter.log.filter((entry) => entry.kind === "İyileştirme").reduce((total, entry) => total + (entry.amount ?? 0), 0);
+  const defeated = encounter.combatants.filter((combatant) => combatant.isDefeated).length;
+  return {
+    rounds: encounter.round,
+    damage,
+    healing,
+    defeated,
+    events: encounter.log.length,
+  };
 }
 
 function sanitizeEffect(value: unknown): CombatEffect | null {
@@ -105,6 +171,7 @@ export function sanitizeCombatEncounter(value: unknown): CombatEncounter | null 
     round: Math.max(1, Math.floor(finiteNumber(value.round, 1))),
     activeCombatantId,
     combatants: sortCombatants(combatants),
+    log: Array.isArray(value.log) ? value.log.map(sanitizeLogEntry).filter((item): item is CombatLogEntry => Boolean(item)).slice(0, 250) : [],
     createdAt: typeof value.createdAt === "string" ? value.createdAt : now,
     updatedAt: typeof value.updatedAt === "string" ? value.updatedAt : now,
   };
@@ -112,7 +179,7 @@ export function sanitizeCombatEncounter(value: unknown): CombatEncounter | null 
 
 export function createCombatEncounter(name = "Yeni savaş", campaignId = ""): CombatEncounter {
   const now = new Date().toISOString();
-  return { id: crypto.randomUUID(), campaignId, name: name.trim() || "Yeni savaş", round: 1, activeCombatantId: "", combatants: [], createdAt: now, updatedAt: now };
+  return { id: crypto.randomUUID(), campaignId, name: name.trim() || "Yeni savaş", round: 1, activeCombatantId: "", combatants: [], log: [], createdAt: now, updatedAt: now };
 }
 
 export function createCombatant(name = "Yeni savaşçı", kind: CombatantKind = "Özel"): Combatant {

@@ -15,6 +15,20 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.14.0",
+    date: "2026-07-14",
+    title: "Combat log ve encounter özeti",
+    summary: "Savaş içindeki sıra, hasar, iyileştirme, etki ve manuel notlar otomatik bir olay günlüğünde toplanıyor.",
+    changes: [
+      { text: "Hasar, iyileştirme, sıra ve etki işlemlerini otomatik kaydetme", category: "Özellik" },
+      { text: "Round ve aktif savaşçı geçişlerini savaş günlüğünde gösterme", category: "Özellik" },
+      { text: "Toplam hasar, iyileştirme, yenilen savaşçı ve olay özeti", category: "İyileştirme" },
+      { text: "Manuel combat notu ekleme ve günlüğü temizleme", category: "İyileştirme" },
+      { text: "Eski combat kayıtları için geriye uyumlu log sanitizasyonu", category: "Teknik" },
+      { text: "Combat log ve özet motoru için üç yeni otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.13.0",
     date: "2026-07-14",
     title: "Combat effects ve süre otomasyonu",
