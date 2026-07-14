@@ -1,0 +1,18 @@
+E4 D&D - Tags + Smart Collections V1
+
+1. ZIP içeriğini D:\Projects\e4_dnd klasörüne çıkarın.
+2. Mevcut dosyaların üzerine yazılmasına izin verin.
+3. PowerShell komutları:
+
+cd D:\Projects\e4_dnd
+npm.cmd install
+npm.cmd run check
+
+git add -A
+git commit -m "feat: add tags and smart collections"
+git push
+
+Beklenen sonuç:
+- 30 Fast Refresh uyarısı olabilir; bunlar hata değildir.
+- 9 test dosyası ve 22 test geçmelidir.
+- Production build başarılı olmalıdır.

@@ -15,6 +15,21 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.5.0",
+    date: "2026-07-14",
+    title: "Etiketler ve akıllı koleksiyonlar",
+    summary:
+      "Global arama kayıtları özel etiketlerle gruplanabiliyor; koleksiyonlar otomatik oluşuyor ve tek ekrandan yönetilebiliyor.",
+    changes: [
+      { text: "Global Arama sonuçlarına özel etiket ekleme ve kaldırma", category: "Özellik" },
+      { text: "Etiketlerden otomatik oluşan Koleksiyonlar sayfası", category: "Özellik" },
+      { text: "Koleksiyon yeniden adlandırma ve topluca silme", category: "İyileştirme" },
+      { text: "Favori kayıtların koleksiyonlarda görünür rozeti", category: "İyileştirme" },
+      { text: "Etiket verilerinin güvenli localStorage saklaması", category: "Teknik" },
+      { text: "Etiket motoru için üç yeni otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.4.0",
     date: "2026-07-14",
     title: "Favoriler ve son açılanlar",

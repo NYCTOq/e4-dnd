@@ -82,6 +82,9 @@ const HelpCenter = lazy(() =>
 const GlobalSearch = lazy(() =>
   import("../search/GlobalSearchPage").then((module) => ({ default: module.GlobalSearch })),
 );
+const CollectionsPage = lazy(() =>
+  import("../collections/CollectionsPage").then((module) => ({ default: module.CollectionsPage })),
+);
 
 import type { BackupImportOptions, FullBackupData } from "../backup/fullBackup";
 
@@ -324,6 +327,21 @@ export function AppRoutes({
       <Route path="/updates" element={<ReleaseHistory />} />
 
       <Route path="/help" element={<HelpCenter />} />
+
+
+      <Route
+        path="/collections"
+        element={
+          <CollectionsPage
+            characters={characters}
+            campaigns={campaigns}
+            rulesetData={effectiveRulesetData}
+            homebrewSpells={homebrewSpells}
+            homebrewItems={homebrewItems}
+            homebrewMonsters={homebrewMonsters}
+          />
+        }
+      />
 
       <Route
         path="/search"

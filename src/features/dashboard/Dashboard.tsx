@@ -5,6 +5,7 @@ import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import type { Campaign } from "../campaigns/campaignTypes";
 import { PageShell } from "../../shared/layout/PageShell";
 import { useFavorites } from "../../shared/favorites/FavoritesProvider";
+import { useTagCollections } from "../../shared/collections/TagCollectionsProvider";
 
 type DashboardProps = {
   characters: Character[];
@@ -34,6 +35,7 @@ export function Dashboard({
   homebrewCount,
 }: DashboardProps) {
   const { favorites, recentItems, recordRecent, clearRecentItems } = useFavorites();
+  const { allTags, itemTags } = useTagCollections();
   const recentCharacter = [...characters].sort((a, b) =>
     b.updatedAt.localeCompare(a.updatedAt),
   )[0];
@@ -163,6 +165,25 @@ export function Dashboard({
               </div>
             ) : (
               <p>Global Arama üzerinden açtığın kayıtlar burada görünür. Hafızaya iş bırakmıyoruz.</p>
+            )}
+          </article>
+
+          <article className="favorite-dashboard-card">
+            <div className="favorite-dashboard-card-head">
+              <strong>Koleksiyonlar</strong>
+              <span>{allTags.length}</span>
+            </div>
+            {allTags.length ? (
+              <div className="dashboard-tag-list">
+                {allTags.slice(0, 8).map((tag) => (
+                  <NavLink key={tag} to="/collections">
+                    <span>#{tag}</span>
+                    <strong>{Object.values(itemTags).filter((tags) => tags.includes(tag)).length}</strong>
+                  </NavLink>
+                ))}
+              </div>
+            ) : (
+              <p>Arama sonuçlarına etiket eklediğinde koleksiyonların burada görünür.</p>
             )}
           </article>
         </div>

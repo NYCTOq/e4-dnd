@@ -78,3 +78,6 @@
   .favorite-dashboard-grid { grid-template-columns: 1fr; }
   .global-search-result-row { grid-template-columns: minmax(0, 1fr) 2.75rem; }
 }
+
+.global-search-row-actions { display:grid; gap:.45rem; width:3rem; }
+.global-search-row-actions .favorite-toggle,.global-search-row-actions .tag-toggle { width:3rem; min-height:2.8rem; }

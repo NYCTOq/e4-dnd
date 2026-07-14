@@ -9,6 +9,7 @@ import type {
 } from "../../core/rulesets/ruleset.types";
 import { PageShell } from "../../shared/layout/PageShell";
 import { useFavorites } from "../../shared/favorites/FavoritesProvider";
+import { useTagCollections } from "../../shared/collections/TagCollectionsProvider";
 import type { Campaign } from "../campaigns/campaignTypes";
 import {
   buildGlobalSearchEntries,
@@ -61,6 +62,7 @@ export function GlobalSearch({
 }: GlobalSearchProps) {
   const [searchParams, setSearchParams] = useSearchParams();
   const { isFavorite, toggleFavorite, recordRecent } = useFavorites();
+  const { allTags, getTagsForItem, addTag, removeTag } = useTagCollections();
   const query = searchParams.get("q") ?? "";
   const rawCategory = searchParams.get("category") ?? "all";
   const category = CATEGORIES.includes(rawCategory as GlobalSearchCategory | "all")
@@ -190,18 +192,46 @@ export function GlobalSearch({
                     </span>
                     <small>{result.subtitle}</small>
                     <p>{result.description}</p>
+                    {getTagsForItem(result.id).length ? (
+                      <span className="result-tag-row">
+                        {getTagsForItem(result.id).map((tag) => (
+                          <button
+                            type="button"
+                            className="result-tag-chip"
+                            key={tag}
+                            title="Etiketi kaldır"
+                            onClick={(event) => { event.preventDefault(); event.stopPropagation(); removeTag(result.id, tag); }}
+                          >
+                            #{tag} ×
+                          </button>
+                        ))}
+                      </span>
+                    ) : null}
                   </span>
                   <span className="global-search-open" aria-hidden="true">→</span>
                 </Link>
-                <button
-                  type="button"
-                  className={isFavorite(result.id) ? "favorite-toggle active" : "favorite-toggle"}
-                  aria-label={isFavorite(result.id) ? `${result.title} favorilerden çıkar` : `${result.title} favorilere ekle`}
-                  aria-pressed={isFavorite(result.id)}
-                  onClick={() => toggleFavorite(favoriteItem)}
-                >
-                  {isFavorite(result.id) ? "★" : "☆"}
-                </button>
+                <div className="global-search-row-actions">
+                  <button
+                    type="button"
+                    className={isFavorite(result.id) ? "favorite-toggle active" : "favorite-toggle"}
+                    aria-label={isFavorite(result.id) ? `${result.title} favorilerden çıkar` : `${result.title} favorilere ekle`}
+                    aria-pressed={isFavorite(result.id)}
+                    onClick={() => toggleFavorite(favoriteItem)}
+                  >
+                    {isFavorite(result.id) ? "★" : "☆"}
+                  </button>
+                  <button
+                    type="button"
+                    className="tag-toggle"
+                    onClick={() => {
+                      const suggestion = allTags[0] ?? "";
+                      const tag = prompt("Etiket adı:", suggestion)?.trim();
+                      if (tag) addTag(result.id, tag);
+                    }}
+                  >
+                    Etiketle
+                  </button>
+                </div>
               </article>
             );
           })}
