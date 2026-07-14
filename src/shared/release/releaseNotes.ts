@@ -15,6 +15,21 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.9.0",
+    date: "2026-07-14",
+    title: "Factions ve organizations",
+    summary:
+      "Campaign oluşumları; türleri, üyeleri, merkezleri, açık ve gizli hedefleri ile diplomatik ilişkileriyle ayrı bir yönetim ekranında toplandı.",
+    changes: [
+      { text: "Campaign bağlantılı yeni Factions + Organizations sayfası", category: "Özellik" },
+      { text: "Krallık, lonca, tarikat, korsan tayfası, şirket ve gizli örgüt türleri", category: "Özellik" },
+      { text: "Oluşumlara NPC üyesi ve World Atlas merkezi bağlama", category: "Özellik" },
+      { text: "Müttefik, tarafsız, gergin ve düşman ilişki takibi", category: "Özellik" },
+      { text: "Bilinen hedef ile DM gizli hedefinin ayrılması", category: "İyileştirme" },
+      { text: "Faction veri motoru için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.8.0",
     date: "2026-07-14",
     title: "Locations ve world atlas",

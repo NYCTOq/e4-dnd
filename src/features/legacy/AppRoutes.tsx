@@ -94,6 +94,9 @@ const NpcManagerPage = lazy(() =>
 const WorldAtlasPage = lazy(() =>
   import("../locations/WorldAtlasPage").then((module) => ({ default: module.WorldAtlasPage })),
 );
+const FactionsPage = lazy(() =>
+  import("../factions/FactionsPage").then((module) => ({ default: module.FactionsPage })),
+);
 
 import type { BackupImportOptions, FullBackupData } from "../backup/fullBackup";
 
@@ -258,6 +261,11 @@ export function AppRoutes({
       <Route
         path="/locations"
         element={<WorldAtlasPage campaigns={campaigns} />}
+      />
+
+      <Route
+        path="/factions"
+        element={<FactionsPage campaigns={campaigns} />}
       />
 
       <Route

@@ -1,0 +1,15 @@
+E4 D&D v1.9.0 - Factions + Organizations V1
+
+Yeni dosyalar:
+- src/features/factions/FactionsPage.tsx
+- src/features/factions/factionStorage.ts
+- src/features/factions/factionStorage.test.ts
+- src/styles/34-factions.css
+
+Güncellenen dosyalar:
+- src/features/legacy/AppRoutes.tsx
+- src/shared/navigation/navItems.ts
+- src/shared/release/releaseNotes.ts
+- src/App.css
+- package.json
+- package-lock.json
