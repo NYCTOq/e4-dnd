@@ -1,5 +1,6 @@
 import type { DiceRollResult } from "../../core/dice/dice.types";
 import type { DndMonsterData } from "../../core/rulesets/ruleset.types";
+import { readJsonSafely, writeJsonSafely } from "../../core/storage/safeStorage";
 
 export type MonsterCombatState = {
   currentHp: number;
@@ -47,22 +48,13 @@ export function parseFirstDiceExpression(text: string) {
 }
 
 export function loadFavoriteMonsterIds() {
-  try {
-    const raw = localStorage.getItem(FAVORITE_MONSTERS_STORAGE_KEY);
-
-    if (!raw) {
-      return [];
-    }
-
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed)
-      ? parsed.filter((id): id is string => typeof id === "string")
-      : [];
-  } catch {
-    return [];
-  }
+  return readJsonSafely<unknown[]>(
+    FAVORITE_MONSTERS_STORAGE_KEY,
+    [],
+    (value): value is unknown[] => Array.isArray(value),
+  ).filter((id): id is string => typeof id === "string");
 }
 
 export function saveFavoriteMonsterIds(ids: string[]) {
-  localStorage.setItem(FAVORITE_MONSTERS_STORAGE_KEY, JSON.stringify(ids));
+  writeJsonSafely(FAVORITE_MONSTERS_STORAGE_KEY, ids);
 }

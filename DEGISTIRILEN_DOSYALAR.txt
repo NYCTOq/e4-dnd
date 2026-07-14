@@ -1,0 +1,25 @@
+E4 D&D - PWA Update Notification + Cache Management V1
+
+Güncellenen dosyalar:
+- vite.config.ts
+- src/main.tsx
+- src/shared/layout/AppFrame.tsx
+- src/App.css
+
+Yeni dosyalar:
+- src/shared/pwa/PwaUpdateManager.tsx
+- src/styles/17-pwa-update.css
+
+Özellikler:
+- Kullanıcı onaylı PWA güncelleme bildirimi
+- Güncelle ve yeniden başlat / Sonra seçenekleri
+- Çevrimdışı kullanım hazır bildirimi
+- Saatlik service worker güncelleme kontrolü
+- Eski Workbox cache'lerini otomatik temizleme
+- Karakter/campaign verilerine dokunmadan PWA cache sıfırlama
+
+PWA Install & First Run Polish V1:
+- src/shared/pwa/PwaInstallGuide.tsx (new)
+- src/shared/layout/AppFrame.tsx
+- src/styles/18-pwa-install-guide.css (new)
+- src/App.css

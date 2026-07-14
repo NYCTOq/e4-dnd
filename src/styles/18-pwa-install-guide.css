@@ -1,0 +1,252 @@
+.network-status-pill,
+.first-run-help-button {
+  position: fixed;
+  z-index: 36;
+  min-height: 40px;
+  border-radius: 999px;
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+.network-status-pill {
+  top: 18px;
+  right: 18px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 180, 92, 0.45);
+  color: #ffe2b8;
+  background: rgba(42, 27, 13, 0.9);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.first-run-help-button {
+  right: 84px;
+  bottom: 18px;
+  min-width: 88px;
+  padding: 0 16px;
+  background: rgba(8, 12, 26, 0.88);
+}
+
+.network-status-toast {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 46;
+  width: min(420px, calc(100vw - 36px));
+  display: grid;
+  gap: 7px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(8, 12, 26, 0.95);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+}
+
+.network-status-toast.offline {
+  border-color: rgba(255, 180, 92, 0.48);
+}
+
+.network-status-toast.online {
+  border-color: rgba(101, 218, 165, 0.5);
+}
+
+.network-status-toast span {
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.network-status-toast button {
+  width: fit-content;
+  margin-top: 5px;
+}
+
+.first-run-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(2, 5, 14, 0.78);
+  backdrop-filter: blur(14px);
+}
+
+.first-run-dialog {
+  width: min(920px, 100%);
+  max-height: min(860px, calc(100vh - 40px));
+  overflow: auto;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(88, 111, 255, 0.18), transparent 35%),
+    rgba(8, 12, 26, 0.97);
+  box-shadow: 0 34px 110px rgba(0, 0, 0, 0.58);
+}
+
+.first-run-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.first-run-head h2 {
+  margin-bottom: 8px;
+}
+
+.first-run-head p {
+  max-width: 680px;
+  margin: 0;
+}
+
+.first-run-close {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  font-size: 1.55rem;
+}
+
+.first-run-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 24px 0 16px;
+}
+
+.first-run-grid article {
+  min-height: 190px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.first-run-grid article > span {
+  display: block;
+  margin-bottom: 30px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+}
+
+.first-run-grid article strong {
+  display: block;
+  font-size: 1.12rem;
+}
+
+.first-run-grid article p {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.install-state-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 18px;
+  border: 1px solid rgba(138, 164, 255, 0.45);
+  border-radius: 20px;
+  background: rgba(94, 116, 255, 0.1);
+}
+
+.install-state-card > div,
+.install-state-card:not(:has(> div)) {
+  gap: 5px;
+}
+
+.install-state-card strong,
+.install-state-card span {
+  display: block;
+}
+
+.install-state-card span {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.install-state-card.success {
+  border-color: rgba(101, 218, 165, 0.48);
+  background: rgba(101, 218, 165, 0.09);
+}
+
+.install-state-card.ios {
+  border-color: rgba(186, 140, 255, 0.45);
+  background: rgba(186, 140, 255, 0.08);
+}
+
+.install-state-card.muted {
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.first-run-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+@media (max-width: 900px) {
+  .first-run-help-button {
+    right: 80px;
+    bottom: 92px;
+  }
+
+  .network-status-pill {
+    top: 12px;
+    right: 12px;
+  }
+
+  .network-status-toast {
+    top: 12px;
+    right: 12px;
+    width: calc(100vw - 24px);
+  }
+
+  .first-run-overlay {
+    align-items: end;
+    padding: 10px;
+  }
+
+  .first-run-dialog {
+    max-height: calc(100vh - 20px);
+    padding: 18px;
+    border-radius: 26px;
+  }
+
+  .first-run-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .first-run-grid article {
+    min-height: 0;
+  }
+
+  .first-run-grid article > span {
+    margin-bottom: 14px;
+  }
+
+  .install-state-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .install-state-card button,
+  .first-run-actions > * {
+    width: 100%;
+    text-align: center;
+  }
+}

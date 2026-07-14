@@ -1,0 +1,102 @@
+.pwa-tools-button {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 35;
+  min-width: 58px;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(8, 12, 26, 0.88);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+.pwa-tools-panel,
+.pwa-update-toast {
+  position: fixed;
+  right: 18px;
+  z-index: 34;
+  width: min(430px, calc(100vw - 36px));
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(8, 12, 26, 0.94);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+}
+
+.pwa-tools-panel {
+  bottom: 70px;
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+}
+
+.pwa-tools-panel div,
+.pwa-update-toast > div:first-child {
+  display: grid;
+  gap: 5px;
+}
+
+.pwa-tools-panel span,
+.pwa-update-toast span {
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.pwa-update-toast {
+  bottom: 76px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+}
+
+.pwa-update-toast.update {
+  border-color: rgba(138, 164, 255, 0.62);
+}
+
+.pwa-update-toast.offline {
+  border-color: rgba(101, 218, 165, 0.44);
+}
+
+.pwa-update-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.pwa-update-actions button {
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .pwa-tools-button {
+    right: 14px;
+    bottom: 92px;
+  }
+
+  .pwa-tools-panel {
+    right: 14px;
+    bottom: 142px;
+    width: min(430px, calc(100vw - 28px));
+  }
+
+  .pwa-update-toast {
+    right: 14px;
+    bottom: 150px;
+    width: calc(100vw - 28px);
+    grid-template-columns: 1fr;
+  }
+
+  .pwa-update-actions {
+    justify-content: stretch;
+  }
+
+  .pwa-update-actions button {
+    flex: 1 1 180px;
+  }
+}

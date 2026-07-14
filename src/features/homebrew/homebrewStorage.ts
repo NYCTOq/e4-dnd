@@ -3,28 +3,22 @@ import type {
   DndMonsterData,
   DndSpellData,
 } from "../../core/rulesets/ruleset.types";
+import { readJsonSafely, writeJsonSafely } from "../../core/storage/safeStorage";
 
 const HOMEBREW_SPELLS_STORAGE_KEY = "e4_dnd_homebrew_spells_v1";
 const HOMEBREW_ITEMS_STORAGE_KEY = "e4_dnd_homebrew_items_v1";
 const HOMEBREW_MONSTERS_STORAGE_KEY = "e4_dnd_homebrew_monsters_v1";
 
 function loadArray<T>(key: string): T[] {
-  try {
-    const raw = localStorage.getItem(key);
-
-    if (!raw) {
-      return [];
-    }
-
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? (parsed as T[]) : [];
-  } catch {
-    return [];
-  }
+  return readJsonSafely<T[]>(
+    key,
+    [],
+    (value): value is T[] => Array.isArray(value),
+  );
 }
 
 function saveArray<T>(key: string, items: T[]) {
-  localStorage.setItem(key, JSON.stringify(items));
+  writeJsonSafely(key, items);
 }
 
 export function loadHomebrewSpells(): DndSpellData[] {

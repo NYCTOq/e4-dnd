@@ -5,6 +5,7 @@ import type {
   CharacterInventoryItem,
   CharacterSpellSlot,
 } from "../character/character.types";
+import { readJsonSafely, writeJsonSafely } from "./safeStorage";
 
 const STORAGE_KEY = "e4_dnd_characters_v1";
 
@@ -181,29 +182,21 @@ function hydrateCharacter(character: Character): Character {
 }
 
 export function loadCharacters(): Character[] {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+  const parsed = readJsonSafely<unknown[]>(
+    STORAGE_KEY,
+    [],
+    (value): value is unknown[] => Array.isArray(value),
+  );
 
-    if (!raw) {
-      return [];
-    }
-
-    const parsed = JSON.parse(raw);
-
-    if (!Array.isArray(parsed)) {
-      return [];
-    }
-
-    return parsed.map((character) => hydrateCharacter(character as Character));
-  } catch {
-    return [];
-  }
+  return parsed
+    .filter((character) => Boolean(character) && typeof character === "object")
+    .map((character) => hydrateCharacter(character as Character));
 }
 
 export function saveCharacters(characters: Character[]): void {
-  localStorage.setItem(
+  writeJsonSafely(
     STORAGE_KEY,
-    JSON.stringify(characters.map((character) => hydrateCharacter(character))),
+    characters.map((character) => hydrateCharacter(character)),
   );
 }
 

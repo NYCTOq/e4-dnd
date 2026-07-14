@@ -1,5 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { navItems } from "../navigation/navItems";
+import { StorageRecoveryCenter } from "../errors/StorageRecoveryCenter";
+import { PwaUpdateManager } from "../pwa/PwaUpdateManager";
+import { PwaInstallGuide } from "../pwa/PwaInstallGuide";
 
 export function AppFrame({ children }: { children: React.ReactNode }) {
   return (
@@ -34,6 +37,10 @@ export function AppFrame({ children }: { children: React.ReactNode }) {
       </aside>
 
       <main className="content">{children}</main>
+
+      <StorageRecoveryCenter />
+      <PwaUpdateManager />
+      <PwaInstallGuide />
 
       <nav className="bottom-nav">
         {navItems.slice(0, 5).map((item) => (

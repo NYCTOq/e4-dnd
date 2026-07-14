@@ -3,24 +3,20 @@ import type {
   CampaignEncounter,
   CampaignEncounterParticipant,
 } from "./campaignTypes";
+import { readJsonSafely, writeJsonSafely } from "../../core/storage/safeStorage";
 
 const CAMPAIGNS_STORAGE_KEY = "e4_dnd_campaigns_v1";
 
 export function loadCampaigns(): Campaign[] {
-  try {
-    const raw = localStorage.getItem(CAMPAIGNS_STORAGE_KEY);
+  const parsed = readJsonSafely<unknown[]>(
+    CAMPAIGNS_STORAGE_KEY,
+    [],
+    (value): value is unknown[] => Array.isArray(value),
+  );
 
-    if (!raw) {
-      return [];
-    }
-
-    const parsed = JSON.parse(raw);
-
-    if (!Array.isArray(parsed)) {
-      return [];
-    }
-
-    return parsed.map((campaign) => ({
+  return parsed
+    .filter((campaign) => Boolean(campaign) && typeof campaign === "object")
+    .map((campaign: any) => ({
       id: typeof campaign.id === "string" ? campaign.id : crypto.randomUUID(),
       name:
         typeof campaign.name === "string" ? campaign.name : "Unnamed Campaign",
@@ -241,11 +237,8 @@ export function loadCampaigns(): Campaign[] {
           ? campaign.updatedAt
           : new Date().toISOString(),
     }));
-  } catch {
-    return [];
-  }
 }
 
 export function saveCampaigns(campaigns: Campaign[]) {
-  localStorage.setItem(CAMPAIGNS_STORAGE_KEY, JSON.stringify(campaigns));
+  writeJsonSafely(CAMPAIGNS_STORAGE_KEY, campaigns);
 }

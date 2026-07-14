@@ -5,6 +5,7 @@ import type { DiceRollResult } from "../../core/dice/dice.types";
 import { rollDice } from "../../core/dice/diceRoller";
 import type { DndMonsterData, RulesetData } from "../../core/rulesets/ruleset.types";
 import { PageShell } from "../../shared/layout/PageShell";
+import { usePersistentState } from "../../shared/state/usePersistentState";
 import type { MonsterCombatState } from "./monsterUtils";
 import {
   formatMonsterModifier,
@@ -25,10 +26,28 @@ export function MonsterLibrary({
   rulesetError: string | null;
 }) {
   const navigate = useNavigate();
-  const [searchTerm, setSearchTerm] = useState("");
-  const [typeFilter, setTypeFilter] = useState("all");
-  const [crFilter, setCrFilter] = useState("all");
-  const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
+  const [searchTerm, setSearchTerm] = usePersistentState(
+    "e4_filter_monsters_search_v1",
+    "",
+  );
+  const [typeFilter, setTypeFilter] = usePersistentState(
+    "e4_filter_monsters_type_v1",
+    "all",
+  );
+  const [crFilter, setCrFilter] = usePersistentState(
+    "e4_filter_monsters_cr_v1",
+    "all",
+  );
+  const [sourceFilter, setSourceFilter] = usePersistentState<
+    "all" | "official" | "homebrew"
+  >("e4_filter_monsters_source_v1", "all");
+  const [sortOrder, setSortOrder] = usePersistentState<
+    "name" | "cr-asc" | "cr-desc"
+  >("e4_filter_monsters_sort_v1", "name");
+  const [showFavoritesOnly, setShowFavoritesOnly] = usePersistentState(
+    "e4_filter_monsters_favorites_v1",
+    false,
+  );
   const [favoriteMonsterIds, setFavoriteMonsterIds] = useState<string[]>(() =>
     loadFavoriteMonsterIds(),
   );
@@ -80,7 +99,7 @@ export function MonsterLibrary({
   const filteredMonsters = useMemo(() => {
     const normalizedSearch = searchTerm.trim().toLowerCase();
 
-    return monsters.filter((monster) => {
+    const result = monsters.filter((monster) => {
       const matchesSearch =
         normalizedSearch.length === 0 ||
         [
@@ -101,19 +120,68 @@ export function MonsterLibrary({
       const matchesType = typeFilter === "all" || monster.type === typeFilter;
       const matchesCr =
         crFilter === "all" || monster.challengeRating === crFilter;
+      const isHomebrew = monster.id.startsWith("homebrew-monster-");
+      const matchesSource =
+        sourceFilter === "all" ||
+        (sourceFilter === "homebrew" ? isHomebrew : !isHomebrew);
       const matchesFavorite =
         !showFavoritesOnly || favoriteMonsterIds.includes(monster.id);
 
-      return matchesSearch && matchesType && matchesCr && matchesFavorite;
+      return (
+        matchesSearch &&
+        matchesType &&
+        matchesCr &&
+        matchesSource &&
+        matchesFavorite
+      );
+    });
+
+    const parseCr = (value: string) => {
+      if (value.includes("/")) {
+        const [top, bottom] = value.split("/").map(Number);
+        return top / bottom;
+      }
+      return Number(value) || 0;
+    };
+
+    return [...result].sort((a, b) => {
+      if (sortOrder === "cr-asc") {
+        return parseCr(a.challengeRating) - parseCr(b.challengeRating) ||
+          a.name.localeCompare(b.name);
+      }
+      if (sortOrder === "cr-desc") {
+        return parseCr(b.challengeRating) - parseCr(a.challengeRating) ||
+          a.name.localeCompare(b.name);
+      }
+      return a.name.localeCompare(b.name);
     });
   }, [
     monsters,
     searchTerm,
     typeFilter,
     crFilter,
+    sourceFilter,
+    sortOrder,
     showFavoritesOnly,
     favoriteMonsterIds,
   ]);
+
+  const hasActiveFilters =
+    searchTerm.length > 0 ||
+    typeFilter !== "all" ||
+    crFilter !== "all" ||
+    sourceFilter !== "all" ||
+    sortOrder !== "name" ||
+    showFavoritesOnly;
+
+  function resetFilters() {
+    setSearchTerm("");
+    setTypeFilter("all");
+    setCrFilter("all");
+    setSourceFilter("all");
+    setSortOrder("name");
+    setShowFavoritesOnly(false);
+  }
 
   function getMonsterCombatState(monster: DndMonsterData) {
     return (
@@ -253,7 +321,7 @@ export function MonsterLibrary({
             </div>
           </div>
 
-          <div className="character-filter-panel monster-filter-panel">
+          <div className="character-filter-panel monster-filter-panel filter-panel-extended">
             <label>
               Ara
               <input
@@ -293,6 +361,38 @@ export function MonsterLibrary({
               </select>
             </label>
 
+            <label>
+              Kaynak
+              <select
+                value={sourceFilter}
+                onChange={(event) =>
+                  setSourceFilter(
+                    event.target.value as "all" | "official" | "homebrew",
+                  )
+                }
+              >
+                <option value="all">Tümü</option>
+                <option value="official">Data pack</option>
+                <option value="homebrew">Homebrew</option>
+              </select>
+            </label>
+
+            <label>
+              Sırala
+              <select
+                value={sortOrder}
+                onChange={(event) =>
+                  setSortOrder(
+                    event.target.value as "name" | "cr-asc" | "cr-desc",
+                  )
+                }
+              >
+                <option value="name">İsim A-Z</option>
+                <option value="cr-asc">CR düşükten</option>
+                <option value="cr-desc">CR yüksekten</option>
+              </select>
+            </label>
+
             <label className="checkbox-filter-row">
               Favoriler
               <button
@@ -308,6 +408,15 @@ export function MonsterLibrary({
               <strong>{filteredMonsters.length}</strong>
               <span>sonuç</span>
             </div>
+
+            <button
+              type="button"
+              className="filter-reset-button"
+              onClick={resetFilters}
+              disabled={!hasActiveFilters}
+            >
+              Filtreleri sıfırla
+            </button>
           </div>
 
           {filteredMonsters.length === 0 ? (
@@ -336,6 +445,9 @@ export function MonsterLibrary({
                       <div>
                         <span className="mini-label">
                           {monster.size} {monster.type}
+                          {monster.id.startsWith("homebrew-monster-")
+                            ? " • Homebrew"
+                            : ""}
                         </span>
                         <h2>{monster.name}</h2>
                         <p>{monster.alignment}</p>

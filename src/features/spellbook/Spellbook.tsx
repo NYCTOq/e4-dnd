@@ -1,7 +1,11 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { motion } from "framer-motion";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import { PageShell } from "../../shared/layout/PageShell";
+import { usePersistentState } from "../../shared/state/usePersistentState";
+
+type SpellSourceFilter = "all" | "official" | "homebrew";
+type SpellSort = "level-name" | "name" | "level-desc";
 
 export function Spellbook({
   rulesetData,
@@ -12,28 +16,46 @@ export function Spellbook({
   isRulesetLoading: boolean;
   rulesetError: string | null;
 }) {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [levelFilter, setLevelFilter] = useState("all");
-  const [classFilter, setClassFilter] = useState("all");
+  const [searchTerm, setSearchTerm] = usePersistentState(
+    "e4_filter_spells_search_v1",
+    "",
+  );
+  const [levelFilter, setLevelFilter] = usePersistentState(
+    "e4_filter_spells_level_v1",
+    "all",
+  );
+  const [classFilter, setClassFilter] = usePersistentState(
+    "e4_filter_spells_class_v1",
+    "all",
+  );
+  const [sourceFilter, setSourceFilter] =
+    usePersistentState<SpellSourceFilter>("e4_filter_spells_source_v1", "all");
+  const [concentrationOnly, setConcentrationOnly] = usePersistentState(
+    "e4_filter_spells_concentration_v1",
+    false,
+  );
+  const [ritualOnly, setRitualOnly] = usePersistentState(
+    "e4_filter_spells_ritual_v1",
+    false,
+  );
+  const [sortOrder, setSortOrder] = usePersistentState<SpellSort>(
+    "e4_filter_spells_sort_v1",
+    "level-name",
+  );
 
   const availableSpellClasses = useMemo(() => {
-    if (!rulesetData) {
-      return [];
-    }
-
+    if (!rulesetData) return [];
     return Array.from(
       new Set(rulesetData.spells.flatMap((spell) => spell.classes)),
     ).sort((a, b) => a.localeCompare(b));
   }, [rulesetData]);
 
   const filteredSpells = useMemo(() => {
-    if (!rulesetData) {
-      return [];
-    }
-
+    if (!rulesetData) return [];
     const normalizedSearch = searchTerm.trim().toLowerCase();
 
-    return rulesetData.spells.filter((spell) => {
+    const result = rulesetData.spells.filter((spell) => {
+      const isHomebrew = spell.id.startsWith("homebrew-spell-");
       const matchesSearch =
         normalizedSearch.length === 0 ||
         [
@@ -45,40 +67,80 @@ export function Spellbook({
           spell.description,
           spell.higherLevels ?? "",
           spell.classes.join(" "),
+          spell.damageType ?? "",
+          spell.conditionEffect ?? "",
         ]
           .join(" ")
           .toLowerCase()
           .includes(normalizedSearch);
-
       const matchesLevel =
         levelFilter === "all" || spell.level === Number(levelFilter);
-
       const matchesClass =
         classFilter === "all" || spell.classes.includes(classFilter);
+      const matchesSource =
+        sourceFilter === "all" ||
+        (sourceFilter === "homebrew" ? isHomebrew : !isHomebrew);
 
-      return matchesSearch && matchesLevel && matchesClass;
+      return (
+        matchesSearch &&
+        matchesLevel &&
+        matchesClass &&
+        matchesSource &&
+        (!concentrationOnly || spell.concentration) &&
+        (!ritualOnly || spell.ritual)
+      );
     });
-  }, [rulesetData, searchTerm, levelFilter, classFilter]);
+
+    return [...result].sort((a, b) => {
+      if (sortOrder === "name") return a.name.localeCompare(b.name);
+      if (sortOrder === "level-desc") {
+        return b.level - a.level || a.name.localeCompare(b.name);
+      }
+      return a.level - b.level || a.name.localeCompare(b.name);
+    });
+  }, [
+    rulesetData,
+    searchTerm,
+    levelFilter,
+    classFilter,
+    sourceFilter,
+    concentrationOnly,
+    ritualOnly,
+    sortOrder,
+  ]);
+
+  const hasActiveFilters =
+    searchTerm.length > 0 ||
+    levelFilter !== "all" ||
+    classFilter !== "all" ||
+    sourceFilter !== "all" ||
+    concentrationOnly ||
+    ritualOnly ||
+    sortOrder !== "level-name";
+
+  function resetFilters() {
+    setSearchTerm("");
+    setLevelFilter("all");
+    setClassFilter("all");
+    setSourceFilter("all");
+    setConcentrationOnly(false);
+    setRitualOnly(false);
+    setSortOrder("level-name");
+  }
 
   return (
     <PageShell
       eyebrow="Spellbook"
       title="Büyüler"
-      description="D&D 2014 spell data pack içindeki büyüleri ara, filtrele ve masa ortasında panik yapmadan bul. Büyük ilerleme, insanlık için küçük bir Fireball."
+      description="Büyüleri ara, filtrele ve son kullandığın seçimlerle geri dön. Çünkü aynı filtreyi her oturumda yeniden kurmak kahramanlık değildir."
     >
       {isRulesetLoading ? (
-        <div className="empty-panel">
-          <h2>Spell data yükleniyor...</h2>
-          <p>Büyü kitabını açıyoruz. Toz çıkarsa şaşırma.</p>
-        </div>
+        <div className="empty-panel"><h2>Spell data yükleniyor...</h2><p>Büyü kitabı açılıyor.</p></div>
       ) : rulesetError ? (
-        <div className="empty-panel">
-          <h2>Spell data yüklenemedi</h2>
-          <p>{rulesetError}</p>
-        </div>
+        <div className="empty-panel"><h2>Spell data yüklenemedi</h2><p>{rulesetError}</p></div>
       ) : rulesetData ? (
         <>
-          <div className="character-filter-panel">
+          <div className="character-filter-panel filter-panel-extended">
             <label>
               Ara
               <input
@@ -87,96 +149,75 @@ export function Spellbook({
                 placeholder="Bless, Fireball, cleric, concentration..."
               />
             </label>
-
             <label>
               Level
-              <select
-                value={levelFilter}
-                onChange={(event) => setLevelFilter(event.target.value)}
-              >
+              <select value={levelFilter} onChange={(event) => setLevelFilter(event.target.value)}>
                 <option value="all">Tümü</option>
                 <option value="0">Cantrip</option>
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((level) => (
-                  <option key={level} value={level}>
-                    Level {level}
-                  </option>
-                ))}
+                {[1,2,3,4,5,6,7,8,9].map((level) => <option key={level} value={level}>Level {level}</option>)}
               </select>
             </label>
-
             <label>
               Class
-              <select
-                value={classFilter}
-                onChange={(event) => setClassFilter(event.target.value)}
-              >
+              <select value={classFilter} onChange={(event) => setClassFilter(event.target.value)}>
                 <option value="all">Tümü</option>
-
-                {availableSpellClasses.map((className) => (
-                  <option key={className} value={className}>
-                    {className}
-                  </option>
-                ))}
+                {availableSpellClasses.map((className) => <option key={className} value={className}>{className}</option>)}
               </select>
             </label>
-
-            <div className="filter-result-count">
-              <strong>{filteredSpells.length}</strong>
-              <span>spell</span>
+            <label>
+              Kaynak
+              <select value={sourceFilter} onChange={(event) => setSourceFilter(event.target.value as SpellSourceFilter)}>
+                <option value="all">Tümü</option>
+                <option value="official">Data pack</option>
+                <option value="homebrew">Homebrew</option>
+              </select>
+            </label>
+            <label>
+              Sırala
+              <select value={sortOrder} onChange={(event) => setSortOrder(event.target.value as SpellSort)}>
+                <option value="level-name">Level + isim</option>
+                <option value="name">İsim A-Z</option>
+                <option value="level-desc">Yüksek level önce</option>
+              </select>
+            </label>
+            <div className="filter-toggle-group">
+              <button type="button" className={concentrationOnly ? "active" : ""} onClick={() => setConcentrationOnly((value) => !value)}>Concentration</button>
+              <button type="button" className={ritualOnly ? "active" : ""} onClick={() => setRitualOnly((value) => !value)}>Ritual</button>
             </div>
+            <div className="filter-result-count"><strong>{filteredSpells.length}</strong><span>spell</span></div>
+            <button type="button" className="filter-reset-button" onClick={resetFilters} disabled={!hasActiveFilters}>Filtreleri sıfırla</button>
           </div>
 
           {filteredSpells.length === 0 ? (
-            <div className="empty-panel">
-              <h2>Büyü bulunamadı.</h2>
-              <p>
-                Filtreler fazla agresif. Büyüler bile bu kadar baskıya
-                dayanamaz.
-              </p>
-            </div>
+            <div className="empty-panel"><h2>Büyü bulunamadı.</h2><p>Filtreleri sıfırla; büyüler muhtemelen başka boyuta kaçmadı.</p></div>
           ) : (
             <div className="spell-grid">
-              {filteredSpells.map((spell) => (
-                <motion.article
-                  className="spell-card"
-                  key={spell.id}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="library-item-top">
-                    <div>
-                      <span className="mini-label">{spell.school}</span>
-                      <h3>{spell.name}</h3>
+              {filteredSpells.map((spell) => {
+                const isHomebrew = spell.id.startsWith("homebrew-spell-");
+                return (
+                  <motion.article className="spell-card" key={spell.id} whileHover={{ y: -5 }}>
+                    <div className="library-item-top">
+                      <div>
+                        <span className="mini-label">{spell.school}{isHomebrew ? " • Homebrew" : ""}</span>
+                        <h3>{spell.name}</h3>
+                      </div>
+                      <span>{spell.level === 0 ? "Cantrip" : `Lv. ${spell.level}`}</span>
                     </div>
-
-                    <span>
-                      {spell.level === 0 ? "Cantrip" : `Lv. ${spell.level}`}
-                    </span>
-                  </div>
-
-                  <div className="spell-meta-grid">
-                    <span>Cast: {spell.castingTime}</span>
-                    <span>Range: {spell.range}</span>
-                    <span>Duration: {spell.duration}</span>
-                    <span>Comp: {spell.components.join(", ")}</span>
-                  </div>
-
-                  <p>{spell.description}</p>
-
-                  {spell.higherLevels ? (
-                    <p className="spell-higher-levels">
-                      <strong>Higher Levels:</strong> {spell.higherLevels}
-                    </p>
-                  ) : null}
-
-                  <div className="library-pill-row">
-                    {spell.classes.map((className) => (
-                      <span key={className}>{className}</span>
-                    ))}
-                    {spell.concentration ? <span>Concentration</span> : null}
-                    {spell.ritual ? <span>Ritual</span> : null}
-                  </div>
+                    <div className="spell-meta-grid">
+                      <span>Cast: {spell.castingTime}</span><span>Range: {spell.range}</span>
+                      <span>Duration: {spell.duration}</span><span>Comp: {spell.components.join(", ")}</span>
+                    </div>
+                    <p>{spell.description}</p>
+                    {spell.higherLevels ? <p className="spell-higher-levels"><strong>Higher Levels:</strong> {spell.higherLevels}</p> : null}
+                    <div className="library-pill-row">
+                      {spell.classes.map((className) => <span key={className}>{className}</span>)}
+                      {spell.concentration ? <span>Concentration</span> : null}
+                      {spell.ritual ? <span>Ritual</span> : null}
+                      {isHomebrew ? <span>Homebrew</span> : null}
+                    </div>
                   </motion.article>
-              ))}
+                );
+              })}
             </div>
           )}
         </>
