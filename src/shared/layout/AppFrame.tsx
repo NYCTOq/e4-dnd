@@ -7,7 +7,7 @@ import { PwaInstallGuide } from "../pwa/PwaInstallGuide";
 import { useAppSettings } from "../settings/AppSettingsProvider";
 import { RouteAccessibility } from "../navigation/RouteAccessibility";
 import { CommandPalette } from "../commands/CommandPalette";
-import { ReleaseNotes } from "../release/ReleaseNotes";
+import { ReleaseNotesDialog } from "../release/ReleaseNotesDialog";
 import type { Character } from "../../core/character/character.types";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import type { Campaign } from "../../features/campaigns/campaignTypes";
@@ -91,7 +91,7 @@ export function AppFrame({ children, characters, campaigns, rulesetData }: AppFr
           ))}
         </nav>
 
-        <ReleaseNotes />
+        <ReleaseNotesDialog />
       </aside>
 
       <main id="main-content" className="content" tabIndex={-1}>
