@@ -1,18 +1,18 @@
-E4 D&D Quick Command Palette V1
+E4 D&D CI Build & Test Automation V1
 
-Yeni dosyalar:
-- src/shared/commands/CommandPalette.tsx
-- src/styles/24-command-palette.css
+EKLENEN DOSYALAR
+- .github/workflows/ci.yml
+- CI.md
 
-Güncellenen dosyalar:
-- src/shared/layout/AppFrame.tsx
-- src/features/legacy/LegacyApp.tsx
-- src/App.css
+GUNCELLENEN DOSYALAR
+- package.json
+- README.md
 
-Özellikler:
-- Ctrl + K / Cmd + K komut paleti
-- Sayfa, karakter, campaign, büyü ve canavar araması
-- Hızlı aksiyonlar
-- Ok tuşları, Enter ve Escape klavye kontrolü
-- Mobil Hızlı Git düğmesi
-- Erişilebilir dialog/listbox yapısı
+YAPILANLAR
+- GitHub Actions CI pipeline eklendi.
+- main push, pull request ve manuel çalıştırma desteği eklendi.
+- Node.js 22 ve npm cache kullanımı eklendi.
+- Lint, test ve production build otomatikleştirildi.
+- Başarılı dist çıktısı 14 günlük artifact olarak yükleniyor.
+- Lint komutu node_modules yerine yalnızca src klasörünü tarayacak şekilde düzeltildi.
+- npm run check komutu eklendi.
