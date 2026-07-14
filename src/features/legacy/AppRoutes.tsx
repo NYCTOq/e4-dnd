@@ -97,6 +97,9 @@ const WorldAtlasPage = lazy(() =>
 const FactionsPage = lazy(() =>
   import("../factions/FactionsPage").then((module) => ({ default: module.FactionsPage })),
 );
+const QuestJournalPage = lazy(() =>
+  import("../quests/QuestJournalPage").then((module) => ({ default: module.QuestJournalPage })),
+);
 
 import type { BackupImportOptions, FullBackupData } from "../backup/fullBackup";
 
@@ -266,6 +269,11 @@ export function AppRoutes({
       <Route
         path="/factions"
         element={<FactionsPage campaigns={campaigns} />}
+      />
+
+      <Route
+        path="/quests"
+        element={<QuestJournalPage campaigns={campaigns} />}
       />
 
       <Route

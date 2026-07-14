@@ -1,0 +1,15 @@
+E4 D&D v1.10.0 - Quest Journal + Plot Threads V1
+
+Eklenen dosyalar:
+- src/features/quests/QuestJournalPage.tsx
+- src/features/quests/questJournalStorage.ts
+- src/features/quests/questJournalStorage.test.ts
+- src/styles/35-quest-journal.css
+
+Güncellenen dosyalar:
+- src/features/legacy/AppRoutes.tsx
+- src/shared/navigation/navItems.ts
+- src/shared/release/releaseNotes.ts
+- src/App.css
+- package.json
+- package-lock.json

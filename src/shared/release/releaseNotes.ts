@@ -15,6 +15,21 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.10.0",
+    date: "2026-07-14",
+    title: "Quest journal ve plot threads",
+    summary:
+      "Campaign görevleri; durum, öncelik, hedefler, ödüller, bağlantılar ve DM sırlarıyla ayrı bir görev günlüğünde toplandı.",
+    changes: [
+      { text: "Campaign bağlantılı yeni Quest Journal + Plot Threads sayfası", category: "Özellik" },
+      { text: "Görev durumu, önceliği, etiketleri ve tamamlanabilir hedefleri", category: "Özellik" },
+      { text: "Görevleri NPC, World Atlas mekânı ve faction ile bağlama", category: "Özellik" },
+      { text: "Oyuncu özeti, DM gizli notu ve ödül alanlarının ayrılması", category: "İyileştirme" },
+      { text: "Görev ilerleme yüzdesi ile campaign ve durum filtreleri", category: "İyileştirme" },
+      { text: "Quest journal veri motoru için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.9.0",
     date: "2026-07-14",
     title: "Factions ve organizations",
