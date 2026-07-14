@@ -1,0 +1,13 @@
+E4 D&D Encounter Bridge + Combat Templates V1
+
+1. Bu klasörün içeriğini D:\Projects\e4_dnd içine çıkarın.
+2. Mevcut dosyaların üzerine yazılmasını onaylayın.
+3. PowerShell:
+
+cd D:\Projects\e4_dnd
+npm.cmd install
+npm.cmd run check
+
+git add -A
+git commit -m "feat: add encounter bridge and combat templates"
+git push

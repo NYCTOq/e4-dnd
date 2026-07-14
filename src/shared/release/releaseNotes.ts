@@ -15,6 +15,19 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.15.0",
+    date: "2026-07-14",
+    title: "Encounter bridge ve savaş şablonları",
+    summary: "Campaign encounter kayıtları canlı savaşa aktarılabiliyor; savaş dizilimleri tekrar kullanılabilir şablonlara dönüştürülebiliyor.",
+    changes: [
+      { text: "Campaign encounter katılımcılarını Combat Tracker'a tek tıkla aktarma", category: "Özellik" },
+      { text: "Mevcut savaş dizilimini tekrar kullanılabilir şablon olarak kaydetme", category: "Özellik" },
+      { text: "Şablondan tam HP ile yeni savaş oluşturma", category: "İyileştirme" },
+      { text: "Şablon seçme ve silme kontrolleri", category: "İyileştirme" },
+      { text: "Campaign encounter ve template dönüşümleri için iki yeni otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.14.0",
     date: "2026-07-14",
     title: "Combat log ve encounter özeti",

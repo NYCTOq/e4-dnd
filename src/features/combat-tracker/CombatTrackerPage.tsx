@@ -16,12 +16,18 @@ import {
   applyHealing,
   createCombatEncounter,
   createCombatant,
+  createCombatTemplate,
+  createEncounterFromCampaignEncounter,
+  createEncounterFromTemplate,
   loadCombatEncounters,
+  loadCombatTemplates,
   saveCombatEncounters,
+  saveCombatTemplates,
   sortCombatants,
   type CombatCondition,
   type CombatEncounter,
   type Combatant,
+  type CombatTemplate,
 } from "./combatTrackerStorage";
 
 type CombatTrackerPageProps = {
@@ -49,12 +55,16 @@ export function CombatTrackerPage({ campaigns, characters, monsters }: CombatTra
   const [effectDuration, setEffectDuration] = useState(10);
   const [effectSource, setEffectSource] = useState("");
   const [logNote, setLogNote] = useState("");
+  const [templates, setTemplates] = useState<CombatTemplate[]>(() => loadCombatTemplates());
+  const [templateId, setTemplateId] = useState("");
+  const [campaignEncounterKey, setCampaignEncounterKey] = useState("");
   const npcs = useMemo(() => loadNpcRecords(), []);
   const selected = encounters.find((item) => item.id === selectedId) ?? null;
   const active = selected?.combatants.find((item) => item.id === selected.activeCombatantId) ?? null;
   const summary = selected ? getCombatSummary(selected) : null;
 
   useEffect(() => { saveCombatEncounters(encounters); }, [encounters]);
+  useEffect(() => { saveCombatTemplates(templates); }, [templates]);
 
   function updateSelected(updater: (encounter: CombatEncounter) => CombatEncounter) {
     setEncounters((current) => sortEncounters(current.map((item) => item.id === selectedId ? { ...updater(item), updatedAt: new Date().toISOString() } : item)));
@@ -65,6 +75,39 @@ export function CombatTrackerPage({ campaigns, characters, monsters }: CombatTra
     const encounter = addCombatLog(base, createCombatLogEntry("Sistem", 1, "Karşılaşma oluşturuldu."));
     setEncounters((current) => sortEncounters([encounter, ...current]));
     setSelectedId(encounter.id);
+  }
+
+  function importCampaignEncounter() {
+    const [campaignId, encounterId] = campaignEncounterKey.split(":");
+    const campaign = campaigns.find((item) => item.id === campaignId);
+    const source = campaign?.encounters.find((item) => item.id === encounterId);
+    if (!campaign || !source) return;
+    const base = createEncounterFromCampaignEncounter(source, campaign.id);
+    const encounter = addCombatLog(base, createCombatLogEntry("Sistem", base.round, `Campaign encounter içe aktarıldı: ${campaign.name}.`));
+    setEncounters((current) => sortEncounters([encounter, ...current]));
+    setSelectedId(encounter.id);
+  }
+
+  function saveSelectedAsTemplate() {
+    if (!selected || !selected.combatants.length) return;
+    const template = createCombatTemplate(selected);
+    setTemplates((current) => [template, ...current]);
+    setTemplateId(template.id);
+  }
+
+  function createFromSelectedTemplate() {
+    const template = templates.find((item) => item.id === templateId);
+    if (!template) return;
+    const base = createEncounterFromTemplate(template);
+    const encounter = addCombatLog(base, createCombatLogEntry("Sistem", 1, `Savaş şablondan oluşturuldu: ${template.name}.`));
+    setEncounters((current) => sortEncounters([encounter, ...current]));
+    setSelectedId(encounter.id);
+  }
+
+  function deleteSelectedTemplate() {
+    if (!templateId) return;
+    setTemplates((current) => current.filter((item) => item.id !== templateId));
+    setTemplateId("");
   }
 
   function deleteEncounter() {
@@ -164,6 +207,29 @@ export function CombatTrackerPage({ campaigns, characters, monsters }: CombatTra
       <article><strong>{summary?.healing ?? 0}</strong><span>toplam iyileştirme</span></article>
       <article><strong>{summary?.defeated ?? 0}</strong><span>yenilen savaşçı</span></article>
       <article><strong>{summary?.events ?? 0}</strong><span>kayıtlı olay</span></article>
+    </section>
+
+    <section className="combat-bridge-card">
+      <div>
+        <strong>Encounter Bridge</strong>
+        <span>Campaign encounter'ını canlı savaşa aktar veya mevcut dizilimi tekrar kullanılabilir şablon olarak sakla.</span>
+      </div>
+      <div className="combat-bridge-controls">
+        <select value={campaignEncounterKey} onChange={(event) => setCampaignEncounterKey(event.target.value)} aria-label="Campaign encounter seç">
+          <option value="">Campaign encounter seç</option>
+          {campaigns.flatMap((campaign) => campaign.encounters.map((encounter) => <option key={`${campaign.id}:${encounter.id}`} value={`${campaign.id}:${encounter.id}`}>{campaign.name} · {encounter.name} ({encounter.participants.length})</option>))}
+        </select>
+        <button type="button" onClick={importCampaignEncounter} disabled={!campaignEncounterKey}>Canlı savaşa aktar</button>
+      </div>
+      <div className="combat-bridge-controls">
+        <select value={templateId} onChange={(event) => setTemplateId(event.target.value)} aria-label="Savaş şablonu seç">
+          <option value="">Savaş şablonu seç</option>
+          {templates.map((template) => <option key={template.id} value={template.id}>{template.name} ({template.combatants.length})</option>)}
+        </select>
+        <button type="button" onClick={createFromSelectedTemplate} disabled={!templateId}>Şablondan oluştur</button>
+        <button type="button" onClick={saveSelectedAsTemplate} disabled={!selected?.combatants.length}>Mevcut savaşı kaydet</button>
+        <button type="button" className="danger" onClick={deleteSelectedTemplate} disabled={!templateId}>Şablonu sil</button>
+      </div>
     </section>
 
     <section className="combat-toolbar">

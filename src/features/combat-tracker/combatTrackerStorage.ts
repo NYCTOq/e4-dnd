@@ -1,3 +1,4 @@
+import type { CampaignEncounter } from "../campaigns/campaignTypes";
 export type CombatantKind = "Karakter" | "NPC" | "Canavar" | "Özel";
 export type CombatCondition = "Blessed" | "Poisoned" | "Prone" | "Invisible" | "Stunned" | "Restrained" | "Concentration" | "Rage" | "Haki" | "Cursed";
 
@@ -37,6 +38,18 @@ export type Combatant = {
   isDefeated: boolean;
 };
 
+
+export type CombatTemplateCombatant = Pick<Combatant, "name" | "kind" | "initiative" | "armorClass" | "maxHp" | "conditions" | "notes">;
+
+export type CombatTemplate = {
+  id: string;
+  name: string;
+  campaignId: string;
+  combatants: CombatTemplateCombatant[];
+  createdAt: string;
+  updatedAt: string;
+};
+
 export type CombatEncounter = {
   id: string;
   campaignId: string;
@@ -50,6 +63,7 @@ export type CombatEncounter = {
 };
 
 const STORAGE_KEY = "e4_dnd_combat_tracker_v1";
+const TEMPLATE_STORAGE_KEY = "e4_dnd_combat_templates_v1";
 const LOG_KINDS: readonly CombatLogKind[] = ["Sistem", "Sıra", "Hasar", "İyileştirme", "Etki", "Not"];
 const KINDS: readonly CombatantKind[] = ["Karakter", "NPC", "Canavar", "Özel"];
 export const COMBAT_CONDITIONS: readonly CombatCondition[] = ["Blessed", "Poisoned", "Prone", "Invisible", "Stunned", "Restrained", "Concentration", "Rage", "Haki", "Cursed"];
@@ -231,4 +245,66 @@ export function loadCombatEncounters(): CombatEncounter[] {
 
 export function saveCombatEncounters(encounters: CombatEncounter[]) {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(encounters)); } catch { /* localStorage kapalıysa oturum belleği devam eder. */ }
+}
+
+
+function sanitizeCombatTemplate(value: unknown): CombatTemplate | null {
+  if (!isRecord(value) || typeof value.id !== "string" || typeof value.name !== "string") return null;
+  const now = new Date().toISOString();
+  const combatants = Array.isArray(value.combatants)
+    ? value.combatants.map((item) => sanitizeCombatant({ ...(isRecord(item) ? item : {}), id: crypto.randomUUID(), sourceId: "", currentHp: isRecord(item) ? item.maxHp : 1, tempHp: 0, effects: [], isDefeated: false })).filter((item): item is Combatant => Boolean(item)).map(({ name, kind, initiative, armorClass, maxHp, conditions, notes }) => ({ name, kind, initiative, armorClass, maxHp, conditions, notes }))
+    : [];
+  return {
+    id: value.id,
+    name: value.name.trim() || "Adsız şablon",
+    campaignId: typeof value.campaignId === "string" ? value.campaignId : "",
+    combatants,
+    createdAt: typeof value.createdAt === "string" ? value.createdAt : now,
+    updatedAt: typeof value.updatedAt === "string" ? value.updatedAt : now,
+  };
+}
+
+export function createCombatTemplate(encounter: CombatEncounter, name = encounter.name): CombatTemplate {
+  const now = new Date().toISOString();
+  return {
+    id: crypto.randomUUID(),
+    name: name.trim() || "Yeni savaş şablonu",
+    campaignId: encounter.campaignId,
+    combatants: encounter.combatants.map(({ name: combatantName, kind, initiative, armorClass, maxHp, conditions, notes }) => ({ name: combatantName, kind, initiative, armorClass, maxHp, conditions: [...conditions], notes })),
+    createdAt: now,
+    updatedAt: now,
+  };
+}
+
+export function createEncounterFromCampaignEncounter(source: CampaignEncounter, campaignId: string): CombatEncounter {
+  const encounter = createCombatEncounter(source.name, campaignId);
+  const combatants = sortCombatants(source.participants.map((participant) => ({
+    ...createCombatant(participant.name, participant.sourceType === "character" ? "Karakter" : "Canavar"),
+    sourceId: participant.sourceId,
+    initiative: participant.initiative ?? participant.initiativeModifier,
+    armorClass: participant.armorClass,
+    maxHp: participant.maxHp,
+    currentHp: Math.min(participant.maxHp, Math.max(0, participant.currentHp)),
+    conditions: [],
+    notes: participant.notes,
+    isDefeated: participant.currentHp <= 0,
+  })));
+  return { ...encounter, round: Math.max(1, source.round), combatants, activeCombatantId: combatants[0]?.id ?? "" };
+}
+
+export function createEncounterFromTemplate(template: CombatTemplate): CombatEncounter {
+  const encounter = createCombatEncounter(template.name, template.campaignId);
+  const combatants = sortCombatants(template.combatants.map((item) => ({ ...createCombatant(item.name, item.kind), initiative: item.initiative, armorClass: item.armorClass, maxHp: item.maxHp, currentHp: item.maxHp, conditions: [...item.conditions], notes: item.notes })));
+  return { ...encounter, combatants, activeCombatantId: combatants[0]?.id ?? "" };
+}
+
+export function loadCombatTemplates(): CombatTemplate[] {
+  try {
+    const parsed: unknown = JSON.parse(localStorage.getItem(TEMPLATE_STORAGE_KEY) ?? "[]");
+    return Array.isArray(parsed) ? parsed.map(sanitizeCombatTemplate).filter((item): item is CombatTemplate => Boolean(item)) : [];
+  } catch { return []; }
+}
+
+export function saveCombatTemplates(templates: CombatTemplate[]) {
+  try { localStorage.setItem(TEMPLATE_STORAGE_KEY, JSON.stringify(templates)); } catch { /* localStorage kapalıysa oturum belleği devam eder. */ }
 }
