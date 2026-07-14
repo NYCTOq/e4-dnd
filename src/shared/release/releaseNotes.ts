@@ -15,6 +15,20 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.16.0",
+    date: "2026-07-14",
+    title: "Battlefield zones ve area effects",
+    summary: "Aura, hazard, spell area ve difficult terrain bölgeleri savaşçı bağlantıları ve round sayaçlarıyla Combat Tracker içinde yönetiliyor.",
+    changes: [
+      { text: "Savaş alanına aura, hazard, spell area, cover ve difficult terrain ekleme", category: "Özellik" },
+      { text: "Alan şekli, boyutu, kaynak, hasar, save DC ve koşul bilgisi", category: "Özellik" },
+      { text: "Alanlardan etkilenen savaşçıları işaretleme", category: "Özellik" },
+      { text: "Yeni round başladığında alan sürelerini otomatik azaltma ve bitenleri kaldırma", category: "İyileştirme" },
+      { text: "Eski savaş kayıtları için geriye uyumlu zone sanitizasyonu", category: "Teknik" },
+      { text: "Battlefield zone motoru için üç yeni otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.15.0",
     date: "2026-07-14",
     title: "Encounter bridge ve savaş şablonları",

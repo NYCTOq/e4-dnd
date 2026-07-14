@@ -9,7 +9,26 @@ export type CombatEffect = {
   source: string;
 };
 
-export type CombatLogKind = "Sistem" | "Sıra" | "Hasar" | "İyileştirme" | "Etki" | "Not";
+
+export type BattlefieldZoneKind = "Aura" | "Hazard" | "Difficult Terrain" | "Spell Area" | "Cover" | "Other";
+export type BattlefieldZoneShape = "Circle" | "Cone" | "Cube" | "Line" | "Sphere" | "Custom";
+
+export type BattlefieldZone = {
+  id: string;
+  name: string;
+  kind: BattlefieldZoneKind;
+  shape: BattlefieldZoneShape;
+  sizeFeet: number;
+  remainingRounds: number | null;
+  source: string;
+  damage: string;
+  saveDc: number | null;
+  condition: CombatCondition | "";
+  affectedCombatantIds: string[];
+  notes: string;
+};
+
+export type CombatLogKind = "Sistem" | "Sıra" | "Hasar" | "İyileştirme" | "Etki" | "Alan" | "Not";
 
 export type CombatLogEntry = {
   id: string;
@@ -58,13 +77,16 @@ export type CombatEncounter = {
   activeCombatantId: string;
   combatants: Combatant[];
   log: CombatLogEntry[];
+  zones: BattlefieldZone[];
   createdAt: string;
   updatedAt: string;
 };
 
 const STORAGE_KEY = "e4_dnd_combat_tracker_v1";
 const TEMPLATE_STORAGE_KEY = "e4_dnd_combat_templates_v1";
-const LOG_KINDS: readonly CombatLogKind[] = ["Sistem", "Sıra", "Hasar", "İyileştirme", "Etki", "Not"];
+const LOG_KINDS: readonly CombatLogKind[] = ["Sistem", "Sıra", "Hasar", "İyileştirme", "Etki", "Alan", "Not"];
+export const BATTLEFIELD_ZONE_KINDS: readonly BattlefieldZoneKind[] = ["Aura", "Hazard", "Difficult Terrain", "Spell Area", "Cover", "Other"];
+export const BATTLEFIELD_ZONE_SHAPES: readonly BattlefieldZoneShape[] = ["Circle", "Cone", "Cube", "Line", "Sphere", "Custom"];
 const KINDS: readonly CombatantKind[] = ["Karakter", "NPC", "Canavar", "Özel"];
 export const COMBAT_CONDITIONS: readonly CombatCondition[] = ["Blessed", "Poisoned", "Prone", "Invisible", "Stunned", "Restrained", "Concentration", "Rage", "Haki", "Cursed"];
 
@@ -127,6 +149,35 @@ export function getCombatSummary(encounter: CombatEncounter) {
   };
 }
 
+function sanitizeBattlefieldZone(value: unknown): BattlefieldZone | null {
+  if (!isRecord(value) || typeof value.id !== "string" || typeof value.name !== "string") return null;
+  const remainingRounds = value.remainingRounds === null ? null : Math.max(1, Math.floor(finiteNumber(value.remainingRounds, 1)));
+  return {
+    id: value.id,
+    name: value.name.trim() || "Adsız alan",
+    kind: BATTLEFIELD_ZONE_KINDS.includes(value.kind as BattlefieldZoneKind) ? value.kind as BattlefieldZoneKind : "Other",
+    shape: BATTLEFIELD_ZONE_SHAPES.includes(value.shape as BattlefieldZoneShape) ? value.shape as BattlefieldZoneShape : "Custom",
+    sizeFeet: Math.max(0, Math.floor(finiteNumber(value.sizeFeet))),
+    remainingRounds,
+    source: typeof value.source === "string" ? value.source : "",
+    damage: typeof value.damage === "string" ? value.damage : "",
+    saveDc: value.saveDc === null ? null : Math.max(0, Math.floor(finiteNumber(value.saveDc))),
+    condition: COMBAT_CONDITIONS.includes(value.condition as CombatCondition) ? value.condition as CombatCondition : "",
+    affectedCombatantIds: Array.isArray(value.affectedCombatantIds) ? value.affectedCombatantIds.filter((item): item is string => typeof item === "string") : [],
+    notes: typeof value.notes === "string" ? value.notes : "",
+  };
+}
+
+export function createBattlefieldZone(name = "Yeni alan", kind: BattlefieldZoneKind = "Spell Area"): BattlefieldZone {
+  return { id: crypto.randomUUID(), name: name.trim() || "Yeni alan", kind, shape: "Circle", sizeFeet: 10, remainingRounds: 10, source: "", damage: "", saveDc: null, condition: "", affectedCombatantIds: [], notes: "" };
+}
+
+export function tickBattlefieldZones(zones: readonly BattlefieldZone[]) {
+  return zones
+    .map((zone) => zone.remainingRounds === null ? zone : { ...zone, remainingRounds: zone.remainingRounds - 1 })
+    .filter((zone) => zone.remainingRounds === null || zone.remainingRounds > 0);
+}
+
 function sanitizeEffect(value: unknown): CombatEffect | null {
   if (!isRecord(value) || typeof value.id !== "string" || !COMBAT_CONDITIONS.includes(value.condition as CombatCondition)) return null;
   const duration = value.remainingRounds === null ? null : Math.max(1, Math.floor(finiteNumber(value.remainingRounds, 1)));
@@ -186,6 +237,7 @@ export function sanitizeCombatEncounter(value: unknown): CombatEncounter | null 
     activeCombatantId,
     combatants: sortCombatants(combatants),
     log: Array.isArray(value.log) ? value.log.map(sanitizeLogEntry).filter((item): item is CombatLogEntry => Boolean(item)).slice(0, 250) : [],
+    zones: Array.isArray(value.zones) ? value.zones.map(sanitizeBattlefieldZone).filter((item): item is BattlefieldZone => Boolean(item)).map((zone) => ({ ...zone, affectedCombatantIds: zone.affectedCombatantIds.filter((id) => combatants.some((combatant) => combatant.id === id)) })) : [],
     createdAt: typeof value.createdAt === "string" ? value.createdAt : now,
     updatedAt: typeof value.updatedAt === "string" ? value.updatedAt : now,
   };
@@ -193,7 +245,7 @@ export function sanitizeCombatEncounter(value: unknown): CombatEncounter | null 
 
 export function createCombatEncounter(name = "Yeni savaş", campaignId = ""): CombatEncounter {
   const now = new Date().toISOString();
-  return { id: crypto.randomUUID(), campaignId, name: name.trim() || "Yeni savaş", round: 1, activeCombatantId: "", combatants: [], log: [], createdAt: now, updatedAt: now };
+  return { id: crypto.randomUUID(), campaignId, name: name.trim() || "Yeni savaş", round: 1, activeCombatantId: "", combatants: [], log: [], zones: [], createdAt: now, updatedAt: now };
 }
 
 export function createCombatant(name = "Yeni savaşçı", kind: CombatantKind = "Özel"): Combatant {
@@ -220,7 +272,8 @@ export function advanceTurn(encounter: CombatEncounter): CombatEncounter {
   const nextIndex = currentIndex < 0 ? 0 : (currentIndex + 1) % ordered.length;
   const roundAdvanced = currentIndex >= 0 && nextIndex === 0;
   const combatants = roundAdvanced ? tickCombatEffects(ordered) : ordered;
-  return { ...encounter, combatants, activeCombatantId: combatants[nextIndex].id, round: roundAdvanced ? encounter.round + 1 : encounter.round, updatedAt: new Date().toISOString() };
+  const zones = roundAdvanced ? tickBattlefieldZones(encounter.zones) : encounter.zones;
+  return { ...encounter, combatants, zones, activeCombatantId: combatants[nextIndex].id, round: roundAdvanced ? encounter.round + 1 : encounter.round, updatedAt: new Date().toISOString() };
 }
 
 export function applyDamage(combatant: Combatant, amount: number): Combatant {

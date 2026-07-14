@@ -7,7 +7,10 @@ import { PageShell } from "../../shared/layout/PageShell";
 import {
   addCombatLog,
   advanceTurn,
+  BATTLEFIELD_ZONE_KINDS,
+  BATTLEFIELD_ZONE_SHAPES,
   COMBAT_CONDITIONS,
+  createBattlefieldZone,
   createCombatEffect,
   createCombatLogEntry,
   getActiveConditions,
@@ -24,6 +27,9 @@ import {
   saveCombatEncounters,
   saveCombatTemplates,
   sortCombatants,
+  type BattlefieldZone,
+  type BattlefieldZoneKind,
+  type BattlefieldZoneShape,
   type CombatCondition,
   type CombatEncounter,
   type Combatant,
@@ -58,6 +64,8 @@ export function CombatTrackerPage({ campaigns, characters, monsters }: CombatTra
   const [templates, setTemplates] = useState<CombatTemplate[]>(() => loadCombatTemplates());
   const [templateId, setTemplateId] = useState("");
   const [campaignEncounterKey, setCampaignEncounterKey] = useState("");
+  const [zoneName, setZoneName] = useState("");
+  const [zoneKind, setZoneKind] = useState<BattlefieldZoneKind>("Spell Area");
   const npcs = useMemo(() => loadNpcRecords(), []);
   const selected = encounters.find((item) => item.id === selectedId) ?? null;
   const active = selected?.combatants.find((item) => item.id === selected.activeCombatantId) ?? null;
@@ -115,6 +123,21 @@ export function CombatTrackerPage({ campaigns, characters, monsters }: CombatTra
     const next = encounters.filter((item) => item.id !== selected.id);
     setEncounters(next);
     setSelectedId(next[0]?.id ?? "");
+  }
+
+  function addZone() {
+    if (!selected) return;
+    const zone = createBattlefieldZone(zoneName || `Alan ${selected.zones.length + 1}`, zoneKind);
+    updateSelected((encounter) => addCombatLog({ ...encounter, zones: [zone, ...encounter.zones] }, createCombatLogEntry("Alan", encounter.round, `${zone.name} savaş alanına eklendi.`)));
+    setZoneName("");
+  }
+
+  function updateZone(id: string, updater: (zone: BattlefieldZone) => BattlefieldZone) {
+    updateSelected((encounter) => ({ ...encounter, zones: encounter.zones.map((zone) => zone.id === id ? updater(zone) : zone) }));
+  }
+
+  function removeZone(zone: BattlefieldZone) {
+    updateSelected((encounter) => addCombatLog({ ...encounter, zones: encounter.zones.filter((item) => item.id !== zone.id) }, createCombatLogEntry("Alan", encounter.round, `${zone.name} savaş alanından kaldırıldı.`)));
   }
 
   function addCombatant() {
@@ -254,6 +277,31 @@ export function CombatTrackerPage({ campaigns, characters, monsters }: CombatTra
         </select>
         {sourceType === "custom" ? <input value={customName} onChange={(event) => setCustomName(event.target.value)} placeholder="Savaşçı adı" /> : <select value={sourceId} onChange={(event) => setSourceId(event.target.value)}><option value="">Seç...</option>{sourceOptions.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select>}
         <button type="button" onClick={addCombatant}>Savaşa ekle</button>
+      </section>
+
+      <section className="battlefield-zone-panel">
+        <div className="battlefield-zone-header">
+          <div><strong>Battlefield Zones</strong><span>Aura, hazard, spell area ve difficult terrain sayaçlarını round bazında takip et.</span></div>
+          <div className="battlefield-zone-add"><input value={zoneName} onChange={(event) => setZoneName(event.target.value)} placeholder="Alan adı: Spirit Guardians..." /><select value={zoneKind} onChange={(event) => setZoneKind(event.target.value as BattlefieldZoneKind)}>{BATTLEFIELD_ZONE_KINDS.map((kind) => <option key={kind}>{kind}</option>)}</select><button type="button" onClick={addZone}>Alan ekle</button></div>
+        </div>
+        <div className="battlefield-zone-list">
+          {selected.zones.map((zone) => <article key={zone.id}>
+            <div className="battlefield-zone-title"><input value={zone.name} onChange={(event) => updateZone(zone.id, (item) => ({ ...item, name: event.target.value }))} aria-label="Alan adı" /><button type="button" className="danger" onClick={() => removeZone(zone)}>Sil</button></div>
+            <div className="battlefield-zone-grid">
+              <label>Tür<select value={zone.kind} onChange={(event) => updateZone(zone.id, (item) => ({ ...item, kind: event.target.value as BattlefieldZoneKind }))}>{BATTLEFIELD_ZONE_KINDS.map((kind) => <option key={kind}>{kind}</option>)}</select></label>
+              <label>Şekil<select value={zone.shape} onChange={(event) => updateZone(zone.id, (item) => ({ ...item, shape: event.target.value as BattlefieldZoneShape }))}>{BATTLEFIELD_ZONE_SHAPES.map((shape) => <option key={shape}>{shape}</option>)}</select></label>
+              <label>Boyut (ft)<input type="number" min="0" value={zone.sizeFeet} onChange={(event) => updateZone(zone.id, (item) => ({ ...item, sizeFeet: Math.max(0, Number(event.target.value) || 0) }))} /></label>
+              <label>Süre<input type="number" min="1" value={zone.remainingRounds ?? ""} placeholder="Süresiz" onChange={(event) => updateZone(zone.id, (item) => ({ ...item, remainingRounds: event.target.value ? Math.max(1, Number(event.target.value) || 1) : null }))} /></label>
+              <label>Hasar<input value={zone.damage} placeholder="3d8 radiant" onChange={(event) => updateZone(zone.id, (item) => ({ ...item, damage: event.target.value }))} /></label>
+              <label>Save DC<input type="number" min="0" value={zone.saveDc ?? ""} placeholder="-" onChange={(event) => updateZone(zone.id, (item) => ({ ...item, saveDc: event.target.value ? Math.max(0, Number(event.target.value) || 0) : null }))} /></label>
+              <label>Koşul<select value={zone.condition} onChange={(event) => updateZone(zone.id, (item) => ({ ...item, condition: event.target.value as CombatCondition | "" }))}><option value="">Koşul yok</option>{COMBAT_CONDITIONS.map((condition) => <option key={condition}>{condition}</option>)}</select></label>
+              <label>Kaynak<input value={zone.source} placeholder="Cleric, tuzak..." onChange={(event) => updateZone(zone.id, (item) => ({ ...item, source: event.target.value }))} /></label>
+            </div>
+            <div className="battlefield-zone-targets"><span>Etkilenenler</span>{selected.combatants.map((combatant) => <button key={combatant.id} type="button" className={zone.affectedCombatantIds.includes(combatant.id) ? "active" : ""} onClick={() => updateZone(zone.id, (item) => ({ ...item, affectedCombatantIds: item.affectedCombatantIds.includes(combatant.id) ? item.affectedCombatantIds.filter((id) => id !== combatant.id) : [...item.affectedCombatantIds, combatant.id] }))}>{combatant.name}</button>)}</div>
+            <textarea rows={2} value={zone.notes} onChange={(event) => updateZone(zone.id, (item) => ({ ...item, notes: event.target.value }))} placeholder="Alan etkisi, tetikleme zamanı veya kurtulma koşulu..." />
+          </article>)}
+          {!selected.zones.length ? <div className="battlefield-zone-empty">Aktif alan etkisi yok. Savaş alanı şimdilik şaşırtıcı biçimde güvenli.</div> : null}
+        </div>
       </section>
 
       <section className="combat-list">
