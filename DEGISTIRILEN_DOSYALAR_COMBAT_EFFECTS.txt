@@ -1,0 +1,9 @@
+Changed files for Combat Effects + Duration Automation V1
+
+src/features/combat-tracker/combatTrackerStorage.ts
+src/features/combat-tracker/combatTrackerStorage.test.ts
+src/features/combat-tracker/CombatTrackerPage.tsx
+src/styles/37-combat-tracker.css
+src/shared/release/releaseNotes.ts
+package.json
+package-lock.json

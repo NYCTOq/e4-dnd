@@ -1,0 +1,6 @@
+1. Zip içindeki klasörün içeriğini D:\Projects\e4_dnd içine çıkarın.
+2. npm.cmd install
+3. npm.cmd run check
+4. git add -A
+5. git commit -m "feat: add combat effect duration automation"
+6. git push

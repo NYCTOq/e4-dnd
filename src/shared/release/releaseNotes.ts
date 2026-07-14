@@ -15,6 +15,20 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.13.0",
+    date: "2026-07-14",
+    title: "Combat effects ve süre otomasyonu",
+    summary: "Savaş koşulları artık kaynak ve round süresiyle takip ediliyor; yeni round başladığında sayaçlar otomatik azalıyor.",
+    changes: [
+      { text: "Savaşçılara kaynak bilgili süreli etki ekleme", category: "Özellik" },
+      { text: "Round geçişinde etki sürelerini otomatik azaltma", category: "Özellik" },
+      { text: "Süresi biten etkileri otomatik kaldırma", category: "İyileştirme" },
+      { text: "Kalıcı koşullar ile süreli etkileri birlikte gösterme", category: "İyileştirme" },
+      { text: "Eski combat kayıtları için geriye uyumlu veri sanitizasyonu", category: "Teknik" },
+      { text: "Etki motoru için iki yeni otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.12.0",
     date: "2026-07-14",
     title: "Initiative ve combat tracker",

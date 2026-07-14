@@ -6,6 +6,9 @@ import { loadNpcRecords } from "../npc-manager/npcManagerStorage";
 import { PageShell } from "../../shared/layout/PageShell";
 import {
   advanceTurn,
+  COMBAT_CONDITIONS,
+  createCombatEffect,
+  getActiveConditions,
   applyDamage,
   applyHealing,
   createCombatEncounter,
@@ -24,8 +27,6 @@ type CombatTrackerPageProps = {
   monsters: DndMonsterData[];
 };
 
-const CONDITIONS: readonly CombatCondition[] = ["Blessed", "Poisoned", "Prone", "Invisible", "Stunned", "Restrained", "Concentration", "Rage", "Haki", "Cursed"];
-
 function getDexModifier(score: number) {
   return Math.floor((score - 10) / 2);
 }
@@ -41,6 +42,9 @@ export function CombatTrackerPage({ campaigns, characters, monsters }: CombatTra
   const [sourceType, setSourceType] = useState<"character" | "npc" | "monster" | "custom">("character");
   const [sourceId, setSourceId] = useState("");
   const [customName, setCustomName] = useState("");
+  const [effectCondition, setEffectCondition] = useState<CombatCondition>("Blessed");
+  const [effectDuration, setEffectDuration] = useState(10);
+  const [effectSource, setEffectSource] = useState("");
   const npcs = useMemo(() => loadNpcRecords(), []);
   const selected = encounters.find((item) => item.id === selectedId) ?? null;
   const active = selected?.combatants.find((item) => item.id === selected.activeCombatantId) ?? null;
@@ -69,7 +73,7 @@ export function CombatTrackerPage({ campaigns, characters, monsters }: CombatTra
     if (sourceType === "character") {
       const character = characters.find((item) => item.id === sourceId) ?? characters[0];
       if (!character) return;
-      combatant = { ...createCombatant(character.name, "Karakter"), sourceId: character.id, initiative: getDexModifier(character.abilities.dex), armorClass: character.armorClass, maxHp: character.maxHp, currentHp: character.currentHp, tempHp: character.tempHp, conditions: [...character.conditions] };
+      combatant = { ...createCombatant(character.name, "Karakter"), sourceId: character.id, initiative: getDexModifier(character.abilities.dex), armorClass: character.armorClass, maxHp: character.maxHp, currentHp: character.currentHp, tempHp: character.tempHp, conditions: [...character.conditions], effects: [] };
     } else if (sourceType === "npc") {
       const npc = npcs.find((item) => item.id === sourceId) ?? npcs[0];
       if (!npc) return;
@@ -101,7 +105,7 @@ export function CombatTrackerPage({ campaigns, characters, monsters }: CombatTra
 
   const sourceOptions = sourceType === "character" ? characters.map((item) => ({ id: item.id, name: item.name })) : sourceType === "npc" ? npcs.map((item) => ({ id: item.id, name: item.name })) : sourceType === "monster" ? monsters.map((item) => ({ id: item.id, name: item.name })) : [];
 
-  return <PageShell eyebrow="Canlı oyun" title="Initiative + Combat Tracker" description="Sıra, round, HP, geçici HP ve koşulları tek savaş ekranında yönet. Kâğıt parçalarının hükümranlığı burada sona eriyor.">
+  return <PageShell eyebrow="Canlı oyun" title="Initiative + Combat Tracker" description="Sıra, round, HP, koşul ve süreli etkileri tek savaş ekranında yönet. Round bittiğinde sayaçlar otomatik azalır; insan hafızasına gereksiz iş çıkmaz.">
     <section className="combat-summary">
       <article><strong>{encounters.length}</strong><span>karşılaşma</span></article>
       <article><strong>{selected?.round ?? 0}</strong><span>mevcut round</span></article>
@@ -142,7 +146,14 @@ export function CombatTrackerPage({ campaigns, characters, monsters }: CombatTra
             <div className="combat-main">
               <div className="combat-title-row"><input value={combatant.name} onChange={(event) => updateCombatant(combatant.id, (item) => ({ ...item, name: event.target.value }))} aria-label="Savaşçı adı" /><span>{combatant.kind}</span></div>
               <div className="combat-hp-track"><i style={{ width: `${hpPercent}%` }} /><span>{combatant.currentHp}/{combatant.maxHp} HP {combatant.tempHp ? `+${combatant.tempHp} geçici` : ""}</span></div>
-              <div className="combat-condition-row">{CONDITIONS.map((condition) => <button key={condition} type="button" className={combatant.conditions.includes(condition) ? "active" : ""} onClick={() => updateCombatant(combatant.id, (item) => ({ ...item, conditions: item.conditions.includes(condition) ? item.conditions.filter((value) => value !== condition) : [...item.conditions, condition] }))}>{condition}</button>)}</div>
+              <div className="combat-condition-row">{COMBAT_CONDITIONS.map((condition) => { const activeConditions = getActiveConditions(combatant); return <button key={condition} type="button" className={activeConditions.includes(condition) ? "active" : ""} onClick={() => updateCombatant(combatant.id, (item) => ({ ...item, conditions: item.conditions.includes(condition) ? item.conditions.filter((value) => value !== condition) : [...item.conditions, condition] }))}>{condition}</button>; })}</div>
+              <div className="combat-effect-controls">
+                <select value={effectCondition} onChange={(event) => setEffectCondition(event.target.value as CombatCondition)}>{COMBAT_CONDITIONS.map((condition) => <option key={condition}>{condition}</option>)}</select>
+                <input type="number" min="1" value={effectDuration} onChange={(event) => setEffectDuration(Math.max(1, Number(event.target.value) || 1))} aria-label="Etki süresi" />
+                <input value={effectSource} onChange={(event) => setEffectSource(event.target.value)} placeholder="Kaynak: Bless, büyücü..." />
+                <button type="button" onClick={() => updateCombatant(combatant.id, (item) => ({ ...item, effects: [...item.effects, createCombatEffect(effectCondition, effectDuration, effectSource)] }))}>Süreli etki ekle</button>
+              </div>
+              {combatant.effects.length ? <div className="combat-effects-list">{combatant.effects.map((effect) => <span key={effect.id}><strong>{effect.condition}</strong><small>{effect.remainingRounds === null ? "Süresiz" : `${effect.remainingRounds} round`}{effect.source ? ` · ${effect.source}` : ""}</small><button type="button" aria-label={`${effect.condition} etkisini kaldır`} onClick={() => updateCombatant(combatant.id, (item) => ({ ...item, effects: item.effects.filter((value) => value.id !== effect.id) }))}>×</button></span>)}</div> : null}
               <textarea rows={2} value={combatant.notes} onChange={(event) => updateCombatant(combatant.id, (item) => ({ ...item, notes: event.target.value }))} placeholder="Savaş notu..." />
             </div>
             <div className="combat-stats">
