@@ -15,6 +15,21 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.8.0",
+    date: "2026-07-14",
+    title: "Locations ve world atlas",
+    summary:
+      "Campaign mekânları; hiyerarşi, türler, açıklamalar, gizli notlar ve bağlı NPC'lerle ayrı bir dünya atlasında toplandı.",
+    changes: [
+      { text: "Campaign bağlantılı yeni Locations + World Atlas sayfası", category: "Özellik" },
+      { text: "Bölge, şehir, kasaba, bina, zindan ve doğa türleri", category: "Özellik" },
+      { text: "Üst mekân bağlantılarıyla hiyerarşik dünya yapısı", category: "Özellik" },
+      { text: "Mekânlara NPC bağlama, etiketleme ve campaign filtreleme", category: "İyileştirme" },
+      { text: "Oyuncu açıklaması ile DM gizli notlarının ayrılması", category: "İyileştirme" },
+      { text: "World atlas veri motoru için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.7.0",
     date: "2026-07-14",
     title: "NPC manager ve ilişki takibi",

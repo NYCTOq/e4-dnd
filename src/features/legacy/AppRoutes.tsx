@@ -91,6 +91,9 @@ const SessionPlannerPage = lazy(() =>
 const NpcManagerPage = lazy(() =>
   import("../npc-manager/NpcManagerPage").then((module) => ({ default: module.NpcManagerPage })),
 );
+const WorldAtlasPage = lazy(() =>
+  import("../locations/WorldAtlasPage").then((module) => ({ default: module.WorldAtlasPage })),
+);
 
 import type { BackupImportOptions, FullBackupData } from "../backup/fullBackup";
 
@@ -250,6 +253,11 @@ export function AppRoutes({
       <Route
         path="/npcs"
         element={<NpcManagerPage campaigns={campaigns} />}
+      />
+
+      <Route
+        path="/locations"
+        element={<WorldAtlasPage campaigns={campaigns} />}
       />
 
       <Route

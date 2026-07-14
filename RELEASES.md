@@ -1,4 +1,9 @@
-# E4 D&D Sürüm Akışı
+# E4 D&D Releases
+
+## 1.8.0
+
+Locations + World Atlas, mekân hiyerarşisi ve NPC bağlantıları.
+
 
 ## Uygulama sürümünü yükseltme
 
