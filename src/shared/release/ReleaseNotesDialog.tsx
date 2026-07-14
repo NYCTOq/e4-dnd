@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { getCurrentRelease, RELEASE_NOTES } from "./releaseNotes";
 
 const LAST_SEEN_VERSION_KEY = "e4_dnd_last_seen_version_v1";
@@ -81,7 +82,9 @@ export function ReleaseNotesDialog() {
                   <h3>{release.title}</h3>
                   <ul>
                     {release.changes.map((change) => (
-                      <li key={change}>{change}</li>
+                      <li key={change.text}>
+                        <strong>{change.category}</strong> {change.text}
+                      </li>
                     ))}
                   </ul>
                 </article>
@@ -92,13 +95,18 @@ export function ReleaseNotesDialog() {
               <span>
                 Build: {new Date(__BUILD_DATE__).toLocaleString("tr-TR")}
               </span>
-              <button
-                type="button"
-                className="primary-action"
-                onClick={closeReleaseNotes}
-              >
-                Devam et
-              </button>
+              <div className="release-notes-footer-actions">
+                <Link to="/updates" className="secondary-action" onClick={closeReleaseNotes}>
+                  Tüm geçmiş
+                </Link>
+                <button
+                  type="button"
+                  className="primary-action"
+                  onClick={closeReleaseNotes}
+                >
+                  Devam et
+                </button>
+              </div>
             </footer>
           </section>
         </div>

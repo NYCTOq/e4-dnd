@@ -1,0 +1,14 @@
+Release History + In-App Update Details V1
+
+Güncellenen dosyalar:
+- package.json
+- package-lock.json
+- .npmrc
+- src/features/legacy/AppRoutes.tsx
+- src/shared/navigation/navItems.ts
+- src/shared/release/releaseNotes.ts
+- src/shared/release/ReleaseNotesDialog.tsx
+- src/styles/26-release-notes.css
+
+Yeni dosya:
+- src/features/updates/ReleaseHistory.tsx

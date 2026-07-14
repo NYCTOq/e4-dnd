@@ -73,6 +73,9 @@ const Library = lazy(() =>
 const Settings = lazy(() =>
   import("../settings/Settings").then((module) => ({ default: module.Settings })),
 );
+const ReleaseHistory = lazy(() =>
+  import("../updates/ReleaseHistory").then((module) => ({ default: module.ReleaseHistory })),
+);
 
 import type { BackupImportOptions, FullBackupData } from "../backup/fullBackup";
 
@@ -311,6 +314,8 @@ export function AppRoutes({
       />
 
       <Route path="/settings" element={<Settings />} />
+
+      <Route path="/updates" element={<ReleaseHistory />} />
 
       <Route
         path="/homebrew-lab"

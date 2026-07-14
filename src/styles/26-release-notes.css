@@ -146,3 +146,141 @@
     flex-direction: column;
   }
 }
+
+.release-notes-footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.release-note-card li strong {
+  color: var(--accent);
+  font-size: 0.76rem;
+  margin-right: 4px;
+}
+
+.release-history-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.release-history-summary div {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--panel);
+}
+
+.release-history-summary strong,
+.release-history-summary span {
+  display: block;
+}
+
+.release-history-summary strong {
+  font-size: 1.35rem;
+  color: var(--text);
+}
+
+.release-history-summary span {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.release-history-filters {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  margin-bottom: 18px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--panel);
+}
+
+.release-category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.release-category-filter button.active {
+  background: var(--text);
+  color: #070b16;
+}
+
+.release-history-list {
+  display: grid;
+  gap: 16px;
+}
+
+.release-history-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.release-history-card header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.release-history-card header h2 {
+  margin: 6px 0 8px;
+  font-size: clamp(24px, 3vw, 38px);
+}
+
+.release-history-card header p {
+  margin: 0;
+  max-width: 760px;
+}
+
+.release-history-card time {
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.release-history-card ul {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.release-history-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.05);
+}
+
+.release-category-badge {
+  flex: 0 0 auto;
+  padding: 5px 8px;
+  border-radius: 999px;
+  color: var(--text);
+  background: rgba(255,255,255,0.11);
+  font-size: 0.7rem;
+  font-weight: 850;
+}
+
+@media (max-width: 900px) {
+  .release-history-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 620px) {
+  .release-history-summary { grid-template-columns: 1fr; }
+  .release-history-card header { flex-direction: column; }
+  .release-history-card li { flex-direction: column; }
+  .release-notes-footer-actions { align-items: stretch; flex-direction: column; }
+}

@@ -1,12 +1,34 @@
+export type ReleaseCategory = "Özellik" | "İyileştirme" | "Düzeltme" | "Teknik";
+
+export type ReleaseChange = {
+  text: string;
+  category: ReleaseCategory;
+};
+
 export type ReleaseEntry = {
   version: string;
   date: string;
   title: string;
   summary: string;
-  changes: string[];
+  changes: ReleaseChange[];
 };
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
+  {
+    version: "1.1.0",
+    date: "2026-07-14",
+    title: "Sürüm geçmişi ve güncelleme detayları",
+    summary:
+      "Sürüm notları artık aranabilir, filtrelenebilir ve uygulama içinde kalıcı bir geçmiş ekranından incelenebilir.",
+    changes: [
+      { text: "Yeni Sürüm Geçmişi sayfası", category: "Özellik" },
+      { text: "Sürüm ve değişiklik metninde arama", category: "Özellik" },
+      { text: "Özellik, iyileştirme, düzeltme ve teknik filtreleri", category: "İyileştirme" },
+      { text: "Mevcut sürüm ve build tarihinin görünür özeti", category: "İyileştirme" },
+      { text: "Windows dosya adı casing çakışmasının kalıcı olarak ayrıştırılması", category: "Düzeltme" },
+      { text: "Public npm registry zorlaması ve temiz lockfile", category: "Teknik" },
+    ],
+  },
   {
     version: "1.0.0",
     date: "2026-07-14",
@@ -14,14 +36,21 @@ export const RELEASE_NOTES: readonly ReleaseEntry[] = [
     summary:
       "E4 D&D artık karakter, campaign, encounter, homebrew, Play Mode, yedekleme ve PWA akışlarını tek pakette sunan kararlı bir masa yardımcısı.",
     changes: [
-      "Karakter oluşturma, düzenleme, karşılaştırma ve level-up yardımcısı",
-      "Spellbook, inventory, monster library ve homebrew araçları",
-      "Campaign dashboard, encounter tracker ve isteğe bağlı DM modülleri",
-      "Play Mode, autosave, güvenli veri kurtarma ve seçmeli backup import",
-      "PWA kurulumu, çevrimdışı kullanım ve kontrollü güncelleme bildirimi",
-      "Route splitting, performans iyileştirmeleri, testler ve otomatik deploy",
+      { text: "Karakter oluşturma, düzenleme, karşılaştırma ve level-up yardımcısı", category: "Özellik" },
+      { text: "Spellbook, inventory, monster library ve homebrew araçları", category: "Özellik" },
+      { text: "Campaign dashboard, encounter tracker ve isteğe bağlı DM modülleri", category: "Özellik" },
+      { text: "Play Mode, autosave, güvenli veri kurtarma ve seçmeli backup import", category: "İyileştirme" },
+      { text: "PWA kurulumu, çevrimdışı kullanım ve kontrollü güncelleme bildirimi", category: "İyileştirme" },
+      { text: "Route splitting, performans iyileştirmeleri, testler ve otomatik deploy", category: "Teknik" },
     ],
   },
+];
+
+export const RELEASE_CATEGORIES: readonly ReleaseCategory[] = [
+  "Özellik",
+  "İyileştirme",
+  "Düzeltme",
+  "Teknik",
 ];
 
 export function getCurrentRelease() {

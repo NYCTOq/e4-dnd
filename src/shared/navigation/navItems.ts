@@ -23,6 +23,7 @@ export const navItems: readonly NavItem[] = [
   { to: "/library", label: "Ruleset Library", shortLabel: "Library", icon: "▤", group: "Yönetim" },
   { to: "/backup", label: "Yedek & Kurtarma", shortLabel: "Yedek", icon: "↥", group: "Yönetim" },
   { to: "/settings", label: "Ayarlar", shortLabel: "Ayarlar", icon: "⚙", group: "Yönetim" },
+  { to: "/updates", label: "Sürüm Geçmişi", shortLabel: "Sürümler", icon: "◴", group: "Yönetim" },
 ] as const;
 
 export const navGroups: readonly NavGroup[] = ["Oyun", "İçerik", "Yönetim"];
