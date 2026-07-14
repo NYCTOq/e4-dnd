@@ -17,6 +17,10 @@ import {
 import "../../App.css";
 import { createCharacterFromDraft } from "../characters/characterShared";
 import type { Campaign } from "../campaigns/campaignTypes";
+import {
+  getCampaignTemplate,
+  type CampaignTemplateId,
+} from "../campaigns/campaignTemplates";
 import { loadCampaigns, saveCampaigns } from "../campaigns/campaignStorage";
 import {
   loadHomebrewItems,
@@ -244,8 +248,34 @@ function App() {
     resetSettings();
   }
 
-  function handleCreateCampaign(name: string, description: string) {
+  function handleCreateCampaign(
+    name: string,
+    description: string,
+    templateId: CampaignTemplateId,
+  ) {
     const now = new Date().toISOString();
+    const template = getCampaignTemplate(templateId);
+    const defaultEncounterTools =
+      settings.campaignToolProfile === "full"
+        ? {
+            difficulty: true,
+            loot: true,
+            conditions: true,
+            combatRolls: true,
+          }
+        : settings.campaignToolProfile === "balanced"
+          ? {
+              difficulty: true,
+              loot: false,
+              conditions: true,
+              combatRolls: false,
+            }
+          : {
+              difficulty: false,
+              loot: false,
+              conditions: false,
+              combatRolls: false,
+            };
 
     setCampaigns((current) => [
       {
@@ -258,28 +288,8 @@ function App() {
         quests: [],
         encounters: [],
         timelineEntries: [],
-        timelineEnabled: false,
-        encounterTools:
-          settings.campaignToolProfile === "full"
-            ? {
-                difficulty: true,
-                loot: true,
-                conditions: true,
-                combatRolls: true,
-              }
-            : settings.campaignToolProfile === "balanced"
-              ? {
-                  difficulty: true,
-                  loot: false,
-                  conditions: true,
-                  combatRolls: false,
-                }
-              : {
-                  difficulty: false,
-                  loot: false,
-                  conditions: false,
-                  combatRolls: false,
-                },
+        timelineEnabled: template.timelineEnabled,
+        encounterTools: template.encounterTools ?? defaultEncounterTools,
         createdAt: now,
         updatedAt: now,
       },

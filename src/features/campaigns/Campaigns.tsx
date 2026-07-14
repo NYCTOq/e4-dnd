@@ -18,6 +18,10 @@ import { EncounterLootGenerator } from "./EncounterLootGenerator";
 import { EncounterToolSettings } from "./EncounterToolSettings";
 import { SessionTimeline } from "./SessionTimeline";
 import { CampaignDashboard } from "./CampaignDashboard";
+import {
+  CAMPAIGN_TEMPLATES,
+  type CampaignTemplateId,
+} from "./campaignTemplates";
 
 export function Campaigns({
   characters,
@@ -30,7 +34,11 @@ export function Campaigns({
   characters: Character[];
   campaigns: Campaign[];
   rulesetData: RulesetData | null;
-  onCreateCampaign: (name: string, description: string) => void;
+  onCreateCampaign: (
+    name: string,
+    description: string,
+    templateId: CampaignTemplateId,
+  ) => void;
   onUpdateCampaign: (campaign: Campaign) => void;
   onDeleteCampaign: (id: string) => void;
 }) {
@@ -39,6 +47,8 @@ export function Campaigns({
   );
   const [newCampaignName, setNewCampaignName] = useState("");
   const [newCampaignDescription, setNewCampaignDescription] = useState("");
+  const [selectedTemplateId, setSelectedTemplateId] =
+    useState<CampaignTemplateId>("simple");
   const [sessionTitle, setSessionTitle] = useState("");
   const [sessionBody, setSessionBody] = useState("");
   const [npcName, setNpcName] = useState("");
@@ -159,7 +169,11 @@ export function Campaigns({
       return;
     }
 
-    onCreateCampaign(newCampaignName.trim(), newCampaignDescription.trim());
+    onCreateCampaign(
+      newCampaignName.trim(),
+      newCampaignDescription.trim(),
+      selectedTemplateId,
+    );
     setNewCampaignName("");
     setNewCampaignDescription("");
   }
@@ -688,6 +702,27 @@ export function Campaigns({
               placeholder="Kampanya kısa açıklaması..."
               rows={3}
             />
+            <div className="campaign-template-picker" role="radiogroup" aria-label="Campaign şablonu">
+              {CAMPAIGN_TEMPLATES.map((template) => (
+                <button
+                  aria-checked={selectedTemplateId === template.id}
+                  className={
+                    selectedTemplateId === template.id
+                      ? "campaign-template-option active"
+                      : "campaign-template-option"
+                  }
+                  key={template.id}
+                  onClick={() => setSelectedTemplateId(template.id)}
+                  role="radio"
+                  type="button"
+                >
+                  <span>{template.eyebrow}</span>
+                  <strong>{template.name}</strong>
+                  <small>{template.description}</small>
+                  <em>{template.highlights.join(" • ")}</em>
+                </button>
+              ))}
+            </div>
             <button className="primary-action" type="submit">
               Campaign Oluştur
             </button>

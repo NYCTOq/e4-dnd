@@ -1,17 +1,18 @@
-E4 D&D Character Compare & Duplicate V1
+Campaign Templates V1
 
-Yeni / güncellenen ana dosyalar:
-- src/features/characters/Characters.tsx
-- src/features/characters/CharacterCompare.tsx
+Yeni dosya:
+- src/features/campaigns/campaignTemplates.ts
+
+Güncellenen dosyalar:
+- src/features/campaigns/Campaigns.tsx
 - src/features/legacy/AppRoutes.tsx
 - src/features/legacy/LegacyApp.tsx
-- src/styles/23-character-compare.css
-- src/App.css
+- src/styles/05-campaigns-base.css
 
-Özellikler:
-- Karakter kopyalama ve varyant oluşturma
-- Kopyada yeni UUID ve tarih üretimi
-- İki karakter seçip yan yana karşılaştırma
-- Ability, HP, AC, initiative, proficiency, spell ve inventory farkları
-- Farklı değerlerin görsel vurgulanması
-- Karşılaştırma ekranından karakter detayına geçiş
+Eklenenler:
+- Sade Başlangıç şablonu
+- Klasik Macera şablonu
+- Story-Heavy şablonu
+- Encounter-Heavy şablonu
+- Timeline ve DM araçlarının şablona göre başlangıçta ayarlanması
+- Sade şablonda global campaign tool profile ayarının korunması

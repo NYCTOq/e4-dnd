@@ -11,6 +11,7 @@ import type {
   CharacterDraft,
 } from "../../core/character/character.types";
 import type { Campaign } from "../campaigns/campaignTypes";
+import type { CampaignTemplateId } from "../campaigns/campaignTemplates";
 const Dashboard = lazy(() =>
   import("../dashboard/Dashboard").then((module) => ({ default: module.Dashboard })),
 );
@@ -92,7 +93,11 @@ type AppRoutesProps = {
   onWipeCharacters: () => void;
   onImportFullBackup: (data: FullBackupData, options: BackupImportOptions) => void;
   onWipeAllData: () => void;
-  onCreateCampaign: (name: string, description: string) => void;
+  onCreateCampaign: (
+    name: string,
+    description: string,
+    templateId: CampaignTemplateId,
+  ) => void;
   onUpdateCampaign: (campaign: Campaign) => void;
   onDeleteCampaign: (id: string) => void;
   onCreateHomebrewSpell: (spell: DndSpellData) => void;
