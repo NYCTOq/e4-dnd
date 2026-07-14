@@ -1,29 +1,18 @@
-GitHub Pages Release / Deployment Automation V1
-
-Güncellenen dosyalar:
-- .github/workflows/ci.yml
-- vite.config.ts
-- src/main.tsx
-- README.md
+E4 D&D Help Center + Guided Onboarding V1
 
 Yeni dosyalar:
-- DEPLOYMENT.md
+- src/features/help/HelpCenter.tsx
+- src/styles/27-help-center.css
 
-Önemli:
-- Yerel geliştirme base yolu `/` olarak kalır.
-- GitHub Actions build sırasında VITE_BASE_PATH=/e4-dnd/ kullanır.
-- CI başarılı olmadan deployment başlamaz.
-- dist/index.html, route yenilemeleri için dist/404.html olarak kopyalanır.
-
-Release Versioning + Changelog V1
+Güncellenen dosyalar:
+- src/features/legacy/AppRoutes.tsx
+- src/shared/navigation/navItems.ts
+- src/shared/release/releaseNotes.ts
+- src/App.css
 - package.json
 - package-lock.json
-- vite.config.ts
-- src/vite-env.d.ts
-- src/shared/layout/AppFrame.tsx
+
+Silinmesi gereken eski dosya:
 - src/shared/release/ReleaseNotes.tsx
-- src/shared/release/releaseNotes.ts
-- src/styles/26-release-notes.css
-- src/App.css
-- .github/workflows/release.yml
-- RELEASES.md
+
+Not: Bu eski dosya daha önce manuel olarak silindiyse başka işlem gerekmez.

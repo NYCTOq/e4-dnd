@@ -1,0 +1,10 @@
+1. Zip içeriğini D:\Projects\e4_dnd klasörüne çıkar ve dosyaların üzerine yaz.
+2. Eski dosya kalmışsa sil:
+   Remove-Item src\shared\release\ReleaseNotes.tsx -Force -ErrorAction SilentlyContinue
+3. Kontrol et:
+   npm.cmd install
+   npm.cmd run check
+4. Pushla:
+   git add -A
+   git commit -m "feat: add help center and guided onboarding"
+   git push

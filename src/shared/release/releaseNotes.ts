@@ -15,6 +15,21 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.2.0",
+    date: "2026-07-14",
+    title: "Yardım merkezi ve yönlendirmeli başlangıç",
+    summary:
+      "Yeni yardım merkezi; oyuncu, DM, veri güvenliği ve PWA akışlarını aranabilir kısa rehberlerde topluyor.",
+    changes: [
+      { text: "Aranabilir ve kategori filtreli Yardım Merkezi", category: "Özellik" },
+      { text: "Yerel olarak saklanan hızlı başlangıç kontrol listesi", category: "Özellik" },
+      { text: "Karakter, Play Mode, campaign, encounter, homebrew ve backup rehberleri", category: "İyileştirme" },
+      { text: "PWA kurulumu, çevrimdışı kullanım ve klavye kısayolu açıklamaları", category: "İyileştirme" },
+      { text: "Sorun anında yedek ve kurtarma ekranına hızlı erişim", category: "Düzeltme" },
+      { text: "Yardım sayfasının ayrı lazy-loaded route olarak eklenmesi", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.1.0",
     date: "2026-07-14",
     title: "Sürüm geçmişi ve güncelleme detayları",
