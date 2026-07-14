@@ -79,6 +79,9 @@ const ReleaseHistory = lazy(() =>
 const HelpCenter = lazy(() =>
   import("../help/HelpCenter").then((module) => ({ default: module.HelpCenter })),
 );
+const GlobalSearch = lazy(() =>
+  import("../search/GlobalSearch").then((module) => ({ default: module.GlobalSearch })),
+);
 
 import type { BackupImportOptions, FullBackupData } from "../backup/fullBackup";
 
@@ -321,6 +324,22 @@ export function AppRoutes({
       <Route path="/updates" element={<ReleaseHistory />} />
 
       <Route path="/help" element={<HelpCenter />} />
+
+      <Route
+        path="/search"
+        element={
+          <GlobalSearch
+            characters={characters}
+            campaigns={campaigns}
+            rulesetData={effectiveRulesetData}
+            homebrewSpells={homebrewSpells}
+            homebrewItems={homebrewItems}
+            homebrewMonsters={homebrewMonsters}
+            isRulesetLoading={isRulesetLoading}
+            rulesetError={rulesetError}
+          />
+        }
+      />
 
       <Route
         path="/homebrew-lab"

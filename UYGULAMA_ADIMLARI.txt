@@ -1,10 +1,15 @@
-1. Zip içeriğini D:\Projects\e4_dnd klasörüne çıkar ve dosyaların üzerine yaz.
-2. Eski dosya kalmışsa sil:
+E4 D&D Global Search V1 uygulama adımları
+
+1) Zip içeriğini D:\Projects\e4_dnd klasörüne çıkarın.
+2) Dosya çakışmalarında mevcut dosyaların üzerine yazın.
+3) Eski ReleaseNotes.tsx artığı varsa güvenli biçimde silin:
    Remove-Item src\shared\release\ReleaseNotes.tsx -Force -ErrorAction SilentlyContinue
-3. Kontrol et:
+4) Kontrol edin:
    npm.cmd install
    npm.cmd run check
-4. Pushla:
+5) GitHub'a gönderin:
    git add -A
-   git commit -m "feat: add help center and guided onboarding"
+   git commit -m "feat: add global search center"
    git push
+
+Not: Paket node_modules, dist ve dev-dist içermez.

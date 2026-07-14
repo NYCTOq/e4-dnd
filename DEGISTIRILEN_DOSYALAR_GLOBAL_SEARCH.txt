@@ -1,0 +1,19 @@
+Global Search V1 değişiklikleri
+
+Yeni:
+- src/features/search/GlobalSearch.tsx
+- src/features/search/globalSearch.ts
+- src/features/search/globalSearch.test.ts
+- src/styles/28-global-search.css
+
+Güncellenen:
+- src/features/legacy/AppRoutes.tsx
+- src/shared/navigation/navItems.ts
+- src/shared/commands/CommandPalette.tsx
+- src/features/help/HelpCenter.tsx
+- src/shared/release/releaseNotes.ts
+- src/App.css
+- package.json
+- package-lock.json
+
+Sürüm: 1.3.0

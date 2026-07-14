@@ -55,6 +55,15 @@ export function CommandPalette({
 
     const actionCommands: CommandItem[] = [
       {
+        id: "action-global-search",
+        label: "Global aramayı aç",
+        subtitle: "Tüm içeriklerde ayrıntılı arama yap",
+        group: "Hızlı Aksiyonlar",
+        icon: "⌕",
+        keywords: "global arama search tüm içerikler",
+        to: "/search",
+      },
+      {
         id: "action-new-character",
         label: "Yeni karakter oluştur",
         subtitle: "Character Builder'ı aç",

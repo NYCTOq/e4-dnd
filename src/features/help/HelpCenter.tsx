@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { PageShell } from "../../shared/layout/PageShell";
 
 type HelpCategory = "Başlangıç" | "Oyuncu" | "DM" | "Veri" | "PWA";
@@ -170,7 +170,8 @@ function loadChecklist() {
 }
 
 export function HelpCenter() {
-  const [query, setQuery] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [query, setQuery] = useState(() => searchParams.get("search") ?? "");
   const [category, setCategory] = useState<HelpCategory | "Tümü">("Tümü");
   const [completed, setCompleted] = useState<string[]>(loadChecklist);
 
@@ -249,7 +250,14 @@ export function HelpCenter() {
           <input
             type="search"
             value={query}
-            onChange={(event) => setQuery(event.target.value)}
+            onChange={(event) => {
+                  const nextQuery = event.target.value;
+                  setQuery(nextQuery);
+                  const nextParams = new URLSearchParams(searchParams);
+                  if (nextQuery) nextParams.set("search", nextQuery);
+                  else nextParams.delete("search");
+                  setSearchParams(nextParams, { replace: true });
+                }}
             placeholder="Örn. yedek, encounter, spell slot..."
           />
         </label>

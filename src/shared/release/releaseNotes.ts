@@ -15,6 +15,21 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.3.0",
+    date: "2026-07-14",
+    title: "Global arama merkezi",
+    summary:
+      "Karakter, campaign, büyü, eşya, canavar, sayfa ve yardım içerikleri artık tek ayrıntılı arama ekranından bulunabiliyor.",
+    changes: [
+      { text: "Yeni Global Arama sayfası", category: "Özellik" },
+      { text: "Yedi içerik türünde kategori filtreleme ve sonuç sayıları", category: "Özellik" },
+      { text: "Campaign notları, NPC'ler, questler ve timeline içinde derin arama", category: "İyileştirme" },
+      { text: "Homebrew içeriklerin sonuçlarda ayrı rozetle gösterilmesi", category: "İyileştirme" },
+      { text: "Arama sorgularının URL üzerinden korunması ve paylaşılabilmesi", category: "İyileştirme" },
+      { text: "Arama sıralama helper'ları için otomatik testler", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.2.0",
     date: "2026-07-14",
     title: "Yardım merkezi ve yönlendirmeli başlangıç",
