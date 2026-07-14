@@ -1,0 +1,23 @@
+E4 D&D v1.6.0 - Session Planner + Quick Notes V1
+
+Yeni dosyalar:
+- src/features/session-planner/SessionPlannerPage.tsx
+- src/features/session-planner/sessionPlannerStorage.ts
+- src/features/session-planner/sessionPlannerStorage.test.ts
+- src/styles/31-session-planner.css
+
+Güncellenen dosyalar:
+- src/features/legacy/AppRoutes.tsx
+- src/shared/navigation/navItems.ts
+- src/shared/release/releaseNotes.ts
+- src/App.css
+- package.json
+- package-lock.json
+
+Kurulum:
+1. Zip içeriğini proje köküne çıkarın ve dosyaların üzerine yazın.
+2. npm.cmd install
+3. npm.cmd run check
+4. git add -A
+5. git commit -m "feat: add session planner and quick notes"
+6. git push

@@ -15,6 +15,21 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.6.0",
+    date: "2026-07-14",
+    title: "Session planner ve hızlı notlar",
+    summary:
+      "DM hazırlığı; oturum hedefi, sahne akışı, görev listesi, hızlı notlar ve session recap alanlarıyla tek çalışma ekranında toplandı.",
+    changes: [
+      { text: "Campaign bağlantılı yeni Session Planner sayfası", category: "Özellik" },
+      { text: "Tamamlanabilir sahne akışı ve hazırlık görevleri", category: "Özellik" },
+      { text: "Oturum içi hızlı not ve session recap alanları", category: "Özellik" },
+      { text: "Oturum ilerleme yüzdesi ve son güncellenene göre sıralama", category: "İyileştirme" },
+      { text: "Session planlarının güvenli localStorage saklaması", category: "Teknik" },
+      { text: "Session planner veri motoru için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.5.0",
     date: "2026-07-14",
     title: "Etiketler ve akıllı koleksiyonlar",

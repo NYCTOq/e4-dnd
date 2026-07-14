@@ -14,6 +14,7 @@ export const navItems: readonly NavItem[] = [
   { to: "/play-mode", label: "Play Mode", shortLabel: "Oyna", icon: "▶", group: "Oyun", mobile: true },
   { to: "/characters", label: "Karakterler", shortLabel: "Karakter", icon: "◈", group: "Oyun", mobile: true },
   { to: "/campaigns", label: "Campaigns", shortLabel: "Campaign", icon: "✦", group: "Oyun", mobile: true },
+  { to: "/session-planner", label: "Session Planner", shortLabel: "Oturum", icon: "◫", group: "Oyun" },
   { to: "/dice", label: "Zar", shortLabel: "Zar", icon: "◆", group: "Oyun", mobile: true },
   { to: "/search", label: "Global Arama", shortLabel: "Ara", icon: "⌕", group: "İçerik" },
   { to: "/collections", label: "Koleksiyonlar", shortLabel: "Etiket", icon: "#", group: "İçerik" },

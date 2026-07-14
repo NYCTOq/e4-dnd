@@ -85,6 +85,9 @@ const GlobalSearch = lazy(() =>
 const CollectionsPage = lazy(() =>
   import("../collections/CollectionsPage").then((module) => ({ default: module.CollectionsPage })),
 );
+const SessionPlannerPage = lazy(() =>
+  import("../session-planner/SessionPlannerPage").then((module) => ({ default: module.SessionPlannerPage })),
+);
 
 import type { BackupImportOptions, FullBackupData } from "../backup/fullBackup";
 
@@ -235,6 +238,11 @@ export function AppRoutes({
         }
       />
       <Route path="/dice" element={<Dice />} />
+
+      <Route
+        path="/session-planner"
+        element={<SessionPlannerPage campaigns={campaigns} />}
+      />
 
       <Route
         path="/spellbook"
