@@ -1,4 +1,4 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { navGroups, navItems } from "../navigation/navItems";
 import { StorageRecoveryCenter } from "../errors/StorageRecoveryCenter";
@@ -39,21 +39,21 @@ export function AppFrame({ children, characters, campaigns, rulesetData }: AppFr
         navigate(settings.startRoute, { replace: true });
       }
     } catch {
-      // sessionStorage kapalÄ±ysa Dashboard normal ÅŸekilde aÃ§Ä±lÄ±r.
+      // sessionStorage kapalıysa Dashboard normal şekilde açılır.
     }
   }, [location.pathname, navigate, settings.startRoute]);
 
   return (
     <div className="app">
       <a className="skip-link" href="#main-content">
-        Ana iÃ§eriÄŸe geÃ§
+        Ana içeriğe geç
       </a>
       <RouteAccessibility />
 
       <div className="aurora aurora-one" aria-hidden="true" />
       <div className="aurora aurora-two" aria-hidden="true" />
 
-      <aside className="sidebar" aria-label="Uygulama menÃ¼sÃ¼">
+      <aside className="sidebar" aria-label="Uygulama menüsü">
         <NavLink to="/" className="brand" aria-label="E4 D&D ana sayfa">
           <div className="brand-icon">E4</div>
 
@@ -128,4 +128,3 @@ export function AppFrame({ children, characters, campaigns, rulesetData }: AppFr
     </div>
   );
 }
-

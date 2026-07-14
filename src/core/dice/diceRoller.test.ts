@@ -1,4 +1,4 @@
-﻿import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { formatNotation, rollDice } from "./diceRoller";
 
 afterEach(() => vi.restoreAllMocks());
@@ -17,4 +17,3 @@ describe("diceRoller", () => {
     expect(result.notation).toBe("2d6+2");
   });
 });
-

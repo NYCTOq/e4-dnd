@@ -1,4 +1,4 @@
-﻿import type { Character } from "../../core/character/character.types";
+import type { Character } from "../../core/character/character.types";
 import type {
   DndItemData,
   DndMonsterData,
@@ -114,19 +114,19 @@ function isNamedData(value: unknown): value is DndSpellData | DndItemData | DndM
 
 export function parseFullBackup(value: unknown): E4FullBackup {
   if (!isRecord(value)) {
-    throw new Error("Yedek dosyasÄ±nÄ±n kÃ¶k yapÄ±sÄ± geÃ§ersiz.");
+    throw new Error("Yedek dosyasının kök yapısı geçersiz.");
   }
 
   if (value.format !== "e4-dnd-full-backup") {
-    throw new Error("Bu dosya E4 D&D tam yedek formatÄ±nda deÄŸil.");
+    throw new Error("Bu dosya E4 D&D tam yedek formatında değil.");
   }
 
   if (typeof value.version !== "number" || value.version > FULL_BACKUP_VERSION) {
-    throw new Error("Yedek sÃ¼rÃ¼mÃ¼ bu uygulama sÃ¼rÃ¼mÃ¼nden daha yeni.");
+    throw new Error("Yedek sürümü bu uygulama sürümünden daha yeni.");
   }
 
   if (!isRecord(value.data)) {
-    throw new Error("Yedek veri bÃ¶lÃ¼mÃ¼ bulunamadÄ±.");
+    throw new Error("Yedek veri bölümü bulunamadı.");
   }
 
   const data = value.data;
@@ -155,11 +155,11 @@ export function parseFullBackup(value: unknown): E4FullBackup {
   }
 
   if (!characters.every(isCharacterLike)) {
-    throw new Error("Yedekte geÃ§ersiz karakter kaydÄ± var.");
+    throw new Error("Yedekte geçersiz karakter kaydı var.");
   }
 
   if (!campaigns.every(isCampaignLike)) {
-    throw new Error("Yedekte geÃ§ersiz campaign kaydÄ± var.");
+    throw new Error("Yedekte geçersiz campaign kaydı var.");
   }
 
   if (
@@ -167,11 +167,11 @@ export function parseFullBackup(value: unknown): E4FullBackup {
     !homebrewItems.every(isNamedData) ||
     !homebrewMonsters.every(isNamedData)
   ) {
-    throw new Error("Yedekte geÃ§ersiz homebrew kaydÄ± var.");
+    throw new Error("Yedekte geçersiz homebrew kaydı var.");
   }
 
   if (!favoriteMonsterIds.every((id) => typeof id === "string")) {
-    throw new Error("Yedekte geÃ§ersiz favori canavar kaydÄ± var.");
+    throw new Error("Yedekte geçersiz favori canavar kaydı var.");
   }
 
   return {
@@ -192,4 +192,3 @@ export function parseFullBackup(value: unknown): E4FullBackup {
     },
   };
 }
-

@@ -1,4 +1,4 @@
-﻿import { AutosaveStatus } from "../../shared/forms/AutosaveStatus";
+import { AutosaveStatus } from "../../shared/forms/AutosaveStatus";
 import { useAutosavedDraft } from "../../shared/state/useAutosavedDraft";
 import type {
   DndItemData,
@@ -274,7 +274,7 @@ export function HomebrewLab({
     },
     challengeRating: "1/4",
     senses: "passive Perception 10",
-    languages: "â€”",
+    languages: "—",
     traitsText: "",
     actionsText: "",
     traitName: "",
@@ -352,7 +352,7 @@ export function HomebrewLab({
 
   function addMonsterTraitFromBuilder() {
     if (!monsterForm.traitName.trim() && !monsterForm.traitDescription.trim()) {
-      alert("Trait adÄ± ya da aÃ§Ä±klamasÄ± lazÄ±m. BoÅŸ trait, bÃ¼rokratik sis efekti gibi duruyor.");
+      alert("Trait adı ya da açıklaması lazım. Boş trait, bürokratik sis efekti gibi duruyor.");
       return;
     }
 
@@ -418,7 +418,7 @@ export function HomebrewLab({
 
   function addMonsterActionFromBuilder() {
     if (!monsterForm.actionName.trim() && !monsterForm.actionDescription.trim()) {
-      alert("Action adÄ± ya da aÃ§Ä±klamasÄ± lazÄ±m. Canavar aksiyonsuz kalÄ±rsa toplantÄ±ya katÄ±lmÄ±ÅŸ gibi olur.");
+      alert("Action adı ya da açıklaması lazım. Canavar aksiyonsuz kalırsa toplantıya katılmış gibi olur.");
       return;
     }
 
@@ -486,7 +486,7 @@ export function HomebrewLab({
       parts.push(`Condition: ${spellForm.conditionEffect}`);
     }
 
-    return parts.join(" â€¢ ");
+    return parts.join(" • ");
   }
 
   function buildSpellDescription() {
@@ -504,13 +504,13 @@ export function HomebrewLab({
     event.preventDefault();
 
     if (!spellForm.name.trim()) {
-      alert("Spell adÄ± lazÄ±m kankam. BÃ¼yÃ¼ isimsiz olunca DM bile anlamÄ±yor.");
+      alert("Spell adı lazım kankam. Büyü isimsiz olunca DM bile anlamıyor.");
       return;
     }
 
     if (spellForm.classes.length === 0) {
       alert(
-        "Bu bÃ¼yÃ¼yÃ¼ en az bir class kullanabilsin. Yoksa bÃ¼yÃ¼ deÄŸil, dekoratif PDF olur.",
+        "Bu büyüyü en az bir class kullanabilsin. Yoksa büyü değil, dekoratif PDF olur.",
       );
       return;
     }
@@ -521,7 +521,7 @@ export function HomebrewLab({
       !spellForm.healingDice.trim()
     ) {
       alert(
-        "Spell etkisi lazÄ±m. En az aÃ§Ä±klama, damage ya da healing gir. BoÅŸ bÃ¼yÃ¼yle evren ikna olmuyor.",
+        "Spell etkisi lazım. En az açıklama, damage ya da healing gir. Boş büyüyle evren ikna olmuyor.",
       );
       return;
     }
@@ -571,7 +571,7 @@ export function HomebrewLab({
 
     if (!itemForm.name.trim()) {
       alert(
-        "Item adÄ± lazÄ±m. Ã‡antaya 'ÅŸey' diye item koyarsak barbar bile gÃ¼ler.",
+        "Item adı lazım. Çantaya 'şey' diye item koyarsak barbar bile güler.",
       );
       return;
     }
@@ -628,7 +628,7 @@ export function HomebrewLab({
 
     if (!monsterForm.name.trim()) {
       alert(
-        "Monster/NPC adÄ± lazÄ±m kankam. Ä°simsiz yaratÄ±k ancak vergi dairesi olur.",
+        "Monster/NPC adı lazım kankam. İsimsiz yaratık ancak vergi dairesi olur.",
       );
       return;
     }
@@ -674,7 +674,7 @@ export function HomebrewLab({
         cha: Number(monsterForm.abilities.cha),
       },
       senses: monsterForm.senses.trim() || "passive Perception 10",
-      languages: monsterForm.languages.trim() || "â€”",
+      languages: monsterForm.languages.trim() || "—",
       traits,
       actions,
       description: monsterForm.description.trim() || "Homebrew monster/NPC.",
@@ -699,20 +699,20 @@ export function HomebrewLab({
     <PageShell
       eyebrow="Homebrew Lab"
       title="Homebrew"
-      description="Custom spell ve item Ã¼ret, sonra bunlarÄ± Spellbook ve Inventory iÃ§inde kullan. DM yetkisi verdik, sonuÃ§larÄ±na katlanacaÄŸÄ±z."
+      description="Custom spell ve item üret, sonra bunları Spellbook ve Inventory içinde kullan. DM yetkisi verdik, sonuçlarına katlanacağız."
     >
       <div className="homebrew-summary-grid">
         <div className="homebrew-summary-card">
           <span className="mini-label">Custom Spells</span>
           <strong>{homebrewSpells.length}</strong>
-          <p>Spellbook, Builder ve karakter detayÄ±nda kullanÄ±labilir.</p>
+          <p>Spellbook, Builder ve karakter detayında kullanılabilir.</p>
         </div>
 
         <div className="homebrew-summary-card">
           <span className="mini-label">Custom Items</span>
           <strong>{homebrewItems.length}</strong>
           <p>
-            Inventory listesine karÄ±ÅŸÄ±r. Evet, artÄ±k kÄ±lÄ±Ã§ da uydurabiliyoruz.
+            Inventory listesine karışır. Evet, artık kılıç da uydurabiliyoruz.
           </p>
         </div>
       </div>
@@ -720,11 +720,11 @@ export function HomebrewLab({
       <div className="homebrew-layout">
         <form className="homebrew-form-card" onSubmit={handleCreateSpell}>
           <AutosaveStatus
-            label="Spell taslaÄŸÄ±"
+            label="Spell taslağı"
             lastSavedAt={spellFormSavedAt}
             restoredAt={spellFormRestoredAt}
             onClear={() => {
-              if (confirm("Spell taslaÄŸÄ± temizlensin mi?")) clearSpellForm();
+              if (confirm("Spell taslağı temizlensin mi?")) clearSpellForm();
             }}
           />
           <div className="homebrew-card-head">
@@ -994,7 +994,7 @@ export function HomebrewLab({
                 updateSpellForm("description", event.target.value)
               }
               rows={5}
-              placeholder="Spell ne yapÄ±yor? Ã–zel kural, hedef, alan, yan etki..."
+              placeholder="Spell ne yapıyor? Özel kural, hedef, alan, yan etki..."
             />
           </label>
 
@@ -1006,18 +1006,18 @@ export function HomebrewLab({
                 updateSpellForm("higherLevels", event.target.value)
               }
               rows={3}
-              placeholder="Higher level cast aÃ§Ä±klamasÄ± varsa buraya. Yoksa boÅŸ bÄ±rak."
+              placeholder="Higher level cast açıklaması varsa buraya. Yoksa boş bırak."
             />
           </label>
         </form>
 
         <form className="homebrew-form-card" onSubmit={handleCreateItem}>
           <AutosaveStatus
-            label="Item taslaÄŸÄ±"
+            label="Item taslağı"
             lastSavedAt={itemFormSavedAt}
             restoredAt={itemFormRestoredAt}
             onClear={() => {
-              if (confirm("Item taslaÄŸÄ± temizlensin mi?")) clearItemForm();
+              if (confirm("Item taslağı temizlensin mi?")) clearItemForm();
             }}
           />
           <div className="homebrew-card-head">
@@ -1199,7 +1199,7 @@ export function HomebrewLab({
                 updateItemForm("description", event.target.value)
               }
               rows={5}
-              placeholder="Item ne iÅŸe yarÄ±yor? Bonus, hasar, Ã¶zel kural..."
+              placeholder="Item ne işe yarıyor? Bonus, hasar, özel kural..."
             />
           </label>
         </form>
@@ -1209,11 +1209,11 @@ export function HomebrewLab({
           onSubmit={handleCreateMonster}
         >
           <AutosaveStatus
-            label="Monster/NPC taslaÄŸÄ±"
+            label="Monster/NPC taslağı"
             lastSavedAt={monsterFormSavedAt}
             restoredAt={monsterFormRestoredAt}
             onClear={() => {
-              if (confirm("Monster/NPC taslaÄŸÄ± temizlensin mi?")) clearMonsterForm();
+              if (confirm("Monster/NPC taslağı temizlensin mi?")) clearMonsterForm();
             }}
           />
           <div className="homebrew-card-head">
@@ -1527,7 +1527,7 @@ export function HomebrewLab({
                   updateMonsterForm("actionDescription", event.target.value)
                 }
                 rows={3}
-                placeholder="Hit sonrasÄ± ekstra efekt, save, prone, grapple..."
+                placeholder="Hit sonrası ekstra efekt, save, prone, grapple..."
               />
             </label>
 
@@ -1545,7 +1545,7 @@ export function HomebrewLab({
                 updateMonsterForm("traitsText", event.target.value)
               }
               rows={4}
-              placeholder="Her satÄ±ra bir trait: Pack Tactics. ..., Sunlight Sensitivity. ..."
+              placeholder="Her satıra bir trait: Pack Tactics. ..., Sunlight Sensitivity. ..."
             />
           </label>
 
@@ -1557,7 +1557,7 @@ export function HomebrewLab({
                 updateMonsterForm("actionsText", event.target.value)
               }
               rows={5}
-              placeholder="Her satÄ±ra bir action: Scimitar. Melee Weapon Attack... Hit: 1d6+2 slashing damage."
+              placeholder="Her satıra bir action: Scimitar. Melee Weapon Attack... Hit: 1d6+2 slashing damage."
             />
           </label>
 
@@ -1569,7 +1569,7 @@ export function HomebrewLab({
                 updateMonsterForm("description", event.target.value)
               }
               rows={4}
-              placeholder="Lore, taktik, masadaki rolÃ¼..."
+              placeholder="Lore, taktik, masadaki rolü..."
             />
           </label>
         </form>
@@ -1587,7 +1587,7 @@ export function HomebrewLab({
           {homebrewSpells.length === 0 ? (
             <div className="empty-panel compact-empty">
               <h2>Spell yok.</h2>
-              <p>DM henÃ¼z gerÃ§eklik yasalarÄ±nÄ± bozmadÄ±. Nadiren gÃ¼zel.</p>
+              <p>DM henüz gerçeklik yasalarını bozmadı. Nadiren güzel.</p>
             </div>
           ) : (
             <div className="homebrew-list">
@@ -1595,7 +1595,7 @@ export function HomebrewLab({
                 <article className="homebrew-list-item" key={spell.id}>
                   <div>
                     <span className="mini-label">
-                      {spell.level === 0 ? "Cantrip" : `Level ${spell.level}`} â€¢{" "}
+                      {spell.level === 0 ? "Cantrip" : `Level ${spell.level}`} •{" "}
                       {spell.school}
                     </span>
                     <h3>{spell.name}</h3>
@@ -1638,7 +1638,7 @@ export function HomebrewLab({
           {homebrewItems.length === 0 ? (
             <div className="empty-panel compact-empty">
               <h2>Item yok.</h2>
-              <p>Ã‡anta boÅŸ. MaceracÄ± iÃ§in utanÃ§, performans iÃ§in avantaj.</p>
+              <p>Çanta boş. Maceracı için utanç, performans için avantaj.</p>
             </div>
           ) : (
             <div className="homebrew-list">
@@ -1646,7 +1646,7 @@ export function HomebrewLab({
                 <article className="homebrew-list-item" key={item.id}>
                   <div>
                     <span className="mini-label">
-                      {item.category} â€¢ {item.weight} lb
+                      {item.category} • {item.weight} lb
                     </span>
                     <h3>{item.name}</h3>
                     <p>{item.description}</p>
@@ -1690,7 +1690,7 @@ export function HomebrewLab({
             <div className="empty-panel compact-empty">
               <h2>Monster yok.</h2>
               <p>
-                HenÃ¼z kimseyi oyuncularÄ±n Ã¼stÃ¼ne salmadÄ±k. Nadir bir barÄ±ÅŸ anÄ±.
+                Henüz kimseyi oyuncuların üstüne salmadık. Nadir bir barış anı.
               </p>
             </div>
           ) : (
@@ -1699,7 +1699,7 @@ export function HomebrewLab({
                 <article className="homebrew-list-item" key={monster.id}>
                   <div>
                     <span className="mini-label">
-                      {monster.size} {monster.type} â€¢ CR{" "}
+                      {monster.size} {monster.type} • CR{" "}
                       {monster.challengeRating}
                     </span>
                     <h3>{monster.name}</h3>
@@ -1725,4 +1725,3 @@ export function HomebrewLab({
     </PageShell>
   );
 }
-

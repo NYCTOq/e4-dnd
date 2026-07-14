@@ -1,4 +1,4 @@
-﻿import { useDeferredValue, useEffect, useMemo, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import type { DiceRollResult } from "../../core/dice/dice.types";
@@ -269,7 +269,7 @@ export function MonsterLibrary({
 
     if (!parsedDamage) {
       alert(
-        "Bu monster action iÃ§inde otomatik okunabilir damage dice bulamadÄ±m. Evet, metin parse etmek hÃ¢lÃ¢ kÃ¼Ã§Ã¼k bir lanet.",
+        "Bu monster action içinde otomatik okunabilir damage dice bulamadım. Evet, metin parse etmek hâlâ küçük bir lanet.",
       );
       return;
     }
@@ -281,19 +281,19 @@ export function MonsterLibrary({
     <PageShell
       eyebrow="Monster Library"
       title="Monsters & NPCs"
-      description="HazÄ±r yaratÄ±k ve NPC stat block arÅŸivi. Encounter modÃ¼lÃ¼ ÅŸimdilik bekliyor ama canavarlarÄ± rafa diziyoruz, Ã§Ã¼nkÃ¼ kaosun da kataloglanmasÄ± gerekir."
+      description="Hazır yaratık ve NPC stat block arşivi. Encounter modülü şimdilik bekliyor ama canavarları rafa diziyoruz, çünkü kaosun da kataloglanması gerekir."
     >
       {isRulesetLoading ? (
         <div className="empty-panel">
-          <h2>Monster data yÃ¼kleniyor...</h2>
+          <h2>Monster data yükleniyor...</h2>
           <p>
-            CanavarlarÄ± kafeslerinden Ã§Ä±karÄ±yoruz. Muhtemelen iyi bir fikir
-            deÄŸildir.
+            Canavarları kafeslerinden çıkarıyoruz. Muhtemelen iyi bir fikir
+            değildir.
           </p>
         </div>
       ) : rulesetError ? (
         <div className="empty-panel">
-          <h2>Monster data yÃ¼klenemedi</h2>
+          <h2>Monster data yüklenemedi</h2>
           <p>{rulesetError}</p>
         </div>
       ) : (
@@ -314,7 +314,7 @@ export function MonsterLibrary({
             <div>
               <span className="mini-label">Filtered</span>
               <strong>{filteredMonsters.length}</strong>
-              <p>sonuÃ§</p>
+              <p>sonuç</p>
             </div>
 
             <div>
@@ -340,7 +340,7 @@ export function MonsterLibrary({
                 value={typeFilter}
                 onChange={(event) => setTypeFilter(event.target.value)}
               >
-                <option value="all">TÃ¼mÃ¼</option>
+                <option value="all">Tümü</option>
                 {monsterTypes.map((type) => (
                   <option key={type} value={type}>
                     {type}
@@ -355,7 +355,7 @@ export function MonsterLibrary({
                 value={crFilter}
                 onChange={(event) => setCrFilter(event.target.value)}
               >
-                <option value="all">TÃ¼mÃ¼</option>
+                <option value="all">Tümü</option>
                 {challengeRatings.map((challengeRating) => (
                   <option key={challengeRating} value={challengeRating}>
                     CR {challengeRating}
@@ -374,14 +374,14 @@ export function MonsterLibrary({
                   )
                 }
               >
-                <option value="all">TÃ¼mÃ¼</option>
+                <option value="all">Tümü</option>
                 <option value="official">Data pack</option>
                 <option value="homebrew">Homebrew</option>
               </select>
             </label>
 
             <label>
-              SÄ±rala
+              Sırala
               <select
                 value={sortOrder}
                 onChange={(event) =>
@@ -390,9 +390,9 @@ export function MonsterLibrary({
                   )
                 }
               >
-                <option value="name">Ä°sim A-Z</option>
-                <option value="cr-asc">CR dÃ¼ÅŸÃ¼kten</option>
-                <option value="cr-desc">CR yÃ¼ksekten</option>
+                <option value="name">İsim A-Z</option>
+                <option value="cr-asc">CR düşükten</option>
+                <option value="cr-desc">CR yüksekten</option>
               </select>
             </label>
 
@@ -403,13 +403,13 @@ export function MonsterLibrary({
                 className={showFavoritesOnly ? "active" : ""}
                 onClick={() => setShowFavoritesOnly((current) => !current)}
               >
-                {showFavoritesOnly ? "Sadece favoriler" : "TÃ¼mÃ¼"}
+                {showFavoritesOnly ? "Sadece favoriler" : "Tümü"}
               </button>
             </label>
 
             <div className="filter-result-count">
               <strong>{filteredMonsters.length}</strong>
-              <span>sonuÃ§</span>
+              <span>sonuç</span>
             </div>
 
             <button
@@ -418,16 +418,16 @@ export function MonsterLibrary({
               onClick={resetFilters}
               disabled={!hasActiveFilters}
             >
-              Filtreleri sÄ±fÄ±rla
+              Filtreleri sıfırla
             </button>
           </div>
 
           {filteredMonsters.length === 0 ? (
             <div className="empty-panel">
-              <h2>Monster bulunamadÄ±.</h2>
+              <h2>Monster bulunamadı.</h2>
               <p>
-                Filtreler fazla acÄ±masÄ±z olmuÅŸ olabilir. Canavarlar bile bu
-                kadar sorgulanmayÄ± hak etmiyor.
+                Filtreler fazla acımasız olmuş olabilir. Canavarlar bile bu
+                kadar sorgulanmayı hak etmiyor.
               </p>
             </div>
           ) : (
@@ -449,7 +449,7 @@ export function MonsterLibrary({
                         <span className="mini-label">
                           {monster.size} {monster.type}
                           {monster.id.startsWith("homebrew-monster-")
-                            ? " â€¢ Homebrew"
+                            ? " • Homebrew"
                             : ""}
                         </span>
                         <h2>{monster.name}</h2>
@@ -464,7 +464,7 @@ export function MonsterLibrary({
                           type="button"
                           onClick={() => toggleFavoriteMonster(monster.id)}
                         >
-                          {isFavorite ? "â˜… Favori" : "â˜† Favori"}
+                          {isFavorite ? "★ Favori" : "☆ Favori"}
                         </button>
                         <button
                           type="button"
@@ -601,7 +601,7 @@ export function MonsterLibrary({
                           <span className="mini-label">Latest Monster Roll</span>
                           <strong>{latestMonsterRoll.total}</strong>
                           <p>
-                            {latestMonsterRoll.notation} â†’ [
+                            {latestMonsterRoll.notation} → [
                             {latestMonsterRoll.rolls.join(", ")}]
                             {latestMonsterRoll.modifier !== 0
                               ? ` ${
@@ -614,7 +614,7 @@ export function MonsterLibrary({
                         <div className="monster-latest-roll">
                           <span className="mini-label">Latest Monster Roll</span>
                           <strong>--</strong>
-                          <p>HenÃ¼z roll yok. Canavar bile beklemede.</p>
+                          <p>Henüz roll yok. Canavar bile beklemede.</p>
                         </div>
                       )}
                     </div>
@@ -719,11 +719,11 @@ export function MonsterDetail({
     return (
       <PageShell
         eyebrow="Monster Detail"
-        title="Monster yÃ¼kleniyor"
-        description="Stat block Ã§aÄŸÄ±rÄ±yoruz. Canavar bile loading state yaÅŸÄ±yor."
+        title="Monster yükleniyor"
+        description="Stat block çağırıyoruz. Canavar bile loading state yaşıyor."
       >
         <div className="empty-panel">
-          <h2>Data yÃ¼kleniyor...</h2>
+          <h2>Data yükleniyor...</h2>
           <p>Beklemedeyiz. Dramatik ama teknik.</p>
         </div>
       </PageShell>
@@ -734,11 +734,11 @@ export function MonsterDetail({
     return (
       <PageShell
         eyebrow="Monster Detail"
-        title="Monster data yÃ¼klenemedi"
+        title="Monster data yüklenemedi"
         description="Bir yerlerde JSON inledi."
       >
         <div className="empty-panel">
-          <h2>Data yÃ¼klenemedi</h2>
+          <h2>Data yüklenemedi</h2>
           <p>{rulesetError}</p>
         </div>
       </PageShell>
@@ -749,11 +749,11 @@ export function MonsterDetail({
     return (
       <PageShell
         eyebrow="Monster Detail"
-        title="Monster bulunamadÄ±"
-        description="Ya silindi ya da boyut kapÄ±sÄ±ndan kaÃ§tÄ±. Ä°kisi de sinir bozucu."
+        title="Monster bulunamadı"
+        description="Ya silindi ya da boyut kapısından kaçtı. İkisi de sinir bozucu."
       >
         <button className="primary-action" onClick={() => navigate("/monsters")}>
-          Monster listesine dÃ¶n
+          Monster listesine dön
         </button>
       </PageShell>
     );
@@ -834,7 +834,7 @@ export function MonsterDetail({
 
     if (!parsedDamage) {
       alert(
-        "Bu monster action iÃ§inde otomatik okunabilir damage dice bulamadÄ±m. Metin parse etmek yine medeniyeti yordu.",
+        "Bu monster action içinde otomatik okunabilir damage dice bulamadım. Metin parse etmek yine medeniyeti yordu.",
       );
       return;
     }
@@ -846,7 +846,7 @@ export function MonsterDetail({
     <PageShell
       eyebrow="Monster Detail"
       title={activeMonster.name}
-      description={`${activeMonster.size} ${activeMonster.type} â€¢ ${activeMonster.alignment} â€¢ CR ${activeMonster.challengeRating}`}
+      description={`${activeMonster.size} ${activeMonster.type} • ${activeMonster.alignment} • CR ${activeMonster.challengeRating}`}
     >
       <div className="monster-detail-layout">
         <section className="monster-detail-main-card">
@@ -860,9 +860,9 @@ export function MonsterDetail({
             <div className="monster-card-actions">
               <strong className="level-badge">CR {activeMonster.challengeRating}</strong>
               <button onClick={() => toggleFavoriteMonster(activeMonster.id)}>
-                {isFavorite ? "â˜… Favori" : "â˜† Favori"}
+                {isFavorite ? "★ Favori" : "☆ Favori"}
               </button>
-              <button onClick={() => navigate("/monsters")}>Listeye DÃ¶n</button>
+              <button onClick={() => navigate("/monsters")}>Listeye Dön</button>
             </div>
           </div>
 
@@ -912,7 +912,7 @@ export function MonsterDetail({
             {activeMonster.traits.length > 0 ? (
               activeMonster.traits.map((trait) => <p key={trait}>{trait}</p>)
             ) : (
-              <p>Trait yok. Canavar sade yaÅŸamÄ± seÃ§miÅŸ.</p>
+              <p>Trait yok. Canavar sade yaşamı seçmiş.</p>
             )}
           </section>
 
@@ -985,7 +985,7 @@ export function MonsterDetail({
               <>
                 <strong>{latestMonsterRoll.total}</strong>
                 <p>
-                  {latestMonsterRoll.notation} â†’ [
+                  {latestMonsterRoll.notation} → [
                   {latestMonsterRoll.rolls.join(", ")}]
                   {latestMonsterRoll.modifier !== 0
                     ? ` ${latestMonsterRoll.modifier > 0 ? "+" : ""}${
@@ -997,7 +997,7 @@ export function MonsterDetail({
             ) : (
               <>
                 <strong>--</strong>
-                <p>HenÃ¼z roll yok. Canavar bile sÄ±ra bekliyor.</p>
+                <p>Henüz roll yok. Canavar bile sıra bekliyor.</p>
               </>
             )}
           </div>
@@ -1005,7 +1005,7 @@ export function MonsterDetail({
           <div className="monster-roll-history-list">
             <span className="mini-label">Roll History</span>
             {activeCombatState.rollHistory.length === 0 ? (
-              <p>GeÃ§miÅŸ boÅŸ. Stat block henÃ¼z suÃ§ iÅŸlememiÅŸ.</p>
+              <p>Geçmiş boş. Stat block henüz suç işlememiş.</p>
             ) : (
               activeCombatState.rollHistory.map((roll) => (
                 <div className="monster-roll-history-item" key={roll.id}>
@@ -1020,4 +1020,3 @@ export function MonsterDetail({
     </PageShell>
   );
 }
-

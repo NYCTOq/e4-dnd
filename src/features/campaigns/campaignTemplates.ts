@@ -1,4 +1,4 @@
-﻿import type { CampaignEncounterToolPreferences } from "./campaignTypes";
+import type { CampaignEncounterToolPreferences } from "./campaignTypes";
 
 export type CampaignTemplateId =
   | "simple"
@@ -19,20 +19,20 @@ export type CampaignTemplate = {
 export const CAMPAIGN_TEMPLATES: CampaignTemplate[] = [
   {
     id: "simple",
-    name: "Sade BaÅŸlangÄ±Ã§",
+    name: "Sade Başlangıç",
     eyebrow: "Minimal",
     description:
-      "YalnÄ±zca temel party, not, NPC ve quest alanlarÄ±. Ekstra DM araÃ§larÄ± uygulama ayarÄ±ndaki varsayÄ±lan profili kullanÄ±r.",
+      "Yalnızca temel party, not, NPC ve quest alanları. Ekstra DM araçları uygulama ayarındaki varsayılan profili kullanır.",
     timelineEnabled: false,
     encounterTools: null,
-    highlights: ["HÄ±zlÄ± kurulum", "Temel takip", "Ayar profilini kullanÄ±r"],
+    highlights: ["Hızlı kurulum", "Temel takip", "Ayar profilini kullanır"],
   },
   {
     id: "classic",
     name: "Klasik Macera",
     eyebrow: "Dengeli",
     description:
-      "Quest, session timeline ve temel encounter desteÄŸi birlikte gelir. Ã‡oÄŸu masa iÃ§in makul orta yol.",
+      "Quest, session timeline ve temel encounter desteği birlikte gelir. Çoğu masa için makul orta yol.",
     timelineEnabled: true,
     encounterTools: {
       difficulty: true,
@@ -40,14 +40,14 @@ export const CAMPAIGN_TEMPLATES: CampaignTemplate[] = [
       conditions: true,
       combatRolls: false,
     },
-    highlights: ["Timeline aÃ§Ä±k", "Difficulty aÃ§Ä±k", "Condition takibi"],
+    highlights: ["Timeline açık", "Difficulty açık", "Condition takibi"],
   },
   {
     id: "story",
     name: "Story-Heavy",
-    eyebrow: "AnlatÄ±",
+    eyebrow: "Anlatı",
     description:
-      "Session timeline ve hikÃ¢ye kayÄ±tlarÄ± Ã¶nde; encounter araÃ§larÄ± kapalÄ±. Karakter dramÄ± zaten yeterince karmaÅŸÄ±k.",
+      "Session timeline ve hikâye kayıtları önde; encounter araçları kapalı. Karakter dramı zaten yeterince karmaşık.",
     timelineEnabled: true,
     encounterTools: {
       difficulty: false,
@@ -55,14 +55,14 @@ export const CAMPAIGN_TEMPLATES: CampaignTemplate[] = [
       conditions: false,
       combatRolls: false,
     },
-    highlights: ["Timeline aÃ§Ä±k", "Sade encounter", "Not odaklÄ±"],
+    highlights: ["Timeline açık", "Sade encounter", "Not odaklı"],
   },
   {
     id: "combat",
     name: "Encounter-Heavy",
     eyebrow: "Taktik",
     description:
-      "Difficulty, loot, condition ve combat roll araÃ§larÄ±nÄ±n tamamÄ± aÃ§Ä±k gelir. DM kokpiti isteyenler iÃ§in.",
+      "Difficulty, loot, condition ve combat roll araçlarının tamamı açık gelir. DM kokpiti isteyenler için.",
     timelineEnabled: false,
     encounterTools: {
       difficulty: true,
@@ -70,7 +70,7 @@ export const CAMPAIGN_TEMPLATES: CampaignTemplate[] = [
       conditions: true,
       combatRolls: true,
     },
-    highlights: ["TÃ¼m DM araÃ§larÄ±", "Loot aÃ§Ä±k", "Combat roll aÃ§Ä±k"],
+    highlights: ["Tüm DM araçları", "Loot açık", "Combat roll açık"],
   },
 ];
 
@@ -80,4 +80,3 @@ export function getCampaignTemplate(id: CampaignTemplateId) {
     CAMPAIGN_TEMPLATES[0]
   );
 }
-

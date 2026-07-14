@@ -1,0 +1,80 @@
+.global-search-result-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.65rem;
+  align-items: stretch;
+}
+
+.global-search-result-row .global-search-result { min-width: 0; }
+
+.favorite-toggle {
+  width: 3rem;
+  border: 1px solid var(--border-color, rgba(255,255,255,.12));
+  border-radius: 1rem;
+  background: rgba(255,255,255,.04);
+  color: inherit;
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+.favorite-toggle:hover,
+.favorite-toggle.active {
+  transform: translateY(-1px);
+  background: rgba(255, 202, 88, .13);
+  border-color: rgba(255, 202, 88, .4);
+}
+
+.favorite-badge { background: rgba(255, 202, 88, .14) !important; }
+
+.favorite-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.favorite-dashboard-card {
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 1.2rem;
+  background: rgba(255,255,255,.035);
+}
+
+.favorite-dashboard-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: .8rem;
+}
+
+.favorite-dashboard-card-head span,
+.favorite-dashboard-card-head button {
+  border: 0;
+  border-radius: 999px;
+  padding: .35rem .65rem;
+  background: rgba(255,255,255,.08);
+  color: inherit;
+}
+
+.favorite-dashboard-card-head button { cursor: pointer; }
+.favorite-quick-list { display: grid; gap: .55rem; }
+.favorite-quick-list a {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: .65rem;
+  align-items: center;
+  padding: .65rem;
+  border-radius: .85rem;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255,255,255,.035);
+}
+.favorite-quick-list a:hover { background: rgba(255,255,255,.075); }
+.favorite-quick-list a > span:last-child { display: grid; gap: .15rem; min-width: 0; }
+.favorite-quick-list small { opacity: .68; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+@media (max-width: 760px) {
+  .favorite-dashboard-grid { grid-template-columns: 1fr; }
+  .global-search-result-row { grid-template-columns: minmax(0, 1fr) 2.75rem; }
+}

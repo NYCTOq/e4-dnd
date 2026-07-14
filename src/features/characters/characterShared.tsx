@@ -1,4 +1,4 @@
-﻿import { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import type { DndItemData, DndSpellData, RulesetData } from "../../core/rulesets/ruleset.types";
 import type { Character, CharacterDraft, CharacterHitDiePool } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getProficiencyBonus } from "../../core/character/characterCalculator";
@@ -328,7 +328,7 @@ export function getItemRulesSummary(item: DndItemData) {
   if (item.category === "weapon") {
     return [item.damage, item.damageType, item.range ? `Range ${item.range}` : null]
       .filter(Boolean)
-      .join(" â€¢ ");
+      .join(" • ");
   }
 
   if (item.category === "armor") {
@@ -340,14 +340,14 @@ export function getItemRulesSummary(item: DndItemData) {
 
     return [`AC ${item.armorClass}`, item.armorType, dexText]
       .filter(Boolean)
-      .join(" â€¢ ");
+      .join(" • ");
   }
 
   if (item.category === "shield") {
     return `+${item.armorClassBonus ?? 2} AC`;
   }
 
-  return item.tags?.join(" â€¢ ") ?? "Utility";
+  return item.tags?.join(" • ") ?? "Utility";
 }
 
 export function createCharacterFromDraft(draft: CharacterDraft): Character {
@@ -544,12 +544,12 @@ export function CharacterSpellSelector({
 
       {isRulesetLoading ? (
         <div className="empty-panel">
-          <h2>Spell data yÃ¼kleniyor...</h2>
-          <p>BÃ¼yÃ¼leri toparlÄ±yoruz. Raflar yine dramatik biÃ§imde gÄ±cÄ±rdÄ±yor.</p>
+          <h2>Spell data yükleniyor...</h2>
+          <p>Büyüleri toparlıyoruz. Raflar yine dramatik biçimde gıcırdıyor.</p>
         </div>
       ) : rulesetError ? (
         <div className="empty-panel">
-          <h2>Spell data yÃ¼klenemedi</h2>
+          <h2>Spell data yüklenemedi</h2>
           <p>{rulesetError}</p>
         </div>
       ) : rulesetData ? (
@@ -570,7 +570,7 @@ export function CharacterSpellSelector({
                 value={levelFilter}
                 onChange={(event) => setLevelFilter(event.target.value)}
               >
-                <option value="all">TÃ¼mÃ¼</option>
+                <option value="all">Tümü</option>
                 <option value="0">Cantrip</option>
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((level) => (
                   <option key={level} value={level}>
@@ -583,17 +583,17 @@ export function CharacterSpellSelector({
 
           {normalizedClassName.length === 0 ? (
             <div className="spell-selector-note">
-              Class seÃ§ersen liste otomatik daralÄ±r. App sonunda baÄŸlamdan bir
-              ÅŸey anlamaya baÅŸladÄ±, insanlÄ±k adÄ±na Ã¼rkÃ¼tÃ¼cÃ¼.
+              Class seçersen liste otomatik daralır. App sonunda bağlamdan bir
+              şey anlamaya başladı, insanlık adına ürkütücü.
             </div>
           ) : null}
 
           {filteredSpells.length === 0 ? (
             <div className="empty-panel">
-              <h2>Uygun spell bulunamadÄ±.</h2>
+              <h2>Uygun spell bulunamadı.</h2>
               <p>
-                Class, level veya arama filtresi fazla sert olabilir. BÃ¼yÃ¼leri
-                sorgu odasÄ±na almÄ±ÅŸ gibiyiz.
+                Class, level veya arama filtresi fazla sert olabilir. Büyüleri
+                sorgu odasına almış gibiyiz.
               </p>
             </div>
           ) : (
@@ -909,12 +909,12 @@ export function CharacterInventoryManager({
 
       {isRulesetLoading ? (
         <div className="empty-panel">
-          <h2>Item data yÃ¼kleniyor...</h2>
-          <p>Envanter raflarÄ± diziliyor. SandÄ±k simÃ¼lasyonu, insanlÄ±ÄŸÄ±n zirvesi.</p>
+          <h2>Item data yükleniyor...</h2>
+          <p>Envanter rafları diziliyor. Sandık simülasyonu, insanlığın zirvesi.</p>
         </div>
       ) : rulesetError ? (
         <div className="empty-panel">
-          <h2>Item data yÃ¼klenemedi</h2>
+          <h2>Item data yüklenemedi</h2>
           <p>{rulesetError}</p>
         </div>
       ) : rulesetData ? (
@@ -960,7 +960,7 @@ export function CharacterInventoryManager({
                   setCategoryFilter(event.target.value as "all" | DndItemData["category"])
                 }
               >
-                <option value="all">TÃ¼mÃ¼</option>
+                <option value="all">Tümü</option>
                 <option value="weapon">Weapon</option>
                 <option value="armor">Armor</option>
                 <option value="shield">Shield</option>
@@ -971,8 +971,8 @@ export function CharacterInventoryManager({
 
           {filteredItems.length === 0 ? (
             <div className="empty-panel">
-              <h2>Item bulunamadÄ±.</h2>
-              <p>Filtreler itemlarÄ± sÃ¼rgÃ¼ne gÃ¶ndermiÅŸ olabilir. Klasik dijital zalimlik.</p>
+              <h2>Item bulunamadı.</h2>
+              <p>Filtreler itemları sürgüne göndermiş olabilir. Klasik dijital zalimlik.</p>
             </div>
           ) : (
             <div className="inventory-item-list">
@@ -1027,5 +1027,4 @@ export function CharacterInventoryManager({
     </section>
   );
 }
-
 

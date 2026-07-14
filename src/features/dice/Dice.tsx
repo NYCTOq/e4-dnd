@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import type { DiceRollResult } from "../../core/dice/dice.types";
 import { rollDice } from "../../core/dice/diceRoller";
@@ -37,7 +37,7 @@ export function Dice() {
     <PageShell
       eyebrow="Dice Roller"
       title="Zar"
-      description="D4'ten D100'e hÄ±zlÄ± zar atma, custom roll ve son atÄ±ÅŸ geÃ§miÅŸi. GerÃ§ek random, sahte Ã¶zgÃ¼ven."
+      description="D4'ten D100'e hızlı zar atma, custom roll ve son atış geçmişi. Gerçek random, sahte özgüven."
     >
       <div className="dice-layout">
         <section className="dice-main-panel">
@@ -122,7 +122,7 @@ export function Dice() {
               <strong className="dice-total">{latestRoll.total}</strong>
 
               <p>
-                {latestRoll.notation} â†’ [{latestRoll.rolls.join(", ")}]
+                {latestRoll.notation} → [{latestRoll.rolls.join(", ")}]
                 {latestRoll.modifier !== 0
                   ? ` ${latestRoll.modifier > 0 ? "+" : ""}${
                       latestRoll.modifier
@@ -133,14 +133,14 @@ export function Dice() {
           ) : (
             <>
               <strong className="dice-total">--</strong>
-              <p>HenÃ¼z zar atÄ±lmadÄ±. Masa kader bekliyor, dramatik.</p>
+              <p>Henüz zar atılmadı. Masa kader bekliyor, dramatik.</p>
             </>
           )}
 
           <div className="roll-history">
             {rollHistory.length === 0 ? (
               <div className="history-empty">
-                Zar geÃ§miÅŸi boÅŸ. Bu kadar sakinlik D&D masasÄ±na yakÄ±ÅŸmÄ±yor.
+                Zar geçmişi boş. Bu kadar sakinlik D&D masasına yakışmıyor.
               </div>
             ) : (
               rollHistory.map((roll) => (

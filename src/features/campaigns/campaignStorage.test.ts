@@ -1,4 +1,4 @@
-﻿import { beforeEach, describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it } from "vitest";
 import { loadCampaigns } from "./campaignStorage";
 
 class MemoryStorage {
@@ -30,4 +30,3 @@ describe("campaignStorage migration", () => {
     expect(campaign.encounterTools).toEqual({ difficulty: false, loot: false, conditions: false, combatRolls: false });
   });
 });
-

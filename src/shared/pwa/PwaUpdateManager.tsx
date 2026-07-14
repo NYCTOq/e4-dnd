@@ -1,4 +1,4 @@
-﻿import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { registerSW } from "virtual:pwa-register";
 
 type NoticeKind = "update" | "offline" | "cache" | null;
@@ -35,7 +35,7 @@ export function PwaUpdateManager() {
         return () => window.clearInterval(intervalId);
       },
       onRegisterError(error) {
-        console.error("PWA service worker kaydÄ± baÅŸarÄ±sÄ±z:", error);
+        console.error("PWA service worker kaydı başarısız:", error);
       },
     });
 
@@ -58,7 +58,7 @@ export function PwaUpdateManager() {
 
   const handleClearPwaCache = useCallback(async () => {
     const confirmed = window.confirm(
-      "PWA Ã¶nbelleÄŸi temizlenip uygulama yeniden baÅŸlatÄ±lsÄ±n mÄ±? Karakter, campaign ve homebrew kayÄ±tlarÄ±n korunur.",
+      "PWA önbelleği temizlenip uygulama yeniden başlatılsın mı? Karakter, campaign ve homebrew kayıtların korunur.",
     );
 
     if (!confirmed) {
@@ -82,7 +82,7 @@ export function PwaUpdateManager() {
       window.setTimeout(() => window.location.reload(), 450);
     } catch (error) {
       console.error("PWA cache temizlenemedi:", error);
-      window.alert("PWA Ã¶nbelleÄŸi temizlenemedi. TarayÄ±cÄ± ayarlarÄ±ndan site verilerini temizlemeyi deneyebilirsin.");
+      window.alert("PWA önbelleği temizlenemedi. Tarayıcı ayarlarından site verilerini temizlemeyi deneyebilirsin.");
       setIsClearing(false);
     }
   }, []);
@@ -99,10 +99,10 @@ export function PwaUpdateManager() {
       </button>
 
       {isToolsOpen ? (
-        <section className="pwa-tools-panel" aria-label="PWA araÃ§larÄ±">
+        <section className="pwa-tools-panel" aria-label="PWA araçları">
           <div>
-            <strong>PWA araÃ§larÄ±</strong>
-            <span>GÃ¼ncelleme veya eski cache sorunlarÄ±nda kullan.</span>
+            <strong>PWA araçları</strong>
+            <span>Güncelleme veya eski cache sorunlarında kullan.</span>
           </div>
 
           <button
@@ -120,24 +120,24 @@ export function PwaUpdateManager() {
           <div>
             <strong>
               {notice === "update"
-                ? "Yeni E4 D&D sÃ¼rÃ¼mÃ¼ hazÄ±r"
+                ? "Yeni E4 D&D sürümü hazır"
                 : notice === "offline"
-                  ? "Ã‡evrimdÄ±ÅŸÄ± kullanÄ±m hazÄ±r"
-                  : "PWA Ã¶nbelleÄŸi temizlendi"}
+                  ? "Çevrimdışı kullanım hazır"
+                  : "PWA önbelleği temizlendi"}
             </strong>
             <span>
               {notice === "update"
-                ? "GÃ¼ncelleme, aÃ§Ä±k verilerini localStorage iÃ§inde koruyarak uygulamayÄ± yeniden baÅŸlatÄ±r."
+                ? "Güncelleme, açık verilerini localStorage içinde koruyarak uygulamayı yeniden başlatır."
                 : notice === "offline"
-                  ? "Uygulama baÄŸlantÄ± olmadan da aÃ§Ä±labilir. Ä°nsanlÄ±k interneti kesmeyi baÅŸarsa bile zarlar Ã§alÄ±ÅŸacak."
-                  : "Uygulama temiz dosyalarla yeniden baÅŸlatÄ±lÄ±yor."}
+                  ? "Uygulama bağlantı olmadan da açılabilir. İnsanlık interneti kesmeyi başarsa bile zarlar çalışacak."
+                  : "Uygulama temiz dosyalarla yeniden başlatılıyor."}
             </span>
           </div>
 
           <div className="pwa-update-actions">
             {notice === "update" ? (
               <button type="button" onClick={handleUpdate} disabled={isUpdating}>
-                {isUpdating ? "GÃ¼ncelleniyor..." : "GÃ¼ncelle ve yeniden baÅŸlat"}
+                {isUpdating ? "Güncelleniyor..." : "Güncelle ve yeniden başlat"}
               </button>
             ) : null}
 
@@ -156,4 +156,3 @@ export function PwaUpdateManager() {
     </>
   );
 }
-

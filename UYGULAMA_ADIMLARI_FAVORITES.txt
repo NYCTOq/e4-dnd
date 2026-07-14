@@ -1,0 +1,16 @@
+E4 D&D Favorites + Recent Items V1
+
+1) ZIP içeriğini D:\Projects\e4_dnd klasörüne çıkarın ve mevcut dosyaların üzerine yazın.
+2) Eski Global Search dosyalarını güvenle temizleyin:
+   Remove-Item src\features\search\GlobalSearch.tsx -Force -ErrorAction SilentlyContinue
+   Remove-Item src\features\search\GlobalSearch.ts -Force -ErrorAction SilentlyContinue
+   Remove-Item src\features\search\globalSearch.ts -Force -ErrorAction SilentlyContinue
+3) Kontrolleri çalıştırın:
+   npm.cmd install
+   npm.cmd run check
+4) Başarılıysa:
+   git add -A
+   git commit -m "feat: add favorites and recent items"
+   git push
+
+Beklenen sonuç: 8 test dosyası, 19 test, 0 lint hatası ve başarılı production build.

@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getCurrentRelease, RELEASE_NOTES } from "./releaseNotes";
 
@@ -16,7 +16,7 @@ export function ReleaseNotesDialog() {
         setIsOpen(true);
       }
     } catch {
-      // localStorage kapalÄ±ysa sÃ¼rÃ¼m notlarÄ± yalnÄ±zca manuel aÃ§Ä±lÄ±r.
+      // localStorage kapalıysa sürüm notları yalnızca manuel açılır.
     }
   }, []);
 
@@ -26,7 +26,7 @@ export function ReleaseNotesDialog() {
     try {
       localStorage.setItem(LAST_SEEN_VERSION_KEY, __APP_VERSION__);
     } catch {
-      // SÃ¼rÃ¼m notunu kapatmak storage iznine baÄŸlÄ± kalmamalÄ±.
+      // Sürüm notunu kapatmak storage iznine bağlı kalmamalı.
     }
   }
 
@@ -36,10 +36,10 @@ export function ReleaseNotesDialog() {
         type="button"
         className="app-version-button"
         onClick={() => setIsOpen(true)}
-        aria-label={`SÃ¼rÃ¼m notlarÄ±nÄ± aÃ§. Mevcut sÃ¼rÃ¼m ${__APP_VERSION__}`}
+        aria-label={`Sürüm notlarını aç. Mevcut sürüm ${__APP_VERSION__}`}
       >
         <span>v{__APP_VERSION__}</span>
-        <small>SÃ¼rÃ¼m notlarÄ±</small>
+        <small>Sürüm notları</small>
       </button>
 
       {isOpen ? (
@@ -65,9 +65,9 @@ export function ReleaseNotesDialog() {
               <button
                 type="button"
                 onClick={closeReleaseNotes}
-                aria-label="SÃ¼rÃ¼m notlarÄ±nÄ± kapat"
+                aria-label="Sürüm notlarını kapat"
               >
-                Ã—
+                ×
               </button>
             </header>
 
@@ -97,7 +97,7 @@ export function ReleaseNotesDialog() {
               </span>
               <div className="release-notes-footer-actions">
                 <Link to="/updates" className="secondary-action" onClick={closeReleaseNotes}>
-                  TÃ¼m geÃ§miÅŸ
+                  Tüm geçmiş
                 </Link>
                 <button
                   type="button"
@@ -114,4 +114,3 @@ export function ReleaseNotesDialog() {
     </>
   );
 }
-

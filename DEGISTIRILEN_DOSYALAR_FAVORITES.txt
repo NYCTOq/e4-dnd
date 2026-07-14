@@ -1,0 +1,19 @@
+Yeni:
+src/shared/favorites/favoriteStorage.ts
+src/shared/favorites/FavoritesProvider.tsx
+src/shared/favorites/favoriteStorage.test.ts
+src/styles/29-favorites-recents.css
+
+Güncellenen:
+src/main.tsx
+src/features/search/GlobalSearchPage.tsx
+src/features/dashboard/Dashboard.tsx
+src/shared/release/releaseNotes.ts
+src/App.css
+package.json
+package-lock.json
+
+Silinmesi gereken eski dosyalar:
+src/features/search/GlobalSearch.tsx
+src/features/search/GlobalSearch.ts
+src/features/search/globalSearch.ts

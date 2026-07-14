@@ -1,4 +1,4 @@
-﻿import { useDeferredValue, useMemo } from "react";
+import { useDeferredValue, useMemo } from "react";
 import { motion } from "framer-motion";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import { PageShell } from "../../shared/layout/PageShell";
@@ -133,13 +133,13 @@ export function Spellbook({
   return (
     <PageShell
       eyebrow="Spellbook"
-      title="BÃ¼yÃ¼ler"
-      description="BÃ¼yÃ¼leri ara, filtrele ve son kullandÄ±ÄŸÄ±n seÃ§imlerle geri dÃ¶n. Ã‡Ã¼nkÃ¼ aynÄ± filtreyi her oturumda yeniden kurmak kahramanlÄ±k deÄŸildir."
+      title="Büyüler"
+      description="Büyüleri ara, filtrele ve son kullandığın seçimlerle geri dön. Çünkü aynı filtreyi her oturumda yeniden kurmak kahramanlık değildir."
     >
       {isRulesetLoading ? (
-        <div className="empty-panel"><h2>Spell data yÃ¼kleniyor...</h2><p>BÃ¼yÃ¼ kitabÄ± aÃ§Ä±lÄ±yor.</p></div>
+        <div className="empty-panel"><h2>Spell data yükleniyor...</h2><p>Büyü kitabı açılıyor.</p></div>
       ) : rulesetError ? (
-        <div className="empty-panel"><h2>Spell data yÃ¼klenemedi</h2><p>{rulesetError}</p></div>
+        <div className="empty-panel"><h2>Spell data yüklenemedi</h2><p>{rulesetError}</p></div>
       ) : rulesetData ? (
         <>
           <div className="character-filter-panel filter-panel-extended">
@@ -154,7 +154,7 @@ export function Spellbook({
             <label>
               Level
               <select value={levelFilter} onChange={(event) => setLevelFilter(event.target.value)}>
-                <option value="all">TÃ¼mÃ¼</option>
+                <option value="all">Tümü</option>
                 <option value="0">Cantrip</option>
                 {[1,2,3,4,5,6,7,8,9].map((level) => <option key={level} value={level}>Level {level}</option>)}
               </select>
@@ -162,24 +162,24 @@ export function Spellbook({
             <label>
               Class
               <select value={classFilter} onChange={(event) => setClassFilter(event.target.value)}>
-                <option value="all">TÃ¼mÃ¼</option>
+                <option value="all">Tümü</option>
                 {availableSpellClasses.map((className) => <option key={className} value={className}>{className}</option>)}
               </select>
             </label>
             <label>
               Kaynak
               <select value={sourceFilter} onChange={(event) => setSourceFilter(event.target.value as SpellSourceFilter)}>
-                <option value="all">TÃ¼mÃ¼</option>
+                <option value="all">Tümü</option>
                 <option value="official">Data pack</option>
                 <option value="homebrew">Homebrew</option>
               </select>
             </label>
             <label>
-              SÄ±rala
+              Sırala
               <select value={sortOrder} onChange={(event) => setSortOrder(event.target.value as SpellSort)}>
                 <option value="level-name">Level + isim</option>
-                <option value="name">Ä°sim A-Z</option>
-                <option value="level-desc">YÃ¼ksek level Ã¶nce</option>
+                <option value="name">İsim A-Z</option>
+                <option value="level-desc">Yüksek level önce</option>
               </select>
             </label>
             <div className="filter-toggle-group">
@@ -187,11 +187,11 @@ export function Spellbook({
               <button type="button" className={ritualOnly ? "active" : ""} onClick={() => setRitualOnly((value) => !value)}>Ritual</button>
             </div>
             <div className="filter-result-count"><strong>{filteredSpells.length}</strong><span>spell</span></div>
-            <button type="button" className="filter-reset-button" onClick={resetFilters} disabled={!hasActiveFilters}>Filtreleri sÄ±fÄ±rla</button>
+            <button type="button" className="filter-reset-button" onClick={resetFilters} disabled={!hasActiveFilters}>Filtreleri sıfırla</button>
           </div>
 
           {filteredSpells.length === 0 ? (
-            <div className="empty-panel"><h2>BÃ¼yÃ¼ bulunamadÄ±.</h2><p>Filtreleri sÄ±fÄ±rla; bÃ¼yÃ¼ler muhtemelen baÅŸka boyuta kaÃ§madÄ±.</p></div>
+            <div className="empty-panel"><h2>Büyü bulunamadı.</h2><p>Filtreleri sıfırla; büyüler muhtemelen başka boyuta kaçmadı.</p></div>
           ) : (
             <div className="spell-grid">
               {filteredSpells.map((spell) => {
@@ -200,7 +200,7 @@ export function Spellbook({
                   <motion.article className="spell-card" key={spell.id} whileHover={{ y: -5 }}>
                     <div className="library-item-top">
                       <div>
-                        <span className="mini-label">{spell.school}{isHomebrew ? " â€¢ Homebrew" : ""}</span>
+                        <span className="mini-label">{spell.school}{isHomebrew ? " • Homebrew" : ""}</span>
                         <h3>{spell.name}</h3>
                       </div>
                       <span>{spell.level === 0 ? "Cantrip" : `Lv. ${spell.level}`}</span>
@@ -227,4 +227,3 @@ export function Spellbook({
     </PageShell>
   );
 }
-

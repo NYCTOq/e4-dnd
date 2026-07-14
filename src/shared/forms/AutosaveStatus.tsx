@@ -1,4 +1,4 @@
-﻿type AutosaveStatusProps = {
+type AutosaveStatusProps = {
   lastSavedAt: string;
   restoredAt?: string;
   onClear?: () => void;
@@ -30,18 +30,17 @@ export function AutosaveStatus({
         <strong>{label}</strong>
         <span>
           {restoredTime
-            ? `KurtarÄ±ldÄ± Â· ${restoredTime}`
+            ? `Kurtarıldı · ${restoredTime}`
             : savedTime
-              ? `Otomatik kaydedildi Â· ${savedTime}`
-              : "DeÄŸiÅŸiklikler cihazda otomatik saklanÄ±r"}
+              ? `Otomatik kaydedildi · ${savedTime}`
+              : "Değişiklikler cihazda otomatik saklanır"}
         </span>
       </div>
       {onClear ? (
         <button type="button" onClick={onClear}>
-          TaslaÄŸÄ± temizle
+          Taslağı temizle
         </button>
       ) : null}
     </div>
   );
 }
-

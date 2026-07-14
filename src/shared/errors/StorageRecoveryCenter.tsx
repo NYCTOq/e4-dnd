@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   clearRecoveryRecords,
   downloadRecoveryRecord,
@@ -27,8 +27,8 @@ export function StorageRecoveryCenter() {
   return (
     <div className="recovery-center">
       <button type="button" className="recovery-alert" onClick={() => setIsOpen(true)}>
-        <strong>{records.length} bozuk kayÄ±t gÃ¼venli alana taÅŸÄ±ndÄ±</strong>
-        <span>Ä°ncele ve ham veriyi indir</span>
+        <strong>{records.length} bozuk kayıt güvenli alana taşındı</strong>
+        <span>İncele ve ham veriyi indir</span>
       </button>
 
       {isOpen ? (
@@ -37,13 +37,13 @@ export function StorageRecoveryCenter() {
             <div className="recovery-modal-head">
               <div>
                 <span className="eyebrow">Veri Kurtarma</span>
-                <h2>Bozuk kayÄ±tlar karantinada</h2>
+                <h2>Bozuk kayıtlar karantinada</h2>
               </div>
               <button type="button" onClick={() => setIsOpen(false)}>Kapat</button>
             </div>
             <p>
-              Bu kayÄ±tlar uygulamanÄ±n aÃ§Ä±lmasÄ±nÄ± engellemesin diye asÄ±l anahtarlarÄ±ndan
-              kaldÄ±rÄ±ldÄ±. Ham iÃ§eriÄŸi indirip inceleyebilir veya artÄ±k gerekmiyorsa silebilirsin.
+              Bu kayıtlar uygulamanın açılmasını engellemesin diye asıl anahtarlarından
+              kaldırıldı. Ham içeriği indirip inceleyebilir veya artık gerekmiyorsa silebilirsin.
             </p>
             <div className="recovery-record-list">
               {records.map((record) => (
@@ -55,13 +55,13 @@ export function StorageRecoveryCenter() {
                   </div>
                   <div className="recovery-record-actions">
                     <button type="button" onClick={() => downloadRecoveryRecord(record)}>Ham veriyi indir</button>
-                    <button type="button" className="danger-action" onClick={() => removeRecoveryRecord(record.id)}>KaydÄ± sil</button>
+                    <button type="button" className="danger-action" onClick={() => removeRecoveryRecord(record.id)}>Kaydı sil</button>
                   </div>
                 </article>
               ))}
             </div>
             <button type="button" className="danger-action recovery-clear" onClick={clearRecoveryRecords}>
-              TÃ¼m kurtarma kayÄ±tlarÄ±nÄ± temizle
+              Tüm kurtarma kayıtlarını temizle
             </button>
           </section>
         </div>
@@ -69,4 +69,3 @@ export function StorageRecoveryCenter() {
     </div>
   );
 }
-

@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import type { CampaignEncounterParticipant } from "./campaignTypes";
 
 const PRESET_CONDITIONS = [
@@ -42,7 +42,7 @@ export function EncounterConditionTracker({ participant, onAdd, onRemove, onChan
             <div className="encounter-condition-chip" key={condition.id}>
               <strong>{condition.name}</strong>
               <select
-                aria-label={`${condition.name} sÃ¼resi`}
+                aria-label={`${condition.name} süresi`}
                 value={condition.remainingRounds ?? "until-removed"}
                 onChange={(event) =>
                   onChangeRounds(
@@ -51,12 +51,12 @@ export function EncounterConditionTracker({ participant, onAdd, onRemove, onChan
                   )
                 }
               >
-                <option value="until-removed">KaldÄ±rÄ±lana dek</option>
+                <option value="until-removed">Kaldırılana dek</option>
                 {[1,2,3,4,5,6,7,8,9,10].map((value) => (
                   <option value={value} key={value}>{value} round</option>
                 ))}
               </select>
-              <button type="button" onClick={() => onRemove(condition.id)}>Ã—</button>
+              <button type="button" onClick={() => onRemove(condition.id)}>×</button>
             </div>
           ))}
         </div>
@@ -68,7 +68,7 @@ export function EncounterConditionTracker({ participant, onAdd, onRemove, onChan
         </select>
         <input value={customName} onChange={(event) => setCustomName(event.target.value)} placeholder="Custom condition" />
         <select value={rounds} onChange={(event) => setRounds(event.target.value)}>
-          <option value="until-removed">SÃ¼resiz</option>
+          <option value="until-removed">Süresiz</option>
           {[1,2,3,4,5,6,7,8,9,10].map((value) => <option value={value} key={value}>{value} round</option>)}
         </select>
         <button type="button" onClick={addCondition}>Condition Ekle</button>
@@ -76,4 +76,3 @@ export function EncounterConditionTracker({ participant, onAdd, onRemove, onChan
     </section>
   );
 }
-

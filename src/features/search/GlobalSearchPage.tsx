@@ -8,6 +8,7 @@ import type {
   RulesetData,
 } from "../../core/rulesets/ruleset.types";
 import { PageShell } from "../../shared/layout/PageShell";
+import { useFavorites } from "../../shared/favorites/FavoritesProvider";
 import type { Campaign } from "../campaigns/campaignTypes";
 import {
   buildGlobalSearchEntries,
@@ -59,6 +60,7 @@ export function GlobalSearch({
   rulesetError,
 }: GlobalSearchProps) {
   const [searchParams, setSearchParams] = useSearchParams();
+  const { isFavorite, toggleFavorite, recordRecent } = useFavorites();
   const query = searchParams.get("q") ?? "";
   const rawCategory = searchParams.get("category") ?? "all";
   const category = CATEGORIES.includes(rawCategory as GlobalSearchCategory | "all")
@@ -159,23 +161,50 @@ export function GlobalSearch({
 
       {results.length ? (
         <section className="global-search-results" aria-label="Arama sonuçları">
-          {results.map((result) => (
-            <Link className="global-search-result" to={result.to} key={result.id}>
-              <span className="global-search-result-icon" aria-hidden="true">
-                {result.icon}
-              </span>
-              <span className="global-search-result-copy">
-                <span className="global-search-result-heading">
-                  <strong>{result.title}</strong>
-                  <span>{CATEGORY_LABELS[result.category]}</span>
-                  {result.isHomebrew ? <em>Homebrew</em> : null}
-                </span>
-                <small>{result.subtitle}</small>
-                <p>{result.description}</p>
-              </span>
-              <span className="global-search-open" aria-hidden="true">→</span>
-            </Link>
-          ))}
+          {results.map((result) => {
+            const favoriteItem = {
+              id: result.id,
+              title: result.title,
+              subtitle: result.subtitle,
+              to: result.to,
+              icon: result.icon,
+              category: result.category,
+            };
+
+            return (
+              <article className="global-search-result-row" key={result.id}>
+                <Link
+                  className="global-search-result"
+                  to={result.to}
+                  onClick={() => recordRecent(favoriteItem)}
+                >
+                  <span className="global-search-result-icon" aria-hidden="true">
+                    {result.icon}
+                  </span>
+                  <span className="global-search-result-copy">
+                    <span className="global-search-result-heading">
+                      <strong>{result.title}</strong>
+                      <span>{CATEGORY_LABELS[result.category]}</span>
+                      {result.isHomebrew ? <em>Homebrew</em> : null}
+                      {isFavorite(result.id) ? <em className="favorite-badge">Favori</em> : null}
+                    </span>
+                    <small>{result.subtitle}</small>
+                    <p>{result.description}</p>
+                  </span>
+                  <span className="global-search-open" aria-hidden="true">→</span>
+                </Link>
+                <button
+                  type="button"
+                  className={isFavorite(result.id) ? "favorite-toggle active" : "favorite-toggle"}
+                  aria-label={isFavorite(result.id) ? `${result.title} favorilerden çıkar` : `${result.title} favorilere ekle`}
+                  aria-pressed={isFavorite(result.id)}
+                  onClick={() => toggleFavorite(favoriteItem)}
+                >
+                  {isFavorite(result.id) ? "★" : "☆"}
+                </button>
+              </article>
+            );
+          })}
         </section>
       ) : (
         <div className="global-search-empty">

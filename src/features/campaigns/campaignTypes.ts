@@ -1,4 +1,4 @@
-﻿export type CampaignNote = {
+export type CampaignNote = {
   id: string;
   title: string;
   body: string;
@@ -102,4 +102,3 @@ export type Campaign = {
   createdAt: string;
   updatedAt: string;
 };
-

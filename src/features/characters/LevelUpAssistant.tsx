@@ -1,4 +1,4 @@
-﻿import { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import type { Character, AbilityKey } from "../../core/character/character.types";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import { getAbilityModifier, getProficiencyBonus } from "../../core/character/characterCalculator";
@@ -92,7 +92,7 @@ export function LevelUpAssistant({
         <div>
           <span className="mini-label">Level Up Assistant</span>
           <strong>Level 20</strong>
-          <p>Karakter seviye sÄ±nÄ±rÄ±nda. Bundan sonrasÄ± destan, homebrew veya DMâ€™in sabrÄ±na baÄŸlÄ±.</p>
+          <p>Karakter seviye sınırında. Bundan sonrası destan, homebrew veya DM’in sabrına bağlı.</p>
         </div>
       </div>
     );
@@ -102,8 +102,8 @@ export function LevelUpAssistant({
     <div className="level-up-launch-card">
       <div>
         <span className="mini-label">Level Up Assistant</span>
-        <strong>Level {character.level} â†’ {nextLevel}</strong>
-        <p>HP, proficiency, hit dice ve spell slot gÃ¼ncellemelerini kontrollÃ¼ biÃ§imde uygula.</p>
+        <strong>Level {character.level} → {nextLevel}</strong>
+        <p>HP, proficiency, hit dice ve spell slot güncellemelerini kontrollü biçimde uygula.</p>
       </div>
 
       <button type="button" onClick={() => setIsOpen((current) => !current)}>
@@ -119,14 +119,14 @@ export function LevelUpAssistant({
             </div>
             <div>
               <span>Proficiency</span>
-              <strong>+{currentProficiency} â†’ +{nextProficiency}</strong>
+              <strong>+{currentProficiency} → +{nextProficiency}</strong>
             </div>
             <div>
               <span>Hit Die</span>
               <strong>d{hitDie}</strong>
             </div>
             <div>
-              <span>HP ArtÄ±ÅŸÄ±</span>
+              <span>HP Artışı</span>
               <strong>+{hpGain}</strong>
             </div>
           </div>
@@ -135,7 +135,7 @@ export function LevelUpAssistant({
             <div className="panel-heading-row">
               <div>
                 <span className="mini-label">Hit Points</span>
-                <h3>HP artÄ±ÅŸÄ±nÄ± seÃ§</h3>
+                <h3>HP artışını seç</h3>
               </div>
             </div>
 
@@ -165,14 +165,14 @@ export function LevelUpAssistant({
 
             {hpMode === "roll" ? (
               <div className="level-up-inline-control">
-                <button type="button" onClick={rollLevelHp}>HP ZarÄ± At</button>
-                <strong>{rolledHp === null ? "HenÃ¼z atÄ±lmadÄ±" : `SonuÃ§: +${rolledHp} HP`}</strong>
+                <button type="button" onClick={rollLevelHp}>HP Zarı At</button>
+                <strong>{rolledHp === null ? "Henüz atılmadı" : `Sonuç: +${rolledHp} HP`}</strong>
               </div>
             ) : null}
 
             {hpMode === "manual" ? (
               <label className="level-up-manual-field">
-                HP artÄ±ÅŸÄ±
+                HP artışı
                 <input
                   type="number"
                   min={1}
@@ -189,14 +189,14 @@ export function LevelUpAssistant({
                 <div>
                   <span className="mini-label">Ability Score Improvement</span>
                   <h3>ASI veya feat tercihi</h3>
-                  <p>Feat seÃ§iyorsan ability artÄ±ÅŸÄ±nÄ± uygulama ve featâ€™i karakter notlarÄ±na ekle.</p>
+                  <p>Feat seçiyorsan ability artışını uygulama ve feat’i karakter notlarına ekle.</p>
                 </div>
               </div>
 
               <div className="level-up-choice-grid">
                 <button type="button" className={asiMode === "none" ? "active" : ""} onClick={() => setAsiMode("none")}>Feat / Sonra</button>
-                <button type="button" className={asiMode === "plus-two" ? "active" : ""} onClick={() => setAsiMode("plus-two")}>Bir YeteneÄŸe +2</button>
-                <button type="button" className={asiMode === "split" ? "active" : ""} onClick={() => setAsiMode("split")}>Ä°ki YeteneÄŸe +1</button>
+                <button type="button" className={asiMode === "plus-two" ? "active" : ""} onClick={() => setAsiMode("plus-two")}>Bir Yeteneğe +2</button>
+                <button type="button" className={asiMode === "split" ? "active" : ""} onClick={() => setAsiMode("split")}>İki Yeteneğe +1</button>
               </div>
 
               {asiMode !== "none" ? (
@@ -212,7 +212,7 @@ export function LevelUpAssistant({
 
                   {asiMode === "split" ? (
                     <label>
-                      Ä°kinci yetenek
+                      İkinci yetenek
                       <select value={secondaryAbility} onChange={(event) => setSecondaryAbility(event.target.value as AbilityKey)}>
                         {(Object.keys(ABILITY_LABELS) as AbilityKey[]).map((ability) => (
                           <option key={ability} value={ability}>{ABILITY_LABELS[ability]} ({character.abilities[ability]})</option>
@@ -228,12 +228,12 @@ export function LevelUpAssistant({
           <section className="level-up-section level-up-checklist">
             <span className="mini-label">Kontrol Listesi</span>
             <ul>
-              <li>Class ve subclass Ã¶zelliklerini kaynak kitaptan kontrol et.</li>
-              <li>Yeni spell, cantrip veya prepared spell hakkÄ±nÄ± kontrol et.</li>
-              <li>{nextProficiency > currentProficiency ? "Proficiency bonus bu seviyede otomatik artacak." : "Proficiency bonus bu seviyede deÄŸiÅŸmiyor."}</li>
-              <li>Hit dice havuzu ve bilinen spell slot tablosu otomatik gÃ¼ncellenecek.</li>
-              {nextLevel === 3 ? <li>Subclass seÃ§imi Ã§oÄŸu class iÃ§in bu seviyede gÃ¼ndeme gelir.</li> : null}
-              {asiAvailable ? <li>Bu seviye genel ASI kilometre taÅŸÄ±dÄ±r; bazÄ± classâ€™lar farklÄ± ilerleyebilir.</li> : null}
+              <li>Class ve subclass özelliklerini kaynak kitaptan kontrol et.</li>
+              <li>Yeni spell, cantrip veya prepared spell hakkını kontrol et.</li>
+              <li>{nextProficiency > currentProficiency ? "Proficiency bonus bu seviyede otomatik artacak." : "Proficiency bonus bu seviyede değişmiyor."}</li>
+              <li>Hit dice havuzu ve bilinen spell slot tablosu otomatik güncellenecek.</li>
+              {nextLevel === 3 ? <li>Subclass seçimi çoğu class için bu seviyede gündeme gelir.</li> : null}
+              {asiAvailable ? <li>Bu seviye genel ASI kilometre taşıdır; bazı class’lar farklı ilerleyebilir.</li> : null}
             </ul>
           </section>
 
@@ -249,4 +249,3 @@ export function LevelUpAssistant({
     </div>
   );
 }
-

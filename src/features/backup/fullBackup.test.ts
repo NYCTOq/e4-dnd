@@ -1,4 +1,4 @@
-﻿import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { createFullBackup, parseFullBackup } from "./fullBackup";
 import { DEFAULT_APP_SETTINGS } from "../../shared/settings/appSettings";
 import { makeCharacter } from "../../test/fixtures";
@@ -32,7 +32,6 @@ describe("fullBackup", () => {
         characters: [{ id: "broken" }], campaigns: [], homebrewSpells: [], homebrewItems: [],
         homebrewMonsters: [], favoriteMonsterIds: [], appSettings: DEFAULT_APP_SETTINGS,
       },
-    })).toThrow("geÃ§ersiz karakter");
+    })).toThrow("geçersiz karakter");
   });
 });
-

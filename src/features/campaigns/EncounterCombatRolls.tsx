@@ -1,4 +1,4 @@
-﻿import { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import type { Character, AbilityKey } from "../../core/character/character.types";
 import { getProficiencyBonus } from "../../core/character/characterCalculator";
 import { rollDice } from "../../core/dice/diceRoller";
@@ -144,7 +144,7 @@ export function EncounterCombatRolls({
         </div>
         {history.length > 0 && (
           <button type="button" onClick={() => setHistory([])}>
-            GeÃ§miÅŸi Temizle
+            Geçmişi Temizle
           </button>
         )}
       </div>
@@ -152,7 +152,7 @@ export function EncounterCombatRolls({
       {monster ? (
         <div className="encounter-action-roll-list">
           {monsterActions.length === 0 ? (
-            <p>Bu yaratÄ±ÄŸÄ±n kayÄ±tlÄ± aksiyonu yok. Muhtemelen bakarak hasar veriyor.</p>
+            <p>Bu yaratığın kayıtlı aksiyonu yok. Muhtemelen bakarak hasar veriyor.</p>
           ) : (
             monsterActions.map((action, index) => (
               <div className="encounter-action-roll-card" key={`${action.name}-${index}`}>
@@ -224,7 +224,7 @@ export function EncounterCombatRolls({
                     <div>
                       <strong>{weapon.name}</strong>
                       <small>
-                        {ABILITY_LABELS[ability]} tabanlÄ± â€¢ {weapon.damage ?? "Hasar zarÄ± yok"}
+                        {ABILITY_LABELS[ability]} tabanlı • {weapon.damage ?? "Hasar zarı yok"}
                         {weapon.damageType ? ` ${weapon.damageType}` : ""}
                       </small>
                     </div>
@@ -263,7 +263,7 @@ export function EncounterCombatRolls({
           )}
         </>
       ) : (
-        <p>Kaynak kayÄ±t bulunamadÄ±. Participant var, geÃ§miÅŸi yok. BÃ¼rokratik hayalet.</p>
+        <p>Kaynak kayıt bulunamadı. Participant var, geçmişi yok. Bürokratik hayalet.</p>
       )}
 
       {history.length > 0 && (
@@ -272,7 +272,7 @@ export function EncounterCombatRolls({
             <article key={entry.id}>
               <div>
                 <strong>{entry.label}</strong>
-                <span>{entry.notation} â€¢ {entry.detail}</span>
+                <span>{entry.notation} • {entry.detail}</span>
               </div>
               <b>{entry.total}</b>
             </article>
@@ -282,4 +282,3 @@ export function EncounterCombatRolls({
     </div>
   );
 }
-
