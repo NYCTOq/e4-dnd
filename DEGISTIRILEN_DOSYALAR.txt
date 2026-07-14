@@ -1,18 +1,18 @@
-Campaign Templates V1
+E4 D&D Quick Command Palette V1
 
-Yeni dosya:
-- src/features/campaigns/campaignTemplates.ts
+Yeni dosyalar:
+- src/shared/commands/CommandPalette.tsx
+- src/styles/24-command-palette.css
 
 Güncellenen dosyalar:
-- src/features/campaigns/Campaigns.tsx
-- src/features/legacy/AppRoutes.tsx
+- src/shared/layout/AppFrame.tsx
 - src/features/legacy/LegacyApp.tsx
-- src/styles/05-campaigns-base.css
+- src/App.css
 
-Eklenenler:
-- Sade Başlangıç şablonu
-- Klasik Macera şablonu
-- Story-Heavy şablonu
-- Encounter-Heavy şablonu
-- Timeline ve DM araçlarının şablona göre başlangıçta ayarlanması
-- Sade şablonda global campaign tool profile ayarının korunması
+Özellikler:
+- Ctrl + K / Cmd + K komut paleti
+- Sayfa, karakter, campaign, büyü ve canavar araması
+- Hızlı aksiyonlar
+- Ok tuşları, Enter ve Escape klavye kontrolü
+- Mobil Hızlı Git düğmesi
+- Erişilebilir dialog/listbox yapısı

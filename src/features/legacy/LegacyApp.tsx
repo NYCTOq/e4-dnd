@@ -33,8 +33,10 @@ import {
 import { AppFrame } from "../../shared/layout/AppFrame";
 import { AppRoutes } from "./AppRoutes";
 import type { BackupImportOptions, FullBackupData } from "../backup/fullBackup";
+import { mergeRecordsById, mergeUniqueStrings } from "../backup/backupImport";
 import { loadFavoriteMonsterIds, saveFavoriteMonsterIds } from "../monsters/monsterUtils";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
+import { useDebouncedEffect } from "../../shared/state/useDebouncedEffect";
 
 function App() {
   const { settings, updateSettings, resetSettings } = useAppSettings();
@@ -103,25 +105,11 @@ function App() {
     };
   }, []);
 
-  useEffect(() => {
-    saveCharacters(characters);
-  }, [characters]);
-
-  useEffect(() => {
-    saveHomebrewSpells(homebrewSpells);
-  }, [homebrewSpells]);
-
-  useEffect(() => {
-    saveHomebrewItems(homebrewItems);
-  }, [homebrewItems]);
-
-  useEffect(() => {
-    saveHomebrewMonsters(homebrewMonsters);
-  }, [homebrewMonsters]);
-
-  useEffect(() => {
-    saveCampaigns(campaigns);
-  }, [campaigns]);
+  useDebouncedEffect(characters, saveCharacters, 350, { skipInitial: true });
+  useDebouncedEffect(homebrewSpells, saveHomebrewSpells, 350, { skipInitial: true });
+  useDebouncedEffect(homebrewItems, saveHomebrewItems, 350, { skipInitial: true });
+  useDebouncedEffect(homebrewMonsters, saveHomebrewMonsters, 350, { skipInitial: true });
+  useDebouncedEffect(campaigns, saveCampaigns, 350, { skipInitial: true });
 
   function handleCreateCharacter(draft: CharacterDraft) {
     const character = createCharacterFromDraft(draft);
@@ -183,12 +171,6 @@ function App() {
   }
 
 
-  function mergeById<T extends { id: string }>(current: T[], incoming: T[]): T[] {
-    const merged = new Map(current.map((item) => [item.id, item]));
-    incoming.forEach((item) => merged.set(item.id, item));
-    return Array.from(merged.values());
-  }
-
   function handleImportFullBackup(
     data: FullBackupData,
     options: BackupImportOptions,
@@ -197,38 +179,38 @@ function App() {
 
     if (sections.characters) {
       setCharacters((current) =>
-        mode === "merge" ? mergeById(current, data.characters) : data.characters,
+        mode === "merge" ? mergeRecordsById(current, data.characters) : data.characters,
       );
     }
 
     if (sections.campaigns) {
       setCampaigns((current) =>
-        mode === "merge" ? mergeById(current, data.campaigns) : data.campaigns,
+        mode === "merge" ? mergeRecordsById(current, data.campaigns) : data.campaigns,
       );
     }
 
     if (sections.homebrewSpells) {
       setHomebrewSpells((current) =>
-        mode === "merge" ? mergeById(current, data.homebrewSpells) : data.homebrewSpells,
+        mode === "merge" ? mergeRecordsById(current, data.homebrewSpells) : data.homebrewSpells,
       );
     }
 
     if (sections.homebrewItems) {
       setHomebrewItems((current) =>
-        mode === "merge" ? mergeById(current, data.homebrewItems) : data.homebrewItems,
+        mode === "merge" ? mergeRecordsById(current, data.homebrewItems) : data.homebrewItems,
       );
     }
 
     if (sections.homebrewMonsters) {
       setHomebrewMonsters((current) =>
-        mode === "merge" ? mergeById(current, data.homebrewMonsters) : data.homebrewMonsters,
+        mode === "merge" ? mergeRecordsById(current, data.homebrewMonsters) : data.homebrewMonsters,
       );
     }
 
     if (sections.favoriteMonsterIds) {
       const favoriteIds =
         mode === "merge"
-          ? Array.from(new Set([...loadFavoriteMonsterIds(), ...data.favoriteMonsterIds]))
+          ? mergeUniqueStrings(loadFavoriteMonsterIds(), data.favoriteMonsterIds)
           : data.favoriteMonsterIds;
       saveFavoriteMonsterIds(favoriteIds);
     }
@@ -374,7 +356,11 @@ function App() {
   }
 
   return (
-    <AppFrame>
+    <AppFrame
+      characters={characters}
+      campaigns={campaigns}
+      rulesetData={effectiveRulesetData}
+    >
       <AppRoutes
         characters={characters}
         campaigns={campaigns}

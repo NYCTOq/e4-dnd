@@ -1,0 +1,21 @@
+/* Performance Audit V2: skip off-screen card painting without changing layout. */
+.character-card,
+.spell-card,
+.inventory-library-card,
+.monster-card,
+.library-item-card,
+.timeline-entry-card,
+.campaign-card,
+.homebrew-list-card {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 260px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .character-card,
+  .spell-card,
+  .inventory-library-card,
+  .monster-card {
+    content-visibility: visible;
+  }
+}

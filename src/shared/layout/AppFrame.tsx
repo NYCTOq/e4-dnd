@@ -6,10 +6,21 @@ import { PwaUpdateManager } from "../pwa/PwaUpdateManager";
 import { PwaInstallGuide } from "../pwa/PwaInstallGuide";
 import { useAppSettings } from "../settings/AppSettingsProvider";
 import { RouteAccessibility } from "../navigation/RouteAccessibility";
+import { CommandPalette } from "../commands/CommandPalette";
+import type { Character } from "../../core/character/character.types";
+import type { RulesetData } from "../../core/rulesets/ruleset.types";
+import type { Campaign } from "../../features/campaigns/campaignTypes";
 
 const START_ROUTE_SESSION_KEY = "e4_dnd_start_route_applied_v1";
 
-export function AppFrame({ children }: { children: React.ReactNode }) {
+type AppFrameProps = {
+  children: React.ReactNode;
+  characters: Character[];
+  campaigns: Campaign[];
+  rulesetData: RulesetData | null;
+};
+
+export function AppFrame({ children, characters, campaigns, rulesetData }: AppFrameProps) {
   const mobileItems = navItems.filter((item) => item.mobile);
   const location = useLocation();
   const navigate = useNavigate();
@@ -83,6 +94,12 @@ export function AppFrame({ children }: { children: React.ReactNode }) {
       <main id="main-content" className="content" tabIndex={-1}>
         {children}
       </main>
+
+      <CommandPalette
+        characters={characters}
+        campaigns={campaigns}
+        rulesetData={rulesetData}
+      />
 
       <StorageRecoveryCenter />
       <PwaUpdateManager />

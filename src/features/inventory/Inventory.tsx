@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useDeferredValue, useMemo } from "react";
 import { motion } from "framer-motion";
 import type { DndItemData, RulesetData } from "../../core/rulesets/ruleset.types";
 import { PageShell } from "../../shared/layout/PageShell";
@@ -17,9 +17,10 @@ export function Inventory({ rulesetData, isRulesetLoading, rulesetError }: {
   const [categoryFilter, setCategoryFilter] = usePersistentState<"all" | DndItemData["category"]>("e4_filter_items_category_v1", "all");
   const [sourceFilter, setSourceFilter] = usePersistentState<ItemSourceFilter>("e4_filter_items_source_v1", "all");
   const [sortOrder, setSortOrder] = usePersistentState<ItemSort>("e4_filter_items_sort_v1", "name");
+  const deferredSearchTerm = useDeferredValue(searchTerm);
 
   const filteredItems = useMemo(() => {
-    const normalizedSearch = searchTerm.trim().toLowerCase();
+    const normalizedSearch = deferredSearchTerm.trim().toLowerCase();
     const result = (rulesetData?.items ?? []).filter((item) => {
       const isHomebrew = item.id.startsWith("homebrew-item-") || item.tags?.includes("homebrew");
       const matchesCategory = categoryFilter === "all" || item.category === categoryFilter;
@@ -36,7 +37,7 @@ export function Inventory({ rulesetData, isRulesetLoading, rulesetError }: {
       if (sortOrder === "category") return a.category.localeCompare(b.category) || a.name.localeCompare(b.name);
       return a.name.localeCompare(b.name);
     });
-  }, [rulesetData, searchTerm, categoryFilter, sourceFilter, sortOrder]);
+  }, [rulesetData, deferredSearchTerm, categoryFilter, sourceFilter, sortOrder]);
 
   const hasActiveFilters = searchTerm.length > 0 || categoryFilter !== "all" || sourceFilter !== "all" || sortOrder !== "name";
   function resetFilters() {

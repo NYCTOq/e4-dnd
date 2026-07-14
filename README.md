@@ -1,32 +1,20 @@
-# React + TypeScript + Vite
+# E4 D&D Quick Command Palette V1
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Bu paket kümülatiftir ve önceki tüm E4 D&D geliştirmelerini içerir.
 
-Currently, two official plugins are available:
+## Kurulum
+Zip içeriğini proje klasörüne çıkarın ve mevcut dosyaların üzerine yazın.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```powershell
+cd D:\Projects\e4_dnd
+npm.cmd install
+npm.cmd run build
+npm.cmd run dev -- --port 5173
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Kullanım
+- Windows/Linux: Ctrl + K
+- macOS: Cmd + K
+- Ok tuşları: sonuçlarda gezinme
+- Enter: seçili sonucu açma
+- Escape: paleti kapatma

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useDeferredValue, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import type { Character } from "../../core/character/character.types";
@@ -42,6 +42,8 @@ export function Characters({
     "recent",
   );
 
+  const deferredSearchTerm = useDeferredValue(searchTerm);
+
   const availableClasses = useMemo(() => {
     return Array.from(
       new Set(
@@ -53,7 +55,7 @@ export function Characters({
   }, [characters]);
 
   const filteredCharacters = useMemo(() => {
-    const normalizedSearch = searchTerm.trim().toLowerCase();
+    const normalizedSearch = deferredSearchTerm.trim().toLowerCase();
 
     const result = characters.filter((character) => {
       const matchesSearch =
@@ -92,7 +94,7 @@ export function Characters({
     }
 
     return result;
-  }, [characters, searchTerm, rulesetFilter, classFilter, sortOrder]);
+  }, [characters, deferredSearchTerm, rulesetFilter, classFilter, sortOrder]);
 
   const hasActiveFilters =
     searchTerm.length > 0 ||

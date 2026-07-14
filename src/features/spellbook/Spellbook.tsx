@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useDeferredValue, useMemo } from "react";
 import { motion } from "framer-motion";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import { PageShell } from "../../shared/layout/PageShell";
@@ -43,6 +43,8 @@ export function Spellbook({
     "level-name",
   );
 
+  const deferredSearchTerm = useDeferredValue(searchTerm);
+
   const availableSpellClasses = useMemo(() => {
     if (!rulesetData) return [];
     return Array.from(
@@ -52,7 +54,7 @@ export function Spellbook({
 
   const filteredSpells = useMemo(() => {
     if (!rulesetData) return [];
-    const normalizedSearch = searchTerm.trim().toLowerCase();
+    const normalizedSearch = deferredSearchTerm.trim().toLowerCase();
 
     const result = rulesetData.spells.filter((spell) => {
       const isHomebrew = spell.id.startsWith("homebrew-spell-");
@@ -100,7 +102,7 @@ export function Spellbook({
     });
   }, [
     rulesetData,
-    searchTerm,
+    deferredSearchTerm,
     levelFilter,
     classFilter,
     sourceFilter,

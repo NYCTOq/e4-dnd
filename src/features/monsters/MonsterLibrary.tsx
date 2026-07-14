@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import type { DiceRollResult } from "../../core/dice/dice.types";
@@ -6,6 +6,7 @@ import { rollDice } from "../../core/dice/diceRoller";
 import type { DndMonsterData, RulesetData } from "../../core/rulesets/ruleset.types";
 import { PageShell } from "../../shared/layout/PageShell";
 import { usePersistentState } from "../../shared/state/usePersistentState";
+import { useDebouncedEffect } from "../../shared/state/useDebouncedEffect";
 import type { MonsterCombatState } from "./monsterUtils";
 import {
   formatMonsterModifier,
@@ -48,6 +49,8 @@ export function MonsterLibrary({
     "e4_filter_monsters_favorites_v1",
     false,
   );
+
+  const deferredSearchTerm = useDeferredValue(searchTerm);
   const [favoriteMonsterIds, setFavoriteMonsterIds] = useState<string[]>(() =>
     loadFavoriteMonsterIds(),
   );
@@ -55,11 +58,11 @@ export function MonsterLibrary({
     Record<string, MonsterCombatState>
   >({});
 
-  const monsters = rulesetData?.monsters ?? [];
+  const monsters = useMemo(() => rulesetData?.monsters ?? [], [rulesetData?.monsters]);
 
-  useEffect(() => {
-    saveFavoriteMonsterIds(favoriteMonsterIds);
-  }, [favoriteMonsterIds]);
+  useDebouncedEffect(favoriteMonsterIds, saveFavoriteMonsterIds, 250, {
+    skipInitial: true,
+  });
 
   function toggleFavoriteMonster(monsterId: string) {
     setFavoriteMonsterIds((current) =>
@@ -97,7 +100,7 @@ export function MonsterLibrary({
   }, [monsters]);
 
   const filteredMonsters = useMemo(() => {
-    const normalizedSearch = searchTerm.trim().toLowerCase();
+    const normalizedSearch = deferredSearchTerm.trim().toLowerCase();
 
     const result = monsters.filter((monster) => {
       const matchesSearch =
@@ -157,7 +160,7 @@ export function MonsterLibrary({
     });
   }, [
     monsters,
-    searchTerm,
+    deferredSearchTerm,
     typeFilter,
     crFilter,
     sourceFilter,
@@ -697,9 +700,9 @@ export function MonsterDetail({
     null,
   );
 
-  useEffect(() => {
-    saveFavoriteMonsterIds(favoriteMonsterIds);
-  }, [favoriteMonsterIds]);
+  useDebouncedEffect(favoriteMonsterIds, saveFavoriteMonsterIds, 250, {
+    skipInitial: true,
+  });
 
   useEffect(() => {
     if (monster) {

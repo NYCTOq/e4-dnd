@@ -3,7 +3,12 @@ import type { Character, AbilityKey } from "../../core/character/character.types
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import { getAbilityModifier, getProficiencyBonus } from "../../core/character/characterCalculator";
 import { rollDice } from "../../core/dice/diceRoller";
-import { normalizeHitDice, normalizeSpellSlots } from "./characterShared";
+import {
+  buildLeveledCharacter,
+  getAverageHpGain,
+  isAsiMilestone,
+  type LevelUpAsiMode,
+} from "./levelUpCalculator";
 
 const ABILITY_LABELS: Record<AbilityKey, string> = {
   str: "STR",
@@ -15,11 +20,7 @@ const ABILITY_LABELS: Record<AbilityKey, string> = {
 };
 
 type HpMode = "average" | "roll" | "manual";
-type AsiMode = "none" | "plus-two" | "split";
-
-function isAsiMilestone(level: number) {
-  return [4, 8, 12, 16, 19].includes(level);
-}
+type AsiMode = LevelUpAsiMode;
 
 export function LevelUpAssistant({
   character,
@@ -44,7 +45,7 @@ export function LevelUpAssistant({
   );
   const hitDie = selectedClass?.hitDie ?? 8;
   const conModifier = getAbilityModifier(character.abilities.con);
-  const averageHpGain = Math.max(1, Math.floor(hitDie / 2) + 1 + conModifier);
+  const averageHpGain = getAverageHpGain(hitDie, character.abilities.con);
   const currentProficiency = getProficiencyBonus(character.level);
   const nextProficiency = getProficiencyBonus(nextLevel);
   const asiAvailable = isAsiMilestone(nextLevel);
@@ -66,48 +67,18 @@ export function LevelUpAssistant({
     setRolledHp(Math.max(1, result.total));
   }
 
-  function applyAbilityIncrease(abilities: Character["abilities"]) {
-    if (!asiAvailable || asiMode === "none") {
-      return abilities;
-    }
-
-    const nextAbilities = { ...abilities };
-
-    if (asiMode === "plus-two") {
-      nextAbilities[primaryAbility] = Math.min(20, nextAbilities[primaryAbility] + 2);
-      return nextAbilities;
-    }
-
-    nextAbilities[primaryAbility] = Math.min(20, nextAbilities[primaryAbility] + 1);
-    nextAbilities[secondaryAbility] = Math.min(20, nextAbilities[secondaryAbility] + 1);
-    return nextAbilities;
-  }
-
   function confirmLevelUp() {
     if (character.level >= 20) {
       return;
     }
 
-    const nextAbilities = applyAbilityIncrease(character.abilities);
-    const nextCharacter: Character = {
-      ...character,
-      level: nextLevel,
-      abilities: nextAbilities,
-      maxHp: character.maxHp + hpGain,
-      currentHp: Math.min(character.maxHp + hpGain, character.currentHp + hpGain),
-      spellSlots: normalizeSpellSlots(
-        character.spellSlots,
-        nextLevel,
-        character.className,
-      ),
-      hitDice: normalizeHitDice(
-        character.hitDice,
-        nextLevel,
-        character.className,
-        hitDie,
-      ),
-      updatedAt: new Date().toISOString(),
-    };
+    const nextCharacter = buildLeveledCharacter(character, {
+      hpGain,
+      hitDie,
+      asiMode,
+      primaryAbility,
+      secondaryAbility,
+    });
 
     onUpdateCharacter(nextCharacter);
     setIsOpen(false);
