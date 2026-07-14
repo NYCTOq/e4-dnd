@@ -1,0 +1,10 @@
+1. Bu klasörün içeriğini D:\Projects\e4_dnd içine kopyalayın.
+2. Mevcut dosyaların üzerine yazılmasına izin verin.
+3. PowerShell içinde çalıştırın:
+   cd D:\Projects\e4_dnd
+   npm.cmd install
+   npm.cmd run check
+4. Kontrol geçerse:
+   git add -A
+   git commit -m "feat: add loot and treasure tracker"
+   git push

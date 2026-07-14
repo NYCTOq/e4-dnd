@@ -15,6 +15,20 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.11.0",
+    date: "2026-07-14",
+    title: "Loot ve treasure tracker",
+    summary: "Campaign ganimetleri, görev ödülleri, sahiplik ve paylaştırma durumlarıyla ayrı bir hazine takibinde toplandı.",
+    changes: [
+      { text: "Campaign bağlantılı yeni Loot + Treasure Tracker sayfası", category: "Özellik" },
+      { text: "Para, eşya, büyülü eşya, mücevher, belge ve diğer ganimet türleri", category: "Özellik" },
+      { text: "Görev bağlantısı, karakter sahipliği ve parti havuzu takibi", category: "Özellik" },
+      { text: "Adet, birim değer ve otomatik toplam gp hesaplama", category: "İyileştirme" },
+      { text: "Paylaştırma durumu ile oyuncu ve DM notlarının ayrılması", category: "İyileştirme" },
+      { text: "Loot veri motoru için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.10.0",
     date: "2026-07-14",
     title: "Quest journal ve plot threads",

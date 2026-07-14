@@ -1,0 +1,15 @@
+E4 D&D Loot + Treasure Tracker V1
+
+Yeni dosyalar:
+- src/features/loot/LootTrackerPage.tsx
+- src/features/loot/lootTrackerStorage.ts
+- src/features/loot/lootTrackerStorage.test.ts
+- src/styles/36-loot-tracker.css
+
+Güncellenen dosyalar:
+- src/features/legacy/AppRoutes.tsx
+- src/shared/navigation/navItems.ts
+- src/shared/release/releaseNotes.ts
+- src/App.css
+- package.json
+- package-lock.json

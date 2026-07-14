@@ -100,6 +100,9 @@ const FactionsPage = lazy(() =>
 const QuestJournalPage = lazy(() =>
   import("../quests/QuestJournalPage").then((module) => ({ default: module.QuestJournalPage })),
 );
+const LootTrackerPage = lazy(() =>
+  import("../loot/LootTrackerPage").then((module) => ({ default: module.LootTrackerPage })),
+);
 
 import type { BackupImportOptions, FullBackupData } from "../backup/fullBackup";
 
@@ -274,6 +277,10 @@ export function AppRoutes({
       <Route
         path="/quests"
         element={<QuestJournalPage campaigns={campaigns} />}
+      />
+      <Route
+        path="/loot"
+        element={<LootTrackerPage campaigns={campaigns} characters={characters} />}
       />
 
       <Route
