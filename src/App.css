@@ -22,3 +22,9 @@
 
 @import "./styles/19-dashboard-navigation.css";
 @import "./styles/20-settings.css";
+
+@import "./styles/21-accessibility.css";
+
+@import "./styles/22-autosave.css";
+
+@import "./styles/23-character-compare.css";

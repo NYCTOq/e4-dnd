@@ -1,4 +1,6 @@
 import { useMemo, useState } from "react";
+import { AutosaveStatus } from "../../shared/forms/AutosaveStatus";
+import { useAutosavedDraft } from "../../shared/state/useAutosavedDraft";
 import type { RulesetData, DndSpellData } from "../../core/rulesets/ruleset.types";
 import type { CharacterDraft } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
@@ -16,7 +18,28 @@ export function Builder({
   isRulesetLoading: boolean;
   rulesetError: string | null;
 }) {
-  const [draft, setDraft] = useState<CharacterDraft>(emptyDraft);
+  const {
+    value: draft,
+    setValue: setDraft,
+    clearDraft,
+    lastSavedAt,
+    restoredAt,
+  } = useAutosavedDraft<CharacterDraft>(
+    "e4_dnd_draft_character_builder_v1",
+    emptyDraft,
+    {
+      isMeaningful: (value) =>
+        Boolean(
+          value.name.trim() ||
+            value.playerName.trim() ||
+            value.className.trim() ||
+            value.race.trim() ||
+            value.notes.trim() ||
+            value.knownSpellIds.length ||
+            value.inventory.length,
+        ),
+    },
+  );
   const [activeStepIndex, setActiveStepIndex] = useState(0);
 
   const builderSteps = [
@@ -147,7 +170,7 @@ export function Builder({
       ...draft,
       armorClass: calculateEffectiveArmorClass(draft, rulesetData?.items),
     });
-    setDraft(emptyDraft);
+    clearDraft(emptyDraft);
     setActiveStepIndex(0);
   }
 
@@ -183,6 +206,18 @@ export function Builder({
             <h2>{activeStep.title}</h2>
             <p>{activeStep.description}</p>
           </div>
+          <AutosaveStatus
+            label="Karakter taslağı"
+            lastSavedAt={lastSavedAt}
+            restoredAt={restoredAt}
+            onClear={() => {
+              const confirmed = confirm("Karakter taslağı temizlensin mi?");
+              if (confirmed) {
+                clearDraft(emptyDraft);
+                setActiveStepIndex(0);
+              }
+            }}
+          />
 
           {activeStep.id === "basic" ? (
             <section className="form-panel">

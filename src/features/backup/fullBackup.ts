@@ -26,6 +26,33 @@ export type E4FullBackup = {
 
 export type FullBackupData = E4FullBackup["data"];
 
+export type BackupImportMode = "replace" | "merge";
+
+export type BackupImportSections = {
+  characters: boolean;
+  campaigns: boolean;
+  homebrewSpells: boolean;
+  homebrewItems: boolean;
+  homebrewMonsters: boolean;
+  favoriteMonsterIds: boolean;
+  appSettings: boolean;
+};
+
+export type BackupImportOptions = {
+  mode: BackupImportMode;
+  sections: BackupImportSections;
+};
+
+export const DEFAULT_BACKUP_IMPORT_SECTIONS: BackupImportSections = {
+  characters: true,
+  campaigns: true,
+  homebrewSpells: true,
+  homebrewItems: true,
+  homebrewMonsters: true,
+  favoriteMonsterIds: true,
+  appSettings: true,
+};
+
 function downloadJson(filename: string, value: unknown) {
   const blob = new Blob([JSON.stringify(value, null, 2)], {
     type: "application/json",

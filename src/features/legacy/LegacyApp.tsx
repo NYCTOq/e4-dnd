@@ -28,8 +28,8 @@ import {
 } from "../homebrew/homebrewStorage";
 import { AppFrame } from "../../shared/layout/AppFrame";
 import { AppRoutes } from "./AppRoutes";
-import type { FullBackupData } from "../backup/fullBackup";
-import { saveFavoriteMonsterIds } from "../monsters/monsterUtils";
+import type { BackupImportOptions, FullBackupData } from "../backup/fullBackup";
+import { loadFavoriteMonsterIds, saveFavoriteMonsterIds } from "../monsters/monsterUtils";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 
 function App() {
@@ -149,6 +149,27 @@ function App() {
     return true;
   }
 
+
+  function handleDuplicateCharacter(id: string): Character | null {
+    const source = characters.find((character) => character.id === id);
+
+    if (!source) {
+      return null;
+    }
+
+    const now = new Date().toISOString();
+    const duplicate: Character = {
+      ...structuredClone(source),
+      id: crypto.randomUUID(),
+      name: `${source.name} (Kopya)`,
+      createdAt: now,
+      updatedAt: now,
+    };
+
+    setCharacters((current) => [duplicate, ...current]);
+    return duplicate;
+  }
+
   function handleImportCharacters(importedCharacters: Character[]) {
     setCharacters(importedCharacters);
   }
@@ -158,14 +179,59 @@ function App() {
   }
 
 
-  function handleImportFullBackup(data: FullBackupData) {
-    setCharacters(data.characters);
-    setCampaigns(data.campaigns);
-    setHomebrewSpells(data.homebrewSpells);
-    setHomebrewItems(data.homebrewItems);
-    setHomebrewMonsters(data.homebrewMonsters);
-    saveFavoriteMonsterIds(data.favoriteMonsterIds);
-    updateSettings(data.appSettings);
+  function mergeById<T extends { id: string }>(current: T[], incoming: T[]): T[] {
+    const merged = new Map(current.map((item) => [item.id, item]));
+    incoming.forEach((item) => merged.set(item.id, item));
+    return Array.from(merged.values());
+  }
+
+  function handleImportFullBackup(
+    data: FullBackupData,
+    options: BackupImportOptions,
+  ) {
+    const { sections, mode } = options;
+
+    if (sections.characters) {
+      setCharacters((current) =>
+        mode === "merge" ? mergeById(current, data.characters) : data.characters,
+      );
+    }
+
+    if (sections.campaigns) {
+      setCampaigns((current) =>
+        mode === "merge" ? mergeById(current, data.campaigns) : data.campaigns,
+      );
+    }
+
+    if (sections.homebrewSpells) {
+      setHomebrewSpells((current) =>
+        mode === "merge" ? mergeById(current, data.homebrewSpells) : data.homebrewSpells,
+      );
+    }
+
+    if (sections.homebrewItems) {
+      setHomebrewItems((current) =>
+        mode === "merge" ? mergeById(current, data.homebrewItems) : data.homebrewItems,
+      );
+    }
+
+    if (sections.homebrewMonsters) {
+      setHomebrewMonsters((current) =>
+        mode === "merge" ? mergeById(current, data.homebrewMonsters) : data.homebrewMonsters,
+      );
+    }
+
+    if (sections.favoriteMonsterIds) {
+      const favoriteIds =
+        mode === "merge"
+          ? Array.from(new Set([...loadFavoriteMonsterIds(), ...data.favoriteMonsterIds]))
+          : data.favoriteMonsterIds;
+      saveFavoriteMonsterIds(favoriteIds);
+    }
+
+    if (sections.appSettings) {
+      updateSettings(data.appSettings);
+    }
   }
 
   function handleWipeAllData() {
@@ -311,6 +377,7 @@ function App() {
         onCreateCharacter={handleCreateCharacter}
         onUpdateCharacter={handleUpdateCharacter}
         onDeleteCharacter={handleDeleteCharacter}
+        onDuplicateCharacter={handleDuplicateCharacter}
         onImportCharacters={handleImportCharacters}
         onWipeCharacters={handleWipeCharacters}
         onImportFullBackup={handleImportFullBackup}

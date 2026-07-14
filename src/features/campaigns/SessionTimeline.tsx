@@ -1,4 +1,6 @@
 import { useMemo, useState } from "react";
+import { AutosaveStatus } from "../../shared/forms/AutosaveStatus";
+import { useAutosavedDraft } from "../../shared/state/useAutosavedDraft";
 import type * as React from "react";
 import type { CampaignTimelineEntry } from "./campaignTypes";
 
@@ -27,15 +29,35 @@ function listText(items: string[]) {
 export function SessionTimeline({
   entries,
   enabled,
+  draftKey,
   onToggleEnabled,
   onChange,
 }: {
   entries: CampaignTimelineEntry[];
   enabled: boolean;
+  draftKey: string;
   onToggleEnabled: (enabled: boolean) => void;
   onChange: (entries: CampaignTimelineEntry[]) => void;
 }) {
-  const [draft, setDraft] = useState<TimelineDraft>(emptyDraft);
+  const {
+    value: draft,
+    setValue: setDraft,
+    clearDraft,
+    lastSavedAt,
+    restoredAt,
+  } = useAutosavedDraft<TimelineDraft>(draftKey, emptyDraft, {
+    isMeaningful: (value) =>
+      Boolean(
+        value.title.trim() ||
+          value.summary.trim() ||
+          value.notes.trim() ||
+          value.events.length ||
+          value.npcs.length ||
+          value.questUpdates.length ||
+          value.loot.length ||
+          value.casualties.length,
+      ),
+  });
   const [editingId, setEditingId] = useState<string | null>(null);
   const sortedEntries = useMemo(
     () => [...entries].sort((a, b) => b.sessionDate.localeCompare(a.sessionDate)),
@@ -67,7 +89,7 @@ export function SessionTimeline({
       }, ...entries]);
     }
     setEditingId(null);
-    setDraft(emptyDraft());
+    clearDraft(emptyDraft());
   }
 
   function edit(entry: CampaignTimelineEntry) {
@@ -90,7 +112,7 @@ export function SessionTimeline({
       onChange(entries.filter((entry) => entry.id !== id));
       if (editingId === id) {
         setEditingId(null);
-        setDraft(emptyDraft());
+        clearDraft(emptyDraft());
       }
     }
   }
@@ -116,6 +138,18 @@ export function SessionTimeline({
       ) : (
         <div className="session-timeline-layout">
           <form className="timeline-form" onSubmit={submit}>
+            <AutosaveStatus
+              label="Timeline taslağı"
+              lastSavedAt={lastSavedAt}
+              restoredAt={restoredAt}
+              onClear={() => {
+                const confirmed = confirm("Timeline taslağı temizlensin mi?");
+                if (confirmed) {
+                  setEditingId(null);
+                  clearDraft(emptyDraft());
+                }
+              }}
+            />
             <div className="form-grid compact-form-grid">
               <label>Oturum Başlığı<input value={draft.title} onChange={(e) => setDraft({...draft, title: e.target.value})} placeholder="Session 8 - Rainbase Baskını" /></label>
               <label>Tarih<input type="date" value={draft.sessionDate} onChange={(e) => setDraft({...draft, sessionDate: e.target.value})} /></label>
@@ -131,7 +165,7 @@ export function SessionTimeline({
             </div>
             <div className="timeline-form-actions">
               <button className="primary-action" type="submit">{editingId ? "Kaydı Güncelle" : "Timeline'a Ekle"}</button>
-              {editingId ? <button type="button" onClick={() => { setEditingId(null); setDraft(emptyDraft()); }}>Vazgeç</button> : null}
+              {editingId ? <button type="button" onClick={() => { setEditingId(null); clearDraft(emptyDraft()); }}>Vazgeç</button> : null}
             </div>
           </form>
 

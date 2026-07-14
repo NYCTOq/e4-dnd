@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import type { Character } from "../../core/character/character.types";
@@ -17,11 +17,14 @@ type CharacterSort = "recent" | "name" | "level-desc" | "level-asc";
 export function Characters({
   characters,
   onDeleteCharacter,
+  onDuplicateCharacter,
 }: {
   characters: Character[];
   onDeleteCharacter: (id: string) => boolean;
+  onDuplicateCharacter: (id: string) => Character | null;
 }) {
   const navigate = useNavigate();
+  const [compareIds, setCompareIds] = useState<string[]>([]);
 
   const [searchTerm, setSearchTerm] = usePersistentState(
     "e4_filter_characters_search_v1",
@@ -102,6 +105,28 @@ export function Characters({
     setRulesetFilter("all");
     setClassFilter("all");
     setSortOrder("recent");
+  }
+
+  function toggleCompareCharacter(id: string) {
+    setCompareIds((current) => {
+      if (current.includes(id)) {
+        return current.filter((item) => item !== id);
+      }
+
+      if (current.length >= 2) {
+        return [current[1], id];
+      }
+
+      return [...current, id];
+    });
+  }
+
+  function duplicateCharacter(id: string) {
+    const duplicate = onDuplicateCharacter(id);
+
+    if (duplicate) {
+      navigate(`/characters/${duplicate.id}/edit`);
+    }
   }
 
   return (
@@ -196,7 +221,7 @@ export function Characters({
         <div className="character-grid">
           {filteredCharacters.map((character) => (
             <motion.article
-              className="character-card"
+              className={`character-card ${compareIds.includes(character.id) ? "compare-selected" : ""}`}
               key={character.id}
               whileHover={{ y: -6 }}
             >
@@ -237,6 +262,12 @@ export function Characters({
                 >
                   Düzenle
                 </button>
+                <button type="button" onClick={() => toggleCompareCharacter(character.id)}>
+                  {compareIds.includes(character.id) ? "Seçimi kaldır" : "Karşılaştır"}
+                </button>
+                <button type="button" onClick={() => duplicateCharacter(character.id)}>
+                  Kopyala
+                </button>
                 <button onClick={() => onDeleteCharacter(character.id)}>
                   Sil
                 </button>
@@ -245,6 +276,30 @@ export function Characters({
           ))}
         </div>
       )}
+
+      {characters.length >= 2 ? (
+        <div className="character-compare-toolbar">
+          <p>
+            <strong>{compareIds.length}/2 karakter seçildi.</strong>{" "}
+            {compareIds.length < 2
+              ? "Karşılaştırmak için iki kart seç."
+              : "Build farklarını yan yana açabilirsin."}
+          </p>
+          <div className="character-compare-toolbar-actions">
+            <button type="button" onClick={() => setCompareIds([])} disabled={compareIds.length === 0}>
+              Temizle
+            </button>
+            <button
+              type="button"
+              className="primary-action"
+              disabled={compareIds.length !== 2}
+              onClick={() => navigate(`/characters/compare?ids=${compareIds.join(",")}`)}
+            >
+              Karşılaştırmayı aç
+            </button>
+          </div>
+        </div>
+      ) : null}
     </PageShell>
   );
 }

@@ -5,6 +5,7 @@ import { StorageRecoveryCenter } from "../errors/StorageRecoveryCenter";
 import { PwaUpdateManager } from "../pwa/PwaUpdateManager";
 import { PwaInstallGuide } from "../pwa/PwaInstallGuide";
 import { useAppSettings } from "../settings/AppSettingsProvider";
+import { RouteAccessibility } from "../navigation/RouteAccessibility";
 
 const START_ROUTE_SESSION_KEY = "e4_dnd_start_route_applied_v1";
 
@@ -32,10 +33,15 @@ export function AppFrame({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="app">
-      <div className="aurora aurora-one" />
-      <div className="aurora aurora-two" />
+      <a className="skip-link" href="#main-content">
+        Ana içeriğe geç
+      </a>
+      <RouteAccessibility />
 
-      <aside className="sidebar">
+      <div className="aurora aurora-one" aria-hidden="true" />
+      <div className="aurora aurora-two" aria-hidden="true" />
+
+      <aside className="sidebar" aria-label="Uygulama menüsü">
         <NavLink to="/" className="brand" aria-label="E4 D&D ana sayfa">
           <div className="brand-icon">E4</div>
 
@@ -74,7 +80,9 @@ export function AppFrame({ children }: { children: React.ReactNode }) {
         </nav>
       </aside>
 
-      <main className="content">{children}</main>
+      <main id="main-content" className="content" tabIndex={-1}>
+        {children}
+      </main>
 
       <StorageRecoveryCenter />
       <PwaUpdateManager />

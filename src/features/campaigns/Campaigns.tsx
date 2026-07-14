@@ -786,6 +786,7 @@ export function Campaigns({
             <SessionTimeline
               entries={selectedCampaign.timelineEntries}
               enabled={selectedCampaign.timelineEnabled}
+              draftKey={`e4_dnd_draft_timeline_${selectedCampaign.id}_v1`}
               onToggleEnabled={toggleTimelineEnabled}
               onChange={updateTimelineEntries}
             />

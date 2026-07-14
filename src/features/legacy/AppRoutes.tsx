@@ -22,6 +22,11 @@ const CharacterDetail = lazy(() =>
     default: module.CharacterDetail,
   })),
 );
+const CharacterCompare = lazy(() =>
+  import("../characters/CharacterCompare").then((module) => ({
+    default: module.CharacterCompare,
+  })),
+);
 const CharacterEditor = lazy(() =>
   import("../characters/CharacterEditor").then((module) => ({
     default: module.CharacterEditor,
@@ -68,7 +73,7 @@ const Settings = lazy(() =>
   import("../settings/Settings").then((module) => ({ default: module.Settings })),
 );
 
-import type { FullBackupData } from "../backup/fullBackup";
+import type { BackupImportOptions, FullBackupData } from "../backup/fullBackup";
 
 type AppRoutesProps = {
   characters: Character[];
@@ -82,9 +87,10 @@ type AppRoutesProps = {
   onCreateCharacter: (draft: CharacterDraft) => void;
   onUpdateCharacter: (character: Character) => void;
   onDeleteCharacter: (id: string) => boolean;
+  onDuplicateCharacter: (id: string) => Character | null;
   onImportCharacters: (characters: Character[]) => void;
   onWipeCharacters: () => void;
-  onImportFullBackup: (data: FullBackupData) => void;
+  onImportFullBackup: (data: FullBackupData, options: BackupImportOptions) => void;
   onWipeAllData: () => void;
   onCreateCampaign: (name: string, description: string) => void;
   onUpdateCampaign: (campaign: Campaign) => void;
@@ -109,6 +115,7 @@ export function AppRoutes({
   onCreateCharacter,
   onUpdateCharacter,
   onDeleteCharacter,
+  onDuplicateCharacter,
   onImportCharacters,
   onWipeCharacters,
   onImportFullBackup,
@@ -153,8 +160,14 @@ export function AppRoutes({
           <Characters
             characters={characters}
             onDeleteCharacter={onDeleteCharacter}
+            onDuplicateCharacter={onDuplicateCharacter}
           />
         }
+      />
+
+      <Route
+        path="/characters/compare"
+        element={<CharacterCompare characters={characters} />}
       />
 
       <Route

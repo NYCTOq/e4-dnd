@@ -1,0 +1,40 @@
+.autosave-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 12px 0 18px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.autosave-status > div {
+  display: grid;
+  gap: 3px;
+}
+
+.autosave-status strong {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.autosave-status span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.autosave-status button {
+  flex: 0 0 auto;
+  padding: 8px 11px;
+  font-size: 0.76rem;
+}
+
+@media (max-width: 640px) {
+  .autosave-status {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

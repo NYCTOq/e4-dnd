@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { AutosaveStatus } from "../../shared/forms/AutosaveStatus";
+import { useAutosavedDraft } from "../../shared/state/useAutosavedDraft";
 import type {
   DndItemData,
   DndMonsterData,
@@ -188,7 +189,15 @@ export function HomebrewLab({
   onCreateHomebrewMonster: (monster: DndMonsterData) => void;
   onDeleteHomebrewMonster: (id: string) => void;
 }) {
-  const [spellForm, setSpellForm] = useState({
+  const {
+    value: spellForm,
+    setValue: setSpellForm,
+    clearDraft: clearSpellForm,
+    lastSavedAt: spellFormSavedAt,
+    restoredAt: spellFormRestoredAt,
+  } = useAutosavedDraft(
+    "e4_dnd_draft_homebrew_spell_v1",
+    {
     name: "",
     level: 0,
     school: "Evocation",
@@ -208,9 +217,19 @@ export function HomebrewLab({
     conditionEffect: "",
     description: "",
     higherLevels: "",
-  });
+  },
+    { isMeaningful: (value) => Boolean(value.name.trim() || value.description.trim() || value.damageDice.trim() || value.healingDice.trim() || value.higherLevels.trim()) },
+  );
 
-  const [itemForm, setItemForm] = useState({
+  const {
+    value: itemForm,
+    setValue: setItemForm,
+    clearDraft: clearItemForm,
+    lastSavedAt: itemFormSavedAt,
+    restoredAt: itemFormRestoredAt,
+  } = useAutosavedDraft(
+    "e4_dnd_draft_homebrew_item_v1",
+    {
     name: "",
     category: "gear" as DndItemData["category"],
     cost: "",
@@ -224,9 +243,19 @@ export function HomebrewLab({
     damageType: "slashing",
     properties: [] as string[],
     range: "",
-  });
+  },
+    { isMeaningful: (value) => Boolean(value.name.trim() || value.description.trim() || value.damage.trim() || value.cost.trim()) },
+  );
 
-  const [monsterForm, setMonsterForm] = useState({
+  const {
+    value: monsterForm,
+    setValue: setMonsterForm,
+    clearDraft: clearMonsterForm,
+    lastSavedAt: monsterFormSavedAt,
+    restoredAt: monsterFormRestoredAt,
+  } = useAutosavedDraft(
+    "e4_dnd_draft_homebrew_monster_v1",
+    {
     name: "",
     size: "Medium",
     type: "humanoid",
@@ -258,7 +287,9 @@ export function HomebrewLab({
     actionReachRange: "5 ft.",
     actionDescription: "",
     description: "",
-  });
+  },
+    { isMeaningful: (value) => Boolean(value.name.trim() || value.description.trim() || value.traitsText.trim() || value.actionsText.trim()) },
+  );
 
   function updateSpellForm<K extends keyof typeof spellForm>(
     key: K,
@@ -688,6 +719,14 @@ export function HomebrewLab({
 
       <div className="homebrew-layout">
         <form className="homebrew-form-card" onSubmit={handleCreateSpell}>
+          <AutosaveStatus
+            label="Spell taslağı"
+            lastSavedAt={spellFormSavedAt}
+            restoredAt={spellFormRestoredAt}
+            onClear={() => {
+              if (confirm("Spell taslağı temizlensin mi?")) clearSpellForm();
+            }}
+          />
           <div className="homebrew-card-head">
             <div>
               <span className="mini-label">Creator V2</span>
@@ -973,6 +1012,14 @@ export function HomebrewLab({
         </form>
 
         <form className="homebrew-form-card" onSubmit={handleCreateItem}>
+          <AutosaveStatus
+            label="Item taslağı"
+            lastSavedAt={itemFormSavedAt}
+            restoredAt={itemFormRestoredAt}
+            onClear={() => {
+              if (confirm("Item taslağı temizlensin mi?")) clearItemForm();
+            }}
+          />
           <div className="homebrew-card-head">
             <div>
               <span className="mini-label">Creator V2</span>
@@ -1161,6 +1208,14 @@ export function HomebrewLab({
           className="homebrew-form-card homebrew-wide-form"
           onSubmit={handleCreateMonster}
         >
+          <AutosaveStatus
+            label="Monster/NPC taslağı"
+            lastSavedAt={monsterFormSavedAt}
+            restoredAt={monsterFormRestoredAt}
+            onClear={() => {
+              if (confirm("Monster/NPC taslağı temizlensin mi?")) clearMonsterForm();
+            }}
+          />
           <div className="homebrew-card-head">
             <div>
               <span className="mini-label">Creator V1</span>

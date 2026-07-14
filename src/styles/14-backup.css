@@ -48,3 +48,151 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* Import / Export Polish V2 */
+.backup-import-preview {
+  display: grid;
+  gap: 20px;
+  border-color: rgba(138, 164, 255, 0.42);
+}
+
+.backup-preview-head,
+.backup-selection-head,
+.backup-import-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.backup-preview-head h2,
+.backup-selection-head h3 {
+  margin: 0;
+}
+
+.backup-preview-head p,
+.backup-selection-head p,
+.backup-import-footer p {
+  margin: 8px 0 0;
+}
+
+.backup-mode-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.backup-mode-grid button {
+  display: grid;
+  gap: 7px;
+  min-height: 112px;
+  text-align: left;
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.backup-mode-grid button.active {
+  border-color: rgba(210, 220, 255, 0.72);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.backup-mode-grid strong,
+.backup-mode-grid span {
+  display: block;
+}
+
+.backup-mode-grid span {
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+.backup-selection-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.backup-section-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.backup-section-grid label {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.045);
+  cursor: pointer;
+}
+
+.backup-section-grid label.selected {
+  border-color: rgba(210, 220, 255, 0.48);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.backup-section-grid input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+.backup-section-grid strong,
+.backup-section-grid small,
+.backup-section-grid b {
+  display: block;
+}
+
+.backup-section-grid small {
+  margin-top: 4px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.backup-section-grid b {
+  color: var(--accent);
+  font-size: 12px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.backup-import-footer {
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.backup-import-footer p {
+  max-width: 680px;
+}
+
+@media (max-width: 760px) {
+  .backup-preview-head,
+  .backup-selection-head,
+  .backup-import-footer {
+    display: grid;
+  }
+
+  .backup-mode-grid,
+  .backup-section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .backup-section-grid label {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .backup-section-grid b {
+    grid-column: 2;
+    text-align: left;
+  }
+
+  .backup-import-footer .primary-action {
+    width: 100%;
+  }
+}
