@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.23.0", date: "2026-07-15", title: "Feats",
+    summary: "2014 ve 2024 feat veri katmanı, origin feat aktarımı, prerequisite kontrolü ve Builder seçimi eklendi.",
+    changes: [
+      { text: "2014 ve 2024 için ayrı feat veri setleri", category: "Özellik" },
+      { text: "Origin, General ve Epic Boon kategori ayrımı", category: "Özellik" },
+      { text: "Level, ability ve spellcasting prerequisite kontrolü", category: "Özellik" },
+      { text: "Class ve level bazlı feat kotası", category: "İyileştirme" },
+      { text: "Yeni Feats katalog ekranı", category: "Özellik" },
+      { text: "Feat helperları için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.22.0", date: "2026-07-15", title: "Subclasses",
     summary: "2014 ve 2024 subclass veri katmanı, Builder seçimi, level kilidi ve feature progression görünümü eklendi.",
     changes: [

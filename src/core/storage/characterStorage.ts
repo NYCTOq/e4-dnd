@@ -173,6 +173,7 @@ function hydrateCharacter(character: Character): Character {
     ruleset: normalizeRulesetId(character.ruleset),
     knownSpellIds: character.knownSpellIds ?? [],
     preparedSpellIds: character.preparedSpellIds ?? [],
+    featIds: Array.isArray(character.featIds) ? character.featIds.filter((id): id is string => typeof id === "string") : [],
     spellSlots: hydrateSpellSlots(character),
     inventory,
     equippedArmorId:

@@ -1,0 +1,257 @@
+[
+  {
+    "id": "alert",
+    "name": "Alert",
+    "ruleset": "dnd_2024",
+    "category": "origin",
+    "summary": "Initiative düzenini ve savaş başlangıcındaki hazırlığı güçlendirir.",
+    "benefits": [
+      "Initiative desteği",
+      "Initiative sırası takası"
+    ]
+  },
+  {
+    "id": "crafter",
+    "name": "Crafter",
+    "ruleset": "dnd_2024",
+    "category": "origin",
+    "summary": "Tool proficiency ve ekonomik üretim avantajları sağlar.",
+    "benefits": [
+      "Ek tool proficiency",
+      "Crafting desteği"
+    ]
+  },
+  {
+    "id": "healer",
+    "name": "Healer",
+    "ruleset": "dnd_2024",
+    "category": "origin",
+    "summary": "Healer's Kit ve iyileştirme zarlarından daha fazla verim sağlar.",
+    "benefits": [
+      "Saha tedavisi",
+      "İyileştirme desteği"
+    ]
+  },
+  {
+    "id": "lucky",
+    "name": "Lucky",
+    "ruleset": "dnd_2024",
+    "category": "origin",
+    "summary": "Proficiency bonusuna bağlı sınırlı şans kullanımları verir.",
+    "benefits": [
+      "D20 testlerine avantaj/dezavantaj müdahalesi"
+    ]
+  },
+  {
+    "id": "magic-initiate-cleric",
+    "name": "Magic Initiate (Cleric)",
+    "ruleset": "dnd_2024",
+    "category": "origin",
+    "summary": "Cleric listesinden temel büyü erişimi kazandırır.",
+    "benefits": [
+      "İki cantrip",
+      "Bir seviye 1 büyü"
+    ]
+  },
+  {
+    "id": "magic-initiate-druid",
+    "name": "Magic Initiate (Druid)",
+    "ruleset": "dnd_2024",
+    "category": "origin",
+    "summary": "Druid listesinden temel büyü erişimi kazandırır.",
+    "benefits": [
+      "İki cantrip",
+      "Bir seviye 1 büyü"
+    ]
+  },
+  {
+    "id": "magic-initiate-wizard",
+    "name": "Magic Initiate (Wizard)",
+    "ruleset": "dnd_2024",
+    "category": "origin",
+    "summary": "Wizard listesinden temel büyü erişimi kazandırır.",
+    "benefits": [
+      "İki cantrip",
+      "Bir seviye 1 büyü"
+    ]
+  },
+  {
+    "id": "musician",
+    "name": "Musician",
+    "ruleset": "dnd_2024",
+    "category": "origin",
+    "summary": "Müzik aletleri ve dinlenme sonrası Heroic Inspiration desteği verir.",
+    "benefits": [
+      "Instrument proficiency",
+      "Parti desteği"
+    ]
+  },
+  {
+    "id": "savage-attacker",
+    "name": "Savage Attacker",
+    "ruleset": "dnd_2024",
+    "category": "origin",
+    "summary": "Silah hasar zarını turda bir kez daha güvenilir kılar.",
+    "benefits": [
+      "Hasar zarı tekrar değerlendirme"
+    ]
+  },
+  {
+    "id": "skilled",
+    "name": "Skilled",
+    "ruleset": "dnd_2024",
+    "category": "origin",
+    "summary": "Üç skill veya tool proficiency seçimi verir.",
+    "benefits": [
+      "Üç ek proficiency"
+    ]
+  },
+  {
+    "id": "tavern-brawler",
+    "name": "Tavern Brawler",
+    "ruleset": "dnd_2024",
+    "category": "origin",
+    "summary": "Unarmed Strike ve doğaçlama yakın dövüşü geliştirir.",
+    "benefits": [
+      "Unarmed Strike desteği",
+      "İtme seçeneği"
+    ]
+  },
+  {
+    "id": "tough",
+    "name": "Tough",
+    "ruleset": "dnd_2024",
+    "category": "origin",
+    "summary": "Karakter seviyesine göre maksimum HP kazandırır.",
+    "benefits": [
+      "Seviye başına ek HP"
+    ]
+  },
+  {
+    "id": "ability-score-improvement",
+    "name": "Ability Score Improvement",
+    "ruleset": "dnd_2024",
+    "category": "general",
+    "summary": "Ability skorlarını kuralların izin verdiği sınırlar içinde yükseltir.",
+    "benefits": [
+      "İki puanlık ability artışı"
+    ],
+    "prerequisite": {
+      "minimumLevel": 4
+    },
+    "repeatable": true
+  },
+  {
+    "id": "athlete",
+    "name": "Athlete",
+    "ruleset": "dnd_2024",
+    "category": "general",
+    "summary": "Hareket, tırmanma ve ayağa kalkma verimliliği sağlar.",
+    "benefits": [
+      "Hareket desteği"
+    ],
+    "prerequisite": {
+      "minimumLevel": 4
+    },
+    "abilityOptions": [
+      "str",
+      "dex"
+    ]
+  },
+  {
+    "id": "charger",
+    "name": "Charger",
+    "ruleset": "dnd_2024",
+    "category": "general",
+    "summary": "Dash sonrası saldırı veya itme baskısını artırır.",
+    "benefits": [
+      "Hareket sonrası saldırı desteği"
+    ],
+    "prerequisite": {
+      "minimumLevel": 4
+    },
+    "abilityOptions": [
+      "str",
+      "dex"
+    ]
+  },
+  {
+    "id": "defensive-duelist",
+    "name": "Defensive Duelist",
+    "ruleset": "dnd_2024",
+    "category": "general",
+    "summary": "Finesse silahla reaction savunması sağlar.",
+    "benefits": [
+      "Reaction ile AC desteği"
+    ],
+    "prerequisite": {
+      "minimumLevel": 4,
+      "abilityMinimums": {
+        "dex": 13
+      }
+    }
+  },
+  {
+    "id": "great-weapon-master",
+    "name": "Great Weapon Master",
+    "ruleset": "dnd_2024",
+    "category": "general",
+    "summary": "Heavy silahlarla güçlü saldırı ve ekstra saldırı akışını destekler.",
+    "benefits": [
+      "Heavy weapon hasarı",
+      "Bonus Action saldırı fırsatı"
+    ],
+    "prerequisite": {
+      "minimumLevel": 4,
+      "abilityMinimums": {
+        "str": 13
+      }
+    }
+  },
+  {
+    "id": "war-caster",
+    "name": "War Caster",
+    "ruleset": "dnd_2024",
+    "category": "general",
+    "summary": "Concentration ve savaş içi spellcasting yeteneğini geliştirir.",
+    "benefits": [
+      "Concentration desteği",
+      "Reaction spell fırsatı"
+    ],
+    "prerequisite": {
+      "minimumLevel": 4,
+      "spellcasting": true
+    },
+    "abilityOptions": [
+      "int",
+      "wis",
+      "cha"
+    ]
+  },
+  {
+    "id": "boon-of-combat-prowess",
+    "name": "Boon of Combat Prowess",
+    "ruleset": "dnd_2024",
+    "category": "epic-boon",
+    "summary": "Üst düzey saldırı güvenilirliği sağlayan epic boon.",
+    "benefits": [
+      "Başarısız saldırıyı geliştirme"
+    ],
+    "prerequisite": {
+      "minimumLevel": 19
+    }
+  },
+  {
+    "id": "boon-of-fortitude",
+    "name": "Boon of Fortitude",
+    "ruleset": "dnd_2024",
+    "category": "epic-boon",
+    "summary": "Üst düzey dayanıklılık ve HP desteği sağlayan epic boon.",
+    "benefits": [
+      "Maksimum HP artışı"
+    ],
+    "prerequisite": {
+      "minimumLevel": 19
+    }
+  }
+]

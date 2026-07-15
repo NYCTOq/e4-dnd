@@ -5,6 +5,7 @@ import type { RulesetData, DndSpellData } from "../../core/rulesets/ruleset.type
 import { applyAbilityBonuses, getOriginAbilityBonuses } from "../../core/rulesets/originRules";
 import { getRulesetDefinition } from "../../core/rulesets/rulesetRegistry";
 import { getSubclassesForClass, getUnlockedSubclassFeatures } from "../../core/rulesets/subclassRules";
+import { getGeneralFeatSlotCount, getGrantedOriginFeatName, isFeatEligible } from "../../core/rulesets/featRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
@@ -58,6 +59,7 @@ export function Builder({
     { id: "basic", title: "Basic", description: "İsim, oyuncu ve temel kimlik." },
     { id: "class", title: "Race & Class", description: "Tür, sınıf, seviye ve arka plan." },
     { id: "abilities", title: "Abilities", description: "Altı ability skoru ve modifierlar." },
+    { id: "feats", title: "Feats", description: "Origin ve general feat seçimleri." },
     { id: "combat", title: "Combat", description: "HP, AC ve notlar." },
     { id: "spells", title: "Spells", description: "Known, prepared ve cantrip seçimi." },
     { id: "equipment", title: "Equipment", description: "Inventory, gold ve kuşanılan ekipman." },
@@ -88,6 +90,21 @@ export function Builder({
   const selectedBackground = useMemo(() => activeRulesetData?.backgrounds.find((item) => item.name === draft.background) ?? null, [activeRulesetData, draft.background]);
   const originBonuses = useMemo(() => getOriginAbilityBonuses(draft.ruleset, selectedRace, selectedSubrace, selectedBackground, draft.originAbilityPrimary, draft.originAbilitySecondary), [draft.ruleset, draft.originAbilityPrimary, draft.originAbilitySecondary, selectedRace, selectedSubrace, selectedBackground]);
   const finalAbilities = useMemo(() => applyAbilityBonuses(draft.abilities, originBonuses), [draft.abilities, originBonuses]);
+  const generalFeatSlots = useMemo(() => getGeneralFeatSlotCount(draft.level, draft.className, draft.ruleset), [draft.level, draft.className, draft.ruleset]);
+  const grantedOriginFeatName = getGrantedOriginFeatName(draft.ruleset, selectedBackground?.originFeat);
+  const selectableFeats = useMemo(() => (activeRulesetData?.feats ?? []).filter((feat) => feat.category !== "origin"), [activeRulesetData]);
+  const selectedFeats = useMemo(() => (activeRulesetData?.feats ?? []).filter((feat) => draft.featIds.includes(feat.id)), [activeRulesetData, draft.featIds]);
+  const canCastSpells = Boolean(selectedClass?.spellcastingAbility);
+
+  function toggleFeat(featId: string) {
+    setDraft((current) => {
+      if (current.featIds.includes(featId)) {
+        return { ...current, featIds: current.featIds.filter((id) => id !== featId) };
+      }
+      if (current.featIds.length >= generalFeatSlots) return current;
+      return { ...current, featIds: [...current.featIds, featId] };
+    });
+  }
 
   const knownSpells = useMemo(() => {
     const spellMap = new Map((activeRulesetData?.spells ?? []).map((spell) => [spell.id, spell]));
@@ -187,8 +204,13 @@ export function Builder({
       return;
     }
 
+    const validFeatIds = draft.featIds
+      .filter((featId) => selectableFeats.some((feat) => feat.id === featId && isFeatEligible(feat, { level: draft.level, className: draft.className, abilities: finalAbilities, canCastSpells }).eligible))
+      .slice(0, generalFeatSlots);
+
     onCreateCharacter({
       ...draft,
+      featIds: validFeatIds,
       abilities: finalAbilities,
       armorClass: calculateEffectiveArmorClass({ ...draft, abilities: finalAbilities }, activeRulesetData?.items),
     });
@@ -274,7 +296,7 @@ export function Builder({
                         ...current,
                         ruleset: nextRuleset,
                         race: "", subrace: "", className: "", subclass: "", background: "", originAbilityPrimary: undefined, originAbilitySecondary: undefined,
-                        knownSpellIds: [], preparedSpellIds: [], spellSlots: [],
+                        knownSpellIds: [], preparedSpellIds: [], spellSlots: [], featIds: [],
                         inventory: [], equippedArmorId: null, equippedShieldId: null, equippedWeaponIds: [],
                       }));
                     }}
@@ -536,6 +558,74 @@ export function Builder({
                   </label>
                 ))}
               </div>
+            </section>
+          ) : null}
+
+          {activeStep.id === "feats" ? (
+            <section className="form-panel">
+              <div className="panel-heading-row">
+                <div>
+                  <h2>Feats</h2>
+                  <p>Uygun olmayan featler kilitli görünür. Kurallar sonunda dekor olmaktan çıktı.</p>
+                </div>
+                <span className="mini-label">{draft.featIds.length} / {generalFeatSlots} general feat</span>
+              </div>
+
+              {grantedOriginFeatName ? (
+                <article className="builder-choice-card">
+                  <span className="mini-label">Background tarafından verildi</span>
+                  <h3>{grantedOriginFeatName}</h3>
+                  <p>Bu Origin Feat seçili 2024 background paketinden otomatik gelir ve general feat kotasını kullanmaz.</p>
+                </article>
+              ) : null}
+
+              {!generalFeatSlots ? (
+                <div className="empty-panel">
+                  <h2>Henüz general feat hakkı yok</h2>
+                  <p>Class ve level seçimine göre ilk feat hakkı açıldığında seçenekler burada etkinleşecek.</p>
+                </div>
+              ) : null}
+
+              <div className="builder-choice-grid">
+                {selectableFeats.map((feat) => {
+                  const eligibility = isFeatEligible(feat, {
+                    level: draft.level,
+                    className: draft.className,
+                    abilities: finalAbilities,
+                    canCastSpells,
+                  });
+                  const selected = draft.featIds.includes(feat.id);
+                  const slotFull = !selected && draft.featIds.length >= generalFeatSlots;
+                  const disabled = !eligibility.eligible || slotFull;
+
+                  return (
+                    <article className={`builder-choice-card ${selected ? "selected" : ""}`} key={feat.id}>
+                      <div className="panel-heading-row">
+                        <div>
+                          <span className="mini-label">{feat.category === "epic-boon" ? "Epic Boon" : "General Feat"}</span>
+                          <h3>{feat.name}</h3>
+                        </div>
+                        <button type="button" disabled={disabled} onClick={() => toggleFeat(feat.id)}>
+                          {selected ? "Kaldır" : "Seç"}
+                        </button>
+                      </div>
+                      <p>{feat.summary}</p>
+                      <div className="preview-stats">
+                        {feat.benefits.map((benefit) => <span key={benefit}>{benefit}</span>)}
+                        {!eligibility.eligible ? <span>Kilitli: {eligibility.reasons.join(" · ")}</span> : null}
+                        {slotFull ? <span>Feat kotası dolu</span> : null}
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+
+              {selectedFeats.length ? (
+                <div className="ruleset-foundation-card">
+                  <strong>Seçilen featler</strong>
+                  <span>{selectedFeats.map((feat) => feat.name).join(", ")}</span>
+                </div>
+              ) : null}
             </section>
           ) : null}
 

@@ -12,6 +12,7 @@ export function makeCharacter(overrides: Partial<Character> = {}): Character {
     className: "Cleric",
     subclass: "Life",
     background: "Acolyte",
+    featIds: [],
     level: 5,
     abilities: { str: 10, dex: 14, con: 14, int: 10, wis: 18, cha: 10 },
     maxHp: 38,

@@ -46,6 +46,7 @@ export function CharacterEditor({
       className: character.className,
       subclass: character.subclass,
       background: character.background,
+      featIds: character.featIds ?? [],
       level: character.level,
       abilities: character.abilities,
       maxHp: character.maxHp,

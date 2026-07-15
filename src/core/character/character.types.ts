@@ -66,6 +66,7 @@ export interface Character {
   background: string;
   originAbilityPrimary?: AbilityKey;
   originAbilitySecondary?: AbilityKey;
+  featIds: string[];
   level: number;
 
   abilities: AbilityScores;
@@ -111,6 +112,7 @@ export interface CharacterDraft {
   background: string;
   originAbilityPrimary?: AbilityKey;
   originAbilitySecondary?: AbilityKey;
+  featIds: string[];
   level: number;
 
   abilities: AbilityScores;

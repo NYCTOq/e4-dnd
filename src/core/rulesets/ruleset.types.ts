@@ -85,6 +85,28 @@ export interface DndBackgroundData {
   originFeat?: string;
 }
 
+
+export type FeatCategory = "origin" | "general" | "epic-boon";
+
+export interface DndFeatPrerequisite {
+  minimumLevel?: number;
+  abilityMinimums?: Partial<Record<AbilityKey, number>>;
+  spellcasting?: boolean;
+  classNames?: string[];
+}
+
+export interface DndFeatData {
+  id: string;
+  name: string;
+  ruleset: "dnd_2014" | "dnd_2024";
+  category: FeatCategory;
+  summary: string;
+  benefits: string[];
+  prerequisite?: DndFeatPrerequisite;
+  abilityOptions?: AbilityKey[];
+  repeatable?: boolean;
+}
+
 export interface DndSpellData {
   id: string;
   name: string;
@@ -162,6 +184,7 @@ export interface RulesetData {
   subclasses: DndSubclassData[];
   races: DndRaceData[];
   backgrounds: DndBackgroundData[];
+  feats: DndFeatData[];
   spells: DndSpellData[];
   items: DndItemData[];
   monsters: DndMonsterData[];

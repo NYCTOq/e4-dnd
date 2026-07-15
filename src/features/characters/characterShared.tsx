@@ -14,6 +14,7 @@ export const emptyDraft: CharacterDraft = {
   background: "",
   originAbilityPrimary: undefined,
   originAbilitySecondary: undefined,
+  featIds: [],
   level: 1,
   abilities: {
     str: 10,

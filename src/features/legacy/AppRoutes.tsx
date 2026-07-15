@@ -85,6 +85,9 @@ const SubclassCatalogPage = lazy(() =>
 const OriginCatalogPage = lazy(() =>
   import("../origins/OriginCatalogPage").then((module) => ({ default: module.OriginCatalogPage })),
 );
+const FeatCatalogPage = lazy(() =>
+  import("../feats/FeatCatalogPage").then((module) => ({ default: module.FeatCatalogPage })),
+);
 const ReleaseHistory = lazy(() =>
   import("../updates/ReleaseHistory").then((module) => ({ default: module.ReleaseHistory })),
 );
@@ -403,6 +406,7 @@ export function AppRoutes({
       <Route path="/classes" element={<ClassCatalogPage rulesetData={effectiveRulesetData} />} />
       <Route path="/subclasses" element={<SubclassCatalogPage rulesetData={effectiveRulesetData} />} />
       <Route path="/origins" element={<OriginCatalogPage rulesetData={effectiveRulesetData} />} />
+      <Route path="/feats" element={<FeatCatalogPage rulesetData={effectiveRulesetData} />} />
       <Route path="/settings" element={<Settings />} />
 
       <Route path="/updates" element={<ReleaseHistory />} />

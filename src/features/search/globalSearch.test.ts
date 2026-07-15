@@ -10,6 +10,7 @@ const rulesetData: RulesetData = {
   subclasses: [],
   races: [],
   backgrounds: [],
+  feats: [],
   spells: [
     {
       id: "fireball",

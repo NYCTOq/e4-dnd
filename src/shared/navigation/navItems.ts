@@ -30,6 +30,7 @@ export const navItems: readonly NavItem[] = [
   { to: "/classes", label: "Classes", shortLabel: "Class", icon: "◇", group: "İçerik" },
   { to: "/subclasses", label: "Subclasses", shortLabel: "Subclass", icon: "△", group: "İçerik" },
   { to: "/origins", label: "Species & Backgrounds", shortLabel: "Origins", icon: "◌", group: "İçerik" },
+  { to: "/feats", label: "Feats", shortLabel: "Feats", icon: "✦", group: "İçerik" },
   { to: "/spellbook", label: "Spellbook", shortLabel: "Spells", icon: "✧", group: "İçerik" },
   { to: "/inventory", label: "Inventory", shortLabel: "Eşya", icon: "▣", group: "İçerik" },
   { to: "/monsters", label: "Monsters", shortLabel: "Monster", icon: "♜", group: "İçerik" },

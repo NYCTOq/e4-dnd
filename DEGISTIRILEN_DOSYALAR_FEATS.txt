@@ -1,0 +1,24 @@
+E4 D&D Feats V1 - v1.23.0
+
+Yeni dosyalar:
+- public/data/dnd_2014/feats.json
+- public/data/dnd_2024/feats.json
+- src/core/rulesets/featRules.ts
+- src/core/rulesets/featRules.test.ts
+- src/features/feats/FeatCatalogPage.tsx
+
+Güncellenen temel dosyalar:
+- src/core/rulesets/ruleset.types.ts
+- src/core/rulesets/rulesetLoader.ts
+- src/core/character/character.types.ts
+- src/core/storage/characterStorage.ts
+- src/features/characters/characterShared.tsx
+- src/features/characters/CharacterEditor.tsx
+- src/features/builder/Builder.tsx
+- src/features/legacy/AppRoutes.tsx
+- src/shared/navigation/navItems.ts
+- src/shared/release/releaseNotes.ts
+- src/features/search/globalSearch.test.ts
+- src/test/fixtures.ts
+- package.json
+- package-lock.json
