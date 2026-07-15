@@ -15,6 +15,21 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.20.0",
+    date: "2026-07-15",
+    title: "Classes ve level tabloları",
+    summary: "2014 ve 2024 için on iki ana class; level progression, proficiency, subclass seviyesi, spell slotları ve feature akışıyla ayrı veri katmanlarında hazır.",
+    changes: [
+      { text: "2014 ve 2024 için 12 ana class veri seti", category: "Özellik" },
+      { text: "Level 1-20 proficiency bonus ve feature progression tabloları", category: "Özellik" },
+      { text: "Full caster, half caster, pact magic ve martial progression ayrımı", category: "Teknik" },
+      { text: "2024 martial classları için Weapon Mastery adet altyapısı", category: "Özellik" },
+      { text: "Yeni Classes + Level Tables katalog ekranı", category: "Özellik" },
+      { text: "Builder class ön izlemesine subclass ve progression bilgisi", category: "İyileştirme" },
+      { text: "Class progression helperları için otomatik testler", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.19.0",
     date: "2026-07-15",
     title: "Ruleset Foundation",

@@ -1,0 +1,16 @@
+E4 D&D v1.20.0 - Classes + Level Tables V1
+
+- public/data/dnd_2014/classes.json
+- public/data/dnd_2024/classes.json
+- src/core/rulesets/ruleset.types.ts
+- src/core/rulesets/classProgression.ts
+- src/core/rulesets/classProgression.test.ts
+- src/core/rulesets/classDataIntegrity.test.ts
+- src/features/classes/ClassCatalogPage.tsx
+- src/features/builder/Builder.tsx
+- src/features/legacy/AppRoutes.tsx
+- src/features/rulesets/RulesetCenterPage.tsx
+- src/shared/navigation/navItems.ts
+- src/shared/release/releaseNotes.ts
+- src/App.css
+- package.json / package-lock.json

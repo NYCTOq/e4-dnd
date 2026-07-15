@@ -1,28 +1,1106 @@
 [
   {
+    "id": "barbarian",
+    "name": "Barbarian",
+    "hitDie": 12,
+    "primaryAbilities": [
+      "str"
+    ],
+    "savingThrows": [
+      "str",
+      "con"
+    ],
+    "spellcastingAbility": null,
+    "armorProficiencies": [
+      "Light Armor",
+      "Medium Armor",
+      "Shields"
+    ],
+    "weaponProficiencies": [
+      "Simple Weapons",
+      "Martial Weapons"
+    ],
+    "skillChoices": {
+      "choose": 2,
+      "from": [
+        "Animal Handling",
+        "Athletics",
+        "Intimidation",
+        "Nature",
+        "Perception",
+        "Survival"
+      ]
+    },
+    "description": "Durable frontline warrior powered by rage and physical resilience.",
+    "subclassLevel": 3,
+    "spellProgression": "none",
+    "levels": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "Rage",
+          "Unarmored Defense"
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          "Reckless Attack",
+          "Danger Sense"
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          "Primal Path"
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": []
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          "Extra Attack",
+          "Fast Movement"
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [
+          "Feral Instinct"
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [
+          "Brutal Critical"
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [
+          "Relentless Rage"
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [
+          "Persistent Rage"
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          "Indomitable Might"
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          "Primal Champion"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bard",
+    "name": "Bard",
+    "hitDie": 8,
+    "primaryAbilities": [
+      "cha"
+    ],
+    "savingThrows": [
+      "dex",
+      "cha"
+    ],
+    "spellcastingAbility": "cha",
+    "armorProficiencies": [
+      "Light Armor"
+    ],
+    "weaponProficiencies": [
+      "Simple Weapons",
+      "Hand Crossbows",
+      "Longswords",
+      "Rapiers",
+      "Shortswords"
+    ],
+    "skillChoices": {
+      "choose": 3,
+      "from": [
+        "Acrobatics",
+        "Animal Handling",
+        "Arcana",
+        "Athletics",
+        "Deception",
+        "History",
+        "Insight",
+        "Intimidation",
+        "Investigation",
+        "Medicine",
+        "Nature",
+        "Perception",
+        "Performance",
+        "Persuasion",
+        "Religion",
+        "Sleight of Hand",
+        "Stealth",
+        "Survival"
+      ]
+    },
+    "description": "Versatile support spellcaster whose expertise and inspiration shape the party.",
+    "subclassLevel": 3,
+    "spellProgression": "full",
+    "levels": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "Bardic Inspiration",
+          "Spellcasting"
+        ],
+        "spellSlots": [
+          2
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          "Jack of All Trades",
+          "Song of Rest"
+        ],
+        "spellSlots": [
+          3
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          "Bard College",
+          "Expertise"
+        ],
+        "spellSlots": [
+          4,
+          2
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [],
+        "spellSlots": [
+          4,
+          3
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          "Font of Inspiration"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [
+          "Countercharm"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          "Magical Secrets"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          "Superior Inspiration"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
     "id": "cleric",
     "name": "Cleric",
     "hitDie": 8,
-    "primaryAbilities": ["wis"],
-    "savingThrows": ["wis", "cha"],
+    "primaryAbilities": [
+      "wis"
+    ],
+    "savingThrows": [
+      "wis",
+      "cha"
+    ],
     "spellcastingAbility": "wis",
-    "armorProficiencies": ["Light Armor", "Medium Armor", "Shields"],
-    "weaponProficiencies": ["Simple Weapons"],
+    "armorProficiencies": [
+      "Light Armor",
+      "Medium Armor",
+      "Shields"
+    ],
+    "weaponProficiencies": [
+      "Simple Weapons"
+    ],
     "skillChoices": {
       "choose": 2,
-      "from": ["History", "Insight", "Medicine", "Persuasion", "Religion"]
+      "from": [
+        "History",
+        "Insight",
+        "Medicine",
+        "Persuasion",
+        "Religion"
+      ]
     },
-    "description": "Divine magic user focused on healing, support, protection and sacred power."
+    "description": "Divine spellcaster focused on support, protection, restoration and sacred power.",
+    "subclassLevel": 1,
+    "spellProgression": "full",
+    "levels": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "Spellcasting",
+          "Divine Domain"
+        ],
+        "spellSlots": [
+          2
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          "Channel Divinity"
+        ],
+        "spellSlots": [
+          3
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [],
+        "spellSlots": [
+          4,
+          2
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [],
+        "spellSlots": [
+          4,
+          3
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          "Destroy Undead"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          "Divine Intervention"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          "Improved Divine Intervention"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "druid",
+    "name": "Druid",
+    "hitDie": 8,
+    "primaryAbilities": [
+      "wis"
+    ],
+    "savingThrows": [
+      "int",
+      "wis"
+    ],
+    "spellcastingAbility": "wis",
+    "armorProficiencies": [
+      "Light Armor",
+      "Medium Armor",
+      "Shields"
+    ],
+    "weaponProficiencies": [
+      "Clubs",
+      "Daggers",
+      "Darts",
+      "Javelins",
+      "Maces",
+      "Quarterstaffs",
+      "Scimitars",
+      "Sickles",
+      "Slings",
+      "Spears"
+    ],
+    "skillChoices": {
+      "choose": 2,
+      "from": [
+        "Arcana",
+        "Animal Handling",
+        "Insight",
+        "Medicine",
+        "Nature",
+        "Perception",
+        "Religion",
+        "Survival"
+      ]
+    },
+    "description": "Primal spellcaster with nature magic, transformation and battlefield control.",
+    "subclassLevel": 2,
+    "spellProgression": "full",
+    "levels": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "Druidic",
+          "Spellcasting"
+        ],
+        "spellSlots": [
+          2
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          "Wild Shape",
+          "Druid Circle"
+        ],
+        "spellSlots": [
+          3
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [],
+        "spellSlots": [
+          4,
+          2
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [],
+        "spellSlots": [
+          4,
+          3
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          "Timeless Body",
+          "Beast Spells"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          "Archdruid"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          1,
+          1
+        ]
+      }
+    ]
   },
   {
     "id": "fighter",
     "name": "Fighter",
     "hitDie": 10,
-    "primaryAbilities": ["str", "dex"],
-    "savingThrows": ["str", "con"],
+    "primaryAbilities": [
+      "str",
+      "dex"
+    ],
+    "savingThrows": [
+      "str",
+      "con"
+    ],
     "spellcastingAbility": null,
-    "armorProficiencies": ["Light Armor", "Medium Armor", "Heavy Armor", "Shields"],
-    "weaponProficiencies": ["Simple Weapons", "Martial Weapons"],
+    "armorProficiencies": [
+      "Light Armor",
+      "Medium Armor",
+      "Heavy Armor",
+      "Shields"
+    ],
+    "weaponProficiencies": [
+      "Simple Weapons",
+      "Martial Weapons"
+    ],
     "skillChoices": {
       "choose": 2,
       "from": [
@@ -36,31 +1114,821 @@
         "Survival"
       ]
     },
-    "description": "Martial combat expert with strong weapon, armor and tactical flexibility."
+    "description": "Martial specialist with broad weapon training and reliable tactical resources.",
+    "subclassLevel": 3,
+    "spellProgression": "none",
+    "levels": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "Fighting Style",
+          "Second Wind"
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          "Action Surge"
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          "Martial Archetype"
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": []
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          "Extra Attack"
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [
+          "Indomitable"
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [
+          "Extra Attack (2)"
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [
+          "Action Surge (2)",
+          "Indomitable (3)"
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          "Extra Attack (3)"
+        ]
+      }
+    ]
   },
   {
-    "id": "wizard",
-    "name": "Wizard",
-    "hitDie": 6,
-    "primaryAbilities": ["int"],
-    "savingThrows": ["int", "wis"],
-    "spellcastingAbility": "int",
+    "id": "monk",
+    "name": "Monk",
+    "hitDie": 8,
+    "primaryAbilities": [
+      "dex",
+      "wis"
+    ],
+    "savingThrows": [
+      "str",
+      "dex"
+    ],
+    "spellcastingAbility": null,
     "armorProficiencies": [],
-    "weaponProficiencies": ["Daggers", "Darts", "Slings", "Quarterstaffs", "Light Crossbows"],
+    "weaponProficiencies": [
+      "Simple Weapons",
+      "Shortswords"
+    ],
     "skillChoices": {
       "choose": 2,
-      "from": ["Arcana", "History", "Insight", "Investigation", "Medicine", "Religion"]
+      "from": [
+        "Acrobatics",
+        "Athletics",
+        "History",
+        "Insight",
+        "Religion",
+        "Stealth"
+      ]
     },
-    "description": "Arcane spellcaster who learns and prepares spells from a spellbook."
+    "description": "Mobile martial artist using discipline, speed and precise unarmed attacks.",
+    "subclassLevel": 3,
+    "spellProgression": "none",
+    "levels": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "Unarmored Defense",
+          "Martial Arts"
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ki",
+          "Unarmored Movement"
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          "Monastic Tradition",
+          "Deflect Missiles"
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": []
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          "Extra Attack",
+          "Stunning Strike"
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [
+          "Evasion",
+          "Stillness of Mind"
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          "Diamond Soul"
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          "Empty Body"
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          "Perfect Self"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "paladin",
+    "name": "Paladin",
+    "hitDie": 10,
+    "primaryAbilities": [
+      "str",
+      "cha"
+    ],
+    "savingThrows": [
+      "wis",
+      "cha"
+    ],
+    "spellcastingAbility": "cha",
+    "armorProficiencies": [
+      "Light Armor",
+      "Medium Armor",
+      "Heavy Armor",
+      "Shields"
+    ],
+    "weaponProficiencies": [
+      "Simple Weapons",
+      "Martial Weapons"
+    ],
+    "skillChoices": {
+      "choose": 2,
+      "from": [
+        "Athletics",
+        "Insight",
+        "Intimidation",
+        "Medicine",
+        "Persuasion",
+        "Religion"
+      ]
+    },
+    "description": "Armored divine warrior combining martial pressure, healing and protective auras.",
+    "subclassLevel": 3,
+    "spellProgression": "half",
+    "levels": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "Divine Sense",
+          "Lay on Hands"
+        ],
+        "spellSlots": []
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          "Fighting Style",
+          "Spellcasting",
+          "Divine Smite"
+        ],
+        "spellSlots": [
+          2
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          "Divine Health",
+          "Sacred Oath"
+        ],
+        "spellSlots": [
+          3
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [],
+        "spellSlots": [
+          3
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          "Extra Attack"
+        ],
+        "spellSlots": [
+          4,
+          2
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [
+          "Aura of Protection"
+        ],
+        "spellSlots": [
+          4,
+          2
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          "Aura of Courage"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [
+          "Improved Divine Smite"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          "Cleansing Touch"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          "Sacred Oath Capstone"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ranger",
+    "name": "Ranger",
+    "hitDie": 10,
+    "primaryAbilities": [
+      "dex",
+      "wis"
+    ],
+    "savingThrows": [
+      "str",
+      "dex"
+    ],
+    "spellcastingAbility": "wis",
+    "armorProficiencies": [
+      "Light Armor",
+      "Medium Armor",
+      "Shields"
+    ],
+    "weaponProficiencies": [
+      "Simple Weapons",
+      "Martial Weapons"
+    ],
+    "skillChoices": {
+      "choose": 3,
+      "from": [
+        "Animal Handling",
+        "Athletics",
+        "Insight",
+        "Investigation",
+        "Nature",
+        "Perception",
+        "Stealth",
+        "Survival"
+      ]
+    },
+    "description": "Explorer and hunter blending martial skill, tracking and primal magic.",
+    "subclassLevel": 3,
+    "spellProgression": "half",
+    "levels": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "Favored Enemy",
+          "Natural Explorer"
+        ],
+        "spellSlots": []
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          "Fighting Style",
+          "Spellcasting"
+        ],
+        "spellSlots": [
+          2
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ranger Archetype",
+          "Primeval Awareness"
+        ],
+        "spellSlots": [
+          3
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [],
+        "spellSlots": [
+          3
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          "Extra Attack"
+        ],
+        "spellSlots": [
+          4,
+          2
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          2
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [
+          "Land’s Stride"
+        ],
+        "spellSlots": [
+          4,
+          3
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [
+          "Hide in Plain Sight"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          "Vanish"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          "Feral Senses"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          "Foe Slayer"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2
+        ]
+      }
+    ]
   },
   {
     "id": "rogue",
     "name": "Rogue",
     "hitDie": 8,
-    "primaryAbilities": ["dex"],
-    "savingThrows": ["dex", "int"],
+    "primaryAbilities": [
+      "dex"
+    ],
+    "savingThrows": [
+      "dex",
+      "int"
+    ],
     "spellcastingAbility": null,
-    "armorProficiencies": ["Light Armor"],
+    "armorProficiencies": [
+      "Light Armor"
+    ],
     "weaponProficiencies": [
       "Simple Weapons",
       "Hand Crossbows",
@@ -84,6 +1952,953 @@
         "Stealth"
       ]
     },
-    "description": "Skill-focused adventurer with stealth, precision and dirty little problem-solving habits."
+    "description": "Skill specialist built around expertise, mobility and precise attacks.",
+    "subclassLevel": 3,
+    "spellProgression": "none",
+    "levels": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "Expertise",
+          "Sneak Attack",
+          "Thieves’ Cant"
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          "Cunning Action"
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          "Roguish Archetype"
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": []
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [
+          "Uncanny Dodge"
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [
+          "Evasion"
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [
+          "Reliable Talent"
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [
+          "Blindsense"
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [
+          "Slippery Mind"
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          "Elusive"
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          "Stroke of Luck"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sorcerer",
+    "name": "Sorcerer",
+    "hitDie": 6,
+    "primaryAbilities": [
+      "cha"
+    ],
+    "savingThrows": [
+      "con",
+      "cha"
+    ],
+    "spellcastingAbility": "cha",
+    "armorProficiencies": [],
+    "weaponProficiencies": [
+      "Daggers",
+      "Darts",
+      "Slings",
+      "Quarterstaffs",
+      "Light Crossbows"
+    ],
+    "skillChoices": {
+      "choose": 2,
+      "from": [
+        "Arcana",
+        "Deception",
+        "Insight",
+        "Intimidation",
+        "Persuasion",
+        "Religion"
+      ]
+    },
+    "description": "Innate arcane caster who reshapes spells through a personal magical resource.",
+    "subclassLevel": 1,
+    "spellProgression": "full",
+    "levels": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "Spellcasting",
+          "Sorcerous Origin"
+        ],
+        "spellSlots": [
+          2
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          "Font of Magic"
+        ],
+        "spellSlots": [
+          3
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          "Metamagic"
+        ],
+        "spellSlots": [
+          4,
+          2
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [],
+        "spellSlots": [
+          4,
+          3
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          "Sorcerous Restoration"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "warlock",
+    "name": "Warlock",
+    "hitDie": 8,
+    "primaryAbilities": [
+      "cha"
+    ],
+    "savingThrows": [
+      "wis",
+      "cha"
+    ],
+    "spellcastingAbility": "cha",
+    "armorProficiencies": [
+      "Light Armor"
+    ],
+    "weaponProficiencies": [
+      "Simple Weapons"
+    ],
+    "skillChoices": {
+      "choose": 2,
+      "from": [
+        "Arcana",
+        "Deception",
+        "History",
+        "Intimidation",
+        "Investigation",
+        "Nature",
+        "Religion"
+      ]
+    },
+    "description": "Pact-bound caster combining repeatable invocations with compact spell resources.",
+    "subclassLevel": 1,
+    "spellProgression": "pact",
+    "levels": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "Otherworldly Patron",
+          "Pact Magic"
+        ],
+        "pactMagic": {
+          "slotLevel": 1,
+          "slots": 1
+        }
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          "Eldritch Invocations"
+        ],
+        "pactMagic": {
+          "slotLevel": 1,
+          "slots": 2
+        }
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [
+          "Pact Boon"
+        ],
+        "pactMagic": {
+          "slotLevel": 2,
+          "slots": 2
+        }
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [],
+        "pactMagic": {
+          "slotLevel": 2,
+          "slots": 2
+        }
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [],
+        "pactMagic": {
+          "slotLevel": 3,
+          "slots": 2
+        }
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [],
+        "pactMagic": {
+          "slotLevel": 3,
+          "slots": 2
+        }
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [],
+        "pactMagic": {
+          "slotLevel": 4,
+          "slots": 2
+        }
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [],
+        "pactMagic": {
+          "slotLevel": 4,
+          "slots": 2
+        }
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [],
+        "pactMagic": {
+          "slotLevel": 5,
+          "slots": 2
+        }
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [],
+        "pactMagic": {
+          "slotLevel": 5,
+          "slots": 2
+        }
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [
+          "Mystic Arcanum (6th)"
+        ],
+        "pactMagic": {
+          "slotLevel": 5,
+          "slots": 3
+        }
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [],
+        "pactMagic": {
+          "slotLevel": 5,
+          "slots": 3
+        }
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": [
+          "Mystic Arcanum (7th)"
+        ],
+        "pactMagic": {
+          "slotLevel": 5,
+          "slots": 3
+        }
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [],
+        "pactMagic": {
+          "slotLevel": 5,
+          "slots": 3
+        }
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [
+          "Mystic Arcanum (8th)"
+        ],
+        "pactMagic": {
+          "slotLevel": 5,
+          "slots": 3
+        }
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [],
+        "pactMagic": {
+          "slotLevel": 5,
+          "slots": 3
+        }
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [
+          "Mystic Arcanum (9th)"
+        ],
+        "pactMagic": {
+          "slotLevel": 5,
+          "slots": 4
+        }
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [],
+        "pactMagic": {
+          "slotLevel": 5,
+          "slots": 4
+        }
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [],
+        "pactMagic": {
+          "slotLevel": 5,
+          "slots": 4
+        }
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          "Eldritch Master"
+        ],
+        "pactMagic": {
+          "slotLevel": 5,
+          "slots": 4
+        }
+      }
+    ]
+  },
+  {
+    "id": "wizard",
+    "name": "Wizard",
+    "hitDie": 6,
+    "primaryAbilities": [
+      "int"
+    ],
+    "savingThrows": [
+      "int",
+      "wis"
+    ],
+    "spellcastingAbility": "int",
+    "armorProficiencies": [],
+    "weaponProficiencies": [
+      "Daggers",
+      "Darts",
+      "Slings",
+      "Quarterstaffs",
+      "Light Crossbows"
+    ],
+    "skillChoices": {
+      "choose": 2,
+      "from": [
+        "Arcana",
+        "History",
+        "Insight",
+        "Investigation",
+        "Medicine",
+        "Religion"
+      ]
+    },
+    "description": "Prepared arcane caster with the broadest spellbook and strong ritual utility.",
+    "subclassLevel": 2,
+    "spellProgression": "full",
+    "levels": [
+      {
+        "level": 1,
+        "proficiencyBonus": 2,
+        "features": [
+          "Spellcasting",
+          "Arcane Recovery"
+        ],
+        "spellSlots": [
+          2
+        ]
+      },
+      {
+        "level": 2,
+        "proficiencyBonus": 2,
+        "features": [
+          "Arcane Tradition"
+        ],
+        "spellSlots": [
+          3
+        ]
+      },
+      {
+        "level": 3,
+        "proficiencyBonus": 2,
+        "features": [],
+        "spellSlots": [
+          4,
+          2
+        ]
+      },
+      {
+        "level": 4,
+        "proficiencyBonus": 2,
+        "features": [],
+        "spellSlots": [
+          4,
+          3
+        ]
+      },
+      {
+        "level": 5,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 6,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3
+        ]
+      },
+      {
+        "level": 7,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 8,
+        "proficiencyBonus": 3,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 9,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          1
+        ]
+      },
+      {
+        "level": 10,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "level": 11,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1
+        ]
+      },
+      {
+        "level": 12,
+        "proficiencyBonus": 4,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1
+        ]
+      },
+      {
+        "level": 13,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 14,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 15,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 16,
+        "proficiencyBonus": 5,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 17,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 18,
+        "proficiencyBonus": 6,
+        "features": [
+          "Spell Mastery"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 19,
+        "proficiencyBonus": 6,
+        "features": [],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          "Signature Spells"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          1,
+          1
+        ]
+      }
+    ]
   }
 ]

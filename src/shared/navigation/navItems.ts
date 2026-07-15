@@ -27,6 +27,7 @@ export const navItems: readonly NavItem[] = [
   { to: "/search", label: "Global Arama", shortLabel: "Ara", icon: "⌕", group: "İçerik" },
   { to: "/collections", label: "Koleksiyonlar", shortLabel: "Etiket", icon: "#", group: "İçerik" },
   { to: "/builder", label: "Character Builder", shortLabel: "Builder", icon: "+", group: "İçerik" },
+  { to: "/classes", label: "Classes", shortLabel: "Class", icon: "◇", group: "İçerik" },
   { to: "/spellbook", label: "Spellbook", shortLabel: "Spells", icon: "✧", group: "İçerik" },
   { to: "/inventory", label: "Inventory", shortLabel: "Eşya", icon: "▣", group: "İçerik" },
   { to: "/monsters", label: "Monsters", shortLabel: "Monster", icon: "♜", group: "İçerik" },

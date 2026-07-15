@@ -60,7 +60,7 @@ export function RulesetCenterPage() {
         <span className="mini-label">Sıradaki veri katmanları</span>
         <h2>Temel artık edition-aware</h2>
         <div className="ruleset-roadmap-grid">
-          <span>Classes + level tables</span><span>Races / Species</span><span>Backgrounds</span>
+          <Link to="/classes">Classes + level tables</Link><span>Races / Species</span><span>Backgrounds</span>
           <span>Subclasses</span><span>Feats</span><span>Spells + equipment</span>
         </div>
       </section>

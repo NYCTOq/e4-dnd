@@ -5,6 +5,17 @@ export interface SkillChoices {
   from: string[];
 }
 
+export type SpellProgression = "none" | "full" | "half" | "third" | "pact";
+
+export interface ClassLevelData {
+  level: number;
+  proficiencyBonus: number;
+  features: string[];
+  spellSlots?: number[];
+  pactMagic?: { slotLevel: number; slots: number };
+  weaponMasteryCount?: number;
+}
+
 export interface DndClassData {
   id: string;
   name: string;
@@ -16,6 +27,9 @@ export interface DndClassData {
   weaponProficiencies: string[];
   skillChoices: SkillChoices;
   description: string;
+  subclassLevel: number;
+  spellProgression: SpellProgression;
+  levels: ClassLevelData[];
 }
 
 export interface DndRaceData {

@@ -410,11 +410,13 @@ export function Builder({
 
                   {selectedClass ? (
                     <article className="builder-choice-card">
-                      <span className="mini-label">Class</span>
+                      <span className="mini-label">Class · {rulesetDefinition.shortName}</span>
                       <h3>{selectedClass.name}</h3>
                       <p>{selectedClass.description}</p>
                       <div className="preview-stats">
                         <span>Hit Die d{selectedClass.hitDie}</span>
+                        <span>Subclass L{selectedClass.subclassLevel}</span>
+                        <span>{selectedClass.spellProgression} progression</span>
                         <span>
                           Saves {" "}
                           {selectedClass.savingThrows
