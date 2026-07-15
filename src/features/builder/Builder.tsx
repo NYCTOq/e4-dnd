@@ -6,6 +6,7 @@ import { applyAbilityBonuses, getOriginAbilityBonuses } from "../../core/ruleset
 import { getRulesetDefinition } from "../../core/rulesets/rulesetRegistry";
 import { getSubclassesForClass, getUnlockedSubclassFeatures } from "../../core/rulesets/subclassRules";
 import { getGeneralFeatSlotCount, getGrantedOriginFeatName, isFeatEligible } from "../../core/rulesets/featRules";
+import { buildFinalSkillProficiencies, getAvailableClassSkills, getExpertiseLimit, getGrantedSkills, normalizeClassSkillChoices, normalizeExpertise, uniqueStrings } from "../../core/rulesets/proficiencyRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
@@ -59,6 +60,7 @@ export function Builder({
     { id: "basic", title: "Basic", description: "İsim, oyuncu ve temel kimlik." },
     { id: "class", title: "Race & Class", description: "Tür, sınıf, seviye ve arka plan." },
     { id: "abilities", title: "Abilities", description: "Altı ability skoru ve modifierlar." },
+    { id: "proficiencies", title: "Skills", description: "Skill, expertise, tool ve language seçimleri." },
     { id: "feats", title: "Feats", description: "Origin ve general feat seçimleri." },
     { id: "combat", title: "Combat", description: "HP, AC ve notlar." },
     { id: "spells", title: "Spells", description: "Known, prepared ve cantrip seçimi." },
@@ -95,6 +97,29 @@ export function Builder({
   const selectableFeats = useMemo(() => (activeRulesetData?.feats ?? []).filter((feat) => feat.category !== "origin"), [activeRulesetData]);
   const selectedFeats = useMemo(() => (activeRulesetData?.feats ?? []).filter((feat) => draft.featIds.includes(feat.id)), [activeRulesetData, draft.featIds]);
   const canCastSpells = Boolean(selectedClass?.spellcastingAbility);
+  const grantedSkills = useMemo(() => getGrantedSkills(selectedBackground), [selectedBackground]);
+  const availableClassSkills = useMemo(() => getAvailableClassSkills(selectedClass, selectedBackground), [selectedClass, selectedBackground]);
+  const normalizedClassSkills = useMemo(() => normalizeClassSkillChoices(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
+  const finalSkillProficiencies = useMemo(() => buildFinalSkillProficiencies(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
+  const expertiseLimit = getExpertiseLimit(draft.className, draft.level);
+
+  function toggleSkill(skill: string) {
+    setDraft((current) => {
+      const selected = normalizeClassSkillChoices(current.skillProficiencies, selectedClass, selectedBackground);
+      if (selected.includes(skill)) return { ...current, skillProficiencies: selected.filter((item) => item !== skill), expertiseSkills: current.expertiseSkills.filter((item) => item !== skill) };
+      if (selected.length >= (selectedClass?.skillChoices.choose ?? 0)) return current;
+      return { ...current, skillProficiencies: [...selected, skill] };
+    });
+  }
+
+  function toggleExpertise(skill: string) {
+    setDraft((current) => {
+      const selected = current.expertiseSkills.includes(skill)
+        ? current.expertiseSkills.filter((item) => item !== skill)
+        : [...current.expertiseSkills, skill];
+      return { ...current, expertiseSkills: normalizeExpertise(selected, finalSkillProficiencies, expertiseLimit) };
+    });
+  }
 
   function toggleFeat(featId: string) {
     setDraft((current) => {
@@ -211,6 +236,10 @@ export function Builder({
     onCreateCharacter({
       ...draft,
       featIds: validFeatIds,
+      skillProficiencies: finalSkillProficiencies,
+      expertiseSkills: normalizeExpertise(draft.expertiseSkills, finalSkillProficiencies, expertiseLimit),
+      toolProficiencies: uniqueStrings([...(selectedBackground?.toolProficiencies ?? []), ...draft.toolProficiencies]),
+      languages: uniqueStrings([...(selectedBackground?.languages ?? []), ...draft.languages]),
       abilities: finalAbilities,
       armorClass: calculateEffectiveArmorClass({ ...draft, abilities: finalAbilities }, activeRulesetData?.items),
     });
@@ -296,7 +325,7 @@ export function Builder({
                         ...current,
                         ruleset: nextRuleset,
                         race: "", subrace: "", className: "", subclass: "", background: "", originAbilityPrimary: undefined, originAbilitySecondary: undefined,
-                        knownSpellIds: [], preparedSpellIds: [], spellSlots: [], featIds: [],
+                        knownSpellIds: [], preparedSpellIds: [], spellSlots: [], featIds: [], skillProficiencies: [], expertiseSkills: [], toolProficiencies: [], languages: [],
                         inventory: [], equippedArmorId: null, equippedShieldId: null, equippedWeaponIds: [],
                       }));
                     }}
@@ -377,7 +406,7 @@ export function Builder({
                       value={draft.className}
                       disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData}
                       onChange={(event) =>
-                        setDraft((current) => ({ ...current, className: event.target.value, subclass: "" }))
+                        setDraft((current) => ({ ...current, className: event.target.value, subclass: "", skillProficiencies: [], expertiseSkills: [] }))
                       }
                     >
                       <option value="">
@@ -418,7 +447,7 @@ export function Builder({
                 <label>
                   Background
                   {draft.ruleset !== "homebrew" ? (
-                    <select value={draft.background} disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData} onChange={(event) => setDraft((current) => ({ ...current, background: event.target.value, originAbilityPrimary: undefined, originAbilitySecondary: undefined }))}>
+                    <select value={draft.background} disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData} onChange={(event) => setDraft((current) => ({ ...current, background: event.target.value, originAbilityPrimary: undefined, originAbilitySecondary: undefined, skillProficiencies: [], expertiseSkills: [], toolProficiencies: [], languages: [] }))}>
                       <option value="">Background seç</option>
                       {activeRulesetData?.backgrounds.map((item) => <option key={item.id} value={item.name}>{item.name}</option>)}
                     </select>
@@ -558,6 +587,65 @@ export function Builder({
                   </label>
                 ))}
               </div>
+            </section>
+          ) : null}
+
+          {activeStep.id === "proficiencies" ? (
+            <section className="form-panel">
+              <div className="panel-heading-row">
+                <div>
+                  <h2>Skills & Proficiencies</h2>
+                  <p>Background skillleri otomatik gelir; class seçimleri duplicate olmadan kotaya göre eklenir.</p>
+                </div>
+                <span className="mini-label">{normalizedClassSkills.length} / {selectedClass?.skillChoices.choose ?? 0} class skill</span>
+              </div>
+
+              {!selectedClass ? (
+                <div className="empty-panel"><h2>Önce class seç</h2><p>Skill havuzu ve seçim kotası class verisinden gelir.</p></div>
+              ) : (
+                <>
+                  {grantedSkills.length ? (
+                    <article className="builder-choice-card">
+                      <span className="mini-label">Background tarafından verildi</span>
+                      <h3>{grantedSkills.join(", ")}</h3>
+                      <p>Bu skilller otomatik proficient kabul edilir ve class kotasını harcamaz.</p>
+                    </article>
+                  ) : null}
+
+                  <div className="builder-choice-grid">
+                    {availableClassSkills.map((skill) => {
+                      const selected = normalizedClassSkills.includes(skill);
+                      const full = !selected && normalizedClassSkills.length >= (selectedClass.skillChoices.choose ?? 0);
+                      return (
+                        <article className={`builder-choice-card ${selected ? "selected" : ""}`} key={skill}>
+                          <div className="panel-heading-row"><h3>{skill}</h3><button type="button" disabled={full} onClick={() => toggleSkill(skill)}>{selected ? "Kaldır" : "Seç"}</button></div>
+                        </article>
+                      );
+                    })}
+                  </div>
+
+                  {expertiseLimit > 0 ? (
+                    <div className="form-panel nested-panel">
+                      <div className="panel-heading-row"><div><h3>Expertise</h3><p>Yalnızca proficient olduğun skilllerden seçebilirsin.</p></div><span className="mini-label">{draft.expertiseSkills.length} / {expertiseLimit}</span></div>
+                      <div className="builder-choice-grid">
+                        {finalSkillProficiencies.map((skill) => {
+                          const selected = draft.expertiseSkills.includes(skill);
+                          return <article className={`builder-choice-card ${selected ? "selected" : ""}`} key={skill}><div className="panel-heading-row"><h3>{skill}</h3><button type="button" disabled={!selected && draft.expertiseSkills.length >= expertiseLimit} onClick={() => toggleExpertise(skill)}>{selected ? "Kaldır" : "Expertise"}</button></div></article>;
+                        })}
+                      </div>
+                    </div>
+                  ) : null}
+
+                  <div className="form-grid">
+                    <label>Tool Proficiencies
+                      <input value={draft.toolProficiencies.join(", ")} onChange={(event) => updateDraft("toolProficiencies", uniqueStrings(event.target.value.split(",")))} placeholder="Thieves' Tools, Navigator's Tools..." />
+                    </label>
+                    <label>Languages
+                      <input value={draft.languages.join(", ")} onChange={(event) => updateDraft("languages", uniqueStrings(event.target.value.split(",")))} placeholder="Common, Elvish, Draconic..." />
+                    </label>
+                  </div>
+                </>
+              )}
             </section>
           ) : null}
 
@@ -831,4 +919,3 @@ export function Builder({
     </PageShell>
   );
 }
-

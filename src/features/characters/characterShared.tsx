@@ -17,6 +17,10 @@ export const emptyDraft: CharacterDraft = {
   originAbilityPrimary: undefined,
   originAbilitySecondary: undefined,
   featIds: [],
+  skillProficiencies: [],
+  expertiseSkills: [],
+  toolProficiencies: [],
+  languages: [],
   level: 1,
   abilities: {
     str: 10,

@@ -47,6 +47,10 @@ export function CharacterEditor({
       subclass: character.subclass,
       background: character.background,
       featIds: character.featIds ?? [],
+      skillProficiencies: character.skillProficiencies ?? [],
+      expertiseSkills: character.expertiseSkills ?? [],
+      toolProficiencies: character.toolProficiencies ?? [],
+      languages: character.languages ?? [],
       level: character.level,
       abilities: character.abilities,
       maxHp: character.maxHp,
@@ -509,4 +513,3 @@ export function CharacterEditor({
     </PageShell>
   );
 }
-

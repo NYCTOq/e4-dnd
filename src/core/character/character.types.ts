@@ -67,6 +67,10 @@ export interface Character {
   originAbilityPrimary?: AbilityKey;
   originAbilitySecondary?: AbilityKey;
   featIds: string[];
+  skillProficiencies: string[];
+  expertiseSkills: string[];
+  toolProficiencies: string[];
+  languages: string[];
   level: number;
 
   abilities: AbilityScores;
@@ -113,6 +117,10 @@ export interface CharacterDraft {
   originAbilityPrimary?: AbilityKey;
   originAbilitySecondary?: AbilityKey;
   featIds: string[];
+  skillProficiencies: string[];
+  expertiseSkills: string[];
+  toolProficiencies: string[];
+  languages: string[];
   level: number;
 
   abilities: AbilityScores;

@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.26.0", date: "2026-07-15", title: "Skills + Proficiencies Builder",
+    summary: "Class ve background tabanlı skill seçimleri, duplicate kontrolü, expertise, tool ve language kayıtları Character Builder'a eklendi.",
+    changes: [
+      { text: "18 temel skill için class seçim havuzu ve kota kontrolü", category: "Özellik" },
+      { text: "Background skilllerini otomatik ekleme ve duplicate engelleme", category: "Özellik" },
+      { text: "Bard ve Rogue için level bazlı Expertise seçimi", category: "Özellik" },
+      { text: "Tool proficiency ve language kayıt alanları", category: "Özellik" },
+      { text: "Eski karakterler için güvenli proficiency migration", category: "Teknik" },
+      { text: "Proficiency kuralları için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.25.0", date: "2026-07-15", title: "Equipment + Items Expansion",
     summary: "2014 ve 2024 equipment verileri, genişletilmiş item şeması ve 2024 Weapon Mastery bağlantısı eklendi.",
     changes: [
