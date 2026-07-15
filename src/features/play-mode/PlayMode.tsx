@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { NavLink, useSearchParams } from "react-router-dom";
 import type { AbilityKey, Character, CharacterCondition } from "../../core/character/character.types";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import { rollDice } from "../../core/dice/diceRoller";
@@ -11,6 +12,7 @@ import {
   getSpellSaveDc,
 } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
+import { getPlayReadiness } from "../../core/character/playReadiness";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -64,8 +66,9 @@ export function PlayMode({
   rulesetData: RulesetData | null;
   onUpdateCharacter: (character: Character) => void;
 }) {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [selectedCharacterId, setSelectedCharacterId] = useState(
-    () => characters[0]?.id ?? "",
+    () => searchParams.get("character") ?? characters[0]?.id ?? "",
   );
   const [rollHistory, setRollHistory] = useState<RollResult[]>([]);
   const [isFocusMode, setIsFocusMode] = useState(false);
@@ -118,6 +121,7 @@ export function PlayMode({
     activeCharacter,
     rulesetData?.items,
   );
+  const readiness = getPlayReadiness(activeCharacter, rulesetData);
 
   function commit(patch: Partial<Character>) {
     onUpdateCharacter({
@@ -269,7 +273,10 @@ export function PlayMode({
             Aktif karakter
             <select
               value={activeCharacter.id}
-              onChange={(event) => setSelectedCharacterId(event.target.value)}
+              onChange={(event) => {
+                setSelectedCharacterId(event.target.value);
+                setSearchParams({ character: event.target.value }, { replace: true });
+              }}
             >
               {characters.map((item) => (
                 <option value={item.id} key={item.id}>
@@ -283,6 +290,18 @@ export function PlayMode({
             {isFocusMode ? "Normal Görünüm" : "Odak Modu"}
           </button>
         </header>
+
+        <section className={`play-readiness-card ${readiness.status}`}>
+          <div>
+            <span className="mini-label">Playable Character Check</span>
+            <strong>{readiness.status === "ready" ? "Karakter masaya hazır" : `Hazırlık skoru: ${readiness.score}%`}</strong>
+            <p>{readiness.status === "ready" ? "HP, temel seçimler, büyüler ve ekipman bağlantıları oynanabilir durumda." : readiness.issues.filter((issue) => issue.severity === "error").map((issue) => issue.message).join(" ")}</p>
+          </div>
+          <div className="play-readiness-actions">
+            {readiness.issues.filter((issue) => issue.severity === "warning").length ? <span>{readiness.issues.filter((issue) => issue.severity === "warning").length} öneri</span> : null}
+            <NavLink to={`/characters/${activeCharacter.id}/edit`}>{readiness.status === "ready" ? "Karakteri düzenle" : "Eksikleri düzelt"}</NavLink>
+          </div>
+        </section>
 
         <section className="play-mode-hero">
           <div>

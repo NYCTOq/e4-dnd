@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.0.0", date: "2026-07-15", title: "Playable Character Release",
+    summary: "Karakter oluşturma, doğrulama, Character Sheet, Play Mode, level-up ve rest akışları oynanabilir tek bir v2 deneyiminde birleşti.",
+    changes: [
+      { text: "Kayıtlı karakterler için yüzde bazlı Playable Character Check", category: "Özellik" },
+      { text: "Kimlik, HP, ability, equipment, spell ve ruleset bütünlük kontrolleri", category: "Özellik" },
+      { text: "Dashboard üzerinde oynamaya hazır durum göstergesi", category: "İyileştirme" },
+      { text: "Dashboard ve Character Sheet'ten seçili karakterle doğrudan Play Mode açılışı", category: "İyileştirme" },
+      { text: "Play Mode içinde eksiklerden Character Editor'a hızlı dönüş", category: "İyileştirme" },
+      { text: "Playable readiness motoru için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.35.0", date: "2026-07-15", title: "Character Creation Polish",
     summary: "Character Builder, adım durumları, doğrudan hata yönlendirmesi, ilerleme görünümü ve mobil kullanım iyileştirmeleriyle v2.0 öncesi son hazırlığını tamamladı.",
     changes: [

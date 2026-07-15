@@ -22,6 +22,14 @@
   padding: 16px;
 }
 
+.play-readiness-card { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); }
+.play-readiness-card.ready { border-color: rgba(110, 231, 183, .45); background: rgba(110, 231, 183, .07); }
+.play-readiness-card.needs-attention { border-color: rgba(255, 178, 80, .45); background: rgba(255, 178, 80, .07); }
+.play-readiness-card strong { display: block; margin-top: 4px; font-size: 1.08rem; }
+.play-readiness-card p { max-width: 760px; margin: 5px 0 0; color: var(--muted); }
+.play-readiness-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.play-readiness-actions span, .play-readiness-actions a { padding: 8px 11px; border-radius: 999px; background: rgba(255,255,255,.08); color: inherit; font-size: .82rem; font-weight: 800; text-decoration: none; }
+
 .play-mode-toolbar label {
   width: min(100%, 520px);
 }
@@ -281,6 +289,8 @@
   .play-mode-hero {
     display: grid;
   }
+
+  .play-readiness-card { align-items: flex-start; flex-direction: column; }
 
   .play-mode-core-stats {
     grid-template-columns: repeat(3, minmax(0, 1fr));

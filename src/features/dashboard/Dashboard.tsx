@@ -6,6 +6,7 @@ import type { Campaign } from "../campaigns/campaignTypes";
 import { PageShell } from "../../shared/layout/PageShell";
 import { useFavorites } from "../../shared/favorites/FavoritesProvider";
 import { useTagCollections } from "../../shared/collections/TagCollectionsProvider";
+import { getPlayReadiness } from "../../core/character/playReadiness";
 
 type DashboardProps = {
   characters: Character[];
@@ -42,6 +43,7 @@ export function Dashboard({
   const recentCampaign = [...campaigns].sort((a, b) =>
     b.updatedAt.localeCompare(a.updatedAt),
   )[0];
+  const recentCharacterReadiness = recentCharacter ? getPlayReadiness(recentCharacter, rulesetData) : null;
   const activeEncounterCount = campaigns.reduce(
     (total, campaign) =>
       total + campaign.encounters.filter((encounter) => encounter.isActive).length,
@@ -79,7 +81,7 @@ export function Dashboard({
 
           <div className="quick-actions">
             <NavLink
-              to={recentCharacter ? "/play-mode" : "/builder"}
+              to={recentCharacter ? `/play-mode?character=${recentCharacter.id}` : "/builder"}
               className="primary-action"
             >
               {recentCharacter ? "Play Mode'u Aç" : "Karakter Oluştur"}
@@ -237,6 +239,7 @@ export function Dashboard({
                 <span>{recentCharacter.currentHp}/{recentCharacter.maxHp} HP</span>
                 <span>{recentCharacter.armorClass} AC</span>
                 <span>{recentCharacter.conditions.length} condition</span>
+                <span className={recentCharacterReadiness?.status === "ready" ? "play-ready" : "play-attention"}>{recentCharacterReadiness?.status === "ready" ? "Oynamaya hazır" : `${recentCharacterReadiness?.score}% hazır`}</span>
               </div>
               <NavLink to={`/characters/${recentCharacter.id}`} className="dashboard-text-link">
                 Karakteri aç →

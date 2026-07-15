@@ -642,6 +642,8 @@ export function CharacterDetail({
 
             <button onClick={deleteCurrentCharacter}>Sil</button>
 
+            <button onClick={() => navigate(`/play-mode?character=${activeCharacter.id}`)}>Play Mode</button>
+
             <button onClick={() => navigate("/characters")}>Listeye Dön</button>
           </div>
 

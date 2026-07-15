@@ -283,6 +283,9 @@
   font-weight: 800;
 }
 
+.dashboard-mini-stats .play-ready { color: #8ef0ba; border-color: rgba(110, 231, 183, .3); }
+.dashboard-mini-stats .play-attention { color: #ffd27c; border-color: rgba(255, 190, 80, .3); }
+
 .dashboard-system-card {
   background:
     radial-gradient(circle at 85% 15%, rgba(103, 131, 255, 0.18), transparent 35%),
