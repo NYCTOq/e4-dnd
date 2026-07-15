@@ -10,7 +10,10 @@ async function loadJson<T>(path: string): Promise<T> {
 
 export async function loadRuleset(id: RulesetId): Promise<RulesetData> {
   const sourceId = id === "homebrew" ? "dnd_2014" : id;
-  const root = `/data/${sourceId}`;
+  const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+    ? import.meta.env.BASE_URL
+    : `${import.meta.env.BASE_URL}/`;
+  const root = `${baseUrl}data/${sourceId}`;
   const [classes, races, spells, items, monsters] = await Promise.all([
     loadJson<DndClassData[]>(`${root}/classes.json`),
     loadJson<DndRaceData[]>(`${root}/races.json`),

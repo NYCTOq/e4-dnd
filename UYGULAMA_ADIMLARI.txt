@@ -1,15 +1,16 @@
-E4 D&D Global Search V1 uygulama adımları
+E4 D&D - GitHub Pages Ruleset Data Path Fix
 
-1) Zip içeriğini D:\Projects\e4_dnd klasörüne çıkarın.
-2) Dosya çakışmalarında mevcut dosyaların üzerine yazın.
-3) Eski ReleaseNotes.tsx artığı varsa güvenli biçimde silin:
-   Remove-Item src\shared\release\ReleaseNotes.tsx -Force -ErrorAction SilentlyContinue
-4) Kontrol edin:
-   npm.cmd install
-   npm.cmd run check
-5) GitHub'a gönderin:
-   git add -A
-   git commit -m "feat: add global search center"
-   git push
+1) Bu klasörün içeriğini D:\Projects\e4_dnd içine çıkarın.
+2) Mevcut dosyanın üzerine yazın.
+3) PowerShell:
 
-Not: Paket node_modules, dist ve dev-dist içermez.
+cd D:\Projects\e4_dnd
+npm.cmd run check
+git add -A
+git commit -m "fix: load ruleset data from vite base path"
+git push
+
+Düzeltme:
+- /data/... yerine import.meta.env.BASE_URL + data/... kullanılır.
+- Local geliştirmede /data/... çalışır.
+- GitHub Pages'te /e4-dnd/data/... çalışır.
