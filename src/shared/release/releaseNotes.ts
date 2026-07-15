@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.27.0", date: "2026-07-15", title: "Character Builder Validation",
+    summary: "Character Builder final kontrol motoru, adım bazlı hata listesi ve kuralsız kayıt engeli eklendi.",
+    changes: [
+      { text: "Identity, class, race/species, background ve subclass zorunlulukları", category: "Özellik" },
+      { text: "Ability, 2024 origin bonusu ve class skill kotası doğrulaması", category: "Özellik" },
+      { text: "Feat prerequisite, spell class/level ve prepared-known kontrolleri", category: "Özellik" },
+      { text: "Inventory ile equipped item tutarlılık kontrolü", category: "Özellik" },
+      { text: "Review ekranında hata/uyarı özeti ve hatalı kaydı engelleme", category: "İyileştirme" },
+      { text: "Validation motoru için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.26.0", date: "2026-07-15", title: "Skills + Proficiencies Builder",
     summary: "Class ve background tabanlı skill seçimleri, duplicate kontrolü, expertise, tool ve language kayıtları Character Builder'a eklendi.",
     changes: [

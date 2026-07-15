@@ -7,6 +7,7 @@ import { getRulesetDefinition } from "../../core/rulesets/rulesetRegistry";
 import { getSubclassesForClass, getUnlockedSubclassFeatures } from "../../core/rulesets/subclassRules";
 import { getGeneralFeatSlotCount, getGrantedOriginFeatName, isFeatEligible } from "../../core/rulesets/featRules";
 import { buildFinalSkillProficiencies, getAvailableClassSkills, getExpertiseLimit, getGrantedSkills, normalizeClassSkillChoices, normalizeExpertise, uniqueStrings } from "../../core/rulesets/proficiencyRules";
+import { hasValidationErrors, validateCharacterDraft } from "../../core/rulesets/characterValidation";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
@@ -102,6 +103,8 @@ export function Builder({
   const normalizedClassSkills = useMemo(() => normalizeClassSkillChoices(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
   const finalSkillProficiencies = useMemo(() => buildFinalSkillProficiencies(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
   const expertiseLimit = getExpertiseLimit(draft.className, draft.level);
+  const validationIssues = useMemo(() => validateCharacterDraft(draft, activeRulesetData, finalAbilities), [draft, activeRulesetData, finalAbilities]);
+  const validationHasErrors = hasValidationErrors(validationIssues);
 
   function toggleSkill(skill: string) {
     setDraft((current) => {
@@ -216,6 +219,12 @@ export function Builder({
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    if (validationHasErrors) {
+      setActiveStepIndex(builderSteps.length - 1);
+      alert("Karakter kaydedilmeden önce Review ekranındaki zorunlu hataları düzeltmelisin.");
+      return;
+    }
 
     if (!draft.name.trim()) {
       alert("Karakter adı lazım kankam. İsimsiz kahraman ancak yan NPC olur.");
@@ -845,6 +854,19 @@ export function Builder({
                 <strong className="level-badge">AC {effectiveArmorClass}</strong>
               </div>
 
+              <div className={`ruleset-foundation-card ${validationHasErrors ? "validation-error" : "validation-success"}`}>
+                <div className="panel-heading-row">
+                  <div>
+                    <span className="mini-label">Character Validation</span>
+                    <strong>{validationHasErrors ? "Kaydetmeden önce düzeltme gerekli" : "Zorunlu kontroller tamam"}</strong>
+                  </div>
+                  <span>{validationIssues.filter((issue) => issue.severity === "error").length} hata · {validationIssues.filter((issue) => issue.severity === "warning").length} uyarı</span>
+                </div>
+                {validationIssues.length ? (
+                  <ul>{validationIssues.map((issue) => <li key={issue.id}><strong>{issue.severity === "error" ? "Hata" : "Uyarı"} · {issue.step}:</strong> {issue.message}</li>)}</ul>
+                ) : <p>Karakter kurallı biçimde kaydedilmeye hazır.</p>}
+              </div>
+
               <div className="builder-summary-grid">
                 <div>
                   <span>Max HP</span>
@@ -905,7 +927,7 @@ export function Builder({
             </div>
 
             {isLastStep ? (
-              <button className="primary-action" type="submit">
+              <button className="primary-action" type="submit" disabled={validationHasErrors} title={validationHasErrors ? "Review hatalarını düzelt" : "Karakteri kaydet"}>
                 Karakteri Kaydet
               </button>
             ) : (
