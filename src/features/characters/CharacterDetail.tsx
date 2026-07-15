@@ -2,12 +2,13 @@ import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { rollDice } from "../../core/dice/diceRoller";
 import type { RulesetData, DndSpellData } from "../../core/rulesets/ruleset.types";
-import type { Character } from "../../core/character/character.types";
+import type { AbilityKey, Character } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellAttackBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
 import { LevelUpAssistant } from "./LevelUpAssistant";
 import { calculateEffectiveArmorClass, calculateSuggestedArmorClass, getCharacterInventoryItems, getEquippedItems, getInventoryWeight, getItemCategoryLabel, getItemRulesSummary, getSpellGroupTitle, getSpellLevelGroups, getSpellLevelLabel, getWeaponAttackBonus, getWeaponDamageSummary, isSpellReadyToCast, normalizeHitDice, normalizeSpellSlots, resetDeathSaves, resetHitDice, resetSpellSlots, sortSpellsByLevelAndName } from "./characterShared";
 import { getClassFeatureActions } from "../../core/rulesets/classFeatureEngine";
+import { getCharacterFeatures, getPassiveScore, getSavingThrowBonus, getSkillBonus, SKILL_ABILITIES } from "../../core/rulesets/characterSheetRules";
 
 interface CharacterCastHistoryItem {
   id: string;
@@ -203,6 +204,8 @@ export function CharacterDetail({
   const activeExhaustion = activeCharacter.exhaustion ?? 0;
   const activeConditionDurations = activeCharacter.conditionDurations ?? {};
   const classFeatureActions = getClassFeatureActions(activeCharacter.className, activeCharacter.level, activeCharacter.ruleset);
+  const sheetFeatures = getCharacterFeatures(activeCharacter, rulesetData);
+  const selectedRace = rulesetData?.races.find((item) => item.name === activeCharacter.race);
 
   function adjustResource(resourceId: string, amount: number) {
     onUpdateCharacter({
@@ -705,6 +708,39 @@ export function CharacterDetail({
               </strong>
             </div>
           </div>
+
+          <details className="character-sheet-section" open>
+            <summary><span><b>Saving Throws & Skills</b><small>Proficiency, expertise ve hızlı D20 roll</small></span><em>{activeCharacter.skillProficiencies?.length ?? 0} proficient</em></summary>
+            <div className="character-sheet-section-body">
+              <div className="builder-summary-grid">
+                {(["str","dex","con","int","wis","cha"] as AbilityKey[]).map((ability)=>{
+                  const bonus=getSavingThrowBonus(activeCharacter,ability,rulesetData);
+                  return <button type="button" key={ability} onClick={()=>quickCharacterRoll(`${ability.toUpperCase()} Saving Throw`,bonus)}><span>{ability.toUpperCase()} Save</span><strong>{formatModifier(bonus)}</strong></button>;
+                })}
+              </div>
+              <div className="builder-choice-grid">
+                {Object.entries(SKILL_ABILITIES).map(([skill,ability])=>{
+                  const bonus=getSkillBonus(activeCharacter,skill); const proficient=activeCharacter.skillProficiencies?.includes(skill); const expertise=activeCharacter.expertiseSkills?.includes(skill);
+                  return <article className={`builder-choice-card ${proficient ? "selected" : ""}`} key={skill}><div className="panel-heading-row"><div><span className="mini-label">{ability.toUpperCase()} · {expertise?"Expertise":proficient?"Proficient":"Untrained"}</span><h3>{skill}</h3></div><button type="button" onClick={()=>quickCharacterRoll(`${skill} Check`,bonus)}>{formatModifier(bonus)}</button></div></article>;
+                })}
+              </div>
+              <div className="preview-stats"><span>Passive Perception {getPassiveScore(activeCharacter,"Perception")}</span><span>Passive Investigation {getPassiveScore(activeCharacter,"Investigation")}</span><span>Passive Insight {getPassiveScore(activeCharacter,"Insight")}</span></div>
+            </div>
+          </details>
+
+          <details className="character-sheet-section" open>
+            <summary><span><b>Features & Proficiencies</b><small>Class, subclass, feat ve origin bilgileri</small></span><em>{sheetFeatures.length} feature</em></summary>
+            <div className="character-sheet-section-body">
+              <div className="preview-stats">
+                <span>Speed {selectedRace?.speed ?? 30} ft</span>
+                <span>Armor {selectedClass?.armorProficiencies.join(", ") || "None"}</span>
+                <span>Weapons {selectedClass?.weaponProficiencies.join(", ") || "None"}</span>
+                <span>Tools {activeCharacter.toolProficiencies?.join(", ") || "None"}</span>
+                <span>Languages {activeCharacter.languages?.join(", ") || selectedRace?.languages?.join(", ") || "None"}</span>
+              </div>
+              <div className="cast-history-list">{sheetFeatures.map((feature,index)=><div className="cast-history-item" key={`${feature.source}-${feature.name}-${index}`}><div><strong>{feature.name}</strong><span>{feature.source}</span></div><p>{feature.summary}</p></div>)}</div>
+            </div>
+          </details>
 
           <div className="notes-box">
             <span className="mini-label">Notes</span>

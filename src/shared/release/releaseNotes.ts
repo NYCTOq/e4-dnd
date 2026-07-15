@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.33.0", date: "2026-07-15", title: "Character Sheet V2",
+    summary: "Saving throws, skill/expertise rolları, passive skorlar ve birleşik feature/proficiency görünümü oynanabilir Character Sheet'e eklendi.",
+    changes: [
+      { text: "Altı saving throw için class proficiency hesaplama ve hızlı roll", category: "Özellik" },
+      { text: "18 skill için ability, proficiency ve expertise bonusları", category: "Özellik" },
+      { text: "Passive Perception, Investigation ve Insight hesapları", category: "Özellik" },
+      { text: "Class, subclass ve feat feature'larını tek listede birleştirme", category: "Özellik" },
+      { text: "Armor, weapon, tool, language ve speed özeti", category: "İyileştirme" },
+      { text: "Character Sheet kuralları için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.32.0", date: "2026-07-15", title: "Spellcasting Rules Engine",
     summary: "Class progression tabanlı spell seçim limitleri, ritual casting ve full/half/pact slot ayrımı Builder'a bağlandı.",
     changes: [
