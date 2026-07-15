@@ -5,6 +5,7 @@ import { formatModifier, getAbilityModifier, getProficiencyBonus } from "../../c
 import { getHighestSpellLevel, getSpellMechanicSummary } from "../../core/rulesets/spellRules";
 import { getItemSearchText, getWeaponMastery } from "../../core/rulesets/equipmentRules";
 import { getClassResources, mergeClassResources } from "../../core/rulesets/classFeatureEngine";
+import { canPrepareSpell, canRitualCast, canSelectKnownSpell, getSpellcastingProfile } from "../../core/rulesets/spellcastingRules";
 
 export const emptyDraft: CharacterDraft = {
   name: "",
@@ -159,6 +160,10 @@ export function normalizeSpellSlots(
   className: string,
 ): Character["spellSlots"] {
   const defaults = getDefaultSpellSlots(level, className);
+
+  if (defaults.length === 0 && currentSlots?.length) {
+    return currentSlots.map((slot) => ({ level: slot.level, max: Math.max(0, slot.max), used: Math.min(Math.max(0, slot.max), Math.max(0, slot.used)) }));
+  }
 
   return defaults.map((defaultSlot) => {
     const currentSlot = currentSlots?.find(
@@ -435,6 +440,7 @@ export function CharacterSpellSelector({
   rulesetError,
   className,
   characterLevel,
+  abilities,
   knownSpellIds,
   preparedSpellIds,
   onChange,
@@ -446,6 +452,7 @@ export function CharacterSpellSelector({
   rulesetError: string | null;
   className: string;
   characterLevel: number;
+  abilities: Character["abilities"];
   knownSpellIds: string[];
   preparedSpellIds: string[];
   onChange: (next: {
@@ -459,6 +466,7 @@ export function CharacterSpellSelector({
   const normalizedClassName = className.trim().toLowerCase();
   const selectedClassData = rulesetData?.classes.find((item) => item.name.toLowerCase() === normalizedClassName);
   const highestSpellLevel = getHighestSpellLevel(selectedClassData, characterLevel);
+  const spellcastingProfile = getSpellcastingProfile(selectedClassData ?? null, characterLevel, abilities, rulesetData?.id ?? "dnd_2014");
 
   const filteredSpells = useMemo(() => {
     if (!rulesetData) {
@@ -504,6 +512,7 @@ export function CharacterSpellSelector({
     () => new Set(preparedSpellIds),
     [preparedSpellIds],
   );
+  const knownSpellData = (rulesetData?.spells ?? []).filter((spell) => knownSpellIdSet.has(spell.id));
 
   const filteredSpellGroups = getSpellLevelGroups(filteredSpells);
 
@@ -522,6 +531,8 @@ export function CharacterSpellSelector({
       });
       return;
     }
+    const spell = rulesetData?.spells.find((item) => item.id === spellId);
+    if (!spell || !canSelectKnownSpell(spell, knownSpellData, spellcastingProfile)) return;
 
     onChange({
       knownSpellIds: [...knownSpellIds, spellId],
@@ -539,6 +550,8 @@ export function CharacterSpellSelector({
       });
       return;
     }
+    const spell = rulesetData?.spells.find((item) => item.id === spellId);
+    if (!spell || !canPrepareSpell(spell, preparedSpellIds, spellcastingProfile)) return;
 
     onChange({
       knownSpellIds: knownSpellIdSet.has(spellId)
@@ -558,8 +571,8 @@ export function CharacterSpellSelector({
 
         <div className="spell-selector-counts">
           <span>{knownSpellIds.length} known</span>
-          <span>{knownCantripCount} cantrip</span>
-          <span>{preparedSpellIds.length} prepared</span>
+          <span>{knownCantripCount}/{spellcastingProfile.cantripLimit} cantrip</span>
+          <span>{preparedSpellIds.length}/{spellcastingProfile.preparedSpellLimit ?? "∞"} prepared</span>
         </div>
       </div>
 
@@ -654,6 +667,7 @@ export function CharacterSpellSelector({
                             <span>{spell.range}</span>
                             {spell.concentration ? <span>Concentration</span> : null}
                             {spell.ritual ? <span>Ritual</span> : null}
+                            {canRitualCast(spell, spellcastingProfile, knownSpellIds) ? <span>Ritual Ready</span> : null}
                           </div>
                         </div>
 
@@ -661,6 +675,7 @@ export function CharacterSpellSelector({
                           <button
                             type="button"
                             className={isKnown ? "active" : ""}
+                            disabled={!isKnown && !canSelectKnownSpell(spell, knownSpellData, spellcastingProfile)}
                             onClick={() => toggleKnownSpell(spell.id)}
                           >
                             {isKnown ? "Known" : "Add"}
@@ -680,6 +695,7 @@ export function CharacterSpellSelector({
                             <button
                               type="button"
                               className={isPrepared ? "active" : ""}
+                              disabled={!isPrepared && !canPrepareSpell(spell, preparedSpellIds, spellcastingProfile)}
                               onClick={() => togglePreparedSpell(spell.id)}
                             >
                               {isPrepared ? "Prepared" : "Prepare"}

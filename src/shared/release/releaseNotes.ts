@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.32.0", date: "2026-07-15", title: "Spellcasting Rules Engine",
+    summary: "Class progression tabanlı spell seçim limitleri, ritual casting ve full/half/pact slot ayrımı Builder'a bağlandı.",
+    changes: [
+      { text: "Class ve level bazlı cantrip, known ve prepared spell limitleri", category: "Özellik" },
+      { text: "Spellcasting ability modifier kullanan prepared spell hesabı", category: "Özellik" },
+      { text: "Full caster, half caster ve Pact Magic slot progression ayrımı", category: "Özellik" },
+      { text: "Bilinen ritual büyüler için Ritual Ready durumu", category: "İyileştirme" },
+      { text: "Limit dolduğunda Builder seçimlerini güvenli engelleme", category: "İyileştirme" },
+      { text: "Spellcasting engine için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.31.0", date: "2026-07-15", title: "Spell Database V2",
     summary: "Cleric level 0–9 kapsamı başta olmak üzere 2014 ve 2024 spell havuzları gelişmiş mekanik metadata ile büyütüldü.",
     changes: [

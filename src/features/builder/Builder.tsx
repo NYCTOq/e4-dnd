@@ -8,6 +8,7 @@ import { getSubclassesForClass, getUnlockedSubclassFeatures } from "../../core/r
 import { getGeneralFeatSlotCount, getGrantedOriginFeatName, isFeatEligible } from "../../core/rulesets/featRules";
 import { buildFinalSkillProficiencies, getAvailableClassSkills, getExpertiseLimit, getGrantedSkills, normalizeClassSkillChoices, normalizeExpertise, uniqueStrings } from "../../core/rulesets/proficiencyRules";
 import { hasValidationErrors, validateCharacterDraft } from "../../core/rulesets/characterValidation";
+import { getClassSpellSlots } from "../../core/rulesets/spellcastingRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
@@ -249,6 +250,7 @@ export function Builder({
       expertiseSkills: normalizeExpertise(draft.expertiseSkills, finalSkillProficiencies, expertiseLimit),
       toolProficiencies: uniqueStrings([...(selectedBackground?.toolProficiencies ?? []), ...draft.toolProficiencies]),
       languages: uniqueStrings([...(selectedBackground?.languages ?? []), ...draft.languages]),
+      spellSlots: getClassSpellSlots(selectedClass, draft.level),
       abilities: finalAbilities,
       armorClass: calculateEffectiveArmorClass({ ...draft, abilities: finalAbilities }, activeRulesetData?.items),
     });
@@ -799,6 +801,7 @@ export function Builder({
               rulesetError={rulesetError}
               className={draft.className}
               characterLevel={draft.level}
+              abilities={finalAbilities}
               knownSpellIds={draft.knownSpellIds}
               preparedSpellIds={draft.preparedSpellIds}
               onChange={(next) =>
