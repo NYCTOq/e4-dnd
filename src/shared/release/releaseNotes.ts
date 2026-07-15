@@ -15,6 +15,16 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.0.2", date: "2026-07-15", title: "Player Ability Cap Fix",
+    summary: "Character Builder ve Editor içindeki oyuncu ability skorları normal 20 tavanıyla sınırlandı.",
+    changes: [
+      { text: "Builder ability alanlarında maksimum skor 20", category: "Düzeltme" },
+      { text: "Character Editor ability alanlarında maksimum skor 20", category: "Düzeltme" },
+      { text: "Origin bonusu sonrası nihai skor 20'yi aşarsa kayıt engeli", category: "Düzeltme" },
+      { text: "Ability tavanı için otomatik regresyon testi", category: "Teknik" },
+    ],
+  },
+  {
     version: "2.0.1", date: "2026-07-15", title: "Legacy Draft Recovery Fix",
     summary: "Eski sürümlerden kalan Character Builder taslakları yeni alanlarla güvenli biçimde tamamlanarak açılış çökmesi giderildi.",
     changes: [

@@ -15,4 +15,8 @@ describe("character validation", () => {
     const issues = validateCharacterDraft({ ...emptyDraft, name: "Tengiz" }, data, emptyDraft.abilities);
     expect(issues.find((issue) => issue.id === "no-equipment")?.severity).toBe("warning");
   });
+  it("rejects player ability scores above the normal cap", () => {
+    const abilities = { ...emptyDraft.abilities, wis: 21 };
+    expect(validateCharacterDraft({ ...emptyDraft, abilities }, data, abilities).some((issue) => issue.id === "ability-wis")).toBe(true);
+  });
 });

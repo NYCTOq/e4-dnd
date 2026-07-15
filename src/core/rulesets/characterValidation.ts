@@ -21,7 +21,7 @@ export function validateCharacterDraft(draft: CharacterDraft, rulesetData: Rules
   if (classData && draft.level >= classData.subclassLevel && !draft.subclass) add("subclass", "error", "Class", `Level ${classData.subclassLevel} itibarıyla subclass seçilmeli.`);
 
   for (const [ability, score] of Object.entries(finalAbilities)) {
-    if (!Number.isInteger(score) || score < 1 || score > 30) add(`ability-${ability}`, "error", "Abilities", `${ability.toUpperCase()} skoru 1–30 arasında tam sayı olmalı.`);
+    if (!Number.isInteger(score) || score < 1 || score > 20) add(`ability-${ability}`, "error", "Abilities", `${ability.toUpperCase()} nihai skoru oyuncu karakteri için 1–20 arasında tam sayı olmalı.`);
   }
   if (draft.ruleset === "dnd_2024" && background) {
     if (!draft.originAbilityPrimary || !draft.originAbilitySecondary) add("origin-abilities", "error", "Class", "2024 background için +2 ve +1 ability seçimleri tamamlanmalı.");

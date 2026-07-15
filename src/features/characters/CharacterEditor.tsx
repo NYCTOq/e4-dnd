@@ -377,7 +377,7 @@ export function CharacterEditor({
                 <input
                   type="number"
                   min={1}
-                  max={30}
+                  max={20}
                   value={score}
                   onChange={(event) =>
                     updateAbility(
