@@ -4,6 +4,7 @@ import type { Character, CharacterDraft, CharacterHitDiePool } from "../../core/
 import { formatModifier, getAbilityModifier, getProficiencyBonus } from "../../core/character/characterCalculator";
 import { getHighestSpellLevel, getSpellMechanicSummary } from "../../core/rulesets/spellRules";
 import { getItemSearchText, getWeaponMastery } from "../../core/rulesets/equipmentRules";
+import { getClassResources, mergeClassResources } from "../../core/rulesets/classFeatureEngine";
 
 export const emptyDraft: CharacterDraft = {
   name: "",
@@ -376,7 +377,7 @@ export function createCharacterFromDraft(draft: CharacterDraft): Character {
       draft.className,
     ),
     hitDice: normalizeHitDice(draft.hitDice, draft.level, draft.className),
-    resources: draft.resources ?? [],
+    resources: mergeClassResources(draft.resources, getClassResources(draft.className, draft.level, draft.abilities, draft.ruleset)),
     deathSaves: resetDeathSaves(),
     exhaustion: 0,
     conditionDurations: {},

@@ -7,6 +7,7 @@ import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception
 import { PageShell } from "../../shared/layout/PageShell";
 import { LevelUpAssistant } from "./LevelUpAssistant";
 import { calculateEffectiveArmorClass, calculateSuggestedArmorClass, getCharacterInventoryItems, getEquippedItems, getInventoryWeight, getItemCategoryLabel, getItemRulesSummary, getSpellGroupTitle, getSpellLevelGroups, getSpellLevelLabel, getWeaponAttackBonus, getWeaponDamageSummary, isSpellReadyToCast, normalizeHitDice, normalizeSpellSlots, resetDeathSaves, resetHitDice, resetSpellSlots, sortSpellsByLevelAndName } from "./characterShared";
+import { getClassFeatureActions } from "../../core/rulesets/classFeatureEngine";
 
 interface CharacterCastHistoryItem {
   id: string;
@@ -201,6 +202,15 @@ export function CharacterDetail({
   const activeDeathSaves = activeCharacter.deathSaves ?? resetDeathSaves();
   const activeExhaustion = activeCharacter.exhaustion ?? 0;
   const activeConditionDurations = activeCharacter.conditionDurations ?? {};
+  const classFeatureActions = getClassFeatureActions(activeCharacter.className, activeCharacter.level, activeCharacter.ruleset);
+
+  function adjustResource(resourceId: string, amount: number) {
+    onUpdateCharacter({
+      ...activeCharacter,
+      resources: (activeCharacter.resources ?? []).map((resource) => resource.id === resourceId ? { ...resource, used: Math.min(resource.max, Math.max(0, resource.used + amount)) } : resource),
+      updatedAt: new Date().toISOString(),
+    });
+  }
 
   function updateHp(amount: number) {
     const nextHp = Math.max(
@@ -1005,6 +1015,26 @@ export function CharacterDetail({
 
           <details className="character-sheet-section character-sheet-side-section" open>
             <summary>
+              <span><b>Class Features</b><small>Action ve kullanım kaynakları</small></span>
+              <em>{(activeCharacter.resources ?? []).reduce((sum, item) => sum + item.max - item.used, 0)} kalan</em>
+            </summary>
+            <div className="character-sheet-section-body">
+              {(activeCharacter.resources ?? []).length === 0 ? <div className="spell-slot-empty">Bu class için takip edilen kaynak henüz yok.</div> : (
+                <div className="spell-slot-grid">
+                  {(activeCharacter.resources ?? []).map((resource) => <div className="spell-slot-card" key={resource.id}>
+                    <span>{resource.name}</span><strong>{resource.max - resource.used}/{resource.max}</strong><small>{resource.recovery} rest</small>
+                    <div className="tiny-button-row"><button type="button" disabled={resource.used <= 0} onClick={() => adjustResource(resource.id, -1)}>Geri Al</button><button type="button" disabled={resource.used >= resource.max} onClick={() => adjustResource(resource.id, 1)}>Kullan</button></div>
+                  </div>)}
+                </div>
+              )}
+              <div className="cast-history-list">
+                {classFeatureActions.map((action) => <div className="cast-history-item" key={action.id}><div><strong>{action.name}</strong><span>{action.actionType}</span></div><p>{action.summary}</p></div>)}
+              </div>
+            </div>
+          </details>
+
+          <details className="character-sheet-section character-sheet-side-section" open>
+            <summary>
               <span>
                 <b>Spell Slots</b>
                 <small>Büyü kaynaklarını takip et</small>
@@ -1350,4 +1380,3 @@ export function CharacterDetail({
     </PageShell>
   );
 }
-

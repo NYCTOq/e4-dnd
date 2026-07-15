@@ -8,6 +8,7 @@ import type {
 } from "../character/character.types";
 import { readJsonSafely, writeJsonSafely } from "./safeStorage";
 import { normalizeRulesetId } from "../rulesets/rulesetMigration";
+import { getClassResources, mergeClassResources } from "../rulesets/classFeatureEngine";
 
 const STORAGE_KEY = "e4_dnd_characters_v1";
 
@@ -198,7 +199,7 @@ function hydrateCharacter(character: Character): Character {
       failures: clampNumber(character.deathSaves?.failures, 0, 3, 0),
     },
     hitDice: hydrateHitDice(character),
-    resources: hydrateResources(character),
+    resources: mergeClassResources(hydrateResources(character), getClassResources(character.className, character.level, character.abilities, normalizeRulesetId(character.ruleset))),
     exhaustion: clampNumber(character.exhaustion, 0, 6, 0),
     conditionDurations: hydrateConditionDurations(character),
   };

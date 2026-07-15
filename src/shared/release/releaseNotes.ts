@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.28.0", date: "2026-07-15", title: "Class Features Engine",
+    summary: "Temel class kaynakları level ve ability skorlarına göre otomatik oluşturulup Character Sheet ve Rest sistemine bağlandı.",
+    changes: [
+      { text: "12 ana class için level-aware resource üretimi", category: "Özellik" },
+      { text: "Rage, Bardic Inspiration, Channel Divinity, Wild Shape, Second Wind ve Action Surge", category: "Özellik" },
+      { text: "Focus/Ki, Lay on Hands, Sorcery Points, Mystic Arcanum ve Arcane Recovery", category: "Özellik" },
+      { text: "Character Sheet üzerinde kullan/geri al kontrolleri ve action özetleri", category: "İyileştirme" },
+      { text: "Eski karakterlere class resource migration ve rest recovery bağlantısı", category: "Teknik" },
+      { text: "Class feature engine için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.27.0", date: "2026-07-15", title: "Character Builder Validation",
     summary: "Character Builder final kontrol motoru, adım bazlı hata listesi ve kuralsız kayıt engeli eklendi.",
     changes: [
