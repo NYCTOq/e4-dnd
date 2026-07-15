@@ -107,6 +107,17 @@ export interface DndFeatData {
   repeatable?: boolean;
 }
 
+export type SpellEffectType = "damage" | "healing" | "control" | "utility" | "defense" | "summoning" | "movement";
+export type SpellResolutionType = "automatic" | "spell-attack" | "saving-throw" | "ability-check";
+
+export interface SpellScalingData {
+  mode: "slot" | "character-level";
+  dicePerStep?: string;
+  flatPerStep?: number;
+  additionalTargetsPerStep?: number;
+  notes?: string;
+}
+
 export interface DndSpellData {
   id: string;
   name: string;
@@ -122,14 +133,21 @@ export interface DndSpellData {
   description: string;
   higherLevels?: string;
 
-  effectType?: string;
-  attackType?: string;
+  effectType?: SpellEffectType;
+  attackType?: SpellResolutionType;
   damageDice?: string;
   damageType?: string;
   healingDice?: string;
   saveAbility?: AbilityKey;
   conditionEffect?: string;
+  target?: string;
+  area?: string;
+  material?: string;
+  tags?: string[];
+  scaling?: SpellScalingData;
+  source?: string;
 }
+
 
 export type DndItemCategory = "weapon" | "armor" | "shield" | "gear";
 export type DndArmorType = "light" | "medium" | "heavy";

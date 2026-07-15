@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import type { DndItemData, DndSpellData, RulesetData } from "../../core/rulesets/ruleset.types";
 import type { Character, CharacterDraft, CharacterHitDiePool } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getProficiencyBonus } from "../../core/character/characterCalculator";
+import { getHighestSpellLevel, getSpellMechanicSummary } from "../../core/rulesets/spellRules";
 
 export const emptyDraft: CharacterDraft = {
   name: "",
@@ -423,6 +424,7 @@ export function CharacterSpellSelector({
   isRulesetLoading,
   rulesetError,
   className,
+  characterLevel,
   knownSpellIds,
   preparedSpellIds,
   onChange,
@@ -433,6 +435,7 @@ export function CharacterSpellSelector({
   isRulesetLoading: boolean;
   rulesetError: string | null;
   className: string;
+  characterLevel: number;
   knownSpellIds: string[];
   preparedSpellIds: string[];
   onChange: (next: {
@@ -444,6 +447,8 @@ export function CharacterSpellSelector({
   const [levelFilter, setLevelFilter] = useState("all");
 
   const normalizedClassName = className.trim().toLowerCase();
+  const selectedClassData = rulesetData?.classes.find((item) => item.name.toLowerCase() === normalizedClassName);
+  const highestSpellLevel = getHighestSpellLevel(selectedClassData, characterLevel);
 
   const filteredSpells = useMemo(() => {
     if (!rulesetData) {
@@ -475,9 +480,10 @@ export function CharacterSpellSelector({
           .toLowerCase()
           .includes(normalizedSearch);
 
-      return matchesClass && matchesLevel && matchesSearch;
+      const matchesAvailableLevel = spell.level === 0 || spell.level <= highestSpellLevel;
+      return matchesClass && matchesLevel && matchesSearch && matchesAvailableLevel;
     });
-  }, [rulesetData, searchTerm, levelFilter, normalizedClassName]);
+  }, [rulesetData, searchTerm, levelFilter, normalizedClassName, highestSpellLevel]);
 
   const knownSpellIdSet = useMemo(
     () => new Set(knownSpellIds),
@@ -630,6 +636,7 @@ export function CharacterSpellSelector({
                           </div>
 
                           <p>{spell.description}</p>
+                          <small className="spell-mechanic-inline">{getSpellMechanicSummary(spell)}</small>
 
                           <div className="library-pill-row">
                             <span>{spell.school}</span>

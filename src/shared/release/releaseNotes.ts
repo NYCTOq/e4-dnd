@@ -15,6 +15,17 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.24.0", date: "2026-07-15", title: "Spell Database Expansion",
+    summary: "2014 ve 2024 büyü veri şeması, mekanik alanlar, gelişmiş filtreler ve level uyumlu Builder seçimi eklendi.",
+    changes: [
+      { text: "Damage, healing, save, attack, area ve scaling alanları", category: "Özellik" },
+      { text: "2024 için ayrı başlangıç spell veri paketi", category: "Özellik" },
+      { text: "School ve etki türü filtreleri", category: "İyileştirme" },
+      { text: "Karakter levelına göre erişilemeyen spell seviyelerini gizleme", category: "Düzeltme" },
+      { text: "Spell kuralları için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.23.0", date: "2026-07-15", title: "Feats",
     summary: "2014 ve 2024 feat veri katmanı, origin feat aktarımı, prerequisite kontrolü ve Builder seçimi eklendi.",
     changes: [

@@ -4,6 +4,8 @@ import type {
   DndItemData,
   DndMonsterData,
   DndSpellData,
+  SpellEffectType,
+  SpellResolutionType,
 } from "../../core/rulesets/ruleset.types";
 import type { Character } from "../../core/character/character.types";
 import { PageShell } from "../../shared/layout/PageShell";
@@ -540,8 +542,8 @@ export function HomebrewLab({
       classes: spellForm.classes,
       description: buildSpellDescription(),
       higherLevels: spellForm.higherLevels.trim() || undefined,
-      effectType: spellForm.effectType,
-      attackType: spellForm.attackType,
+      effectType: spellForm.effectType.toLowerCase() as SpellEffectType,
+      attackType: spellForm.attackType as SpellResolutionType,
       damageDice: spellForm.damageDice.trim() || undefined,
       damageType: spellForm.damageDice.trim()
         ? spellForm.damageType

@@ -1,11 +1,13 @@
 import { useDeferredValue, useMemo } from "react";
 import { motion } from "framer-motion";
-import type { RulesetData } from "../../core/rulesets/ruleset.types";
+import type { RulesetData, SpellEffectType } from "../../core/rulesets/ruleset.types";
+import { getSpellMechanicSummary } from "../../core/rulesets/spellRules";
 import { PageShell } from "../../shared/layout/PageShell";
 import { usePersistentState } from "../../shared/state/usePersistentState";
 
 type SpellSourceFilter = "all" | "official" | "homebrew";
 type SpellSort = "level-name" | "name" | "level-desc";
+type EffectFilter = "all" | SpellEffectType;
 
 export function Spellbook({
   rulesetData,
@@ -28,6 +30,8 @@ export function Spellbook({
     "e4_filter_spells_class_v1",
     "all",
   );
+  const [effectFilter, setEffectFilter] = usePersistentState<EffectFilter>("e4_filter_spells_effect_v1", "all");
+  const [schoolFilter, setSchoolFilter] = usePersistentState("e4_filter_spells_school_v1", "all");
   const [sourceFilter, setSourceFilter] =
     usePersistentState<SpellSourceFilter>("e4_filter_spells_source_v1", "all");
   const [concentrationOnly, setConcentrationOnly] = usePersistentState(
@@ -51,6 +55,8 @@ export function Spellbook({
       new Set(rulesetData.spells.flatMap((spell) => spell.classes)),
     ).sort((a, b) => a.localeCompare(b));
   }, [rulesetData]);
+
+  const availableSchools = useMemo(() => rulesetData ? Array.from(new Set(rulesetData.spells.map((spell) => spell.school))).sort() : [], [rulesetData]);
 
   const filteredSpells = useMemo(() => {
     if (!rulesetData) return [];
@@ -79,6 +85,8 @@ export function Spellbook({
         levelFilter === "all" || spell.level === Number(levelFilter);
       const matchesClass =
         classFilter === "all" || spell.classes.includes(classFilter);
+      const matchesEffect = effectFilter === "all" || spell.effectType === effectFilter;
+      const matchesSchool = schoolFilter === "all" || spell.school === schoolFilter;
       const matchesSource =
         sourceFilter === "all" ||
         (sourceFilter === "homebrew" ? isHomebrew : !isHomebrew);
@@ -87,7 +95,7 @@ export function Spellbook({
         matchesSearch &&
         matchesLevel &&
         matchesClass &&
-        matchesSource &&
+        matchesSource && matchesEffect && matchesSchool &&
         (!concentrationOnly || spell.concentration) &&
         (!ritualOnly || spell.ritual)
       );
@@ -106,6 +114,8 @@ export function Spellbook({
     levelFilter,
     classFilter,
     sourceFilter,
+    effectFilter,
+    schoolFilter,
     concentrationOnly,
     ritualOnly,
     sortOrder,
@@ -115,7 +125,7 @@ export function Spellbook({
     searchTerm.length > 0 ||
     levelFilter !== "all" ||
     classFilter !== "all" ||
-    sourceFilter !== "all" ||
+    sourceFilter !== "all" || effectFilter !== "all" || schoolFilter !== "all" ||
     concentrationOnly ||
     ritualOnly ||
     sortOrder !== "level-name";
@@ -125,6 +135,8 @@ export function Spellbook({
     setLevelFilter("all");
     setClassFilter("all");
     setSourceFilter("all");
+    setEffectFilter("all");
+    setSchoolFilter("all");
     setConcentrationOnly(false);
     setRitualOnly(false);
     setSortOrder("level-name");
@@ -164,6 +176,20 @@ export function Spellbook({
               <select value={classFilter} onChange={(event) => setClassFilter(event.target.value)}>
                 <option value="all">Tümü</option>
                 {availableSpellClasses.map((className) => <option key={className} value={className}>{className}</option>)}
+              </select>
+            </label>
+            <label>
+              School
+              <select value={schoolFilter} onChange={(event) => setSchoolFilter(event.target.value)}>
+                <option value="all">Tümü</option>
+                {availableSchools.map((school) => <option key={school} value={school}>{school}</option>)}
+              </select>
+            </label>
+            <label>
+              Etki
+              <select value={effectFilter} onChange={(event) => setEffectFilter(event.target.value as EffectFilter)}>
+                <option value="all">Tümü</option>
+                {(["damage","healing","control","utility","defense","summoning","movement"] as SpellEffectType[]).map((effect) => <option key={effect} value={effect}>{effect}</option>)}
               </select>
             </label>
             <label>
@@ -210,6 +236,9 @@ export function Spellbook({
                       <span>Duration: {spell.duration}</span><span>Comp: {spell.components.join(", ")}</span>
                     </div>
                     <p>{spell.description}</p>
+                    <div className="spell-mechanic-summary"><strong>Mekanik:</strong> {getSpellMechanicSummary(spell)}</div>
+                    {spell.area ? <p><strong>Alan:</strong> {spell.area}</p> : null}
+                    {spell.scaling ? <p><strong>Scaling:</strong> {spell.scaling.notes ?? spell.higherLevels ?? "Slot seviyesiyle artar."}</p> : null}
                     {spell.higherLevels ? <p className="spell-higher-levels"><strong>Higher Levels:</strong> {spell.higherLevels}</p> : null}
                     <div className="library-pill-row">
                       {spell.classes.map((className) => <span key={className}>{className}</span>)}

@@ -698,6 +698,7 @@ export function Builder({
               isRulesetLoading={isRulesetLoading}
               rulesetError={rulesetError}
               className={draft.className}
+              characterLevel={draft.level}
               knownSpellIds={draft.knownSpellIds}
               preparedSpellIds={draft.preparedSpellIds}
               onChange={(next) =>

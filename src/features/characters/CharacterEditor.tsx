@@ -436,6 +436,7 @@ export function CharacterEditor({
           isRulesetLoading={activeRulesetLoading}
           rulesetError={activeRulesetError}
           className={draft.className}
+              characterLevel={draft.level}
           knownSpellIds={draft.knownSpellIds}
           preparedSpellIds={draft.preparedSpellIds}
           onChange={(next) =>

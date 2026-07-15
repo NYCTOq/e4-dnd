@@ -1,1 +1,1695 @@
-[]
+[
+  {
+    "id": "acid-splash",
+    "name": "Acid Splash",
+    "level": 0,
+    "school": "Conjuration",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You hurl acid at one or two nearby creatures. Targets make Dexterity saves or take acid damage.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "saving-throw",
+    "damageDice": "1d6",
+    "damageType": "acid",
+    "saveAbility": "dex",
+    "scaling": {
+      "mode": "character-level",
+      "notes": "Damage increases at character levels 5, 11, and 17."
+    }
+  },
+  {
+    "id": "chill-touch",
+    "name": "Chill Touch",
+    "level": 0,
+    "school": "Necromancy",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "1 round",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "Make a ranged spell attack with a ghostly hand. On a hit, the target takes necrotic damage and cannot regain hit points until your next turn.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "spell-attack",
+    "damageDice": "1d8",
+    "damageType": "necrotic",
+    "scaling": {
+      "mode": "character-level",
+      "notes": "Damage increases at character levels 5, 11, and 17."
+    }
+  },
+  {
+    "id": "druidcraft",
+    "name": "Druidcraft",
+    "level": 0,
+    "school": "Transmutation",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Druid"
+    ],
+    "description": "You create a minor nature effect such as predicting weather, blooming a flower, sensory natural effects, or lighting/snuffing a small flame.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "fire-bolt",
+    "name": "Fire Bolt",
+    "level": 0,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "Make a ranged spell attack. On a hit, the target takes fire damage, and flammable unattended objects may ignite.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "spell-attack",
+    "damageDice": "1d10",
+    "damageType": "fire",
+    "scaling": {
+      "mode": "character-level",
+      "notes": "Damage increases at character levels 5, 11, and 17."
+    }
+  },
+  {
+    "id": "guidance",
+    "name": "Guidance",
+    "level": 0,
+    "school": "Divination",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Cleric",
+      "Druid"
+    ],
+    "description": "You touch one willing creature. Once before the spell ends, it can add 1d4 to one ability check it makes.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "light",
+    "name": "Light",
+    "level": 0,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "M"
+    ],
+    "duration": "1 hour",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Cleric",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You touch an object and cause it to shed bright light and dim light around it. The light can be covered or dismissed.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "mage-hand",
+    "name": "Mage Hand",
+    "level": 0,
+    "school": "Conjuration",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "1 minute",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "A spectral floating hand appears and can manipulate simple objects within range.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "mending",
+    "name": "Mending",
+    "level": 0,
+    "school": "Transmutation",
+    "castingTime": "1 minute",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "This spell repairs a small break or tear in an object you touch, as long as the damage is not too large.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "minor-illusion",
+    "name": "Minor Illusion",
+    "level": 0,
+    "school": "Illusion",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "components": [
+      "S",
+      "M"
+    ],
+    "duration": "1 minute",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You create a sound or image that lasts briefly and can be recognized as illusion through careful inspection.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "poison-spray",
+    "name": "Poison Spray",
+    "level": 0,
+    "school": "Conjuration",
+    "castingTime": "1 action",
+    "range": "10 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You project poison at a creature nearby. The target makes a Constitution save or takes poison damage.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "saving-throw",
+    "damageDice": "1d12",
+    "damageType": "poison",
+    "saveAbility": "con",
+    "scaling": {
+      "mode": "character-level",
+      "notes": "Damage increases at character levels 5, 11, and 17."
+    }
+  },
+  {
+    "id": "prestidigitation",
+    "name": "Prestidigitation",
+    "level": 0,
+    "school": "Transmutation",
+    "castingTime": "1 action",
+    "range": "10 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Up to 1 hour",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You create a small harmless magical trick such as cleaning, chilling, warming, flavoring, marking, or a tiny sensory effect.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "produce-flame",
+    "name": "Produce Flame",
+    "level": 0,
+    "school": "Conjuration",
+    "castingTime": "1 action",
+    "range": "Self",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "10 minutes",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Druid"
+    ],
+    "description": "A flame appears in your hand, shedding light. You can also hurl it as a ranged spell attack that deals fire damage.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "spell-attack",
+    "damageDice": "1d8",
+    "damageType": "fire",
+    "scaling": {
+      "mode": "character-level",
+      "notes": "Damage increases at character levels 5, 11, and 17."
+    }
+  },
+  {
+    "id": "ray-of-frost",
+    "name": "Ray of Frost",
+    "level": 0,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "Make a ranged spell attack. On a hit, the target takes cold damage and its speed is reduced until your next turn.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "spell-attack",
+    "damageDice": "1d8",
+    "damageType": "cold",
+    "scaling": {
+      "mode": "character-level",
+      "notes": "Damage increases at character levels 5, 11, and 17."
+    }
+  },
+  {
+    "id": "resistance",
+    "name": "Resistance",
+    "level": 0,
+    "school": "Abjuration",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Cleric",
+      "Druid"
+    ],
+    "description": "You touch one willing creature. Once before the spell ends, it can add 1d4 to one saving throw.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "sacred-flame",
+    "name": "Sacred Flame",
+    "level": 0,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Cleric"
+    ],
+    "description": "Flame-like radiance descends on a creature you can see. The target makes a Dexterity save or takes radiant damage.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "saving-throw",
+    "damageDice": "1d8",
+    "damageType": "radiant",
+    "saveAbility": "dex",
+    "scaling": {
+      "mode": "character-level",
+      "notes": "Damage increases at character levels 5, 11, and 17."
+    }
+  },
+  {
+    "id": "shillelagh",
+    "name": "Shillelagh",
+    "level": 0,
+    "school": "Transmutation",
+    "castingTime": "1 bonus action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "1 minute",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Druid"
+    ],
+    "description": "A club or quarterstaff you hold becomes magically empowered and can use your spellcasting ability for attacks and damage.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "shocking-grasp",
+    "name": "Shocking Grasp",
+    "level": 0,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "Make a melee spell attack. On a hit, the target takes lightning damage and cannot take reactions until its next turn.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "spell-attack",
+    "damageDice": "1d8",
+    "damageType": "lightning",
+    "scaling": {
+      "mode": "character-level",
+      "notes": "Damage increases at character levels 5, 11, and 17."
+    }
+  },
+  {
+    "id": "spare-the-dying",
+    "name": "Spare the Dying",
+    "level": 0,
+    "school": "Necromancy",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Cleric"
+    ],
+    "description": "You touch a living creature at 0 hit points. The creature becomes stable.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "thaumaturgy",
+    "name": "Thaumaturgy",
+    "level": 0,
+    "school": "Transmutation",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "components": [
+      "V"
+    ],
+    "duration": "Up to 1 minute",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Cleric"
+    ],
+    "description": "You create a minor divine wonder such as a louder voice, harmless tremors, altered flames, or sudden sensory effects.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "thorn-whip",
+    "name": "Thorn Whip",
+    "level": 0,
+    "school": "Transmutation",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Druid"
+    ],
+    "description": "Make a melee spell attack at range. On a hit, the target takes piercing damage and may be pulled closer.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "spell-attack",
+    "damageDice": "1d6",
+    "damageType": "piercing",
+    "scaling": {
+      "mode": "character-level",
+      "notes": "Damage increases at character levels 5, 11, and 17."
+    }
+  },
+  {
+    "id": "bless",
+    "name": "Bless",
+    "level": 1,
+    "school": "Enchantment",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Cleric",
+      "Paladin"
+    ],
+    "description": "You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or saving throw before the spell ends, it can roll a d4 and add the number rolled to the attack roll or saving throw.",
+    "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "burning-hands",
+    "name": "Burning Hands",
+    "level": 1,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "Self",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "A fan of flame erupts from your hands. Creatures in the area make Dexterity saves or take fire damage.",
+    "higherLevels": "A higher-level slot increases the damage.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "saving-throw",
+    "damageDice": "3d6",
+    "damageType": "fire",
+    "saveAbility": "dex"
+  },
+  {
+    "id": "command",
+    "name": "Command",
+    "level": 1,
+    "school": "Enchantment",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "components": [
+      "V"
+    ],
+    "duration": "1 round",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Cleric",
+      "Paladin"
+    ],
+    "description": "You speak a one-word command to a creature. On a failed Wisdom save, it follows the command on its next turn.",
+    "higherLevels": "A higher-level slot lets you affect more creatures.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "cure-wounds",
+    "name": "Cure Wounds",
+    "level": 1,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger"
+    ],
+    "description": "A creature you touch regains hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+    "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "healing",
+    "attackType": "automatic",
+    "healingDice": "1d8",
+    "scaling": {
+      "mode": "slot",
+      "dicePerStep": "1d8"
+    }
+  },
+  {
+    "id": "detect-magic",
+    "name": "Detect Magic",
+    "level": 1,
+    "school": "Divination",
+    "castingTime": "1 action",
+    "range": "Self",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Up to 10 minutes",
+    "concentration": true,
+    "ritual": true,
+    "classes": [
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "For the duration, you sense the presence of magic within 30 feet of you. You can use your action to see a faint aura around visible magical creatures or objects and learn the school of magic, if any.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "faerie-fire",
+    "name": "Faerie Fire",
+    "level": 1,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "components": [
+      "V"
+    ],
+    "duration": "Concentration, up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Druid"
+    ],
+    "description": "Creatures in a cube make Dexterity saves. Failed targets glow, cannot benefit from invisibility, and attacks against them have advantage.",
+    "effectType": "control",
+    "attackType": "saving-throw",
+    "saveAbility": "dex",
+    "area": "20-foot cube",
+    "conditionEffect": "Outlined",
+    "tags": [
+      "debuff"
+    ],
+    "source": "SRD 5.2 starter"
+  },
+  {
+    "id": "guiding-bolt",
+    "name": "Guiding Bolt",
+    "level": 1,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "1 round",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Cleric"
+    ],
+    "description": "Make a ranged spell attack against a creature within range. On a hit, the target takes 4d6 radiant damage, and the next attack roll made against it before the end of your next turn has advantage.",
+    "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "spell-attack",
+    "damageDice": "4d6",
+    "damageType": "radiant"
+  },
+  {
+    "id": "healing-word",
+    "name": "Healing Word",
+    "level": 1,
+    "school": "Evocation",
+    "castingTime": "1 bonus action",
+    "range": "60 feet",
+    "components": [
+      "V"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Cleric",
+      "Druid"
+    ],
+    "description": "A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+    "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "healing",
+    "attackType": "automatic",
+    "healingDice": "1d4",
+    "scaling": {
+      "mode": "slot",
+      "dicePerStep": "1d4"
+    }
+  },
+  {
+    "id": "inflict-wounds",
+    "name": "Inflict Wounds",
+    "level": 1,
+    "school": "Necromancy",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Cleric"
+    ],
+    "description": "Make a melee spell attack against a creature. On a hit, it takes heavy necrotic damage.",
+    "higherLevels": "A higher-level slot increases the damage.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "spell-attack",
+    "damageDice": "3d10",
+    "damageType": "necrotic"
+  },
+  {
+    "id": "magic-missile",
+    "name": "Magic Missile",
+    "level": 1,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You create three darts of magical force. Each dart hits a creature of your choice that you can see within range and deals 1d4 + 1 force damage.",
+    "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "automatic",
+    "damageDice": "3d4+3",
+    "damageType": "force"
+  },
+  {
+    "id": "shield",
+    "name": "Shield",
+    "level": 1,
+    "school": "Abjuration",
+    "castingTime": "1 reaction",
+    "range": "Self",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "1 round",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from Magic Missile.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "sleep",
+    "name": "Sleep",
+    "level": 1,
+    "school": "Enchantment",
+    "castingTime": "1 action",
+    "range": "90 feet",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "1 minute",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "A pool of affected hit points causes nearby creatures to fall unconscious, starting with the lowest current HP.",
+    "higherLevels": "The affected hit point pool increases with higher-level slots.",
+    "effectType": "control",
+    "attackType": "automatic",
+    "area": "20-foot radius",
+    "conditionEffect": "Unconscious",
+    "tags": [
+      "control"
+    ],
+    "scaling": {
+      "mode": "slot",
+      "dicePerStep": "2d8"
+    },
+    "source": "SRD 5.2 starter"
+  },
+  {
+    "id": "thunderwave",
+    "name": "Thunderwave",
+    "level": 1,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "Self",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Druid",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "Creatures in a cube make Constitution saves, taking thunder damage and being pushed on a failure.",
+    "higherLevels": "Damage increases by 1d8 per slot level above 1st.",
+    "effectType": "damage",
+    "attackType": "saving-throw",
+    "damageDice": "2d8",
+    "damageType": "thunder",
+    "saveAbility": "con",
+    "area": "15-foot cube",
+    "tags": [
+      "forced-movement"
+    ],
+    "scaling": {
+      "mode": "slot",
+      "dicePerStep": "1d8"
+    },
+    "source": "SRD 5.2 starter"
+  },
+  {
+    "id": "aid",
+    "name": "Aid",
+    "level": 2,
+    "school": "Abjuration",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "8 hours",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Cleric",
+      "Paladin"
+    ],
+    "description": "Up to three creatures gain increased hit point maximum and current hit points for the duration.",
+    "higherLevels": "Using a higher-level slot increases the hit point bonus.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "hold-person",
+    "name": "Hold Person",
+    "level": 2,
+    "school": "Enchantment",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "Choose a humanoid you can see. On a failed Wisdom save, it is paralyzed for the duration and can repeat the save later.",
+    "higherLevels": "A higher-level slot lets you target more humanoids.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "invisibility",
+    "name": "Invisibility",
+    "level": 2,
+    "school": "Illusion",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Concentration, up to 1 hour",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "A creature becomes invisible until the spell ends, normally ending after it attacks or casts a spell.",
+    "higherLevels": "Targets one additional creature per slot level above 2nd.",
+    "effectType": "defense",
+    "attackType": "automatic",
+    "target": "One creature",
+    "conditionEffect": "Invisible",
+    "tags": [
+      "stealth"
+    ],
+    "scaling": {
+      "mode": "slot",
+      "additionalTargetsPerStep": 1
+    },
+    "source": "SRD 5.2 starter"
+  },
+  {
+    "id": "lesser-restoration",
+    "name": "Lesser Restoration",
+    "level": 2,
+    "school": "Abjuration",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger"
+    ],
+    "description": "You end one disease or one condition affecting a creature, such as blinded, deafened, paralyzed, or poisoned.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "mirror-image",
+    "name": "Mirror Image",
+    "level": 2,
+    "school": "Illusion",
+    "castingTime": "1 action",
+    "range": "Self",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "1 minute",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "Illusory duplicates appear around you, making attacks against you more likely to hit a duplicate instead.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "misty-step",
+    "name": "Misty Step",
+    "level": 2,
+    "school": "Conjuration",
+    "castingTime": "1 bonus action",
+    "range": "Self",
+    "components": [
+      "V"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You briefly vanish in silver mist and teleport to an unoccupied space you can see nearby.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "prayer-of-healing",
+    "name": "Prayer of Healing",
+    "level": 2,
+    "school": "Evocation",
+    "castingTime": "10 minutes",
+    "range": "30 feet",
+    "components": [
+      "V"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Cleric"
+    ],
+    "description": "Up to six creatures regain hit points after a longer casting. It is not meant for emergency combat healing.",
+    "higherLevels": "A higher-level slot increases the healing.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "scorching-ray",
+    "name": "Scorching Ray",
+    "level": 2,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You create multiple rays of fire and make ranged spell attacks, each dealing fire damage on a hit.",
+    "higherLevels": "A higher-level slot creates additional rays.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "spell-attack",
+    "damageDice": "2d6",
+    "damageType": "fire"
+  },
+  {
+    "id": "spiritual-weapon",
+    "name": "Spiritual Weapon",
+    "level": 2,
+    "school": "Evocation",
+    "castingTime": "1 bonus action",
+    "range": "60 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Concentration, up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Cleric"
+    ],
+    "description": "You create a floating spectral weapon within range. When you cast the spell, you can make a melee spell attack against a creature within 5 feet of the weapon. On a hit, the target takes force damage equal to 1d8 + your spellcasting ability modifier.",
+    "higherLevels": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for every two slot levels above 2nd.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "spell-attack",
+    "damageDice": "1d8",
+    "damageType": "force"
+  },
+  {
+    "id": "web",
+    "name": "Web",
+    "level": 2,
+    "school": "Conjuration",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Concentration, up to 1 hour",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "Creates difficult terrain. Creatures entering or starting there may be restrained after a Dexterity save.",
+    "effectType": "control",
+    "attackType": "saving-throw",
+    "saveAbility": "dex",
+    "area": "20-foot cube",
+    "conditionEffect": "Restrained",
+    "tags": [
+      "difficult-terrain"
+    ],
+    "source": "SRD 5.2 starter"
+  },
+  {
+    "id": "beacon-of-hope",
+    "name": "Beacon of Hope",
+    "level": 3,
+    "school": "Abjuration",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Cleric"
+    ],
+    "description": "Choose creatures within range. They gain advantage on Wisdom and death saves, and healing restores the maximum possible hit points.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "counterspell",
+    "name": "Counterspell",
+    "level": 3,
+    "school": "Abjuration",
+    "castingTime": "1 reaction",
+    "range": "60 feet",
+    "components": [
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You attempt to interrupt a creature casting a spell. Lower-level spells can fail automatically; stronger spells may require an ability check.",
+    "higherLevels": "A higher-level slot automatically counters spells of that level or lower.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "dispel-magic",
+    "name": "Dispel Magic",
+    "level": 3,
+    "school": "Abjuration",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends. For each spell of 4th level or higher, make an ability check using your spellcasting ability; the DC equals 10 + the spell's level.",
+    "higherLevels": "When you cast this spell using a spell slot of 4th level or higher, you automatically end spell effects on the target if the spell's level is equal to or less than the level of the spell slot you used.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "fireball",
+    "name": "Fireball",
+    "level": 3,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "150 feet",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "A bright streak flashes to a point you choose within range and blossoms into an explosion. Each creature in a 20-foot-radius sphere must make a Dexterity saving throw, taking 8d6 fire damage on a failed save, or half as much on a success.",
+    "higherLevels": "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "saving-throw",
+    "damageDice": "8d6",
+    "damageType": "fire",
+    "saveAbility": "dex",
+    "area": "20-foot-radius sphere",
+    "scaling": {
+      "mode": "slot",
+      "dicePerStep": "1d6"
+    }
+  },
+  {
+    "id": "fly",
+    "name": "Fly",
+    "level": 3,
+    "school": "Transmutation",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Concentration, up to 10 minutes",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "A willing creature gains a flying speed for the duration.",
+    "higherLevels": "Targets one additional creature per slot level above 3rd.",
+    "effectType": "movement",
+    "attackType": "automatic",
+    "target": "One willing creature",
+    "tags": [
+      "movement"
+    ],
+    "scaling": {
+      "mode": "slot",
+      "additionalTargetsPerStep": 1
+    },
+    "source": "SRD 5.2 starter"
+  },
+  {
+    "id": "haste",
+    "name": "Haste",
+    "level": 3,
+    "school": "Transmutation",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "Choose a willing creature. It becomes faster, harder to hit, gains Dexterity save benefits, and gets an extra limited action each turn.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "hypnotic-pattern",
+    "name": "Hypnotic Pattern",
+    "level": 3,
+    "school": "Illusion",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "components": [
+      "S",
+      "M"
+    ],
+    "duration": "Concentration, up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "Creatures in a cube make Wisdom saves or become charmed and incapacitated until disturbed.",
+    "effectType": "control",
+    "attackType": "saving-throw",
+    "saveAbility": "wis",
+    "area": "30-foot cube",
+    "conditionEffect": "Charmed and Incapacitated",
+    "tags": [
+      "control"
+    ],
+    "source": "SRD 5.2 starter"
+  },
+  {
+    "id": "lightning-bolt",
+    "name": "Lightning Bolt",
+    "level": 3,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "Self",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "A line of lightning deals damage, with a Dexterity save for half.",
+    "higherLevels": "Damage increases by 1d6 per slot level above 3rd.",
+    "effectType": "damage",
+    "attackType": "saving-throw",
+    "damageDice": "8d6",
+    "damageType": "lightning",
+    "saveAbility": "dex",
+    "area": "100-foot line",
+    "tags": [
+      "area"
+    ],
+    "scaling": {
+      "mode": "slot",
+      "dicePerStep": "1d6"
+    },
+    "source": "SRD 5.2 starter"
+  },
+  {
+    "id": "revivify",
+    "name": "Revivify",
+    "level": 3,
+    "school": "Necromancy",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Cleric",
+      "Paladin"
+    ],
+    "description": "You touch a creature that died very recently and return it to life with 1 hit point.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "utility",
+    "attackType": "automatic"
+  },
+  {
+    "id": "spirit-guardians",
+    "name": "Spirit Guardians",
+    "level": 3,
+    "school": "Conjuration",
+    "castingTime": "1 action",
+    "range": "Self",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Up to 10 minutes",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Cleric"
+    ],
+    "description": "You call forth spirits to protect you. They flit around you to a distance of 15 feet. Affected creatures have their speed halved in the area, and when a creature enters the area for the first time on a turn or starts its turn there, it must make a Wisdom saving throw or take 3d8 radiant or necrotic damage.",
+    "higherLevels": "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd.",
+    "source": "SRD 5.2 starter",
+    "target": "See description",
+    "tags": [],
+    "effectType": "damage",
+    "attackType": "saving-throw",
+    "damageDice": "3d8",
+    "damageType": "radiant",
+    "saveAbility": "wis",
+    "area": "15-foot emanation",
+    "scaling": {
+      "mode": "slot",
+      "dicePerStep": "1d8"
+    }
+  },
+  {
+    "id": "dimension-door",
+    "name": "Dimension Door",
+    "level": 4,
+    "school": "Conjuration",
+    "castingTime": "1 action",
+    "range": "500 feet",
+    "components": [
+      "V"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "Teleport yourself, optionally carrying one willing creature, to a destination within range.",
+    "effectType": "movement",
+    "attackType": "automatic",
+    "target": "Self and optional passenger",
+    "tags": [
+      "teleportation"
+    ],
+    "source": "SRD 5.2 starter"
+  },
+  {
+    "id": "polymorph",
+    "name": "Polymorph",
+    "level": 4,
+    "school": "Transmutation",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Concentration, up to 1 hour",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Druid",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "Transforms a creature into a beast form within the spell’s challenge-rating limits.",
+    "effectType": "control",
+    "attackType": "saving-throw",
+    "saveAbility": "wis",
+    "target": "One creature",
+    "tags": [
+      "transformation"
+    ],
+    "source": "SRD 5.2 starter"
+  },
+  {
+    "id": "greater-restoration",
+    "name": "Greater Restoration",
+    "level": 5,
+    "school": "Abjuration",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Cleric",
+      "Druid"
+    ],
+    "description": "Ends one major debilitating effect, such as petrification, charm, a curse, or an ability or hit-point maximum reduction.",
+    "effectType": "healing",
+    "attackType": "automatic",
+    "target": "One creature",
+    "tags": [
+      "restoration"
+    ],
+    "source": "SRD 5.2 starter"
+  },
+  {
+    "id": "mass-cure-wounds",
+    "name": "Mass Cure Wounds",
+    "level": 5,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "components": [
+      "V",
+      "S"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Cleric",
+      "Druid"
+    ],
+    "description": "Up to six creatures regain hit points.",
+    "higherLevels": "Healing increases by 1d8 per slot level above 5th.",
+    "effectType": "healing",
+    "attackType": "automatic",
+    "healingDice": "3d8",
+    "target": "Up to six creatures",
+    "tags": [
+      "healing"
+    ],
+    "scaling": {
+      "mode": "slot",
+      "dicePerStep": "1d8"
+    },
+    "source": "SRD 5.2 starter"
+  },
+  {
+    "id": "disintegrate",
+    "name": "Disintegrate",
+    "level": 6,
+    "school": "Transmutation",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "A target makes a Dexterity save or takes heavy force damage. A creature reduced to 0 HP can be disintegrated.",
+    "higherLevels": "Damage increases by 3d6 per slot level above 6th.",
+    "effectType": "damage",
+    "attackType": "saving-throw",
+    "damageDice": "10d6+40",
+    "damageType": "force",
+    "saveAbility": "dex",
+    "target": "One target",
+    "tags": [
+      "high-damage"
+    ],
+    "scaling": {
+      "mode": "slot",
+      "dicePerStep": "3d6"
+    },
+    "source": "SRD 5.2 starter"
+  }
+]
