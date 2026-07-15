@@ -108,6 +108,8 @@ export interface DndFeatData {
   prerequisite?: DndFeatPrerequisite;
   abilityOptions?: AbilityKey[];
   repeatable?: boolean;
+  choiceType?: "ability" | "skills" | "tools" | "spells" | "fighting-style" | "weapon-mastery";
+  choiceCount?: number;
 }
 
 export type SpellEffectType = "damage" | "healing" | "control" | "utility" | "defense" | "summoning" | "movement";

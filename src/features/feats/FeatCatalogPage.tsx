@@ -55,6 +55,9 @@ export function FeatCatalogPage({ rulesetData }: { rulesetData: RulesetData | nu
               {feat.prerequisite?.minimumLevel ? <span>Level {feat.prerequisite.minimumLevel}+</span> : null}
               {feat.prerequisite?.spellcasting ? <span>Spellcasting prerequisite</span> : null}
               {feat.prerequisite?.abilityMinimums ? <span>{Object.entries(feat.prerequisite.abilityMinimums).map(([ability, score]) => `${ability.toUpperCase()} ${score}`).join(", ")}</span> : null}
+              {feat.abilityOptions?.length ? <span>Ability seçimi: {feat.abilityOptions.map((ability) => ability.toUpperCase()).join(" / ")}</span> : null}
+              {feat.choiceType ? <span>{feat.choiceCount ?? 1} {feat.choiceType} seçimi</span> : null}
+              {feat.repeatable ? <span>Repeatable</span> : null}
             </div>
           </article>
         ))}

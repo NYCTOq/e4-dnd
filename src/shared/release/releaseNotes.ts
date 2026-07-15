@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.30.0", date: "2026-07-15", title: "Feat Expansion",
+    summary: "2014 ve 2024 feat havuzları, prerequisite ve yapılandırılmış seçim metadata'sı ile genişletildi.",
+    changes: [
+      { text: "2014 için 23 ilave general feat", category: "Özellik" },
+      { text: "2024 için 15 ilave general feat", category: "Özellik" },
+      { text: "Ability, skill, tool, spell ve fighting style seçim metadata'sı", category: "Teknik" },
+      { text: "Repeatable feat ve seçim adedi altyapısı", category: "Teknik" },
+      { text: "Feat Catalog içinde ability ve choice metadata görünümü", category: "İyileştirme" },
+      { text: "Feat paket kapsamı için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.29.0", date: "2026-07-15", title: "Subclass Expansion",
     summary: "Cleric domainleri başta olmak üzere 2014 ve 2024 subclass seçenekleri, özgün feature özetleri ve mekanik metadata ile genişletildi.",
     changes: [
