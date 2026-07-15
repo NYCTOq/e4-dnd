@@ -10,6 +10,7 @@ import { buildFinalSkillProficiencies, getAvailableClassSkills, getExpertiseLimi
 import { hasValidationErrors, validateCharacterDraft } from "../../core/rulesets/characterValidation";
 import { getBuilderStepId, getBuilderStepIssueCounts, getFirstErrorStepIndex } from "../../core/rulesets/builderProgress";
 import { getClassSpellSlots } from "../../core/rulesets/spellcastingRules";
+import { getAbilityBudgetError, getStandardArrayAbilities, type AbilityGenerationMethod } from "../../core/rulesets/abilityGenerationRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
@@ -54,6 +55,7 @@ export function Builder({
     },
   );
   const [activeStepIndex, setActiveStepIndex] = useState(0);
+  const [abilityMethod, setAbilityMethod] = useState<AbilityGenerationMethod>("standard-array");
   const selectedRuleset = useSelectedRuleset(draft.ruleset, rulesetData);
   const activeRulesetData = selectedRuleset.data;
   const activeRulesetLoading = selectedRuleset.loading || (draft.ruleset === rulesetData?.id && isRulesetLoading);
@@ -106,7 +108,13 @@ export function Builder({
   const normalizedClassSkills = useMemo(() => normalizeClassSkillChoices(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
   const finalSkillProficiencies = useMemo(() => buildFinalSkillProficiencies(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
   const expertiseLimit = getExpertiseLimit(draft.className, draft.level);
-  const validationIssues = useMemo(() => validateCharacterDraft(draft, activeRulesetData, finalAbilities), [draft, activeRulesetData, finalAbilities]);
+  const availableAsiPoints = Math.max(0, (generalFeatSlots - draft.featIds.length) * 2);
+  const abilityBudgetError = getAbilityBudgetError(abilityMethod, draft.abilities, availableAsiPoints);
+  const validationIssues = useMemo(() => {
+    const issues = validateCharacterDraft(draft, activeRulesetData, finalAbilities);
+    if (abilityBudgetError) issues.push({ id: "ability-budget", severity: "error", step: "Abilities", message: abilityBudgetError });
+    return issues;
+  }, [draft, activeRulesetData, finalAbilities, abilityBudgetError]);
   const validationHasErrors = hasValidationErrors(validationIssues);
   const builderProgress = Math.round((activeStepIndex / (builderSteps.length - 1)) * 100);
 
@@ -195,17 +203,8 @@ export function Builder({
   }
 
   function applyStandardArray() {
-    setDraft((current) => ({
-      ...current,
-      abilities: {
-        str: 15,
-        dex: 14,
-        con: 13,
-        int: 12,
-        wis: 10,
-        cha: 8,
-      },
-    }));
+    setAbilityMethod("standard-array");
+    setDraft((current) => ({ ...current, abilities: getStandardArrayAbilities() }));
   }
 
   function goToStep(index: number) {
@@ -604,6 +603,18 @@ export function Builder({
                 <button type="button" onClick={applyStandardArray}>
                   Standard Array
                 </button>
+              </div>
+
+              <div className="ability-method-picker" role="group" aria-label="Ability oluşturma yöntemi">
+                {(["standard-array", "point-buy", "rolled"] as const).map((method) => (
+                  <button type="button" className={abilityMethod === method ? "active" : ""} key={method} onClick={() => setAbilityMethod(method)}>
+                    {method === "standard-array" ? "Standard Array" : method === "point-buy" ? "Point Buy" : "Rolled / Manual"}
+                  </button>
+                ))}
+              </div>
+              <div className={`ability-budget-status ${abilityBudgetError ? "invalid" : "valid"}`}>
+                <strong>{abilityBudgetError ? "Dağılım kurala uymuyor" : "Dağılım geçerli"}</strong>
+                <span>{abilityBudgetError ?? `${availableAsiPoints} ASI puanı kullanılabilir. Feat seçimi bu bütçeyi tüketir.`}</span>
               </div>
 
               <div className="ability-editor ability-editor-v2">

@@ -15,6 +15,17 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.0.3", date: "2026-07-15", title: "Ability Generation Rules",
+    summary: "Character Builder artık tekil skor tavanının yanında Standard Array, Point Buy ve ASI toplam bütçesini de doğruluyor.",
+    changes: [
+      { text: "Standard Array, Point Buy ve Rolled/Manual oluşturma yöntemleri", category: "Özellik" },
+      { text: "Class ve level bazlı ASI puan bütçesi", category: "Özellik" },
+      { text: "Feat seçildiğinde ilgili ASI bütçesinin otomatik düşürülmesi", category: "Düzeltme" },
+      { text: "Kurala aykırı toplam dağılımda Review kayıt engeli", category: "Düzeltme" },
+      { text: "Ability generation bütçeleri için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "2.0.2", date: "2026-07-15", title: "Player Ability Cap Fix",
     summary: "Character Builder ve Editor içindeki oyuncu ability skorları normal 20 tavanıyla sınırlandı.",
     changes: [

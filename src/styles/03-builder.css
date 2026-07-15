@@ -136,6 +136,12 @@
   font-size: 1.2rem;
 }
 
+.ability-method-picker { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.ability-method-picker button.active { border-color: rgba(190,180,255,.75); background: rgba(150,130,255,.2); }
+.ability-budget-status { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; padding: 11px 13px; border: 1px solid rgba(110,231,183,.35); border-radius: 14px; background: rgba(110,231,183,.07); }
+.ability-budget-status.invalid { border-color: rgba(255,105,120,.45); background: rgba(255,80,105,.08); }
+.ability-budget-status span { color: rgba(255,255,255,.68); font-size: .82rem; }
+
 .builder-summary-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
