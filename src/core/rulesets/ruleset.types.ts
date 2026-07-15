@@ -148,6 +148,9 @@ export interface DndSpellData {
   target?: string;
   area?: string;
   material?: string;
+  materialCost?: string;
+  materialConsumed?: boolean;
+  reactionTrigger?: string;
   tags?: string[];
   scaling?: SpellScalingData;
   source?: string;

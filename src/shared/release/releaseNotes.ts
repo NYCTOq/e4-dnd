@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.31.0", date: "2026-07-15", title: "Spell Database V2",
+    summary: "Cleric level 0–9 kapsamı başta olmak üzere 2014 ve 2024 spell havuzları gelişmiş mekanik metadata ile büyütüldü.",
+    changes: [
+      { text: "Her edition için 32 yeni yüksek seviye spell", category: "Özellik" },
+      { text: "Cleric spell seviyeleri 4, 6, 7, 8 ve 9 için geniş paket", category: "Özellik" },
+      { text: "Heal, Heroes' Feast, Death Ward, Resurrection ve Mass Heal dahil destek büyüleri", category: "Özellik" },
+      { text: "Material cost, consumed material ve reaction trigger veri alanları", category: "Teknik" },
+      { text: "Spellbook aramasında material ve reaction metadata desteği", category: "İyileştirme" },
+      { text: "Spell Database V2 kapsamı için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.30.0", date: "2026-07-15", title: "Feat Expansion",
     summary: "2014 ve 2024 feat havuzları, prerequisite ve yapılandırılmış seçim metadata'sı ile genişletildi.",
     changes: [

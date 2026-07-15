@@ -77,6 +77,9 @@ export function Spellbook({
           spell.classes.join(" "),
           spell.damageType ?? "",
           spell.conditionEffect ?? "",
+          spell.material ?? "",
+          spell.materialCost ?? "",
+          spell.reactionTrigger ?? "",
         ]
           .join(" ")
           .toLowerCase()
