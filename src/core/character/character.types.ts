@@ -29,6 +29,16 @@ export interface CharacterHitDiePool {
   used: number;
 }
 
+export type ResourceRecovery = "short" | "long" | "manual";
+
+export interface CharacterResource {
+  id: string;
+  name: string;
+  max: number;
+  used: number;
+  recovery: ResourceRecovery;
+}
+
 export type CharacterCondition =
   | "Blessed"
   | "Poisoned"
@@ -75,6 +85,7 @@ export interface Character {
 
   deathSaves: CharacterDeathSaves;
   hitDice: CharacterHitDiePool[];
+  resources: CharacterResource[];
   exhaustion: number;
   conditionDurations: CharacterConditionDurations;
 
@@ -114,6 +125,7 @@ export interface CharacterDraft {
 
   deathSaves: CharacterDeathSaves;
   hitDice: CharacterHitDiePool[];
+  resources?: CharacterResource[];
   exhaustion: number;
   conditionDurations: CharacterConditionDurations;
 

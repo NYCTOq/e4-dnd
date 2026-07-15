@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
+import { getRulesetDefinition } from "../../core/rulesets/rulesetRegistry";
+import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import type { Character, CharacterDraft } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellAttackBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
@@ -25,6 +27,11 @@ export function CharacterEditor({
   const character = characters.find((item) => item.id === characterId);
 
   const [draft, setDraft] = useState<CharacterDraft>(emptyDraft);
+  const selectedRuleset = useSelectedRuleset(draft.ruleset, rulesetData);
+  const activeRulesetData = selectedRuleset.data;
+  const activeRulesetLoading = selectedRuleset.loading || (draft.ruleset === rulesetData?.id && isRulesetLoading);
+  const activeRulesetError = selectedRuleset.error ?? (draft.ruleset === rulesetData?.id ? rulesetError : null);
+  const rulesetDefinition = getRulesetDefinition(draft.ruleset);
 
   useEffect(() => {
     if (!character) {
@@ -69,16 +76,16 @@ export function CharacterEditor({
   }, [character]);
 
   const selectedRace = useMemo(() => {
-    return rulesetData?.races.find((race) => race.name === draft.race) ?? null;
-  }, [rulesetData, draft.race]);
+    return activeRulesetData?.races.find((race) => race.name === draft.race) ?? null;
+  }, [activeRulesetData, draft.race]);
 
   const selectedClass = useMemo(() => {
     return (
-      rulesetData?.classes.find(
+      activeRulesetData?.classes.find(
         (classItem) => classItem.name === draft.className,
       ) ?? null
     );
-  }, [rulesetData, draft.className]);
+  }, [activeRulesetData, draft.className]);
 
   function updateDraft<K extends keyof CharacterDraft>(
     key: K,
@@ -123,7 +130,7 @@ export function CharacterEditor({
     const updatedCharacter: Character = {
       ...character,
       ...draft,
-      armorClass: calculateEffectiveArmorClass(draft, rulesetData?.items),
+      armorClass: calculateEffectiveArmorClass(draft, activeRulesetData?.items),
       currentHp: Math.min(character.currentHp, draft.maxHp),
       spellSlots: normalizeSpellSlots(
         draft.spellSlots,
@@ -199,12 +206,10 @@ export function CharacterEditor({
               Ruleset
               <select
                 value={draft.ruleset}
-                onChange={(event) =>
-                  updateDraft(
-                    "ruleset",
-                    event.target.value as CharacterDraft["ruleset"],
-                  )
-                }
+                onChange={(event) => {
+                  const nextRuleset = event.target.value as CharacterDraft["ruleset"];
+                  setDraft((current) => ({ ...current, ruleset: nextRuleset, race: "", className: "", subclass: "", background: "", knownSpellIds: [], preparedSpellIds: [], spellSlots: [], inventory: [], equippedArmorId: null, equippedShieldId: null, equippedWeaponIds: [] }));
+                }}
               >
                 <option value="dnd_2014">D&D 2014</option>
                 <option value="dnd_2024">D&D 2024</option>
@@ -227,17 +232,17 @@ export function CharacterEditor({
 
             <label>
               Race
-              {draft.ruleset === "dnd_2014" ? (
+              {draft.ruleset !== "homebrew" ? (
                 <select
                   value={draft.race}
-                  disabled={isRulesetLoading || !!rulesetError || !rulesetData}
+                  disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData}
                   onChange={(event) => updateDraft("race", event.target.value)}
                 >
                   <option value="">
-                    {isRulesetLoading ? "Race data yükleniyor..." : "Race seç"}
+                    {activeRulesetLoading ? `${rulesetDefinition.raceTerm} data yükleniyor...` : `${rulesetDefinition.raceTerm} seç`}
                   </option>
 
-                  {rulesetData?.races.map((race) => (
+                  {activeRulesetData?.races.map((race) => (
                     <option key={race.id} value={race.name}>
                       {race.name}
                     </option>
@@ -254,21 +259,21 @@ export function CharacterEditor({
 
             <label>
               Class
-              {draft.ruleset === "dnd_2014" ? (
+              {draft.ruleset !== "homebrew" ? (
                 <select
                   value={draft.className}
-                  disabled={isRulesetLoading || !!rulesetError || !rulesetData}
+                  disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData}
                   onChange={(event) =>
                     updateDraft("className", event.target.value)
                   }
                 >
                   <option value="">
-                    {isRulesetLoading
+                    {activeRulesetLoading
                       ? "Class data yükleniyor..."
                       : "Class seç"}
                   </option>
 
-                  {rulesetData?.classes.map((classItem) => (
+                  {activeRulesetData?.classes.map((classItem) => (
                     <option key={classItem.id} value={classItem.name}>
                       {classItem.name}
                     </option>
@@ -308,10 +313,10 @@ export function CharacterEditor({
             </label>
           </div>
 
-          {rulesetError ? (
+          {activeRulesetError ? (
             <div className="empty-panel">
               <h2>Ruleset data yüklenemedi</h2>
-              <p>{rulesetError}</p>
+              <p>{activeRulesetError}</p>
             </div>
           ) : null}
 
@@ -426,9 +431,9 @@ export function CharacterEditor({
         <CharacterSpellSelector
           title="Karakter Spellbook"
           description="Bu karakterin spell listesini güncelle. Oyuncular zaten her seviye atlayınca kimlik krizi geçiriyor."
-          rulesetData={rulesetData}
-          isRulesetLoading={isRulesetLoading}
-          rulesetError={rulesetError}
+          rulesetData={activeRulesetData}
+          isRulesetLoading={activeRulesetLoading}
+          rulesetError={activeRulesetError}
           className={draft.className}
           knownSpellIds={draft.knownSpellIds}
           preparedSpellIds={draft.preparedSpellIds}
@@ -444,9 +449,9 @@ export function CharacterEditor({
         <CharacterInventoryManager
           title="Inventory & Equipment"
           description="Karakterin itemlarını ve kuşandığı ekipmanı güncelle. Çanta yönetimi, kahramanlığın en az havalı ama en gerekli tarafı."
-          rulesetData={rulesetData}
-          isRulesetLoading={isRulesetLoading}
-          rulesetError={rulesetError}
+          rulesetData={activeRulesetData}
+          isRulesetLoading={activeRulesetLoading}
+          rulesetError={activeRulesetError}
           inventory={draft.inventory}
           equippedArmorId={draft.equippedArmorId}
           equippedShieldId={draft.equippedShieldId}
@@ -474,7 +479,7 @@ export function CharacterEditor({
 
           <div className="preview-stats">
             <span>PB +{getProficiencyBonus(previewCharacter.level)}</span>
-            <span>AC {calculateEffectiveArmorClass(draft, rulesetData?.items)}</span>
+            <span>AC {calculateEffectiveArmorClass(draft, activeRulesetData?.items)}</span>
             <span>HP {previewCharacter.maxHp}</span>
             <span>Init {formatModifier(getInitiative(previewCharacter))}</span>
             <span>PP {getPassivePerception(previewCharacter)}</span>

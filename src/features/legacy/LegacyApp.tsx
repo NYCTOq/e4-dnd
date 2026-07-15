@@ -5,7 +5,7 @@ import type {
   DndSpellData,
   RulesetData,
 } from "../../core/rulesets/ruleset.types";
-import { loadDnd2014Ruleset } from "../../core/rulesets/rulesetLoader";
+import { loadRuleset } from "../../core/rulesets/rulesetLoader";
 import type {
   Character,
   CharacterDraft,
@@ -77,7 +77,7 @@ function App() {
 
     async function loadRulesetData() {
       try {
-        const data = await loadDnd2014Ruleset();
+        const data = await loadRuleset(settings.defaultRuleset);
 
         if (isMounted) {
           setRulesetData(data);
@@ -103,7 +103,7 @@ function App() {
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [settings.defaultRuleset]);
 
   useDebouncedEffect(characters, saveCharacters, 350, { skipInitial: true });
   useDebouncedEffect(homebrewSpells, saveHomebrewSpells, 350, { skipInitial: true });
@@ -114,6 +114,10 @@ function App() {
   function handleCreateCharacter(draft: CharacterDraft) {
     const character = createCharacterFromDraft(draft);
     setCharacters((current) => [character, ...current]);
+  }
+
+  function handleReplaceCharacters(nextCharacters: Character[]) {
+    setCharacters(nextCharacters);
   }
 
   function handleUpdateCharacter(updatedCharacter: Character) {
@@ -372,6 +376,7 @@ function App() {
         rulesetError={rulesetError}
         onCreateCharacter={handleCreateCharacter}
         onUpdateCharacter={handleUpdateCharacter}
+        onReplaceCharacters={handleReplaceCharacters}
         onDeleteCharacter={handleDeleteCharacter}
         onDuplicateCharacter={handleDuplicateCharacter}
         onImportCharacters={handleImportCharacters}

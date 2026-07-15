@@ -1,38 +1,26 @@
-import type {
-  DndClassData,
-  DndItemData,
-  DndMonsterData,
-  DndRaceData,
-  DndSpellData,
-  RulesetData,
-} from "./ruleset.types";
+import type { RulesetId } from "../character/character.types";
+import type { DndClassData, DndItemData, DndMonsterData, DndRaceData, DndSpellData, RulesetData } from "./ruleset.types";
+import { getRulesetDefinition } from "./rulesetRegistry";
 
 async function loadJson<T>(path: string): Promise<T> {
   const response = await fetch(path);
-
-  if (!response.ok) {
-    throw new Error(`Data could not be loaded: ${path}`);
-  }
-
+  if (!response.ok) throw new Error(`Data could not be loaded: ${path}`);
   return response.json() as Promise<T>;
 }
 
-export async function loadDnd2014Ruleset(): Promise<RulesetData> {
+export async function loadRuleset(id: RulesetId): Promise<RulesetData> {
+  const sourceId = id === "homebrew" ? "dnd_2014" : id;
+  const root = `/data/${sourceId}`;
   const [classes, races, spells, items, monsters] = await Promise.all([
-    loadJson<DndClassData[]>("/data/dnd_2014/classes.json"),
-    loadJson<DndRaceData[]>("/data/dnd_2014/races.json"),
-    loadJson<DndSpellData[]>("/data/dnd_2014/spells.json"),
-    loadJson<DndItemData[]>("/data/dnd_2014/items.json"),
-    loadJson<DndMonsterData[]>("/data/dnd_2014/monsters.json"),
+    loadJson<DndClassData[]>(`${root}/classes.json`),
+    loadJson<DndRaceData[]>(`${root}/races.json`),
+    loadJson<DndSpellData[]>(`${root}/spells.json`),
+    loadJson<DndItemData[]>(`${root}/items.json`),
+    loadJson<DndMonsterData[]>(`${root}/monsters.json`),
   ]);
-
-  return {
-    id: "dnd_2014",
-    name: "D&D 2014",
-    classes,
-    races,
-    spells,
-    items,
-    monsters,
-  };
+  const definition = getRulesetDefinition(id);
+  return { id, name: definition.name, classes, races, spells, items, monsters };
 }
+
+export const loadDnd2014Ruleset = () => loadRuleset("dnd_2014");
+export const loadDnd2024Ruleset = () => loadRuleset("dnd_2024");

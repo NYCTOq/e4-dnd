@@ -15,6 +15,48 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.19.0",
+    date: "2026-07-15",
+    title: "Ruleset Foundation",
+    summary: "2014, 2024 ve Homebrew karakterleri ayrı ruleset kimliği, terminology ve veri yükleme katmanıyla yönetiliyor.",
+    changes: [
+      { text: "Yeni Ruleset Center ve varsayılan edition ayarı", category: "Özellik" },
+      { text: "2014, 2024 ve Homebrew için merkezi ruleset registry", category: "Teknik" },
+      { text: "Builder ve Character Editor içinde edition-aware veri yükleme", category: "Özellik" },
+      { text: "Ruleset değişiminde uyumsuz class, spell ve equipment seçimlerini güvenli temizleme", category: "İyileştirme" },
+      { text: "Eski karakterleri otomatik D&D 2014 ruleset kimliğine taşıyan migration", category: "Teknik" },
+      { text: "2024 veri klasörü ve sonraki class/species/background paketleri için hazır altyapı", category: "Teknik" },
+    ],
+  },
+  {
+    version: "1.18.0",
+    date: "2026-07-15",
+    title: "Downtime ve campaign calendar",
+    summary: "Oyun içi zaman, yaklaşan olaylar, seyahatler ve karakter downtime faaliyetleri campaign bazında tek takvimde yönetiliyor.",
+    changes: [
+      { text: "Campaign bağlantılı yeni Downtime + Campaign Calendar sayfası", category: "Özellik" },
+      { text: "Oyun içi günü toplu ilerletme ve yaklaşan olayları sıralama", category: "Özellik" },
+      { text: "Karakter bağlantılı downtime faaliyetleri ve otomatik ilerleme yüzdesi", category: "Özellik" },
+      { text: "Oturum, seyahat, son tarih, festival ve çatışma olay türleri", category: "İyileştirme" },
+      { text: "Eski ve bozuk kayıtlar için güvenli calendar sanitizasyonu", category: "Teknik" },
+      { text: "Campaign calendar motoru için üç yeni otomatik test", category: "Teknik" },
+    ],
+  },
+  {
+    version: "1.17.0",
+    date: "2026-07-14",
+    title: "Rest ve resource automation",
+    summary: "Short Rest ve Long Rest işlemleri; HP, spell slot, Hit Dice, exhaustion ve özel sınıf kaynaklarıyla toplu ve geri alınabilir biçimde yönetiliyor.",
+    changes: [
+      { text: "Seçili karakterlere toplu Short Rest ve Long Rest uygulama", category: "Özellik" },
+      { text: "HP, spell slot, Hit Dice, death save, temp HP ve exhaustion otomasyonu", category: "Özellik" },
+      { text: "Short Rest, Long Rest veya manuel yenilenen özel sınıf kaynakları", category: "Özellik" },
+      { text: "Dinlenme geçmişi ve son işlemi geri alma güvenliği", category: "İyileştirme" },
+      { text: "Combat Tracker savaşçılarını senkronize etme ve combat log kaydı", category: "İyileştirme" },
+      { text: "Rest motoru için üç yeni otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.16.0",
     date: "2026-07-14",
     title: "Battlefield zones ve area effects",

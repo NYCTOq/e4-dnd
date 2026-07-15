@@ -1,0 +1,25 @@
+E4 D&D v1.19.0 - Ruleset Foundation V1
+
+Yeni:
+- src/core/rulesets/rulesetRegistry.ts
+- src/core/rulesets/rulesetMigration.ts
+- src/core/rulesets/rulesetMigration.test.ts
+- src/core/rulesets/useSelectedRuleset.ts
+- src/features/rulesets/RulesetCenterPage.tsx
+- public/data/dnd_2024/*.json
+
+Güncellenen ana dosyalar:
+- src/core/rulesets/rulesetLoader.ts
+- src/core/storage/characterStorage.ts
+- src/features/builder/Builder.tsx
+- src/features/characters/CharacterEditor.tsx
+- src/features/legacy/LegacyApp.tsx
+- src/features/legacy/AppRoutes.tsx
+- src/features/settings/Settings.tsx
+- src/shared/settings/appSettings.ts
+- src/shared/navigation/navItems.ts
+- src/shared/release/releaseNotes.ts
+- src/App.css
+- package.json / package-lock.json
+
+Not: D&D 2024 veri klasörleri bu sürümde altyapı olarak eklenmiştir. Tam class, species, background, feat, spell ve item verileri sonraki paketlerde doldurulacaktır.

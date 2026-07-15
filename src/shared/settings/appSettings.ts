@@ -3,6 +3,7 @@ export type UiDensity = "comfortable" | "compact";
 export type MotionPreference = "system" | "full" | "reduced";
 export type FontScale = "small" | "normal" | "large";
 export type CampaignToolProfile = "simple" | "balanced" | "full";
+import type { RulesetId } from "../../core/character/character.types";
 
 export type AppSettings = {
   accentTheme: AccentTheme;
@@ -11,6 +12,7 @@ export type AppSettings = {
   fontScale: FontScale;
   startRoute: string;
   campaignToolProfile: CampaignToolProfile;
+  defaultRuleset: RulesetId;
 };
 
 export const APP_SETTINGS_STORAGE_KEY = "e4_dnd_app_settings_v1";
@@ -22,6 +24,7 @@ export const DEFAULT_APP_SETTINGS: AppSettings = {
   fontScale: "normal",
   startRoute: "/",
   campaignToolProfile: "simple",
+  defaultRuleset: "dnd_2014",
 };
 
 export const START_ROUTE_OPTIONS = [
@@ -65,5 +68,8 @@ export function sanitizeAppSettings(value: unknown): AppSettings {
     )
       ? (candidate.campaignToolProfile as CampaignToolProfile)
       : DEFAULT_APP_SETTINGS.campaignToolProfile,
+    defaultRuleset: ["dnd_2014", "dnd_2024", "homebrew"].includes(candidate.defaultRuleset ?? "")
+      ? (candidate.defaultRuleset as RulesetId)
+      : DEFAULT_APP_SETTINGS.defaultRuleset,
   };
 }

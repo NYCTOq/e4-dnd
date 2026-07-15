@@ -73,6 +73,9 @@ const Library = lazy(() =>
 const Settings = lazy(() =>
   import("../settings/Settings").then((module) => ({ default: module.Settings })),
 );
+const RulesetCenterPage = lazy(() =>
+  import("../rulesets/RulesetCenterPage").then((module) => ({ default: module.RulesetCenterPage })),
+);
 const ReleaseHistory = lazy(() =>
   import("../updates/ReleaseHistory").then((module) => ({ default: module.ReleaseHistory })),
 );
@@ -106,6 +109,12 @@ const LootTrackerPage = lazy(() =>
 const CombatTrackerPage = lazy(() =>
   import("../combat-tracker/CombatTrackerPage").then((module) => ({ default: module.CombatTrackerPage })),
 );
+const RestCenterPage = lazy(() =>
+  import("../rest/RestCenterPage").then((module) => ({ default: module.RestCenterPage })),
+);
+const CampaignCalendarPage = lazy(() =>
+  import("../downtime/CampaignCalendarPage").then((module) => ({ default: module.CampaignCalendarPage })),
+);
 
 import type { BackupImportOptions, FullBackupData } from "../backup/fullBackup";
 
@@ -120,6 +129,7 @@ type AppRoutesProps = {
   rulesetError: string | null;
   onCreateCharacter: (draft: CharacterDraft) => void;
   onUpdateCharacter: (character: Character) => void;
+  onReplaceCharacters: (characters: Character[]) => void;
   onDeleteCharacter: (id: string) => boolean;
   onDuplicateCharacter: (id: string) => Character | null;
   onImportCharacters: (characters: Character[]) => void;
@@ -152,6 +162,7 @@ export function AppRoutes({
   rulesetError,
   onCreateCharacter,
   onUpdateCharacter,
+  onReplaceCharacters,
   onDeleteCharacter,
   onDuplicateCharacter,
   onImportCharacters,
@@ -290,6 +301,9 @@ export function AppRoutes({
         element={<CombatTrackerPage campaigns={campaigns} characters={characters} monsters={effectiveRulesetData?.monsters ?? []} />}
       />
 
+      <Route path="/rest" element={<RestCenterPage characters={characters} onReplaceCharacters={onReplaceCharacters} />} />
+      <Route path="/calendar" element={<CampaignCalendarPage campaigns={campaigns} characters={characters} />} />
+
       <Route
         path="/spellbook"
         element={
@@ -376,6 +390,7 @@ export function AppRoutes({
         }
       />
 
+      <Route path="/rulesets" element={<RulesetCenterPage />} />
       <Route path="/settings" element={<Settings />} />
 
       <Route path="/updates" element={<ReleaseHistory />} />

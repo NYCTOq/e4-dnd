@@ -4,8 +4,10 @@ import type {
   CharacterHitDiePool,
   CharacterInventoryItem,
   CharacterSpellSlot,
+  CharacterResource,
 } from "../character/character.types";
 import { readJsonSafely, writeJsonSafely } from "./safeStorage";
+import { normalizeRulesetId } from "../rulesets/rulesetMigration";
 
 const STORAGE_KEY = "e4_dnd_characters_v1";
 
@@ -134,6 +136,20 @@ function hydrateHitDice(character: Character): CharacterHitDiePool[] {
   ];
 }
 
+
+function hydrateResources(character: Character): CharacterResource[] {
+  if (!Array.isArray(character.resources)) return [];
+  return character.resources
+    .filter((resource) => resource && typeof resource.id === "string" && typeof resource.name === "string")
+    .map((resource) => ({
+      id: resource.id,
+      name: resource.name.trim() || "Adsız kaynak",
+      max: clampNumber(resource.max, 1, 999, 1),
+      used: clampNumber(resource.used, 0, clampNumber(resource.max, 1, 999, 1), 0),
+      recovery: resource.recovery === "short" || resource.recovery === "long" ? resource.recovery : "manual",
+    }));
+}
+
 function hydrateConditionDurations(character: Character): CharacterConditionDurations {
   const durations = character.conditionDurations ?? {};
   const activeConditions = new Set(character.conditions ?? []);
@@ -154,6 +170,7 @@ function hydrateCharacter(character: Character): Character {
 
   return {
     ...character,
+    ruleset: normalizeRulesetId(character.ruleset),
     knownSpellIds: character.knownSpellIds ?? [],
     preparedSpellIds: character.preparedSpellIds ?? [],
     spellSlots: hydrateSpellSlots(character),
@@ -176,6 +193,7 @@ function hydrateCharacter(character: Character): Character {
       failures: clampNumber(character.deathSaves?.failures, 0, 3, 0),
     },
     hitDice: hydrateHitDice(character),
+    resources: hydrateResources(character),
     exhaustion: clampNumber(character.exhaustion, 0, 6, 0),
     conditionDurations: hydrateConditionDurations(character),
   };

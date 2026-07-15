@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { PageShell } from "../../shared/layout/PageShell";
+import { RULESET_DEFINITIONS } from "../../core/rulesets/rulesetRegistry";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import {
   START_ROUTE_OPTIONS,
@@ -194,6 +195,29 @@ export function Settings() {
             <button type="button" onClick={() => navigate(settings.startRoute)}>
               Şimdi aç
             </button>
+          </div>
+        </section>
+
+        <section className="settings-card settings-card-wide">
+          <div className="settings-card-head">
+            <div>
+              <span className="mini-label">Karakter kuralları</span>
+              <h2>Varsayılan ruleset</h2>
+            </div>
+          </div>
+          <p>Yeni veri ekranları bu edition ile açılır. Mevcut karakterlerin ruleset bilgisi değişmez.</p>
+          <div className="settings-profile-grid">
+            {RULESET_DEFINITIONS.map((definition) => (
+              <button
+                key={definition.id}
+                type="button"
+                className={settings.defaultRuleset === definition.id ? "settings-choice settings-choice-text active" : "settings-choice settings-choice-text"}
+                onClick={() => updateSettings({ defaultRuleset: definition.id })}
+              >
+                <b>{definition.name}</b>
+                <small>{definition.editionLabel}</small>
+              </button>
+            ))}
           </div>
         </section>
 

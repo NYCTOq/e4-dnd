@@ -2,6 +2,9 @@ import { useMemo, useState } from "react";
 import { AutosaveStatus } from "../../shared/forms/AutosaveStatus";
 import { useAutosavedDraft } from "../../shared/state/useAutosavedDraft";
 import type { RulesetData, DndSpellData } from "../../core/rulesets/ruleset.types";
+import { getRulesetDefinition } from "../../core/rulesets/rulesetRegistry";
+import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
+import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
@@ -18,6 +21,8 @@ export function Builder({
   isRulesetLoading: boolean;
   rulesetError: string | null;
 }) {
+  const { settings } = useAppSettings();
+  const initialDraft = useMemo(() => ({ ...emptyDraft, ruleset: settings.defaultRuleset }), [settings.defaultRuleset]);
   const {
     value: draft,
     setValue: setDraft,
@@ -26,7 +31,7 @@ export function Builder({
     restoredAt,
   } = useAutosavedDraft<CharacterDraft>(
     "e4_dnd_draft_character_builder_v1",
-    emptyDraft,
+    initialDraft,
     {
       isMeaningful: (value) =>
         Boolean(
@@ -41,6 +46,11 @@ export function Builder({
     },
   );
   const [activeStepIndex, setActiveStepIndex] = useState(0);
+  const selectedRuleset = useSelectedRuleset(draft.ruleset, rulesetData);
+  const activeRulesetData = selectedRuleset.data;
+  const activeRulesetLoading = selectedRuleset.loading || (draft.ruleset === rulesetData?.id && isRulesetLoading);
+  const activeRulesetError = selectedRuleset.error ?? (draft.ruleset === rulesetData?.id ? rulesetError : null);
+  const rulesetDefinition = getRulesetDefinition(draft.ruleset);
 
   const builderSteps = [
     { id: "basic", title: "Basic", description: "İsim, oyuncu ve temel kimlik." },
@@ -57,23 +67,23 @@ export function Builder({
   const isLastStep = activeStepIndex === builderSteps.length - 1;
 
   const selectedRace = useMemo(() => {
-    return rulesetData?.races.find((race) => race.name === draft.race) ?? null;
-  }, [rulesetData, draft.race]);
+    return activeRulesetData?.races.find((race) => race.name === draft.race) ?? null;
+  }, [activeRulesetData, draft.race]);
 
   const selectedClass = useMemo(() => {
     return (
-      rulesetData?.classes.find(
+      activeRulesetData?.classes.find(
         (classItem) => classItem.name === draft.className,
       ) ?? null
     );
-  }, [rulesetData, draft.className]);
+  }, [activeRulesetData, draft.className]);
 
   const knownSpells = useMemo(() => {
-    const spellMap = new Map((rulesetData?.spells ?? []).map((spell) => [spell.id, spell]));
+    const spellMap = new Map((activeRulesetData?.spells ?? []).map((spell) => [spell.id, spell]));
     return draft.knownSpellIds
       .map((spellId) => spellMap.get(spellId) ?? null)
       .filter((spell): spell is DndSpellData => Boolean(spell));
-  }, [rulesetData, draft.knownSpellIds]);
+  }, [activeRulesetData, draft.knownSpellIds]);
 
   const preparedSpells = useMemo(() => {
     const preparedSet = new Set(draft.preparedSpellIds);
@@ -81,15 +91,15 @@ export function Builder({
   }, [knownSpells, draft.preparedSpellIds]);
 
   const selectedInventoryItems = useMemo(() => {
-    return getCharacterInventoryItems(draft.inventory, rulesetData?.items);
-  }, [draft.inventory, rulesetData]);
+    return getCharacterInventoryItems(draft.inventory, activeRulesetData?.items);
+  }, [draft.inventory, activeRulesetData]);
 
   const inventoryWeight = useMemo(() => {
-    return getInventoryWeight(draft.inventory, rulesetData?.items);
-  }, [draft.inventory, rulesetData]);
+    return getInventoryWeight(draft.inventory, activeRulesetData?.items);
+  }, [draft.inventory, activeRulesetData]);
 
-  const effectiveArmorClass = calculateEffectiveArmorClass(draft, rulesetData?.items);
-  const suggestedArmorClass = calculateSuggestedArmorClass(draft, rulesetData?.items);
+  const effectiveArmorClass = calculateEffectiveArmorClass(draft, activeRulesetData?.items);
+  const suggestedArmorClass = calculateSuggestedArmorClass(draft, activeRulesetData?.items);
 
   function updateDraft<K extends keyof CharacterDraft>(
     key: K,
@@ -168,9 +178,9 @@ export function Builder({
 
     onCreateCharacter({
       ...draft,
-      armorClass: calculateEffectiveArmorClass(draft, rulesetData?.items),
+      armorClass: calculateEffectiveArmorClass(draft, activeRulesetData?.items),
     });
-    clearDraft(emptyDraft);
+    clearDraft(initialDraft);
     setActiveStepIndex(0);
   }
 
@@ -213,7 +223,7 @@ export function Builder({
             onClear={() => {
               const confirmed = confirm("Karakter taslağı temizlensin mi?");
               if (confirmed) {
-                clearDraft(emptyDraft);
+                clearDraft(initialDraft);
                 setActiveStepIndex(0);
               }
             }}
@@ -246,18 +256,27 @@ export function Builder({
                   Ruleset
                   <select
                     value={draft.ruleset}
-                    onChange={(event) =>
-                      updateDraft(
-                        "ruleset",
-                        event.target.value as CharacterDraft["ruleset"],
-                      )
-                    }
+                    onChange={(event) => {
+                      const nextRuleset = event.target.value as CharacterDraft["ruleset"];
+                      setDraft((current) => ({
+                        ...current,
+                        ruleset: nextRuleset,
+                        race: "", className: "", subclass: "", background: "",
+                        knownSpellIds: [], preparedSpellIds: [], spellSlots: [],
+                        inventory: [], equippedArmorId: null, equippedShieldId: null, equippedWeaponIds: [],
+                      }));
+                    }}
                   >
                     <option value="dnd_2014">D&D 2014</option>
                     <option value="dnd_2024">D&D 2024</option>
                     <option value="homebrew">Homebrew</option>
                   </select>
                 </label>
+              </div>
+              <div className="ruleset-foundation-card">
+                <div><span className="mini-label">{rulesetDefinition.editionLabel}</span><strong>{rulesetDefinition.name}</strong></div>
+                <span className={`ruleset-status ${rulesetDefinition.readiness}`}>{rulesetDefinition.readiness === "ready" ? "Veri hazır" : rulesetDefinition.readiness === "foundation" ? "Altyapı hazır, veri genişletiliyor" : "Manuel içerik"}</span>
+                <ul>{rulesetDefinition.notes.map((note) => <li key={note}>{note}</li>)}</ul>
               </div>
             </section>
           ) : null}
@@ -282,17 +301,17 @@ export function Builder({
 
                 <label>
                   Race
-                  {draft.ruleset === "dnd_2014" ? (
+                  {draft.ruleset !== "homebrew" ? (
                     <select
                       value={draft.race}
-                      disabled={isRulesetLoading || !!rulesetError || !rulesetData}
+                      disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData}
                       onChange={(event) => updateDraft("race", event.target.value)}
                     >
                       <option value="">
-                        {isRulesetLoading ? "Race data yükleniyor..." : "Race seç"}
+                        {activeRulesetLoading ? `${rulesetDefinition.raceTerm} data yükleniyor...` : `${rulesetDefinition.raceTerm} seç`}
                       </option>
 
-                      {rulesetData?.races.map((race) => (
+                      {activeRulesetData?.races.map((race) => (
                         <option key={race.id} value={race.name}>
                           {race.name}
                         </option>
@@ -309,21 +328,21 @@ export function Builder({
 
                 <label>
                   Class
-                  {draft.ruleset === "dnd_2014" ? (
+                  {draft.ruleset !== "homebrew" ? (
                     <select
                       value={draft.className}
-                      disabled={isRulesetLoading || !!rulesetError || !rulesetData}
+                      disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData}
                       onChange={(event) =>
                         updateDraft("className", event.target.value)
                       }
                     >
                       <option value="">
-                        {isRulesetLoading
+                        {activeRulesetLoading
                           ? "Class data yükleniyor..."
                           : "Class seç"}
                       </option>
 
-                      {rulesetData?.classes.map((classItem) => (
+                      {activeRulesetData?.classes.map((classItem) => (
                         <option key={classItem.id} value={classItem.name}>
                           {classItem.name}
                         </option>
@@ -359,10 +378,10 @@ export function Builder({
                 </label>
               </div>
 
-              {rulesetError ? (
+              {activeRulesetError ? (
                 <div className="empty-panel">
                   <h2>Ruleset data yüklenemedi</h2>
-                  <p>{rulesetError}</p>
+                  <p>{activeRulesetError}</p>
                 </div>
               ) : null}
 

@@ -58,3 +58,11 @@
 @import "./styles/36-loot-tracker.css";
 
 @import "./styles/37-combat-tracker.css";
+
+@import "./styles/38-rest-automation.css";
+
+@import "./styles/39-campaign-calendar.css";
+
+
+/* Ruleset Foundation V1 */
+.ruleset-foundation-card,.ruleset-center-summary,.ruleset-card,.ruleset-roadmap-panel{border:1px solid var(--border-color);background:var(--panel-bg);border-radius:18px;padding:18px}.ruleset-foundation-card{margin-top:16px;display:grid;gap:12px}.ruleset-foundation-card>div,.ruleset-center-summary,.ruleset-card-head{display:flex;align-items:center;justify-content:space-between;gap:16px}.ruleset-foundation-card strong{display:block;margin-top:4px}.ruleset-status{display:inline-flex;align-items:center;width:max-content;padding:6px 10px;border-radius:999px;font-size:.78rem;font-weight:800;background:rgba(255,255,255,.08)}.ruleset-status.ready{color:#8ef0ba}.ruleset-status.foundation{color:#ffd27c}.ruleset-status.custom{color:#c8b5ff}.ruleset-center-summary{margin-bottom:18px}.ruleset-center-summary>div{max-width:720px}.ruleset-center-summary strong{display:block;font-size:1.4rem;margin:6px 0}.ruleset-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.ruleset-card{display:flex;flex-direction:column;gap:16px}.ruleset-card.active{outline:2px solid var(--accent-color)}.ruleset-card h2{margin:4px 0 0}.ruleset-facts{display:grid;gap:8px;margin:0}.ruleset-facts div{display:flex;justify-content:space-between;gap:12px;padding-bottom:8px;border-bottom:1px solid var(--border-color)}.ruleset-facts dt{opacity:.7}.ruleset-facts dd{margin:0;text-align:right;font-weight:700}.ruleset-note-list{margin:0;padding-left:20px;display:grid;gap:6px}.ruleset-roadmap-panel{margin-top:18px}.ruleset-roadmap-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.ruleset-roadmap-grid span{padding:12px;border-radius:12px;background:rgba(255,255,255,.05)}@media(max-width:900px){.ruleset-card-grid,.ruleset-roadmap-grid{grid-template-columns:1fr}.ruleset-center-summary,.ruleset-foundation-card>div,.ruleset-card-head{align-items:flex-start;flex-direction:column}}

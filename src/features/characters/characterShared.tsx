@@ -362,6 +362,7 @@ export function createCharacterFromDraft(draft: CharacterDraft): Character {
       draft.className,
     ),
     hitDice: normalizeHitDice(draft.hitDice, draft.level, draft.className),
+    resources: draft.resources ?? [],
     deathSaves: resetDeathSaves(),
     exhaustion: 0,
     conditionDurations: {},
