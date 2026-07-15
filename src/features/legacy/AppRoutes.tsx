@@ -79,6 +79,9 @@ const RulesetCenterPage = lazy(() =>
 const ClassCatalogPage = lazy(() =>
   import("../classes/ClassCatalogPage").then((module) => ({ default: module.ClassCatalogPage })),
 );
+const OriginCatalogPage = lazy(() =>
+  import("../origins/OriginCatalogPage").then((module) => ({ default: module.OriginCatalogPage })),
+);
 const ReleaseHistory = lazy(() =>
   import("../updates/ReleaseHistory").then((module) => ({ default: module.ReleaseHistory })),
 );
@@ -395,6 +398,7 @@ export function AppRoutes({
 
       <Route path="/rulesets" element={<RulesetCenterPage />} />
       <Route path="/classes" element={<ClassCatalogPage rulesetData={effectiveRulesetData} />} />
+      <Route path="/origins" element={<OriginCatalogPage rulesetData={effectiveRulesetData} />} />
       <Route path="/settings" element={<Settings />} />
 
       <Route path="/updates" element={<ReleaseHistory />} />

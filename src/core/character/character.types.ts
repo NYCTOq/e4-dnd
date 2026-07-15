@@ -60,9 +60,12 @@ export interface Character {
   ruleset: RulesetId;
 
   race: string;
+  subrace?: string;
   className: string;
   subclass: string;
   background: string;
+  originAbilityPrimary?: AbilityKey;
+  originAbilitySecondary?: AbilityKey;
   level: number;
 
   abilities: AbilityScores;
@@ -102,9 +105,12 @@ export interface CharacterDraft {
   ruleset: RulesetId;
 
   race: string;
+  subrace?: string;
   className: string;
   subclass: string;
   background: string;
+  originAbilityPrimary?: AbilityKey;
+  originAbilitySecondary?: AbilityKey;
   level: number;
 
   abilities: AbilityScores;

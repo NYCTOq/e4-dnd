@@ -8,9 +8,12 @@ export const emptyDraft: CharacterDraft = {
   playerName: "",
   ruleset: "dnd_2014",
   race: "",
+  subrace: "",
   className: "",
   subclass: "",
   background: "",
+  originAbilityPrimary: undefined,
+  originAbilitySecondary: undefined,
   level: 1,
   abilities: {
     str: 10,

@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { AutosaveStatus } from "../../shared/forms/AutosaveStatus";
 import { useAutosavedDraft } from "../../shared/state/useAutosavedDraft";
 import type { RulesetData, DndSpellData } from "../../core/rulesets/ruleset.types";
+import { applyAbilityBonuses, getOriginAbilityBonuses } from "../../core/rulesets/originRules";
 import { getRulesetDefinition } from "../../core/rulesets/rulesetRegistry";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
@@ -77,6 +78,11 @@ export function Builder({
       ) ?? null
     );
   }, [activeRulesetData, draft.className]);
+
+  const selectedSubrace = useMemo(() => selectedRace?.subraces?.find((item) => item.name === draft.subrace) ?? null, [selectedRace, draft.subrace]);
+  const selectedBackground = useMemo(() => activeRulesetData?.backgrounds.find((item) => item.name === draft.background) ?? null, [activeRulesetData, draft.background]);
+  const originBonuses = useMemo(() => getOriginAbilityBonuses(draft.ruleset, selectedRace, selectedSubrace, selectedBackground, draft.originAbilityPrimary, draft.originAbilitySecondary), [draft.ruleset, draft.originAbilityPrimary, draft.originAbilitySecondary, selectedRace, selectedSubrace, selectedBackground]);
+  const finalAbilities = useMemo(() => applyAbilityBonuses(draft.abilities, originBonuses), [draft.abilities, originBonuses]);
 
   const knownSpells = useMemo(() => {
     const spellMap = new Map((activeRulesetData?.spells ?? []).map((spell) => [spell.id, spell]));
@@ -178,15 +184,16 @@ export function Builder({
 
     onCreateCharacter({
       ...draft,
-      armorClass: calculateEffectiveArmorClass(draft, activeRulesetData?.items),
+      abilities: finalAbilities,
+      armorClass: calculateEffectiveArmorClass({ ...draft, abilities: finalAbilities }, activeRulesetData?.items),
     });
     clearDraft(initialDraft);
     setActiveStepIndex(0);
   }
 
   const previewCharacter = useMemo(
-    () => createCharacterFromDraft(draft),
-    [draft],
+    () => createCharacterFromDraft({ ...draft, abilities: finalAbilities }),
+    [draft, finalAbilities],
   );
 
   return (
@@ -261,7 +268,7 @@ export function Builder({
                       setDraft((current) => ({
                         ...current,
                         ruleset: nextRuleset,
-                        race: "", className: "", subclass: "", background: "",
+                        race: "", subrace: "", className: "", subclass: "", background: "", originAbilityPrimary: undefined, originAbilitySecondary: undefined,
                         knownSpellIds: [], preparedSpellIds: [], spellSlots: [],
                         inventory: [], equippedArmorId: null, equippedShieldId: null, equippedWeaponIds: [],
                       }));
@@ -283,7 +290,7 @@ export function Builder({
 
           {activeStep.id === "class" ? (
             <section className="form-panel">
-              <h2>Race & Class</h2>
+              <h2>{rulesetDefinition.raceTerm}, Background & Class</h2>
 
               <div className="form-grid">
                 <label>
@@ -300,12 +307,12 @@ export function Builder({
                 </label>
 
                 <label>
-                  Race
+                  {rulesetDefinition.raceTerm}
                   {draft.ruleset !== "homebrew" ? (
                     <select
                       value={draft.race}
                       disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData}
-                      onChange={(event) => updateDraft("race", event.target.value)}
+                      onChange={(event) => setDraft((current) => ({ ...current, race: event.target.value, subrace: "" }))}
                     >
                       <option value="">
                         {activeRulesetLoading ? `${rulesetDefinition.raceTerm} data yükleniyor...` : `${rulesetDefinition.raceTerm} seç`}
@@ -325,6 +332,16 @@ export function Builder({
                     />
                   )}
                 </label>
+
+                {selectedRace?.subraces?.length ? (
+                  <label>
+                    Subrace
+                    <select value={draft.subrace ?? ""} onChange={(event) => updateDraft("subrace", event.target.value)}>
+                      <option value="">Subrace seç</option>
+                      {selectedRace.subraces.map((item) => <option key={item.id} value={item.name}>{item.name}</option>)}
+                    </select>
+                  </label>
+                ) : null}
 
                 <label>
                   Class
@@ -370,12 +387,32 @@ export function Builder({
 
                 <label>
                   Background
-                  <input
-                    value={draft.background}
-                    onChange={(event) => updateDraft("background", event.target.value)}
-                    placeholder="Acolyte, Sailor..."
-                  />
+                  {draft.ruleset !== "homebrew" ? (
+                    <select value={draft.background} disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData} onChange={(event) => setDraft((current) => ({ ...current, background: event.target.value, originAbilityPrimary: undefined, originAbilitySecondary: undefined }))}>
+                      <option value="">Background seç</option>
+                      {activeRulesetData?.backgrounds.map((item) => <option key={item.id} value={item.name}>{item.name}</option>)}
+                    </select>
+                  ) : (
+                    <input value={draft.background} onChange={(event) => updateDraft("background", event.target.value)} placeholder="Custom background..." />
+                  )}
                 </label>
+
+                {draft.ruleset === "dnd_2024" && selectedBackground ? (
+                  <>
+                    <label>+2 Ability
+                      <select value={draft.originAbilityPrimary ?? ""} onChange={(event) => updateDraft("originAbilityPrimary", event.target.value as CharacterDraft["originAbilityPrimary"])}>
+                        <option value="">Seç</option>
+                        {selectedBackground.abilityOptions?.map((ability) => <option key={ability} value={ability}>{ability.toUpperCase()}</option>)}
+                      </select>
+                    </label>
+                    <label>+1 Ability
+                      <select value={draft.originAbilitySecondary ?? ""} onChange={(event) => updateDraft("originAbilitySecondary", event.target.value as CharacterDraft["originAbilitySecondary"])}>
+                        <option value="">Seç</option>
+                        {selectedBackground.abilityOptions?.filter((ability) => ability !== draft.originAbilityPrimary).map((ability) => <option key={ability} value={ability}>{ability.toUpperCase()}</option>)}
+                      </select>
+                    </label>
+                  </>
+                ) : null}
               </div>
 
               {activeRulesetError ? (
@@ -389,21 +426,29 @@ export function Builder({
                 <div className="builder-choice-grid">
                   {selectedRace ? (
                     <article className="builder-choice-card">
-                      <span className="mini-label">Race</span>
-                      <h3>{selectedRace.name}</h3>
+                      <span className="mini-label">{rulesetDefinition.raceTerm}</span>
+                      <h3>{selectedRace.name}{selectedSubrace ? ` · ${selectedSubrace.name}` : ""}</h3>
                       <p>{selectedRace.description}</p>
                       <div className="preview-stats">
                         <span>Speed {selectedRace.speed} ft</span>
                         <span>Size {selectedRace.size}</span>
                         <span>
-                          Bonus {" "}
-                          {Object.entries(selectedRace.abilityBonuses)
-                            .map(
-                              ([ability, bonus]) =>
-                                `${ability.toUpperCase()} +${bonus}`,
-                            )
-                            .join(", ")}
+                          Ability Bonus {" "}
+                          {Object.entries(originBonuses).length ? Object.entries(originBonuses).map(([ability, bonus]) => `${ability.toUpperCase()} +${bonus}`).join(", ") : draft.ruleset === "dnd_2024" ? "Background seçimine bağlı" : "Yok"}
                         </span>
+                      </div>
+                    </article>
+                  ) : null}
+
+                  {selectedBackground ? (
+                    <article className="builder-choice-card">
+                      <span className="mini-label">Background</span>
+                      <h3>{selectedBackground.name}</h3>
+                      <p>{selectedBackground.description}</p>
+                      <div className="preview-stats">
+                        <span>Skills {selectedBackground.skillProficiencies.join(", ")}</span>
+                        {selectedBackground.feature ? <span>Feature {selectedBackground.feature}</span> : null}
+                        {selectedBackground.originFeat ? <span>Origin Feat {selectedBackground.originFeat}</span> : null}
                       </div>
                     </article>
                   ) : null}
@@ -468,7 +513,8 @@ export function Builder({
                       }
                     />
 
-                    <strong>{formatModifier(getAbilityModifier(score))}</strong>
+                    <strong>{formatModifier(getAbilityModifier(finalAbilities[ability as keyof CharacterDraft["abilities"]]))}</strong>
+                    {originBonuses[ability as keyof CharacterDraft["abilities"]] ? <small>{score} + {originBonuses[ability as keyof CharacterDraft["abilities"]]} = {finalAbilities[ability as keyof CharacterDraft["abilities"]]}</small> : null}
                   </label>
                 ))}
               </div>

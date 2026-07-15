@@ -15,6 +15,20 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.21.0",
+    date: "2026-07-15",
+    title: "Races, species ve backgrounds",
+    summary: "2014 race/subrace bonusları ile 2024 species, origin background, origin feat ve ability bonus seçimleri Character Builder'a bağlandı.",
+    changes: [
+      { text: "2014 için dokuz temel race ve subrace veri setleri", category: "Özellik" },
+      { text: "2024 için on species veri seti", category: "Özellik" },
+      { text: "2014 background feature ve proficiency paketleri", category: "Özellik" },
+      { text: "2024 origin background, origin feat ve +2/+1 ability seçimi", category: "Özellik" },
+      { text: "Yeni Species & Backgrounds katalog ekranı", category: "Özellik" },
+      { text: "Origin ability bonus helperları için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.20.0",
     date: "2026-07-15",
     title: "Classes ve level tabloları",

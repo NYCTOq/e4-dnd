@@ -1,0 +1,184 @@
+[
+  {
+    "id": "acolyte",
+    "name": "Acolyte",
+    "description": "Acolyte background package for 2014 characters.",
+    "skillProficiencies": [
+      "Insight",
+      "Religion"
+    ],
+    "toolProficiencies": [],
+    "languages": [],
+    "equipment": [],
+    "feature": "Shelter of the Faithful",
+    "abilityBonusMode": "2014-none"
+  },
+  {
+    "id": "charlatan",
+    "name": "Charlatan",
+    "description": "Charlatan background package for 2014 characters.",
+    "skillProficiencies": [
+      "Deception",
+      "Sleight of Hand"
+    ],
+    "toolProficiencies": [],
+    "languages": [],
+    "equipment": [],
+    "feature": "False Identity",
+    "abilityBonusMode": "2014-none"
+  },
+  {
+    "id": "criminal",
+    "name": "Criminal",
+    "description": "Criminal background package for 2014 characters.",
+    "skillProficiencies": [
+      "Deception",
+      "Stealth"
+    ],
+    "toolProficiencies": [],
+    "languages": [],
+    "equipment": [],
+    "feature": "Criminal Contact",
+    "abilityBonusMode": "2014-none"
+  },
+  {
+    "id": "entertainer",
+    "name": "Entertainer",
+    "description": "Entertainer background package for 2014 characters.",
+    "skillProficiencies": [
+      "Acrobatics",
+      "Performance"
+    ],
+    "toolProficiencies": [],
+    "languages": [],
+    "equipment": [],
+    "feature": "By Popular Demand",
+    "abilityBonusMode": "2014-none"
+  },
+  {
+    "id": "folk-hero",
+    "name": "Folk Hero",
+    "description": "Folk Hero background package for 2014 characters.",
+    "skillProficiencies": [
+      "Animal Handling",
+      "Survival"
+    ],
+    "toolProficiencies": [],
+    "languages": [],
+    "equipment": [],
+    "feature": "Rustic Hospitality",
+    "abilityBonusMode": "2014-none"
+  },
+  {
+    "id": "guild-artisan",
+    "name": "Guild Artisan",
+    "description": "Guild Artisan background package for 2014 characters.",
+    "skillProficiencies": [
+      "Insight",
+      "Persuasion"
+    ],
+    "toolProficiencies": [],
+    "languages": [],
+    "equipment": [],
+    "feature": "Guild Membership",
+    "abilityBonusMode": "2014-none"
+  },
+  {
+    "id": "hermit",
+    "name": "Hermit",
+    "description": "Hermit background package for 2014 characters.",
+    "skillProficiencies": [
+      "Medicine",
+      "Religion"
+    ],
+    "toolProficiencies": [],
+    "languages": [],
+    "equipment": [],
+    "feature": "Discovery",
+    "abilityBonusMode": "2014-none"
+  },
+  {
+    "id": "noble",
+    "name": "Noble",
+    "description": "Noble background package for 2014 characters.",
+    "skillProficiencies": [
+      "History",
+      "Persuasion"
+    ],
+    "toolProficiencies": [],
+    "languages": [],
+    "equipment": [],
+    "feature": "Position of Privilege",
+    "abilityBonusMode": "2014-none"
+  },
+  {
+    "id": "outlander",
+    "name": "Outlander",
+    "description": "Outlander background package for 2014 characters.",
+    "skillProficiencies": [
+      "Athletics",
+      "Survival"
+    ],
+    "toolProficiencies": [],
+    "languages": [],
+    "equipment": [],
+    "feature": "Wanderer",
+    "abilityBonusMode": "2014-none"
+  },
+  {
+    "id": "sage",
+    "name": "Sage",
+    "description": "Sage background package for 2014 characters.",
+    "skillProficiencies": [
+      "Arcana",
+      "History"
+    ],
+    "toolProficiencies": [],
+    "languages": [],
+    "equipment": [],
+    "feature": "Researcher",
+    "abilityBonusMode": "2014-none"
+  },
+  {
+    "id": "sailor",
+    "name": "Sailor",
+    "description": "Sailor background package for 2014 characters.",
+    "skillProficiencies": [
+      "Athletics",
+      "Perception"
+    ],
+    "toolProficiencies": [],
+    "languages": [],
+    "equipment": [],
+    "feature": "Ship's Passage",
+    "abilityBonusMode": "2014-none"
+  },
+  {
+    "id": "soldier",
+    "name": "Soldier",
+    "description": "Soldier background package for 2014 characters.",
+    "skillProficiencies": [
+      "Athletics",
+      "Intimidation"
+    ],
+    "toolProficiencies": [],
+    "languages": [],
+    "equipment": [],
+    "feature": "Military Rank",
+    "abilityBonusMode": "2014-none"
+  },
+  {
+    "id": "urchin",
+    "name": "Urchin",
+    "description": "Urchin background package for 2014 characters.",
+    "skillProficiencies": [
+      "Sleight of Hand",
+      "Stealth"
+    ],
+    "toolProficiencies": [],
+    "languages": [],
+    "equipment": [],
+    "feature": "City Secrets",
+    "abilityBonusMode": "2014-none"
+  }
+]

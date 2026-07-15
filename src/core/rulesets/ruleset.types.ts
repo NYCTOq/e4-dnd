@@ -32,6 +32,14 @@ export interface DndClassData {
   levels: ClassLevelData[];
 }
 
+export interface DndSubraceData {
+  id: string;
+  name: string;
+  abilityBonuses?: Partial<Record<AbilityKey, number>>;
+  traits: string[];
+  description: string;
+}
+
 export interface DndRaceData {
   id: string;
   name: string;
@@ -40,6 +48,24 @@ export interface DndRaceData {
   abilityBonuses: Partial<Record<AbilityKey, number>>;
   traits: string[];
   description: string;
+  creatureType?: string;
+  languages?: string[];
+  darkvision?: number;
+  subraces?: DndSubraceData[];
+}
+
+export interface DndBackgroundData {
+  id: string;
+  name: string;
+  description: string;
+  skillProficiencies: string[];
+  toolProficiencies?: string[];
+  languages?: string[];
+  equipment?: string[];
+  feature?: string;
+  abilityOptions?: AbilityKey[];
+  abilityBonusMode?: "2014-none" | "2024-plus2-plus1" | "2024-three-ones";
+  originFeat?: string;
 }
 
 export interface DndSpellData {
@@ -117,6 +143,7 @@ export interface RulesetData {
   name: string;
   classes: DndClassData[];
   races: DndRaceData[];
+  backgrounds: DndBackgroundData[];
   spells: DndSpellData[];
   items: DndItemData[];
   monsters: DndMonsterData[];

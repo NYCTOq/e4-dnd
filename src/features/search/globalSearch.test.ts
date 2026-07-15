@@ -8,6 +8,7 @@ const rulesetData: RulesetData = {
   name: "D&D 2014",
   classes: [],
   races: [],
+  backgrounds: [],
   spells: [
     {
       id: "fireball",

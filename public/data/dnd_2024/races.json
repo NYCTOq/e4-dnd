@@ -1,1 +1,148 @@
-[]
+[
+  {
+    "id": "aasimar",
+    "name": "Aasimar",
+    "speed": 30,
+    "size": "Medium or Small",
+    "abilityBonuses": {},
+    "traits": [
+      "Celestial Resistance",
+      "Darkvision",
+      "Healing Hands",
+      "Light Bearer",
+      "Celestial Revelation"
+    ],
+    "darkvision": 60,
+    "creatureType": "Humanoid",
+    "description": "Mortals carrying a spark of the Upper Planes."
+  },
+  {
+    "id": "dragonborn",
+    "name": "Dragonborn",
+    "speed": 30,
+    "size": "Medium",
+    "abilityBonuses": {},
+    "traits": [
+      "Draconic Ancestry",
+      "Breath Weapon",
+      "Damage Resistance",
+      "Darkvision",
+      "Draconic Flight"
+    ],
+    "darkvision": 60,
+    "description": "Draconic humanoids whose ancestry shapes breath and resistance."
+  },
+  {
+    "id": "dwarf",
+    "name": "Dwarf",
+    "speed": 30,
+    "size": "Medium",
+    "abilityBonuses": {},
+    "traits": [
+      "Darkvision",
+      "Dwarven Resilience",
+      "Dwarven Toughness",
+      "Stonecunning"
+    ],
+    "darkvision": 120,
+    "description": "Durable folk with poison resilience and supernatural stone sense."
+  },
+  {
+    "id": "elf",
+    "name": "Elf",
+    "speed": 30,
+    "size": "Medium",
+    "abilityBonuses": {},
+    "traits": [
+      "Darkvision",
+      "Elven Lineage",
+      "Fey Ancestry",
+      "Keen Senses",
+      "Trance"
+    ],
+    "darkvision": 60,
+    "description": "Fey-connected people whose lineage grants distinct magic."
+  },
+  {
+    "id": "gnome",
+    "name": "Gnome",
+    "speed": 30,
+    "size": "Small",
+    "abilityBonuses": {},
+    "traits": [
+      "Darkvision",
+      "Gnomish Cunning",
+      "Gnomish Lineage"
+    ],
+    "darkvision": 60,
+    "description": "Small, clever folk with magical lineages and mental resilience."
+  },
+  {
+    "id": "goliath",
+    "name": "Goliath",
+    "speed": 35,
+    "size": "Medium",
+    "abilityBonuses": {},
+    "traits": [
+      "Giant Ancestry",
+      "Large Form",
+      "Powerful Build"
+    ],
+    "description": "People touched by giant ancestry and remarkable physical power."
+  },
+  {
+    "id": "halfling",
+    "name": "Halfling",
+    "speed": 30,
+    "size": "Small",
+    "abilityBonuses": {},
+    "traits": [
+      "Brave",
+      "Halfling Nimbleness",
+      "Luck",
+      "Naturally Stealthy"
+    ],
+    "description": "Small and courageous people with probability-bending luck."
+  },
+  {
+    "id": "human",
+    "name": "Human",
+    "speed": 30,
+    "size": "Medium or Small",
+    "abilityBonuses": {},
+    "traits": [
+      "Resourceful",
+      "Skillful",
+      "Versatile"
+    ],
+    "description": "Adaptable people who gain extra skill and feat flexibility."
+  },
+  {
+    "id": "orc",
+    "name": "Orc",
+    "speed": 30,
+    "size": "Medium",
+    "abilityBonuses": {},
+    "traits": [
+      "Adrenaline Rush",
+      "Darkvision",
+      "Relentless Endurance"
+    ],
+    "darkvision": 120,
+    "description": "Powerful, relentless people with bursts of speed and endurance."
+  },
+  {
+    "id": "tiefling",
+    "name": "Tiefling",
+    "speed": 30,
+    "size": "Medium or Small",
+    "abilityBonuses": {},
+    "traits": [
+      "Darkvision",
+      "Fiendish Legacy",
+      "Otherworldly Presence"
+    ],
+    "darkvision": 60,
+    "description": "People with fiendish legacies that determine resistance and magic."
+  }
+]

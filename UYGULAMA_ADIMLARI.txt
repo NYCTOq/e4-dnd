@@ -1,16 +1,14 @@
-E4 D&D - GitHub Pages Ruleset Data Path Fix
+E4 D&D Races / Species + Backgrounds V1
 
-1) Bu klasörün içeriğini D:\Projects\e4_dnd içine çıkarın.
-2) Mevcut dosyanın üzerine yazın.
-3) PowerShell:
+1. Bu klasörün içeriğini D:\Projects\e4_dnd içine çıkarın.
+2. Mevcut dosyaların üzerine yazılmasına izin verin.
+3. PowerShell:
+   cd D:\Projects\e4_dnd
+   npm.cmd install
+   npm.cmd run check
+4. Kontrol geçerse:
+   git add -A
+   git commit -m "feat: add races species and backgrounds"
+   git push
 
-cd D:\Projects\e4_dnd
-npm.cmd run check
-git add -A
-git commit -m "fix: load ruleset data from vite base path"
-git push
-
-Düzeltme:
-- /data/... yerine import.meta.env.BASE_URL + data/... kullanılır.
-- Local geliştirmede /data/... çalışır.
-- GitHub Pages'te /e4-dnd/data/... çalışır.
+Not: public/data altındaki backgrounds.json dosyaları zorunludur. GitHub Pages veri yolları Vite BASE_URL ile uyumludur.

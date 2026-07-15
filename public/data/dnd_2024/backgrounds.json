@@ -1,0 +1,290 @@
+[
+  {
+    "id": "acolyte",
+    "name": "Acolyte",
+    "description": "Acolyte origin background for 2024 characters.",
+    "skillProficiencies": [
+      "Insight",
+      "Religion"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "int",
+      "wis",
+      "cha"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Magic Initiate (Cleric)"
+  },
+  {
+    "id": "artisan",
+    "name": "Artisan",
+    "description": "Artisan origin background for 2024 characters.",
+    "skillProficiencies": [
+      "Investigation",
+      "Persuasion"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "str",
+      "dex",
+      "int"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Crafter"
+  },
+  {
+    "id": "charlatan",
+    "name": "Charlatan",
+    "description": "Charlatan origin background for 2024 characters.",
+    "skillProficiencies": [
+      "Deception",
+      "Sleight of Hand"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "dex",
+      "con",
+      "cha"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Skilled"
+  },
+  {
+    "id": "criminal",
+    "name": "Criminal",
+    "description": "Criminal origin background for 2024 characters.",
+    "skillProficiencies": [
+      "Sleight of Hand",
+      "Stealth"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "dex",
+      "con",
+      "int"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Alert"
+  },
+  {
+    "id": "entertainer",
+    "name": "Entertainer",
+    "description": "Entertainer origin background for 2024 characters.",
+    "skillProficiencies": [
+      "Acrobatics",
+      "Performance"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "str",
+      "dex",
+      "cha"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Musician"
+  },
+  {
+    "id": "farmer",
+    "name": "Farmer",
+    "description": "Farmer origin background for 2024 characters.",
+    "skillProficiencies": [
+      "Animal Handling",
+      "Nature"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "str",
+      "con",
+      "wis"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Tough"
+  },
+  {
+    "id": "guard",
+    "name": "Guard",
+    "description": "Guard origin background for 2024 characters.",
+    "skillProficiencies": [
+      "Athletics",
+      "Perception"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "str",
+      "int",
+      "wis"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Alert"
+  },
+  {
+    "id": "guide",
+    "name": "Guide",
+    "description": "Guide origin background for 2024 characters.",
+    "skillProficiencies": [
+      "Stealth",
+      "Survival"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "dex",
+      "con",
+      "wis"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Magic Initiate (Druid)"
+  },
+  {
+    "id": "hermit",
+    "name": "Hermit",
+    "description": "Hermit origin background for 2024 characters.",
+    "skillProficiencies": [
+      "Medicine",
+      "Religion"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "con",
+      "wis",
+      "cha"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Healer"
+  },
+  {
+    "id": "merchant",
+    "name": "Merchant",
+    "description": "Merchant origin background for 2024 characters.",
+    "skillProficiencies": [
+      "Animal Handling",
+      "Persuasion"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "con",
+      "int",
+      "cha"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Lucky"
+  },
+  {
+    "id": "noble",
+    "name": "Noble",
+    "description": "Noble origin background for 2024 characters.",
+    "skillProficiencies": [
+      "History",
+      "Persuasion"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "str",
+      "int",
+      "cha"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Skilled"
+  },
+  {
+    "id": "sage",
+    "name": "Sage",
+    "description": "Sage origin background for 2024 characters.",
+    "skillProficiencies": [
+      "Arcana",
+      "History"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "con",
+      "int",
+      "wis"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Magic Initiate (Wizard)"
+  },
+  {
+    "id": "sailor",
+    "name": "Sailor",
+    "description": "Sailor origin background for 2024 characters.",
+    "skillProficiencies": [
+      "Acrobatics",
+      "Perception"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "str",
+      "dex",
+      "wis"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Tavern Brawler"
+  },
+  {
+    "id": "scribe",
+    "name": "Scribe",
+    "description": "Scribe origin background for 2024 characters.",
+    "skillProficiencies": [
+      "Investigation",
+      "Perception"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "dex",
+      "int",
+      "wis"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Skilled"
+  },
+  {
+    "id": "soldier",
+    "name": "Soldier",
+    "description": "Soldier origin background for 2024 characters.",
+    "skillProficiencies": [
+      "Athletics",
+      "Intimidation"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "str",
+      "dex",
+      "con"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Savage Attacker"
+  },
+  {
+    "id": "wayfarer",
+    "name": "Wayfarer",
+    "description": "Wayfarer origin background for 2024 characters.",
+    "skillProficiencies": [
+      "Insight",
+      "Stealth"
+    ],
+    "toolProficiencies": [],
+    "equipment": [],
+    "abilityOptions": [
+      "dex",
+      "wis",
+      "cha"
+    ],
+    "abilityBonusMode": "2024-plus2-plus1",
+    "originFeat": "Lucky"
+  }
+]
