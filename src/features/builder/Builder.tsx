@@ -551,6 +551,9 @@ export function Builder({
                       <h3>{selectedSubclass.name}</h3>
                       <p>{selectedSubclass.description}</p>
                       <div className="preview-stats">
+                        {selectedSubclass.resourceName ? <span>Resource {selectedSubclass.resourceName}</span> : null}
+                        {selectedSubclass.extraProficiencies?.map((item) => <span key={item}>Proficiency {item}</span>)}
+                        {selectedSubclass.bonusSpells?.length ? <span>Bonus Spells {selectedSubclass.bonusSpells.join(", ")}</span> : null}
                         {unlockedSubclassFeatures.length ? unlockedSubclassFeatures.map((feature) => <span key={`${feature.level}-${feature.name}`}>L{feature.level} {feature.name}</span>) : <span>İlk özellik Level {selectedSubclass.selectionLevel} seviyesinde açılır.</span>}
                       </div>
                     </article>

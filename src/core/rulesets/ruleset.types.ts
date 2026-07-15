@@ -47,6 +47,9 @@ export interface DndSubclassData {
   selectionLevel: number;
   description: string;
   features: SubclassFeatureData[];
+  bonusSpells?: string[];
+  extraProficiencies?: string[];
+  resourceName?: string;
 }
 
 export interface DndSubraceData {

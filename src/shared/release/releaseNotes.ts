@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.29.0", date: "2026-07-15", title: "Subclass Expansion",
+    summary: "Cleric domainleri başta olmak üzere 2014 ve 2024 subclass seçenekleri, özgün feature özetleri ve mekanik metadata ile genişletildi.",
+    changes: [
+      { text: "2014 Cleric için 13 yeni domain; Life Domain ile toplam 14 seçenek", category: "Özellik" },
+      { text: "Light, Trickery ve War dahil genişletilmiş 2024 Cleric seçenekleri", category: "Özellik" },
+      { text: "Her ana class için en az bir ilave 2014 ve 2024 subclass", category: "Özellik" },
+      { text: "Level bazlı özgün feature özetleri ve resource/proficiency metadata", category: "İyileştirme" },
+      { text: "Builder ve Subclass Catalog içinde genişletilmiş metadata görünümü", category: "İyileştirme" },
+      { text: "Subclass paket kapsamı için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.28.0", date: "2026-07-15", title: "Class Features Engine",
     summary: "Temel class kaynakları level ve ability skorlarına göre otomatik oluşturulup Character Sheet ve Rest sistemine bağlandı.",
     changes: [
