@@ -53,6 +53,29 @@ export const emptyDraft: CharacterDraft = {
   notes: "",
 };
 
+const draftArrayKeys = [
+  "featIds", "skillProficiencies", "expertiseSkills", "toolProficiencies", "languages",
+  "knownSpellIds", "preparedSpellIds", "spellSlots", "inventory", "equippedWeaponIds", "hitDice",
+] as const;
+
+export function normalizeCharacterDraft(value: unknown, fallback: CharacterDraft = emptyDraft): CharacterDraft {
+  const candidate = value && typeof value === "object" ? value as Partial<CharacterDraft> : {};
+  const normalized: CharacterDraft = {
+    ...fallback,
+    ...candidate,
+    abilities: { ...fallback.abilities, ...(candidate.abilities ?? {}) },
+    deathSaves: { ...fallback.deathSaves, ...(candidate.deathSaves ?? {}) },
+    conditionDurations: { ...fallback.conditionDurations, ...(candidate.conditionDurations ?? {}) },
+  };
+
+  for (const key of draftArrayKeys) {
+    if (!Array.isArray(candidate[key])) {
+      (normalized[key] as unknown) = fallback[key];
+    }
+  }
+  return normalized;
+}
+
 
 export const FULL_CASTER_CLASSES = new Set([
   "bard",

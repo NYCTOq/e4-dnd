@@ -15,7 +15,7 @@ import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
-import { CharacterInventoryManager, CharacterSpellSelector, calculateEffectiveArmorClass, calculateSuggestedArmorClass, createCharacterFromDraft, emptyDraft, getCharacterInventoryItems, getInventoryWeight } from "../characters/characterShared";
+import { CharacterInventoryManager, CharacterSpellSelector, calculateEffectiveArmorClass, calculateSuggestedArmorClass, createCharacterFromDraft, emptyDraft, getCharacterInventoryItems, getInventoryWeight, normalizeCharacterDraft } from "../characters/characterShared";
 
 export function Builder({
   onCreateCharacter,
@@ -40,6 +40,7 @@ export function Builder({
     "e4_dnd_draft_character_builder_v1",
     initialDraft,
     {
+      normalize: (value) => normalizeCharacterDraft(value, initialDraft),
       isMeaningful: (value) =>
         Boolean(
           value.name.trim() ||

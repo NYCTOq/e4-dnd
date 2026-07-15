@@ -9,6 +9,7 @@ type AutosavedEnvelope<T> = {
 
 type AutosavedDraftOptions<T> = {
   isMeaningful?: (value: T) => boolean;
+  normalize?: (value: T) => T;
   delay?: number;
 };
 
@@ -35,7 +36,7 @@ export function useAutosavedDraft<T>(
     fallbackEnvelope,
   );
   const restoredAtRef = useRef(storedEnvelope.updatedAt);
-  const [value, setValue] = useState<T>(storedEnvelope.value);
+  const [value, setValue] = useState<T>(() => options.normalize?.(storedEnvelope.value) ?? storedEnvelope.value);
   const [lastSavedAt, setLastSavedAt] = useState(storedEnvelope.updatedAt);
   const isMeaningfulRef = useRef(options.isMeaningful);
   isMeaningfulRef.current = options.isMeaningful;

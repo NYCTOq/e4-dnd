@@ -15,6 +15,16 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.0.1", date: "2026-07-15", title: "Legacy Draft Recovery Fix",
+    summary: "Eski sürümlerden kalan Character Builder taslakları yeni alanlarla güvenli biçimde tamamlanarak açılış çökmesi giderildi.",
+    changes: [
+      { text: "Eski autosave taslakları için geriye uyumlu alan normalizasyonu", category: "Düzeltme" },
+      { text: "Eksik feat, skill, spell, inventory ve equipment listelerine güvenli varsayılanlar", category: "Düzeltme" },
+      { text: "İç içe ability, death save ve condition verilerini kaybetmeden birleştirme", category: "Teknik" },
+      { text: "Legacy draft migration için üç otomatik regresyon testi", category: "Teknik" },
+    ],
+  },
+  {
     version: "2.0.0", date: "2026-07-15", title: "Playable Character Release",
     summary: "Karakter oluşturma, doğrulama, Character Sheet, Play Mode, level-up ve rest akışları oynanabilir tek bir v2 deneyiminde birleşti.",
     changes: [
