@@ -1,6 +1,9 @@
 import type { AbilityKey, Character } from "../../core/character/character.types";
 import { getAbilityModifier } from "../../core/character/characterCalculator";
 import { normalizeHitDice, normalizeSpellSlots } from "./characterShared";
+import type { DndClassData } from "../../core/rulesets/ruleset.types";
+import { getClassResources, mergeClassResources } from "../../core/rulesets/classFeatureEngine";
+import { getClassSpellSlots } from "../../core/rulesets/spellcastingRules";
 
 export type LevelUpAsiMode = "none" | "plus-two" | "split";
 
@@ -11,10 +14,13 @@ export type LevelUpOptions = {
   primaryAbility: AbilityKey;
   secondaryAbility: AbilityKey;
   updatedAt?: string;
+  classData?: DndClassData | null;
 };
 
-export function isAsiMilestone(level: number): boolean {
-  return [4, 8, 12, 16, 19].includes(level);
+export function isAsiMilestone(level: number, className = ""): boolean {
+  const levels=[4,8,12,16,19]; const key=className.toLowerCase();
+  if(key==="fighter") levels.push(6,14); if(key==="rogue") levels.push(10);
+  return levels.includes(level);
 }
 
 export function getAverageHpGain(hitDie: number, constitutionScore: number): number {
@@ -28,8 +34,9 @@ export function applyAbilityIncrease(
   asiMode: LevelUpAsiMode,
   primaryAbility: AbilityKey,
   secondaryAbility: AbilityKey,
+  className = "",
 ): Character["abilities"] {
-  if (!isAsiMilestone(nextLevel) || asiMode === "none") {
+  if (!isAsiMilestone(nextLevel, className) || asiMode === "none") {
     return { ...abilities };
   }
 
@@ -56,21 +63,20 @@ export function buildLeveledCharacter(
   const nextLevel = Math.min(20, character.level + 1);
   const hpGain = Math.max(1, Math.floor(options.hpGain || 1));
   const nextMaxHp = character.maxHp + hpGain;
+  const nextAbilities = applyAbilityIncrease(character.abilities,nextLevel,options.asiMode,options.primaryAbility,options.secondaryAbility,character.className);
+  const progressionSlots=getClassSpellSlots(options.classData??null,nextLevel);
+  const currentSlotMap=new Map(character.spellSlots.map(slot=>[slot.level,slot]));
+  const nextSlots=progressionSlots.length ? progressionSlots.map(slot=>({...slot,used:Math.min(slot.max,currentSlotMap.get(slot.level)?.used??0)})) : normalizeSpellSlots(character.spellSlots,nextLevel,character.className);
 
   return {
     ...character,
     level: nextLevel,
-    abilities: applyAbilityIncrease(
-      character.abilities,
-      nextLevel,
-      options.asiMode,
-      options.primaryAbility,
-      options.secondaryAbility,
-    ),
+    abilities: nextAbilities,
     maxHp: nextMaxHp,
     currentHp: Math.min(nextMaxHp, character.currentHp + hpGain),
-    spellSlots: normalizeSpellSlots(character.spellSlots, nextLevel, character.className),
+    spellSlots: nextSlots,
     hitDice: normalizeHitDice(character.hitDice, nextLevel, character.className, options.hitDie),
+    resources: mergeClassResources(character.resources,getClassResources(character.className,nextLevel,nextAbilities,character.ruleset)),
     updatedAt: options.updatedAt ?? new Date().toISOString(),
   };
 }

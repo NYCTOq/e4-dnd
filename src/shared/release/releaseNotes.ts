@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.34.0", date: "2026-07-15", title: "Level-Up Automation V2",
+    summary: "Level-up akışı class progression, spell slotları, kaynak scaling, class-specific ASI ve geri alma geçmişiyle yenilendi.",
+    changes: [
+      { text: "Yeni level class ve subclass feature ön izlemesi", category: "Özellik" },
+      { text: "Class progression tablosundan full/half/pact spell slot güncellemesi", category: "Özellik" },
+      { text: "Level ile artan class resource maksimumlarını güvenli birleştirme", category: "Özellik" },
+      { text: "Fighter ve Rogue ilave ASI/feat kilometre taşları", category: "Düzeltme" },
+      { text: "Kalıcı level-up geçmişi ve son işlemi geri alma", category: "Özellik" },
+      { text: "Level-up history için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.33.0", date: "2026-07-15", title: "Character Sheet V2",
     summary: "Saving throws, skill/expertise rolları, passive skorlar ve birleşik feature/proficiency görünümü oynanabilir Character Sheet'e eklendi.",
     changes: [

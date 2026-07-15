@@ -9,6 +9,7 @@ import {
   isAsiMilestone,
   type LevelUpAsiMode,
 } from "./levelUpCalculator";
+import { getLatestLevelUp, removeLevelUpHistoryEntry, saveLevelUpSnapshot } from "./levelUpHistory";
 
 const ABILITY_LABELS: Record<AbilityKey, string> = {
   str: "STR",
@@ -38,6 +39,7 @@ export function LevelUpAssistant({
   const [asiMode, setAsiMode] = useState<AsiMode>("none");
   const [primaryAbility, setPrimaryAbility] = useState<AbilityKey>("str");
   const [secondaryAbility, setSecondaryAbility] = useState<AbilityKey>("dex");
+  const [latestHistory, setLatestHistory] = useState(() => getLatestLevelUp(character.id));
 
   const nextLevel = Math.min(20, character.level + 1);
   const selectedClass = rulesetData?.classes.find(
@@ -48,7 +50,10 @@ export function LevelUpAssistant({
   const averageHpGain = getAverageHpGain(hitDie, character.abilities.con);
   const currentProficiency = getProficiencyBonus(character.level);
   const nextProficiency = getProficiencyBonus(nextLevel);
-  const asiAvailable = isAsiMilestone(nextLevel);
+  const asiAvailable = isAsiMilestone(nextLevel, character.className);
+  const newClassFeatures = selectedClass?.levels.find((row) => row.level === nextLevel)?.features ?? [];
+  const selectedSubclass = rulesetData?.subclasses.find((item) => item.className === character.className && item.name === character.subclass);
+  const newSubclassFeatures = selectedSubclass?.features.filter((feature) => feature.level === nextLevel) ?? [];
 
   const hpGain = useMemo(() => {
     if (hpMode === "manual") {
@@ -72,19 +77,24 @@ export function LevelUpAssistant({
       return;
     }
 
+    const snapshot=saveLevelUpSnapshot(character);
     const nextCharacter = buildLeveledCharacter(character, {
       hpGain,
       hitDie,
       asiMode,
       primaryAbility,
       secondaryAbility,
+      classData:selectedClass,
     });
 
     onUpdateCharacter(nextCharacter);
+    setLatestHistory(snapshot);
     setIsOpen(false);
     setRolledHp(null);
     setAsiMode("none");
   }
+
+  function undoLatestLevelUp(){if(!latestHistory)return; onUpdateCharacter(latestHistory.before); removeLevelUpHistoryEntry(latestHistory.id); setLatestHistory(getLatestLevelUp(character.id));}
 
   if (character.level >= 20) {
     return (
@@ -109,6 +119,7 @@ export function LevelUpAssistant({
       <button type="button" onClick={() => setIsOpen((current) => !current)}>
         {isOpen ? "Kapat" : "Level Up"}
       </button>
+      {latestHistory ? <button type="button" onClick={undoLatestLevelUp}>Son Level Up'ı Geri Al</button> : null}
 
       {isOpen ? (
         <div className="level-up-panel">
@@ -228,7 +239,8 @@ export function LevelUpAssistant({
           <section className="level-up-section level-up-checklist">
             <span className="mini-label">Kontrol Listesi</span>
             <ul>
-              <li>Class ve subclass özelliklerini kaynak kitaptan kontrol et.</li>
+              {newClassFeatures.length ? newClassFeatures.map((feature)=><li key={feature}>Yeni class feature: <strong>{feature}</strong></li>) : <li>Bu seviyede yeni class feature görünmüyor.</li>}
+              {newSubclassFeatures.map((feature)=><li key={feature.name}>Yeni subclass feature: <strong>{feature.name}</strong> — {feature.summary}</li>)}
               <li>Yeni spell, cantrip veya prepared spell hakkını kontrol et.</li>
               <li>{nextProficiency > currentProficiency ? "Proficiency bonus bu seviyede otomatik artacak." : "Proficiency bonus bu seviyede değişmiyor."}</li>
               <li>Hit dice havuzu ve bilinen spell slot tablosu otomatik güncellenecek.</li>
