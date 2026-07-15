@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.1.0", date: "2026-07-15", title: "Always Prepared Spells",
+    summary: "Subclass tarafından verilen büyüler normal prepared kotasını tüketmeden Builder, Editor ve Play Mode akışına bağlandı.",
+    changes: [
+      { text: "2014 ve 2024 Life Domain bonus spell listeleri", category: "Özellik" },
+      { text: "Character level ve erişilebilir spell level bazlı otomatik açılma", category: "Özellik" },
+      { text: "Always Prepared büyülerin known ve prepared listelerine otomatik eklenmesi", category: "Özellik" },
+      { text: "Normal prepared kotasından subclass büyülerinin çıkarılması", category: "Düzeltme" },
+      { text: "Spell Selector içinde ayrı Always Prepared durumu", category: "İyileştirme" },
+      { text: "Subclass spell unlock davranışı için otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "2.0.3", date: "2026-07-15", title: "Ability Generation Rules",
     summary: "Character Builder artık tekil skor tavanının yanında Standard Array, Point Buy ve ASI toplam bütçesini de doğruluyor.",
     changes: [

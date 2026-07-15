@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { DndItemData, DndSpellData, RulesetData } from "../../core/rulesets/ruleset.types";
 import type { Character, CharacterDraft, CharacterHitDiePool } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getProficiencyBonus } from "../../core/character/characterCalculator";
@@ -466,6 +466,7 @@ export function CharacterSpellSelector({
   abilities,
   knownSpellIds,
   preparedSpellIds,
+  alwaysPreparedSpellIds = [],
   onChange,
 }: {
   title: string;
@@ -478,6 +479,7 @@ export function CharacterSpellSelector({
   abilities: Character["abilities"];
   knownSpellIds: string[];
   preparedSpellIds: string[];
+  alwaysPreparedSpellIds?: string[];
   onChange: (next: {
     knownSpellIds: string[];
     preparedSpellIds: string[];
@@ -535,7 +537,16 @@ export function CharacterSpellSelector({
     () => new Set(preparedSpellIds),
     [preparedSpellIds],
   );
+  const alwaysPreparedSpellIdSet = useMemo(() => new Set(alwaysPreparedSpellIds), [alwaysPreparedSpellIds]);
+  const normalPreparedSpellIds = preparedSpellIds.filter((id) => !alwaysPreparedSpellIdSet.has(id));
   const knownSpellData = (rulesetData?.spells ?? []).filter((spell) => knownSpellIdSet.has(spell.id));
+
+  useEffect(() => {
+    const missingKnown = alwaysPreparedSpellIds.filter((id) => !knownSpellIdSet.has(id));
+    const missingPrepared = alwaysPreparedSpellIds.filter((id) => !preparedSpellIdSet.has(id));
+    if (!missingKnown.length && !missingPrepared.length) return;
+    onChange({ knownSpellIds: [...new Set([...knownSpellIds, ...alwaysPreparedSpellIds])], preparedSpellIds: [...new Set([...preparedSpellIds, ...alwaysPreparedSpellIds])] });
+  }, [alwaysPreparedSpellIds, knownSpellIdSet, knownSpellIds, onChange, preparedSpellIdSet, preparedSpellIds]);
 
   const filteredSpellGroups = getSpellLevelGroups(filteredSpells);
 
@@ -545,6 +556,7 @@ export function CharacterSpellSelector({
     ).length ?? 0;
 
   function toggleKnownSpell(spellId: string) {
+    if (alwaysPreparedSpellIdSet.has(spellId)) return;
     const isKnown = knownSpellIdSet.has(spellId);
 
     if (isKnown) {
@@ -574,7 +586,7 @@ export function CharacterSpellSelector({
       return;
     }
     const spell = rulesetData?.spells.find((item) => item.id === spellId);
-    if (!spell || !canPrepareSpell(spell, preparedSpellIds, spellcastingProfile)) return;
+    if (!spell || !canPrepareSpell(spell, normalPreparedSpellIds, spellcastingProfile)) return;
 
     onChange({
       knownSpellIds: knownSpellIdSet.has(spellId)
@@ -595,7 +607,8 @@ export function CharacterSpellSelector({
         <div className="spell-selector-counts">
           <span>{knownSpellIds.length} known</span>
           <span>{knownCantripCount}/{spellcastingProfile.cantripLimit} cantrip</span>
-          <span>{preparedSpellIds.length}/{spellcastingProfile.preparedSpellLimit ?? "∞"} prepared</span>
+          <span>{normalPreparedSpellIds.length}/{spellcastingProfile.preparedSpellLimit ?? "∞"} prepared</span>
+          {alwaysPreparedSpellIds.length ? <span>{alwaysPreparedSpellIds.length} always prepared</span> : null}
         </div>
       </div>
 
@@ -665,6 +678,7 @@ export function CharacterSpellSelector({
                     const isKnown = knownSpellIdSet.has(spell.id);
                     const isPrepared = preparedSpellIdSet.has(spell.id);
                     const isCantrip = spell.level === 0;
+                    const isAlwaysPrepared = alwaysPreparedSpellIdSet.has(spell.id);
 
                     return (
                       <article
@@ -714,11 +728,13 @@ export function CharacterSpellSelector({
                             >
                               Always Ready
                             </span>
+                          ) : isAlwaysPrepared ? (
+                            <span className="spell-status-pill active">Always Prepared</span>
                           ) : (
                             <button
                               type="button"
                               className={isPrepared ? "active" : ""}
-                              disabled={!isPrepared && !canPrepareSpell(spell, preparedSpellIds, spellcastingProfile)}
+                              disabled={!isPrepared && !canPrepareSpell(spell, normalPreparedSpellIds, spellcastingProfile)}
                               onClick={() => togglePreparedSpell(spell.id)}
                             >
                               {isPrepared ? "Prepared" : "Prepare"}

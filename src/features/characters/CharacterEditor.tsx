@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import { getRulesetDefinition } from "../../core/rulesets/rulesetRegistry";
+import { getAlwaysPreparedSpells } from "../../core/rulesets/subclassRules";
+import { getHighestSpellLevel } from "../../core/rulesets/spellRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import type { Character, CharacterDraft } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellAttackBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
@@ -91,6 +93,8 @@ export function CharacterEditor({
       ) ?? null
     );
   }, [activeRulesetData, draft.className]);
+  const selectedSubclass = useMemo(() => activeRulesetData?.subclasses.find((item) => item.name === draft.subclass && item.className === draft.className) ?? null, [activeRulesetData, draft.subclass, draft.className]);
+  const alwaysPreparedSpells = useMemo(() => getAlwaysPreparedSpells(selectedSubclass, getHighestSpellLevel(selectedClass ?? undefined, draft.level), activeRulesetData?.spells ?? []), [selectedSubclass, selectedClass, draft.level, activeRulesetData]);
 
   function updateDraft<K extends keyof CharacterDraft>(
     key: K,
@@ -135,6 +139,8 @@ export function CharacterEditor({
     const updatedCharacter: Character = {
       ...character,
       ...draft,
+      knownSpellIds: [...new Set([...draft.knownSpellIds, ...alwaysPreparedSpells.map((spell) => spell.id)])],
+      preparedSpellIds: [...new Set([...draft.preparedSpellIds, ...alwaysPreparedSpells.map((spell) => spell.id)])],
       armorClass: calculateEffectiveArmorClass(draft, activeRulesetData?.items),
       currentHp: Math.min(character.currentHp, draft.maxHp),
       spellSlots: normalizeSpellSlots(
@@ -444,6 +450,7 @@ export function CharacterEditor({
           abilities={draft.abilities}
           knownSpellIds={draft.knownSpellIds}
           preparedSpellIds={draft.preparedSpellIds}
+          alwaysPreparedSpellIds={alwaysPreparedSpells.map((spell) => spell.id)}
           onChange={(next) =>
             setDraft((current) => ({
               ...current,

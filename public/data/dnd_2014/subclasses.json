@@ -66,6 +66,7 @@
     "ruleset": "dnd_2014",
     "selectionLevel": 1,
     "description": "Life Domain, Cleric için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "bonusSpells": ["Bless", "Cure Wounds", "Lesser Restoration", "Spiritual Weapon", "Beacon of Hope", "Revivify", "Greater Restoration", "Mass Cure Wounds"],
     "features": [
       {
         "level": 1,

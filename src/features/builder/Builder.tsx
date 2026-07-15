@@ -4,12 +4,13 @@ import { useAutosavedDraft } from "../../shared/state/useAutosavedDraft";
 import type { RulesetData, DndSpellData } from "../../core/rulesets/ruleset.types";
 import { applyAbilityBonuses, getOriginAbilityBonuses } from "../../core/rulesets/originRules";
 import { getRulesetDefinition } from "../../core/rulesets/rulesetRegistry";
-import { getSubclassesForClass, getUnlockedSubclassFeatures } from "../../core/rulesets/subclassRules";
+import { getAlwaysPreparedSpells, getSubclassesForClass, getUnlockedSubclassFeatures } from "../../core/rulesets/subclassRules";
 import { getGeneralFeatSlotCount, getGrantedOriginFeatName, isFeatEligible } from "../../core/rulesets/featRules";
 import { buildFinalSkillProficiencies, getAvailableClassSkills, getExpertiseLimit, getGrantedSkills, normalizeClassSkillChoices, normalizeExpertise, uniqueStrings } from "../../core/rulesets/proficiencyRules";
 import { hasValidationErrors, validateCharacterDraft } from "../../core/rulesets/characterValidation";
 import { getBuilderStepId, getBuilderStepIssueCounts, getFirstErrorStepIndex } from "../../core/rulesets/builderProgress";
 import { getClassSpellSlots } from "../../core/rulesets/spellcastingRules";
+import { getHighestSpellLevel } from "../../core/rulesets/spellRules";
 import { getAbilityBudgetError, getStandardArrayAbilities, type AbilityGenerationMethod } from "../../core/rulesets/abilityGenerationRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
@@ -92,6 +93,7 @@ export function Builder({
 
   const availableSubclasses = useMemo(() => getSubclassesForClass(activeRulesetData?.subclasses ?? [], draft.className), [activeRulesetData, draft.className]);
   const selectedSubclass = useMemo(() => availableSubclasses.find((item) => item.name === draft.subclass) ?? null, [availableSubclasses, draft.subclass]);
+  const alwaysPreparedSpells = useMemo(() => getAlwaysPreparedSpells(selectedSubclass, getHighestSpellLevel(selectedClass ?? undefined, draft.level), activeRulesetData?.spells ?? []), [selectedSubclass, selectedClass, draft.level, activeRulesetData]);
   const unlockedSubclassFeatures = useMemo(() => getUnlockedSubclassFeatures(selectedSubclass, draft.level), [selectedSubclass, draft.level]);
 
   const selectedSubrace = useMemo(() => selectedRace?.subraces?.find((item) => item.name === draft.subrace) ?? null, [selectedRace, draft.subrace]);
@@ -262,6 +264,8 @@ export function Builder({
       expertiseSkills: normalizeExpertise(draft.expertiseSkills, finalSkillProficiencies, expertiseLimit),
       toolProficiencies: uniqueStrings([...(selectedBackground?.toolProficiencies ?? []), ...draft.toolProficiencies]),
       languages: uniqueStrings([...(selectedBackground?.languages ?? []), ...draft.languages]),
+      knownSpellIds: [...new Set([...draft.knownSpellIds, ...alwaysPreparedSpells.map((spell) => spell.id)])],
+      preparedSpellIds: [...new Set([...draft.preparedSpellIds, ...alwaysPreparedSpells.map((spell) => spell.id)])],
       spellSlots: getClassSpellSlots(selectedClass, draft.level),
       abilities: finalAbilities,
       armorClass: calculateEffectiveArmorClass({ ...draft, abilities: finalAbilities }, activeRulesetData?.items),
@@ -843,6 +847,7 @@ export function Builder({
               abilities={finalAbilities}
               knownSpellIds={draft.knownSpellIds}
               preparedSpellIds={draft.preparedSpellIds}
+              alwaysPreparedSpellIds={alwaysPreparedSpells.map((spell) => spell.id)}
               onChange={(next) =>
                 setDraft((current) => ({
                   ...current,
