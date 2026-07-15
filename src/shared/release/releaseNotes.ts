@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.35.0", date: "2026-07-15", title: "Character Creation Polish",
+    summary: "Character Builder, adım durumları, doğrudan hata yönlendirmesi, ilerleme görünümü ve mobil kullanım iyileştirmeleriyle v2.0 öncesi son hazırlığını tamamladı.",
+    changes: [
+      { text: "Her Builder adımı için hata, uyarı, tamam ve bekliyor durumu", category: "İyileştirme" },
+      { text: "Review hatasından ilgili adıma tek tık dönüş", category: "Özellik" },
+      { text: "İlk zorunlu hataya hızlı yönlendirme", category: "Özellik" },
+      { text: "Ruleset, subclass, skill, expertise ve feat içeren genişletilmiş Review özeti", category: "İyileştirme" },
+      { text: "Taslak kurtarma bildirimi, ilerleme çubuğu ve yatay mobil stepper", category: "İyileştirme" },
+      { text: "Builder progress yönlendirmeleri için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.34.0", date: "2026-07-15", title: "Level-Up Automation V2",
     summary: "Level-up akışı class progression, spell slotları, kaynak scaling, class-specific ASI ve geri alma geçmişiyle yenilendi.",
     changes: [

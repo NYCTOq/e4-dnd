@@ -8,6 +8,7 @@ import { getSubclassesForClass, getUnlockedSubclassFeatures } from "../../core/r
 import { getGeneralFeatSlotCount, getGrantedOriginFeatName, isFeatEligible } from "../../core/rulesets/featRules";
 import { buildFinalSkillProficiencies, getAvailableClassSkills, getExpertiseLimit, getGrantedSkills, normalizeClassSkillChoices, normalizeExpertise, uniqueStrings } from "../../core/rulesets/proficiencyRules";
 import { hasValidationErrors, validateCharacterDraft } from "../../core/rulesets/characterValidation";
+import { getBuilderStepId, getBuilderStepIssueCounts, getFirstErrorStepIndex } from "../../core/rulesets/builderProgress";
 import { getClassSpellSlots } from "../../core/rulesets/spellcastingRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
@@ -106,6 +107,17 @@ export function Builder({
   const expertiseLimit = getExpertiseLimit(draft.className, draft.level);
   const validationIssues = useMemo(() => validateCharacterDraft(draft, activeRulesetData, finalAbilities), [draft, activeRulesetData, finalAbilities]);
   const validationHasErrors = hasValidationErrors(validationIssues);
+  const builderProgress = Math.round((activeStepIndex / (builderSteps.length - 1)) * 100);
+
+  function goToValidationIssue(stepName: string) {
+    const targetIndex = builderSteps.findIndex((step) => step.id === getBuilderStepId(stepName));
+    goToStep(targetIndex < 0 ? builderSteps.length - 1 : targetIndex);
+  }
+
+  function goToFirstError() {
+    const targetIndex = getFirstErrorStepIndex(builderSteps.map((step) => step.id), validationIssues);
+    if (targetIndex >= 0) goToStep(targetIndex);
+  }
 
   function toggleSkill(skill: string) {
     setDraft((current) => {
@@ -271,17 +283,23 @@ export function Builder({
     >
       <div className="builder-v2-layout">
         <aside className="builder-stepper">
-          {builderSteps.map((step, index) => (
+          {builderSteps.map((step, index) => {
+            const counts = getBuilderStepIssueCounts(step.id, validationIssues);
+            const statusClass = counts.errors ? "has-error" : counts.warnings ? "has-warning" : index < activeStepIndex ? "is-complete" : "";
+            const statusLabel = counts.errors ? `${counts.errors} hata` : counts.warnings ? `${counts.warnings} uyarı` : index < activeStepIndex ? "Tamam" : index === activeStepIndex ? "Şu an" : "Bekliyor";
+            return (
             <button
               key={step.id}
               type="button"
-              className={index === activeStepIndex ? "active" : ""}
+              className={`${index === activeStepIndex ? "active" : ""} ${statusClass}`.trim()}
               onClick={() => goToStep(index)}
             >
               <strong>{index + 1}. {step.title}</strong>
               <span>{step.description}</span>
+              <small className="builder-step-status">{statusLabel}</small>
             </button>
-          ))}
+            );
+          })}
         </aside>
 
         <form className="builder-form builder-v2-form" onSubmit={handleSubmit}>
@@ -289,6 +307,9 @@ export function Builder({
             <span className="mini-label">Step {activeStepIndex + 1} / {builderSteps.length}</span>
             <h2>{activeStep.title}</h2>
             <p>{activeStep.description}</p>
+            <div className="builder-progress-strip" aria-label={`Karakter oluşturma ilerlemesi yüzde ${builderProgress}`}>
+              <span style={{ width: `${builderProgress}%` }} />
+            </div>
           </div>
           <AutosaveStatus
             label="Karakter taslağı"
@@ -302,6 +323,12 @@ export function Builder({
               }
             }}
           />
+          {restoredAt ? (
+            <div className="draft-restored-banner" role="status">
+              <strong>Taslak geri yüklendi</strong>
+              <span>Yarım kalan karakterin kaldığı verilerle devam edebilirsin.</span>
+            </div>
+          ) : null}
 
           {activeStep.id === "basic" ? (
             <section className="form-panel">
@@ -869,7 +896,10 @@ export function Builder({
                   <span>{validationIssues.filter((issue) => issue.severity === "error").length} hata · {validationIssues.filter((issue) => issue.severity === "warning").length} uyarı</span>
                 </div>
                 {validationIssues.length ? (
-                  <ul>{validationIssues.map((issue) => <li key={issue.id}><strong>{issue.severity === "error" ? "Hata" : "Uyarı"} · {issue.step}:</strong> {issue.message}</li>)}</ul>
+                  <>
+                    {validationHasErrors ? <button className="validation-first-error" type="button" onClick={goToFirstError}>İlk hataya git</button> : null}
+                    <ul className="validation-issue-list">{validationIssues.map((issue) => <li key={issue.id}><button type="button" onClick={() => goToValidationIssue(issue.step)}><strong>{issue.severity === "error" ? "Hata" : "Uyarı"} · {issue.step}:</strong> {issue.message}<span>Düzelt →</span></button></li>)}</ul>
+                  </>
                 ) : <p>Karakter kurallı biçimde kaydedilmeye hazır.</p>}
               </div>
 
@@ -909,6 +939,22 @@ export function Builder({
                 <div>
                   <span>Gold</span>
                   <strong>{draft.gold}</strong>
+                </div>
+                <div>
+                  <span>Ruleset</span>
+                  <strong>{rulesetDefinition.editionLabel}</strong>
+                </div>
+                <div>
+                  <span>Subclass</span>
+                  <strong>{draft.subclass || "—"}</strong>
+                </div>
+                <div>
+                  <span>Skills / Expertise</span>
+                  <strong>{finalSkillProficiencies.length} / {draft.expertiseSkills.length}</strong>
+                </div>
+                <div>
+                  <span>Feats</span>
+                  <strong>{selectedFeats.length}</strong>
                 </div>
               </div>
 
