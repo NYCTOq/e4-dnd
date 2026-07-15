@@ -79,6 +79,9 @@ const RulesetCenterPage = lazy(() =>
 const ClassCatalogPage = lazy(() =>
   import("../classes/ClassCatalogPage").then((module) => ({ default: module.ClassCatalogPage })),
 );
+const SubclassCatalogPage = lazy(() =>
+  import("../subclasses/SubclassCatalogPage").then((module) => ({ default: module.SubclassCatalogPage })),
+);
 const OriginCatalogPage = lazy(() =>
   import("../origins/OriginCatalogPage").then((module) => ({ default: module.OriginCatalogPage })),
 );
@@ -398,6 +401,7 @@ export function AppRoutes({
 
       <Route path="/rulesets" element={<RulesetCenterPage />} />
       <Route path="/classes" element={<ClassCatalogPage rulesetData={effectiveRulesetData} />} />
+      <Route path="/subclasses" element={<SubclassCatalogPage rulesetData={effectiveRulesetData} />} />
       <Route path="/origins" element={<OriginCatalogPage rulesetData={effectiveRulesetData} />} />
       <Route path="/settings" element={<Settings />} />
 

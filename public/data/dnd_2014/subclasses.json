@@ -1,0 +1,407 @@
+[
+  {
+    "id": "path-of-the-berserker",
+    "name": "Path of the Berserker",
+    "className": "Barbarian",
+    "ruleset": "dnd_2014",
+    "selectionLevel": 3,
+    "description": "Path of the Berserker, Barbarian için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Frenzy",
+        "summary": "Frenzy subclass özelliği."
+      },
+      {
+        "level": 6,
+        "name": "Mindless Rage",
+        "summary": "Mindless Rage subclass özelliği."
+      },
+      {
+        "level": 10,
+        "name": "Intimidating Presence",
+        "summary": "Intimidating Presence subclass özelliği."
+      },
+      {
+        "level": 14,
+        "name": "Retaliation",
+        "summary": "Retaliation subclass özelliği."
+      }
+    ]
+  },
+  {
+    "id": "college-of-lore",
+    "name": "College of Lore",
+    "className": "Bard",
+    "ruleset": "dnd_2014",
+    "selectionLevel": 3,
+    "description": "College of Lore, Bard için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Bonus Proficiencies",
+        "summary": "Bonus Proficiencies subclass özelliği."
+      },
+      {
+        "level": 3,
+        "name": "Cutting Words",
+        "summary": "Cutting Words subclass özelliği."
+      },
+      {
+        "level": 6,
+        "name": "Additional Magical Secrets",
+        "summary": "Additional Magical Secrets subclass özelliği."
+      },
+      {
+        "level": 14,
+        "name": "Peerless Skill",
+        "summary": "Peerless Skill subclass özelliği."
+      }
+    ]
+  },
+  {
+    "id": "life-domain",
+    "name": "Life Domain",
+    "className": "Cleric",
+    "ruleset": "dnd_2014",
+    "selectionLevel": 1,
+    "description": "Life Domain, Cleric için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "features": [
+      {
+        "level": 1,
+        "name": "Bonus Proficiency",
+        "summary": "Bonus Proficiency subclass özelliği."
+      },
+      {
+        "level": 1,
+        "name": "Disciple of Life",
+        "summary": "Disciple of Life subclass özelliği."
+      },
+      {
+        "level": 2,
+        "name": "Preserve Life",
+        "summary": "Preserve Life subclass özelliği."
+      },
+      {
+        "level": 6,
+        "name": "Blessed Healer",
+        "summary": "Blessed Healer subclass özelliği."
+      },
+      {
+        "level": 8,
+        "name": "Divine Strike",
+        "summary": "Divine Strike subclass özelliği."
+      },
+      {
+        "level": 17,
+        "name": "Supreme Healing",
+        "summary": "Supreme Healing subclass özelliği."
+      }
+    ]
+  },
+  {
+    "id": "circle-of-the-land",
+    "name": "Circle of the Land",
+    "className": "Druid",
+    "ruleset": "dnd_2014",
+    "selectionLevel": 2,
+    "description": "Circle of the Land, Druid için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "features": [
+      {
+        "level": 2,
+        "name": "Bonus Cantrip",
+        "summary": "Bonus Cantrip subclass özelliği."
+      },
+      {
+        "level": 2,
+        "name": "Natural Recovery",
+        "summary": "Natural Recovery subclass özelliği."
+      },
+      {
+        "level": 3,
+        "name": "Circle Spells",
+        "summary": "Circle Spells subclass özelliği."
+      },
+      {
+        "level": 6,
+        "name": "Land's Stride",
+        "summary": "Land's Stride subclass özelliği."
+      },
+      {
+        "level": 10,
+        "name": "Nature's Ward",
+        "summary": "Nature's Ward subclass özelliği."
+      },
+      {
+        "level": 14,
+        "name": "Nature's Sanctuary",
+        "summary": "Nature's Sanctuary subclass özelliği."
+      }
+    ]
+  },
+  {
+    "id": "champion",
+    "name": "Champion",
+    "className": "Fighter",
+    "ruleset": "dnd_2014",
+    "selectionLevel": 3,
+    "description": "Champion, Fighter için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Improved Critical",
+        "summary": "Improved Critical subclass özelliği."
+      },
+      {
+        "level": 7,
+        "name": "Remarkable Athlete",
+        "summary": "Remarkable Athlete subclass özelliği."
+      },
+      {
+        "level": 10,
+        "name": "Additional Fighting Style",
+        "summary": "Additional Fighting Style subclass özelliği."
+      },
+      {
+        "level": 15,
+        "name": "Superior Critical",
+        "summary": "Superior Critical subclass özelliği."
+      },
+      {
+        "level": 18,
+        "name": "Survivor",
+        "summary": "Survivor subclass özelliği."
+      }
+    ]
+  },
+  {
+    "id": "way-of-the-open-hand",
+    "name": "Way of the Open Hand",
+    "className": "Monk",
+    "ruleset": "dnd_2014",
+    "selectionLevel": 3,
+    "description": "Way of the Open Hand, Monk için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Open Hand Technique",
+        "summary": "Open Hand Technique subclass özelliği."
+      },
+      {
+        "level": 6,
+        "name": "Wholeness of Body",
+        "summary": "Wholeness of Body subclass özelliği."
+      },
+      {
+        "level": 11,
+        "name": "Tranquility",
+        "summary": "Tranquility subclass özelliği."
+      },
+      {
+        "level": 17,
+        "name": "Quivering Palm",
+        "summary": "Quivering Palm subclass özelliği."
+      }
+    ]
+  },
+  {
+    "id": "oath-of-devotion",
+    "name": "Oath of Devotion",
+    "className": "Paladin",
+    "ruleset": "dnd_2014",
+    "selectionLevel": 3,
+    "description": "Oath of Devotion, Paladin için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Oath Spells",
+        "summary": "Oath Spells subclass özelliği."
+      },
+      {
+        "level": 3,
+        "name": "Channel Divinity",
+        "summary": "Channel Divinity subclass özelliği."
+      },
+      {
+        "level": 7,
+        "name": "Aura of Devotion",
+        "summary": "Aura of Devotion subclass özelliği."
+      },
+      {
+        "level": 15,
+        "name": "Purity of Spirit",
+        "summary": "Purity of Spirit subclass özelliği."
+      },
+      {
+        "level": 20,
+        "name": "Holy Nimbus",
+        "summary": "Holy Nimbus subclass özelliği."
+      }
+    ]
+  },
+  {
+    "id": "hunter",
+    "name": "Hunter",
+    "className": "Ranger",
+    "ruleset": "dnd_2014",
+    "selectionLevel": 3,
+    "description": "Hunter, Ranger için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Hunter's Prey",
+        "summary": "Hunter's Prey subclass özelliği."
+      },
+      {
+        "level": 7,
+        "name": "Defensive Tactics",
+        "summary": "Defensive Tactics subclass özelliği."
+      },
+      {
+        "level": 11,
+        "name": "Multiattack",
+        "summary": "Multiattack subclass özelliği."
+      },
+      {
+        "level": 15,
+        "name": "Superior Hunter’s Defense",
+        "summary": "Superior Hunter’s Defense subclass özelliği."
+      }
+    ]
+  },
+  {
+    "id": "thief",
+    "name": "Thief",
+    "className": "Rogue",
+    "ruleset": "dnd_2014",
+    "selectionLevel": 3,
+    "description": "Thief, Rogue için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "features": [
+      {
+        "level": 3,
+        "name": "Fast Hands",
+        "summary": "Fast Hands subclass özelliği."
+      },
+      {
+        "level": 3,
+        "name": "Second-Story Work",
+        "summary": "Second-Story Work subclass özelliği."
+      },
+      {
+        "level": 9,
+        "name": "Supreme Sneak",
+        "summary": "Supreme Sneak subclass özelliği."
+      },
+      {
+        "level": 13,
+        "name": "Use Magic Device",
+        "summary": "Use Magic Device subclass özelliği."
+      },
+      {
+        "level": 17,
+        "name": "Thief's Reflexes",
+        "summary": "Thief's Reflexes subclass özelliği."
+      }
+    ]
+  },
+  {
+    "id": "draconic-bloodline",
+    "name": "Draconic Bloodline",
+    "className": "Sorcerer",
+    "ruleset": "dnd_2014",
+    "selectionLevel": 1,
+    "description": "Draconic Bloodline, Sorcerer için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "features": [
+      {
+        "level": 1,
+        "name": "Dragon Ancestor",
+        "summary": "Dragon Ancestor subclass özelliği."
+      },
+      {
+        "level": 1,
+        "name": "Draconic Resilience",
+        "summary": "Draconic Resilience subclass özelliği."
+      },
+      {
+        "level": 6,
+        "name": "Elemental Affinity",
+        "summary": "Elemental Affinity subclass özelliği."
+      },
+      {
+        "level": 14,
+        "name": "Dragon Wings",
+        "summary": "Dragon Wings subclass özelliği."
+      },
+      {
+        "level": 18,
+        "name": "Draconic Presence",
+        "summary": "Draconic Presence subclass özelliği."
+      }
+    ]
+  },
+  {
+    "id": "the-fiend",
+    "name": "The Fiend",
+    "className": "Warlock",
+    "ruleset": "dnd_2014",
+    "selectionLevel": 1,
+    "description": "The Fiend, Warlock için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "features": [
+      {
+        "level": 1,
+        "name": "Dark One's Blessing",
+        "summary": "Dark One's Blessing subclass özelliği."
+      },
+      {
+        "level": 6,
+        "name": "Dark One's Own Luck",
+        "summary": "Dark One's Own Luck subclass özelliği."
+      },
+      {
+        "level": 10,
+        "name": "Fiendish Resilience",
+        "summary": "Fiendish Resilience subclass özelliği."
+      },
+      {
+        "level": 14,
+        "name": "Hurl Through Hell",
+        "summary": "Hurl Through Hell subclass özelliği."
+      }
+    ]
+  },
+  {
+    "id": "school-of-evocation",
+    "name": "School of Evocation",
+    "className": "Wizard",
+    "ruleset": "dnd_2014",
+    "selectionLevel": 2,
+    "description": "School of Evocation, Wizard için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "features": [
+      {
+        "level": 2,
+        "name": "Evocation Savant",
+        "summary": "Evocation Savant subclass özelliği."
+      },
+      {
+        "level": 2,
+        "name": "Sculpt Spells",
+        "summary": "Sculpt Spells subclass özelliği."
+      },
+      {
+        "level": 6,
+        "name": "Potent Cantrip",
+        "summary": "Potent Cantrip subclass özelliği."
+      },
+      {
+        "level": 10,
+        "name": "Empowered Evocation",
+        "summary": "Empowered Evocation subclass özelliği."
+      },
+      {
+        "level": 14,
+        "name": "Overchannel",
+        "summary": "Overchannel subclass özelliği."
+      }
+    ]
+  }
+]

@@ -32,6 +32,23 @@ export interface DndClassData {
   levels: ClassLevelData[];
 }
 
+
+export interface SubclassFeatureData {
+  level: number;
+  name: string;
+  summary: string;
+}
+
+export interface DndSubclassData {
+  id: string;
+  name: string;
+  className: string;
+  ruleset: "dnd_2014" | "dnd_2024";
+  selectionLevel: number;
+  description: string;
+  features: SubclassFeatureData[];
+}
+
 export interface DndSubraceData {
   id: string;
   name: string;
@@ -142,6 +159,7 @@ export interface RulesetData {
   id: "dnd_2014" | "dnd_2024" | "homebrew";
   name: string;
   classes: DndClassData[];
+  subclasses: DndSubclassData[];
   races: DndRaceData[];
   backgrounds: DndBackgroundData[];
   spells: DndSpellData[];

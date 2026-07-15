@@ -15,6 +15,17 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.22.0", date: "2026-07-15", title: "Subclasses",
+    summary: "2014 ve 2024 subclass veri katmanı, Builder seçimi, level kilidi ve feature progression görünümü eklendi.",
+    changes: [
+      { text: "2014 ve 2024 için class bağlantılı subclass veri setleri", category: "Özellik" },
+      { text: "Builder içinde class ve level uyumlu subclass seçimi", category: "Özellik" },
+      { text: "Level bazlı açılan subclass feature görünümü", category: "Özellik" },
+      { text: "Yeni Subclasses katalog ekranı", category: "Özellik" },
+      { text: "Subclass helperları için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.21.0",
     date: "2026-07-15",
     title: "Races, species ve backgrounds",

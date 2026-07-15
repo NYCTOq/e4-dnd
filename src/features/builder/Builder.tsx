@@ -4,6 +4,7 @@ import { useAutosavedDraft } from "../../shared/state/useAutosavedDraft";
 import type { RulesetData, DndSpellData } from "../../core/rulesets/ruleset.types";
 import { applyAbilityBonuses, getOriginAbilityBonuses } from "../../core/rulesets/originRules";
 import { getRulesetDefinition } from "../../core/rulesets/rulesetRegistry";
+import { getSubclassesForClass, getUnlockedSubclassFeatures } from "../../core/rulesets/subclassRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
@@ -78,6 +79,10 @@ export function Builder({
       ) ?? null
     );
   }, [activeRulesetData, draft.className]);
+
+  const availableSubclasses = useMemo(() => getSubclassesForClass(activeRulesetData?.subclasses ?? [], draft.className), [activeRulesetData, draft.className]);
+  const selectedSubclass = useMemo(() => availableSubclasses.find((item) => item.name === draft.subclass) ?? null, [availableSubclasses, draft.subclass]);
+  const unlockedSubclassFeatures = useMemo(() => getUnlockedSubclassFeatures(selectedSubclass, draft.level), [selectedSubclass, draft.level]);
 
   const selectedSubrace = useMemo(() => selectedRace?.subraces?.find((item) => item.name === draft.subrace) ?? null, [selectedRace, draft.subrace]);
   const selectedBackground = useMemo(() => activeRulesetData?.backgrounds.find((item) => item.name === draft.background) ?? null, [activeRulesetData, draft.background]);
@@ -350,7 +355,7 @@ export function Builder({
                       value={draft.className}
                       disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData}
                       onChange={(event) =>
-                        updateDraft("className", event.target.value)
+                        setDraft((current) => ({ ...current, className: event.target.value, subclass: "" }))
                       }
                     >
                       <option value="">
@@ -378,11 +383,14 @@ export function Builder({
 
                 <label>
                   Subclass
-                  <input
-                    value={draft.subclass}
-                    onChange={(event) => updateDraft("subclass", event.target.value)}
-                    placeholder="Desert Domain..."
-                  />
+                  {draft.ruleset !== "homebrew" ? (
+                    <select value={draft.subclass} disabled={!draft.className || draft.level < (selectedClass?.subclassLevel ?? 1)} onChange={(event) => updateDraft("subclass", event.target.value)}>
+                      <option value="">{!draft.className ? "Önce class seç" : draft.level < (selectedClass?.subclassLevel ?? 1) ? `Level ${selectedClass?.subclassLevel} gerekli` : "Subclass seç"}</option>
+                      {availableSubclasses.map((item) => <option key={item.id} value={item.name}>{item.name}</option>)}
+                    </select>
+                  ) : (
+                    <input value={draft.subclass} onChange={(event) => updateDraft("subclass", event.target.value)} placeholder="Desert Domain..." />
+                  )}
                 </label>
 
                 <label>
@@ -474,6 +482,16 @@ export function Builder({
                             ? selectedClass.spellcastingAbility.toUpperCase()
                             : "None"}
                         </span>
+                      </div>
+                    </article>
+                  ) : null}
+                  {selectedSubclass ? (
+                    <article className="builder-choice-card">
+                      <span className="mini-label">Subclass · Level {selectedSubclass.selectionLevel}</span>
+                      <h3>{selectedSubclass.name}</h3>
+                      <p>{selectedSubclass.description}</p>
+                      <div className="preview-stats">
+                        {unlockedSubclassFeatures.length ? unlockedSubclassFeatures.map((feature) => <span key={`${feature.level}-${feature.name}`}>L{feature.level} {feature.name}</span>) : <span>İlk özellik Level {selectedSubclass.selectionLevel} seviyesinde açılır.</span>}
                       </div>
                     </article>
                   ) : null}

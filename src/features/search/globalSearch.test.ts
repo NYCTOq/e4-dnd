@@ -7,6 +7,7 @@ const rulesetData: RulesetData = {
   id: "dnd_2014",
   name: "D&D 2014",
   classes: [],
+  subclasses: [],
   races: [],
   backgrounds: [],
   spells: [
