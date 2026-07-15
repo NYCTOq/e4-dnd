@@ -15,6 +15,17 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "1.25.0", date: "2026-07-15", title: "Equipment + Items Expansion",
+    summary: "2014 ve 2024 equipment verileri, genişletilmiş item şeması ve 2024 Weapon Mastery bağlantısı eklendi.",
+    changes: [
+      { text: "2024 ruleset için weapon, armor, shield ve adventuring gear veri paketi", category: "Özellik" },
+      { text: "Tool, pack ve ammunition item kategorileri", category: "Özellik" },
+      { text: "2024 silahları için Weapon Mastery çözümleme altyapısı", category: "Özellik" },
+      { text: "Inventory aramasında property, damage type ve mastery desteği", category: "İyileştirme" },
+      { text: "Equipment kuralları için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "1.24.0", date: "2026-07-15", title: "Spell Database Expansion",
     summary: "2014 ve 2024 büyü veri şeması, mekanik alanlar, gelişmiş filtreler ve level uyumlu Builder seçimi eklendi.",
     changes: [

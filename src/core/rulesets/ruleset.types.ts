@@ -149,8 +149,10 @@ export interface DndSpellData {
 }
 
 
-export type DndItemCategory = "weapon" | "armor" | "shield" | "gear";
+export type DndItemCategory = "weapon" | "armor" | "shield" | "gear" | "tool" | "pack" | "ammunition";
 export type DndArmorType = "light" | "medium" | "heavy";
+export type WeaponCategory = "simple" | "martial";
+export type WeaponMastery = "Cleave" | "Graze" | "Nick" | "Push" | "Sap" | "Slow" | "Topple" | "Vex";
 
 export interface DndMonsterData {
   id: string;
@@ -190,9 +192,13 @@ export interface DndItemData {
 
   damage?: string;
   damageType?: string;
+  weaponCategory?: WeaponCategory;
+  mastery?: WeaponMastery;
   properties?: string[];
   range?: string;
   tags?: string[];
+  quantityInBundle?: number;
+  contents?: Array<{ itemId: string; quantity: number }>;
 }
 
 export interface RulesetData {

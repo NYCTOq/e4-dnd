@@ -3,6 +3,7 @@ import type { DndItemData, DndSpellData, RulesetData } from "../../core/rulesets
 import type { Character, CharacterDraft, CharacterHitDiePool } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getProficiencyBonus } from "../../core/character/characterCalculator";
 import { getHighestSpellLevel, getSpellMechanicSummary } from "../../core/rulesets/spellRules";
+import { getItemSearchText, getWeaponMastery } from "../../core/rulesets/equipmentRules";
 
 export const emptyDraft: CharacterDraft = {
   name: "",
@@ -324,14 +325,18 @@ export function getItemCategoryLabel(category: DndItemData["category"]) {
     armor: "Armor",
     shield: "Shield",
     gear: "Gear",
+    tool: "Tool",
+    pack: "Pack",
+    ammunition: "Ammunition",
   };
 
   return labels[category];
 }
 
-export function getItemRulesSummary(item: DndItemData) {
+export function getItemRulesSummary(item: DndItemData, rulesetId = "dnd_2014") {
   if (item.category === "weapon") {
-    return [item.damage, item.damageType, item.range ? `Range ${item.range}` : null]
+    const mastery = getWeaponMastery(item, rulesetId);
+    return [item.damage, item.damageType, item.range ? `Range ${item.range}` : null, mastery ? `Mastery: ${mastery}` : null]
       .filter(Boolean)
       .join(" • ");
   }
@@ -758,21 +763,8 @@ export function CharacterInventoryManager({
 
     return (rulesetData?.items ?? []).filter((item) => {
       const matchesCategory = categoryFilter === "all" || item.category === categoryFilter;
-      const matchesSearch =
-        normalizedSearch.length === 0 ||
-        [
-          item.name,
-          item.category,
-          item.description,
-          item.damage,
-          item.damageType,
-          item.armorType,
-          item.properties?.join(" "),
-          item.tags?.join(" "),
-        ]
-          .join(" ")
-          .toLowerCase()
-          .includes(normalizedSearch);
+      const matchesSearch = normalizedSearch.length === 0 ||
+        getItemSearchText(item, rulesetData?.id ?? "dnd_2014").includes(normalizedSearch);
 
       return matchesCategory && matchesSearch;
     });
@@ -977,6 +969,9 @@ export function CharacterInventoryManager({
                 <option value="armor">Armor</option>
                 <option value="shield">Shield</option>
                 <option value="gear">Gear</option>
+                <option value="tool">Tool</option>
+                <option value="pack">Pack</option>
+                <option value="ammunition">Ammunition</option>
               </select>
             </label>
           </div>
@@ -1004,7 +999,7 @@ export function CharacterInventoryManager({
                       </div>
                       <p>{item.description}</p>
                       <div className="library-pill-row">
-                        <span>{getItemRulesSummary(item)}</span>
+                        <span>{getItemRulesSummary(item, rulesetData?.id)}</span>
                         <span>{item.cost}</span>
                         <span>{item.weight} lb</span>
                         {item.stealthDisadvantage ? <span>Stealth Disadv.</span> : null}
@@ -1019,7 +1014,7 @@ export function CharacterInventoryManager({
                         <button type="button" onClick={() => updateItemQuantity(item.id, quantity + 1)}>+</button>
                       </div>
 
-                      {item.category !== "gear" ? (
+                      {["weapon", "armor", "shield"].includes(item.category) ? (
                         <button
                           type="button"
                           className={equipped ? "active" : ""}
@@ -1039,4 +1034,3 @@ export function CharacterInventoryManager({
     </section>
   );
 }
-
