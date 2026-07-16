@@ -43,6 +43,7 @@ import { getFeatRuntime } from "../../core/rulesets/featRuntimeRules";
 import { consumeInventoryItem, createItemEffect, getItemHealingFormula, isConsumableItem } from "../../core/rulesets/itemUseRules";
 import { getItemEffectRuntime, getItemTempHp, removeFragileItemEffects } from "../../core/rulesets/itemEffectRuntimeRules";
 import { getMagicWeaponExtraDamage, type MagicWeaponTarget } from "../../core/rulesets/magicWeaponRules";
+import { getMagicArmorRuntime } from "../../core/rulesets/magicArmorRules";
 import { getAttunedItemCount, recoverHighestSpentSpellSlot, recoverItemCharges, spendItemCharge, toggleItemAttunement } from "../../core/rulesets/magicItemRules";
 import {
   calculateEffectiveArmorClass,
@@ -132,6 +133,7 @@ export function PlayMode({
   const [incomingPhysical,setIncomingPhysical]=useState(true);
   const [incomingPotionResisted,setIncomingPotionResisted]=useState(false);
   const [magicWeaponTarget,setMagicWeaponTarget]=useState<MagicWeaponTarget>("normal");
+  const [incomingDamageType,setIncomingDamageType]=useState("physical");
 
   const character =
     characters.find((item) => item.id === selectedCharacterId) ?? characters[0];
@@ -200,6 +202,7 @@ export function PlayMode({
   const paladinAuras=isPaladin(activeCharacter.className)?getPaladinAuraSummary(activeCharacter.level):null;
   const activeSpellEffects=activeCharacter.activeSpellEffects??[];
   const itemEffectRuntime=getItemEffectRuntime(activeSpellEffects);
+  const magicArmorRuntime=getMagicArmorRuntime(activeCharacter,rulesetData?.items);
   const armorClass=baseArmorClass+itemEffectRuntime.armorClassBonus;
   const conditionEffects=getConditionEffects(activeCharacter.conditions);
   const exhaustionEffects=getExhaustionEffects(activeCharacter.ruleset,activeCharacter.exhaustion);
@@ -272,7 +275,7 @@ export function PlayMode({
   function endSpellEffect(id:string){const next=activeSpellEffects.filter(effect=>effect.id!==id);commit({activeSpellEffects:next,conditions:next.some(effect=>effect.concentration)?activeCharacter.conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")})}
   function concentrationSave(dc:number){const result=rollDice({count:1,sides:20,modifier:getAbilityModifier(activeCharacter.abilities.con)});const success=result.total>=dc;commit(success?{}:{activeSpellEffects:activeSpellEffects.filter(effect=>!effect.concentration),conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")});setPendingConcentrationDc(null);setRollHistory(current=>[{id:result.id,label:`Concentration Save DC ${dc} · ${success?"Başarılı":"Başarısız"}`,notation:result.notation,total:result.total},...current].slice(0,6))}
 
-  function takeDamage(critical=false){const rageReduced=reduceRageDamage(survivalAmount,isRaging,incomingPhysical);const finalDamage=itemEffectRuntime.damageResistance&&incomingPotionResisted?Math.ceil(rageReduced/2):rageReduced;const result=applyDamage({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},finalDamage,critical);commit({currentHp:result.currentHp,tempHp:result.tempHp,deathSaves:result.deathSaves});if(activeSpellEffects.some(effect=>effect.concentration))setPendingConcentrationDc(result.concentrationDc);setRollHistory(current=>[{id:crypto.randomUUID(),label:`${critical?"Kritik ":""}Hasar${rageReduced!==survivalAmount?" · Rage Resistance":""}${finalDamage!==rageReduced?" · Potion Resistance":""}${result.absorbedByTempHp?` · ${result.absorbedByTempHp} Temp HP emdi`:""}`,notation:`-${finalDamage} HP`,total:-finalDamage},...current].slice(0,6))}
+  function takeDamage(critical=false){const rageReduced=reduceRageDamage(survivalAmount,isRaging,incomingPhysical);const armorResisted=magicArmorRuntime.resistanceDamageTypes.includes(incomingDamageType);const potionResisted=itemEffectRuntime.damageResistance&&incomingPotionResisted;const finalDamage=armorResisted||potionResisted?Math.ceil(rageReduced/2):rageReduced;const effectiveCritical=critical&&!magicArmorRuntime.preventsCriticalDamage;const result=applyDamage({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},finalDamage,effectiveCritical);commit({currentHp:result.currentHp,tempHp:result.tempHp,deathSaves:result.deathSaves});if(activeSpellEffects.some(effect=>effect.concentration))setPendingConcentrationDc(result.concentrationDc);setRollHistory(current=>[{id:crypto.randomUUID(),label:`${critical?"Kritik ":""}Hasar${critical&&!effectiveCritical?" · Adamantine":""}${rageReduced!==survivalAmount?" · Rage Resistance":""}${armorResisted?" · Armor Resistance":potionResisted?" · Potion Resistance":""}${result.absorbedByTempHp?` · ${result.absorbedByTempHp} Temp HP emdi`:""}`,notation:`-${finalDamage} HP`,total:-finalDamage},...current].slice(0,6))}
   function healDamage(){const result=applyHealing({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},survivalAmount);commit({currentHp:result.currentHp,deathSaves:result.deathSaves})}
   function rollDeathSave(){const roll=rollDice({count:1,sides:20,modifier:0});const result=resolveDeathSave({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},roll.rolls[0]);commit({currentHp:result.currentHp,deathSaves:result.deathSaves});setRollHistory(current=>[{id:roll.id,label:`Death Save${roll.rolls[0]===20?" · Natural 20":roll.rolls[0]===1?" · Natural 1":""}`,notation:roll.notation,total:roll.total},...current].slice(0,6))}
 
@@ -530,12 +533,15 @@ export function PlayMode({
 
             <div className="survival-console">
               <input type="number" min="1" value={survivalAmount} onChange={event=>setSurvivalAmount(Math.max(1,Number(event.target.value)||1))}/>
+              <select aria-label="Gelen hasar türü" value={incomingDamageType} onChange={event=>setIncomingDamageType(event.target.value)}><option value="physical">Physical</option><option value="fire">Fire</option><option value="cold">Cold</option><option value="lightning">Lightning</option><option value="poison">Poison</option><option value="acid">Acid</option><option value="necrotic">Necrotic</option><option value="radiant">Radiant</option><option value="psychic">Psychic</option><option value="force">Force</option><option value="thunder">Thunder</option></select>
               <button type="button" onClick={()=>takeDamage(false)}>Hasar Al</button>
               <button type="button" onClick={()=>takeDamage(true)}>Kritik Hasar</button>
               <button type="button" onClick={healDamage}>İyileştir</button>
             </div>
             {isBarbarian?<label className="rage-resistance-toggle"><input type="checkbox" checked={incomingPhysical} onChange={event=>setIncomingPhysical(event.target.checked)}/> Gelen hasar fiziksel</label>:null}
             {itemEffectRuntime.damageResistance?<label className="rage-resistance-toggle"><input type="checkbox" checked={incomingPotionResisted} onChange={event=>setIncomingPotionResisted(event.target.checked)}/> Gelen hasar potion direnciyle eşleşiyor</label>:null}
+            {magicArmorRuntime.resistanceDamageTypes.length?<small>Armor Resistance: {magicArmorRuntime.resistanceDamageTypes.join(", ")}</small>:null}
+            {magicArmorRuntime.preventsCriticalDamage?<small>Adamantine: gelen critical hit normal hit sayılır.</small>:null}
             {pendingConcentrationDc?<button type="button" className="concentration-prompt" onClick={()=>concentrationSave(pendingConcentrationDc)}>Concentration Save At · DC {pendingConcentrationDc}</button>:null}
             {activeCharacter.currentHp===0?<div className="death-save-console"><strong>Death Saves · ✓ {activeCharacter.deathSaves.successes}/3 · ✕ {activeCharacter.deathSaves.failures}/3</strong><button type="button" disabled={activeCharacter.deathSaves.successes>=3||activeCharacter.deathSaves.failures>=3} onClick={rollDeathSave}>Death Save At</button></div>:null}
 

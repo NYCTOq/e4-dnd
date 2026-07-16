@@ -201,6 +201,8 @@ export interface DndItemData {
   extraDamageType?: string;
   extraDamageTargetTag?: "dragon" | "giant" | "undead-fiend";
   criticalExtraDamageDice?: string;
+  resistanceDamageType?: string;
+  preventsCriticalDamage?: boolean;
   armorBonus?: number;
   grantedSpellName?: string;
   chargeCost?: number;
