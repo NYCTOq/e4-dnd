@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.31.0",date:"2026-07-16",title:"Bardic Inspiration & Support",
+    summary:"Bardic Inspiration zarları, kaynak harcaması ve Bard destek progression'ı Play Mode'a bağlandı.",
+    changes:[
+      {text:"Level bazlı d6, d8, d10 ve d12 Bardic Inspiration",category:"Özellik"},
+      {text:"Bonus Action ve kaynak harcaması entegrasyonu",category:"Düzeltme"},
+      {text:"Level 5 Font of Inspiration short rest recovery",category:"Özellik"},
+      {text:"2014 edition Song of Rest progression",category:"Özellik"},
+      {text:"Countercharm, Magical Secrets ve Superior Inspiration",category:"Özellik"},
+      {text:"Bard progression için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.30.0",date:"2026-07-16",title:"Monk Martial Arts & Focus",
     summary:"Monk Martial Arts saldırıları, Focus/Ki harcaması ve temel combat seçenekleri Action Economy'ye bağlandı.",
     changes:[
