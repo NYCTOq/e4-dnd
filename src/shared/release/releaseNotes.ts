@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.32.0",date:"2026-07-16",title:"Fighter Action Surge & Indomitable",
+    summary:"Fighter'ın temel savaş kaynakları Action Economy ve save reroll akışına bağlandı.",
+    changes:[
+      {text:"Level 5/11/20 Extra Attack progression",category:"Özellik"},
+      {text:"Action Surge ile Action ve attack sayacını yenileme",category:"Özellik"},
+      {text:"Level 17'de ikinci Action Surge kullanımı",category:"Özellik"},
+      {text:"Indomitable 1–3 kullanım ve save reroll",category:"Özellik"},
+      {text:"2024 Indomitable Fighter level bonusu",category:"Düzeltme"},
+      {text:"Fighter progression için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.31.0",date:"2026-07-16",title:"Bardic Inspiration & Support",
     summary:"Bardic Inspiration zarları, kaynak harcaması ve Bard destek progression'ı Play Mode'a bağlandı.",
     changes:[
