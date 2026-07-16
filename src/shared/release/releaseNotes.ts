@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.28.0",date:"2026-07-16",title:"Rogue Sneak Attack & Cunning Action",
+    summary:"Rogue'un temel 1–20 savaş döngüsü Sneak Attack ve Action Economy entegrasyonuyla tamamlandı.",
+    changes:[
+      {text:"Level 1–20 için 1d6–10d6 Sneak Attack progression",category:"Özellik"},
+      {text:"Finesse/ranged silah, advantage, ally ve disadvantage kontrolü",category:"Düzeltme"},
+      {text:"Tur başına tek Sneak Attack ve critical dice doubling",category:"Özellik"},
+      {text:"Cunning Action ile Bonus Action Dash, Disengage ve Hide",category:"Özellik"},
+      {text:"Uncanny Dodge, Evasion, Reliable Talent ve Elusive görünümü",category:"Özellik"},
+      {text:"Rogue savaş kuralları için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.27.0",date:"2026-07-16",title:"Turn Action Economy",
     summary:"Action, Bonus Action, Reaction, movement ve Extra Attack kullanımı Play Mode tur döngüsüne bağlandı.",
     changes:[
