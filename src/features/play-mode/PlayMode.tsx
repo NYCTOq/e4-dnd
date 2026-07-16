@@ -14,6 +14,7 @@ import {
 import { PageShell } from "../../shared/layout/PageShell";
 import { getPlayReadiness } from "../../core/character/playReadiness";
 import { getMetamagicOptions } from "../../core/rulesets/metamagicRules";
+import { getEldritchInvocations } from "../../core/rulesets/invocationRules";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -127,6 +128,7 @@ export function PlayMode({
     activeCharacter.metamagicIds?.includes(option.id),
   );
   const sorceryPoints = activeCharacter.resources.find((resource) => resource.id === "sorcery-points");
+  const invocations = getEldritchInvocations(activeCharacter.ruleset).filter((option) => activeCharacter.invocationIds?.includes(option.id));
 
   function commit(patch: Partial<Character>) {
     onUpdateCharacter({
@@ -404,6 +406,18 @@ export function PlayMode({
                     </button>
                   </div>
                 ))}
+              </div>
+            </section>
+          ) : null}
+
+          {invocations.length ? (
+            <section className="play-mode-card">
+              <div className="play-mode-section-head">
+                <div><span className="mini-label">Warlock</span><h2>Eldritch Invocations</h2></div>
+                <strong>{invocations.length} aktif</strong>
+              </div>
+              <div className="play-mode-slot-grid">
+                {invocations.map((option) => <div className="play-mode-slot-row" key={option.id}><div><span>{option.name}</span><small>{option.summary}</small></div></div>)}
               </div>
             </section>
           ) : null}

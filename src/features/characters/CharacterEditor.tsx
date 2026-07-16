@@ -52,6 +52,7 @@ export function CharacterEditor({
       fightingStyleIds: character.fightingStyleIds ?? [],
       masteredWeaponIds: character.masteredWeaponIds ?? [],
       metamagicIds: character.metamagicIds ?? [],
+      invocationIds: character.invocationIds ?? [],
       skillProficiencies: character.skillProficiencies ?? [],
       expertiseSkills: character.expertiseSkills ?? [],
       toolProficiencies: character.toolProficiencies ?? [],

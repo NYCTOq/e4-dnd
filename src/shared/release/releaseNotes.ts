@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.11.0", date: "2026-07-16", title: "Warlock Eldritch Invocations",
+    summary: "Warlock Invocation seçimleri level progression, prerequisite kontrolü ve karakter ekranlarına bağlandı.",
+    changes: [
+      { text: "Yirmi açık kural temelli Invocation ve özgün kısa açıklamalar", category: "Özellik" },
+      { text: "2014 ve 2024 için ayrı Level 1–20 seçim progression", category: "Özellik" },
+      { text: "Minimum level ve Eldritch Blast prerequisite kontrolü", category: "Düzeltme" },
+      { text: "Builder, Character Sheet ve Play Mode entegrasyonu", category: "Özellik" },
+      { text: "Eski kayıtlar ve taslaklar için güvenli veri migration", category: "Teknik" },
+      { text: "Invocation kuralları için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "2.10.0", date: "2026-07-16", title: "Sorcerer Metamagic System",
     summary: "Sorcerer Metamagic seçimleri level kotası, Sorcery Point maliyeti ve Play Mode kullanımıyla eklendi.",
     changes: [

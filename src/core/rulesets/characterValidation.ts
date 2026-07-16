@@ -6,6 +6,7 @@ import type { RulesetData } from "./ruleset.types";
 import { getFightingStyleChoiceCount, getFightingStyles } from "./fightingStyleRules";
 import { getWeaponMastery, getWeaponMasteryChoiceCount } from "./equipmentRules";
 import { getMetamagicChoiceCount, getMetamagicOptions } from "./metamagicRules";
+import { getEldritchInvocations, getInvocationChoiceCount, isInvocationEligible } from "./invocationRules";
 
 export type ValidationSeverity = "error" | "warning";
 export type CharacterValidationIssue = { id: string; severity: ValidationSeverity; step: string; message: string };
@@ -54,6 +55,8 @@ export function validateCharacterDraft(draft: CharacterDraft, rulesetData: Rules
   if (masteredWeaponIds.length !== masteryLimit || masteredWeaponIds.some((id) => !validMasteryIds.has(id))) add("weapon-mastery", "error", "Equipment", `${draft.className} için ${masteryLimit} geçerli Weapon Mastery seçilmeli (${masteredWeaponIds.length} seçili).`);
   const metamagicLimit=getMetamagicChoiceCount(draft.className,draft.level,draft.ruleset); const metamagicIds=draft.metamagicIds??[]; const validMetamagicIds=new Set(getMetamagicOptions(draft.ruleset).map(item=>item.id));
   if(metamagicIds.length!==metamagicLimit||metamagicIds.some(id=>!validMetamagicIds.has(id))) add("metamagic","error","Feats",`${draft.className} için ${metamagicLimit} geçerli Metamagic seçilmeli (${metamagicIds.length} seçili).`);
+  const invocationLimit=getInvocationChoiceCount(draft.className,draft.level,draft.ruleset); const invocationIds=draft.invocationIds??[]; const invocationMap=new Map(getEldritchInvocations(draft.ruleset).map(item=>[item.id,item]));
+  if(invocationIds.length!==invocationLimit||invocationIds.some(id=>{const item=invocationMap.get(id);return !item||!isInvocationEligible(item,draft)})) add("invocations","error","Feats",`${draft.className} için ${invocationLimit} prerequisite uyumlu Eldritch Invocation seçilmeli (${invocationIds.length} seçili).`);
 
   const highestSpellLevel = getHighestSpellLevel(classData ?? undefined, draft.level);
   for (const spellId of draft.knownSpellIds) {
