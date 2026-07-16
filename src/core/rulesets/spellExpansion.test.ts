@@ -21,4 +21,19 @@ describe("spell database v2 expansion", () => {
     for (const className of ["Bard", "Sorcerer", "Warlock", "Wizard"]) expect(cantrips.some((spell) => spell.classes.includes(className))).toBe(true);
     expect(cantrips.find((spell) => spell.name === "Eldritch Blast")?.damageType).toBe("force");
   });
+  it("contains the formerly unresolved domain and oath spell references", () => {
+    const required = [
+      "Animal Friendship", "Animate Dead", "Animate Objects", "Antilife Shell", "Augury", "Aura of Life", "Aura of Purity", "Aura of Vitality",
+      "Bane", "Barkskin", "Blight", "Blindness/Deafness", "Blink", "Call Lightning", "Circle of Power", "Cloudkill", "Compulsion", "Control Water",
+      "Creation", "Destructive Wave", "Dominate Beast", "Elemental Weapon", "Fabricate", "False Life", "Flaming Sphere", "Fog Cloud", "Gentle Repose",
+      "Grasping Vine", "Greater Invisibility", "Gust of Wind", "Heat Metal", "Heroism", "Identify", "Insect Plague", "Legend Lore", "Leomund's Secret Chest",
+      "Leomund's Tiny Hut", "Locate Creature", "Magic Circle", "Mass Healing Word", "Mislead", "Nystul's Magic Aura", "Otiluke's Resilient Sphere",
+      "Planar Binding", "Rary's Telepathic Bond", "Ray of Enfeeblement", "Ray of Sickness", "Searing Smite", "Sending", "Shatter", "Sleet Storm", "Slow",
+      "Speak with Dead", "Spike Growth", "Suggestion", "Teleportation Circle", "Vampiric Touch", "Warding Bond", "Wind Wall",
+    ];
+    const names = new Set(SPELL_EXPANSION_2014.map((spell) => spell.name));
+    expect(required).toHaveLength(59);
+    expect(required.filter((name) => !names.has(name))).toEqual([]);
+    expect(SPELL_EXPANSION_2014).toHaveLength(129);
+  });
 });
