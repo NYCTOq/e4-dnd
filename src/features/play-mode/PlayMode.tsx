@@ -23,6 +23,7 @@ import { getDivineSmiteDice, getPaladinAuraSummary, isPaladin } from "../../core
 import { getCastableSlotLevels, getSpellRollFormula, rollFormula } from "../../core/rulesets/spellResolution";
 import { addSpellEffect, advanceSpellEffects, createSpellEffect } from "../../core/rulesets/spellEffectRules";
 import { applyDamage, applyHealing, resolveDeathSave } from "../../core/character/survivalRules";
+import { getCriticalDamageFormula, resolveAttack, type RollMode } from "../../core/rulesets/attackResolution";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -86,6 +87,8 @@ export function PlayMode({
   const [castSlotLevels,setCastSlotLevels]=useState<Record<string,number>>({});
   const [survivalAmount,setSurvivalAmount]=useState(1);
   const [pendingConcentrationDc,setPendingConcentrationDc]=useState<number|null>(null);
+  const [targetAc,setTargetAc]=useState(10);
+  const [attackMode,setAttackMode]=useState<RollMode>("normal");
 
   const character =
     characters.find((item) => item.id === selectedCharacterId) ?? characters[0];
@@ -273,6 +276,8 @@ export function PlayMode({
       ].slice(0, 6),
     );
   }
+
+  function weaponAttack(weapon:(typeof equippedItems.weapons)[number]){const modifier=getWeaponAttackBonus(activeCharacter,weapon);const dice=rollDice({count:attackMode==="normal"?1:2,sides:20,modifier:0});const attack=resolveAttack(dice.rolls,modifier,targetAc,attackMode);const results:RollResult[]=[{id:dice.id,label:`${weapon.name} · ${attack.hit?attack.critical?"CRITICAL":"Hit":"Miss"}`,notation:`${attackMode} · [${dice.rolls.join(", ")}] ${formatModifier(modifier)} vs AC ${targetAc}`,total:attack.total}];if(attack.hit){const formula=getCriticalDamageFormula(getWeaponDamageSummary(activeCharacter,weapon),attack.critical);if(formula){const damage=rollDice(formula);results.push({id:damage.id,label:`${weapon.name} Damage${attack.critical?" · Critical":""}`,notation:damage.notation,total:damage.total})}}setRollHistory(current=>[...results,...current].slice(0,6))}
 
   function shortRest(die: number) {
     const pool = hitDice.find((item) => item.die === die);
@@ -537,14 +542,16 @@ export function PlayMode({
               ))}
             </div>
 
+            <div className="attack-control-bar">
+              <label>Hedef AC<input type="number" min="1" value={targetAc} onChange={event=>setTargetAc(Math.max(1,Number(event.target.value)||1))}/></label>
+              <label>Atış<select value={attackMode} onChange={event=>setAttackMode(event.target.value as RollMode)}><option value="normal">Normal</option><option value="advantage">Advantage</option><option value="disadvantage">Disadvantage</option></select></label>
+            </div>
+
             {equippedItems.weapons.map((weapon) => (
               <button
                 className="play-mode-weapon-roll"
                 key={weapon.id}
-                onClick={() => quickRoll(
-                  `${weapon.name} Attack`,
-                  getWeaponAttackBonus(activeCharacter, weapon),
-                )}
+                onClick={() => weaponAttack(weapon)}
               >
                 <span>{weapon.name}</span>
                 <strong>{formatModifier(getWeaponAttackBonus(activeCharacter, weapon))}</strong>

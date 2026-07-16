@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.22.0",date:"2026-07-16",title:"Weapon Attack Resolution",
+    summary:"Silah saldırıları hedef AC, advantage/disadvantage, natural sonuçlar ve kritik hasarla tek tıkta çözülür hale geldi.",
+    changes:[
+      {text:"Normal, advantage ve disadvantage d20 seçim motoru",category:"Özellik"},
+      {text:"Ayarlanabilir hedef Armor Class kontrolü",category:"Özellik"},
+      {text:"Natural 1 otomatik miss ve Natural 20 otomatik critical",category:"Düzeltme"},
+      {text:"İsabette otomatik weapon damage roll",category:"Özellik"},
+      {text:"Kritikte yalnızca damage dice sayısının ikiye katlanması",category:"Düzeltme"},
+      {text:"Attack resolution için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.21.0",date:"2026-07-16",title:"Damage & Survival Engine",
     summary:"Hasar, temporary HP, concentration ve death save akışı tek bir kurallı masa konsolunda birleştirildi.",
     changes:[
