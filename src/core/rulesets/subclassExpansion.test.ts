@@ -17,4 +17,9 @@ describe("subclass expansion", () => {
       expect(subclass.features.every((feature) => feature.summary.length > 10)).toBe(true);
     }
   });
+  it("gives every expanded cleric domain an always-prepared spell list", () => {
+    for (const subclass of [...SUBCLASS_EXPANSION_2014, ...SUBCLASS_EXPANSION_2024].filter((item) => item.className === "Cleric")) {
+      expect(subclass.bonusSpells?.length).toBeGreaterThanOrEqual(10);
+    }
+  });
 });

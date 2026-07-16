@@ -15,6 +15,16 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.2.0", date: "2026-07-16", title: "Cleric Domain Spells Expansion",
+    summary: "Always Prepared altyapısı Life Domain dışındaki Cleric domainlerine genişletildi.",
+    changes: [
+      { text: "13 genişletilmiş 2014 Cleric domaini için seviye 1–5 bonus spell listeleri", category: "Özellik" },
+      { text: "2024 Light, Trickery ve War Domain bonus spell listeleri", category: "Özellik" },
+      { text: "Mevcut spell verisinde bulunan domain büyülerinin otomatik eşleştirilmesi", category: "Teknik" },
+      { text: "Domain spell kapsamı için otomatik regresyon testi", category: "Teknik" },
+    ],
+  },
+  {
     version: "2.1.0", date: "2026-07-15", title: "Always Prepared Spells",
     summary: "Subclass tarafından verilen büyüler normal prepared kotasını tüketmeden Builder, Editor ve Play Mode akışına bağlandı.",
     changes: [
