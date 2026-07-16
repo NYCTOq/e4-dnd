@@ -31,6 +31,7 @@ import { getEffectiveMaxHp, getEffectiveSpeed, getExhaustionEffects } from "../.
 import { getDefaultSaveDamageRule, resolveSaveDamage, resolveTargetSave, type SaveDamageRule } from "../../core/rulesets/spellTargetRules";
 import { createTurnEconomy, getAttacksPerAction, spendAttack, spendMovement, spendTurnResource } from "../../core/rulesets/actionEconomyRules";
 import { canUseSneakAttack, getRogueCombatFeatures, getSneakAttackDice } from "../../core/rulesets/rogueRules";
+import { getBarbarianCombatFeatures, getBrutalCriticalExtraDice, getRageDamageBonus, isRageDamageWeapon, reduceRageDamage } from "../../core/rulesets/barbarianRules";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -113,6 +114,8 @@ export function PlayMode({
   const [sneakAttackUsed,setSneakAttackUsed]=useState(false);
   const [sneakAttackEnabled,setSneakAttackEnabled]=useState(true);
   const [sneakAllyAdjacent,setSneakAllyAdjacent]=useState(false);
+  const [recklessAttack,setRecklessAttack]=useState(false);
+  const [incomingPhysical,setIncomingPhysical]=useState(true);
 
   const character =
     characters.find((item) => item.id === selectedCharacterId) ?? characters[0];
@@ -188,6 +191,9 @@ export function PlayMode({
   const attacksPerAction=getAttacksPerAction(activeCharacter.className,activeCharacter.level);
   const isRogue=activeCharacter.className.trim().toLowerCase()==="rogue";
   const rogueFeatures=getRogueCombatFeatures(activeCharacter.level);
+  const isBarbarian=activeCharacter.className.trim().toLowerCase()==="barbarian";
+  const barbarianFeatures=getBarbarianCombatFeatures(activeCharacter.level);
+  const isRaging=activeCharacter.conditions.includes("Rage");
 
   function commit(patch: Partial<Character>) {
     onUpdateCharacter({
@@ -221,7 +227,7 @@ export function PlayMode({
   function endSpellEffect(id:string){const next=activeSpellEffects.filter(effect=>effect.id!==id);commit({activeSpellEffects:next,conditions:next.some(effect=>effect.concentration)?activeCharacter.conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")})}
   function concentrationSave(dc:number){const result=rollDice({count:1,sides:20,modifier:getAbilityModifier(activeCharacter.abilities.con)});const success=result.total>=dc;commit(success?{}:{activeSpellEffects:activeSpellEffects.filter(effect=>!effect.concentration),conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")});setPendingConcentrationDc(null);setRollHistory(current=>[{id:result.id,label:`Concentration Save DC ${dc} · ${success?"Başarılı":"Başarısız"}`,notation:result.notation,total:result.total},...current].slice(0,6))}
 
-  function takeDamage(critical=false){const result=applyDamage({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},survivalAmount,critical);commit({currentHp:result.currentHp,tempHp:result.tempHp,deathSaves:result.deathSaves});if(activeSpellEffects.some(effect=>effect.concentration))setPendingConcentrationDc(result.concentrationDc);setRollHistory(current=>[{id:crypto.randomUUID(),label:`${critical?"Kritik ":""}Hasar${result.absorbedByTempHp?` · ${result.absorbedByTempHp} Temp HP emdi`:""}`,notation:`-${survivalAmount} HP`,total:-survivalAmount},...current].slice(0,6))}
+  function takeDamage(critical=false){const finalDamage=reduceRageDamage(survivalAmount,isRaging,incomingPhysical);const result=applyDamage({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},finalDamage,critical);commit({currentHp:result.currentHp,tempHp:result.tempHp,deathSaves:result.deathSaves});if(activeSpellEffects.some(effect=>effect.concentration))setPendingConcentrationDc(result.concentrationDc);setRollHistory(current=>[{id:crypto.randomUUID(),label:`${critical?"Kritik ":""}Hasar${finalDamage!==survivalAmount?" · Rage Resistance":""}${result.absorbedByTempHp?` · ${result.absorbedByTempHp} Temp HP emdi`:""}`,notation:`-${finalDamage} HP`,total:-finalDamage},...current].slice(0,6))}
   function healDamage(){const result=applyHealing({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},survivalAmount);commit({currentHp:result.currentHp,deathSaves:result.deathSaves})}
   function rollDeathSave(){const roll=rollDice({count:1,sides:20,modifier:0});const result=resolveDeathSave({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},roll.rolls[0]);commit({currentHp:result.currentHp,deathSaves:result.deathSaves});setRollHistory(current=>[{id:roll.id,label:`Death Save${roll.rolls[0]===20?" · Natural 20":roll.rolls[0]===1?" · Natural 1":""}`,notation:roll.notation,total:roll.total},...current].slice(0,6))}
 
@@ -434,6 +440,7 @@ export function PlayMode({
         <div className="play-mode-grid">
           <section className="play-mode-card turn-economy-card"><div className="play-mode-section-head"><div><span className="mini-label">Current Turn</span><h2>Action Economy</h2></div><button type="button" onClick={()=>{setTurnEconomy(createTurnEconomy());setSneakAttackUsed(false)}}>Yeni Tur</button></div><div className="turn-resource-grid"><button className={turnEconomy.actionUsed?"spent":""} onClick={()=>setTurnEconomy(current=>spendTurnResource(current,"action"))}>Action <small>{turnEconomy.actionUsed?"Kullanıldı":"Hazır"}</small></button><button className={turnEconomy.bonusActionUsed?"spent":""} onClick={()=>setTurnEconomy(current=>spendTurnResource(current,"bonus-action"))}>Bonus Action <small>{turnEconomy.bonusActionUsed?"Kullanıldı":"Hazır"}</small></button><button className={turnEconomy.reactionUsed?"spent":""} onClick={()=>setTurnEconomy(current=>spendTurnResource(current,"reaction"))}>Reaction <small>{turnEconomy.reactionUsed?"Kullanıldı":"Hazır"}</small></button></div><div className="movement-console"><span>Movement {turnEconomy.movementUsed} / {effectiveSpeed} ft.</span>{[5,10,15].map(feet=><button type="button" key={feet} disabled={turnEconomy.movementUsed>=effectiveSpeed} onClick={()=>setTurnEconomy(current=>spendMovement(current,feet,effectiveSpeed))}>+{feet}</button>)}</div><small>Attack {turnEconomy.attacksUsed} / {attacksPerAction} · Spell casting time action kaynağını otomatik harcar.</small></section>
           {isRogue?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Rogue Combat</span><h2>Sneak Attack · {getSneakAttackDice(activeCharacter.level)}d6</h2></div><strong>{sneakAttackUsed?"Bu tur kullanıldı":"Hazır"}</strong></div><div className="rogue-toggle-grid"><label><input type="checkbox" checked={sneakAttackEnabled} onChange={event=>setSneakAttackEnabled(event.target.checked)}/> İsabette uygula</label><label><input type="checkbox" checked={sneakAllyAdjacent} onChange={event=>setSneakAllyAdjacent(event.target.checked)}/> Hedefin yanında müttefik var</label></div>{rogueFeatures.cunningAction?<div className="play-mode-big-buttons">{["Dash","Disengage","Hide"].map(action=><button type="button" key={action} disabled={turnEconomy.bonusActionUsed} onClick={()=>setTurnEconomy(current=>spendTurnResource(current,"bonus-action"))}>{action}</button>)}</div>:null}<div className="condition-rule-summary">{rogueFeatures.uncannyDodge?<small>Uncanny Dodge: görülen saldırıya Reaction ile yarım hasar.</small>:null}{rogueFeatures.evasion?<small>Evasion: DEX save hasarı başarıda 0, başarısızlıkta yarım.</small>:null}{rogueFeatures.reliableTalent?<small>Reliable Talent: proficient check d20 sonucu minimum 10.</small>:null}{rogueFeatures.elusive?<small>Elusive: incapacitated değilken saldırılar sana advantage alamaz.</small>:null}</div></section>:null}
+          {isBarbarian?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Barbarian Combat</span><h2>Rage · +{getRageDamageBonus(activeCharacter.level)} damage</h2></div><strong>{isRaging?"Raging":"Hazır değil"}</strong></div><div className="rogue-toggle-grid"><label><input type="checkbox" checked={recklessAttack} disabled={!barbarianFeatures.recklessAttack} onChange={event=>setRecklessAttack(event.target.checked)}/> Reckless Attack</label><span>Brutal Critical +{getBrutalCriticalExtraDice(activeCharacter.level,activeCharacter.ruleset)} die</span></div><div className="condition-rule-summary"><small>STR melee uygun silah: {equippedItems.weapons.some(isRageDamageWeapon)?"var":"yok"}</small>{barbarianFeatures.dangerSense?<small>Danger Sense: görülen DEX save tehlikelerine advantage.</small>:null}{barbarianFeatures.relentlessRage?<small>Relentless Rage: 0 HP yerine CON save.</small>:null}{barbarianFeatures.persistentRage?<small>Persistent Rage etkin.</small>:null}</div></section>:null}
           <section className="play-mode-card play-mode-hp-card">
             <div className="play-mode-section-head">
               <div><span className="mini-label">Hit Points</span><h2>Can Yönetimi</h2></div>
@@ -456,6 +463,7 @@ export function PlayMode({
               <button type="button" onClick={()=>takeDamage(true)}>Kritik Hasar</button>
               <button type="button" onClick={healDamage}>İyileştir</button>
             </div>
+            {isBarbarian?<label className="rage-resistance-toggle"><input type="checkbox" checked={incomingPhysical} onChange={event=>setIncomingPhysical(event.target.checked)}/> Gelen hasar fiziksel</label>:null}
             {pendingConcentrationDc?<button type="button" className="concentration-prompt" onClick={()=>concentrationSave(pendingConcentrationDc)}>Concentration Save At · DC {pendingConcentrationDc}</button>:null}
             {activeCharacter.currentHp===0?<div className="death-save-console"><strong>Death Saves · ✓ {activeCharacter.deathSaves.successes}/3 · ✕ {activeCharacter.deathSaves.failures}/3</strong><button type="button" disabled={activeCharacter.deathSaves.successes>=3||activeCharacter.deathSaves.failures>=3} onClick={rollDeathSave}>Death Save At</button></div>:null}
 

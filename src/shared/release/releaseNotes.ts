@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.29.0",date:"2026-07-16",title:"Barbarian Rage Combat",
+    summary:"Barbarian Rage savunması ve 1–20 combat progression bilgileri Play Mode hasar motoruna bağlandı.",
+    changes:[
+      {text:"Level bazlı +2/+3/+4 Rage damage hesabı",category:"Özellik"},
+      {text:"Rage sırasında fiziksel hasarı yarıya indirme",category:"Özellik"},
+      {text:"STR melee weapon uygunluk kontrolü",category:"Düzeltme"},
+      {text:"2014 ve 2024 Brutal Critical progression ayrımı",category:"Özellik"},
+      {text:"Reckless Attack, Danger Sense, Relentless ve Persistent Rage paneli",category:"Özellik"},
+      {text:"Barbarian combat kuralları için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.28.0",date:"2026-07-16",title:"Rogue Sneak Attack & Cunning Action",
     summary:"Rogue'un temel 1–20 savaş döngüsü Sneak Attack ve Action Economy entegrasyonuyla tamamlandı.",
     changes:[
