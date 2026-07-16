@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.34.0",date:"2026-07-16",title:"Sorcerer Font of Magic",
+    summary:"Sorcery Points ve spell slotları arasındaki çift yönlü dönüşüm Play Mode kaynak sistemine bağlandı.",
+    changes:[
+      {text:"Level 1–5 slot yaratma için 2/3/5/6/7 SP maliyeti",category:"Özellik"},
+      {text:"Spell slot harcayarak slot level kadar SP kazanma",category:"Özellik"},
+      {text:"Sorcery Point maksimumu ve hazır/harcanmış slot kontrolleri",category:"Düzeltme"},
+      {text:"Metamagic ile ortak Sorcery Point havuzu",category:"Düzeltme"},
+      {text:"Sorcerous Restoration progression görünümü",category:"Özellik"},
+      {text:"Font of Magic için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.33.0",date:"2026-07-16",title:"Cleric Channel Divinity",
     summary:"Cleric Channel Divinity seçenekleri, Turn Undead ve edition özellikleri Play Mode'a bağlandı.",
     changes:[
