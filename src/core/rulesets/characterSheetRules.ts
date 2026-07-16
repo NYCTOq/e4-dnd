@@ -33,6 +33,7 @@ export function getCharacterFeatures(character:Character, rulesetData:RulesetDat
   const wildShapeFeatures=getWildShapeForms().filter(item=>character.wildShapeFormIds?.includes(item.id)).map(item=>({source:`Wild Shape · CR ${item.challengeRating}`,name:item.name,summary:`${item.summary} ${item.movement}`}));
   const maneuverFeatures=getBattleMasterManeuvers().filter(item=>character.maneuverIds?.includes(item.id)).map(item=>({source:`Maneuver · ${getSuperiorityDie(character.level)}`,name:item.name,summary:item.summary}));
   const companion=getRangerCompanions(character.ruleset).find(item=>item.id===character.companionId);const companionFeatures=companion?(()=>{const stats=getCompanionStats(companion,character.level,getAbilityModifier(character.abilities.wis));return[{source:"Beast Master Companion",name:companion.name,summary:`AC ${stats.armorClass} · HP ${stats.maxHp} · ${companion.attackName} ${stats.damage} · ${companion.speed}`} ]})():[];
-  return [...classFeatures,...subclassFeatures,...featFeatures,...metamagicFeatures,...invocationFeatures,...wildShapeFeatures,...maneuverFeatures,...companionFeatures];
+  const arcanumFeatures=(rulesetData?.spells??[]).filter(spell=>character.arcanumSpellIds?.includes(spell.id)).map(spell=>({source:`Mystic Arcanum · Level ${spell.level}`,name:spell.name,summary:spell.description}));
+  return [...classFeatures,...subclassFeatures,...featFeatures,...metamagicFeatures,...invocationFeatures,...wildShapeFeatures,...maneuverFeatures,...companionFeatures,...arcanumFeatures];
 }
 export function getPassiveScore(character:Character, skill:string) { return 10+getSkillBonus(character,skill); }

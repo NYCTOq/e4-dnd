@@ -75,6 +75,8 @@ export interface Character {
   maneuverIds?: string[];
   companionId?: string;
   companionCurrentHp?: number;
+  arcanumSpellIds?: string[];
+  usedArcanumSpellIds?: string[];
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];
@@ -133,6 +135,8 @@ export interface CharacterDraft {
   maneuverIds?: string[];
   companionId?: string;
   companionCurrentHp?: number;
+  arcanumSpellIds?: string[];
+  usedArcanumSpellIds?: string[];
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];

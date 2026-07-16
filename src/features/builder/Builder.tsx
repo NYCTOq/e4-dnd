@@ -19,6 +19,7 @@ import { getEldritchInvocations, getInvocationChoiceCount, isInvocationEligible 
 import { getWildShapeForms, getWildShapeKnownCount, isWildShapeFormEligible } from "../../core/rulesets/wildShapeRules";
 import { getBattleMasterManeuvers, getManeuverChoiceCount, getSuperiorityDie } from "../../core/rulesets/maneuverRules";
 import { getCompanionChoiceCount, getCompanionStats, getRangerCompanions } from "../../core/rulesets/companionRules";
+import { getMysticArcanumLevels } from "../../core/rulesets/pactMagicRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
@@ -131,6 +132,8 @@ export function Builder({
   const selectedManeuverIds=draft.maneuverIds??[];
   const companionLimit=getCompanionChoiceCount(draft.className,draft.subclass,draft.level);
   const companionOptions=useMemo(()=>getRangerCompanions(draft.ruleset),[draft.ruleset]);
+  const arcanumLevels=getMysticArcanumLevels(draft.className,draft.level,draft.ruleset);
+  const arcanumOptions=useMemo(()=>(activeRulesetData?.spells??[]).filter(spell=>arcanumLevels.includes(spell.level)&&spell.classes.some(name=>name.toLowerCase()==="warlock")),[activeRulesetData,arcanumLevels]);
   const canCastSpells = Boolean(selectedClass?.spellcastingAbility);
   const grantedSkills = useMemo(() => getGrantedSkills(selectedBackground), [selectedBackground]);
   const availableClassSkills = useMemo(() => getAvailableClassSkills(selectedClass, selectedBackground), [selectedClass, selectedBackground]);
@@ -207,6 +210,7 @@ export function Builder({
   function toggleWildShapeForm(id:string){setDraft(current=>{const selected=current.wildShapeFormIds??[];if(selected.includes(id))return{...current,wildShapeFormIds:selected.filter(item=>item!==id)};const form=wildShapeForms.find(item=>item.id===id);if(!form||!isWildShapeFormEligible(form,current.level,current.ruleset,current.subclass)||selected.length>=wildShapeLimit)return current;return{...current,wildShapeFormIds:[...selected,id]}})}
   function toggleManeuver(id:string){setDraft(current=>{const selected=current.maneuverIds??[];if(selected.includes(id))return{...current,maneuverIds:selected.filter(item=>item!==id)};if(!maneuverOptions.some(item=>item.id===id)||selected.length>=maneuverLimit)return current;return{...current,maneuverIds:[...selected,id]}})}
   function selectCompanion(id:string){setDraft(current=>({...current,companionId:current.companionId===id?undefined:id,companionCurrentHp:undefined}))}
+  function selectArcanum(id:string,level:number){setDraft(current=>{const ids=current.arcanumSpellIds??[];const sameLevelIds=new Set(arcanumOptions.filter(spell=>spell.level===level).map(spell=>spell.id));return{...current,arcanumSpellIds:ids.includes(id)?ids.filter(item=>item!==id):[...ids.filter(item=>!sameLevelIds.has(item)),id],usedArcanumSpellIds:[]}})}
 
   const knownSpells = useMemo(() => {
     const spellMap = new Map((activeRulesetData?.spells ?? []).map((spell) => [spell.id, spell]));
@@ -908,7 +912,7 @@ export function Builder({
           ) : null}
 
           {activeStep.id === "spells" ? (
-            <CharacterSpellSelector
+            <><CharacterSpellSelector
               title="Karakter Spellbook"
               description="Bu karakterin bildiği cantripleri ve hazırladığı büyüleri seç. Slotlar karakter detayında takip ediliyor."
               rulesetData={rulesetData}
@@ -928,6 +932,7 @@ export function Builder({
                 }))
               }
             />
+            {arcanumLevels.length?<section className="form-panel"><div className="panel-heading-row"><div><span className="mini-label">Warlock High Magic</span><h2>Mystic Arcanum</h2></div><span>{(draft.arcanumSpellIds??[]).length} / {arcanumLevels.length}</span></div>{arcanumLevels.map(level=><div className="ruleset-foundation-card" key={level}><h3>Level {level} Arcanum</h3><div className="builder-choice-grid">{arcanumOptions.filter(spell=>spell.level===level).map(spell=>{const selected=draft.arcanumSpellIds?.includes(spell.id);return <article className={`builder-choice-card ${selected?"selected":""}`} key={spell.id}><div className="panel-heading-row"><h3>{spell.name}</h3><button type="button" onClick={()=>selectArcanum(spell.id,level)}>{selected?"Kaldır":"Seç"}</button></div><p>{spell.description}</p></article>})}</div></div>)}</section>:null}</>
           ) : null}
 
           {activeStep.id === "equipment" ? (

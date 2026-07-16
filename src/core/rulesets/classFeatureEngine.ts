@@ -1,5 +1,6 @@
 import type { AbilityScores, CharacterResource, ResourceRecovery, RulesetId } from "../character/character.types";
 import { getSuperiorityDiceCount, isBattleMaster } from "./maneuverRules";
+import { getMysticArcanumLevels } from "./pactMagicRules";
 
 export type ClassFeatureAction = {
   id: string; name: string; actionType: "Action" | "Bonus Action" | "Reaction" | "Passive";
@@ -28,7 +29,7 @@ export function getClassResources(className: string, level: number, abilities: A
     case "ranger": return ruleset === "dnd_2024" ? [resource("favored-enemy", "Favored Enemy", modifier(abilities.wis), "long")] : [];
     case "rogue": return safeLevel >= 20 ? [resource("stroke-of-luck", "Stroke of Luck", 1, "short")] : [];
     case "sorcerer": return safeLevel >= 2 ? [resource("sorcery-points", "Sorcery Points", safeLevel, "long")] : [];
-    case "warlock": return safeLevel >= 11 ? [resource("mystic-arcanum", "Mystic Arcanum", Math.min(4, safeLevel - 10), "long")] : [];
+    case "warlock": { const arcanumCount=getMysticArcanumLevels(className,safeLevel,ruleset).length;return arcanumCount?[resource("mystic-arcanum", "Mystic Arcanum", arcanumCount, "long")]:[]; }
     case "wizard": return [resource("arcane-recovery", "Arcane Recovery", 1, "long")];
     default: return [];
   }

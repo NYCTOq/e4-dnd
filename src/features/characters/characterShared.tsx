@@ -28,6 +28,8 @@ export const emptyDraft: CharacterDraft = {
   maneuverIds: [],
   companionId: undefined,
   companionCurrentHp: undefined,
+  arcanumSpellIds: [],
+  usedArcanumSpellIds: [],
   skillProficiencies: [],
   expertiseSkills: [],
   toolProficiencies: [],
@@ -63,7 +65,7 @@ export const emptyDraft: CharacterDraft = {
 };
 
 const draftArrayKeys = [
-  "featIds", "fightingStyleIds", "masteredWeaponIds", "metamagicIds", "invocationIds", "wildShapeFormIds", "maneuverIds", "skillProficiencies", "expertiseSkills", "toolProficiencies", "languages",
+  "featIds", "fightingStyleIds", "masteredWeaponIds", "metamagicIds", "invocationIds", "wildShapeFormIds", "maneuverIds", "arcanumSpellIds", "usedArcanumSpellIds", "skillProficiencies", "expertiseSkills", "toolProficiencies", "languages",
   "knownSpellIds", "preparedSpellIds", "spellSlots", "inventory", "equippedWeaponIds", "hitDice",
 ] as const;
 
@@ -433,6 +435,7 @@ export function createCharacterFromDraft(draft: CharacterDraft): Character {
     currentHp: draft.maxHp,
     tempHp: 0,
     companionCurrentHp: companionMaxHp,
+    usedArcanumSpellIds: [],
     conditions: [],
     createdAt: now,
     updatedAt: now,

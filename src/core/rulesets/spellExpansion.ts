@@ -39,6 +39,8 @@ const seeds: Seed[] = [
   ["Earthquake",8,"Transmutation","damage",["Cleric","Druid","Sorcerer"],"Geniş alanda zemin, yapılar ve concentration üzerinde yıkıcı sarsıntı oluşturur.",{concentration:true,saveAbility:"dex",area:"100-foot radius",duration:"Up to 1 minute"}],
   ["Holy Aura",8,"Abjuration","defense",["Cleric"],"Yakındaki müttefikleri saldırılara ve bazı extraplanar etkilere karşı güçlendirir.",{concentration:true,duration:"Up to 1 minute",area:"30-foot radius",materialCost:"1,000 gp"}],
   ["Astral Projection",9,"Necromancy","movement",["Cleric","Warlock","Wizard"],"Grubun astral bedenlerini Astral Plane'e gönderir.",{castingTime:"1 hour",duration:"Special",materialCost:"1,100 gp",materialConsumed:true,target:"Up to nine creatures"}],
+  ["Demiplane",8,"Conjuration","utility",["Warlock","Wizard"],"Geçici bir kapıyla küçük, yalıtılmış bir düzlemsel odaya erişim sağlar.",{duration:"1 hour"}],
+  ["Dominate Monster",8,"Enchantment","control",["Bard","Sorcerer","Warlock","Wizard"],"Bir yaratığın davranışlarını güçlü zihinsel bağ ile kontrol etmeye çalışır.",{concentration:true,saveAbility:"wis",duration:"Up to 1 hour"}],
   ["Gate",9,"Conjuration","movement",["Cleric","Sorcerer","Wizard"],"Başka bir düzleme geçit açar veya bilinen bir varlığı geçide çağırır.",{concentration:true,duration:"Up to 1 minute",materialCost:"5,000 gp"}],
   ["Mass Heal",9,"Abjuration","healing",["Cleric"],"Görüş alanındaki hedefler arasında çok büyük bir healing havuzu paylaştırır.",{healingDice:"700",target:"Multiple creatures"}],
   ["True Resurrection",9,"Necromancy","healing",["Cleric","Druid"],"Çok uzun süre önce ölen bir yaratığı yeni beden oluşturarak hayata döndürebilir.",{castingTime:"1 hour",materialCost:"25,000 gp",materialConsumed:true}],

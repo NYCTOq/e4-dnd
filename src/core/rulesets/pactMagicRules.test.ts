@@ -1,0 +1,2 @@
+import{describe,expect,it}from"vitest";import{getMysticArcanumLevels,getPactMagicSlots}from"./pactMagicRules";
+describe("pact magic",()=>{it("tracks pact slots",()=>{expect(getPactMagicSlots("Warlock",1)[0]).toMatchObject({level:1,max:1});expect(getPactMagicSlots("Warlock",17)[0]).toMatchObject({level:5,max:4})});it("unlocks arcanum levels separately",()=>expect(getMysticArcanumLevels("Warlock",17,"dnd_2014")).toEqual([6,7,8,9]));it("ignores other classes",()=>expect(getPactMagicSlots("Wizard",10)).toEqual([]))});

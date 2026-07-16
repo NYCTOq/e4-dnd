@@ -57,6 +57,8 @@ export function CharacterEditor({
       maneuverIds: character.maneuverIds ?? [],
       companionId: character.companionId,
       companionCurrentHp: character.companionCurrentHp,
+      arcanumSpellIds: character.arcanumSpellIds ?? [],
+      usedArcanumSpellIds: character.usedArcanumSpellIds ?? [],
       skillProficiencies: character.skillProficiencies ?? [],
       expertiseSkills: character.expertiseSkills ?? [],
       toolProficiencies: character.toolProficiencies ?? [],

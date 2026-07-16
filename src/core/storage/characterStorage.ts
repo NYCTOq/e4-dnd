@@ -9,6 +9,7 @@ import type {
 import { readJsonSafely, writeJsonSafely } from "./safeStorage";
 import { normalizeRulesetId } from "../rulesets/rulesetMigration";
 import { getClassResources, mergeClassResources } from "../rulesets/classFeatureEngine";
+import { getPactMagicSlots } from "../rulesets/pactMagicRules";
 
 const STORAGE_KEY = "e4_dnd_characters_v1";
 
@@ -86,7 +87,7 @@ function getDefaultSpellSlots(level: number, className: string): CharacterSpellS
 }
 
 function hydrateSpellSlots(character: Character): CharacterSpellSlot[] {
-  const defaults = getDefaultSpellSlots(character.level, character.className);
+  const defaults = character.className.trim().toLowerCase()==="warlock" ? getPactMagicSlots(character.className,character.level) : getDefaultSpellSlots(character.level, character.className);
   const existingSlots = Array.isArray(character.spellSlots)
     ? character.spellSlots
     : [];
@@ -183,6 +184,8 @@ function hydrateCharacter(character: Character): Character {
     maneuverIds: Array.isArray(character.maneuverIds) ? [...new Set(character.maneuverIds.filter((id): id is string => typeof id === "string"))] : [],
     companionId: typeof character.companionId === "string" ? character.companionId : undefined,
     companionCurrentHp: typeof character.companionCurrentHp === "number" ? Math.max(0,Math.floor(character.companionCurrentHp)) : undefined,
+    arcanumSpellIds: Array.isArray(character.arcanumSpellIds) ? [...new Set(character.arcanumSpellIds.filter((id): id is string => typeof id === "string"))] : [],
+    usedArcanumSpellIds: Array.isArray(character.usedArcanumSpellIds) ? [...new Set(character.usedArcanumSpellIds.filter((id): id is string => typeof id === "string"))] : [],
     skillProficiencies: Array.isArray(character.skillProficiencies) ? [...new Set(character.skillProficiencies.filter((value): value is string => typeof value === "string"))] : [],
     expertiseSkills: Array.isArray(character.expertiseSkills) ? [...new Set(character.expertiseSkills.filter((value): value is string => typeof value === "string"))] : [],
     toolProficiencies: Array.isArray(character.toolProficiencies) ? [...new Set(character.toolProficiencies.filter((value): value is string => typeof value === "string"))] : [],

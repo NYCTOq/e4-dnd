@@ -142,6 +142,7 @@ export function PlayMode({
   const companionCurrentHp=companionStats?Math.min(companionStats.maxHp,Math.max(0,activeCharacter.companionCurrentHp??companionStats.maxHp)):0;
   const handledResourceIds=new Set(["sorcery-points","wild-shape","superiority-dice"]);
   const classActions=getClassFeatureActions(activeCharacter.className,activeCharacter.level,activeCharacter.ruleset).filter(action=>action.resourceId&&!handledResourceIds.has(action.resourceId)&&activeCharacter.resources.some(resource=>resource.id===action.resourceId));
+  const arcanumSpells=(rulesetData?.spells??[]).filter(spell=>activeCharacter.arcanumSpellIds?.includes(spell.id));
 
   function commit(patch: Partial<Character>) {
     onUpdateCharacter({
@@ -169,6 +170,7 @@ export function PlayMode({
   function useSuperiorityDie(){if(!superiorityDice||superiorityDice.used>=superiorityDice.max)return;commit({resources:activeCharacter.resources.map(resource=>resource.id==="superiority-dice"?{...resource,used:Math.min(resource.max,resource.used+1)}:resource)})}
   function updateCompanionHp(amount:number){if(!companionStats)return;commit({companionCurrentHp:Math.min(companionStats.maxHp,Math.max(0,companionCurrentHp+amount))})}
   function executeClassAction(resourceId:string,amount=1){const resource=activeCharacter.resources.find(item=>item.id===resourceId);if(!resource||resource.max-resource.used<amount)return;let currentHp=activeCharacter.currentHp;let conditions=activeCharacter.conditions;if(resourceId==="second-wind"){const result=rollDice({count:1,sides:10,modifier:activeCharacter.level});currentHp=Math.min(activeCharacter.maxHp,currentHp+result.total);setRollHistory(current=>[{id:result.id,label:"Second Wind",notation:result.notation,total:result.total},...current].slice(0,6))}if(resourceId==="lay-on-hands")currentHp=Math.min(activeCharacter.maxHp,currentHp+amount);if(resourceId==="rage"&&!conditions.includes("Rage"))conditions=[...conditions,"Rage"];commit({currentHp,conditions,resources:activeCharacter.resources.map(item=>item.id===resourceId?{...item,used:Math.min(item.max,item.used+amount)}:item)})}
+  function castArcanum(spellId:string){if(activeCharacter.usedArcanumSpellIds?.includes(spellId))return;commit({usedArcanumSpellIds:[...(activeCharacter.usedArcanumSpellIds??[]),spellId]})}
 
   function updateHp(amount: number) {
     commit({
@@ -268,6 +270,7 @@ export function PlayMode({
         item.die === die ? { ...item, used: item.used + 1 } : item,
       ),
       resources: activeCharacter.resources.map(resource=>resource.recovery==="short"?{...resource,used:0}:resource),
+      spellSlots: activeCharacter.className.trim().toLowerCase()==="warlock"?resetSpellSlots(spellSlots):spellSlots,
     });
 
     setRollHistory((current) =>
@@ -294,6 +297,7 @@ export function PlayMode({
       conditionDurations: {},
       conditions: activeCharacter.conditions.filter((item) => item === "Cursed"),
       resources: activeCharacter.resources.map(resource=>({...resource,used:0})),
+      usedArcanumSpellIds: [],
     });
   }
 
@@ -452,6 +456,8 @@ export function PlayMode({
           {companion&&companionStats?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Beast Master Companion</span><h2>{companion.name}</h2></div><strong>{companionCurrentHp} / {companionStats.maxHp} HP</strong></div><p>{companion.summary}</p><div className="play-mode-core-stats"><div><span>AC</span><strong>{companionStats.armorClass}</strong></div><div><span>Attack</span><strong>{formatModifier(companionStats.attackBonus)}</strong></div><div><span>Damage</span><strong>{companionStats.damage}</strong></div></div><div className="play-mode-big-buttons">{[-5,-1,1,5].map(amount=><button key={amount} onClick={()=>updateCompanionHp(amount)}>{amount>0?`+${amount}`:amount}</button>)}</div><small>{companion.attackName} · {companion.speed}</small></section>:null}
 
           {classActions.length?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Core Class Actions</span><h2>{activeCharacter.className} Kaynakları</h2></div></div><div className="play-mode-slot-grid">{classActions.map(action=>{const resourceId=action.resourceId!;const resource=activeCharacter.resources.find(item=>item.id===resourceId)!;const remaining=resource.max-resource.used;return <div className="play-mode-slot-row" key={action.id}><div><span>{action.name} · {action.actionType}</span><small>{action.summary}</small><strong>{remaining} / {resource.max} kaldı · {resource.recovery} rest</strong></div>{resourceId==="lay-on-hands"?<div>{[1,5,10].map(amount=><button key={amount} disabled={remaining<amount} onClick={()=>executeClassAction(resourceId,amount)}>+{amount} HP</button>)}</div>:<button type="button" disabled={remaining<1} onClick={()=>executeClassAction(resourceId)}>{resourceId==="second-wind"?"İyileş":"Kullan"}</button>}</div>})}</div></section>:null}
+
+          {arcanumSpells.length?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Warlock · Long Rest</span><h2>Mystic Arcanum</h2></div><strong>{arcanumSpells.length-(activeCharacter.usedArcanumSpellIds??[]).length} hazır</strong></div><div className="play-mode-spell-list">{arcanumSpells.sort((a,b)=>a.level-b.level).map(spell=>{const used=activeCharacter.usedArcanumSpellIds?.includes(spell.id);return <button key={spell.id} disabled={used} onClick={()=>castArcanum(spell.id)}><span>Level {spell.level} · {spell.name}</span><small>{used?"Kullanıldı":"Arcanum Kullan"}</small></button>})}</div></section>:null}
 
           <section className="play-mode-card">
             <div className="play-mode-section-head">

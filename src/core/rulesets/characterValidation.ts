@@ -10,6 +10,7 @@ import { getEldritchInvocations, getInvocationChoiceCount, isInvocationEligible 
 import { getWildShapeForms, getWildShapeKnownCount, isWildShapeFormEligible } from "./wildShapeRules";
 import { getBattleMasterManeuvers, getManeuverChoiceCount } from "./maneuverRules";
 import { getCompanionChoiceCount, getRangerCompanions } from "./companionRules";
+import { getMysticArcanumLevels } from "./pactMagicRules";
 
 export type ValidationSeverity = "error" | "warning";
 export type CharacterValidationIssue = { id: string; severity: ValidationSeverity; step: string; message: string };
@@ -64,6 +65,7 @@ export function validateCharacterDraft(draft: CharacterDraft, rulesetData: Rules
   if(invalidWildShape||wildShapeIds.length>wildShapeLimit||(draft.ruleset==="dnd_2024"&&wildShapeIds.length!==wildShapeLimit))add("wild-shape-forms","error","Feats",`${draft.className} için ${wildShapeLimit} geçerli Wild Shape formu seçilmeli (${wildShapeIds.length} seçili).`);
   const maneuverLimit=getManeuverChoiceCount(draft.className,draft.subclass,draft.level,draft.ruleset);const maneuverIds=draft.maneuverIds??[];const validManeuvers=new Set(getBattleMasterManeuvers().map(item=>item.id));if(maneuverIds.length!==maneuverLimit||maneuverIds.some(id=>!validManeuvers.has(id)))add("maneuvers","error","Feats",`${draft.subclass||draft.className} için ${maneuverLimit} geçerli maneuver seçilmeli (${maneuverIds.length} seçili).`);
   const companionLimit=getCompanionChoiceCount(draft.className,draft.subclass,draft.level);const validCompanionIds=new Set(getRangerCompanions(draft.ruleset).map(item=>item.id));if((companionLimit===1&&!draft.companionId)||(draft.companionId&&!validCompanionIds.has(draft.companionId)))add("companion","error","Feats",`${draft.subclass||draft.className} için geçerli bir companion seçilmeli.`);
+  const arcanumLevels=getMysticArcanumLevels(draft.className,draft.level,draft.ruleset);const arcanumSpells=(draft.arcanumSpellIds??[]).map(id=>rulesetData?.spells.find(spell=>spell.id===id)).filter(Boolean);if(arcanumSpells.length!==arcanumLevels.length||arcanumLevels.some(level=>arcanumSpells.filter(spell=>spell?.level===level&&spell.classes.some(name=>name.toLowerCase()==="warlock")).length!==1))add("mystic-arcanum","error","Spells",`Warlock için açılan her Mystic Arcanum level'ından bir spell seçilmeli (${arcanumSpells.length}/${arcanumLevels.length}).`);
 
   const highestSpellLevel = getHighestSpellLevel(classData ?? undefined, draft.level);
   for (const spellId of draft.knownSpellIds) {

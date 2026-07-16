@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.16.0",date:"2026-07-16",title:"Warlock Pact Magic & Mystic Arcanum",
+    summary:"Warlock'ın ayrı slot progression'ı, Short Rest yenilemesi ve üst seviye Arcanum seçimleri tamamlandı.",
+    changes:[
+      {text:"Level 1–20 Pact Magic slot seviyesi ve adet tablosu",category:"Düzeltme"},
+      {text:"Short Rest sırasında Pact Magic slotlarının yenilenmesi",category:"Özellik"},
+      {text:"Level 11, 13, 15 ve 17 Mystic Arcanum seçimleri",category:"Özellik"},
+      {text:"Builder'da her açılan spell level için zorunlu Arcanum doğrulaması",category:"Düzeltme"},
+      {text:"Character Sheet ve Play Mode tek kullanımlık Arcanum takibi",category:"Özellik"},
+      {text:"Warlock level 8 spell seçenekleri ve üç otomatik Pact Magic testi",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.15.0",date:"2026-07-16",title:"Core Class Action Console",
     summary:"Temel class kaynakları Play Mode'da kullanılabilir eylemlere ve dinlenme yenilemesine bağlandı.",
     changes:[
