@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.24.0",date:"2026-07-16",title:"Skill & Saving Throw Console",
+    summary:"Tüm skill check ve saving throw sonuçları gerçek proficiency katmanları ve roll modlarıyla Play Mode'a taşındı.",
+    changes:[
+      {text:"Altı ability saving throw için class proficiency bonusu",category:"Özellik"},
+      {text:"On sekiz skill için ability, proficiency ve expertise hesabı",category:"Özellik"},
+      {text:"Skill ve save atışlarında normal, advantage ve disadvantage",category:"Özellik"},
+      {text:"Bard level 2+ Jack of All Trades yarım proficiency",category:"Özellik"},
+      {text:"Roll geçmişinde iki d20 ve seçilen sonuç görünümü",category:"İyileştirme"},
+      {text:"Jack of All Trades regresyon testi",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.23.0",date:"2026-07-16",title:"Standard Conditions Engine",
     summary:"Standart koşul kapsamı tamamlandı ve aktif durumların mekanik etkileri saldırı konsoluna bağlandı.",
     changes:[

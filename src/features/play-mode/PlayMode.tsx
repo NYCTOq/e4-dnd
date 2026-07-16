@@ -25,6 +25,8 @@ import { addSpellEffect, advanceSpellEffects, createSpellEffect } from "../../co
 import { applyDamage, applyHealing, resolveDeathSave } from "../../core/character/survivalRules";
 import { getCriticalDamageFormula, resolveAttack, type RollMode } from "../../core/rulesets/attackResolution";
 import { combineRollModes, getConditionEffects } from "../../core/rulesets/conditionRules";
+import { getSavingThrowBonus, getSkillBonus, SKILL_ABILITIES } from "../../core/rulesets/characterSheetRules";
+import { chooseD20 } from "../../core/rulesets/attackResolution";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -99,6 +101,7 @@ export function PlayMode({
   const [pendingConcentrationDc,setPendingConcentrationDc]=useState<number|null>(null);
   const [targetAc,setTargetAc]=useState(10);
   const [attackMode,setAttackMode]=useState<RollMode>("normal");
+  const [checkMode,setCheckMode]=useState<RollMode>("normal");
 
   const character =
     characters.find((item) => item.id === selectedCharacterId) ?? characters[0];
@@ -287,6 +290,8 @@ export function PlayMode({
       ].slice(0, 6),
     );
   }
+
+  function resolvedCheck(label:string,modifier:number){const dice=rollDice({count:checkMode==="normal"?1:2,sides:20,modifier:0});const natural=chooseD20(dice.rolls,checkMode);setRollHistory(current=>[{id:dice.id,label,notation:`${checkMode} · [${dice.rolls.join(", ")}] ${formatModifier(modifier)}`,total:natural+modifier},...current].slice(0,6))}
 
   function weaponAttack(weapon:(typeof equippedItems.weapons)[number]){if(conditionEffects.blocksActions)return;const effectiveMode=combineRollModes(attackMode,conditionEffects.attackMode);const modifier=getWeaponAttackBonus(activeCharacter,weapon);const dice=rollDice({count:effectiveMode==="normal"?1:2,sides:20,modifier:0});const attack=resolveAttack(dice.rolls,modifier,targetAc,effectiveMode);const results:RollResult[]=[{id:dice.id,label:`${weapon.name} · ${attack.hit?attack.critical?"CRITICAL":"Hit":"Miss"}`,notation:`${effectiveMode} · [${dice.rolls.join(", ")}] ${formatModifier(modifier)} vs AC ${targetAc}`,total:attack.total}];if(attack.hit){const formula=getCriticalDamageFormula(getWeaponDamageSummary(activeCharacter,weapon),attack.critical);if(formula){const damage=rollDice(formula);results.push({id:damage.id,label:`${weapon.name} Damage${attack.critical?" · Critical":""}`,notation:damage.notation,total:damage.total})}}setRollHistory(current=>[...results,...current].slice(0,6))}
 
@@ -577,6 +582,12 @@ export function PlayMode({
                 <div key={roll.id}><span>{roll.label}<small>{roll.notation}</small></span><strong>{roll.total}</strong></div>
               ))}
             </div>
+          </section>
+
+          <section className="play-mode-card">
+            <div className="play-mode-section-head"><div><span className="mini-label">Checks & Saves</span><h2>Skill ve Saving Throws</h2></div><select value={checkMode} onChange={event=>setCheckMode(event.target.value as RollMode)}><option value="normal">Normal</option><option value="advantage">Advantage</option><option value="disadvantage">Disadvantage</option></select></div>
+            <div className="save-roll-grid">{(Object.keys(abilityLabels) as AbilityKey[]).map(ability=>{const bonus=getSavingThrowBonus(activeCharacter,ability,rulesetData);return <button type="button" key={ability} onClick={()=>resolvedCheck(`${abilityLabels[ability]} Saving Throw`,bonus)}><span>{abilityLabels[ability]} Save</span><strong>{formatModifier(bonus)}</strong></button>})}</div>
+            <div className="skill-roll-grid">{Object.keys(SKILL_ABILITIES).map(skill=>{const bonus=getSkillBonus(activeCharacter,skill);const expertise=activeCharacter.expertiseSkills.includes(skill);const proficient=activeCharacter.skillProficiencies.includes(skill);return <button type="button" key={skill} onClick={()=>resolvedCheck(`${skill} Check`,bonus)}><span>{skill}<small>{expertise?"Expertise":proficient?"Proficient":activeCharacter.className.toLowerCase()==="bard"&&activeCharacter.level>=2?"Jack of All Trades":"Untrained"}</small></span><strong>{formatModifier(bonus)}</strong></button>})}</div>
           </section>
 
           <section className="play-mode-card play-mode-spell-card">

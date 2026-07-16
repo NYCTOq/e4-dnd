@@ -16,7 +16,8 @@ export const SKILL_ABILITIES:Record<string,AbilityKey> = {
 export function getSkillBonus(character:Character, skill:string) {
   const ability=SKILL_ABILITIES[skill]??"wis"; const pb=getProficiencyBonus(character.level);
   const proficient=character.skillProficiencies?.includes(skill); const expertise=character.expertiseSkills?.includes(skill);
-  return getAbilityModifier(character.abilities[ability]) + (expertise ? pb*2 : proficient ? pb : 0);
+  const jackOfAllTrades=character.className.trim().toLowerCase()==="bard"&&character.level>=2&&!proficient;
+  return getAbilityModifier(character.abilities[ability]) + (expertise ? pb*2 : proficient ? pb : jackOfAllTrades ? Math.floor(pb/2) : 0);
 }
 export function getSavingThrowBonus(character:Character, ability:AbilityKey, rulesetData:RulesetData|null) {
   const classData=rulesetData?.classes.find(item=>item.name===character.className);
