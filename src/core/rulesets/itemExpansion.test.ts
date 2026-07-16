@@ -18,4 +18,5 @@ describe("core equipment expansion", () => {
     const greataxe = ITEM_EXPANSION_2024.find((item) => item.id === "greataxe");
     expect(greataxe && getWeaponMastery(greataxe, "dnd_2024")).toBe("Cleave");
   });
+  it("provides consumable scrolls linked to runtime spells", () => { const scrolls=ITEM_EXPANSION_2014.filter((item)=>item.tags?.includes("scroll")); expect(scrolls).toHaveLength(10); expect(scrolls.every((item)=>item.tags?.includes("consumable")&&item.grantedSpellName)).toBe(true); });
 });
