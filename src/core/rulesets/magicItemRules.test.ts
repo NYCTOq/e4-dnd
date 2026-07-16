@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { ITEM_EXPANSION_2014 } from "./itemExpansion";
-import { getAttunedItemCount, getAttunedMagicItemBonuses, getChargeRecoveryAmount, recoverItemCharges, spendItemCharge, toggleItemAttunement } from "./magicItemRules";
+import { getAttunedItemCount, getAttunedMagicItemBonuses, getChargeRecoveryAmount, recoverHighestSpentSpellSlot, recoverItemCharges, spendItemCharge, toggleItemAttunement } from "./magicItemRules";
 
 describe("magic item runtime", () => {
   const ring = ITEM_EXPANSION_2014.find((item) => item.id === "ring-of-protection")!;
@@ -11,4 +11,5 @@ describe("magic item runtime", () => {
   it("applies bonuses only while the item is attuned", () => { expect(getAttunedMagicItemBonuses([{itemId:ring.id,quantity:1,attuned:true}],ITEM_EXPANSION_2014)).toEqual({armorClass:1,savingThrows:1}); });
   it("stores charge cost and spell linkage for casting items", () => { expect(wand).toMatchObject({grantedSpellName:"Magic Missile",chargeCost:1,charges:7}); });
   it("fully restores items whose recovery is simply daily", () => { expect(getChargeRecoveryAmount("daily",3,()=>0)).toBe(3); });
+  it("pearl of power restores the highest spent slot up to level three", () => { expect(recoverHighestSpentSpellSlot([{level:1,max:4,used:1},{level:3,max:2,used:2},{level:4,max:1,used:1}])).toEqual([{level:1,max:4,used:1},{level:3,max:2,used:1},{level:4,max:1,used:1}]); });
 });

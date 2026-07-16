@@ -1,4 +1,4 @@
-import type { CharacterInventoryItem } from "../character/character.types";
+import type { CharacterInventoryItem, CharacterSpellSlot } from "../character/character.types";
 import type { DndItemData } from "./ruleset.types";
 
 export const MAX_ATTUNED_ITEMS = 3;
@@ -36,4 +36,8 @@ export function getAttunedMagicItemBonuses(inventory: CharacterInventoryItem[], 
     const bonus = itemMap.get(entry.itemId)?.armorBonus ?? 0;
     return { armorClass: total.armorClass + bonus, savingThrows: total.savingThrows + bonus };
   }, { armorClass: 0, savingThrows: 0 });
+}
+export function recoverHighestSpentSpellSlot(slots: CharacterSpellSlot[], maximumLevel = 3) {
+  const target = [...slots].filter((slot) => slot.level <= maximumLevel && slot.used > 0).sort((a, b) => b.level - a.level)[0];
+  return target ? slots.map((slot) => slot.level === target.level ? { ...slot, used: slot.used - 1 } : slot) : slots;
 }
