@@ -12,6 +12,7 @@ import { getClassFeatureActions } from "../../core/rulesets/classFeatureEngine";
 import { getCharacterFeatures, getPassiveScore, getSavingThrowBonus, getSkillBonus, SKILL_ABILITIES } from "../../core/rulesets/characterSheetRules";
 import { getCharacterChoiceDebt } from "../../core/rulesets/choiceDebt";
 import { ChoiceDebtResolver } from "./ChoiceDebtResolver";
+import { getPlayReadiness } from "../../core/character/playReadiness";
 
 interface CharacterCastHistoryItem {
   id: string;
@@ -140,6 +141,7 @@ export function CharacterDetail({
 
   const activeCharacter: Character = character;
   const choiceDebt=getCharacterChoiceDebt(activeCharacter,rulesetData);
+  const readiness=getPlayReadiness(activeCharacter,rulesetData);
 
   const conditionOptions: Character["conditions"] = [
     "Blessed",
@@ -651,6 +653,12 @@ export function CharacterDetail({
 
             <button onClick={() => navigate("/characters")}>Listeye Dön</button>
           </div>
+
+          <section className={`play-readiness-card ${readiness.status}`}>
+            <div><span className="mini-label">Character Integrity</span><strong>{readiness.status==="ready"?"Karakter masaya hazır":`Oynanabilirlik skoru: ${readiness.score}%`}</strong><p>{readiness.status==="ready"?"Kimlik, progression, seçim, spell, equipment ve combat kayıtları doğrulandı.":`${readiness.issues.filter(issue=>issue.severity==="error").length} zorunlu düzeltme bulundu.`}</p></div>
+            <div className="play-readiness-actions"><button type="button" onClick={()=>navigate(`/characters/${activeCharacter.id}/edit`)}>Eksikleri düzelt</button></div>
+          </section>
+          {readiness.issues.length?<details className="character-sheet-section"><summary><span><b>Doğrulama Raporu</b><small>Bölüm bazlı veri ve kural kontrolleri</small></span><em>{readiness.issues.length} kayıt</em></summary><div className="character-sheet-section-body"><ul className="validation-issue-list">{readiness.issues.map(issue=><li key={issue.id}><button type="button" onClick={()=>navigate(`/characters/${activeCharacter.id}/edit`)}><strong>{issue.severity==="error"?"Hata":"Uyarı"} · {issue.section}</strong>{issue.message}<span>Düzelt →</span></button></li>)}</ul></div></details>:null}
 
           {choiceDebt.length?<details className="character-sheet-section" open><summary><span><b>Choice Debt Resolver</b><small>{choiceDebt.length} zorunlu seçim eksik</small></span><em>Tamamlanmalı</em></summary><div className="character-sheet-section-body"><ChoiceDebtResolver character={activeCharacter} rulesetData={rulesetData} onUpdateCharacter={onUpdateCharacter}/></div></details>:null}
 

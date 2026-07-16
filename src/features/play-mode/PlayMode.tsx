@@ -612,7 +612,7 @@ export function PlayMode({
           <div>
             <span className="mini-label">Playable Character Check</span>
             <strong>{readiness.status === "ready" ? "Karakter masaya hazır" : `Hazırlık skoru: ${readiness.score}%`}</strong>
-            <p>{readiness.status === "ready" ? "HP, temel seçimler, büyüler ve ekipman bağlantıları oynanabilir durumda." : readiness.issues.filter((issue) => issue.severity === "error").map((issue) => issue.message).join(" ")}</p>
+            <p>{readiness.status === "ready" ? "HP, progression, seçimler, büyüler ve ekipman bağlantıları oynanabilir durumda." : `${readiness.issues.filter((issue) => issue.severity === "error").length} zorunlu düzeltme var: ${[...new Set(readiness.issues.filter(issue=>issue.severity==="error").map(issue=>issue.section))].join(", ")}.`}</p>
           </div>
           <div className="play-readiness-actions">
             {readiness.issues.filter((issue) => issue.severity === "warning").length ? <span>{readiness.issues.filter((issue) => issue.severity === "warning").length} öneri</span> : null}
