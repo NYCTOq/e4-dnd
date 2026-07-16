@@ -1,0 +1,4 @@
+import type{RollInput}from"../dice/dice.types";
+export function rollStyledWeaponDamage(input:RollInput,greatWeaponFighting:boolean,random:()=>number=Math.random){const rolls:number[]=[];for(let index=0;index<input.count;index+=1){let roll=Math.floor(random()*input.sides)+1;if(greatWeaponFighting&&roll<=2)roll=Math.floor(random()*input.sides)+1;rolls.push(roll)}return{rolls,total:rolls.reduce((sum,roll)=>sum+roll,0)+input.modifier,notation:`${input.count}d${input.sides}${input.modifier?input.modifier>0?`+${input.modifier}`:input.modifier:""}${greatWeaponFighting?" · GWF":""}`}}
+export function getOffhandDamageModifier(baseModifier:number,abilityModifier:number,isOffhand:boolean,hasTwoWeaponFighting:boolean){return isOffhand&&!hasTwoWeaponFighting?baseModifier-abilityModifier:baseModifier}
+export function getInterceptionReduction(proficiencyBonus:number,random:()=>number=Math.random){return Math.floor(random()*10)+1+Math.max(2,proficiencyBonus)}

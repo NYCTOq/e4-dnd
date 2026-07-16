@@ -402,7 +402,7 @@ export function AppRoutes({
         }
       />
 
-      <Route path="/rulesets" element={<RulesetCenterPage />} />
+      <Route path="/rulesets" element={<RulesetCenterPage rulesetData={effectiveRulesetData} />} />
       <Route path="/classes" element={<ClassCatalogPage rulesetData={effectiveRulesetData} />} />
       <Route path="/subclasses" element={<SubclassCatalogPage rulesetData={effectiveRulesetData} />} />
       <Route path="/origins" element={<OriginCatalogPage rulesetData={effectiveRulesetData} />} />

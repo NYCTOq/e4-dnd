@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { PageShell } from "../../shared/layout/PageShell";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import { RULESET_DEFINITIONS } from "../../core/rulesets/rulesetRegistry";
+import type { RulesetData } from "../../core/rulesets/ruleset.types";
+import { getRulesetCoverage } from "../../core/rulesets/rulesetCoverage";
 
 const statusLabels = {
   ready: "Temel veri hazır",
@@ -9,8 +11,9 @@ const statusLabels = {
   custom: "Manuel içerik",
 } as const;
 
-export function RulesetCenterPage() {
+export function RulesetCenterPage({ rulesetData }: { rulesetData: RulesetData | null }) {
   const { settings, updateSettings } = useAppSettings();
+  const coverage = getRulesetCoverage(rulesetData);
 
   return (
     <PageShell
@@ -57,12 +60,18 @@ export function RulesetCenterPage() {
       </div>
 
       <section className="ruleset-roadmap-panel">
-        <span className="mini-label">Sıradaki veri katmanları</span>
-        <h2>Temel artık edition-aware</h2>
+        <span className="mini-label">Otomatik kapsam denetimi · %{coverage.score}</span>
+        <h2>Runtime sertifikası</h2>
         <div className="ruleset-roadmap-grid">
-          <Link to="/classes">Classes + level tables</Link><span>Races / Species</span><span>Backgrounds</span>
-          <span>Subclasses</span><span>Feats</span><span>Spells + equipment</span>
+          {coverage.rows.map((row) => <span key={row.id}><strong>{row.status === "complete" ? "✓" : row.status === "partial" ? "◐" : "○"} {row.label} · {row.count}</strong><small>{row.detail}</small></span>)}
         </div>
+      </section>
+
+      <section className="ruleset-roadmap-panel">
+        <span className="mini-label">Açık içerik bildirimi</span>
+        <h2>SRD 5.1 ve SRD 5.2.1</h2>
+        <p>This work includes material from the System Reference Document 5.1 and System Reference Document 5.2.1 by Wizards of the Coast LLC, available at dndbeyond.com/srd. Both are licensed under the Creative Commons Attribution 4.0 International License.</p>
+        <div className="ruleset-roadmap-grid"><a href="https://www.dndbeyond.com/srd" target="_blank" rel="noreferrer">Resmî SRD kaynağı</a><a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" rel="noreferrer">CC BY 4.0 lisansı</a></div>
       </section>
     </PageShell>
   );

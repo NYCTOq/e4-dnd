@@ -1,0 +1,2 @@
+import{describe,expect,it}from"vitest";import{getRulesetCoverage}from"./rulesetCoverage";
+describe("ruleset coverage",()=>{it("does not claim unloaded or descriptive-only content is complete",()=>{expect(getRulesetCoverage(null).score).toBe(0);const result=getRulesetCoverage({id:"dnd_2014",name:"Test",classes:[],subclasses:[],races:[],backgrounds:[],feats:[],spells:[],items:[],monsters:[]});expect(result.score).toBe(0);expect(result.blockers.length).toBeGreaterThan(0)})});
