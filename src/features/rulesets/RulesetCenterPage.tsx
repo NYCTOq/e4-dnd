@@ -4,6 +4,7 @@ import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import { RULESET_DEFINITIONS } from "../../core/rulesets/rulesetRegistry";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import { getRulesetCoverage } from "../../core/rulesets/rulesetCoverage";
+import { getLevel20Certification } from "../../core/rulesets/level20Certification";
 
 const statusLabels = {
   ready: "Temel veri hazır",
@@ -14,6 +15,7 @@ const statusLabels = {
 export function RulesetCenterPage({ rulesetData }: { rulesetData: RulesetData | null }) {
   const { settings, updateSettings } = useAppSettings();
   const coverage = getRulesetCoverage(rulesetData);
+  const certification=getLevel20Certification(rulesetData);
 
   return (
     <PageShell
@@ -73,6 +75,7 @@ export function RulesetCenterPage({ rulesetData }: { rulesetData: RulesetData | 
         <p>This work includes material from the System Reference Document 5.1 and System Reference Document 5.2.1 by Wizards of the Coast LLC, available at dndbeyond.com/srd. Both are licensed under the Creative Commons Attribution 4.0 International License.</p>
         <div className="ruleset-roadmap-grid"><a href="https://www.dndbeyond.com/srd" target="_blank" rel="noreferrer">Resmî SRD kaynağı</a><a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" rel="noreferrer">CC BY 4.0 lisansı</a></div>
       </section>
+      <section className="ruleset-roadmap-panel"><span className="mini-label">Level 1–20 Certification · %{certification.score}</span><h2>{certification.certified?"Oynanış matrisi sertifikalı":"Kontrol gereken bloklar var"}</h2><div className="ruleset-roadmap-grid">{certification.checks.map(check=><span key={check.id}><strong>{check.status==="pass"?"✓":check.status==="warning"?"◐":"✕"} {check.label}</strong><small>{check.detail}</small></span>)}</div><details><summary>12 Class Matrisi</summary><div className="ruleset-roadmap-grid">{certification.classes.map(item=><span key={item.className}><strong>{item.ready?"✓":"✕"} {item.className}</strong><small>{item.coveredLevels}/20 level · {item.subclassCount} subclass</small></span>)}</div></details>{certification.blockers.length?<details><summary>Blocker raporu · {certification.blockers.length}</summary><ul className="ruleset-note-list">{certification.blockers.map((blocker,index)=><li key={`${blocker}-${index}`}>{blocker}</li>)}</ul></details>:null}</section>
     </PageShell>
   );
 }
