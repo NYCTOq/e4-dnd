@@ -43,6 +43,17 @@ describe("spell database v2 expansion", () => {
       expect(highLevel.some((spell) => spell.classes.includes(className))).toBe(true);
     }
     expect(SPELL_EXPANSION_2014.find((spell) => spell.name === "Meteor Swarm")).toMatchObject({ level: 9, damageDice: "40d6", saveAbility: "dex" });
-    expect(SPELL_EXPANSION_2014).toHaveLength(169);
+    expect(SPELL_EXPANSION_2014.length).toBeGreaterThanOrEqual(169);
+  });
+  it("adds the core adventuring and half-caster spell package", () => {
+    const required = ["Alarm", "Armor of Agathys", "Find Familiar", "Goodberry", "Hellish Rebuke", "Hex", "Hunter's Mark", "Find Steed", "Silence", "Water Breathing"];
+    const names = new Set(SPELL_EXPANSION_2014.map((spell) => spell.name));
+    expect(required.filter((name) => !names.has(name))).toEqual([]);
+    const rangerSpells = SPELL_EXPANSION_2014.filter((spell) => spell.classes.includes("Ranger") && spell.level <= 3);
+    const paladinSpells = SPELL_EXPANSION_2014.filter((spell) => spell.classes.includes("Paladin") && spell.level <= 3);
+    expect(rangerSpells.length).toBeGreaterThanOrEqual(15);
+    expect(paladinSpells.length).toBeGreaterThanOrEqual(10);
+    expect(SPELL_EXPANSION_2014.find((spell) => spell.name === "Hellish Rebuke")?.reactionTrigger).toBeTruthy();
+    expect(SPELL_EXPANSION_2014.length).toBeGreaterThanOrEqual(209);
   });
 });
