@@ -200,6 +200,8 @@ export interface DndItemData {
   armorBonus?: number;
   grantedSpellName?: string;
   chargeCost?: number;
+  effectDurationRounds?: number;
+  effectSummary?: string;
 
   armorClass?: number;
   armorClassBonus?: number;
