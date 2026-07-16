@@ -4,6 +4,7 @@ import { buildFinalSkillProficiencies, normalizeClassSkillChoices } from "./prof
 import { getHighestSpellLevel, isSpellAvailableToClass } from "./spellRules";
 import type { RulesetData } from "./ruleset.types";
 import { getFightingStyleChoiceCount, getFightingStyles } from "./fightingStyleRules";
+import { getWeaponMastery, getWeaponMasteryChoiceCount } from "./equipmentRules";
 
 export type ValidationSeverity = "error" | "warning";
 export type CharacterValidationIssue = { id: string; severity: ValidationSeverity; step: string; message: string };
@@ -46,6 +47,10 @@ export function validateCharacterDraft(draft: CharacterDraft, rulesetData: Rules
   const fightingStyleIds = draft.fightingStyleIds ?? [];
   const availableStyleIds = new Set(getFightingStyles(draft.ruleset).map((style) => style.id));
   if (fightingStyleIds.length !== fightingStyleLimit || fightingStyleIds.some((id) => !availableStyleIds.has(id))) add("fighting-styles", "error", "Combat", `${draft.className} için ${fightingStyleLimit} geçerli Fighting Style seçilmeli (${fightingStyleIds.length} seçili).`);
+  const masteryLimit = getWeaponMasteryChoiceCount(classData, draft.level, draft.ruleset);
+  const masteredWeaponIds = draft.masteredWeaponIds ?? [];
+  const validMasteryIds = new Set((rulesetData?.items ?? []).filter((item) => getWeaponMastery(item, draft.ruleset)).map((item) => item.id));
+  if (masteredWeaponIds.length !== masteryLimit || masteredWeaponIds.some((id) => !validMasteryIds.has(id))) add("weapon-mastery", "error", "Equipment", `${draft.className} için ${masteryLimit} geçerli Weapon Mastery seçilmeli (${masteredWeaponIds.length} seçili).`);
 
   const highestSpellLevel = getHighestSpellLevel(classData ?? undefined, draft.level);
   for (const spellId of draft.knownSpellIds) {

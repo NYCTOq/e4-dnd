@@ -1,4 +1,5 @@
 import type { DndItemData, WeaponMastery } from "./ruleset.types";
+import type { DndClassData } from "./ruleset.types";
 
 const MASTERY_BY_WEAPON_ID: Record<string, WeaponMastery> = {
   club: "Slow", dagger: "Nick", handaxe: "Vex", mace: "Sap",
@@ -9,6 +10,12 @@ const MASTERY_BY_WEAPON_ID: Record<string, WeaponMastery> = {
 export function getWeaponMastery(item: DndItemData, rulesetId: string) {
   if (rulesetId !== "dnd_2024" || item.category !== "weapon") return null;
   return item.mastery ?? MASTERY_BY_WEAPON_ID[item.id] ?? null;
+}
+
+export function getWeaponMasteryChoiceCount(classData: DndClassData | null | undefined, level: number, rulesetId: string) {
+  if (rulesetId !== "dnd_2024" || !classData) return 0;
+  const safeLevel = Math.max(1, Math.min(20, Math.floor(level)));
+  return classData.levels.find((row) => row.level === safeLevel)?.weaponMasteryCount ?? 0;
 }
 
 export function canEquipItem(item: DndItemData, inventoryQuantity: number) {

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { DndItemData } from "./ruleset.types";
-import { canEquipItem, getItemSearchText, getWeaponMastery } from "./equipmentRules";
+import { canEquipItem, getItemSearchText, getWeaponMastery, getWeaponMasteryChoiceCount } from "./equipmentRules";
 
 const longsword: DndItemData = {
   id: "longsword", name: "Longsword", category: "weapon", cost: "15 gp", weight: 3,
@@ -21,4 +21,5 @@ describe("equipment rules", () => {
     expect(getItemSearchText(longsword, "dnd_2024")).toContain("sap");
     expect(getItemSearchText(longsword, "dnd_2024")).toContain("versatile");
   });
+  it("reads mastery choice count from 2024 class progression", () => expect(getWeaponMasteryChoiceCount({ levels: [{ level: 1, proficiencyBonus: 2, features: [], weaponMasteryCount: 3 }] } as never, 1, "dnd_2024")).toBe(3));
 });

@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.6.0", date: "2026-07-16", title: "Weapon Mastery System",
+    summary: "2024 class progression içindeki Weapon Mastery kotaları Builder ve kalıcı karakter verisine bağlandı.",
+    changes: [
+      { text: "Class ve level progression tablosundan mastery seçim kotası", category: "Özellik" },
+      { text: "Weapon item verisinden Slow, Nick, Topple, Sap, Vex ve Graze eşleştirmeleri", category: "Özellik" },
+      { text: "Builder Equipment adımında mastery silah seçimi", category: "Özellik" },
+      { text: "Eksik veya geçersiz mastery seçiminde kayıt engeli", category: "Düzeltme" },
+      { text: "Eski karakterler için mastered weapon migration", category: "Teknik" },
+      { text: "Mastery kotası için otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "2.5.0", date: "2026-07-16", title: "Fighter Fighting Styles & Combat Choices",
     summary: "Fighting Style seçimleri edition, class, level ve subclass kurallarıyla kalıcı karakter verisine bağlandı.",
     changes: [

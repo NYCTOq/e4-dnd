@@ -13,6 +13,7 @@ import { getClassSpellSlots } from "../../core/rulesets/spellcastingRules";
 import { getHighestSpellLevel } from "../../core/rulesets/spellRules";
 import { getAbilityBudgetError, getStandardArrayAbilities, type AbilityGenerationMethod } from "../../core/rulesets/abilityGenerationRules";
 import { getFightingStyleChoiceCount, getFightingStyles } from "../../core/rulesets/fightingStyleRules";
+import { getWeaponMastery, getWeaponMasteryChoiceCount } from "../../core/rulesets/equipmentRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
@@ -108,6 +109,9 @@ export function Builder({
   const fightingStyles = useMemo(() => getFightingStyles(draft.ruleset), [draft.ruleset]);
   const fightingStyleLimit = getFightingStyleChoiceCount(draft.className, draft.level, draft.subclass);
   const selectedFightingStyleIds = draft.fightingStyleIds ?? [];
+  const masteryLimit = getWeaponMasteryChoiceCount(selectedClass, draft.level, draft.ruleset);
+  const masteryWeapons = useMemo(() => (activeRulesetData?.items ?? []).filter((item) => item.category === "weapon" && getWeaponMastery(item, draft.ruleset)), [activeRulesetData, draft.ruleset]);
+  const masteredWeaponIds = draft.masteredWeaponIds ?? [];
   const canCastSpells = Boolean(selectedClass?.spellcastingAbility);
   const grantedSkills = useMemo(() => getGrantedSkills(selectedBackground), [selectedBackground]);
   const availableClassSkills = useMemo(() => getAvailableClassSkills(selectedClass, selectedBackground), [selectedClass, selectedBackground]);
@@ -168,6 +172,15 @@ export function Builder({
       if (selected.includes(styleId)) return { ...current, fightingStyleIds: selected.filter((id) => id !== styleId) };
       if (selected.length >= fightingStyleLimit) return current;
       return { ...current, fightingStyleIds: [...selected, styleId] };
+    });
+  }
+
+  function toggleWeaponMastery(weaponId: string) {
+    setDraft((current) => {
+      const selected = current.masteredWeaponIds ?? [];
+      if (selected.includes(weaponId)) return { ...current, masteredWeaponIds: selected.filter((id) => id !== weaponId) };
+      if (selected.length >= masteryLimit) return current;
+      return { ...current, masteredWeaponIds: [...selected, weaponId] };
     });
   }
 
@@ -884,7 +897,7 @@ export function Builder({
           ) : null}
 
           {activeStep.id === "equipment" ? (
-            <CharacterInventoryManager
+            <><CharacterInventoryManager
               title="Inventory & Equipment"
               description="Karakterin itemlarını, altınını ve kuşandığı ekipmanı seç. AC auto ise zırh ve shield hesaba katılır."
               rulesetData={rulesetData}
@@ -911,6 +924,7 @@ export function Builder({
                 }))
               }
             />
+            {masteryLimit ? <section className="form-panel"><div className="panel-heading-row"><div><h2>Weapon Mastery</h2><p>Class progression tarafından açılan silah uzmanlıklarını seç.</p></div><span className="mini-label">{masteredWeaponIds.length} / {masteryLimit}</span></div><div className="builder-choice-grid">{masteryWeapons.map((weapon) => { const selected=masteredWeaponIds.includes(weapon.id); return <article className={`builder-choice-card ${selected ? "selected" : ""}`} key={weapon.id}><div className="panel-heading-row"><div><h3>{weapon.name}</h3><span className="mini-label">{getWeaponMastery(weapon,draft.ruleset)}</span></div><button type="button" disabled={!selected&&masteredWeaponIds.length>=masteryLimit} onClick={()=>toggleWeaponMastery(weapon.id)}>{selected?"Kaldır":"Seç"}</button></div><p>{weapon.damage} {weapon.damageType} · {weapon.properties?.join(", ")||"—"}</p></article>; })}</div></section>:null}</>
           ) : null}
 
           {activeStep.id === "review" ? (
