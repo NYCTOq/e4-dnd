@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.5.0", date: "2026-07-16", title: "Fighter Fighting Styles & Combat Choices",
+    summary: "Fighting Style seçimleri edition, class, level ve subclass kurallarıyla kalıcı karakter verisine bağlandı.",
+    changes: [
+      { text: "2014 için altı temel Fighting Style", category: "Özellik" },
+      { text: "2024 için Blind Fighting, Interception, Thrown Weapon ve Unarmed seçenekleri", category: "Özellik" },
+      { text: "Fighter, Paladin ve Ranger level bazlı seçim kotası", category: "Özellik" },
+      { text: "Champion level 10 Additional Fighting Style desteği", category: "Özellik" },
+      { text: "Eski karakter kayıtları için fighting style migration", category: "Teknik" },
+      { text: "Fighting style kuralları için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "2.4.0", date: "2026-07-16", title: "Granted Spell Database Completion",
     summary: "Domain ve oath paketlerinin ihtiyaç duyduğu eksik büyüler 2014 ve 2024 spell veritabanlarına eklendi.",
     changes: [

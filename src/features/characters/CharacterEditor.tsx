@@ -49,6 +49,7 @@ export function CharacterEditor({
       subclass: character.subclass,
       background: character.background,
       featIds: character.featIds ?? [],
+      fightingStyleIds: character.fightingStyleIds ?? [],
       skillProficiencies: character.skillProficiencies ?? [],
       expertiseSkills: character.expertiseSkills ?? [],
       toolProficiencies: character.toolProficiencies ?? [],

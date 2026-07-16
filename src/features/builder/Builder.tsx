@@ -12,6 +12,7 @@ import { getBuilderStepId, getBuilderStepIssueCounts, getFirstErrorStepIndex } f
 import { getClassSpellSlots } from "../../core/rulesets/spellcastingRules";
 import { getHighestSpellLevel } from "../../core/rulesets/spellRules";
 import { getAbilityBudgetError, getStandardArrayAbilities, type AbilityGenerationMethod } from "../../core/rulesets/abilityGenerationRules";
+import { getFightingStyleChoiceCount, getFightingStyles } from "../../core/rulesets/fightingStyleRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
@@ -104,6 +105,9 @@ export function Builder({
   const grantedOriginFeatName = getGrantedOriginFeatName(draft.ruleset, selectedBackground?.originFeat);
   const selectableFeats = useMemo(() => (activeRulesetData?.feats ?? []).filter((feat) => feat.category !== "origin"), [activeRulesetData]);
   const selectedFeats = useMemo(() => (activeRulesetData?.feats ?? []).filter((feat) => draft.featIds.includes(feat.id)), [activeRulesetData, draft.featIds]);
+  const fightingStyles = useMemo(() => getFightingStyles(draft.ruleset), [draft.ruleset]);
+  const fightingStyleLimit = getFightingStyleChoiceCount(draft.className, draft.level, draft.subclass);
+  const selectedFightingStyleIds = draft.fightingStyleIds ?? [];
   const canCastSpells = Boolean(selectedClass?.spellcastingAbility);
   const grantedSkills = useMemo(() => getGrantedSkills(selectedBackground), [selectedBackground]);
   const availableClassSkills = useMemo(() => getAvailableClassSkills(selectedClass, selectedBackground), [selectedClass, selectedBackground]);
@@ -155,6 +159,15 @@ export function Builder({
       }
       if (current.featIds.length >= generalFeatSlots) return current;
       return { ...current, featIds: [...current.featIds, featId] };
+    });
+  }
+
+  function toggleFightingStyle(styleId: string) {
+    setDraft((current) => {
+      const selected = current.fightingStyleIds ?? [];
+      if (selected.includes(styleId)) return { ...current, fightingStyleIds: selected.filter((id) => id !== styleId) };
+      if (selected.length >= fightingStyleLimit) return current;
+      return { ...current, fightingStyleIds: [...selected, styleId] };
     });
   }
 
@@ -778,6 +791,18 @@ export function Builder({
             <section className="form-panel">
               <h2>Combat</h2>
 
+              {fightingStyleLimit ? (
+                <div className="fighting-style-builder">
+                  <div className="panel-heading-row"><div><h3>Fighting Style</h3><p>Class ve level tarafından açılan savaş uzmanlığını seç.</p></div><span className="mini-label">{selectedFightingStyleIds.length} / {fightingStyleLimit}</span></div>
+                  <div className="builder-choice-grid">
+                    {fightingStyles.map((style) => {
+                      const selected = selectedFightingStyleIds.includes(style.id);
+                      return <article className={`builder-choice-card ${selected ? "selected" : ""}`} key={style.id}><div className="panel-heading-row"><h3>{style.name}</h3><button type="button" disabled={!selected && selectedFightingStyleIds.length >= fightingStyleLimit} onClick={() => toggleFightingStyle(style.id)}>{selected ? "Kaldır" : "Seç"}</button></div><p>{style.summary}</p></article>;
+                    })}
+                  </div>
+                </div>
+              ) : null}
+
               <div className="form-grid">
                 <label>
                   Max HP
@@ -972,6 +997,10 @@ export function Builder({
                 <div>
                   <span>Feats</span>
                   <strong>{selectedFeats.length}</strong>
+                </div>
+                <div>
+                  <span>Fighting Styles</span>
+                  <strong>{selectedFightingStyleIds.length ? fightingStyles.filter((style) => selectedFightingStyleIds.includes(style.id)).map((style) => style.name).join(", ") : "—"}</strong>
                 </div>
               </div>
 

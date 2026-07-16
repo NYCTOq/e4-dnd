@@ -3,6 +3,7 @@ import { getGeneralFeatSlotCount, isFeatEligible } from "./featRules";
 import { buildFinalSkillProficiencies, normalizeClassSkillChoices } from "./proficiencyRules";
 import { getHighestSpellLevel, isSpellAvailableToClass } from "./spellRules";
 import type { RulesetData } from "./ruleset.types";
+import { getFightingStyleChoiceCount, getFightingStyles } from "./fightingStyleRules";
 
 export type ValidationSeverity = "error" | "warning";
 export type CharacterValidationIssue = { id: string; severity: ValidationSeverity; step: string; message: string };
@@ -40,6 +41,11 @@ export function validateCharacterDraft(draft: CharacterDraft, rulesetData: Rules
     if (!feat) add(`feat-${featId}`, "error", "Feats", "Seçilen feat bu ruleset içinde bulunamadı.");
     else if (!isFeatEligible(feat, { level: draft.level, className: draft.className, abilities: finalAbilities, canCastSpells: Boolean(classData?.spellcastingAbility) }).eligible) add(`feat-${featId}`, "error", "Feats", `${feat.name} prerequisite koşullarını karşılamıyor.`);
   }
+
+  const fightingStyleLimit = getFightingStyleChoiceCount(draft.className, draft.level, draft.subclass);
+  const fightingStyleIds = draft.fightingStyleIds ?? [];
+  const availableStyleIds = new Set(getFightingStyles(draft.ruleset).map((style) => style.id));
+  if (fightingStyleIds.length !== fightingStyleLimit || fightingStyleIds.some((id) => !availableStyleIds.has(id))) add("fighting-styles", "error", "Combat", `${draft.className} için ${fightingStyleLimit} geçerli Fighting Style seçilmeli (${fightingStyleIds.length} seçili).`);
 
   const highestSpellLevel = getHighestSpellLevel(classData ?? undefined, draft.level);
   for (const spellId of draft.knownSpellIds) {

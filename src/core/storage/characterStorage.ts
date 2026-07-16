@@ -175,6 +175,7 @@ function hydrateCharacter(character: Character): Character {
     knownSpellIds: character.knownSpellIds ?? [],
     preparedSpellIds: character.preparedSpellIds ?? [],
     featIds: Array.isArray(character.featIds) ? character.featIds.filter((id): id is string => typeof id === "string") : [],
+    fightingStyleIds: Array.isArray(character.fightingStyleIds) ? [...new Set(character.fightingStyleIds.filter((id): id is string => typeof id === "string"))] : [],
     skillProficiencies: Array.isArray(character.skillProficiencies) ? [...new Set(character.skillProficiencies.filter((value): value is string => typeof value === "string"))] : [],
     expertiseSkills: Array.isArray(character.expertiseSkills) ? [...new Set(character.expertiseSkills.filter((value): value is string => typeof value === "string"))] : [],
     toolProficiencies: Array.isArray(character.toolProficiencies) ? [...new Set(character.toolProficiencies.filter((value): value is string => typeof value === "string"))] : [],

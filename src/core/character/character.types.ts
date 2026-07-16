@@ -67,6 +67,7 @@ export interface Character {
   originAbilityPrimary?: AbilityKey;
   originAbilitySecondary?: AbilityKey;
   featIds: string[];
+  fightingStyleIds?: string[];
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];
@@ -117,6 +118,7 @@ export interface CharacterDraft {
   originAbilityPrimary?: AbilityKey;
   originAbilitySecondary?: AbilityKey;
   featIds: string[];
+  fightingStyleIds?: string[];
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];
