@@ -29,6 +29,7 @@ function applySettingsToDocument(settings: AppSettings) {
   root.dataset.density = settings.density;
   root.dataset.fontScale = settings.fontScale;
   root.dataset.motion = settings.motion;
+  root.lang = settings.locale;
 }
 
 export function AppSettingsProvider({ children }: { children: ReactNode }) {

@@ -11,6 +11,7 @@ import { ReleaseNotesDialog } from "../release/ReleaseNotesDialog";
 import type { Character } from "../../core/character/character.types";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import type { Campaign } from "../../features/campaigns/campaignTypes";
+import { useI18n } from "../i18n/useI18n";
 
 const START_ROUTE_SESSION_KEY = "e4_dnd_start_route_applied_v1";
 
@@ -26,6 +27,7 @@ export function AppFrame({ children, characters, campaigns, rulesetData }: AppFr
   const location = useLocation();
   const navigate = useNavigate();
   const { settings } = useAppSettings();
+  const { t } = useI18n();
 
   useEffect(() => {
     try {
@@ -46,15 +48,15 @@ export function AppFrame({ children, characters, campaigns, rulesetData }: AppFr
   return (
     <div className="app">
       <a className="skip-link" href="#main-content">
-        Ana içeriğe geç
+        {t("nav.skip","Ana içeriğe geç")}
       </a>
       <RouteAccessibility />
 
       <div className="aurora aurora-one" aria-hidden="true" />
       <div className="aurora aurora-two" aria-hidden="true" />
 
-      <aside className="sidebar" aria-label="Uygulama menüsü">
-        <NavLink to="/" className="brand" aria-label="E4 D&D ana sayfa">
+      <aside className="sidebar" aria-label={t("nav.sidebar","Uygulama menüsü")}>
+        <NavLink to="/" className="brand" aria-label={t("nav.home","E4 D&D ana sayfa")}>
           <div className="brand-icon">E4</div>
 
           <div>
@@ -63,10 +65,10 @@ export function AppFrame({ children, characters, campaigns, rulesetData }: AppFr
           </div>
         </NavLink>
 
-        <nav className="side-nav" aria-label="Ana navigasyon">
+        <nav className="side-nav" aria-label={t("nav.main","Ana navigasyon")}>
           {navGroups.map((group) => (
             <div className="nav-group" key={group}>
-              <span className="nav-group-label">{group}</span>
+              <span className="nav-group-label">{t(`nav.group.${group}`,group)}</span>
 
               <div className="nav-group-items">
                 {navItems
@@ -83,7 +85,7 @@ export function AppFrame({ children, characters, campaigns, rulesetData }: AppFr
                       <span className="nav-item-icon" aria-hidden="true">
                         {item.icon}
                       </span>
-                      <span>{item.label}</span>
+                      <span>{t(`nav.${item.to}`,item.label)}</span>
                     </NavLink>
                   ))}
               </div>
@@ -108,7 +110,7 @@ export function AppFrame({ children, characters, campaigns, rulesetData }: AppFr
       <PwaUpdateManager />
       <PwaInstallGuide />
 
-      <nav className="bottom-nav" aria-label="Mobil navigasyon">
+      <nav className="bottom-nav" aria-label={t("nav.mobile","Mobil navigasyon")}>
         {mobileItems.map((item) => (
           <NavLink
             key={item.to}
@@ -121,7 +123,7 @@ export function AppFrame({ children, characters, campaigns, rulesetData }: AppFr
             <span className="bottom-item-icon" aria-hidden="true">
               {item.icon}
             </span>
-            <span>{item.shortLabel}</span>
+            <span>{t(`short.${item.to}`,item.shortLabel)}</span>
           </NavLink>
         ))}
       </nav>

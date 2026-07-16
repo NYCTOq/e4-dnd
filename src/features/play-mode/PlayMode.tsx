@@ -13,6 +13,7 @@ import {
 } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
 import { getPlayReadiness } from "../../core/character/playReadiness";
+import { useI18n } from "../../shared/i18n/useI18n";
 import { getMetamagicOptions } from "../../core/rulesets/metamagicRules";
 import { getEldritchInvocations } from "../../core/rulesets/invocationRules";
 import { getWildShapeForms } from "../../core/rulesets/wildShapeRules";
@@ -118,6 +119,7 @@ export function PlayMode({
   rulesetData: RulesetData | null;
   onUpdateCharacter: (character: Character) => void;
 }) {
+  const { t } = useI18n();
   const [searchParams, setSearchParams] = useSearchParams();
   const [selectedCharacterId, setSelectedCharacterId] = useState(
     () => searchParams.get("character") ?? characters[0]?.id ?? "",
@@ -611,12 +613,12 @@ export function PlayMode({
         <section className={`play-readiness-card ${readiness.status}`}>
           <div>
             <span className="mini-label">Playable Character Check</span>
-            <strong>{readiness.status === "ready" ? "Karakter masaya hazır" : `Hazırlık skoru: ${readiness.score}%`}</strong>
-            <p>{readiness.status === "ready" ? "HP, progression, seçimler, büyüler ve ekipman bağlantıları oynanabilir durumda." : `${readiness.issues.filter((issue) => issue.severity === "error").length} zorunlu düzeltme var: ${[...new Set(readiness.issues.filter(issue=>issue.severity==="error").map(issue=>issue.section))].join(", ")}.`}</p>
+            <strong>{readiness.status === "ready" ? t("play.ready","Karakter masaya hazır") : t("play.score",`Hazırlık skoru: ${readiness.score}%`,{score:readiness.score})}</strong>
+            <p>{readiness.status === "ready" ? t("play.readyDetail","HP, progression, seçimler, büyüler ve ekipman bağlantıları oynanabilir durumda.") : t("play.errors",`${readiness.issues.filter((issue) => issue.severity === "error").length} zorunlu düzeltme var.`,{count:readiness.issues.filter(issue=>issue.severity==="error").length})}</p>
           </div>
           <div className="play-readiness-actions">
             {readiness.issues.filter((issue) => issue.severity === "warning").length ? <span>{readiness.issues.filter((issue) => issue.severity === "warning").length} öneri</span> : null}
-            <NavLink to={`/characters/${activeCharacter.id}/edit`}>{readiness.status === "ready" ? "Karakteri düzenle" : "Eksikleri düzelt"}</NavLink>
+            <NavLink to={`/characters/${activeCharacter.id}/edit`}>{readiness.status === "ready" ? t("play.edit","Karakteri düzenle") : t("play.fix","Eksikleri düzelt")}</NavLink>
           </div>
         </section>
 

@@ -7,6 +7,7 @@ import { PageShell } from "../../shared/layout/PageShell";
 import { useFavorites } from "../../shared/favorites/FavoritesProvider";
 import { useTagCollections } from "../../shared/collections/TagCollectionsProvider";
 import { getPlayReadiness } from "../../core/character/playReadiness";
+import { useI18n } from "../../shared/i18n/useI18n";
 
 type DashboardProps = {
   characters: Character[];
@@ -15,14 +16,14 @@ type DashboardProps = {
   homebrewCount: number;
 };
 
-function formatUpdatedAt(value: string) {
+function formatUpdatedAt(value: string, locale: string, noDate: string) {
   const parsed = new Date(value);
 
   if (Number.isNaN(parsed.getTime())) {
-    return "Tarih yok";
+    return noDate;
   }
 
-  return new Intl.DateTimeFormat("tr-TR", {
+  return new Intl.DateTimeFormat(locale, {
     day: "2-digit",
     month: "short",
     year: "numeric",
@@ -35,6 +36,7 @@ export function Dashboard({
   rulesetData,
   homebrewCount,
 }: DashboardProps) {
+  const { t, intlLocale } = useI18n();
   const { favorites, recentItems, recordRecent, clearRecentItems } = useFavorites();
   const { allTags, itemTags } = useTagCollections();
   const recentCharacter = [...characters].sort((a, b) =>
@@ -61,8 +63,8 @@ export function Dashboard({
   return (
     <PageShell
       eyebrow="Everything for D&D"
-      title="Masa hazır."
-      description="Karakter, campaign ve oyun araçlarına tek yerden ulaş. Gereken şey önde, geri kalan dijital çekmecelerde uslu uslu bekliyor."
+      title={t("dashboard.title","Masa hazır.")}
+      description={t("dashboard.description","Karakter, campaign ve oyun araçlarına tek yerden ulaş. Gereken şey önde, geri kalan dijital çekmecelerde uslu uslu bekliyor.")}
     >
       <section className="dashboard-command-grid">
         <motion.article
@@ -71,12 +73,12 @@ export function Dashboard({
           transition={{ type: "spring", stiffness: 240, damping: 20 }}
         >
           <div className="dashboard-command-orb">d20</div>
-          <span className="dashboard-kicker">Hızlı başlangıç</span>
-          <h2>{recentCharacter ? `${recentCharacter.name} ile devam et` : "İlk karakterini oluştur"}</h2>
+          <span className="dashboard-kicker">{t("dashboard.quick","Hızlı başlangıç")}</span>
+          <h2>{recentCharacter ? t("dashboard.continue",`${recentCharacter.name} ile devam et`,{name:recentCharacter.name}) : t("dashboard.createFirst","İlk karakterini oluştur")}</h2>
           <p>
             {recentCharacter
-              ? `${recentCharacter.className} · Seviye ${recentCharacter.level} · ${recentCharacter.currentHp}/${recentCharacter.maxHp} HP`
-              : "Builder ile karakterini kur, sonra Play Mode üzerinden doğrudan masaya geç."}
+              ? `${recentCharacter.className} · ${t("dashboard.level","Seviye")} ${recentCharacter.level} · ${recentCharacter.currentHp}/${recentCharacter.maxHp} HP`
+              : t("dashboard.builderHint","Builder ile karakterini kur, sonra Play Mode üzerinden doğrudan masaya geç.")}
           </p>
 
           <div className="quick-actions">
@@ -84,31 +86,31 @@ export function Dashboard({
               to={recentCharacter ? `/play-mode?character=${recentCharacter.id}` : "/builder"}
               className="primary-action"
             >
-              {recentCharacter ? "Play Mode'u Aç" : "Karakter Oluştur"}
+              {recentCharacter ? t("dashboard.openPlay","Play Mode'u Aç") : t("dashboard.create","Karakter Oluştur")}
             </NavLink>
             <NavLink to="/dice" className="secondary-action">
-              Zar At
+              {t("dashboard.roll","Zar At")}
             </NavLink>
           </div>
         </motion.article>
 
         <div className="dashboard-stat-grid">
           <NavLink to="/characters" className="dashboard-stat-card">
-            <span>Karakterler</span>
+            <span>{t("dashboard.characters","Karakterler")}</span>
             <strong>{characters.length}</strong>
-            <small>{recentCharacter ? `Son: ${recentCharacter.name}` : "Henüz kayıt yok"}</small>
+            <small>{recentCharacter ? t("dashboard.last",`Son: ${recentCharacter.name}`,{name:recentCharacter.name}) : t("dashboard.noRecords","Henüz kayıt yok")}</small>
           </NavLink>
 
           <NavLink to="/campaigns" className="dashboard-stat-card">
             <span>Campaigns</span>
             <strong>{campaigns.length}</strong>
-            <small>{activeEncounterCount} aktif encounter</small>
+            <small>{t("dashboard.activeEncounter",`${activeEncounterCount} aktif encounter`,{count:activeEncounterCount})}</small>
           </NavLink>
 
           <NavLink to="/campaigns" className="dashboard-stat-card">
-            <span>Aktif Quest</span>
+            <span>{t("dashboard.activeQuest","Aktif Quest")}</span>
             <strong>{activeQuestCount}</strong>
-            <small>Campaign kayıtlarından</small>
+            <small>{t("dashboard.fromCampaigns","Campaign kayıtlarından")}</small>
           </NavLink>
 
           <NavLink to="/homebrew-lab" className="dashboard-stat-card">
@@ -239,7 +241,7 @@ export function Dashboard({
                 <span>{recentCharacter.currentHp}/{recentCharacter.maxHp} HP</span>
                 <span>{recentCharacter.armorClass} AC</span>
                 <span>{recentCharacter.conditions.length} condition</span>
-                <span className={recentCharacterReadiness?.status === "ready" ? "play-ready" : "play-attention"}>{recentCharacterReadiness?.status === "ready" ? "Oynamaya hazır" : `${recentCharacterReadiness?.score}% hazır`}</span>
+                <span className={recentCharacterReadiness?.status === "ready" ? "play-ready" : "play-attention"}>{recentCharacterReadiness?.status === "ready" ? t("dashboard.ready","Oynamaya hazır") : `${recentCharacterReadiness?.score}%`}</span>
               </div>
               <NavLink to={`/characters/${recentCharacter.id}`} className="dashboard-text-link">
                 Karakteri aç →
@@ -263,7 +265,7 @@ export function Dashboard({
               <div className="dashboard-mini-stats">
                 <span>{recentCampaign.characterIds.length} karakter</span>
                 <span>{recentCampaign.encounters.length} encounter</span>
-                <span>{formatUpdatedAt(recentCampaign.updatedAt)}</span>
+                <span>{formatUpdatedAt(recentCampaign.updatedAt,intlLocale,t("dashboard.noDate","Tarih yok"))}</span>
               </div>
               <NavLink to="/campaigns" className="dashboard-text-link">Campaign'i aç →</NavLink>
             </>
@@ -277,9 +279,9 @@ export function Dashboard({
         </article>
 
         <article className="dashboard-recent-card dashboard-system-card">
-          <span className="dashboard-kicker">Yerel sistem</span>
-          <h3>{rulesetEntryCount.toLocaleString("tr-TR")} içerik hazır</h3>
-          <p>Veriler cihazında çalışıyor. Düzenli tam yedek almak hâlâ iyi fikir; teknoloji sadakat yemini etmiyor.</p>
+          <span className="dashboard-kicker">{t("dashboard.local","Yerel sistem")}</span>
+          <h3>{t("dashboard.contentReady",`${rulesetEntryCount.toLocaleString(intlLocale)} içerik hazır`,{count:rulesetEntryCount.toLocaleString(intlLocale)})}</h3>
+          <p>{t("dashboard.localNote","Veriler cihazında çalışıyor. Düzenli tam yedek almak hâlâ iyi fikir; teknoloji sadakat yemini etmiyor.")}</p>
           <div className="dashboard-mini-stats">
             <span>PWA</span>
             <span>Offline</span>

@@ -9,6 +9,7 @@ import {
   type FontScale,
   type MotionPreference,
   type UiDensity,
+  type AppLocale,
 } from "../../shared/settings/appSettings";
 
 const accentOptions: Array<{ value: AccentTheme; label: string }> = [
@@ -72,6 +73,11 @@ export function Settings() {
       description="E4 D&D'nin görünümünü ve varsayılan davranışlarını masanın çalışma biçimine göre düzenle. Her şeyi açmak zorunda değilsin; yazılımın da sınır öğrenmesi sağlıklı."
     >
       <div className="settings-layout">
+        <section className="settings-card settings-card-wide">
+          <div className="settings-card-head"><div><span className="mini-label">Dil · Language</span><h2>Arayüz dili · Interface language</h2></div><span className="settings-live-pill">Canlı · Live</span></div>
+          <p>Dil seçimi anında uygulanır ve karakter/ruleset verilerini değiştirmez. Language changes immediately and does not modify character or ruleset data.</p>
+          <div className="settings-profile-grid">{([{value:"tr",label:"Türkçe",note:"Varsayılan arayüz dili."},{value:"en",label:"English",note:"English interface language."}] as Array<{value:AppLocale;label:string;note:string}>).map(option=><button key={option.value} type="button" lang={option.value} className={settings.locale===option.value?"settings-choice settings-choice-text active":"settings-choice settings-choice-text"} onClick={()=>updateSettings({locale:option.value})}><b>{option.label}</b><small>{option.note}</small></button>)}</div>
+        </section>
         <section className="settings-card">
           <div className="settings-card-head">
             <div>
