@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.33.0",date:"2026-07-16",title:"Cleric Channel Divinity",
+    summary:"Cleric Channel Divinity seçenekleri, Turn Undead ve edition özellikleri Play Mode'a bağlandı.",
+    changes:[
+      {text:"Level bazlı 1–3 Channel Divinity kullanımı",category:"Özellik"},
+      {text:"Turn Undead WIS Save DC ve Action harcaması",category:"Özellik"},
+      {text:"2024 Divine Spark healing/radiant damage roll",category:"Özellik"},
+      {text:"2014 Destroy Undead CR progression",category:"Özellik"},
+      {text:"Blessed Strikes ve Divine Intervention görünümü",category:"Özellik"},
+      {text:"Cleric progression için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.32.0",date:"2026-07-16",title:"Fighter Action Surge & Indomitable",
     summary:"Fighter'ın temel savaş kaynakları Action Economy ve save reroll akışına bağlandı.",
     changes:[
