@@ -28,6 +28,8 @@ import { combineRollModes, getConditionEffects } from "../../core/rulesets/condi
 import { getSavingThrowBonus, getSkillBonus, SKILL_ABILITIES } from "../../core/rulesets/characterSheetRules";
 import { chooseD20 } from "../../core/rulesets/attackResolution";
 import { getEffectiveMaxHp, getEffectiveSpeed, getExhaustionEffects } from "../../core/rulesets/exhaustionRules";
+import { getDefaultSaveDamageRule, resolveSaveDamage, resolveTargetSave, type SaveDamageRule } from "../../core/rulesets/spellTargetRules";
+import { createTurnEconomy, getAttacksPerAction, spendAttack, spendMovement, spendTurnResource } from "../../core/rulesets/actionEconomyRules";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -103,6 +105,10 @@ export function PlayMode({
   const [targetAc,setTargetAc]=useState(10);
   const [attackMode,setAttackMode]=useState<RollMode>("normal");
   const [checkMode,setCheckMode]=useState<RollMode>("normal");
+  const [spellTargetMode,setSpellTargetMode]=useState<RollMode>("normal");
+  const [targetSaveBonus,setTargetSaveBonus]=useState(0);
+  const [saveDamageRule,setSaveDamageRule]=useState<SaveDamageRule>("half");
+  const [turnEconomy,setTurnEconomy]=useState(createTurnEconomy);
 
   const character =
     characters.find((item) => item.id === selectedCharacterId) ?? characters[0];
@@ -175,6 +181,7 @@ export function PlayMode({
   const selectedRace=rulesetData?.races.find(race=>race.name===activeCharacter.race);
   const effectiveSpeed=getEffectiveSpeed(selectedRace?.speed??30,exhaustionEffects);
   const effectiveMaxHp=getEffectiveMaxHp(activeCharacter.maxHp,exhaustionEffects);
+  const attacksPerAction=getAttacksPerAction(activeCharacter.className,activeCharacter.level);
 
   function commit(patch: Partial<Character>) {
     onUpdateCharacter({
@@ -251,6 +258,8 @@ export function PlayMode({
     const spell = rulesetData?.spells.find((item) => item.id === spellId);
 
     if (!spell) return;
+    const spellTime=spell.castingTime.toLowerCase();
+    if ((spellTime.includes("bonus")&&turnEconomy.bonusActionUsed)||(spellTime.includes("reaction")&&turnEconomy.reactionUsed)||(!spellTime.includes("bonus")&&!spellTime.includes("reaction")&&turnEconomy.actionUsed)) return;
 
     const slotLevel=spell.level===0?0:requestedSlotLevel??getCastableSlotLevels(spell,spellSlots)[0];
     if (spell.level > 0) {
@@ -278,7 +287,7 @@ export function PlayMode({
       conditions: nextConditions,
       activeSpellEffects:nextEffects,
     });
-    const resolutionRolls:RollResult[]=[];if(spell.attackType==="spell-attack"){const attack=rollDice({count:1,sides:20,modifier:getSpellAttackBonus(activeCharacter)});resolutionRolls.push({id:attack.id,label:`${spell.name} Attack`,notation:attack.notation,total:attack.total})}if(total!==null)resolutionRolls.push({id:crypto.randomUUID(),label:`${spell.name}${spell.healingDice?" Healing":" Damage"}`,notation:formula!,total});if(resolutionRolls.length)setRollHistory(current=>[...resolutionRolls,...current].slice(0,6));
+    const resolutionRolls:RollResult[]=[];let resolvedDamage=total;if(spell.attackType==="spell-attack"){const dice=rollDice({count:spellTargetMode==="normal"?1:2,sides:20,modifier:0});const attack=resolveAttack(dice.rolls,getSpellAttackBonus(activeCharacter),targetAc,spellTargetMode);resolutionRolls.push({id:dice.id,label:`${spell.name} Attack · ${attack.hit?attack.critical?"CRITICAL":"Hit":"Miss"}`,notation:`${spellTargetMode} · [${dice.rolls.join(", ")}] vs AC ${targetAc}`,total:attack.total});if(!attack.hit)resolvedDamage=null}if((spell.attackType==="saving-throw"||spell.saveAbility)&&spell.saveAbility){const dice=rollDice({count:spellTargetMode==="normal"?1:2,sides:20,modifier:0});const save=resolveTargetSave(dice.rolls,targetSaveBonus,getSpellSaveDc(activeCharacter),spellTargetMode);const rule=saveDamageRule??getDefaultSaveDamageRule(spell.level,Boolean(spell.damageDice));if(total!==null)resolvedDamage=resolveSaveDamage(total,save.success,rule);resolutionRolls.push({id:dice.id,label:`${spell.name} · ${spell.saveAbility.toUpperCase()} Save · ${save.success?"Başarılı":"Başarısız"}`,notation:`${spellTargetMode} · [${dice.rolls.join(", ")}] ${formatModifier(targetSaveBonus)} vs DC ${getSpellSaveDc(activeCharacter)}`,total:save.total})}if(resolvedDamage!==null)resolutionRolls.push({id:crypto.randomUUID(),label:`${spell.name}${spell.healingDice?" Healing":" Damage"}`,notation:formula!,total:resolvedDamage});if(resolutionRolls.length)setRollHistory(current=>[...resolutionRolls,...current].slice(0,6));setTurnEconomy(current=>spendTurnResource(current,spellTime.includes("bonus")?"bonus-action":spellTime.includes("reaction")?"reaction":"action"));
   }
 
   function quickRoll(label: string, modifier: number) {
@@ -298,7 +307,7 @@ export function PlayMode({
 
   function resolvedCheck(label:string,modifier:number,kind:"skill"|"save"){const imposed=kind==="skill"?exhaustionEffects.abilityCheckMode:exhaustionEffects.attackSaveMode;const effectiveMode=combineRollModes(checkMode,imposed);const adjustedModifier=modifier-exhaustionEffects.d20Penalty;const dice=rollDice({count:effectiveMode==="normal"?1:2,sides:20,modifier:0});const natural=chooseD20(dice.rolls,effectiveMode);setRollHistory(current=>[{id:dice.id,label,notation:`${effectiveMode} · [${dice.rolls.join(", ")}] ${formatModifier(adjustedModifier)}`,total:natural+adjustedModifier},...current].slice(0,6))}
 
-  function weaponAttack(weapon:(typeof equippedItems.weapons)[number]){if(conditionEffects.blocksActions||exhaustionEffects.dead)return;const conditionMode=combineRollModes(conditionEffects.attackMode,exhaustionEffects.attackSaveMode);const effectiveMode=combineRollModes(attackMode,conditionMode);const modifier=getWeaponAttackBonus(activeCharacter,weapon)-exhaustionEffects.d20Penalty;const dice=rollDice({count:effectiveMode==="normal"?1:2,sides:20,modifier:0});const attack=resolveAttack(dice.rolls,modifier,targetAc,effectiveMode);const results:RollResult[]=[{id:dice.id,label:`${weapon.name} · ${attack.hit?attack.critical?"CRITICAL":"Hit":"Miss"}`,notation:`${effectiveMode} · [${dice.rolls.join(", ")}] ${formatModifier(modifier)} vs AC ${targetAc}`,total:attack.total}];if(attack.hit){const formula=getCriticalDamageFormula(getWeaponDamageSummary(activeCharacter,weapon),attack.critical);if(formula){const damage=rollDice(formula);results.push({id:damage.id,label:`${weapon.name} Damage${attack.critical?" · Critical":""}`,notation:damage.notation,total:damage.total})}}setRollHistory(current=>[...results,...current].slice(0,6))}
+  function weaponAttack(weapon:(typeof equippedItems.weapons)[number]){if(conditionEffects.blocksActions||exhaustionEffects.dead||turnEconomy.actionUsed)return;const conditionMode=combineRollModes(conditionEffects.attackMode,exhaustionEffects.attackSaveMode);const effectiveMode=combineRollModes(attackMode,conditionMode);const modifier=getWeaponAttackBonus(activeCharacter,weapon)-exhaustionEffects.d20Penalty;const dice=rollDice({count:effectiveMode==="normal"?1:2,sides:20,modifier:0});const attack=resolveAttack(dice.rolls,modifier,targetAc,effectiveMode);const results:RollResult[]=[{id:dice.id,label:`${weapon.name} · ${attack.hit?attack.critical?"CRITICAL":"Hit":"Miss"}`,notation:`${effectiveMode} · [${dice.rolls.join(", ")}] ${formatModifier(modifier)} vs AC ${targetAc}`,total:attack.total}];if(attack.hit){const formula=getCriticalDamageFormula(getWeaponDamageSummary(activeCharacter,weapon),attack.critical);if(formula){const damage=rollDice(formula);results.push({id:damage.id,label:`${weapon.name} Damage${attack.critical?" · Critical":""}`,notation:damage.notation,total:damage.total})}}setTurnEconomy(current=>spendAttack(current,attacksPerAction));setRollHistory(current=>[...results,...current].slice(0,6))}
 
   function shortRest(die: number) {
     const pool = hitDice.find((item) => item.die === die);
@@ -417,6 +426,7 @@ export function PlayMode({
         </section>
 
         <div className="play-mode-grid">
+          <section className="play-mode-card turn-economy-card"><div className="play-mode-section-head"><div><span className="mini-label">Current Turn</span><h2>Action Economy</h2></div><button type="button" onClick={()=>setTurnEconomy(createTurnEconomy())}>Yeni Tur</button></div><div className="turn-resource-grid"><button className={turnEconomy.actionUsed?"spent":""} onClick={()=>setTurnEconomy(current=>spendTurnResource(current,"action"))}>Action <small>{turnEconomy.actionUsed?"Kullanıldı":"Hazır"}</small></button><button className={turnEconomy.bonusActionUsed?"spent":""} onClick={()=>setTurnEconomy(current=>spendTurnResource(current,"bonus-action"))}>Bonus Action <small>{turnEconomy.bonusActionUsed?"Kullanıldı":"Hazır"}</small></button><button className={turnEconomy.reactionUsed?"spent":""} onClick={()=>setTurnEconomy(current=>spendTurnResource(current,"reaction"))}>Reaction <small>{turnEconomy.reactionUsed?"Kullanıldı":"Hazır"}</small></button></div><div className="movement-console"><span>Movement {turnEconomy.movementUsed} / {effectiveSpeed} ft.</span>{[5,10,15].map(feet=><button type="button" key={feet} disabled={turnEconomy.movementUsed>=effectiveSpeed} onClick={()=>setTurnEconomy(current=>spendMovement(current,feet,effectiveSpeed))}>+{feet}</button>)}</div><small>Attack {turnEconomy.attacksUsed} / {attacksPerAction} · Spell casting time action kaynağını otomatik harcar.</small></section>
           <section className="play-mode-card play-mode-hp-card">
             <div className="play-mode-section-head">
               <div><span className="mini-label">Hit Points</span><h2>Can Yönetimi</h2></div>
@@ -574,7 +584,7 @@ export function PlayMode({
               <button
                 className="play-mode-weapon-roll"
                 key={weapon.id}
-                disabled={conditionEffects.blocksActions||exhaustionEffects.dead}
+                disabled={conditionEffects.blocksActions||exhaustionEffects.dead||turnEconomy.actionUsed}
                 onClick={() => weaponAttack(weapon)}
               >
                 <span>{weapon.name}</span>
@@ -601,6 +611,8 @@ export function PlayMode({
               <div><span className="mini-label">Prepared Spells</span><h2>Hızlı Büyüler</h2></div>
               <span>{spells.length} hazır</span>
             </div>
+
+            <div className="spell-target-console"><label>Hedef modu<select value={spellTargetMode} onChange={event=>setSpellTargetMode(event.target.value as RollMode)}><option value="normal">Normal</option><option value="advantage">Advantage</option><option value="disadvantage">Disadvantage</option></select></label><label>Hedef save bonus<input type="number" value={targetSaveBonus} onChange={event=>setTargetSaveBonus(Number(event.target.value)||0)}/></label><label>Başarılı save<select value={saveDamageRule} onChange={event=>setSaveDamageRule(event.target.value as SaveDamageRule)}><option value="half">Yarım hasar</option><option value="none">Hasar yok</option></select></label><small>Spell attack büyüleri Quick Rolls bölümündeki hedef AC değerini kullanır.</small></div>
 
             <div className="play-mode-spell-list">
               {spellGroups.length === 0 ? <p>Hazır büyü bulunamadı.</p> : spellGroups.map((group) => (

@@ -15,6 +15,30 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.27.0",date:"2026-07-16",title:"Turn Action Economy",
+    summary:"Action, Bonus Action, Reaction, movement ve Extra Attack kullanımı Play Mode tur döngüsüne bağlandı.",
+    changes:[
+      {text:"Tek tıkla sıfırlanan yeni tur konsolu",category:"Özellik"},
+      {text:"Action, Bonus Action ve Reaction bağımsız takibi",category:"Özellik"},
+      {text:"Hareket hızına göre 5/10/15 ft. movement harcama",category:"Özellik"},
+      {text:"Fighter ve martial class Extra Attack progression",category:"Özellik"},
+      {text:"Weapon attack ve spell casting time otomatik kaynak harcaması",category:"Düzeltme"},
+      {text:"Action economy için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
+    version:"2.26.0",date:"2026-07-16",title:"Spell Target Resolution",
+    summary:"Spell attack ve saving throw büyüleri hedef savunmasına karşı otomatik çözülür hale getirildi.",
+    changes:[
+      {text:"Spell attack için hedef AC, hit, miss ve critical çözümü",category:"Özellik"},
+      {text:"Hedef saving throw bonusu ve Spell Save DC karşılaştırması",category:"Özellik"},
+      {text:"Hedef rollarında normal, advantage ve disadvantage",category:"Özellik"},
+      {text:"Başarılı save sonrası yarım hasar veya hasarsız seçenek",category:"Özellik"},
+      {text:"Miss durumunda spell damage uygulanmaması",category:"Düzeltme"},
+      {text:"Spell target resolution için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.25.0",date:"2026-07-16",title:"Edition-Aware Exhaustion Engine",
     summary:"Exhaustion artık yalnızca sayaç değil; 2014 ve 2024 mekanikleriyle saldırı, check, save, hız ve HP hesaplarını etkiliyor.",
     changes:[
