@@ -13,4 +13,5 @@ describe("class feature engine", () => {
   it("exposes sheet-ready actions with resource links", () => {
     expect(getClassFeatureActions("Fighter", 2, "dnd_2024").map((item) => item.resourceId)).toContain("action-surge");
   });
+  it("does not grant level-locked resources early",()=>{expect(getClassResources("Druid",1,abilities,"dnd_2014")).toEqual([]);expect(getClassResources("Cleric",1,abilities,"dnd_2024")).toEqual([])});
 });

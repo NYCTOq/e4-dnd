@@ -15,8 +15,8 @@ export function getClassResources(className: string, level: number, abilities: A
   switch (key) {
     case "barbarian": return [resource("rage", "Rage", safeLevel >= 17 ? 6 : safeLevel >= 12 ? 5 : safeLevel >= 6 ? 4 : safeLevel >= 3 ? 3 : 2, "long")];
     case "bard": return [resource("bardic-inspiration", "Bardic Inspiration", modifier(abilities.cha), safeLevel >= 5 ? "short" : "long")];
-    case "cleric": return [resource("channel-divinity", "Channel Divinity", safeLevel >= 18 ? 3 : safeLevel >= 6 ? 2 : 1, "short")];
-    case "druid": return [resource("wild-shape", "Wild Shape", ruleset === "dnd_2024" ? (safeLevel >= 17 ? 4 : safeLevel >= 6 ? 3 : 2) : 2, "short")];
+    case "cleric": return safeLevel >= 2 ? [resource("channel-divinity", "Channel Divinity", safeLevel >= 18 ? 3 : safeLevel >= 6 ? 2 : 1, "short")] : [];
+    case "druid": return safeLevel >= 2 ? [resource("wild-shape", "Wild Shape", ruleset === "dnd_2024" ? (safeLevel >= 17 ? 4 : safeLevel >= 6 ? 3 : 2) : 2, "short")] : [];
     case "fighter": return [
       resource("second-wind", "Second Wind", ruleset === "dnd_2024" ? (safeLevel >= 10 ? 4 : safeLevel >= 4 ? 3 : 2) : 1, "short"),
       ...(safeLevel >= 2 ? [resource("action-surge", "Action Surge", safeLevel >= 17 ? 2 : 1, "short")] : []),

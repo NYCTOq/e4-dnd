@@ -18,6 +18,7 @@ import { getEldritchInvocations } from "../../core/rulesets/invocationRules";
 import { getWildShapeForms } from "../../core/rulesets/wildShapeRules";
 import { getBattleMasterManeuvers, getSuperiorityDie } from "../../core/rulesets/maneuverRules";
 import { getCompanionStats, getRangerCompanions } from "../../core/rulesets/companionRules";
+import { getClassFeatureActions } from "../../core/rulesets/classFeatureEngine";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -139,6 +140,8 @@ export function PlayMode({
   const companion=getRangerCompanions(activeCharacter.ruleset).find(item=>item.id===activeCharacter.companionId);
   const companionStats=companion?getCompanionStats(companion,activeCharacter.level,getAbilityModifier(activeCharacter.abilities.wis)):null;
   const companionCurrentHp=companionStats?Math.min(companionStats.maxHp,Math.max(0,activeCharacter.companionCurrentHp??companionStats.maxHp)):0;
+  const handledResourceIds=new Set(["sorcery-points","wild-shape","superiority-dice"]);
+  const classActions=getClassFeatureActions(activeCharacter.className,activeCharacter.level,activeCharacter.ruleset).filter(action=>action.resourceId&&!handledResourceIds.has(action.resourceId)&&activeCharacter.resources.some(resource=>resource.id===action.resourceId));
 
   function commit(patch: Partial<Character>) {
     onUpdateCharacter({
@@ -165,6 +168,7 @@ export function PlayMode({
   }
   function useSuperiorityDie(){if(!superiorityDice||superiorityDice.used>=superiorityDice.max)return;commit({resources:activeCharacter.resources.map(resource=>resource.id==="superiority-dice"?{...resource,used:Math.min(resource.max,resource.used+1)}:resource)})}
   function updateCompanionHp(amount:number){if(!companionStats)return;commit({companionCurrentHp:Math.min(companionStats.maxHp,Math.max(0,companionCurrentHp+amount))})}
+  function executeClassAction(resourceId:string,amount=1){const resource=activeCharacter.resources.find(item=>item.id===resourceId);if(!resource||resource.max-resource.used<amount)return;let currentHp=activeCharacter.currentHp;let conditions=activeCharacter.conditions;if(resourceId==="second-wind"){const result=rollDice({count:1,sides:10,modifier:activeCharacter.level});currentHp=Math.min(activeCharacter.maxHp,currentHp+result.total);setRollHistory(current=>[{id:result.id,label:"Second Wind",notation:result.notation,total:result.total},...current].slice(0,6))}if(resourceId==="lay-on-hands")currentHp=Math.min(activeCharacter.maxHp,currentHp+amount);if(resourceId==="rage"&&!conditions.includes("Rage"))conditions=[...conditions,"Rage"];commit({currentHp,conditions,resources:activeCharacter.resources.map(item=>item.id===resourceId?{...item,used:Math.min(item.max,item.used+amount)}:item)})}
 
   function updateHp(amount: number) {
     commit({
@@ -263,6 +267,7 @@ export function PlayMode({
       hitDice: hitDice.map((item) =>
         item.die === die ? { ...item, used: item.used + 1 } : item,
       ),
+      resources: activeCharacter.resources.map(resource=>resource.recovery==="short"?{...resource,used:0}:resource),
     });
 
     setRollHistory((current) =>
@@ -288,6 +293,7 @@ export function PlayMode({
       exhaustion: Math.max(0, (activeCharacter.exhaustion ?? 0) - 1),
       conditionDurations: {},
       conditions: activeCharacter.conditions.filter((item) => item === "Cursed"),
+      resources: activeCharacter.resources.map(resource=>({...resource,used:0})),
     });
   }
 
@@ -444,6 +450,8 @@ export function PlayMode({
           {maneuvers.length?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Battle Master · {getSuperiorityDie(activeCharacter.level)}</span><h2>Maneuvers</h2></div><strong>{superiorityDice?`${superiorityDice.max-superiorityDice.used} / ${superiorityDice.max} zar`:"Kaynak yok"}</strong></div><div className="play-mode-slot-grid">{maneuvers.map(option=><div className="play-mode-slot-row" key={option.id}><div><span>{option.name}</span><small>{option.trigger} · {option.summary}</small></div><button type="button" disabled={!superiorityDice||superiorityDice.used>=superiorityDice.max} onClick={useSuperiorityDie}>Zar Harca</button></div>)}</div></section>:null}
 
           {companion&&companionStats?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Beast Master Companion</span><h2>{companion.name}</h2></div><strong>{companionCurrentHp} / {companionStats.maxHp} HP</strong></div><p>{companion.summary}</p><div className="play-mode-core-stats"><div><span>AC</span><strong>{companionStats.armorClass}</strong></div><div><span>Attack</span><strong>{formatModifier(companionStats.attackBonus)}</strong></div><div><span>Damage</span><strong>{companionStats.damage}</strong></div></div><div className="play-mode-big-buttons">{[-5,-1,1,5].map(amount=><button key={amount} onClick={()=>updateCompanionHp(amount)}>{amount>0?`+${amount}`:amount}</button>)}</div><small>{companion.attackName} · {companion.speed}</small></section>:null}
+
+          {classActions.length?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Core Class Actions</span><h2>{activeCharacter.className} Kaynakları</h2></div></div><div className="play-mode-slot-grid">{classActions.map(action=>{const resourceId=action.resourceId!;const resource=activeCharacter.resources.find(item=>item.id===resourceId)!;const remaining=resource.max-resource.used;return <div className="play-mode-slot-row" key={action.id}><div><span>{action.name} · {action.actionType}</span><small>{action.summary}</small><strong>{remaining} / {resource.max} kaldı · {resource.recovery} rest</strong></div>{resourceId==="lay-on-hands"?<div>{[1,5,10].map(amount=><button key={amount} disabled={remaining<amount} onClick={()=>executeClassAction(resourceId,amount)}>+{amount} HP</button>)}</div>:<button type="button" disabled={remaining<1} onClick={()=>executeClassAction(resourceId)}>{resourceId==="second-wind"?"İyileş":"Kullan"}</button>}</div>})}</div></section>:null}
 
           <section className="play-mode-card">
             <div className="play-mode-section-head">

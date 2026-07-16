@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.15.0",date:"2026-07-16",title:"Core Class Action Console",
+    summary:"Temel class kaynakları Play Mode'da kullanılabilir eylemlere ve dinlenme yenilemesine bağlandı.",
+    changes:[
+      {text:"Rage, Bardic Inspiration, Channel Divinity ve Fighter kaynak eylemleri",category:"Özellik"},
+      {text:"Focus/Ki, Lay on Hands, Favored Enemy ve Arcane Recovery kullanımı",category:"Özellik"},
+      {text:"Second Wind için otomatik d10 + Fighter level healing",category:"Özellik"},
+      {text:"Lay on Hands için 1, 5 ve 10 puanlık healing kontrolleri",category:"Özellik"},
+      {text:"Short/Long Rest sırasında class kaynaklarının otomatik yenilenmesi",category:"Düzeltme"},
+      {text:"Cleric ve Druid kaynaklarının erken level'da açılması düzeltildi",category:"Düzeltme"},
+    ],
+  },
+  {
     version:"2.14.0",date:"2026-07-16",title:"Beast Master Companion System",
     summary:"Ranger companion seçimi, level ölçekli statlar ve masa modu HP takibi Beast Master akışına eklendi.",
     changes:[
