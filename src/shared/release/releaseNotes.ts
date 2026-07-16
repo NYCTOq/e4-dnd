@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.30.0",date:"2026-07-16",title:"Monk Martial Arts & Focus",
+    summary:"Monk Martial Arts saldırıları, Focus/Ki harcaması ve temel combat seçenekleri Action Economy'ye bağlandı.",
+    changes:[
+      {text:"2014 ve 2024 ayrı Martial Arts die progression",category:"Özellik"},
+      {text:"Unarmed Strike otomatik attack ve damage roll",category:"Özellik"},
+      {text:"Flurry of Blows, Patient Defense ve Step of the Wind",category:"Özellik"},
+      {text:"Focus/Ki kaynağı ve Bonus Action harcaması",category:"Düzeltme"},
+      {text:"Unarmored Movement ve ileri seviye Monk özellikleri",category:"Özellik"},
+      {text:"Monk progression için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.29.0",date:"2026-07-16",title:"Barbarian Rage Combat",
     summary:"Barbarian Rage savunması ve 1–20 combat progression bilgileri Play Mode hasar motoruna bağlandı.",
     changes:[
