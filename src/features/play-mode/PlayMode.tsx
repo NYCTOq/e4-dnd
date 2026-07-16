@@ -167,6 +167,7 @@ export function PlayMode({
   const selectedClass = rulesetData?.classes.find(
     (item) => item.name === activeCharacter.className,
   );
+  const spellcastingAbility:AbilityKey=(["Wizard","Artificer"].includes(activeCharacter.className)?"int":["Bard","Paladin","Sorcerer","Warlock"].includes(activeCharacter.className)?"cha":"wis");
   const hitDice = normalizeHitDice(
     activeCharacter.hitDice,
     activeCharacter.level,
@@ -352,7 +353,7 @@ export function PlayMode({
       activeSpellEffects:nextEffects,
       ...(inventoryAfterCast ? { inventory: inventoryAfterCast } : {}),
     });
-    const resolutionRolls:RollResult[]=[];let resolvedDamage=total;if(spell.attackType==="spell-attack"){const dice=rollDice({count:spellTargetMode==="normal"?1:2,sides:20,modifier:0});const attack=resolveAttack(dice.rolls,getSpellAttackBonus(activeCharacter),targetAc,spellTargetMode);resolutionRolls.push({id:dice.id,label:`${spell.name} Attack · ${attack.hit?attack.critical?"CRITICAL":"Hit":"Miss"}`,notation:`${spellTargetMode} · [${dice.rolls.join(", ")}] vs AC ${targetAc}`,total:attack.total});if(!attack.hit)resolvedDamage=null}if((spell.attackType==="saving-throw"||spell.saveAbility)&&spell.saveAbility){const dice=rollDice({count:spellTargetMode==="normal"?1:2,sides:20,modifier:0});const save=resolveTargetSave(dice.rolls,targetSaveBonus,getSpellSaveDc(activeCharacter),spellTargetMode);const rule=saveDamageRule??getDefaultSaveDamageRule(spell.level,Boolean(spell.damageDice));if(total!==null)resolvedDamage=resolveSaveDamage(total,save.success,rule);resolutionRolls.push({id:dice.id,label:`${spell.name} · ${spell.saveAbility.toUpperCase()} Save · ${save.success?"Başarılı":"Başarısız"}`,notation:`${spellTargetMode} · [${dice.rolls.join(", ")}] ${formatModifier(targetSaveBonus)} vs DC ${getSpellSaveDc(activeCharacter)}`,total:save.total})}if(resolvedDamage!==null)resolutionRolls.push({id:crypto.randomUUID(),label:`${spell.name}${spell.healingDice?" Healing":" Damage"}`,notation:formula!,total:resolvedDamage});if(resolutionRolls.length)setRollHistory(current=>[...resolutionRolls,...current].slice(0,6));setTurnEconomy(current=>spendTurnResource(current,spellTime.includes("bonus")?"bonus-action":spellTime.includes("reaction")?"reaction":"action"));
+    const resolutionRolls:RollResult[]=[];let resolvedDamage=total;if(spell.attackType==="spell-attack"){const dice=rollDice({count:spellTargetMode==="normal"?1:2,sides:20,modifier:0});const attack=resolveAttack(dice.rolls,getSpellAttackBonus(effectiveCharacter,spellcastingAbility),targetAc,spellTargetMode);resolutionRolls.push({id:dice.id,label:`${spell.name} Attack · ${attack.hit?attack.critical?"CRITICAL":"Hit":"Miss"}`,notation:`${spellTargetMode} · [${dice.rolls.join(", ")}] vs AC ${targetAc}`,total:attack.total});if(!attack.hit)resolvedDamage=null}if((spell.attackType==="saving-throw"||spell.saveAbility)&&spell.saveAbility){const dice=rollDice({count:spellTargetMode==="normal"?1:2,sides:20,modifier:0});const save=resolveTargetSave(dice.rolls,targetSaveBonus,getSpellSaveDc(effectiveCharacter,spellcastingAbility),spellTargetMode);const rule=saveDamageRule??getDefaultSaveDamageRule(spell.level,Boolean(spell.damageDice));if(total!==null)resolvedDamage=resolveSaveDamage(total,save.success,rule);resolutionRolls.push({id:dice.id,label:`${spell.name} · ${spell.saveAbility.toUpperCase()} Save · ${save.success?"Başarılı":"Başarısız"}`,notation:`${spellTargetMode} · [${dice.rolls.join(", ")}] ${formatModifier(targetSaveBonus)} vs DC ${getSpellSaveDc(effectiveCharacter,spellcastingAbility)}`,total:save.total})}if(resolvedDamage!==null)resolutionRolls.push({id:crypto.randomUUID(),label:`${spell.name}${spell.healingDice?" Healing":" Damage"}`,notation:formula!,total:resolvedDamage});if(resolutionRolls.length)setRollHistory(current=>[...resolutionRolls,...current].slice(0,6));setTurnEconomy(current=>spendTurnResource(current,spellTime.includes("bonus")?"bonus-action":spellTime.includes("reaction")?"reaction":"action"));
   }
 
   function quickRoll(label: string, modifier: number) {
@@ -384,7 +385,29 @@ export function PlayMode({
   function toggleAttunement(itemId:string){const item=rulesetData?.items.find(candidate=>candidate.id===itemId);if(item)commit({inventory:toggleItemAttunement(activeCharacter.inventory,item)})}
   function spendMagicItemCharge(itemId:string){const item=rulesetData?.items.find(candidate=>candidate.id===itemId);if(!item)return;const cost=item.chargeCost??1;const entry=activeCharacter.inventory.find(candidate=>candidate.itemId===itemId);if(!entry||item.requiresAttunement&&!entry.attuned||!item.charges||item.charges-(entry.chargesUsed??0)<cost)return;if(item.id==="pearl-of-power"){const nextSlots=recoverHighestSpentSpellSlot(spellSlots);if(nextSlots===spellSlots)return;commit({inventory:spendItemCharge(activeCharacter.inventory,item,cost),spellSlots:nextSlots});return}commit({inventory:spendItemCharge(activeCharacter.inventory,item,cost)});const spell=rulesetData?.spells.find(candidate=>candidate.name===item.grantedSpellName);if(spell)castSpell(spell.id,spell.level,false)}
 
-  function weaponAttack(weapon:(typeof equippedItems.weapons)[number]){if(conditionEffects.blocksActions||exhaustionEffects.dead||turnEconomy.actionUsed||itemEffectRuntime.blocksAggressiveActions)return;const conditionMode=combineRollModes(conditionEffects.attackMode,exhaustionEffects.attackSaveMode);const effectiveMode=combineRollModes(combineRollModes(attackMode,conditionMode),itemEffectRuntime.attackMode);const potionAttackBonus=itemEffectRuntime.attackSaveBonusDice?rollFormula(itemEffectRuntime.attackSaveBonusDice):0;const modifier=getWeaponAttackBonus(activeCharacter,weapon)-exhaustionEffects.d20Penalty+potionAttackBonus;const dice=rollDice({count:effectiveMode==="normal"?1:2,sides:20,modifier:0});const attack=resolveAttack(dice.rolls,modifier,targetAc,effectiveMode);const results:RollResult[]=[{id:dice.id,label:`${weapon.name} · ${attack.hit?attack.critical?"CRITICAL":"Hit":"Miss"}`,notation:`${effectiveMode} · [${dice.rolls.join(", ")}] ${formatModifier(modifier)} vs AC ${targetAc}`,total:attack.total}];if(attack.hit){const formula=getCriticalDamageFormula(getWeaponDamageSummary(activeCharacter,weapon),attack.critical);if(formula){const damage=rollDice(formula);results.push({id:damage.id,label:`${weapon.name} Damage${attack.critical?" · Critical":""}`,notation:damage.notation,total:damage.total})}for(const extra of getMagicWeaponExtraDamage(weapon,magicWeaponTarget,attack.critical)){const total=rollFormula(extra.formula);results.push({id:crypto.randomUUID(),label:`${weapon.name} · ${extra.damageType} ${extra.source==="critical"?"Critical ":""}Damage`,notation:extra.formula,total})}if(itemEffectRuntime.weaponDamageDice){const growth=rollFormula(itemEffectRuntime.weaponDamageDice);results.push({id:crypto.randomUUID(),label:"Potion of Growth Damage",notation:itemEffectRuntime.weaponDamageDice,total:growth})}if(itemEffectRuntime.weaponDamagePenaltyDice){const reduction=rollFormula(itemEffectRuntime.weaponDamagePenaltyDice);results.push({id:crypto.randomUUID(),label:"Potion of Diminution Damage",notation:`-${itemEffectRuntime.weaponDamagePenaltyDice}`,total:-reduction})}const sneakAllowed=isRogue&&sneakAttackEnabled&&canUseSneakAttack({level:activeCharacter.level,weapon,usedThisTurn:sneakAttackUsed,hasAdvantage:effectiveMode==="advantage",hasDisadvantage:effectiveMode==="disadvantage",allyAdjacent:sneakAllyAdjacent});if(sneakAllowed){const sneak=rollDice({count:getSneakAttackDice(activeCharacter.level)*(attack.critical?2:1),sides:6,modifier:0});results.push({id:sneak.id,label:`Sneak Attack${attack.critical?" · Critical":""}`,notation:sneak.notation,total:sneak.total});setSneakAttackUsed(true)}}const effectsAfterAttack=removeFragileItemEffects(activeSpellEffects);if(effectsAfterAttack.length!==activeSpellEffects.length)commit({activeSpellEffects:effectsAfterAttack});setTurnEconomy(current=>spendAttack(current,attacksPerAction));setRollHistory(current=>[...results,...current].slice(0,6))}
+  function weaponAttack(weapon: (typeof equippedItems.weapons)[number]) {
+    if (conditionEffects.blocksActions || exhaustionEffects.dead || turnEconomy.actionUsed || itemEffectRuntime.blocksAggressiveActions) return;
+    const conditionMode = combineRollModes(conditionEffects.attackMode, exhaustionEffects.attackSaveMode);
+    const effectiveMode = combineRollModes(combineRollModes(attackMode, conditionMode), itemEffectRuntime.attackMode);
+    const potionAttackBonus = itemEffectRuntime.attackSaveBonusDice ? rollFormula(itemEffectRuntime.attackSaveBonusDice) : 0;
+    const modifier = getWeaponAttackBonus(effectiveCharacter, weapon) - exhaustionEffects.d20Penalty + potionAttackBonus;
+    const dice = rollDice({ count: effectiveMode === "normal" ? 1 : 2, sides: 20, modifier: 0 });
+    const attack = resolveAttack(dice.rolls, modifier, targetAc, effectiveMode);
+    const results: RollResult[] = [{ id: dice.id, label: `${weapon.name} · ${attack.hit ? attack.critical ? "CRITICAL" : "Hit" : "Miss"}`, notation: `${effectiveMode} · [${dice.rolls.join(", ")}] ${formatModifier(modifier)} vs AC ${targetAc}`, total: attack.total }];
+    if (attack.hit) {
+      const formula = getCriticalDamageFormula(getWeaponDamageSummary(effectiveCharacter, weapon), attack.critical);
+      if (formula) { const damage = rollDice(formula); results.push({ id: damage.id, label: `${weapon.name} Damage${attack.critical ? " · Critical" : ""}`, notation: damage.notation, total: damage.total }); }
+      for (const extra of getMagicWeaponExtraDamage(weapon, magicWeaponTarget, attack.critical)) { const total = rollFormula(extra.formula); results.push({ id: crypto.randomUUID(), label: `${weapon.name} · ${extra.damageType} ${extra.source === "critical" ? "Critical " : ""}Damage`, notation: extra.formula, total }); }
+      if (itemEffectRuntime.weaponDamageDice) { const growth = rollFormula(itemEffectRuntime.weaponDamageDice); results.push({ id: crypto.randomUUID(), label: "Potion of Growth Damage", notation: itemEffectRuntime.weaponDamageDice, total: growth }); }
+      if (itemEffectRuntime.weaponDamagePenaltyDice) { const reduction = rollFormula(itemEffectRuntime.weaponDamagePenaltyDice); results.push({ id: crypto.randomUUID(), label: "Potion of Diminution Damage", notation: `-${itemEffectRuntime.weaponDamagePenaltyDice}`, total: -reduction }); }
+      const sneakAllowed = isRogue && sneakAttackEnabled && canUseSneakAttack({ level: activeCharacter.level, weapon, usedThisTurn: sneakAttackUsed, hasAdvantage: effectiveMode === "advantage", hasDisadvantage: effectiveMode === "disadvantage", allyAdjacent: sneakAllyAdjacent });
+      if (sneakAllowed) { const sneak = rollDice({ count: getSneakAttackDice(activeCharacter.level) * (attack.critical ? 2 : 1), sides: 6, modifier: 0 }); results.push({ id: sneak.id, label: `Sneak Attack${attack.critical ? " · Critical" : ""}`, notation: sneak.notation, total: sneak.total }); setSneakAttackUsed(true); }
+    }
+    const effectsAfterAttack = removeFragileItemEffects(activeSpellEffects);
+    if (effectsAfterAttack.length !== activeSpellEffects.length) commit({ activeSpellEffects: effectsAfterAttack });
+    setTurnEconomy(current => spendAttack(current, attacksPerAction));
+    setRollHistory(current => [...results, ...current].slice(0, 6));
+  }
 
   function shortRest(die: number) {
     const pool = hitDice.find((item) => item.die === die);
@@ -393,7 +416,7 @@ export function PlayMode({
     const result = rollDice({
       count: 1,
       sides: die,
-      modifier: getAbilityModifier(activeCharacter.abilities.con),
+      modifier: getAbilityModifier(effectiveCharacter.abilities.con),
     });
 
     commit({
@@ -499,8 +522,8 @@ export function PlayMode({
             <div><span>AC</span><strong>{armorClass}</strong></div>
             <div><span>Init</span><strong>{formatModifier(getInitiative(effectiveCharacter)+featRuntime.alertInitiativeBonus)}</strong></div>
             <div><span>Prof</span><strong>+{getProficiencyBonus(activeCharacter.level)}</strong></div>
-            <div><span>Save DC</span><strong>{getSpellSaveDc(activeCharacter)}</strong></div>
-            <div><span>Spell Atk</span><strong>{formatModifier(getSpellAttackBonus(activeCharacter))}</strong></div>
+            <div><span>Save DC</span><strong>{getSpellSaveDc(effectiveCharacter,spellcastingAbility)}</strong></div>
+            <div><span>Spell Atk</span><strong>{formatModifier(getSpellAttackBonus(effectiveCharacter,spellcastingAbility))}</strong></div>
           </div>
         </section>
 
@@ -720,7 +743,7 @@ export function PlayMode({
                     const castableLevels=getCastableSlotLevels(spell,spellSlots);const selectedSlot=castSlotLevels[spell.id]&&castableLevels.includes(castSlotLevels[spell.id])?castSlotLevels[spell.id]:castableLevels[0];
                     const disabled = spell.level > 0 && !selectedSlot;const formula=getSpellRollFormula(spell,activeCharacter.level,selectedSlot??spell.level);
                     return (
-                      <div className="play-mode-slot-row" key={spell.id}><div><span>{spell.name}{spell.concentration ? " · C" : ""}</span><small>{[formula,spell.attackType==="saving-throw"&&spell.saveAbility?`${spell.saveAbility.toUpperCase()} save DC ${getSpellSaveDc(activeCharacter)}`:spell.attackType==="spell-attack"?`Spell attack ${formatModifier(getSpellAttackBonus(activeCharacter))}`:null].filter(Boolean).join(" · ")||"Utility"}</small></div>{spell.level>0?<select aria-label={`${spell.name} slot level`} disabled={!castableLevels.length} value={selectedSlot??""} onChange={event=>setCastSlotLevels(current=>({...current,[spell.id]:Number(event.target.value)}))}>{castableLevels.map(level=><option key={level} value={level}>L{level} slot</option>)}</select>:null}<button disabled={disabled} onClick={()=>castSpell(spell.id,selectedSlot)}>{spell.level===0?"Cantrip":disabled?"Slot yok":"Cast"}</button></div>
+                      <div className="play-mode-slot-row" key={spell.id}><div><span>{spell.name}{spell.concentration ? " · C" : ""}</span><small>{[formula,spell.attackType==="saving-throw"&&spell.saveAbility?`${spell.saveAbility.toUpperCase()} save DC ${getSpellSaveDc(effectiveCharacter,spellcastingAbility)}`:spell.attackType==="spell-attack"?`Spell attack ${formatModifier(getSpellAttackBonus(effectiveCharacter,spellcastingAbility))}`:null].filter(Boolean).join(" · ")||"Utility"}</small></div>{spell.level>0?<select aria-label={`${spell.name} slot level`} disabled={!castableLevels.length} value={selectedSlot??""} onChange={event=>setCastSlotLevels(current=>({...current,[spell.id]:Number(event.target.value)}))}>{castableLevels.map(level=><option key={level} value={level}>L{level} slot</option>)}</select>:null}<button disabled={disabled} onClick={()=>castSpell(spell.id,selectedSlot)}>{spell.level===0?"Cantrip":disabled?"Slot yok":"Cast"}</button></div>
                     );
                   })}
                 </div>
