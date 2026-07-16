@@ -56,4 +56,12 @@ describe("spell database v2 expansion", () => {
     expect(SPELL_EXPANSION_2014.find((spell) => spell.name === "Hellish Rebuke")?.reactionTrigger).toBeTruthy();
     expect(SPELL_EXPANSION_2014.length).toBeGreaterThanOrEqual(209);
   });
+  it("adds the advanced level three through five package", () => {
+    const required = ["Bestow Curse", "Fear", "Glyph of Warding", "Remove Curse", "Black Tentacles", "Faithful Hound", "Banishing Smite", "Cone of Cold", "Swift Quiver", "Wall of Force"];
+    const names = new Set(SPELL_EXPANSION_2014.map((spell) => spell.name));
+    expect(required.filter((name) => !names.has(name))).toEqual([]);
+    for (const level of [3, 4, 5]) expect(SPELL_EXPANSION_2014.filter((spell) => spell.level === level).length).toBeGreaterThanOrEqual(25);
+    expect(SPELL_EXPANSION_2014.find((spell) => spell.name === "Glyph of Warding")).toMatchObject({ materialConsumed: true, damageDice: "5d8" });
+    expect(SPELL_EXPANSION_2014.length).toBeGreaterThanOrEqual(249);
+  });
 });
