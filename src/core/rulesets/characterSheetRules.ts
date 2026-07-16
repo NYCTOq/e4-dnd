@@ -7,6 +7,7 @@ import { getWildShapeForms } from "./wildShapeRules";
 import { getBattleMasterManeuvers, getSuperiorityDie } from "./maneuverRules";
 import { getCompanionStats, getRangerCompanions } from "./companionRules";
 import { getPaladinAuraSummary, isPaladin } from "./paladinRules";
+import { getAttunedMagicItemBonuses } from "./magicItemRules";
 
 export const SKILL_ABILITIES:Record<string,AbilityKey> = {
   Acrobatics:"dex", "Animal Handling":"wis", Arcana:"int", Athletics:"str", Deception:"cha", History:"int",
@@ -21,7 +22,7 @@ export function getSkillBonus(character:Character, skill:string) {
 }
 export function getSavingThrowBonus(character:Character, ability:AbilityKey, rulesetData:RulesetData|null) {
   const classData=rulesetData?.classes.find(item=>item.name===character.className);
-  return getAbilityModifier(character.abilities[ability]) + (classData?.savingThrows.includes(ability) ? getProficiencyBonus(character.level) : 0);
+  return getAbilityModifier(character.abilities[ability]) + (classData?.savingThrows.includes(ability) ? getProficiencyBonus(character.level) : 0) + getAttunedMagicItemBonuses(character.inventory, rulesetData?.items ?? []).savingThrows;
 }
 export function getCharacterFeatures(character:Character, rulesetData:RulesetData|null) {
   const classData=rulesetData?.classes.find(item=>item.name===character.className);

@@ -17,3 +17,10 @@ export function recoverItemCharges(inventory: CharacterInventoryItem[], items: r
   const itemMap = new Map(items.map((item) => [item.id, item]));
   return inventory.map((entry) => itemMap.get(entry.itemId)?.chargeRecovery ? { ...entry, chargesUsed: 0 } : entry);
 }
+export function getAttunedMagicItemBonuses(inventory: CharacterInventoryItem[], items: readonly DndItemData[]) {
+  const itemMap = new Map(items.map((item) => [item.id, item]));
+  return inventory.filter((entry) => entry.attuned).reduce((total, entry) => {
+    const bonus = itemMap.get(entry.itemId)?.armorBonus ?? 0;
+    return { armorClass: total.armorClass + bonus, savingThrows: total.savingThrows + bonus };
+  }, { armorClass: 0, savingThrows: 0 });
+}

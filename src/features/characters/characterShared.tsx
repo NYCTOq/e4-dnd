@@ -4,6 +4,7 @@ import type { Character, CharacterDraft, CharacterHitDiePool } from "../../core/
 import { formatModifier, getAbilityModifier, getProficiencyBonus } from "../../core/character/characterCalculator";
 import { getHighestSpellLevel, getSpellMechanicSummary } from "../../core/rulesets/spellRules";
 import { getItemSearchText, getWeaponMastery } from "../../core/rulesets/equipmentRules";
+import { getAttunedMagicItemBonuses } from "../../core/rulesets/magicItemRules";
 import { getClassResources, mergeClassResources } from "../../core/rulesets/classFeatureEngine";
 import { canPrepareSpell, canRitualCast, canSelectKnownSpell, getSpellcastingProfile } from "../../core/rulesets/spellcastingRules";
 import { getCompanionStats, getRangerCompanions } from "../../core/rulesets/companionRules";
@@ -294,7 +295,7 @@ export function getEquippedItems(character: Character, items: DndItemData[] | un
 }
 
 export function calculateSuggestedArmorClass(
-  character: Pick<Character, "abilities" | "equippedArmorId" | "equippedShieldId" | "fightingStyleIds">,
+  character: Pick<Character, "abilities" | "equippedArmorId" | "equippedShieldId" | "fightingStyleIds"> & { inventory?: Character["inventory"] },
   items: DndItemData[] | undefined,
 ) {
   const itemMap = new Map((items ?? []).map((item) => [item.id, item]));
@@ -323,6 +324,7 @@ export function calculateSuggestedArmorClass(
   }
 
   if (armor?.category === "armor" && character.fightingStyleIds?.includes("defense")) armorClass += 1;
+  armorClass += getAttunedMagicItemBonuses(character.inventory ?? [], items ?? []).armorClass;
 
   return armorClass;
 }
