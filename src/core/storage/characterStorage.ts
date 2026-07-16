@@ -124,6 +124,8 @@ function hydrateInventory(character: Character): CharacterInventoryItem[] {
       itemId: item.itemId,
       quantity: Math.max(1, Math.floor(item.quantity)),
       notes: item.notes ?? "",
+      attuned: Boolean(item.attuned),
+      chargesUsed: Math.max(0, Math.floor(item.chargesUsed ?? 0)),
     }));
 }
 

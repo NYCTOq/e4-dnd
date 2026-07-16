@@ -6,7 +6,7 @@ describe("core equipment expansion", () => {
   it("adds the missing simple and martial weapon families", () => {
     const names = new Set(ITEM_EXPANSION_2014.map((item) => item.name));
     for (const name of ["Spear", "Javelin", "Greataxe", "Maul", "Scimitar", "Warhammer", "Whip", "Heavy Crossbow"]) expect(names.has(name)).toBe(true);
-    expect(ITEM_EXPANSION_2014.filter((item) => item.category === "weapon")).toHaveLength(24);
+    expect(ITEM_EXPANSION_2014.filter((item) => item.category === "weapon" && !item.magical)).toHaveLength(24);
   });
   it("includes ammunition, tools and travel gear", () => {
     for (const category of ["ammunition", "tool", "gear"]) expect(ITEM_EXPANSION_2014.some((item) => item.category === category)).toBe(true);

@@ -49,5 +49,18 @@ const common: DndItemData[] = [
   {id:"waterskin",name:"Waterskin",category:"gear",cost:"2 sp",weight:5,tags:["container"],description:"Yolculukta içme suyu taşımak için deri kap."},
 ];
 
-export const ITEM_EXPANSION_2014: DndItemData[] = [...weapons, ...common];
+const magicItems: DndItemData[] = [
+  {id:"potion-greater-healing",name:"Potion of Greater Healing",category:"gear",cost:"rare",weight:0.5,magical:true,rarity:"uncommon",tags:["consumable","potion"],description:"Restores 4d4 + 4 hit points when consumed."},
+  {id:"bag-of-holding",name:"Bag of Holding",category:"gear",cost:"uncommon",weight:15,magical:true,rarity:"uncommon",tags:["container"],description:"Büyülü iç hacmi ağırlık ve taşıma kapasitesini olağan sınırların ötesine taşır."},
+  {id:"boots-of-elvenkind",name:"Boots of Elvenkind",category:"gear",cost:"uncommon",weight:1,magical:true,rarity:"uncommon",description:"Adımların sesini bastırarak sessiz hareketi destekler."},
+  {id:"cloak-of-protection",name:"Cloak of Protection",category:"gear",cost:"uncommon",weight:1,magical:true,rarity:"uncommon",requiresAttunement:true,armorBonus:1,description:"Attuned kullanıcının AC ve saving throw değerlerini 1 artırır."},
+  {id:"ring-of-protection",name:"Ring of Protection",category:"gear",cost:"rare",weight:0,magical:true,rarity:"rare",requiresAttunement:true,armorBonus:1,description:"Attuned kullanıcının AC ve saving throw değerlerini 1 artırır."},
+  {id:"pearl-of-power",name:"Pearl of Power",category:"gear",cost:"uncommon",weight:0,magical:true,rarity:"uncommon",requiresAttunement:true,charges:1,chargeRecovery:"daily",description:"Bir charge harcayarak kullanılmış düşük seviyeli spell slotlarından birini yeniler."},
+  {id:"wand-of-magic-detection",name:"Wand of Magic Detection",category:"gear",cost:"uncommon",weight:1,magical:true,rarity:"uncommon",charges:3,chargeRecovery:"1d3 daily",description:"Bir charge harcayarak Detect Magic etkisi üretir."},
+  {id:"wand-of-magic-missiles",name:"Wand of Magic Missiles",category:"gear",cost:"uncommon",weight:1,magical:true,rarity:"uncommon",charges:7,chargeRecovery:"1d6+1 daily",description:"Charge harcayarak Magic Missile etkisi üretir."},
+  {id:"staff-of-healing",name:"Staff of Healing",category:"weapon",cost:"rare",weight:4,magical:true,rarity:"rare",requiresAttunement:true,charges:10,chargeRecovery:"1d6+4 daily",damage:"1d6",damageType:"bludgeoning",weaponCategory:"simple",properties:["Versatile 1d8"],description:"Charge harcayarak iyileştirme büyüleri uygulayabilen büyülü staff."},
+  {id:"longsword-plus-1",name:"Longsword +1",category:"weapon",cost:"uncommon",weight:3,magical:true,rarity:"uncommon",attackBonus:1,damageBonus:1,damage:"1d8",damageType:"slashing",weaponCategory:"martial",properties:["Versatile 1d10"],description:"Attack ve damage roll değerlerine +1 veren büyülü longsword."},
+];
+
+export const ITEM_EXPANSION_2014: DndItemData[] = [...weapons, ...common, ...magicItems];
 export const ITEM_EXPANSION_2024: DndItemData[] = ITEM_EXPANSION_2014.map((item) => ({ ...item }));

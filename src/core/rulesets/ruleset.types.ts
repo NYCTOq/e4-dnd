@@ -190,6 +190,14 @@ export interface DndItemData {
   cost: string;
   weight: number;
   description: string;
+  magical?: boolean;
+  rarity?: "common" | "uncommon" | "rare" | "very-rare" | "legendary" | "artifact";
+  requiresAttunement?: boolean;
+  charges?: number;
+  chargeRecovery?: string;
+  attackBonus?: number;
+  damageBonus?: number;
+  armorBonus?: number;
 
   armorClass?: number;
   armorClassBonus?: number;

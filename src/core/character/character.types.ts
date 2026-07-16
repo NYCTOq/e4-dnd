@@ -16,6 +16,8 @@ export interface CharacterInventoryItem {
   itemId: string;
   quantity: number;
   notes?: string;
+  attuned?: boolean;
+  chargesUsed?: number;
 }
 
 export interface CharacterDeathSaves {
