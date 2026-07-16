@@ -14,6 +14,7 @@ import { getHighestSpellLevel } from "../../core/rulesets/spellRules";
 import { getAbilityBudgetError, getStandardArrayAbilities, type AbilityGenerationMethod } from "../../core/rulesets/abilityGenerationRules";
 import { getFightingStyleChoiceCount, getFightingStyles } from "../../core/rulesets/fightingStyleRules";
 import { getWeaponMastery, getWeaponMasteryChoiceCount } from "../../core/rulesets/equipmentRules";
+import { getMetamagicChoiceCount, getMetamagicOptions } from "../../core/rulesets/metamagicRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
@@ -112,6 +113,9 @@ export function Builder({
   const masteryLimit = getWeaponMasteryChoiceCount(selectedClass, draft.level, draft.ruleset);
   const masteryWeapons = useMemo(() => (activeRulesetData?.items ?? []).filter((item) => item.category === "weapon" && getWeaponMastery(item, draft.ruleset)), [activeRulesetData, draft.ruleset]);
   const masteredWeaponIds = draft.masteredWeaponIds ?? [];
+  const metamagicOptions = useMemo(() => getMetamagicOptions(draft.ruleset), [draft.ruleset]);
+  const metamagicLimit = getMetamagicChoiceCount(draft.className, draft.level, draft.ruleset);
+  const selectedMetamagicIds = draft.metamagicIds ?? [];
   const canCastSpells = Boolean(selectedClass?.spellcastingAbility);
   const grantedSkills = useMemo(() => getGrantedSkills(selectedBackground), [selectedBackground]);
   const availableClassSkills = useMemo(() => getAvailableClassSkills(selectedClass, selectedBackground), [selectedClass, selectedBackground]);
@@ -183,6 +187,7 @@ export function Builder({
       return { ...current, masteredWeaponIds: [...selected, weaponId] };
     });
   }
+  function toggleMetamagic(id: string) { setDraft((current) => { const selected=current.metamagicIds??[]; if(selected.includes(id))return{...current,metamagicIds:selected.filter(item=>item!==id)}; if(selected.length>=metamagicLimit)return current; return{...current,metamagicIds:[...selected,id]}; }); }
 
   const knownSpells = useMemo(() => {
     const spellMap = new Map((activeRulesetData?.spells ?? []).map((spell) => [spell.id, spell]));
@@ -741,6 +746,8 @@ export function Builder({
                 </div>
                 <span className="mini-label">{draft.featIds.length} / {generalFeatSlots} general feat</span>
               </div>
+
+              {metamagicLimit ? <div className="ruleset-foundation-card"><div className="panel-heading-row"><div><span className="mini-label">Sorcerer Class Choice</span><strong>Metamagic</strong></div><span>{selectedMetamagicIds.length} / {metamagicLimit}</span></div><div className="builder-choice-grid">{metamagicOptions.map(option=>{const selected=selectedMetamagicIds.includes(option.id);return <article className={`builder-choice-card ${selected?"selected":""}`} key={option.id}><div className="panel-heading-row"><div><h3>{option.name}</h3><span className="mini-label">{option.cost} Sorcery Point</span></div><button type="button" disabled={!selected&&selectedMetamagicIds.length>=metamagicLimit} onClick={()=>toggleMetamagic(option.id)}>{selected?"Kaldır":"Seç"}</button></div><p>{option.summary}</p></article>})}</div></div>:null}
 
               {grantedOriginFeatName ? (
                 <article className="builder-choice-card">

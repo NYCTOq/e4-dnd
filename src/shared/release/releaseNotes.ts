@@ -15,6 +15,19 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.10.0", date: "2026-07-16", title: "Sorcerer Metamagic System",
+    summary: "Sorcerer Metamagic seçimleri level kotası, Sorcery Point maliyeti ve Play Mode kullanımıyla eklendi.",
+    changes: [
+      { text: "Sekiz açık lisanslı Metamagic seçeneği ve özgün özetler", category: "Özellik" },
+      { text: "2014 Level 3, 10, 17 seçim progression", category: "Özellik" },
+      { text: "2024 Level 2 başlangıç progression", category: "Özellik" },
+      { text: "Sorcery Point maliyet metadata ve Character Sheet özellikleri", category: "Özellik" },
+      { text: "Play Mode'da puan kontrollü Metamagic kullanımı", category: "Özellik" },
+      { text: "Eksik veya geçersiz seçimde Builder kayıt engeli", category: "Düzeltme" },
+      { text: "Metamagic kuralları için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "2.9.0", date: "2026-07-16", title: "Level 1–20 Progression Audit",
     summary: "Tüm class progression tabloları level, ASI/feat, capstone, subclass ve spell slot bütünlüğü açısından otomatik denetleniyor.",
     changes: [

@@ -1,6 +1,7 @@
 import type { AbilityKey, Character } from "../character/character.types";
 import { getAbilityModifier, getProficiencyBonus } from "../character/characterCalculator";
 import type { RulesetData } from "./ruleset.types";
+import { getMetamagicOptions } from "./metamagicRules";
 
 export const SKILL_ABILITIES:Record<string,AbilityKey> = {
   Acrobatics:"dex", "Animal Handling":"wis", Arcana:"int", Athletics:"str", Deception:"cha", History:"int",
@@ -23,6 +24,7 @@ export function getCharacterFeatures(character:Character, rulesetData:RulesetDat
   const classFeatures=classData?.levels.filter(row=>row.level<=character.level).flatMap(row=>row.features.map(name=>({source:`${character.className} L${row.level}`,name,summary:"Class progression feature"})))??[];
   const subclassFeatures=subclass?.features.filter(item=>item.level<=character.level).map(item=>({source:`${subclass.name} L${item.level}`,name:item.name,summary:item.summary}))??[];
   const featFeatures=feats.map(item=>({source:"Feat",name:item.name,summary:item.summary}));
-  return [...classFeatures,...subclassFeatures,...featFeatures];
+  const metamagicFeatures=getMetamagicOptions(character.ruleset).filter(item=>character.metamagicIds?.includes(item.id)).map(item=>({source:`Metamagic · ${item.cost} SP`,name:item.name,summary:item.summary}));
+  return [...classFeatures,...subclassFeatures,...featFeatures,...metamagicFeatures];
 }
 export function getPassiveScore(character:Character, skill:string) { return 10+getSkillBonus(character,skill); }

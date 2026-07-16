@@ -21,6 +21,7 @@ export const emptyDraft: CharacterDraft = {
   featIds: [],
   fightingStyleIds: [],
   masteredWeaponIds: [],
+  metamagicIds: [],
   skillProficiencies: [],
   expertiseSkills: [],
   toolProficiencies: [],
@@ -56,7 +57,7 @@ export const emptyDraft: CharacterDraft = {
 };
 
 const draftArrayKeys = [
-  "featIds", "fightingStyleIds", "masteredWeaponIds", "skillProficiencies", "expertiseSkills", "toolProficiencies", "languages",
+  "featIds", "fightingStyleIds", "masteredWeaponIds", "metamagicIds", "skillProficiencies", "expertiseSkills", "toolProficiencies", "languages",
   "knownSpellIds", "preparedSpellIds", "spellSlots", "inventory", "equippedWeaponIds", "hitDice",
 ] as const;
 

@@ -69,6 +69,7 @@ export interface Character {
   featIds: string[];
   fightingStyleIds?: string[];
   masteredWeaponIds?: string[];
+  metamagicIds?: string[];
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];
@@ -121,6 +122,7 @@ export interface CharacterDraft {
   featIds: string[];
   fightingStyleIds?: string[];
   masteredWeaponIds?: string[];
+  metamagicIds?: string[];
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];

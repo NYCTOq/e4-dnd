@@ -13,6 +13,7 @@ import {
 } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
 import { getPlayReadiness } from "../../core/character/playReadiness";
+import { getMetamagicOptions } from "../../core/rulesets/metamagicRules";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -122,12 +123,27 @@ export function PlayMode({
     rulesetData?.items,
   );
   const readiness = getPlayReadiness(activeCharacter, rulesetData);
+  const metamagicOptions = getMetamagicOptions(activeCharacter.ruleset).filter((option) =>
+    activeCharacter.metamagicIds?.includes(option.id),
+  );
+  const sorceryPoints = activeCharacter.resources.find((resource) => resource.id === "sorcery-points");
 
   function commit(patch: Partial<Character>) {
     onUpdateCharacter({
       ...activeCharacter,
       ...patch,
       updatedAt: new Date().toISOString(),
+    });
+  }
+
+  function spendSorceryPoints(cost: number) {
+    if (!sorceryPoints || sorceryPoints.max - sorceryPoints.used < cost) return;
+    commit({
+      resources: activeCharacter.resources.map((resource) =>
+        resource.id === "sorcery-points"
+          ? { ...resource, used: Math.min(resource.max, resource.used + cost) }
+          : resource,
+      ),
     });
   }
 
@@ -367,6 +383,30 @@ export function PlayMode({
               ))}
             </div>
           </section>
+
+          {metamagicOptions.length ? (
+            <section className="play-mode-card">
+              <div className="play-mode-section-head">
+                <div><span className="mini-label">Sorcerer</span><h2>Metamagic</h2></div>
+                <strong>{sorceryPoints ? `${sorceryPoints.max - sorceryPoints.used} / ${sorceryPoints.max} SP` : "SP yok"}</strong>
+              </div>
+
+              <div className="play-mode-slot-grid">
+                {metamagicOptions.map((option) => (
+                  <div className="play-mode-slot-row" key={option.id}>
+                    <div><span>{option.name}</span><small>{option.summary}</small></div>
+                    <button
+                      type="button"
+                      disabled={!sorceryPoints || sorceryPoints.max - sorceryPoints.used < option.cost}
+                      onClick={() => spendSorceryPoints(option.cost)}
+                    >
+                      Kullan · {option.cost} SP
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ) : null}
 
           <section className="play-mode-card">
             <div className="play-mode-section-head">

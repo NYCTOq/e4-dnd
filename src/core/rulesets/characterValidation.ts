@@ -5,6 +5,7 @@ import { getHighestSpellLevel, isSpellAvailableToClass } from "./spellRules";
 import type { RulesetData } from "./ruleset.types";
 import { getFightingStyleChoiceCount, getFightingStyles } from "./fightingStyleRules";
 import { getWeaponMastery, getWeaponMasteryChoiceCount } from "./equipmentRules";
+import { getMetamagicChoiceCount, getMetamagicOptions } from "./metamagicRules";
 
 export type ValidationSeverity = "error" | "warning";
 export type CharacterValidationIssue = { id: string; severity: ValidationSeverity; step: string; message: string };
@@ -51,6 +52,8 @@ export function validateCharacterDraft(draft: CharacterDraft, rulesetData: Rules
   const masteredWeaponIds = draft.masteredWeaponIds ?? [];
   const validMasteryIds = new Set((rulesetData?.items ?? []).filter((item) => getWeaponMastery(item, draft.ruleset)).map((item) => item.id));
   if (masteredWeaponIds.length !== masteryLimit || masteredWeaponIds.some((id) => !validMasteryIds.has(id))) add("weapon-mastery", "error", "Equipment", `${draft.className} için ${masteryLimit} geçerli Weapon Mastery seçilmeli (${masteredWeaponIds.length} seçili).`);
+  const metamagicLimit=getMetamagicChoiceCount(draft.className,draft.level,draft.ruleset); const metamagicIds=draft.metamagicIds??[]; const validMetamagicIds=new Set(getMetamagicOptions(draft.ruleset).map(item=>item.id));
+  if(metamagicIds.length!==metamagicLimit||metamagicIds.some(id=>!validMetamagicIds.has(id))) add("metamagic","error","Feats",`${draft.className} için ${metamagicLimit} geçerli Metamagic seçilmeli (${metamagicIds.length} seçili).`);
 
   const highestSpellLevel = getHighestSpellLevel(classData ?? undefined, draft.level);
   for (const spellId of draft.knownSpellIds) {
