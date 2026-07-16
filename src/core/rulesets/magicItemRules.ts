@@ -13,9 +13,22 @@ export function spendItemCharge(inventory: CharacterInventoryItem[], item: DndIt
   if (!item.charges) return inventory;
   return inventory.map((entry) => entry.itemId === item.id ? { ...entry, chargesUsed: Math.min(item.charges!, Math.max(0, entry.chargesUsed ?? 0) + Math.max(1, Math.floor(amount))) } : entry);
 }
-export function recoverItemCharges(inventory: CharacterInventoryItem[], items: readonly DndItemData[]) {
+export function getChargeRecoveryAmount(recovery: string | undefined, maximum: number, random: () => number = Math.random) {
+  if (!recovery) return 0;
+  const match = recovery.toLowerCase().match(/(\d+)d(\d+)(?:\+(\d+))?/);
+  if (!match) return recovery.toLowerCase().includes("daily") ? maximum : 0;
+  let total = Number(match[3] ?? 0);
+  for (let index = 0; index < Number(match[1]); index += 1) total += Math.floor(random() * Number(match[2])) + 1;
+  return Math.min(maximum, total);
+}
+export function recoverItemCharges(inventory: CharacterInventoryItem[], items: readonly DndItemData[], random: () => number = Math.random) {
   const itemMap = new Map(items.map((item) => [item.id, item]));
-  return inventory.map((entry) => itemMap.get(entry.itemId)?.chargeRecovery ? { ...entry, chargesUsed: 0 } : entry);
+  return inventory.map((entry) => {
+    const item = itemMap.get(entry.itemId);
+    if (!item?.chargeRecovery || !item.charges) return entry;
+    const recovered = getChargeRecoveryAmount(item.chargeRecovery, item.charges, random);
+    return { ...entry, chargesUsed: Math.max(0, (entry.chargesUsed ?? 0) - recovered) };
+  });
 }
 export function getAttunedMagicItemBonuses(inventory: CharacterInventoryItem[], items: readonly DndItemData[]) {
   const itemMap = new Map(items.map((item) => [item.id, item]));
