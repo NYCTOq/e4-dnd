@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.9.0", date: "2026-07-16", title: "Level 1–20 Progression Audit",
+    summary: "Tüm class progression tabloları level, ASI/feat, capstone, subclass ve spell slot bütünlüğü açısından otomatik denetleniyor.",
+    changes: [
+      { text: "12 class için 1–20 level satırı bütünlük kontrolü", category: "Teknik" },
+      { text: "Fighter level 6/14 ve Rogue level 10 ilave ASI işaretleri", category: "Düzeltme" },
+      { text: "2014 Level 19 ASI ve 2024 Epic Boon ayrımı", category: "Düzeltme" },
+      { text: "Boş progression satırlarına kayıpsız ASI/feat enrichment", category: "İyileştirme" },
+      { text: "Subclass seçimi, capstone ve spell slot audit kontrolleri", category: "Teknik" },
+      { text: "Progression audit için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "2.8.0", date: "2026-07-16", title: "Fighting Style Combat Integration",
     summary: "Fighting Style seçimleri Character Sheet ve Play Mode savaş hesaplarına bağlandı.",
     changes: [
