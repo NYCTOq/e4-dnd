@@ -3,6 +3,7 @@ import { getAbilityModifier, getProficiencyBonus } from "../character/characterC
 import type { RulesetData } from "./ruleset.types";
 import { getMetamagicOptions } from "./metamagicRules";
 import { getEldritchInvocations } from "./invocationRules";
+import { getWildShapeForms } from "./wildShapeRules";
 
 export const SKILL_ABILITIES:Record<string,AbilityKey> = {
   Acrobatics:"dex", "Animal Handling":"wis", Arcana:"int", Athletics:"str", Deception:"cha", History:"int",
@@ -27,6 +28,7 @@ export function getCharacterFeatures(character:Character, rulesetData:RulesetDat
   const featFeatures=feats.map(item=>({source:"Feat",name:item.name,summary:item.summary}));
   const metamagicFeatures=getMetamagicOptions(character.ruleset).filter(item=>character.metamagicIds?.includes(item.id)).map(item=>({source:`Metamagic · ${item.cost} SP`,name:item.name,summary:item.summary}));
   const invocationFeatures=getEldritchInvocations(character.ruleset).filter(item=>character.invocationIds?.includes(item.id)).map(item=>({source:"Eldritch Invocation",name:item.name,summary:item.summary}));
-  return [...classFeatures,...subclassFeatures,...featFeatures,...metamagicFeatures,...invocationFeatures];
+  const wildShapeFeatures=getWildShapeForms().filter(item=>character.wildShapeFormIds?.includes(item.id)).map(item=>({source:`Wild Shape · CR ${item.challengeRating}`,name:item.name,summary:`${item.summary} ${item.movement}`}));
+  return [...classFeatures,...subclassFeatures,...featFeatures,...metamagicFeatures,...invocationFeatures,...wildShapeFeatures];
 }
 export function getPassiveScore(character:Character, skill:string) { return 10+getSkillBonus(character,skill); }

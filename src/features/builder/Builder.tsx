@@ -16,6 +16,7 @@ import { getFightingStyleChoiceCount, getFightingStyles } from "../../core/rules
 import { getWeaponMastery, getWeaponMasteryChoiceCount } from "../../core/rulesets/equipmentRules";
 import { getMetamagicChoiceCount, getMetamagicOptions } from "../../core/rulesets/metamagicRules";
 import { getEldritchInvocations, getInvocationChoiceCount, isInvocationEligible } from "../../core/rulesets/invocationRules";
+import { getWildShapeForms, getWildShapeKnownCount, isWildShapeFormEligible } from "../../core/rulesets/wildShapeRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
@@ -120,6 +121,9 @@ export function Builder({
   const invocationOptions = useMemo(() => getEldritchInvocations(draft.ruleset), [draft.ruleset]);
   const invocationLimit = getInvocationChoiceCount(draft.className, draft.level, draft.ruleset);
   const selectedInvocationIds = draft.invocationIds ?? [];
+  const wildShapeLimit = getWildShapeKnownCount(draft.className,draft.level,draft.ruleset);
+  const wildShapeForms = useMemo(()=>getWildShapeForms(),[]);
+  const selectedWildShapeFormIds = draft.wildShapeFormIds ?? [];
   const canCastSpells = Boolean(selectedClass?.spellcastingAbility);
   const grantedSkills = useMemo(() => getGrantedSkills(selectedBackground), [selectedBackground]);
   const availableClassSkills = useMemo(() => getAvailableClassSkills(selectedClass, selectedBackground), [selectedClass, selectedBackground]);
@@ -193,6 +197,7 @@ export function Builder({
   }
   function toggleMetamagic(id: string) { setDraft((current) => { const selected=current.metamagicIds??[]; if(selected.includes(id))return{...current,metamagicIds:selected.filter(item=>item!==id)}; if(selected.length>=metamagicLimit)return current; return{...current,metamagicIds:[...selected,id]}; }); }
   function toggleInvocation(id: string) { setDraft((current) => { const selected=current.invocationIds??[]; if(selected.includes(id))return{...current,invocationIds:selected.filter(item=>item!==id)}; const option=invocationOptions.find(item=>item.id===id); if(!option||!isInvocationEligible(option,current)||selected.length>=invocationLimit)return current; return{...current,invocationIds:[...selected,id]}; }); }
+  function toggleWildShapeForm(id:string){setDraft(current=>{const selected=current.wildShapeFormIds??[];if(selected.includes(id))return{...current,wildShapeFormIds:selected.filter(item=>item!==id)};const form=wildShapeForms.find(item=>item.id===id);if(!form||!isWildShapeFormEligible(form,current.level,current.ruleset,current.subclass)||selected.length>=wildShapeLimit)return current;return{...current,wildShapeFormIds:[...selected,id]}})}
 
   const knownSpells = useMemo(() => {
     const spellMap = new Map((activeRulesetData?.spells ?? []).map((spell) => [spell.id, spell]));
@@ -755,6 +760,8 @@ export function Builder({
               {metamagicLimit ? <div className="ruleset-foundation-card"><div className="panel-heading-row"><div><span className="mini-label">Sorcerer Class Choice</span><strong>Metamagic</strong></div><span>{selectedMetamagicIds.length} / {metamagicLimit}</span></div><div className="builder-choice-grid">{metamagicOptions.map(option=>{const selected=selectedMetamagicIds.includes(option.id);return <article className={`builder-choice-card ${selected?"selected":""}`} key={option.id}><div className="panel-heading-row"><div><h3>{option.name}</h3><span className="mini-label">{option.cost} Sorcery Point</span></div><button type="button" disabled={!selected&&selectedMetamagicIds.length>=metamagicLimit} onClick={()=>toggleMetamagic(option.id)}>{selected?"Kaldır":"Seç"}</button></div><p>{option.summary}</p></article>})}</div></div>:null}
 
               {invocationLimit ? <div className="ruleset-foundation-card"><div className="panel-heading-row"><div><span className="mini-label">Warlock Class Choice</span><strong>Eldritch Invocations</strong></div><span>{selectedInvocationIds.length} / {invocationLimit}</span></div><div className="builder-choice-grid">{invocationOptions.map(option=>{const selected=selectedInvocationIds.includes(option.id);const eligible=isInvocationEligible(option,draft);const requirement=[option.minimumLevel?`Level ${option.minimumLevel}`:null,option.requiredSpellId?"Eldritch Blast":null].filter(Boolean).join(" · ");return <article className={`builder-choice-card ${selected?"selected":""}`} key={option.id}><div className="panel-heading-row"><div><h3>{option.name}</h3>{requirement?<span className="mini-label">Prerequisite: {requirement}</span>:<span className="mini-label">Prerequisite yok</span>}</div><button type="button" disabled={!selected&&(!eligible||selectedInvocationIds.length>=invocationLimit)} onClick={()=>toggleInvocation(option.id)}>{selected?"Kaldır":eligible?"Seç":"Kilitli"}</button></div><p>{option.summary}</p></article>})}</div></div>:null}
+
+              {wildShapeLimit ? <div className="ruleset-foundation-card"><div className="panel-heading-row"><div><span className="mini-label">Druid Class Choice</span><strong>Wild Shape Forms</strong></div><span>{selectedWildShapeFormIds.length} / {wildShapeLimit} {draft.ruleset==="dnd_2014"?"favori":"bilinen"}</span></div><div className="builder-choice-grid">{wildShapeForms.map(form=>{const selected=selectedWildShapeFormIds.includes(form.id);const eligible=isWildShapeFormEligible(form,draft.level,draft.ruleset,draft.subclass);return <article className={`builder-choice-card ${selected?"selected":""}`} key={form.id}><div className="panel-heading-row"><div><h3>{form.name}</h3><span className="mini-label">CR {form.challengeRating} · AC {form.armorClass} · HP {form.hitPoints}</span></div><button type="button" disabled={!selected&&(!eligible||selectedWildShapeFormIds.length>=wildShapeLimit)} onClick={()=>toggleWildShapeForm(form.id)}>{selected?"Kaldır":eligible?"Seç":"Kilitli"}</button></div><p>{form.summary}</p><small>{form.movement}</small></article>})}</div></div>:null}
 
               {grantedOriginFeatName ? (
                 <article className="builder-choice-card">

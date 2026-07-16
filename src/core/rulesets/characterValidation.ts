@@ -7,6 +7,7 @@ import { getFightingStyleChoiceCount, getFightingStyles } from "./fightingStyleR
 import { getWeaponMastery, getWeaponMasteryChoiceCount } from "./equipmentRules";
 import { getMetamagicChoiceCount, getMetamagicOptions } from "./metamagicRules";
 import { getEldritchInvocations, getInvocationChoiceCount, isInvocationEligible } from "./invocationRules";
+import { getWildShapeForms, getWildShapeKnownCount, isWildShapeFormEligible } from "./wildShapeRules";
 
 export type ValidationSeverity = "error" | "warning";
 export type CharacterValidationIssue = { id: string; severity: ValidationSeverity; step: string; message: string };
@@ -57,6 +58,8 @@ export function validateCharacterDraft(draft: CharacterDraft, rulesetData: Rules
   if(metamagicIds.length!==metamagicLimit||metamagicIds.some(id=>!validMetamagicIds.has(id))) add("metamagic","error","Feats",`${draft.className} için ${metamagicLimit} geçerli Metamagic seçilmeli (${metamagicIds.length} seçili).`);
   const invocationLimit=getInvocationChoiceCount(draft.className,draft.level,draft.ruleset); const invocationIds=draft.invocationIds??[]; const invocationMap=new Map(getEldritchInvocations(draft.ruleset).map(item=>[item.id,item]));
   if(invocationIds.length!==invocationLimit||invocationIds.some(id=>{const item=invocationMap.get(id);return !item||!isInvocationEligible(item,draft)})) add("invocations","error","Feats",`${draft.className} için ${invocationLimit} prerequisite uyumlu Eldritch Invocation seçilmeli (${invocationIds.length} seçili).`);
+  const wildShapeLimit=getWildShapeKnownCount(draft.className,draft.level,draft.ruleset);const wildShapeIds=draft.wildShapeFormIds??[];const wildShapeMap=new Map(getWildShapeForms().map(item=>[item.id,item]));const invalidWildShape=wildShapeIds.some(id=>{const form=wildShapeMap.get(id);return !form||!isWildShapeFormEligible(form,draft.level,draft.ruleset,draft.subclass)});
+  if(invalidWildShape||wildShapeIds.length>wildShapeLimit||(draft.ruleset==="dnd_2024"&&wildShapeIds.length!==wildShapeLimit))add("wild-shape-forms","error","Feats",`${draft.className} için ${wildShapeLimit} geçerli Wild Shape formu seçilmeli (${wildShapeIds.length} seçili).`);
 
   const highestSpellLevel = getHighestSpellLevel(classData ?? undefined, draft.level);
   for (const spellId of draft.knownSpellIds) {

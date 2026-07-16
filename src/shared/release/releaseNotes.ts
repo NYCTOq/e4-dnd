@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.12.0", date: "2026-07-16", title: "Druid Wild Shape System",
+    summary: "Wild Shape form uygunluğu, bilinen/favori formlar ve masada kullanım takibi Druid akışına eklendi.",
+    changes: [
+      { text: "On iki açık kural temelli beast formu ve özgün kısa açıklamalar", category: "Özellik" },
+      { text: "CR, yüzme ve uçuş limitleri için level/ruleset kontrolü", category: "Düzeltme" },
+      { text: "Circle of the Moon 2014 için genişleyen CR progression", category: "Özellik" },
+      { text: "2024 bilinen form kotası ve artan Wild Shape kullanımları", category: "Özellik" },
+      { text: "Builder, Character Sheet ve Play Mode dönüşüm entegrasyonu", category: "Özellik" },
+      { text: "Wild Shape kuralları için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "2.11.0", date: "2026-07-16", title: "Warlock Eldritch Invocations",
     summary: "Warlock Invocation seçimleri level progression, prerequisite kontrolü ve karakter ekranlarına bağlandı.",
     changes: [

@@ -15,6 +15,7 @@ import { PageShell } from "../../shared/layout/PageShell";
 import { getPlayReadiness } from "../../core/character/playReadiness";
 import { getMetamagicOptions } from "../../core/rulesets/metamagicRules";
 import { getEldritchInvocations } from "../../core/rulesets/invocationRules";
+import { getWildShapeForms } from "../../core/rulesets/wildShapeRules";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -129,6 +130,8 @@ export function PlayMode({
   );
   const sorceryPoints = activeCharacter.resources.find((resource) => resource.id === "sorcery-points");
   const invocations = getEldritchInvocations(activeCharacter.ruleset).filter((option) => activeCharacter.invocationIds?.includes(option.id));
+  const wildShapeForms = getWildShapeForms().filter((form) => activeCharacter.wildShapeFormIds?.includes(form.id));
+  const wildShapeResource = activeCharacter.resources.find((resource) => resource.id === "wild-shape");
 
   function commit(patch: Partial<Character>) {
     onUpdateCharacter({
@@ -147,6 +150,11 @@ export function PlayMode({
           : resource,
       ),
     });
+  }
+
+  function useWildShape() {
+    if (!wildShapeResource || wildShapeResource.used >= wildShapeResource.max) return;
+    commit({ resources: activeCharacter.resources.map(resource=>resource.id==="wild-shape"?{...resource,used:Math.min(resource.max,resource.used+1)}:resource) });
   }
 
   function updateHp(amount: number) {
@@ -421,6 +429,8 @@ export function PlayMode({
               </div>
             </section>
           ) : null}
+
+          {wildShapeForms.length ? <section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Druid</span><h2>Wild Shape</h2></div><strong>{wildShapeResource?`${wildShapeResource.max-wildShapeResource.used} / ${wildShapeResource.max} kullanım`:"Kaynak yok"}</strong></div><div className="play-mode-slot-grid">{wildShapeForms.map(form=><div className="play-mode-slot-row" key={form.id}><div><span>{form.name} · CR {form.challengeRating}</span><small>AC {form.armorClass} · HP {form.hitPoints} · {form.movement}</small></div><button type="button" disabled={!wildShapeResource||wildShapeResource.used>=wildShapeResource.max} onClick={useWildShape}>Dönüş</button></div>)}</div></section>:null}
 
           <section className="play-mode-card">
             <div className="play-mode-section-head">

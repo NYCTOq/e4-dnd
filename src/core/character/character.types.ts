@@ -71,6 +71,7 @@ export interface Character {
   masteredWeaponIds?: string[];
   metamagicIds?: string[];
   invocationIds?: string[];
+  wildShapeFormIds?: string[];
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];
@@ -125,6 +126,7 @@ export interface CharacterDraft {
   masteredWeaponIds?: string[];
   metamagicIds?: string[];
   invocationIds?: string[];
+  wildShapeFormIds?: string[];
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];
