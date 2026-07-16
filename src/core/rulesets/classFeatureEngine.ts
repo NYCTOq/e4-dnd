@@ -1,4 +1,5 @@
 import type { AbilityScores, CharacterResource, ResourceRecovery, RulesetId } from "../character/character.types";
+import { getSuperiorityDiceCount, isBattleMaster } from "./maneuverRules";
 
 export type ClassFeatureAction = {
   id: string; name: string; actionType: "Action" | "Bonus Action" | "Reaction" | "Passive";
@@ -8,7 +9,7 @@ export type ClassFeatureAction = {
 const resource = (id: string, name: string, max: number, recovery: ResourceRecovery): CharacterResource => ({ id, name, max: Math.max(1, Math.floor(max)), used: 0, recovery });
 const modifier = (score: number) => Math.max(1, Math.floor((score - 10) / 2));
 
-export function getClassResources(className: string, level: number, abilities: AbilityScores, ruleset: RulesetId): CharacterResource[] {
+export function getClassResources(className: string, level: number, abilities: AbilityScores, ruleset: RulesetId, subclass = ""): CharacterResource[] {
   const key = className.trim().toLowerCase();
   const safeLevel = Math.max(1, Math.min(20, Math.floor(level)));
   switch (key) {
@@ -20,6 +21,7 @@ export function getClassResources(className: string, level: number, abilities: A
       resource("second-wind", "Second Wind", ruleset === "dnd_2024" ? (safeLevel >= 10 ? 4 : safeLevel >= 4 ? 3 : 2) : 1, "short"),
       ...(safeLevel >= 2 ? [resource("action-surge", "Action Surge", safeLevel >= 17 ? 2 : 1, "short")] : []),
       ...(safeLevel >= 9 ? [resource("indomitable", "Indomitable", safeLevel >= 17 ? 3 : safeLevel >= 13 ? 2 : 1, "long")] : []),
+      ...(isBattleMaster(className,subclass)&&safeLevel>=3?[resource("superiority-dice","Superiority Dice",getSuperiorityDiceCount(safeLevel),"short")]:[]),
     ];
     case "monk": return safeLevel >= 2 ? [resource("focus-points", ruleset === "dnd_2024" ? "Focus Points" : "Ki Points", safeLevel, "short")] : [];
     case "paladin": return [resource("lay-on-hands", "Lay on Hands", safeLevel * 5, "long"), ...(safeLevel >= 3 ? [resource("channel-divinity", "Channel Divinity", 1, "short")] : [])];

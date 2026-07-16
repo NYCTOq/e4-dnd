@@ -180,6 +180,7 @@ function hydrateCharacter(character: Character): Character {
     metamagicIds: Array.isArray(character.metamagicIds) ? [...new Set(character.metamagicIds.filter((id): id is string => typeof id === "string"))] : [],
     invocationIds: Array.isArray(character.invocationIds) ? [...new Set(character.invocationIds.filter((id): id is string => typeof id === "string"))] : [],
     wildShapeFormIds: Array.isArray(character.wildShapeFormIds) ? [...new Set(character.wildShapeFormIds.filter((id): id is string => typeof id === "string"))] : [],
+    maneuverIds: Array.isArray(character.maneuverIds) ? [...new Set(character.maneuverIds.filter((id): id is string => typeof id === "string"))] : [],
     skillProficiencies: Array.isArray(character.skillProficiencies) ? [...new Set(character.skillProficiencies.filter((value): value is string => typeof value === "string"))] : [],
     expertiseSkills: Array.isArray(character.expertiseSkills) ? [...new Set(character.expertiseSkills.filter((value): value is string => typeof value === "string"))] : [],
     toolProficiencies: Array.isArray(character.toolProficiencies) ? [...new Set(character.toolProficiencies.filter((value): value is string => typeof value === "string"))] : [],
@@ -204,7 +205,7 @@ function hydrateCharacter(character: Character): Character {
       failures: clampNumber(character.deathSaves?.failures, 0, 3, 0),
     },
     hitDice: hydrateHitDice(character),
-    resources: mergeClassResources(hydrateResources(character), getClassResources(character.className, character.level, character.abilities, normalizeRulesetId(character.ruleset))),
+    resources: mergeClassResources(hydrateResources(character), getClassResources(character.className, character.level, character.abilities, normalizeRulesetId(character.ruleset),character.subclass)),
     exhaustion: clampNumber(character.exhaustion, 0, 6, 0),
     conditionDurations: hydrateConditionDurations(character),
   };

@@ -24,6 +24,7 @@ export const emptyDraft: CharacterDraft = {
   metamagicIds: [],
   invocationIds: [],
   wildShapeFormIds: [],
+  maneuverIds: [],
   skillProficiencies: [],
   expertiseSkills: [],
   toolProficiencies: [],
@@ -59,7 +60,7 @@ export const emptyDraft: CharacterDraft = {
 };
 
 const draftArrayKeys = [
-  "featIds", "fightingStyleIds", "masteredWeaponIds", "metamagicIds", "invocationIds", "wildShapeFormIds", "skillProficiencies", "expertiseSkills", "toolProficiencies", "languages",
+  "featIds", "fightingStyleIds", "masteredWeaponIds", "metamagicIds", "invocationIds", "wildShapeFormIds", "maneuverIds", "skillProficiencies", "expertiseSkills", "toolProficiencies", "languages",
   "knownSpellIds", "preparedSpellIds", "spellSlots", "inventory", "equippedWeaponIds", "hitDice",
 ] as const;
 
@@ -420,7 +421,7 @@ export function createCharacterFromDraft(draft: CharacterDraft): Character {
       draft.className,
     ),
     hitDice: normalizeHitDice(draft.hitDice, draft.level, draft.className),
-    resources: mergeClassResources(draft.resources, getClassResources(draft.className, draft.level, draft.abilities, draft.ruleset)),
+    resources: mergeClassResources(draft.resources, getClassResources(draft.className, draft.level, draft.abilities, draft.ruleset,draft.subclass)),
     deathSaves: resetDeathSaves(),
     exhaustion: 0,
     conditionDurations: {},

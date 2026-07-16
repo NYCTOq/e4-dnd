@@ -72,6 +72,7 @@ export interface Character {
   metamagicIds?: string[];
   invocationIds?: string[];
   wildShapeFormIds?: string[];
+  maneuverIds?: string[];
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];
@@ -127,6 +128,7 @@ export interface CharacterDraft {
   metamagicIds?: string[];
   invocationIds?: string[];
   wildShapeFormIds?: string[];
+  maneuverIds?: string[];
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];

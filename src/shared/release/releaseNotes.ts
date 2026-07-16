@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.13.0",date:"2026-07-16",title:"Battle Master Maneuvers",
+    summary:"Battle Master maneuver seçimleri ve Superiority Dice yönetimi karakter oluşturma ile masa moduna bağlandı.",
+    changes:[
+      {text:"On altı açık kural temelli maneuver ve özgün kısa açıklamalar",category:"Özellik"},
+      {text:"Level 3, 7, 10 ve 15 maneuver progression",category:"Özellik"},
+      {text:"Level ile büyüyen Superiority Dice sayısı ve die türü",category:"Özellik"},
+      {text:"Builder seçim kotası ve kayıt doğrulaması",category:"Düzeltme"},
+      {text:"Character Sheet ve Play Mode zar harcama entegrasyonu",category:"Özellik"},
+      {text:"Maneuver progression için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version: "2.12.0", date: "2026-07-16", title: "Druid Wild Shape System",
     summary: "Wild Shape form uygunluğu, bilinen/favori formlar ve masada kullanım takibi Druid akışına eklendi.",
     changes: [

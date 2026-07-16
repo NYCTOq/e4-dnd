@@ -17,6 +17,7 @@ import { getWeaponMastery, getWeaponMasteryChoiceCount } from "../../core/rulese
 import { getMetamagicChoiceCount, getMetamagicOptions } from "../../core/rulesets/metamagicRules";
 import { getEldritchInvocations, getInvocationChoiceCount, isInvocationEligible } from "../../core/rulesets/invocationRules";
 import { getWildShapeForms, getWildShapeKnownCount, isWildShapeFormEligible } from "../../core/rulesets/wildShapeRules";
+import { getBattleMasterManeuvers, getManeuverChoiceCount, getSuperiorityDie } from "../../core/rulesets/maneuverRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
@@ -124,6 +125,9 @@ export function Builder({
   const wildShapeLimit = getWildShapeKnownCount(draft.className,draft.level,draft.ruleset);
   const wildShapeForms = useMemo(()=>getWildShapeForms(),[]);
   const selectedWildShapeFormIds = draft.wildShapeFormIds ?? [];
+  const maneuverOptions=useMemo(()=>getBattleMasterManeuvers(),[]);
+  const maneuverLimit=getManeuverChoiceCount(draft.className,draft.subclass,draft.level,draft.ruleset);
+  const selectedManeuverIds=draft.maneuverIds??[];
   const canCastSpells = Boolean(selectedClass?.spellcastingAbility);
   const grantedSkills = useMemo(() => getGrantedSkills(selectedBackground), [selectedBackground]);
   const availableClassSkills = useMemo(() => getAvailableClassSkills(selectedClass, selectedBackground), [selectedClass, selectedBackground]);
@@ -198,6 +202,7 @@ export function Builder({
   function toggleMetamagic(id: string) { setDraft((current) => { const selected=current.metamagicIds??[]; if(selected.includes(id))return{...current,metamagicIds:selected.filter(item=>item!==id)}; if(selected.length>=metamagicLimit)return current; return{...current,metamagicIds:[...selected,id]}; }); }
   function toggleInvocation(id: string) { setDraft((current) => { const selected=current.invocationIds??[]; if(selected.includes(id))return{...current,invocationIds:selected.filter(item=>item!==id)}; const option=invocationOptions.find(item=>item.id===id); if(!option||!isInvocationEligible(option,current)||selected.length>=invocationLimit)return current; return{...current,invocationIds:[...selected,id]}; }); }
   function toggleWildShapeForm(id:string){setDraft(current=>{const selected=current.wildShapeFormIds??[];if(selected.includes(id))return{...current,wildShapeFormIds:selected.filter(item=>item!==id)};const form=wildShapeForms.find(item=>item.id===id);if(!form||!isWildShapeFormEligible(form,current.level,current.ruleset,current.subclass)||selected.length>=wildShapeLimit)return current;return{...current,wildShapeFormIds:[...selected,id]}})}
+  function toggleManeuver(id:string){setDraft(current=>{const selected=current.maneuverIds??[];if(selected.includes(id))return{...current,maneuverIds:selected.filter(item=>item!==id)};if(!maneuverOptions.some(item=>item.id===id)||selected.length>=maneuverLimit)return current;return{...current,maneuverIds:[...selected,id]}})}
 
   const knownSpells = useMemo(() => {
     const spellMap = new Map((activeRulesetData?.spells ?? []).map((spell) => [spell.id, spell]));
@@ -762,6 +767,8 @@ export function Builder({
               {invocationLimit ? <div className="ruleset-foundation-card"><div className="panel-heading-row"><div><span className="mini-label">Warlock Class Choice</span><strong>Eldritch Invocations</strong></div><span>{selectedInvocationIds.length} / {invocationLimit}</span></div><div className="builder-choice-grid">{invocationOptions.map(option=>{const selected=selectedInvocationIds.includes(option.id);const eligible=isInvocationEligible(option,draft);const requirement=[option.minimumLevel?`Level ${option.minimumLevel}`:null,option.requiredSpellId?"Eldritch Blast":null].filter(Boolean).join(" · ");return <article className={`builder-choice-card ${selected?"selected":""}`} key={option.id}><div className="panel-heading-row"><div><h3>{option.name}</h3>{requirement?<span className="mini-label">Prerequisite: {requirement}</span>:<span className="mini-label">Prerequisite yok</span>}</div><button type="button" disabled={!selected&&(!eligible||selectedInvocationIds.length>=invocationLimit)} onClick={()=>toggleInvocation(option.id)}>{selected?"Kaldır":eligible?"Seç":"Kilitli"}</button></div><p>{option.summary}</p></article>})}</div></div>:null}
 
               {wildShapeLimit ? <div className="ruleset-foundation-card"><div className="panel-heading-row"><div><span className="mini-label">Druid Class Choice</span><strong>Wild Shape Forms</strong></div><span>{selectedWildShapeFormIds.length} / {wildShapeLimit} {draft.ruleset==="dnd_2014"?"favori":"bilinen"}</span></div><div className="builder-choice-grid">{wildShapeForms.map(form=>{const selected=selectedWildShapeFormIds.includes(form.id);const eligible=isWildShapeFormEligible(form,draft.level,draft.ruleset,draft.subclass);return <article className={`builder-choice-card ${selected?"selected":""}`} key={form.id}><div className="panel-heading-row"><div><h3>{form.name}</h3><span className="mini-label">CR {form.challengeRating} · AC {form.armorClass} · HP {form.hitPoints}</span></div><button type="button" disabled={!selected&&(!eligible||selectedWildShapeFormIds.length>=wildShapeLimit)} onClick={()=>toggleWildShapeForm(form.id)}>{selected?"Kaldır":eligible?"Seç":"Kilitli"}</button></div><p>{form.summary}</p><small>{form.movement}</small></article>})}</div></div>:null}
+
+              {maneuverLimit?<div className="ruleset-foundation-card"><div className="panel-heading-row"><div><span className="mini-label">Battle Master Choice</span><strong>Combat Maneuvers · {getSuperiorityDie(draft.level)}</strong></div><span>{selectedManeuverIds.length} / {maneuverLimit}</span></div><div className="builder-choice-grid">{maneuverOptions.map(option=>{const selected=selectedManeuverIds.includes(option.id);return <article className={`builder-choice-card ${selected?"selected":""}`} key={option.id}><div className="panel-heading-row"><div><h3>{option.name}</h3><span className="mini-label">{option.trigger}</span></div><button type="button" disabled={!selected&&selectedManeuverIds.length>=maneuverLimit} onClick={()=>toggleManeuver(option.id)}>{selected?"Kaldır":"Seç"}</button></div><p>{option.summary}</p></article>})}</div></div>:null}
 
               {grantedOriginFeatName ? (
                 <article className="builder-choice-card">

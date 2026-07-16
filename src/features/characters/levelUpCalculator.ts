@@ -76,7 +76,7 @@ export function buildLeveledCharacter(
     currentHp: Math.min(nextMaxHp, character.currentHp + hpGain),
     spellSlots: nextSlots,
     hitDice: normalizeHitDice(character.hitDice, nextLevel, character.className, options.hitDie),
-    resources: mergeClassResources(character.resources,getClassResources(character.className,nextLevel,nextAbilities,character.ruleset)),
+    resources: mergeClassResources(character.resources,getClassResources(character.className,nextLevel,nextAbilities,character.ruleset,character.subclass)),
     updatedAt: options.updatedAt ?? new Date().toISOString(),
   };
 }
