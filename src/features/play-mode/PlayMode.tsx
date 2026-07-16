@@ -24,6 +24,7 @@ import { getCastableSlotLevels, getSpellRollFormula, rollFormula } from "../../c
 import { addSpellEffect, advanceSpellEffects, createSpellEffect } from "../../core/rulesets/spellEffectRules";
 import { applyDamage, applyHealing, resolveDeathSave } from "../../core/character/survivalRules";
 import { getCriticalDamageFormula, resolveAttack, type RollMode } from "../../core/rulesets/attackResolution";
+import { combineRollModes, getConditionEffects } from "../../core/rulesets/conditionRules";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -41,11 +42,20 @@ import {
 
 const conditionOptions: CharacterCondition[] = [
   "Blessed",
+  "Blinded",
+  "Charmed",
+  "Deafened",
+  "Frightened",
+  "Grappled",
+  "Incapacitated",
+  "Paralyzed",
+  "Petrified",
   "Poisoned",
   "Prone",
   "Invisible",
   "Stunned",
   "Restrained",
+  "Unconscious",
   "Concentration",
   "Rage",
   "Haki",
@@ -156,6 +166,7 @@ export function PlayMode({
   const arcanumSpells=(rulesetData?.spells??[]).filter(spell=>activeCharacter.arcanumSpellIds?.includes(spell.id));
   const paladinAuras=isPaladin(activeCharacter.className)?getPaladinAuraSummary(activeCharacter.level):null;
   const activeSpellEffects=activeCharacter.activeSpellEffects??[];
+  const conditionEffects=getConditionEffects(activeCharacter.conditions);
 
   function commit(patch: Partial<Character>) {
     onUpdateCharacter({
@@ -277,7 +288,7 @@ export function PlayMode({
     );
   }
 
-  function weaponAttack(weapon:(typeof equippedItems.weapons)[number]){const modifier=getWeaponAttackBonus(activeCharacter,weapon);const dice=rollDice({count:attackMode==="normal"?1:2,sides:20,modifier:0});const attack=resolveAttack(dice.rolls,modifier,targetAc,attackMode);const results:RollResult[]=[{id:dice.id,label:`${weapon.name} · ${attack.hit?attack.critical?"CRITICAL":"Hit":"Miss"}`,notation:`${attackMode} · [${dice.rolls.join(", ")}] ${formatModifier(modifier)} vs AC ${targetAc}`,total:attack.total}];if(attack.hit){const formula=getCriticalDamageFormula(getWeaponDamageSummary(activeCharacter,weapon),attack.critical);if(formula){const damage=rollDice(formula);results.push({id:damage.id,label:`${weapon.name} Damage${attack.critical?" · Critical":""}`,notation:damage.notation,total:damage.total})}}setRollHistory(current=>[...results,...current].slice(0,6))}
+  function weaponAttack(weapon:(typeof equippedItems.weapons)[number]){if(conditionEffects.blocksActions)return;const effectiveMode=combineRollModes(attackMode,conditionEffects.attackMode);const modifier=getWeaponAttackBonus(activeCharacter,weapon);const dice=rollDice({count:effectiveMode==="normal"?1:2,sides:20,modifier:0});const attack=resolveAttack(dice.rolls,modifier,targetAc,effectiveMode);const results:RollResult[]=[{id:dice.id,label:`${weapon.name} · ${attack.hit?attack.critical?"CRITICAL":"Hit":"Miss"}`,notation:`${effectiveMode} · [${dice.rolls.join(", ")}] ${formatModifier(modifier)} vs AC ${targetAc}`,total:attack.total}];if(attack.hit){const formula=getCriticalDamageFormula(getWeaponDamageSummary(activeCharacter,weapon),attack.critical);if(formula){const damage=rollDice(formula);results.push({id:damage.id,label:`${weapon.name} Damage${attack.critical?" · Critical":""}`,notation:damage.notation,total:damage.total})}}setRollHistory(current=>[...results,...current].slice(0,6))}
 
   function shortRest(die: number) {
     const pool = hitDice.find((item) => item.die === die);
@@ -449,6 +460,7 @@ export function PlayMode({
                 </button>
               ))}
             </div>
+            {conditionEffects.notes.length?<div className="condition-rule-summary">{conditionEffects.notes.map(note=><small key={note}>{note}</small>)}</div>:null}
           </section>
 
           {metamagicOptions.length ? (
@@ -551,6 +563,7 @@ export function PlayMode({
               <button
                 className="play-mode-weapon-roll"
                 key={weapon.id}
+                disabled={conditionEffects.blocksActions}
                 onClick={() => weaponAttack(weapon)}
               >
                 <span>{weapon.name}</span>

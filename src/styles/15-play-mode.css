@@ -334,3 +334,4 @@
 }
 .survival-console{display:grid;grid-template-columns:90px repeat(3,minmax(0,1fr));gap:8px;margin-top:12px}.survival-console input{min-width:0}.concentration-prompt{width:100%;margin-top:10px;border-color:#ffd27c;color:#ffd27c}.death-save-console{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;padding:12px;border-radius:12px;background:rgba(180,35,55,.16)}@media(max-width:640px){.survival-console{grid-template-columns:1fr 1fr}.death-save-console{align-items:stretch;flex-direction:column}}
 .attack-control-bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.attack-control-bar label{display:grid;gap:5px;font-size:.8rem;font-weight:700}.attack-control-bar input,.attack-control-bar select{width:100%}
+.condition-rule-summary{display:grid;gap:5px;margin-top:12px;padding:12px;border-radius:12px;background:rgba(255,210,124,.09);color:#ffd27c}.condition-rule-summary small{font-weight:700}

@@ -1,6 +1,8 @@
 import type { CampaignEncounter } from "../campaigns/campaignTypes";
 export type CombatantKind = "Karakter" | "NPC" | "Canavar" | "Özel";
-export type CombatCondition = "Blessed" | "Poisoned" | "Prone" | "Invisible" | "Stunned" | "Restrained" | "Concentration" | "Rage" | "Haki" | "Cursed";
+import type { CharacterCondition } from "../../core/character/character.types";
+
+export type CombatCondition = CharacterCondition;
 
 export type CombatEffect = {
   id: string;
@@ -88,7 +90,7 @@ const LOG_KINDS: readonly CombatLogKind[] = ["Sistem", "Sıra", "Hasar", "İyile
 export const BATTLEFIELD_ZONE_KINDS: readonly BattlefieldZoneKind[] = ["Aura", "Hazard", "Difficult Terrain", "Spell Area", "Cover", "Other"];
 export const BATTLEFIELD_ZONE_SHAPES: readonly BattlefieldZoneShape[] = ["Circle", "Cone", "Cube", "Line", "Sphere", "Custom"];
 const KINDS: readonly CombatantKind[] = ["Karakter", "NPC", "Canavar", "Özel"];
-export const COMBAT_CONDITIONS: readonly CombatCondition[] = ["Blessed", "Poisoned", "Prone", "Invisible", "Stunned", "Restrained", "Concentration", "Rage", "Haki", "Cursed"];
+export const COMBAT_CONDITIONS: readonly CombatCondition[] = ["Blessed", "Blinded", "Charmed", "Deafened", "Frightened", "Grappled", "Incapacitated", "Paralyzed", "Petrified", "Poisoned", "Prone", "Invisible", "Stunned", "Restrained", "Unconscious", "Concentration", "Rage", "Haki", "Cursed"];
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return Boolean(value) && typeof value === "object" && !Array.isArray(value);

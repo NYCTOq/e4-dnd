@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.23.0",date:"2026-07-16",title:"Standard Conditions Engine",
+    summary:"Standart koşul kapsamı tamamlandı ve aktif durumların mekanik etkileri saldırı konsoluna bağlandı.",
+    changes:[
+      {text:"Blinded, Charmed, Deafened, Frightened, Grappled ve Incapacitated",category:"Özellik"},
+      {text:"Paralyzed, Petrified ve Unconscious condition desteği",category:"Özellik"},
+      {text:"Condition kaynaklı attack advantage/disadvantage",category:"Özellik"},
+      {text:"Advantage ve disadvantage birbirini götürme kuralı",category:"Düzeltme"},
+      {text:"Incapacitated ailesinde weapon action engeli ve speed 0 özeti",category:"Özellik"},
+      {text:"Condition mechanics için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.22.0",date:"2026-07-16",title:"Weapon Attack Resolution",
     summary:"Silah saldırıları hedef AC, advantage/disadvantage, natural sonuçlar ve kritik hasarla tek tıkta çözülür hale geldi.",
     changes:[
