@@ -34,6 +34,15 @@ describe("spell database v2 expansion", () => {
     const names = new Set(SPELL_EXPANSION_2014.map((spell) => spell.name));
     expect(required).toHaveLength(59);
     expect(required.filter((name) => !names.has(name))).toEqual([]);
-    expect(SPELL_EXPANSION_2014).toHaveLength(129);
+    expect(new Set(SPELL_EXPANSION_2014.map((spell) => spell.id)).size).toBe(SPELL_EXPANSION_2014.length);
+  });
+  it("provides broad level six through nine coverage", () => {
+    const highLevel = SPELL_EXPANSION_2014.filter((spell) => spell.level >= 6);
+    for (const level of [6, 7, 8, 9]) expect(highLevel.filter((spell) => spell.level === level).length).toBeGreaterThanOrEqual(10);
+    for (const className of ["Bard", "Cleric", "Druid", "Sorcerer", "Warlock", "Wizard"]) {
+      expect(highLevel.some((spell) => spell.classes.includes(className))).toBe(true);
+    }
+    expect(SPELL_EXPANSION_2014.find((spell) => spell.name === "Meteor Swarm")).toMatchObject({ level: 9, damageDice: "40d6", saveAbility: "dex" });
+    expect(SPELL_EXPANSION_2014).toHaveLength(169);
   });
 });
