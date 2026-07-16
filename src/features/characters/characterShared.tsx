@@ -284,7 +284,7 @@ export function getEquippedItems(character: Character, items: DndItemData[] | un
 }
 
 export function calculateSuggestedArmorClass(
-  character: Pick<Character, "abilities" | "equippedArmorId" | "equippedShieldId">,
+  character: Pick<Character, "abilities" | "equippedArmorId" | "equippedShieldId" | "fightingStyleIds">,
   items: DndItemData[] | undefined,
 ) {
   const itemMap = new Map((items ?? []).map((item) => [item.id, item]));
@@ -312,11 +312,13 @@ export function calculateSuggestedArmorClass(
     armorClass += shield.armorClassBonus ?? 2;
   }
 
+  if (armor?.category === "armor" && character.fightingStyleIds?.includes("defense")) armorClass += 1;
+
   return armorClass;
 }
 
 export function calculateEffectiveArmorClass(
-  character: Pick<Character, "abilities" | "armorClass" | "armorClassMode" | "equippedArmorId" | "equippedShieldId">,
+  character: Pick<Character, "abilities" | "armorClass" | "armorClassMode" | "equippedArmorId" | "equippedShieldId" | "fightingStyleIds">,
   items: DndItemData[] | undefined,
 ) {
   if (character.armorClassMode !== "auto") {
@@ -344,12 +346,20 @@ export function getWeaponAbilityModifier(character: Character, weapon: DndItemDa
 }
 
 export function getWeaponAttackBonus(character: Character, weapon: DndItemData) {
-  return getWeaponAbilityModifier(character, weapon) + getProficiencyBonus(character.level);
+  const properties = weapon.properties?.map((property) => property.toLowerCase()) ?? [];
+  const isRangedWeapon = properties.includes("ammunition") || weapon.id.includes("bow") || weapon.id.includes("crossbow");
+  const styleBonus = isRangedWeapon && character.fightingStyleIds?.includes("archery") ? 2 : 0;
+  return getWeaponAbilityModifier(character, weapon) + getProficiencyBonus(character.level) + styleBonus;
 }
 
 export function getWeaponDamageSummary(character: Character, weapon: DndItemData) {
   const abilityModifier = getWeaponAbilityModifier(character, weapon);
-  const modifierText = abilityModifier === 0 ? "" : ` ${formatModifier(abilityModifier)}`;
+  const properties = weapon.properties?.map((property) => property.toLowerCase()) ?? [];
+  const isTwoHanded = properties.some((property) => property.includes("two-handed"));
+  const duelingBonus = character.fightingStyleIds?.includes("dueling") && !weapon.range && !isTwoHanded && character.equippedWeaponIds.length === 1 ? 2 : 0;
+  const thrownBonus = character.fightingStyleIds?.includes("thrown-weapon-fighting") && properties.includes("thrown") ? 2 : 0;
+  const totalModifier = abilityModifier + duelingBonus + thrownBonus;
+  const modifierText = totalModifier === 0 ? "" : ` ${formatModifier(totalModifier)}`;
 
   return `${weapon.damage ?? "1"}${modifierText} ${weapon.damageType ?? "damage"}`;
 }

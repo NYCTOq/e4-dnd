@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.8.0", date: "2026-07-16", title: "Fighting Style Combat Integration",
+    summary: "Fighting Style seçimleri Character Sheet ve Play Mode savaş hesaplarına bağlandı.",
+    changes: [
+      { text: "Archery ile ranged weapon attack rollarına +2", category: "Özellik" },
+      { text: "Defense ile kuşanılmış armor üzerinde +1 otomatik AC", category: "Özellik" },
+      { text: "Dueling ile tek elli melee weapon damage bonusu", category: "Özellik" },
+      { text: "Thrown Weapon Fighting damage bonusu", category: "Özellik" },
+      { text: "Character Sheet ve Play Mode attack/damage özetlerine otomatik yansıma", category: "İyileştirme" },
+      { text: "Combat entegrasyonu için üç otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "2.7.0", date: "2026-07-16", title: "Cantrip Expansion & Class Coverage",
     summary: "Caster class cantrip havuzları açık lisanslı seçenekler ve yapılandırılmış mekanik metadata ile genişletildi.",
     changes: [
