@@ -44,6 +44,7 @@ import { consumeInventoryItem, createItemEffect, getItemHealingFormula, isConsum
 import { getItemEffectRuntime, getItemTempHp, removeFragileItemEffects } from "../../core/rulesets/itemEffectRuntimeRules";
 import { getMagicWeaponExtraDamage, type MagicWeaponTarget } from "../../core/rulesets/magicWeaponRules";
 import { getMagicArmorRuntime } from "../../core/rulesets/magicArmorRules";
+import { getMagicAccessoryRuntime } from "../../core/rulesets/magicAccessoryRules";
 import { getAttunedItemCount, recoverHighestSpentSpellSlot, recoverItemCharges, spendItemCharge, toggleItemAttunement } from "../../core/rulesets/magicItemRules";
 import {
   calculateEffectiveArmorClass,
@@ -156,6 +157,8 @@ export function PlayMode({
   }
 
   const activeCharacter = character;
+  const magicAccessoryRuntime=getMagicAccessoryRuntime(activeCharacter.abilities,activeCharacter.inventory,rulesetData?.items);
+  const effectiveCharacter={...activeCharacter,abilities:magicAccessoryRuntime.abilities};
   const spellSlots = normalizeSpellSlots(
     activeCharacter.spellSlots,
     activeCharacter.level,
@@ -178,9 +181,9 @@ export function PlayMode({
     ) ?? [],
   );
   const spellGroups = getSpellLevelGroups(spells);
-  const equippedItems = getEquippedItems(activeCharacter, rulesetData?.items);
+  const equippedItems = getEquippedItems(effectiveCharacter, rulesetData?.items);
   const baseArmorClass = calculateEffectiveArmorClass(
-    activeCharacter,
+    effectiveCharacter,
     rulesetData?.items,
   );
   const readiness = getPlayReadiness(activeCharacter, rulesetData);
@@ -194,7 +197,7 @@ export function PlayMode({
   const maneuvers=getBattleMasterManeuvers().filter(item=>activeCharacter.maneuverIds?.includes(item.id));
   const superiorityDice=activeCharacter.resources.find(resource=>resource.id==="superiority-dice");
   const companion=getRangerCompanions(activeCharacter.ruleset).find(item=>item.id===activeCharacter.companionId);
-  const companionStats=companion?getCompanionStats(companion,activeCharacter.level,getAbilityModifier(activeCharacter.abilities.wis)):null;
+  const companionStats=companion?getCompanionStats(companion,activeCharacter.level,getAbilityModifier(effectiveCharacter.abilities.wis)):null;
   const companionCurrentHp=companionStats?Math.min(companionStats.maxHp,Math.max(0,activeCharacter.companionCurrentHp??companionStats.maxHp)):0;
   const handledResourceIds=new Set(["sorcery-points","wild-shape","superiority-dice","focus-points","bardic-inspiration","second-wind","action-surge","indomitable","channel-divinity","arcane-recovery","favored-enemy"]);
   const classActions=getClassFeatureActions(activeCharacter.className,activeCharacter.level,activeCharacter.ruleset).filter(action=>action.resourceId&&!handledResourceIds.has(action.resourceId)&&activeCharacter.resources.some(resource=>resource.id===action.resourceId));
@@ -212,7 +215,7 @@ export function PlayMode({
   const featRuntime=getFeatRuntime(featNames,activeCharacter.level,activeCharacter.ruleset);
   const usableItems=activeCharacter.inventory.flatMap(entry=>{const item=rulesetData?.items.find(candidate=>candidate.id===entry.itemId);return item&&isConsumableItem(item)?[{entry,item}]:[]});
   const magicItems=activeCharacter.inventory.flatMap(entry=>{const item=rulesetData?.items.find(candidate=>candidate.id===entry.itemId);return item?.magical?[{entry,item}]:[]});
-  const effectiveSpeed=getEffectiveSpeed(((selectedRace?.speed??30)+featRuntime.speedBonus)*itemEffectRuntime.speedMultiplier,exhaustionEffects);
+  const effectiveSpeed=getEffectiveSpeed(((selectedRace?.speed??30)+featRuntime.speedBonus+magicAccessoryRuntime.speedBonus)*itemEffectRuntime.speedMultiplier,exhaustionEffects);
   const effectiveMaxHp=getEffectiveMaxHp(activeCharacter.maxHp,exhaustionEffects);
   const attacksPerAction=getAttacksPerAction(activeCharacter.className,activeCharacter.level);
   const isRogue=activeCharacter.className.trim().toLowerCase()==="rogue";
@@ -273,7 +276,7 @@ export function PlayMode({
   function divineSmite(slotLevel:number){const slot=spellSlots.find(item=>item.level===slotLevel);if(!slot||slot.used>=slot.max)return;const dice=getDivineSmiteDice(slotLevel,activeCharacter.ruleset,smiteHolyTarget);const result=rollDice({count:dice,sides:8,modifier:0});commit({spellSlots:spellSlots.map(item=>item.level===slotLevel?{...item,used:item.used+1}:item)});setRollHistory(current=>[{id:result.id,label:`Divine Smite · Level ${slotLevel}`,notation:result.notation,total:result.total},...current].slice(0,6))}
   function advanceEffectRound(){const next=advanceSpellEffects(activeSpellEffects);commit({activeSpellEffects:next,conditions:next.some(effect=>effect.concentration)?activeCharacter.conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")})}
   function endSpellEffect(id:string){const next=activeSpellEffects.filter(effect=>effect.id!==id);commit({activeSpellEffects:next,conditions:next.some(effect=>effect.concentration)?activeCharacter.conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")})}
-  function concentrationSave(dc:number){const result=rollDice({count:1,sides:20,modifier:getAbilityModifier(activeCharacter.abilities.con)});const success=result.total>=dc;commit(success?{}:{activeSpellEffects:activeSpellEffects.filter(effect=>!effect.concentration),conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")});setPendingConcentrationDc(null);setRollHistory(current=>[{id:result.id,label:`Concentration Save DC ${dc} · ${success?"Başarılı":"Başarısız"}`,notation:result.notation,total:result.total},...current].slice(0,6))}
+  function concentrationSave(dc:number){const result=rollDice({count:1,sides:20,modifier:getAbilityModifier(effectiveCharacter.abilities.con)+magicAccessoryRuntime.savingThrowBonus});const success=result.total>=dc;commit(success?{}:{activeSpellEffects:activeSpellEffects.filter(effect=>!effect.concentration),conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")});setPendingConcentrationDc(null);setRollHistory(current=>[{id:result.id,label:`Concentration Save DC ${dc} · ${success?"Başarılı":"Başarısız"}`,notation:result.notation,total:result.total},...current].slice(0,6))}
 
   function takeDamage(critical=false){const rageReduced=reduceRageDamage(survivalAmount,isRaging,incomingPhysical);const armorResisted=magicArmorRuntime.resistanceDamageTypes.includes(incomingDamageType);const potionResisted=itemEffectRuntime.damageResistance&&incomingPotionResisted;const finalDamage=armorResisted||potionResisted?Math.ceil(rageReduced/2):rageReduced;const effectiveCritical=critical&&!magicArmorRuntime.preventsCriticalDamage;const result=applyDamage({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},finalDamage,effectiveCritical);commit({currentHp:result.currentHp,tempHp:result.tempHp,deathSaves:result.deathSaves});if(activeSpellEffects.some(effect=>effect.concentration))setPendingConcentrationDc(result.concentrationDc);setRollHistory(current=>[{id:crypto.randomUUID(),label:`${critical?"Kritik ":""}Hasar${critical&&!effectiveCritical?" · Adamantine":""}${rageReduced!==survivalAmount?" · Rage Resistance":""}${armorResisted?" · Armor Resistance":potionResisted?" · Potion Resistance":""}${result.absorbedByTempHp?` · ${result.absorbedByTempHp} Temp HP emdi`:""}`,notation:`-${finalDamage} HP`,total:-finalDamage},...current].slice(0,6))}
   function healDamage(){const result=applyHealing({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},survivalAmount);commit({currentHp:result.currentHp,deathSaves:result.deathSaves})}
@@ -494,7 +497,7 @@ export function PlayMode({
 
           <div className="play-mode-core-stats">
             <div><span>AC</span><strong>{armorClass}</strong></div>
-            <div><span>Init</span><strong>{formatModifier(getInitiative(activeCharacter)+featRuntime.alertInitiativeBonus)}</strong></div>
+            <div><span>Init</span><strong>{formatModifier(getInitiative(effectiveCharacter)+featRuntime.alertInitiativeBonus)}</strong></div>
             <div><span>Prof</span><strong>+{getProficiencyBonus(activeCharacter.level)}</strong></div>
             <div><span>Save DC</span><strong>{getSpellSaveDc(activeCharacter)}</strong></div>
             <div><span>Spell Atk</span><strong>{formatModifier(getSpellAttackBonus(activeCharacter))}</strong></div>
@@ -513,6 +516,7 @@ export function PlayMode({
           {isWizard&&wizardFeatures.arcaneRecovery?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Wizard</span><h2>Arcane Recovery</h2></div><strong>{getArcaneRecoveryBudget(activeCharacter.level)-arcaneRecoveryLevels.reduce((sum,level)=>sum+level,0)} level bütçe</strong></div><div className="play-mode-slot-grid">{spellSlots.filter(slot=>slot.level<=5).map(slot=>{const selected=arcaneRecoveryLevels.filter(level=>level===slot.level).length;const remaining=getArcaneRecoveryBudget(activeCharacter.level)-arcaneRecoveryLevels.reduce((sum,level)=>sum+level,0);return <div className="play-mode-slot-row" key={slot.level}><div><span>Level {slot.level}</span><small>{slot.used} harcanmış · {selected} seçili</small></div><div><button type="button" disabled={!selected} onClick={()=>{const index=arcaneRecoveryLevels.indexOf(slot.level);setArcaneRecoveryLevels(current=>current.filter((_,i)=>i!==index))}}>−</button><button type="button" disabled={!arcaneRecovery||arcaneRecovery.used>=arcaneRecovery.max||!canRecoverWizardSlot(slot.level,slot.used-selected,remaining)} onClick={()=>setArcaneRecoveryLevels(current=>[...current,slot.level])}>+</button></div></div>})}</div><button type="button" disabled={!arcaneRecoveryLevels.length||!arcaneRecovery||arcaneRecovery.used>=arcaneRecovery.max} onClick={applyArcaneRecovery}>Seçili Slotları Yenile</button><div className="condition-rule-summary">{wizardFeatures.memorizeSpell?<small>Memorize Spell aktif.</small>:null}{wizardFeatures.spellMastery?<small>Spell Mastery aktif.</small>:null}{wizardFeatures.signatureSpells?<small>Signature Spells aktif.</small>:null}</div></section>:null}
           {isRanger?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Ranger Hunt</span><h2>Hunter's Mark · {getHuntersMarkDamage(activeCharacter.level)}</h2></div><strong>{favoredEnemy?`${favoredEnemy.max-favoredEnemy.used}/${favoredEnemy.max} ücretsiz`:activeCharacter.ruleset==="dnd_2014"?"Spell slot kullanır":"Kaynak yok"}</strong></div>{rangerFeatures.favoredEnemy?<button type="button" disabled={!favoredEnemy||favoredEnemy.used>=favoredEnemy.max||turnEconomy.bonusActionUsed} onClick={useFavoredEnemy}>Favored Enemy · Bonus Action</button>:null}<div className="condition-rule-summary">{rangerFeatures.deftExplorer?<small>Deft Explorer aktif.</small>:null}{rangerFeatures.extraAttack?<small>Extra Attack aktif.</small>:null}{rangerFeatures.roving?<small>Roving aktif.</small>:null}{rangerFeatures.tireless?<small>Tireless aktif.</small>:null}{rangerFeatures.naturesVeil?<small>Nature's Veil aktif.</small>:null}{rangerFeatures.foeSlayer?<small>Foe Slayer aktif.</small>:null}</div></section>:null}
           {featNames.some(name=>["alert","lucky","tough","mobile","observant"].includes(name.toLowerCase()))?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Feat Runtime</span><h2>Aktif Feat Etkileri</h2></div></div><div className="condition-rule-summary">{featRuntime.alertInitiativeBonus?<small>Alert: Initiative +{featRuntime.alertInitiativeBonus}</small>:null}{featRuntime.speedBonus?<small>Mobile: Speed +{featRuntime.speedBonus} ft.</small>:null}{featRuntime.toughHpBonus?<small>Tough: Max HP katkısı +{featRuntime.toughHpBonus}</small>:null}{featRuntime.passivePerceptionBonus?<small>Observant: Passive Perception/Investigation +5</small>:null}</div>{featRuntime.luckyUses?<button type="button" disabled={luckyUsed>=featRuntime.luckyUses} onClick={()=>setLuckyUsed(value=>value+1)}>Lucky Kullan · {featRuntime.luckyUses-luckyUsed}/{featRuntime.luckyUses}</button>:null}</section>:null}
+          {magicAccessoryRuntime.activeItemNames.length?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Magic Accessories</span><h2>Attuned Passive Effects</h2></div><strong>{magicAccessoryRuntime.activeItemNames.length} aktif</strong></div><div className="condition-rule-summary"><small>{magicAccessoryRuntime.activeItemNames.join(" · ")}</small><small>Effective STR {effectiveCharacter.abilities.str} · CON {effectiveCharacter.abilities.con} · INT {effectiveCharacter.abilities.int}</small>{magicAccessoryRuntime.savingThrowBonus?<small>Saving Throws +{magicAccessoryRuntime.savingThrowBonus}</small>:null}{magicAccessoryRuntime.skillCheckBonus?<small>Ability Checks +{magicAccessoryRuntime.skillCheckBonus}</small>:null}{magicAccessoryRuntime.speedBonus?<small>Speed +{magicAccessoryRuntime.speedBonus} ft.</small>:null}</div></section>:null}
           {usableItems.length?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Inventory Runtime</span><h2>Consumables & Ammunition</h2></div><strong>{usableItems.reduce((sum,item)=>sum+item.entry.quantity,0)} adet</strong></div><div className="play-mode-slot-grid">{usableItems.map(({entry,item})=><div className="play-mode-slot-row" key={item.id}><div><span>{item.name}</span><small>{entry.quantity} adet · {getItemHealingFormula(item)??item.category}</small></div><button type="button" onClick={()=>consumeItem(item.id)}>{getItemHealingFormula(item)?"Kullan":"1 Harca"}</button></div>)}</div></section>:null}
           {magicItems.length?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Magic Items</span><h2>Attunement & Charges</h2></div><strong>{getAttunedItemCount(activeCharacter.inventory)} / 3 attuned</strong></div><div className="play-mode-slot-grid">{magicItems.map(({entry,item})=><div className="play-mode-slot-row" key={item.id}><div><span>{item.name} · {item.rarity}</span><small>{item.charges?`${item.charges-(entry.chargesUsed??0)} / ${item.charges} charge`:item.requiresAttunement?(entry.attuned?"Attuned":"Attunement gerekli"):"Attunement gerektirmez"}</small></div><div>{item.requiresAttunement?<button type="button" onClick={()=>toggleAttunement(item.id)}>{entry.attuned?"Bağı Kes":"Attune"}</button>:null}{item.charges?<button type="button" disabled={(entry.chargesUsed??0)>=item.charges||Boolean(item.requiresAttunement&&!entry.attuned)} onClick={()=>spendMagicItemCharge(item.id)}>1 Charge</button>:null}</div></div>)}</div></section>:null}
           <section className="play-mode-card play-mode-hp-card">
@@ -659,11 +663,11 @@ export function PlayMode({
                   key={ability}
                   onClick={() => quickRoll(
                     abilityLabels[ability],
-                    getAbilityModifier(activeCharacter.abilities[ability]),
+                    getAbilityModifier(effectiveCharacter.abilities[ability])+magicAccessoryRuntime.skillCheckBonus,
                   )}
                 >
                   {abilityLabels[ability]}
-                  <span>{formatModifier(getAbilityModifier(activeCharacter.abilities[ability]))}</span>
+                  <span>{formatModifier(getAbilityModifier(effectiveCharacter.abilities[ability])+magicAccessoryRuntime.skillCheckBonus)}</span>
                 </button>
               ))}
             </div>
@@ -682,8 +686,8 @@ export function PlayMode({
                 onClick={() => weaponAttack(weapon)}
               >
                 <span>{weapon.name}</span>
-                <strong>{formatModifier(getWeaponAttackBonus(activeCharacter, weapon))}</strong>
-                <small>{getWeaponDamageSummary(activeCharacter, weapon)}</small>
+                <strong>{formatModifier(getWeaponAttackBonus(effectiveCharacter, weapon))}</strong>
+                <small>{getWeaponDamageSummary(effectiveCharacter, weapon)}</small>
               </button>
             ))}
 
@@ -696,8 +700,8 @@ export function PlayMode({
 
           <section className="play-mode-card">
             <div className="play-mode-section-head"><div><span className="mini-label">Checks & Saves</span><h2>Skill ve Saving Throws</h2></div><select value={checkMode} onChange={event=>setCheckMode(event.target.value as RollMode)}><option value="normal">Normal</option><option value="advantage">Advantage</option><option value="disadvantage">Disadvantage</option></select></div>
-            <div className="save-roll-grid">{(Object.keys(abilityLabels) as AbilityKey[]).map(ability=>{const bonus=getSavingThrowBonus(activeCharacter,ability,rulesetData);return <button type="button" disabled={exhaustionEffects.dead} key={ability} onClick={()=>resolvedCheck(`${abilityLabels[ability]} Saving Throw`,bonus,"save",ability)}><span>{abilityLabels[ability]} Save</span><strong>{formatModifier(bonus-exhaustionEffects.d20Penalty)}</strong></button>})}</div>
-            <div className="skill-roll-grid">{Object.keys(SKILL_ABILITIES).map(skill=>{const bonus=getSkillBonus(activeCharacter,skill);const expertise=activeCharacter.expertiseSkills.includes(skill);const proficient=activeCharacter.skillProficiencies.includes(skill);return <button type="button" disabled={exhaustionEffects.dead} key={skill} onClick={()=>resolvedCheck(`${skill} Check`,bonus,"skill")}><span>{skill}<small>{expertise?"Expertise":proficient?"Proficient":activeCharacter.className.toLowerCase()==="bard"&&activeCharacter.level>=2?"Jack of All Trades":"Untrained"}</small></span><strong>{formatModifier(bonus-exhaustionEffects.d20Penalty)}</strong></button>})}</div>
+            <div className="save-roll-grid">{(Object.keys(abilityLabels) as AbilityKey[]).map(ability=>{const bonus=getSavingThrowBonus(effectiveCharacter,ability,rulesetData)+magicAccessoryRuntime.savingThrowBonus;return <button type="button" disabled={exhaustionEffects.dead} key={ability} onClick={()=>resolvedCheck(`${abilityLabels[ability]} Saving Throw`,bonus,"save",ability)}><span>{abilityLabels[ability]} Save</span><strong>{formatModifier(bonus-exhaustionEffects.d20Penalty)}</strong></button>})}</div>
+            <div className="skill-roll-grid">{Object.keys(SKILL_ABILITIES).map(skill=>{const bonus=getSkillBonus(effectiveCharacter,skill)+magicAccessoryRuntime.skillCheckBonus;const expertise=activeCharacter.expertiseSkills.includes(skill);const proficient=activeCharacter.skillProficiencies.includes(skill);return <button type="button" disabled={exhaustionEffects.dead} key={skill} onClick={()=>resolvedCheck(`${skill} Check`,bonus,"skill")}><span>{skill}<small>{expertise?"Expertise":proficient?"Proficient":activeCharacter.className.toLowerCase()==="bard"&&activeCharacter.level>=2?"Jack of All Trades":"Untrained"}</small></span><strong>{formatModifier(bonus-exhaustionEffects.d20Penalty)}</strong></button>})}</div>
           </section>
 
           <section className="play-mode-card play-mode-spell-card">

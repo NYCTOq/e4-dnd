@@ -203,6 +203,10 @@ export interface DndItemData {
   criticalExtraDamageDice?: string;
   resistanceDamageType?: string;
   preventsCriticalDamage?: boolean;
+  abilityMinimums?: Partial<Record<AbilityKey, number>>;
+  savingThrowBonus?: number;
+  skillCheckBonus?: number;
+  speedBonus?: number;
   armorBonus?: number;
   grantedSpellName?: string;
   chargeCost?: number;
