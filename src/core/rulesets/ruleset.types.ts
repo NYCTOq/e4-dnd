@@ -207,6 +207,10 @@ export interface DndItemData {
   savingThrowBonus?: number;
   skillCheckBonus?: number;
   speedBonus?: number;
+  healingFormula?: string;
+  curesConditions?: string[];
+  clearsExhaustion?: boolean;
+  restoresHitDice?: boolean;
   armorBonus?: number;
   grantedSpellName?: string;
   chargeCost?: number;
