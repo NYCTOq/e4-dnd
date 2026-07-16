@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.35.0",date:"2026-07-16",title:"Wizard Arcane Recovery",
+    summary:"Wizard Arcane Recovery, bütçe kontrollü çoklu spell slot seçimiyle Play Mode'a bağlandı.",
+    changes:[
+      {text:"Wizard level yarısı yukarı yuvarlanan recovery bütçesi",category:"Özellik"},
+      {text:"Birden fazla spell slotu birlikte geri kazanma",category:"Özellik"},
+      {text:"Level 6+ slot ve bütçe aşımı engeli",category:"Düzeltme"},
+      {text:"Long Rest başına tek Arcane Recovery kullanımı",category:"Düzeltme"},
+      {text:"Memorize Spell, Spell Mastery ve Signature Spells",category:"Özellik"},
+      {text:"Wizard progression için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.34.0",date:"2026-07-16",title:"Sorcerer Font of Magic",
     summary:"Sorcery Points ve spell slotları arasındaki çift yönlü dönüşüm Play Mode kaynak sistemine bağlandı.",
     changes:[
