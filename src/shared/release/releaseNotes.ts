@@ -14,6 +14,7 @@ export type ReleaseEntry = {
 };
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
+  {version:"2.36.0",date:"2026-07-16",title:"Ranger Hunter's Mark",summary:"Ranger av döngüsü ve 2024 Favored Enemy kullanımları Play Mode'a bağlandı.",changes:[{text:"Wisdom bazlı ücretsiz Favored Enemy kullanımları",category:"Özellik"},{text:"Bonus Action ve concentration entegrasyonu",category:"Özellik"},{text:"Level bazlı Hunter's Mark damage die",category:"Özellik"},{text:"2014 spell slot / 2024 ücretsiz kullanım ayrımı",category:"Düzeltme"},{text:"Deft Explorer, Roving, Tireless, Nature's Veil ve Foe Slayer",category:"Özellik"},{text:"Ranger progression için üç otomatik test",category:"Teknik"}]},
   {
     version:"2.35.0",date:"2026-07-16",title:"Wizard Arcane Recovery",
     summary:"Wizard Arcane Recovery, bütçe kontrollü çoklu spell slot seçimiyle Play Mode'a bağlandı.",
