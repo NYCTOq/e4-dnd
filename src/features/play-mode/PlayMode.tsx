@@ -45,12 +45,14 @@ import { getItemEffectRuntime, getItemTempHp, removeFragileItemEffects } from ".
 import { getMagicWeaponExtraDamage, type MagicWeaponTarget } from "../../core/rulesets/magicWeaponRules";
 import { getMagicArmorRuntime } from "../../core/rulesets/magicArmorRules";
 import { getMagicAccessoryRuntime } from "../../core/rulesets/magicAccessoryRules";
+import { resolveWeaponMastery } from "../../core/rulesets/weaponMasteryRuntimeRules";
 import { getAttunedItemCount, recoverHighestSpentSpellSlot, recoverItemCharges, spendItemCharge, toggleItemAttunement } from "../../core/rulesets/magicItemRules";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
   getSpellLevelGroups,
   getWeaponAttackBonus,
+  getWeaponAbilityModifier,
   getWeaponDamageSummary,
   isSpellReadyToCast,
   normalizeHitDice,
@@ -135,6 +137,7 @@ export function PlayMode({
   const [incomingPotionResisted,setIncomingPotionResisted]=useState(false);
   const [magicWeaponTarget,setMagicWeaponTarget]=useState<MagicWeaponTarget>("normal");
   const [incomingDamageType,setIncomingDamageType]=useState("physical");
+  const [masteryVexReady,setMasteryVexReady]=useState(false);
 
   const character =
     characters.find((item) => item.id === selectedCharacterId) ?? characters[0];
@@ -428,11 +431,12 @@ export function PlayMode({
   function weaponAttack(weapon: (typeof equippedItems.weapons)[number]) {
     if (conditionEffects.blocksActions || exhaustionEffects.dead || turnEconomy.actionUsed || itemEffectRuntime.blocksAggressiveActions) return;
     const conditionMode = combineRollModes(conditionEffects.attackMode, exhaustionEffects.attackSaveMode);
-    const effectiveMode = combineRollModes(combineRollModes(attackMode, conditionMode), itemEffectRuntime.attackMode);
+    const effectiveMode = combineRollModes(combineRollModes(combineRollModes(attackMode, conditionMode), itemEffectRuntime.attackMode),masteryVexReady?"advantage":"normal");
     const potionAttackBonus = itemEffectRuntime.attackSaveBonusDice ? rollFormula(itemEffectRuntime.attackSaveBonusDice) : 0;
     const modifier = getWeaponAttackBonus(effectiveCharacter, weapon) - exhaustionEffects.d20Penalty + potionAttackBonus;
     const dice = rollDice({ count: effectiveMode === "normal" ? 1 : 2, sides: 20, modifier: 0 });
     const attack = resolveAttack(dice.rolls, modifier, targetAc, effectiveMode);
+    const masteryOutcome=resolveWeaponMastery({weapon,ruleset:activeCharacter.ruleset,masteredWeaponIds:activeCharacter.masteredWeaponIds??[],hit:attack.hit,abilityModifier:getWeaponAbilityModifier(effectiveCharacter,weapon)});
     const results: RollResult[] = [{ id: dice.id, label: `${weapon.name} · ${attack.hit ? attack.critical ? "CRITICAL" : "Hit" : "Miss"}`, notation: `${effectiveMode} · [${dice.rolls.join(", ")}] ${formatModifier(modifier)} vs AC ${targetAc}`, total: attack.total }];
     if (attack.hit) {
       const formula = getCriticalDamageFormula(getWeaponDamageSummary(effectiveCharacter, weapon), attack.critical);
@@ -443,6 +447,9 @@ export function PlayMode({
       const sneakAllowed = isRogue && sneakAttackEnabled && canUseSneakAttack({ level: activeCharacter.level, weapon, usedThisTurn: sneakAttackUsed, hasAdvantage: effectiveMode === "advantage", hasDisadvantage: effectiveMode === "disadvantage", allyAdjacent: sneakAllyAdjacent });
       if (sneakAllowed) { const sneak = rollDice({ count: getSneakAttackDice(activeCharacter.level) * (attack.critical ? 2 : 1), sides: 6, modifier: 0 }); results.push({ id: sneak.id, label: `Sneak Attack${attack.critical ? " · Critical" : ""}`, notation: sneak.notation, total: sneak.total }); setSneakAttackUsed(true); }
     }
+    if(masteryOutcome.grazeDamage)results.push({id:crypto.randomUUID(),label:`${weapon.name} · Graze Damage`,notation:"Ability modifier",total:masteryOutcome.grazeDamage});
+    if(masteryOutcome.note)results.push({id:crypto.randomUUID(),label:`Weapon Mastery · ${masteryOutcome.mastery}`,notation:masteryOutcome.note,total:0});
+    setMasteryVexReady(masteryOutcome.grantsVex);
     const effectsAfterAttack = removeFragileItemEffects(activeSpellEffects);
     if (effectsAfterAttack.length !== activeSpellEffects.length) commit({ activeSpellEffects: effectsAfterAttack });
     setTurnEconomy(current => spendAttack(current, attacksPerAction));
@@ -739,6 +746,7 @@ export function PlayMode({
               <label>Hedef AC<input type="number" min="1" value={targetAc} onChange={event=>setTargetAc(Math.max(1,Number(event.target.value)||1))}/></label>
               <label>Atış<select value={attackMode} onChange={event=>setAttackMode(event.target.value as RollMode)}><option value="normal">Normal</option><option value="advantage">Advantage</option><option value="disadvantage">Disadvantage</option></select></label>
               <label>Hedef türü<select value={magicWeaponTarget} onChange={event=>setMagicWeaponTarget(event.target.value as MagicWeaponTarget)}><option value="normal">Normal</option><option value="dragon">Dragon</option><option value="giant">Giant</option><option value="undead-fiend">Undead / Fiend</option></select></label>
+              {masteryVexReady?<strong>Vex Advantage hazır</strong>:null}
             </div>
 
             {equippedItems.weapons.map((weapon) => (
