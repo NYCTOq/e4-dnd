@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.18.0",date:"2026-07-16",title:"Guided Level-Up & Choice Debt",
+    summary:"Level progression sırasında eksik kalan zorunlu class seçimleri tespit edilip karakter sayfasında çözülebilir hale getirildi.",
+    changes:[
+      {text:"Dokuz seçim ailesi için merkezi Choice Debt motoru",category:"Özellik"},
+      {text:"Subclass, style, mastery, Metamagic, Invocation ve Maneuver çözümleyici",category:"Özellik"},
+      {text:"Wild Shape, companion ve Mystic Arcanum borç çözümleyici",category:"Özellik"},
+      {text:"Play Readiness içinde eksik zorunlu seçim engeli",category:"Düzeltme"},
+      {text:"ASI milestone sırasında gerçek feat seçimi ve kayıt",category:"Özellik"},
+      {text:"Choice Debt için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.17.0",date:"2026-07-16",title:"Paladin Smite & Aura System",
     summary:"Divine Smite slot harcaması, otomatik hasar zarı ve Paladin aura progression masa moduna eklendi.",
     changes:[

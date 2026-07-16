@@ -1,5 +1,6 @@
 import type { Character } from "./character.types";
 import type { RulesetData } from "../rulesets/ruleset.types";
+import { getCharacterChoiceDebt } from "../rulesets/choiceDebt";
 
 export type PlayReadinessIssue = { id: string; severity: "error" | "warning"; message: string };
 export type PlayReadiness = { status: "ready" | "needs-attention"; score: number; issues: PlayReadinessIssue[] };
@@ -29,6 +30,7 @@ export function getPlayReadiness(character: Character, rulesetData: RulesetData 
 
   if (!character.skillProficiencies.length) add("skills", "warning", "Skill proficiency kaydı yok; saving throw dışındaki rollar eksik kalabilir.");
   if (!character.inventory.length) add("inventory", "warning", "Inventory boş; ekipman saldırıları Play Mode'da görünmez.");
+  for(const debt of getCharacterChoiceDebt(character,rulesetData))add(`choice-${debt.id}`,"error",debt.message);
 
   const errorCount = issues.filter((issue) => issue.severity === "error").length;
   const score = Math.max(0, Math.round(((7 - Math.min(7, errorCount)) / 7) * 100));

@@ -10,6 +10,8 @@ import {
   type LevelUpAsiMode,
 } from "./levelUpCalculator";
 import { getLatestLevelUp, removeLevelUpHistoryEntry, saveLevelUpSnapshot } from "./levelUpHistory";
+import { isFeatEligible } from "../../core/rulesets/featRules";
+import { getCharacterChoiceDebt } from "../../core/rulesets/choiceDebt";
 
 const ABILITY_LABELS: Record<AbilityKey, string> = {
   str: "STR",
@@ -39,6 +41,7 @@ export function LevelUpAssistant({
   const [asiMode, setAsiMode] = useState<AsiMode>("none");
   const [primaryAbility, setPrimaryAbility] = useState<AbilityKey>("str");
   const [secondaryAbility, setSecondaryAbility] = useState<AbilityKey>("dex");
+  const [selectedFeatId,setSelectedFeatId]=useState("");
   const [latestHistory, setLatestHistory] = useState(() => getLatestLevelUp(character.id));
 
   const nextLevel = Math.min(20, character.level + 1);
@@ -54,6 +57,9 @@ export function LevelUpAssistant({
   const newClassFeatures = selectedClass?.levels.find((row) => row.level === nextLevel)?.features ?? [];
   const selectedSubclass = rulesetData?.subclasses.find((item) => item.className === character.className && item.name === character.subclass);
   const newSubclassFeatures = selectedSubclass?.features.filter((feature) => feature.level === nextLevel) ?? [];
+  const eligibleFeats=(rulesetData?.feats??[]).filter(feat=>feat.category!=="origin"&&!character.featIds.includes(feat.id)&&isFeatEligible(feat,{level:nextLevel,className:character.className,abilities:character.abilities,canCastSpells:Boolean(selectedClass?.spellcastingAbility)}).eligible);
+  const nextChoiceDebt=getCharacterChoiceDebt({...character,level:nextLevel},rulesetData);
+  const milestoneChoiceMissing=asiAvailable&&asiMode==="none"&&!selectedFeatId;
 
   const hpGain = useMemo(() => {
     if (hpMode === "manual") {
@@ -85,6 +91,7 @@ export function LevelUpAssistant({
       primaryAbility,
       secondaryAbility,
       classData:selectedClass,
+      featId:asiMode==="none"?selectedFeatId:undefined,
     });
 
     onUpdateCharacter(nextCharacter);
@@ -92,6 +99,7 @@ export function LevelUpAssistant({
     setIsOpen(false);
     setRolledHp(null);
     setAsiMode("none");
+    setSelectedFeatId("");
   }
 
   function undoLatestLevelUp(){if(!latestHistory)return; onUpdateCharacter(latestHistory.before); removeLevelUpHistoryEntry(latestHistory.id); setLatestHistory(getLatestLevelUp(character.id));}
@@ -200,7 +208,7 @@ export function LevelUpAssistant({
                 <div>
                   <span className="mini-label">Ability Score Improvement</span>
                   <h3>ASI veya feat tercihi</h3>
-                  <p>Feat seçiyorsan ability artışını uygulama ve feat’i karakter notlarına ekle.</p>
+                  <p>Bu seviyede ASI veya uygun bir feat seçmeden level-up tamamlanmaz.</p>
                 </div>
               </div>
 
@@ -209,6 +217,8 @@ export function LevelUpAssistant({
                 <button type="button" className={asiMode === "plus-two" ? "active" : ""} onClick={() => setAsiMode("plus-two")}>Bir Yeteneğe +2</button>
                 <button type="button" className={asiMode === "split" ? "active" : ""} onClick={() => setAsiMode("split")}>İki Yeteneğe +1</button>
               </div>
+
+              {asiMode==="none"?<label className="level-up-manual-field">Feat seçimi<select value={selectedFeatId} onChange={event=>setSelectedFeatId(event.target.value)}><option value="">Feat seç...</option>{eligibleFeats.map(feat=><option key={feat.id} value={feat.id}>{feat.name}</option>)}</select></label>:null}
 
               {asiMode !== "none" ? (
                 <div className="level-up-ability-selects">
@@ -246,6 +256,7 @@ export function LevelUpAssistant({
               <li>Hit dice havuzu ve bilinen spell slot tablosu otomatik güncellenecek.</li>
               {nextLevel === 3 ? <li>Subclass seçimi çoğu class için bu seviyede gündeme gelir.</li> : null}
               {asiAvailable ? <li>Bu seviye genel ASI kilometre taşıdır; bazı class’lar farklı ilerleyebilir.</li> : null}
+              {nextChoiceDebt.map(debt=><li key={debt.id}><strong>Seçim borcu:</strong> {debt.message} Level-up sonrasında tamamlanmalı.</li>)}
             </ul>
           </section>
 
@@ -254,7 +265,7 @@ export function LevelUpAssistant({
               <strong>Level {nextLevel}</strong>
               <span>Maksimum HP +{hpGain}</span>
             </div>
-            <button type="button" className="primary-action" onClick={confirmLevelUp}>Level Up Uygula</button>
+            <button type="button" className="primary-action" disabled={milestoneChoiceMissing} onClick={confirmLevelUp}>{milestoneChoiceMissing?"ASI veya Feat Seç":"Level Up Uygula"}</button>
           </div>
         </div>
       ) : null}

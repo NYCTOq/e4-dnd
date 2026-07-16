@@ -15,6 +15,7 @@ export type LevelUpOptions = {
   secondaryAbility: AbilityKey;
   updatedAt?: string;
   classData?: DndClassData | null;
+  featId?: string;
 };
 
 export function isAsiMilestone(level: number, className = ""): boolean {
@@ -71,6 +72,7 @@ export function buildLeveledCharacter(
   return {
     ...character,
     level: nextLevel,
+    featIds: options.featId&&!character.featIds.includes(options.featId)?[...character.featIds,options.featId]:character.featIds,
     abilities: nextAbilities,
     maxHp: nextMaxHp,
     currentHp: Math.min(nextMaxHp, character.currentHp + hpGain),

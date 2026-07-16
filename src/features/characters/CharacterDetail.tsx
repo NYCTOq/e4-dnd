@@ -9,6 +9,8 @@ import { LevelUpAssistant } from "./LevelUpAssistant";
 import { calculateEffectiveArmorClass, calculateSuggestedArmorClass, getCharacterInventoryItems, getEquippedItems, getInventoryWeight, getItemCategoryLabel, getItemRulesSummary, getSpellGroupTitle, getSpellLevelGroups, getSpellLevelLabel, getWeaponAttackBonus, getWeaponDamageSummary, isSpellReadyToCast, normalizeHitDice, normalizeSpellSlots, resetDeathSaves, resetHitDice, resetSpellSlots, sortSpellsByLevelAndName } from "./characterShared";
 import { getClassFeatureActions } from "../../core/rulesets/classFeatureEngine";
 import { getCharacterFeatures, getPassiveScore, getSavingThrowBonus, getSkillBonus, SKILL_ABILITIES } from "../../core/rulesets/characterSheetRules";
+import { getCharacterChoiceDebt } from "../../core/rulesets/choiceDebt";
+import { ChoiceDebtResolver } from "./ChoiceDebtResolver";
 
 interface CharacterCastHistoryItem {
   id: string;
@@ -136,6 +138,7 @@ export function CharacterDetail({
   }
 
   const activeCharacter: Character = character;
+  const choiceDebt=getCharacterChoiceDebt(activeCharacter,rulesetData);
 
   const conditionOptions: Character["conditions"] = [
     "Blessed",
@@ -646,6 +649,8 @@ export function CharacterDetail({
 
             <button onClick={() => navigate("/characters")}>Listeye Dön</button>
           </div>
+
+          {choiceDebt.length?<details className="character-sheet-section" open><summary><span><b>Choice Debt Resolver</b><small>{choiceDebt.length} zorunlu seçim eksik</small></span><em>Tamamlanmalı</em></summary><div className="character-sheet-section-body"><ChoiceDebtResolver character={activeCharacter} rulesetData={rulesetData} onUpdateCharacter={onUpdateCharacter}/></div></details>:null}
 
           <details className="character-sheet-section character-sheet-level-up">
             <summary>
