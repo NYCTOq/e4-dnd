@@ -27,6 +27,7 @@ import { getCriticalDamageFormula, resolveAttack, type RollMode } from "../../co
 import { combineRollModes, getConditionEffects } from "../../core/rulesets/conditionRules";
 import { getSavingThrowBonus, getSkillBonus, SKILL_ABILITIES } from "../../core/rulesets/characterSheetRules";
 import { chooseD20 } from "../../core/rulesets/attackResolution";
+import { getEffectiveMaxHp, getEffectiveSpeed, getExhaustionEffects } from "../../core/rulesets/exhaustionRules";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -170,6 +171,10 @@ export function PlayMode({
   const paladinAuras=isPaladin(activeCharacter.className)?getPaladinAuraSummary(activeCharacter.level):null;
   const activeSpellEffects=activeCharacter.activeSpellEffects??[];
   const conditionEffects=getConditionEffects(activeCharacter.conditions);
+  const exhaustionEffects=getExhaustionEffects(activeCharacter.ruleset,activeCharacter.exhaustion);
+  const selectedRace=rulesetData?.races.find(race=>race.name===activeCharacter.race);
+  const effectiveSpeed=getEffectiveSpeed(selectedRace?.speed??30,exhaustionEffects);
+  const effectiveMaxHp=getEffectiveMaxHp(activeCharacter.maxHp,exhaustionEffects);
 
   function commit(patch: Partial<Character>) {
     onUpdateCharacter({
@@ -291,9 +296,9 @@ export function PlayMode({
     );
   }
 
-  function resolvedCheck(label:string,modifier:number){const dice=rollDice({count:checkMode==="normal"?1:2,sides:20,modifier:0});const natural=chooseD20(dice.rolls,checkMode);setRollHistory(current=>[{id:dice.id,label,notation:`${checkMode} · [${dice.rolls.join(", ")}] ${formatModifier(modifier)}`,total:natural+modifier},...current].slice(0,6))}
+  function resolvedCheck(label:string,modifier:number,kind:"skill"|"save"){const imposed=kind==="skill"?exhaustionEffects.abilityCheckMode:exhaustionEffects.attackSaveMode;const effectiveMode=combineRollModes(checkMode,imposed);const adjustedModifier=modifier-exhaustionEffects.d20Penalty;const dice=rollDice({count:effectiveMode==="normal"?1:2,sides:20,modifier:0});const natural=chooseD20(dice.rolls,effectiveMode);setRollHistory(current=>[{id:dice.id,label,notation:`${effectiveMode} · [${dice.rolls.join(", ")}] ${formatModifier(adjustedModifier)}`,total:natural+adjustedModifier},...current].slice(0,6))}
 
-  function weaponAttack(weapon:(typeof equippedItems.weapons)[number]){if(conditionEffects.blocksActions)return;const effectiveMode=combineRollModes(attackMode,conditionEffects.attackMode);const modifier=getWeaponAttackBonus(activeCharacter,weapon);const dice=rollDice({count:effectiveMode==="normal"?1:2,sides:20,modifier:0});const attack=resolveAttack(dice.rolls,modifier,targetAc,effectiveMode);const results:RollResult[]=[{id:dice.id,label:`${weapon.name} · ${attack.hit?attack.critical?"CRITICAL":"Hit":"Miss"}`,notation:`${effectiveMode} · [${dice.rolls.join(", ")}] ${formatModifier(modifier)} vs AC ${targetAc}`,total:attack.total}];if(attack.hit){const formula=getCriticalDamageFormula(getWeaponDamageSummary(activeCharacter,weapon),attack.critical);if(formula){const damage=rollDice(formula);results.push({id:damage.id,label:`${weapon.name} Damage${attack.critical?" · Critical":""}`,notation:damage.notation,total:damage.total})}}setRollHistory(current=>[...results,...current].slice(0,6))}
+  function weaponAttack(weapon:(typeof equippedItems.weapons)[number]){if(conditionEffects.blocksActions||exhaustionEffects.dead)return;const conditionMode=combineRollModes(conditionEffects.attackMode,exhaustionEffects.attackSaveMode);const effectiveMode=combineRollModes(attackMode,conditionMode);const modifier=getWeaponAttackBonus(activeCharacter,weapon)-exhaustionEffects.d20Penalty;const dice=rollDice({count:effectiveMode==="normal"?1:2,sides:20,modifier:0});const attack=resolveAttack(dice.rolls,modifier,targetAc,effectiveMode);const results:RollResult[]=[{id:dice.id,label:`${weapon.name} · ${attack.hit?attack.critical?"CRITICAL":"Hit":"Miss"}`,notation:`${effectiveMode} · [${dice.rolls.join(", ")}] ${formatModifier(modifier)} vs AC ${targetAc}`,total:attack.total}];if(attack.hit){const formula=getCriticalDamageFormula(getWeaponDamageSummary(activeCharacter,weapon),attack.critical);if(formula){const damage=rollDice(formula);results.push({id:damage.id,label:`${weapon.name} Damage${attack.critical?" · Critical":""}`,notation:damage.notation,total:damage.total})}}setRollHistory(current=>[...results,...current].slice(0,6))}
 
   function shortRest(die: number) {
     const pool = hitDice.find((item) => item.die === die);
@@ -466,6 +471,7 @@ export function PlayMode({
               ))}
             </div>
             {conditionEffects.notes.length?<div className="condition-rule-summary">{conditionEffects.notes.map(note=><small key={note}>{note}</small>)}</div>:null}
+            <div className="exhaustion-console"><div><span className="mini-label">Exhaustion</span><strong>{exhaustionEffects.level} / 6</strong><small>{activeCharacter.ruleset==="dnd_2024"?`D20 -${exhaustionEffects.d20Penalty} · Speed ${effectiveSpeed} ft.`:`Speed ${effectiveSpeed} ft. · Effective Max HP ${effectiveMaxHp}`}</small>{exhaustionEffects.dead?<em>Level 6 · Ölü</em>:null}</div><div><button type="button" disabled={exhaustionEffects.level<=0} onClick={()=>commit({exhaustion:exhaustionEffects.level-1})}>−</button><button type="button" disabled={exhaustionEffects.level>=6} onClick={()=>commit({exhaustion:exhaustionEffects.level+1})}>+</button></div></div>
           </section>
 
           {metamagicOptions.length ? (
@@ -568,7 +574,7 @@ export function PlayMode({
               <button
                 className="play-mode-weapon-roll"
                 key={weapon.id}
-                disabled={conditionEffects.blocksActions}
+                disabled={conditionEffects.blocksActions||exhaustionEffects.dead}
                 onClick={() => weaponAttack(weapon)}
               >
                 <span>{weapon.name}</span>
@@ -586,8 +592,8 @@ export function PlayMode({
 
           <section className="play-mode-card">
             <div className="play-mode-section-head"><div><span className="mini-label">Checks & Saves</span><h2>Skill ve Saving Throws</h2></div><select value={checkMode} onChange={event=>setCheckMode(event.target.value as RollMode)}><option value="normal">Normal</option><option value="advantage">Advantage</option><option value="disadvantage">Disadvantage</option></select></div>
-            <div className="save-roll-grid">{(Object.keys(abilityLabels) as AbilityKey[]).map(ability=>{const bonus=getSavingThrowBonus(activeCharacter,ability,rulesetData);return <button type="button" key={ability} onClick={()=>resolvedCheck(`${abilityLabels[ability]} Saving Throw`,bonus)}><span>{abilityLabels[ability]} Save</span><strong>{formatModifier(bonus)}</strong></button>})}</div>
-            <div className="skill-roll-grid">{Object.keys(SKILL_ABILITIES).map(skill=>{const bonus=getSkillBonus(activeCharacter,skill);const expertise=activeCharacter.expertiseSkills.includes(skill);const proficient=activeCharacter.skillProficiencies.includes(skill);return <button type="button" key={skill} onClick={()=>resolvedCheck(`${skill} Check`,bonus)}><span>{skill}<small>{expertise?"Expertise":proficient?"Proficient":activeCharacter.className.toLowerCase()==="bard"&&activeCharacter.level>=2?"Jack of All Trades":"Untrained"}</small></span><strong>{formatModifier(bonus)}</strong></button>})}</div>
+            <div className="save-roll-grid">{(Object.keys(abilityLabels) as AbilityKey[]).map(ability=>{const bonus=getSavingThrowBonus(activeCharacter,ability,rulesetData);return <button type="button" disabled={exhaustionEffects.dead} key={ability} onClick={()=>resolvedCheck(`${abilityLabels[ability]} Saving Throw`,bonus,"save")}><span>{abilityLabels[ability]} Save</span><strong>{formatModifier(bonus-exhaustionEffects.d20Penalty)}</strong></button>})}</div>
+            <div className="skill-roll-grid">{Object.keys(SKILL_ABILITIES).map(skill=>{const bonus=getSkillBonus(activeCharacter,skill);const expertise=activeCharacter.expertiseSkills.includes(skill);const proficient=activeCharacter.skillProficiencies.includes(skill);return <button type="button" disabled={exhaustionEffects.dead} key={skill} onClick={()=>resolvedCheck(`${skill} Check`,bonus,"skill")}><span>{skill}<small>{expertise?"Expertise":proficient?"Proficient":activeCharacter.className.toLowerCase()==="bard"&&activeCharacter.level>=2?"Jack of All Trades":"Untrained"}</small></span><strong>{formatModifier(bonus-exhaustionEffects.d20Penalty)}</strong></button>})}</div>
           </section>
 
           <section className="play-mode-card play-mode-spell-card">

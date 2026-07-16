@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.25.0",date:"2026-07-16",title:"Edition-Aware Exhaustion Engine",
+    summary:"Exhaustion artık yalnızca sayaç değil; 2014 ve 2024 mekanikleriyle saldırı, check, save, hız ve HP hesaplarını etkiliyor.",
+    changes:[
+      {text:"2014 level 1–6 disadvantage, speed ve max HP basamakları",category:"Özellik"},
+      {text:"2024 her level için kümülatif D20 -2 ve Speed -5 ft.",category:"Özellik"},
+      {text:"Weapon attack, skill check ve saving throw entegrasyonu",category:"Düzeltme"},
+      {text:"Play Mode exhaustion artırma/azaltma konsolu",category:"Özellik"},
+      {text:"Level 6 ölüm durumu ve eylem kilidi",category:"Özellik"},
+      {text:"İki edition için üç otomatik exhaustion testi",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.24.0",date:"2026-07-16",title:"Skill & Saving Throw Console",
     summary:"Tüm skill check ve saving throw sonuçları gerçek proficiency katmanları ve roll modlarıyla Play Mode'a taşındı.",
     changes:[
