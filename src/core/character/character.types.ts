@@ -38,6 +38,7 @@ export interface CharacterResource {
   used: number;
   recovery: ResourceRecovery;
 }
+export interface CharacterSpellEffect{ id:string;spellId:string;name:string;remainingRounds:number|null;concentration:boolean;summary:string }
 
 export type CharacterCondition =
   | "Blessed"
@@ -77,6 +78,7 @@ export interface Character {
   companionCurrentHp?: number;
   arcanumSpellIds?: string[];
   usedArcanumSpellIds?: string[];
+  activeSpellEffects?: CharacterSpellEffect[];
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];
@@ -137,6 +139,7 @@ export interface CharacterDraft {
   companionCurrentHp?: number;
   arcanumSpellIds?: string[];
   usedArcanumSpellIds?: string[];
+  activeSpellEffects?: CharacterSpellEffect[];
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];

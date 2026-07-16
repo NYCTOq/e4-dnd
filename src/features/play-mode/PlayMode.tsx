@@ -21,6 +21,7 @@ import { getCompanionStats, getRangerCompanions } from "../../core/rulesets/comp
 import { getClassFeatureActions } from "../../core/rulesets/classFeatureEngine";
 import { getDivineSmiteDice, getPaladinAuraSummary, isPaladin } from "../../core/rulesets/paladinRules";
 import { getCastableSlotLevels, getSpellRollFormula, rollFormula } from "../../core/rulesets/spellResolution";
+import { addSpellEffect, advanceSpellEffects, createSpellEffect } from "../../core/rulesets/spellEffectRules";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -148,6 +149,7 @@ export function PlayMode({
   const classActions=getClassFeatureActions(activeCharacter.className,activeCharacter.level,activeCharacter.ruleset).filter(action=>action.resourceId&&!handledResourceIds.has(action.resourceId)&&activeCharacter.resources.some(resource=>resource.id===action.resourceId));
   const arcanumSpells=(rulesetData?.spells??[]).filter(spell=>activeCharacter.arcanumSpellIds?.includes(spell.id));
   const paladinAuras=isPaladin(activeCharacter.className)?getPaladinAuraSummary(activeCharacter.level):null;
+  const activeSpellEffects=activeCharacter.activeSpellEffects??[];
 
   function commit(patch: Partial<Character>) {
     onUpdateCharacter({
@@ -177,6 +179,9 @@ export function PlayMode({
   function executeClassAction(resourceId:string,amount=1){const resource=activeCharacter.resources.find(item=>item.id===resourceId);if(!resource||resource.max-resource.used<amount)return;let currentHp=activeCharacter.currentHp;let conditions=activeCharacter.conditions;if(resourceId==="second-wind"){const result=rollDice({count:1,sides:10,modifier:activeCharacter.level});currentHp=Math.min(activeCharacter.maxHp,currentHp+result.total);setRollHistory(current=>[{id:result.id,label:"Second Wind",notation:result.notation,total:result.total},...current].slice(0,6))}if(resourceId==="lay-on-hands")currentHp=Math.min(activeCharacter.maxHp,currentHp+amount);if(resourceId==="rage"&&!conditions.includes("Rage"))conditions=[...conditions,"Rage"];commit({currentHp,conditions,resources:activeCharacter.resources.map(item=>item.id===resourceId?{...item,used:Math.min(item.max,item.used+amount)}:item)})}
   function castArcanum(spellId:string){if(activeCharacter.usedArcanumSpellIds?.includes(spellId))return;commit({usedArcanumSpellIds:[...(activeCharacter.usedArcanumSpellIds??[]),spellId]})}
   function divineSmite(slotLevel:number){const slot=spellSlots.find(item=>item.level===slotLevel);if(!slot||slot.used>=slot.max)return;const dice=getDivineSmiteDice(slotLevel,activeCharacter.ruleset,smiteHolyTarget);const result=rollDice({count:dice,sides:8,modifier:0});commit({spellSlots:spellSlots.map(item=>item.level===slotLevel?{...item,used:item.used+1}:item)});setRollHistory(current=>[{id:result.id,label:`Divine Smite · Level ${slotLevel}`,notation:result.notation,total:result.total},...current].slice(0,6))}
+  function advanceEffectRound(){const next=advanceSpellEffects(activeSpellEffects);commit({activeSpellEffects:next,conditions:next.some(effect=>effect.concentration)?activeCharacter.conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")})}
+  function endSpellEffect(id:string){const next=activeSpellEffects.filter(effect=>effect.id!==id);commit({activeSpellEffects:next,conditions:next.some(effect=>effect.concentration)?activeCharacter.conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")})}
+  function concentrationSave(dc:number){const result=rollDice({count:1,sides:20,modifier:getAbilityModifier(activeCharacter.abilities.con)});const success=result.total>=dc;commit(success?{}:{activeSpellEffects:activeSpellEffects.filter(effect=>!effect.concentration),conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")});setRollHistory(current=>[{id:result.id,label:`Concentration Save DC ${dc} · ${success?"Başarılı":"Başarısız"}`,notation:result.notation,total:result.total},...current].slice(0,6))}
 
   function updateHp(amount: number) {
     commit({
@@ -230,7 +235,7 @@ export function PlayMode({
         ? [...activeCharacter.conditions, "Concentration" as const]
         : activeCharacter.conditions;
 
-    const formula=getSpellRollFormula(spell,activeCharacter.level,slotLevel);const total=formula?rollFormula(formula):null;
+    const formula=getSpellRollFormula(spell,activeCharacter.level,slotLevel);const total=formula?rollFormula(formula):null;const createdEffect=createSpellEffect(spell);const nextEffects=createdEffect?addSpellEffect(activeSpellEffects,createdEffect):activeSpellEffects;
     commit({
       currentHp:spell.healingDice&&total!==null?Math.min(activeCharacter.maxHp,activeCharacter.currentHp+Math.max(0,total)):activeCharacter.currentHp,
       spellSlots:
@@ -242,6 +247,7 @@ export function PlayMode({
                 : slot,
             ),
       conditions: nextConditions,
+      activeSpellEffects:nextEffects,
     });
     const resolutionRolls:RollResult[]=[];if(spell.attackType==="spell-attack"){const attack=rollDice({count:1,sides:20,modifier:getSpellAttackBonus(activeCharacter)});resolutionRolls.push({id:attack.id,label:`${spell.name} Attack`,notation:attack.notation,total:attack.total})}if(total!==null)resolutionRolls.push({id:crypto.randomUUID(),label:`${spell.name}${spell.healingDice?" Healing":" Damage"}`,notation:formula!,total});if(resolutionRolls.length)setRollHistory(current=>[...resolutionRolls,...current].slice(0,6));
   }
@@ -308,6 +314,7 @@ export function PlayMode({
       conditions: activeCharacter.conditions.filter((item) => item === "Cursed"),
       resources: activeCharacter.resources.map(resource=>({...resource,used:0})),
       usedArcanumSpellIds: [],
+      activeSpellEffects: [],
     });
   }
 
@@ -470,6 +477,8 @@ export function PlayMode({
           {arcanumSpells.length?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Warlock · Long Rest</span><h2>Mystic Arcanum</h2></div><strong>{arcanumSpells.length-(activeCharacter.usedArcanumSpellIds??[]).length} hazır</strong></div><div className="play-mode-spell-list">{arcanumSpells.sort((a,b)=>a.level-b.level).map(spell=>{const used=activeCharacter.usedArcanumSpellIds?.includes(spell.id);return <button key={spell.id} disabled={used} onClick={()=>castArcanum(spell.id)}><span>Level {spell.level} · {spell.name}</span><small>{used?"Kullanıldı":"Arcanum Kullan"}</small></button>})}</div></section>:null}
 
           {isPaladin(activeCharacter.className)&&activeCharacter.level>=2?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Paladin Combat</span><h2>Divine Smite</h2></div><label><input type="checkbox" checked={smiteHolyTarget} onChange={event=>setSmiteHolyTarget(event.target.checked)}/> Fiend / Undead</label></div><div className="play-mode-slot-grid">{spellSlots.map(slot=>{const dice=getDivineSmiteDice(slot.level,activeCharacter.ruleset,smiteHolyTarget);return <div className="play-mode-slot-row" key={slot.level}><div><span>Level {slot.level} Slot · {dice}d8 radiant</span><small>{slot.max-slot.used} / {slot.max} slot kaldı</small></div><button type="button" disabled={slot.used>=slot.max} onClick={()=>divineSmite(slot.level)}>Smite At</button></div>})}</div>{paladinAuras?<div className="play-mode-slot-grid">{paladinAuras.protection?<div className="play-mode-slot-row"><div><span>Aura of Protection · {paladinAuras.protection.radius} ft.</span><small>{paladinAuras.protection.summary}</small></div></div>:null}{paladinAuras.courage?<div className="play-mode-slot-row"><div><span>Aura of Courage · {paladinAuras.courage.radius} ft.</span><small>{paladinAuras.courage.summary}</small></div></div>:null}{paladinAuras.radiantStrikes?<div className="play-mode-slot-row"><div><span>Radiant Strikes</span><small>{paladinAuras.radiantStrikes}</small></div></div>:null}</div>:null}</section>:null}
+
+          {activeSpellEffects.length?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Persistent Magic</span><h2>Aktif Spell Etkileri</h2></div><button type="button" onClick={advanceEffectRound}>1 Round İlerle</button></div><div className="play-mode-slot-grid">{activeSpellEffects.map(effect=><div className="play-mode-slot-row" key={effect.id}><div><span>{effect.name}{effect.concentration?" · Concentration":""}</span><small>{effect.remainingRounds===null?"Süresiz":`${effect.remainingRounds} round kaldı`} · {effect.summary}</small></div><button type="button" onClick={()=>endSpellEffect(effect.id)}>Bitir</button></div>)}</div>{activeSpellEffects.some(effect=>effect.concentration)?<div className="play-mode-big-buttons"><span>Concentration save:</span>{[10,15,20].map(dc=><button type="button" key={dc} onClick={()=>concentrationSave(dc)}>DC {dc}</button>)}</div>:null}</section>:null}
 
           <section className="play-mode-card">
             <div className="play-mode-section-head">

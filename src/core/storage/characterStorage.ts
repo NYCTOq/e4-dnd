@@ -190,6 +190,7 @@ function hydrateCharacter(character: Character): Character {
     companionCurrentHp: typeof character.companionCurrentHp === "number" ? Math.max(0,Math.floor(character.companionCurrentHp)) : undefined,
     arcanumSpellIds: Array.isArray(character.arcanumSpellIds) ? [...new Set(character.arcanumSpellIds.filter((id): id is string => typeof id === "string"))] : [],
     usedArcanumSpellIds: Array.isArray(character.usedArcanumSpellIds) ? [...new Set(character.usedArcanumSpellIds.filter((id): id is string => typeof id === "string"))] : [],
+    activeSpellEffects: Array.isArray(character.activeSpellEffects)?character.activeSpellEffects.filter(effect=>effect&&typeof effect.id==="string"&&typeof effect.spellId==="string"&&typeof effect.name==="string").map(effect=>({...effect,remainingRounds:typeof effect.remainingRounds==="number"?Math.max(0,Math.floor(effect.remainingRounds)):null,concentration:Boolean(effect.concentration),summary:typeof effect.summary==="string"?effect.summary:""})):[],
     skillProficiencies: Array.isArray(character.skillProficiencies) ? [...new Set(character.skillProficiencies.filter((value): value is string => typeof value === "string"))] : [],
     expertiseSkills: Array.isArray(character.expertiseSkills) ? [...new Set(character.expertiseSkills.filter((value): value is string => typeof value === "string"))] : [],
     toolProficiencies: Array.isArray(character.toolProficiencies) ? [...new Set(character.toolProficiencies.filter((value): value is string => typeof value === "string"))] : [],

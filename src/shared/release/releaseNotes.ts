@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.20.0",date:"2026-07-16",title:"Concentration & Active Spell Effects",
+    summary:"Kalıcı spell etkileri, concentration değişimi, süre ilerletme ve CON save yönetimi Play Mode'a eklendi.",
+    changes:[
+      {text:"Aktif spell effect kimliği ve save/reload persistence",category:"Özellik"},
+      {text:"Yeni concentration spell cast edilince önceki etkinin bitmesi",category:"Düzeltme"},
+      {text:"Round, minute ve hour duration dönüşümü",category:"Özellik"},
+      {text:"Play Mode'da round ilerletme ve manuel effect bitirme",category:"Özellik"},
+      {text:"DC 10/15/20 concentration CON save kontrolleri",category:"Özellik"},
+      {text:"Spell effect lifecycle için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.19.0",date:"2026-07-16",title:"Spell Resolution Core",
     summary:"Spell cast akışı uygun üst slot seçimi, scaling ve otomatik attack/damage/healing roll ile genişletildi.",
     changes:[
