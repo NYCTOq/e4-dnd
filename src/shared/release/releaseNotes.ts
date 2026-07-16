@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.19.0",date:"2026-07-16",title:"Spell Resolution Core",
+    summary:"Spell cast akışı uygun üst slot seçimi, scaling ve otomatik attack/damage/healing roll ile genişletildi.",
+    changes:[
+      {text:"Aynı veya daha yüksek uygun slotla cast seçimi",category:"Düzeltme"},
+      {text:"Slot level bazlı damage ve healing upcast scaling",category:"Özellik"},
+      {text:"Level 5, 11 ve 17 cantrip dice scaling",category:"Özellik"},
+      {text:"Spell attack için otomatik d20 + spell attack bonus roll",category:"Özellik"},
+      {text:"Saving throw spell'lerinde ability ve Save DC görünümü",category:"Özellik"},
+      {text:"Compound dice formula ve çözümleme için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.18.0",date:"2026-07-16",title:"Guided Level-Up & Choice Debt",
     summary:"Level progression sırasında eksik kalan zorunlu class seçimleri tespit edilip karakter sayfasında çözülebilir hale getirildi.",
     changes:[

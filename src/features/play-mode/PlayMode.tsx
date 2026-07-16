@@ -20,6 +20,7 @@ import { getBattleMasterManeuvers, getSuperiorityDie } from "../../core/rulesets
 import { getCompanionStats, getRangerCompanions } from "../../core/rulesets/companionRules";
 import { getClassFeatureActions } from "../../core/rulesets/classFeatureEngine";
 import { getDivineSmiteDice, getPaladinAuraSummary, isPaladin } from "../../core/rulesets/paladinRules";
+import { getCastableSlotLevels, getSpellRollFormula, rollFormula } from "../../core/rulesets/spellResolution";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -80,6 +81,7 @@ export function PlayMode({
   const [rollHistory, setRollHistory] = useState<RollResult[]>([]);
   const [isFocusMode, setIsFocusMode] = useState(false);
   const [smiteHolyTarget,setSmiteHolyTarget]=useState(false);
+  const [castSlotLevels,setCastSlotLevels]=useState<Record<string,number>>({});
 
   const character =
     characters.find((item) => item.id === selectedCharacterId) ?? characters[0];
@@ -211,13 +213,14 @@ export function PlayMode({
     });
   }
 
-  function castSpell(spellId: string) {
+  function castSpell(spellId: string, requestedSlotLevel?:number) {
     const spell = rulesetData?.spells.find((item) => item.id === spellId);
 
     if (!spell) return;
 
+    const slotLevel=spell.level===0?0:requestedSlotLevel??getCastableSlotLevels(spell,spellSlots)[0];
     if (spell.level > 0) {
-      const slot = spellSlots.find((item) => item.level === spell.level);
+      const slot = spellSlots.find((item) => item.level === slotLevel);
       if (!slot || slot.used >= slot.max) return;
     }
 
@@ -227,17 +230,20 @@ export function PlayMode({
         ? [...activeCharacter.conditions, "Concentration" as const]
         : activeCharacter.conditions;
 
+    const formula=getSpellRollFormula(spell,activeCharacter.level,slotLevel);const total=formula?rollFormula(formula):null;
     commit({
+      currentHp:spell.healingDice&&total!==null?Math.min(activeCharacter.maxHp,activeCharacter.currentHp+Math.max(0,total)):activeCharacter.currentHp,
       spellSlots:
         spell.level === 0
           ? spellSlots
           : spellSlots.map((slot) =>
-              slot.level === spell.level
+              slot.level === slotLevel
                 ? { ...slot, used: slot.used + 1 }
                 : slot,
             ),
       conditions: nextConditions,
     });
+    const resolutionRolls:RollResult[]=[];if(spell.attackType==="spell-attack"){const attack=rollDice({count:1,sides:20,modifier:getSpellAttackBonus(activeCharacter)});resolutionRolls.push({id:attack.id,label:`${spell.name} Attack`,notation:attack.notation,total:attack.total})}if(total!==null)resolutionRolls.push({id:crypto.randomUUID(),label:`${spell.name}${spell.healingDice?" Healing":" Damage"}`,notation:formula!,total});if(resolutionRolls.length)setRollHistory(current=>[...resolutionRolls,...current].slice(0,6));
   }
 
   function quickRoll(label: string, modifier: number) {
@@ -539,13 +545,10 @@ export function PlayMode({
                 <div key={group.level} className="play-mode-spell-group">
                   <strong>{group.level === 0 ? "Cantrips" : `Level ${group.level}`}</strong>
                   {group.spells.map((spell) => {
-                    const slot = spellSlots.find((item) => item.level === spell.level);
-                    const disabled = spell.level > 0 && (!slot || slot.used >= slot.max);
+                    const castableLevels=getCastableSlotLevels(spell,spellSlots);const selectedSlot=castSlotLevels[spell.id]&&castableLevels.includes(castSlotLevels[spell.id])?castSlotLevels[spell.id]:castableLevels[0];
+                    const disabled = spell.level > 0 && !selectedSlot;const formula=getSpellRollFormula(spell,activeCharacter.level,selectedSlot??spell.level);
                     return (
-                      <button key={spell.id} disabled={disabled} onClick={() => castSpell(spell.id)}>
-                        <span>{spell.name}{spell.concentration ? " · C" : ""}</span>
-                        <small>{spell.level === 0 ? "Cantrip" : disabled ? "Slot yok" : "Cast"}</small>
-                      </button>
+                      <div className="play-mode-slot-row" key={spell.id}><div><span>{spell.name}{spell.concentration ? " · C" : ""}</span><small>{[formula,spell.attackType==="saving-throw"&&spell.saveAbility?`${spell.saveAbility.toUpperCase()} save DC ${getSpellSaveDc(activeCharacter)}`:spell.attackType==="spell-attack"?`Spell attack ${formatModifier(getSpellAttackBonus(activeCharacter))}`:null].filter(Boolean).join(" · ")||"Utility"}</small></div>{spell.level>0?<select aria-label={`${spell.name} slot level`} disabled={!castableLevels.length} value={selectedSlot??""} onChange={event=>setCastSlotLevels(current=>({...current,[spell.id]:Number(event.target.value)}))}>{castableLevels.map(level=><option key={level} value={level}>L{level} slot</option>)}</select>:null}<button disabled={disabled} onClick={()=>castSpell(spell.id,selectedSlot)}>{spell.level===0?"Cantrip":disabled?"Slot yok":"Cast"}</button></div>
                     );
                   })}
                 </div>
