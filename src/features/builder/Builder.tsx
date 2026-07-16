@@ -18,6 +18,7 @@ import { getMetamagicChoiceCount, getMetamagicOptions } from "../../core/ruleset
 import { getEldritchInvocations, getInvocationChoiceCount, isInvocationEligible } from "../../core/rulesets/invocationRules";
 import { getWildShapeForms, getWildShapeKnownCount, isWildShapeFormEligible } from "../../core/rulesets/wildShapeRules";
 import { getBattleMasterManeuvers, getManeuverChoiceCount, getSuperiorityDie } from "../../core/rulesets/maneuverRules";
+import { getCompanionChoiceCount, getCompanionStats, getRangerCompanions } from "../../core/rulesets/companionRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
@@ -128,6 +129,8 @@ export function Builder({
   const maneuverOptions=useMemo(()=>getBattleMasterManeuvers(),[]);
   const maneuverLimit=getManeuverChoiceCount(draft.className,draft.subclass,draft.level,draft.ruleset);
   const selectedManeuverIds=draft.maneuverIds??[];
+  const companionLimit=getCompanionChoiceCount(draft.className,draft.subclass,draft.level);
+  const companionOptions=useMemo(()=>getRangerCompanions(draft.ruleset),[draft.ruleset]);
   const canCastSpells = Boolean(selectedClass?.spellcastingAbility);
   const grantedSkills = useMemo(() => getGrantedSkills(selectedBackground), [selectedBackground]);
   const availableClassSkills = useMemo(() => getAvailableClassSkills(selectedClass, selectedBackground), [selectedClass, selectedBackground]);
@@ -203,6 +206,7 @@ export function Builder({
   function toggleInvocation(id: string) { setDraft((current) => { const selected=current.invocationIds??[]; if(selected.includes(id))return{...current,invocationIds:selected.filter(item=>item!==id)}; const option=invocationOptions.find(item=>item.id===id); if(!option||!isInvocationEligible(option,current)||selected.length>=invocationLimit)return current; return{...current,invocationIds:[...selected,id]}; }); }
   function toggleWildShapeForm(id:string){setDraft(current=>{const selected=current.wildShapeFormIds??[];if(selected.includes(id))return{...current,wildShapeFormIds:selected.filter(item=>item!==id)};const form=wildShapeForms.find(item=>item.id===id);if(!form||!isWildShapeFormEligible(form,current.level,current.ruleset,current.subclass)||selected.length>=wildShapeLimit)return current;return{...current,wildShapeFormIds:[...selected,id]}})}
   function toggleManeuver(id:string){setDraft(current=>{const selected=current.maneuverIds??[];if(selected.includes(id))return{...current,maneuverIds:selected.filter(item=>item!==id)};if(!maneuverOptions.some(item=>item.id===id)||selected.length>=maneuverLimit)return current;return{...current,maneuverIds:[...selected,id]}})}
+  function selectCompanion(id:string){setDraft(current=>({...current,companionId:current.companionId===id?undefined:id,companionCurrentHp:undefined}))}
 
   const knownSpells = useMemo(() => {
     const spellMap = new Map((activeRulesetData?.spells ?? []).map((spell) => [spell.id, spell]));
@@ -769,6 +773,8 @@ export function Builder({
               {wildShapeLimit ? <div className="ruleset-foundation-card"><div className="panel-heading-row"><div><span className="mini-label">Druid Class Choice</span><strong>Wild Shape Forms</strong></div><span>{selectedWildShapeFormIds.length} / {wildShapeLimit} {draft.ruleset==="dnd_2014"?"favori":"bilinen"}</span></div><div className="builder-choice-grid">{wildShapeForms.map(form=>{const selected=selectedWildShapeFormIds.includes(form.id);const eligible=isWildShapeFormEligible(form,draft.level,draft.ruleset,draft.subclass);return <article className={`builder-choice-card ${selected?"selected":""}`} key={form.id}><div className="panel-heading-row"><div><h3>{form.name}</h3><span className="mini-label">CR {form.challengeRating} · AC {form.armorClass} · HP {form.hitPoints}</span></div><button type="button" disabled={!selected&&(!eligible||selectedWildShapeFormIds.length>=wildShapeLimit)} onClick={()=>toggleWildShapeForm(form.id)}>{selected?"Kaldır":eligible?"Seç":"Kilitli"}</button></div><p>{form.summary}</p><small>{form.movement}</small></article>})}</div></div>:null}
 
               {maneuverLimit?<div className="ruleset-foundation-card"><div className="panel-heading-row"><div><span className="mini-label">Battle Master Choice</span><strong>Combat Maneuvers · {getSuperiorityDie(draft.level)}</strong></div><span>{selectedManeuverIds.length} / {maneuverLimit}</span></div><div className="builder-choice-grid">{maneuverOptions.map(option=>{const selected=selectedManeuverIds.includes(option.id);return <article className={`builder-choice-card ${selected?"selected":""}`} key={option.id}><div className="panel-heading-row"><div><h3>{option.name}</h3><span className="mini-label">{option.trigger}</span></div><button type="button" disabled={!selected&&selectedManeuverIds.length>=maneuverLimit} onClick={()=>toggleManeuver(option.id)}>{selected?"Kaldır":"Seç"}</button></div><p>{option.summary}</p></article>})}</div></div>:null}
+
+              {companionLimit?<div className="ruleset-foundation-card"><div className="panel-heading-row"><div><span className="mini-label">Beast Master Choice</span><strong>Ranger Companion</strong></div><span>{draft.companionId?1:0} / 1</span></div><div className="builder-choice-grid">{companionOptions.map(option=>{const selected=draft.companionId===option.id;const stats=getCompanionStats(option,draft.level,getAbilityModifier(finalAbilities.wis));return <article className={`builder-choice-card ${selected?"selected":""}`} key={option.id}><div className="panel-heading-row"><div><h3>{option.name}</h3><span className="mini-label">AC {stats.armorClass} · HP {stats.maxHp} · Attack {formatModifier(stats.attackBonus)}</span></div><button type="button" onClick={()=>selectCompanion(option.id)}>{selected?"Kaldır":"Seç"}</button></div><p>{option.summary}</p><small>{option.speed} · {option.attackName}: {stats.damage}</small></article>})}</div></div>:null}
 
               {grantedOriginFeatName ? (
                 <article className="builder-choice-card">

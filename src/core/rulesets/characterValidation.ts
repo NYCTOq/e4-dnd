@@ -9,6 +9,7 @@ import { getMetamagicChoiceCount, getMetamagicOptions } from "./metamagicRules";
 import { getEldritchInvocations, getInvocationChoiceCount, isInvocationEligible } from "./invocationRules";
 import { getWildShapeForms, getWildShapeKnownCount, isWildShapeFormEligible } from "./wildShapeRules";
 import { getBattleMasterManeuvers, getManeuverChoiceCount } from "./maneuverRules";
+import { getCompanionChoiceCount, getRangerCompanions } from "./companionRules";
 
 export type ValidationSeverity = "error" | "warning";
 export type CharacterValidationIssue = { id: string; severity: ValidationSeverity; step: string; message: string };
@@ -62,6 +63,7 @@ export function validateCharacterDraft(draft: CharacterDraft, rulesetData: Rules
   const wildShapeLimit=getWildShapeKnownCount(draft.className,draft.level,draft.ruleset);const wildShapeIds=draft.wildShapeFormIds??[];const wildShapeMap=new Map(getWildShapeForms().map(item=>[item.id,item]));const invalidWildShape=wildShapeIds.some(id=>{const form=wildShapeMap.get(id);return !form||!isWildShapeFormEligible(form,draft.level,draft.ruleset,draft.subclass)});
   if(invalidWildShape||wildShapeIds.length>wildShapeLimit||(draft.ruleset==="dnd_2024"&&wildShapeIds.length!==wildShapeLimit))add("wild-shape-forms","error","Feats",`${draft.className} için ${wildShapeLimit} geçerli Wild Shape formu seçilmeli (${wildShapeIds.length} seçili).`);
   const maneuverLimit=getManeuverChoiceCount(draft.className,draft.subclass,draft.level,draft.ruleset);const maneuverIds=draft.maneuverIds??[];const validManeuvers=new Set(getBattleMasterManeuvers().map(item=>item.id));if(maneuverIds.length!==maneuverLimit||maneuverIds.some(id=>!validManeuvers.has(id)))add("maneuvers","error","Feats",`${draft.subclass||draft.className} için ${maneuverLimit} geçerli maneuver seçilmeli (${maneuverIds.length} seçili).`);
+  const companionLimit=getCompanionChoiceCount(draft.className,draft.subclass,draft.level);const validCompanionIds=new Set(getRangerCompanions(draft.ruleset).map(item=>item.id));if((companionLimit===1&&!draft.companionId)||(draft.companionId&&!validCompanionIds.has(draft.companionId)))add("companion","error","Feats",`${draft.subclass||draft.className} için geçerli bir companion seçilmeli.`);
 
   const highestSpellLevel = getHighestSpellLevel(classData ?? undefined, draft.level);
   for (const spellId of draft.knownSpellIds) {

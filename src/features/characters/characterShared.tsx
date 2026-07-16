@@ -6,6 +6,7 @@ import { getHighestSpellLevel, getSpellMechanicSummary } from "../../core/rulese
 import { getItemSearchText, getWeaponMastery } from "../../core/rulesets/equipmentRules";
 import { getClassResources, mergeClassResources } from "../../core/rulesets/classFeatureEngine";
 import { canPrepareSpell, canRitualCast, canSelectKnownSpell, getSpellcastingProfile } from "../../core/rulesets/spellcastingRules";
+import { getCompanionStats, getRangerCompanions } from "../../core/rulesets/companionRules";
 
 export const emptyDraft: CharacterDraft = {
   name: "",
@@ -25,6 +26,8 @@ export const emptyDraft: CharacterDraft = {
   invocationIds: [],
   wildShapeFormIds: [],
   maneuverIds: [],
+  companionId: undefined,
+  companionCurrentHp: undefined,
   skillProficiencies: [],
   expertiseSkills: [],
   toolProficiencies: [],
@@ -411,6 +414,8 @@ export function getItemRulesSummary(item: DndItemData, rulesetId = "dnd_2014") {
 
 export function createCharacterFromDraft(draft: CharacterDraft): Character {
   const now = new Date().toISOString();
+  const companion=getRangerCompanions(draft.ruleset).find(item=>item.id===draft.companionId);
+  const companionMaxHp=companion?getCompanionStats(companion,draft.level,getAbilityModifier(draft.abilities.wis)).maxHp:undefined;
 
   return {
     id: crypto.randomUUID(),
@@ -427,6 +432,7 @@ export function createCharacterFromDraft(draft: CharacterDraft): Character {
     conditionDurations: {},
     currentHp: draft.maxHp,
     tempHp: 0,
+    companionCurrentHp: companionMaxHp,
     conditions: [],
     createdAt: now,
     updatedAt: now,

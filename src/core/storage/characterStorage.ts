@@ -181,6 +181,8 @@ function hydrateCharacter(character: Character): Character {
     invocationIds: Array.isArray(character.invocationIds) ? [...new Set(character.invocationIds.filter((id): id is string => typeof id === "string"))] : [],
     wildShapeFormIds: Array.isArray(character.wildShapeFormIds) ? [...new Set(character.wildShapeFormIds.filter((id): id is string => typeof id === "string"))] : [],
     maneuverIds: Array.isArray(character.maneuverIds) ? [...new Set(character.maneuverIds.filter((id): id is string => typeof id === "string"))] : [],
+    companionId: typeof character.companionId === "string" ? character.companionId : undefined,
+    companionCurrentHp: typeof character.companionCurrentHp === "number" ? Math.max(0,Math.floor(character.companionCurrentHp)) : undefined,
     skillProficiencies: Array.isArray(character.skillProficiencies) ? [...new Set(character.skillProficiencies.filter((value): value is string => typeof value === "string"))] : [],
     expertiseSkills: Array.isArray(character.expertiseSkills) ? [...new Set(character.expertiseSkills.filter((value): value is string => typeof value === "string"))] : [],
     toolProficiencies: Array.isArray(character.toolProficiencies) ? [...new Set(character.toolProficiencies.filter((value): value is string => typeof value === "string"))] : [],

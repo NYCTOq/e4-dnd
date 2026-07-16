@@ -17,6 +17,7 @@ import { getMetamagicOptions } from "../../core/rulesets/metamagicRules";
 import { getEldritchInvocations } from "../../core/rulesets/invocationRules";
 import { getWildShapeForms } from "../../core/rulesets/wildShapeRules";
 import { getBattleMasterManeuvers, getSuperiorityDie } from "../../core/rulesets/maneuverRules";
+import { getCompanionStats, getRangerCompanions } from "../../core/rulesets/companionRules";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -135,6 +136,9 @@ export function PlayMode({
   const wildShapeResource = activeCharacter.resources.find((resource) => resource.id === "wild-shape");
   const maneuvers=getBattleMasterManeuvers().filter(item=>activeCharacter.maneuverIds?.includes(item.id));
   const superiorityDice=activeCharacter.resources.find(resource=>resource.id==="superiority-dice");
+  const companion=getRangerCompanions(activeCharacter.ruleset).find(item=>item.id===activeCharacter.companionId);
+  const companionStats=companion?getCompanionStats(companion,activeCharacter.level,getAbilityModifier(activeCharacter.abilities.wis)):null;
+  const companionCurrentHp=companionStats?Math.min(companionStats.maxHp,Math.max(0,activeCharacter.companionCurrentHp??companionStats.maxHp)):0;
 
   function commit(patch: Partial<Character>) {
     onUpdateCharacter({
@@ -160,6 +164,7 @@ export function PlayMode({
     commit({ resources: activeCharacter.resources.map(resource=>resource.id==="wild-shape"?{...resource,used:Math.min(resource.max,resource.used+1)}:resource) });
   }
   function useSuperiorityDie(){if(!superiorityDice||superiorityDice.used>=superiorityDice.max)return;commit({resources:activeCharacter.resources.map(resource=>resource.id==="superiority-dice"?{...resource,used:Math.min(resource.max,resource.used+1)}:resource)})}
+  function updateCompanionHp(amount:number){if(!companionStats)return;commit({companionCurrentHp:Math.min(companionStats.maxHp,Math.max(0,companionCurrentHp+amount))})}
 
   function updateHp(amount: number) {
     commit({
@@ -437,6 +442,8 @@ export function PlayMode({
           {wildShapeForms.length ? <section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Druid</span><h2>Wild Shape</h2></div><strong>{wildShapeResource?`${wildShapeResource.max-wildShapeResource.used} / ${wildShapeResource.max} kullanım`:"Kaynak yok"}</strong></div><div className="play-mode-slot-grid">{wildShapeForms.map(form=><div className="play-mode-slot-row" key={form.id}><div><span>{form.name} · CR {form.challengeRating}</span><small>AC {form.armorClass} · HP {form.hitPoints} · {form.movement}</small></div><button type="button" disabled={!wildShapeResource||wildShapeResource.used>=wildShapeResource.max} onClick={useWildShape}>Dönüş</button></div>)}</div></section>:null}
 
           {maneuvers.length?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Battle Master · {getSuperiorityDie(activeCharacter.level)}</span><h2>Maneuvers</h2></div><strong>{superiorityDice?`${superiorityDice.max-superiorityDice.used} / ${superiorityDice.max} zar`:"Kaynak yok"}</strong></div><div className="play-mode-slot-grid">{maneuvers.map(option=><div className="play-mode-slot-row" key={option.id}><div><span>{option.name}</span><small>{option.trigger} · {option.summary}</small></div><button type="button" disabled={!superiorityDice||superiorityDice.used>=superiorityDice.max} onClick={useSuperiorityDie}>Zar Harca</button></div>)}</div></section>:null}
+
+          {companion&&companionStats?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Beast Master Companion</span><h2>{companion.name}</h2></div><strong>{companionCurrentHp} / {companionStats.maxHp} HP</strong></div><p>{companion.summary}</p><div className="play-mode-core-stats"><div><span>AC</span><strong>{companionStats.armorClass}</strong></div><div><span>Attack</span><strong>{formatModifier(companionStats.attackBonus)}</strong></div><div><span>Damage</span><strong>{companionStats.damage}</strong></div></div><div className="play-mode-big-buttons">{[-5,-1,1,5].map(amount=><button key={amount} onClick={()=>updateCompanionHp(amount)}>{amount>0?`+${amount}`:amount}</button>)}</div><small>{companion.attackName} · {companion.speed}</small></section>:null}
 
           <section className="play-mode-card">
             <div className="play-mode-section-head">

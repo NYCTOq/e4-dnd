@@ -5,6 +5,7 @@ import { getMetamagicOptions } from "./metamagicRules";
 import { getEldritchInvocations } from "./invocationRules";
 import { getWildShapeForms } from "./wildShapeRules";
 import { getBattleMasterManeuvers, getSuperiorityDie } from "./maneuverRules";
+import { getCompanionStats, getRangerCompanions } from "./companionRules";
 
 export const SKILL_ABILITIES:Record<string,AbilityKey> = {
   Acrobatics:"dex", "Animal Handling":"wis", Arcana:"int", Athletics:"str", Deception:"cha", History:"int",
@@ -31,6 +32,7 @@ export function getCharacterFeatures(character:Character, rulesetData:RulesetDat
   const invocationFeatures=getEldritchInvocations(character.ruleset).filter(item=>character.invocationIds?.includes(item.id)).map(item=>({source:"Eldritch Invocation",name:item.name,summary:item.summary}));
   const wildShapeFeatures=getWildShapeForms().filter(item=>character.wildShapeFormIds?.includes(item.id)).map(item=>({source:`Wild Shape · CR ${item.challengeRating}`,name:item.name,summary:`${item.summary} ${item.movement}`}));
   const maneuverFeatures=getBattleMasterManeuvers().filter(item=>character.maneuverIds?.includes(item.id)).map(item=>({source:`Maneuver · ${getSuperiorityDie(character.level)}`,name:item.name,summary:item.summary}));
-  return [...classFeatures,...subclassFeatures,...featFeatures,...metamagicFeatures,...invocationFeatures,...wildShapeFeatures,...maneuverFeatures];
+  const companion=getRangerCompanions(character.ruleset).find(item=>item.id===character.companionId);const companionFeatures=companion?(()=>{const stats=getCompanionStats(companion,character.level,getAbilityModifier(character.abilities.wis));return[{source:"Beast Master Companion",name:companion.name,summary:`AC ${stats.armorClass} · HP ${stats.maxHp} · ${companion.attackName} ${stats.damage} · ${companion.speed}`} ]})():[];
+  return [...classFeatures,...subclassFeatures,...featFeatures,...metamagicFeatures,...invocationFeatures,...wildShapeFeatures,...maneuverFeatures,...companionFeatures];
 }
 export function getPassiveScore(character:Character, skill:string) { return 10+getSkillBonus(character,skill); }

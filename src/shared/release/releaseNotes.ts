@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.14.0",date:"2026-07-16",title:"Beast Master Companion System",
+    summary:"Ranger companion seçimi, level ölçekli statlar ve masa modu HP takibi Beast Master akışına eklendi.",
+    changes:[
+      {text:"2014 için üç classic beast companion seçeneği",category:"Özellik"},
+      {text:"2024 için Land, Sea ve Sky primal companion seçenekleri",category:"Özellik"},
+      {text:"Level, proficiency ve Wisdom ile ölçeklenen statlar",category:"Özellik"},
+      {text:"Builder zorunlu seçim ve ruleset doğrulaması",category:"Düzeltme"},
+      {text:"Character Sheet stat özeti ve Play Mode HP yönetimi",category:"Özellik"},
+      {text:"Companion kuralları için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.13.0",date:"2026-07-16",title:"Battle Master Maneuvers",
     summary:"Battle Master maneuver seçimleri ve Superiority Dice yönetimi karakter oluşturma ile masa moduna bağlandı.",
     changes:[

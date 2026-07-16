@@ -1,0 +1,14 @@
+import type{RulesetId}from"../character/character.types";import{getProficiencyBonus}from"../character/characterCalculator";
+export type RangerCompanion={id:string;name:string;ruleset:RulesetId;armorClass:number;baseHp:number;speed:string;attackName:string;damage:string;summary:string};
+const companions:RangerCompanion[]=[
+ {id:"wolf-companion",name:"Wolf",ruleset:"dnd_2014",armorClass:13,baseHp:11,speed:"40 ft.",attackName:"Bite",damage:"2d4 + 2 piercing",summary:"Hızlı sürü avcısı; isabetle hedefi yere düşürmeye çalışır."},
+ {id:"panther-companion",name:"Panther",ruleset:"dnd_2014",armorClass:12,baseHp:13,speed:"50 ft., climb 40 ft.",attackName:"Bite / Claw",damage:"1d6 + 2 piercing",summary:"Gizlilik, tırmanış ve ani hücum odaklı yoldaş."},
+ {id:"giant-poisonous-snake",name:"Giant Poisonous Snake",ruleset:"dnd_2014",armorClass:14,baseHp:11,speed:"30 ft., swim 30 ft.",attackName:"Bite",damage:"1d4 + 4 piercing + poison",summary:"Yüksek isabet, erişim ve zehir baskısı sunan yoldaş."},
+ {id:"primal-beast-land",name:"Primal Beast of the Land",ruleset:"dnd_2024",armorClass:13,baseHp:5,speed:"40 ft., climb 40 ft.",attackName:"Maul",damage:"1d8 + 2 + PB",summary:"Kara hareketi ve güçlü yakın saldırı için dengeli primal form."},
+ {id:"primal-beast-sea",name:"Primal Beast of the Sea",ruleset:"dnd_2024",armorClass:13,baseHp:5,speed:"5 ft., swim 60 ft.",attackName:"Binding Strike",damage:"1d6 + 2 + PB",summary:"Sualtı hareketi ve hedefi kavrama odaklı primal form."},
+ {id:"primal-beast-sky",name:"Primal Beast of the Sky",ruleset:"dnd_2024",armorClass:13,baseHp:4,speed:"10 ft., fly 60 ft.",attackName:"Shred",damage:"1d4 + 3 + PB",summary:"Uçuş, keşif ve çevik saldırı odaklı primal form."},
+];
+export function isBeastMaster(className:string,subclass:string){return className.trim().toLowerCase()==="ranger"&&subclass.trim().toLowerCase().includes("beast master")}
+export function getRangerCompanions(ruleset:RulesetId){return companions.filter(item=>item.ruleset===ruleset)}
+export function getCompanionChoiceCount(className:string,subclass:string,level:number){return isBeastMaster(className,subclass)&&level>=3?1:0}
+export function getCompanionStats(companion:RangerCompanion,level:number,wisdomModifier:number){const pb=getProficiencyBonus(level);const modern=companion.ruleset==="dnd_2024";return{armorClass:companion.armorClass+pb,maxHp:modern?companion.baseHp+level*5:Math.max(companion.baseHp,level*4),attackBonus:modern?pb+wisdomModifier:pb+4,damage:companion.damage.replace("PB",String(pb))}}

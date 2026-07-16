@@ -73,6 +73,8 @@ export interface Character {
   invocationIds?: string[];
   wildShapeFormIds?: string[];
   maneuverIds?: string[];
+  companionId?: string;
+  companionCurrentHp?: number;
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];
@@ -129,6 +131,8 @@ export interface CharacterDraft {
   invocationIds?: string[];
   wildShapeFormIds?: string[];
   maneuverIds?: string[];
+  companionId?: string;
+  companionCurrentHp?: number;
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];
