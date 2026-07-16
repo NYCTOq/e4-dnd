@@ -425,6 +425,7 @@ export function createCharacterFromDraft(draft: CharacterDraft): Character {
   return {
     id: crypto.randomUUID(),
     ...draft,
+    classLevels: draft.classLevels?.length ? draft.classLevels : [{className:draft.className,level:draft.level,subclass:draft.subclass||undefined}],
     spellSlots: normalizeSpellSlots(
       draft.spellSlots,
       draft.level,

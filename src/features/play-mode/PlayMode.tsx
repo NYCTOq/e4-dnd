@@ -52,6 +52,8 @@ import { applyReliableTalent, getCapstoneSummary, getClassAbilityRuntime } from 
 import { canUseSubclassAction, getSubclassRuntime, spendSubclassActionResource, type SubclassRuntimeAction } from "../../core/rulesets/subclassRuntimeRules";
 import { getAdvancedFeatRuntime, getInspiringLeaderTempHp, type FeatAction } from "../../core/rulesets/advancedFeatRuntimeRules";
 import { getSpellBehavior } from "../../core/rulesets/spellBehaviorRules";
+import { getEncumbrance, getEquipmentLegality, getInventoryWeight, findAmmunitionId, consumeAmmunition } from "../../core/rulesets/equipmentRuntimeRules";
+import { getMulticlassAttacksPerAction, normalizeClassLevels } from "../../core/rulesets/multiclassRules";
 import { getAttunedItemCount, recoverHighestSpentSpellSlot, recoverItemCharges, spendItemCharge, toggleItemAttunement } from "../../core/rulesets/magicItemRules";
 import {
   calculateEffectiveArmorClass,
@@ -178,9 +180,12 @@ export function PlayMode({
     activeCharacter.level,
     activeCharacter.className,
   );
+  const pactMagicSlots=activeCharacter.pactMagicSlots??[];
   const selectedClass = rulesetData?.classes.find(
     (item) => item.name === activeCharacter.className,
   );
+  const classLevels=normalizeClassLevels(activeCharacter.classLevels,activeCharacter.className,activeCharacter.level);
+  const classProfiles=(rulesetData?.classes??[]).filter(item=>classLevels.some(level=>level.className===item.name));
   const selectedSubclass=rulesetData?.subclasses.find(item=>item.name===activeCharacter.subclass&&item.className===activeCharacter.className);
   const subclassRuntime=getSubclassRuntime(selectedSubclass,activeCharacter.level,getAbilityModifier(effectiveCharacter.abilities.dex));
   const spellcastingAbility:AbilityKey=(["Wizard","Artificer"].includes(activeCharacter.className)?"int":["Bard","Paladin","Sorcerer","Warlock"].includes(activeCharacter.className)?"cha":"wis");
@@ -236,9 +241,12 @@ export function PlayMode({
   const featRuntime=getFeatRuntime(featNames,activeCharacter.level,activeCharacter.ruleset);
   const usableItems=activeCharacter.inventory.flatMap(entry=>{const item=rulesetData?.items.find(candidate=>candidate.id===entry.itemId);return item&&isConsumableItem(item)?[{entry,item}]:[]});
   const magicItems=activeCharacter.inventory.flatMap(entry=>{const item=rulesetData?.items.find(candidate=>candidate.id===entry.itemId);return item?.magical?[{entry,item}]:[]});
-  const effectiveSpeed=getEffectiveSpeed(((selectedRace?.speed??30)+ancestryRuntime.speedBonus+featRuntime.speedBonus+magicAccessoryRuntime.speedBonus)*itemEffectRuntime.speedMultiplier,exhaustionEffects);
+  const inventoryWeight=getInventoryWeight(activeCharacter.inventory,rulesetData?.items??[]);
+  const encumbrance=getEncumbrance(effectiveCharacter.abilities.str,inventoryWeight);
+  const armorLegality=equippedItems.armor?getEquipmentLegality(equippedItems.armor,classProfiles,effectiveCharacter.abilities):null;
+  const effectiveSpeed=Math.max(0,getEffectiveSpeed(((selectedRace?.speed??30)+ancestryRuntime.speedBonus+featRuntime.speedBonus+magicAccessoryRuntime.speedBonus)*itemEffectRuntime.speedMultiplier,exhaustionEffects)-(armorLegality?.speedPenalty??0)-encumbrance.speedPenalty);
   const effectiveMaxHp=getEffectiveMaxHp(activeCharacter.maxHp,exhaustionEffects);
-  const attacksPerAction=Math.max(getAttacksPerAction(activeCharacter.className,activeCharacter.level),subclassRuntime.attacksPerActionMinimum);
+  const attacksPerAction=Math.max(getAttacksPerAction(activeCharacter.className,activeCharacter.level),getMulticlassAttacksPerAction(classLevels),subclassRuntime.attacksPerActionMinimum);
   const isRogue=activeCharacter.className.trim().toLowerCase()==="rogue";
   const rogueFeatures=getRogueCombatFeatures(activeCharacter.level);
   const isBarbarian=activeCharacter.className.trim().toLowerCase()==="barbarian";
@@ -452,10 +460,14 @@ export function PlayMode({
 
   function weaponAttack(weapon: (typeof equippedItems.weapons)[number]) {
     if (conditionEffects.blocksActions || exhaustionEffects.dead || turnEconomy.actionUsed || itemEffectRuntime.blocksAggressiveActions) return;
+    const legality=getEquipmentLegality(weapon,classProfiles,effectiveCharacter.abilities);
+    const ammunitionId=findAmmunitionId(weapon,rulesetData?.items??[]);
+    const inventoryAfterAmmunition=consumeAmmunition(activeCharacter.inventory,ammunitionId);
+    if(ammunitionId&&inventoryAfterAmmunition===null)return;
     const conditionMode = combineRollModes(conditionEffects.attackMode, exhaustionEffects.attackSaveMode);
     const effectiveMode = combineRollModes(combineRollModes(combineRollModes(attackMode, conditionMode), itemEffectRuntime.attackMode),masteryVexReady?"advantage":"normal");
     const potionAttackBonus = itemEffectRuntime.attackSaveBonusDice ? rollFormula(itemEffectRuntime.attackSaveBonusDice) : 0;
-    const modifier = getWeaponAttackBonus(effectiveCharacter, weapon) - exhaustionEffects.d20Penalty + potionAttackBonus - (powerAttack&&advancedFeatRuntime.powerAttack?5:0);
+    const modifier = getWeaponAttackBonus(effectiveCharacter, weapon) - (legality.proficient?0:getProficiencyBonus(activeCharacter.level)) - exhaustionEffects.d20Penalty + potionAttackBonus - (powerAttack&&advancedFeatRuntime.powerAttack?5:0);
     const dice = rollDice({ count: effectiveMode === "normal" ? 1 : 2, sides: 20, modifier: 0 });
     const baseAttack = resolveAttack(dice.rolls, modifier, targetAc, effectiveMode);
     const attack = {...baseAttack,critical:baseAttack.hit&&baseAttack.naturalRoll>=subclassRuntime.criticalThreshold};
@@ -483,7 +495,7 @@ export function PlayMode({
     if(masteryOutcome.note)results.push({id:crypto.randomUUID(),label:`Weapon Mastery · ${masteryOutcome.mastery}`,notation:masteryOutcome.note,total:0});
     setMasteryVexReady(masteryOutcome.grantsVex);
     const effectsAfterAttack = removeFragileItemEffects(activeSpellEffects);
-    if (effectsAfterAttack.length !== activeSpellEffects.length) commit({ activeSpellEffects: effectsAfterAttack });
+    if (effectsAfterAttack.length !== activeSpellEffects.length||inventoryAfterAmmunition!==activeCharacter.inventory) commit({ activeSpellEffects: effectsAfterAttack,inventory:inventoryAfterAmmunition??activeCharacter.inventory });
     setTurnEconomy(current => spendAttack(current, attacksPerAction));
     setRollHistory(current => [...results, ...current].slice(0, 6));
   }
@@ -526,6 +538,7 @@ export function PlayMode({
       ),
       resources: activeCharacter.resources.map(resource=>resource.recovery==="short"?{...resource,used:0}:resource),
       spellSlots: activeCharacter.className.trim().toLowerCase()==="warlock"?resetSpellSlots(spellSlots):spellSlots,
+      pactMagicSlots:resetSpellSlots(pactMagicSlots),
     });
 
     setRollHistory((current) =>
@@ -546,6 +559,7 @@ export function PlayMode({
       currentHp: activeCharacter.maxHp,
       tempHp: 0,
       spellSlots: resetSpellSlots(spellSlots),
+      pactMagicSlots:resetSpellSlots(pactMagicSlots),
       hitDice: resetHitDice(hitDice),
       deathSaves: resetDeathSaves(),
       exhaustion: Math.max(0, (activeCharacter.exhaustion ?? 0) - 1),
@@ -625,6 +639,7 @@ export function PlayMode({
         </section>
 
         <div className="play-mode-grid">
+          <section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Equipment Runtime</span><h2>{inventoryWeight.toFixed(1)} / {encumbrance.capacity} lb.</h2></div><strong>{encumbrance.overloaded?"Overloaded":encumbrance.encumbered?"Encumbered":"Normal"}</strong></div><div className="condition-rule-summary">{classLevels.map(item=><small key={item.className}>{item.className} {item.level}</small>)}{armorLegality?.issues.map(issue=><small key={issue}>{equippedItems.armor?.name}: {issue}</small>)}{armorLegality?.stealthDisadvantage?<small>Armor: Stealth disadvantage</small>:null}{encumbrance.speedPenalty?<small>Encumbrance speed −{encumbrance.speedPenalty} ft.</small>:null}<small>Multiclass attack cap: {attacksPerAction} / Action</small></div></section>
           {selectedFeats.length?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Advanced Feat Runtime</span><h2>{selectedFeats.length} feat bağlı</h2></div><strong>{advancedFeatRuntime.actions.length} eylem</strong></div>{advancedFeatRuntime.powerAttack?<label className="rage-resistance-toggle"><input type="checkbox" checked={powerAttack} onChange={event=>setPowerAttack(event.target.checked)}/> Power Attack · attack −5 / damage +10</label>:null}{advancedFeatRuntime.actions.length?<div className="play-mode-big-buttons">{advancedFeatRuntime.actions.map(action=>{const used=featActionUses[action.id]??0;return <button type="button" key={action.id} disabled={used>=action.maxUses||(action.type==="action"&&turnEconomy.actionUsed)||(action.type==="bonus-action"&&turnEconomy.bonusActionUsed)||(action.type==="reaction"&&turnEconomy.reactionUsed)} onClick={()=>handleFeatAction(action)}>{action.name} · {action.type}</button>})}</div>:null}<div className="condition-rule-summary">{advancedFeatRuntime.armorClassBonus?<small>Dual Wielder AC +{advancedFeatRuntime.armorClassBonus}</small>:null}{advancedFeatRuntime.concentrationAdvantage?<small>Concentration save advantage</small>:null}{advancedFeatRuntime.ignoresLoading?<small>Crossbow loading restriction ignored</small>:null}{advancedFeatRuntime.spellRangeMultiplier>1?<small>Spell attack range ×{advancedFeatRuntime.spellRangeMultiplier}</small>:null}</div></section>:null}
           <section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">{activeCharacter.ruleset==="dnd_2024"?"Species":"Race"} Runtime</span><h2>{activeCharacter.race}{activeCharacter.subrace?` · ${activeCharacter.subrace}`:""}</h2></div><strong>{ancestryRuntime.darkvision?`${ancestryRuntime.darkvision} ft. görüş`:"Normal görüş"}</strong></div><div className="condition-rule-summary"><small>Speed {effectiveSpeed} ft.{ancestryRuntime.speedBonus?` · ancestry +${ancestryRuntime.speedBonus}`:""}</small>{ancestryRuntime.damageResistances.length?<small>Resistance: {ancestryRuntime.damageResistances.join(", ")}</small>:null}{ancestryRuntime.saveAdvantages.length?<small>Save advantage: {ancestryRuntime.saveAdvantages.map(item=>item.toUpperCase()).join(", ")}</small>:null}{ancestryRuntime.maxHpBonus?<small>Dwarven Toughness katkısı: +{ancestryRuntime.maxHpBonus} Max HP</small>:null}{ancestryRuntime.features.map(feature=><small key={feature}>{feature}</small>)}</div></section>
           {capstoneSummary?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Level 20</span><h2>Class Capstone Runtime</h2></div><strong>Aktif</strong></div><div className="condition-rule-summary"><small>{capstoneSummary}</small></div></section>:null}
@@ -685,6 +700,7 @@ export function PlayMode({
             </label>
           </section>
 
+          {pactMagicSlots.length?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Multiclass Warlock</span><h2>Pact Magic Slots</h2></div><button onClick={()=>commit({pactMagicSlots:resetSpellSlots(pactMagicSlots)})}>Short Rest Yenile</button></div><div className="play-mode-slot-grid">{pactMagicSlots.map(slot=><div className="play-mode-slot-row" key={slot.level}><div><span>Level {slot.level} Pact Slot</span><strong>{slot.max-slot.used}/{slot.max}</strong></div><div><button disabled={slot.used>=slot.max} onClick={()=>commit({pactMagicSlots:pactMagicSlots.map(item=>item.level===slot.level?{...item,used:item.used+1}:item)})}>−</button><button disabled={slot.used<=0} onClick={()=>commit({pactMagicSlots:pactMagicSlots.map(item=>item.level===slot.level?{...item,used:item.used-1}:item)})}>+</button></div></div>)}</div></section>:null}
           <section className="play-mode-card">
             <div className="play-mode-section-head">
               <div><span className="mini-label">Conditions</span><h2>Durumlar</h2></div>

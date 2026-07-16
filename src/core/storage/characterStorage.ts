@@ -10,6 +10,7 @@ import { readJsonSafely, writeJsonSafely } from "./safeStorage";
 import { normalizeRulesetId } from "../rulesets/rulesetMigration";
 import { getClassResources, mergeClassResources } from "../rulesets/classFeatureEngine";
 import { getPactMagicSlots } from "../rulesets/pactMagicRules";
+import { getMulticlassHitDice, normalizeClassLevels } from "../rulesets/multiclassRules";
 
 const STORAGE_KEY = "e4_dnd_characters_v1";
 
@@ -130,6 +131,8 @@ function hydrateInventory(character: Character): CharacterInventoryItem[] {
 }
 
 function hydrateHitDice(character: Character): CharacterHitDiePool[] {
+  const classLevels=normalizeClassLevels(character.classLevels,character.className,character.level);
+  if(classLevels.length>1)return getMulticlassHitDice(classLevels,Array.isArray(character.hitDice)?character.hitDice:[]);
   const die = inferHitDie(character.className);
   const level = clampNumber(character.level, 1, 20, 1);
   const existing = Array.isArray(character.hitDice) ? character.hitDice : [];
@@ -174,11 +177,13 @@ function hydrateConditionDurations(character: Character): CharacterConditionDura
 
 function hydrateCharacter(character: Character): Character {
   const inventory = hydrateInventory(character);
+  const classLevels=normalizeClassLevels(character.classLevels,character.className,clampNumber(character.level,1,20,1));
   const inventoryItemIds = new Set(inventory.map((item) => item.itemId));
 
   return {
     ...character,
     ruleset: normalizeRulesetId(character.ruleset),
+    classLevels,
     knownSpellIds: character.knownSpellIds ?? [],
     preparedSpellIds: character.preparedSpellIds ?? [],
     featIds: Array.isArray(character.featIds) ? character.featIds.filter((id): id is string => typeof id === "string") : [],
@@ -198,6 +203,7 @@ function hydrateCharacter(character: Character): Character {
     toolProficiencies: Array.isArray(character.toolProficiencies) ? [...new Set(character.toolProficiencies.filter((value): value is string => typeof value === "string"))] : [],
     languages: Array.isArray(character.languages) ? [...new Set(character.languages.filter((value): value is string => typeof value === "string"))] : [],
     spellSlots: hydrateSpellSlots(character),
+    pactMagicSlots:Array.isArray(character.pactMagicSlots)?character.pactMagicSlots.map(slot=>({level:clampNumber(slot.level,1,9,1),max:clampNumber(slot.max,0,9,0),used:clampNumber(slot.used,0,clampNumber(slot.max,0,9,0),0)})):[],
     inventory,
     equippedArmorId:
       character.equippedArmorId && inventoryItemIds.has(character.equippedArmorId)

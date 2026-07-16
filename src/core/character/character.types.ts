@@ -40,6 +40,7 @@ export interface CharacterResource {
   used: number;
   recovery: ResourceRecovery;
 }
+export interface CharacterClassLevel { className:string; level:number; subclass?:string }
 export interface CharacterSpellEffect{ id:string;spellId:string;name:string;remainingRounds:number|null;concentration:boolean;summary:string }
 
 export type CharacterCondition =
@@ -74,6 +75,7 @@ export interface Character {
   race: string;
   subrace?: string;
   className: string;
+  classLevels?: CharacterClassLevel[];
   subclass: string;
   background: string;
   originAbilityPrimary?: AbilityKey;
@@ -107,6 +109,7 @@ export interface Character {
   knownSpellIds: string[];
   preparedSpellIds: string[];
   spellSlots: CharacterSpellSlot[];
+  pactMagicSlots?: CharacterSpellSlot[];
 
   inventory: CharacterInventoryItem[];
   equippedArmorId: string | null;
@@ -135,6 +138,7 @@ export interface CharacterDraft {
   race: string;
   subrace?: string;
   className: string;
+  classLevels?: CharacterClassLevel[];
   subclass: string;
   background: string;
   originAbilityPrimary?: AbilityKey;
@@ -166,6 +170,7 @@ export interface CharacterDraft {
   knownSpellIds: string[];
   preparedSpellIds: string[];
   spellSlots: CharacterSpellSlot[];
+  pactMagicSlots?: CharacterSpellSlot[];
 
   inventory: CharacterInventoryItem[];
   equippedArmorId: string | null;

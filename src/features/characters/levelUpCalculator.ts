@@ -4,6 +4,7 @@ import { normalizeHitDice, normalizeSpellSlots } from "./characterShared";
 import type { DndClassData } from "../../core/rulesets/ruleset.types";
 import { getClassResources, mergeClassResources } from "../../core/rulesets/classFeatureEngine";
 import { getClassSpellSlots } from "../../core/rulesets/spellcastingRules";
+import { addClassLevel, getClassLevel, getMulticlassHitDice, getMulticlassPactMagicSlots, getMulticlassSpellSlots, normalizeClassLevels } from "../../core/rulesets/multiclassRules";
 
 export type LevelUpAsiMode = "none" | "plus-two" | "split";
 
@@ -15,6 +16,8 @@ export type LevelUpOptions = {
   secondaryAbility: AbilityKey;
   updatedAt?: string;
   classData?: DndClassData | null;
+  targetClassData?: DndClassData | null;
+  allClasses?: DndClassData[];
   featId?: string;
 };
 
@@ -62,22 +65,29 @@ export function buildLeveledCharacter(
   }
 
   const nextLevel = Math.min(20, character.level + 1);
+  const currentClassLevels=normalizeClassLevels(character.classLevels,character.className,character.level);
+  const targetClass=options.targetClassData??options.classData;
+  const targetClassName=targetClass?.name??character.className;
+  const nextClassLevels=addClassLevel(currentClassLevels,targetClassName);
+  const nextTargetClassLevel=getClassLevel(nextClassLevels,targetClassName);
   const hpGain = Math.max(1, Math.floor(options.hpGain || 1));
   const nextMaxHp = character.maxHp + hpGain;
-  const nextAbilities = applyAbilityIncrease(character.abilities,nextLevel,options.asiMode,options.primaryAbility,options.secondaryAbility,character.className);
-  const progressionSlots=getClassSpellSlots(options.classData??null,nextLevel);
+  const nextAbilities = applyAbilityIncrease(character.abilities,nextTargetClassLevel,options.asiMode,options.primaryAbility,options.secondaryAbility,targetClassName);
+  const progressionSlots=nextClassLevels.length>1?getMulticlassSpellSlots(nextClassLevels,options.allClasses??[],character.spellSlots):getClassSpellSlots(options.classData??null,nextLevel);
   const currentSlotMap=new Map(character.spellSlots.map(slot=>[slot.level,slot]));
   const nextSlots=progressionSlots.length ? progressionSlots.map(slot=>({...slot,used:Math.min(slot.max,currentSlotMap.get(slot.level)?.used??0)})) : normalizeSpellSlots(character.spellSlots,nextLevel,character.className);
 
   return {
     ...character,
     level: nextLevel,
+    classLevels: nextClassLevels,
     featIds: options.featId&&!character.featIds.includes(options.featId)?[...character.featIds,options.featId]:character.featIds,
     abilities: nextAbilities,
     maxHp: nextMaxHp,
     currentHp: Math.min(nextMaxHp, character.currentHp + hpGain),
     spellSlots: nextSlots,
-    hitDice: normalizeHitDice(character.hitDice, nextLevel, character.className, options.hitDie),
+    pactMagicSlots:nextClassLevels.length>1?getMulticlassPactMagicSlots(nextClassLevels,options.allClasses??[],character.pactMagicSlots):character.pactMagicSlots,
+    hitDice: nextClassLevels.length>1?getMulticlassHitDice(nextClassLevels,character.hitDice):normalizeHitDice(character.hitDice,nextLevel,character.className,options.hitDie),
     resources: mergeClassResources(character.resources,getClassResources(character.className,nextLevel,nextAbilities,character.ruleset,character.subclass)),
     updatedAt: options.updatedAt ?? new Date().toISOString(),
   };

@@ -6,6 +6,7 @@ import type { AbilityKey, Character } from "../../core/character/character.types
 import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellAttackBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
 import { LevelUpAssistant } from "./LevelUpAssistant";
+import { normalizeClassLevels } from "../../core/rulesets/multiclassRules";
 import { calculateEffectiveArmorClass, calculateSuggestedArmorClass, getCharacterInventoryItems, getEquippedItems, getInventoryWeight, getItemCategoryLabel, getItemRulesSummary, getSpellGroupTitle, getSpellLevelGroups, getSpellLevelLabel, getWeaponAttackBonus, getWeaponDamageSummary, isSpellReadyToCast, normalizeHitDice, normalizeSpellSlots, resetDeathSaves, resetHitDice, resetSpellSlots, sortSpellsByLevelAndName } from "./characterShared";
 import { getClassFeatureActions } from "../../core/rulesets/classFeatureEngine";
 import { getCharacterFeatures, getPassiveScore, getSavingThrowBonus, getSkillBonus, SKILL_ABILITIES } from "../../core/rulesets/characterSheetRules";
@@ -631,6 +632,7 @@ export function CharacterDetail({
                   ? `• ${activeCharacter.subclass}`
                   : ""}
               </p>
+              <p>{normalizeClassLevels(activeCharacter.classLevels,activeCharacter.className,activeCharacter.level).map(item=>`${item.className} ${item.level}${item.subclass?` (${item.subclass})`:""}`).join(" · ")}</p>
             </div>
 
             <strong className="level-badge">Lv. {activeCharacter.level}</strong>

@@ -1,6 +1,7 @@
 import type { Character } from "./character.types";
 import type { RulesetData } from "../rulesets/ruleset.types";
 import { getCharacterChoiceDebt } from "../rulesets/choiceDebt";
+import { normalizeClassLevels } from "../rulesets/multiclassRules";
 
 export type PlayReadinessIssue = { id: string; severity: "error" | "warning"; message: string };
 export type PlayReadiness = { status: "ready" | "needs-attention"; score: number; issues: PlayReadinessIssue[] };
@@ -13,6 +14,8 @@ export function getPlayReadiness(character: Character, rulesetData: RulesetData 
     add("identity", "error", "İsim, class, race/species ve background bilgilerini tamamla.");
   }
   if (!Number.isInteger(character.level) || character.level < 1 || character.level > 20) add("level", "error", "Level 1–20 arasında olmalı.");
+  const classLevels=normalizeClassLevels(character.classLevels,character.className,character.level);
+  if(classLevels.reduce((sum,item)=>sum+item.level,0)!==character.level)add("multiclass-levels","error","Class level toplamı karakter level ile eşleşmiyor.");
   if (Object.values(character.abilities).some((score) => !Number.isInteger(score) || score < 1 || score > 30)) add("abilities", "error", "Ability skorlarından biri geçersiz.");
   if (character.maxHp < 1 || character.currentHp < 0 || character.currentHp > character.maxHp) add("hp", "error", "HP değerlerini geçerli aralığa getir.");
 
@@ -26,6 +29,7 @@ export function getPlayReadiness(character: Character, rulesetData: RulesetData 
     const raceExists = rulesetData.races.some((item) => item.name === character.race);
     const backgroundExists = rulesetData.backgrounds.some((item) => item.name === character.background);
     if (character.ruleset !== "homebrew" && (!classExists || !raceExists || !backgroundExists)) add("ruleset", "error", "Karakter seçimlerinden biri aktif ruleset verisiyle eşleşmiyor.");
+    if(character.ruleset!=="homebrew"&&classLevels.some(level=>!rulesetData.classes.some(item=>item.name===level.className)))add("multiclass-ruleset","error","Multiclass seçimlerinden biri aktif ruleset içinde yok.");
   }
 
   if (!character.skillProficiencies.length) add("skills", "warning", "Skill proficiency kaydı yok; saving throw dışındaki rollar eksik kalabilir.");
