@@ -197,6 +197,10 @@ export interface DndItemData {
   chargeRecovery?: string;
   attackBonus?: number;
   damageBonus?: number;
+  extraDamageDice?: string;
+  extraDamageType?: string;
+  extraDamageTargetTag?: "dragon" | "giant" | "undead-fiend";
+  criticalExtraDamageDice?: string;
   armorBonus?: number;
   grantedSpellName?: string;
   chargeCost?: number;

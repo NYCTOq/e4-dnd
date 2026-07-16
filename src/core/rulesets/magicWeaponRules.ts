@@ -1,0 +1,4 @@
+import type{DndItemData}from"./ruleset.types";
+export type MagicWeaponTarget="normal"|"dragon"|"giant"|"undead-fiend";
+export type MagicWeaponExtraDamage={formula:string;damageType:string;source:"always"|"target"|"critical"};
+export function getMagicWeaponExtraDamage(weapon:DndItemData,target:MagicWeaponTarget,critical=false):MagicWeaponExtraDamage[]{const results:MagicWeaponExtraDamage[]=[];if(weapon.extraDamageDice&&(!weapon.extraDamageTargetTag||weapon.extraDamageTargetTag===target))results.push({formula:weapon.extraDamageDice,damageType:weapon.extraDamageType??"magic",source:weapon.extraDamageTargetTag?"target":"always"});if(critical&&weapon.criticalExtraDamageDice)results.push({formula:weapon.criticalExtraDamageDice,damageType:weapon.extraDamageType??weapon.damageType??"magic",source:"critical"});return results}
