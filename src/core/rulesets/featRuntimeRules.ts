@@ -1,0 +1,3 @@
+import{getProficiencyBonus}from"../character/characterCalculator";
+export type FeatRuntime={alertInitiativeBonus:number;speedBonus:number;toughHpBonus:number;luckyUses:number;passivePerceptionBonus:number};
+export function getFeatRuntime(featNames:string[],level:number,ruleset:string):FeatRuntime{const names=new Set(featNames.map(name=>name.toLowerCase()));const has=(name:string)=>names.has(name.toLowerCase());return{alertInitiativeBonus:has("Alert")?(ruleset==="dnd_2024"?getProficiencyBonus(level):5):0,speedBonus:has("Mobile")?10:0,toughHpBonus:has("Tough")?level*2:0,luckyUses:has("Lucky")?(ruleset==="dnd_2024"?getProficiencyBonus(level):3):0,passivePerceptionBonus:has("Observant")?5:0}}

@@ -39,6 +39,7 @@ import { getClericCombatFeatures, getDivineSparkDice } from "../../core/rulesets
 import { canCreateSorcerySlot, getPointsFromSlot, getSorcererCombatFeatures, getSorcerySlotCost } from "../../core/rulesets/sorcererRules";
 import { canRecoverWizardSlot, getArcaneRecoveryBudget, getWizardCombatFeatures } from "../../core/rulesets/wizardRules";
 import { getHuntersMarkDamage, getRangerCombatFeatures } from "../../core/rulesets/rangerRules";
+import { getFeatRuntime } from "../../core/rulesets/featRuntimeRules";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -119,6 +120,7 @@ export function PlayMode({
   const [saveDamageRule,setSaveDamageRule]=useState<SaveDamageRule>("half");
   const [turnEconomy,setTurnEconomy]=useState(createTurnEconomy);
   const [arcaneRecoveryLevels,setArcaneRecoveryLevels]=useState<number[]>([]);
+  const [luckyUsed,setLuckyUsed]=useState(0);
   const [sneakAttackUsed,setSneakAttackUsed]=useState(false);
   const [sneakAttackEnabled,setSneakAttackEnabled]=useState(true);
   const [sneakAllyAdjacent,setSneakAllyAdjacent]=useState(false);
@@ -194,7 +196,10 @@ export function PlayMode({
   const conditionEffects=getConditionEffects(activeCharacter.conditions);
   const exhaustionEffects=getExhaustionEffects(activeCharacter.ruleset,activeCharacter.exhaustion);
   const selectedRace=rulesetData?.races.find(race=>race.name===activeCharacter.race);
-  const effectiveSpeed=getEffectiveSpeed(selectedRace?.speed??30,exhaustionEffects);
+  const selectedBackground=rulesetData?.backgrounds.find(background=>background.name===activeCharacter.background);
+  const featNames=[...(rulesetData?.feats.filter(feat=>activeCharacter.featIds.includes(feat.id)).map(feat=>feat.name)??[]),...(selectedBackground?.originFeat?[selectedBackground.originFeat]:[])];
+  const featRuntime=getFeatRuntime(featNames,activeCharacter.level,activeCharacter.ruleset);
+  const effectiveSpeed=getEffectiveSpeed((selectedRace?.speed??30)+featRuntime.speedBonus,exhaustionEffects);
   const effectiveMaxHp=getEffectiveMaxHp(activeCharacter.maxHp,exhaustionEffects);
   const attacksPerAction=getAttacksPerAction(activeCharacter.className,activeCharacter.level);
   const isRogue=activeCharacter.className.trim().toLowerCase()==="rogue";
@@ -409,6 +414,7 @@ export function PlayMode({
       usedArcanumSpellIds: [],
       activeSpellEffects: [],
     });
+    setLuckyUsed(0);
   }
 
   const hpPercent = Math.max(
@@ -469,7 +475,7 @@ export function PlayMode({
 
           <div className="play-mode-core-stats">
             <div><span>AC</span><strong>{armorClass}</strong></div>
-            <div><span>Init</span><strong>{formatModifier(getInitiative(activeCharacter))}</strong></div>
+            <div><span>Init</span><strong>{formatModifier(getInitiative(activeCharacter)+featRuntime.alertInitiativeBonus)}</strong></div>
             <div><span>Prof</span><strong>+{getProficiencyBonus(activeCharacter.level)}</strong></div>
             <div><span>Save DC</span><strong>{getSpellSaveDc(activeCharacter)}</strong></div>
             <div><span>Spell Atk</span><strong>{formatModifier(getSpellAttackBonus(activeCharacter))}</strong></div>
@@ -487,6 +493,7 @@ export function PlayMode({
           {isSorcerer&&sorcererFeatures.fontOfMagic?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Sorcerer</span><h2>Font of Magic</h2></div><strong>{sorceryPoints?`${sorceryPoints.max-sorceryPoints.used} / ${sorceryPoints.max} SP`:"Kaynak yok"}</strong></div><div className="play-mode-slot-grid">{spellSlots.filter(slot=>slot.level<=5).map(slot=>{const remaining=sorceryPoints?sorceryPoints.max-sorceryPoints.used:0;const cost=getSorcerySlotCost(slot.level)!;return <div className="play-mode-slot-row" key={slot.level}><div><span>Level {slot.level} Slot</span><small>{slot.max-slot.used}/{slot.max} hazır · Create {cost} SP · Convert +{slot.level} SP</small></div><div><button type="button" disabled={!sorceryPoints||!canCreateSorcerySlot(slot.level,remaining,slot.used>0)} onClick={()=>createSorcerySlot(slot.level)}>Slot Yarat</button><button type="button" disabled={!sorceryPoints||slot.used>=slot.max||remaining<=0} onClick={()=>convertSlotToSorceryPoints(slot.level)}>SP'ye Çevir</button></div></div>})}</div>{sorcererFeatures.sorcerousRestoration?<div className="condition-rule-summary"><small>Sorcerous Restoration aktif.</small></div>:null}</section>:null}
           {isWizard&&wizardFeatures.arcaneRecovery?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Wizard</span><h2>Arcane Recovery</h2></div><strong>{getArcaneRecoveryBudget(activeCharacter.level)-arcaneRecoveryLevels.reduce((sum,level)=>sum+level,0)} level bütçe</strong></div><div className="play-mode-slot-grid">{spellSlots.filter(slot=>slot.level<=5).map(slot=>{const selected=arcaneRecoveryLevels.filter(level=>level===slot.level).length;const remaining=getArcaneRecoveryBudget(activeCharacter.level)-arcaneRecoveryLevels.reduce((sum,level)=>sum+level,0);return <div className="play-mode-slot-row" key={slot.level}><div><span>Level {slot.level}</span><small>{slot.used} harcanmış · {selected} seçili</small></div><div><button type="button" disabled={!selected} onClick={()=>{const index=arcaneRecoveryLevels.indexOf(slot.level);setArcaneRecoveryLevels(current=>current.filter((_,i)=>i!==index))}}>−</button><button type="button" disabled={!arcaneRecovery||arcaneRecovery.used>=arcaneRecovery.max||!canRecoverWizardSlot(slot.level,slot.used-selected,remaining)} onClick={()=>setArcaneRecoveryLevels(current=>[...current,slot.level])}>+</button></div></div>})}</div><button type="button" disabled={!arcaneRecoveryLevels.length||!arcaneRecovery||arcaneRecovery.used>=arcaneRecovery.max} onClick={applyArcaneRecovery}>Seçili Slotları Yenile</button><div className="condition-rule-summary">{wizardFeatures.memorizeSpell?<small>Memorize Spell aktif.</small>:null}{wizardFeatures.spellMastery?<small>Spell Mastery aktif.</small>:null}{wizardFeatures.signatureSpells?<small>Signature Spells aktif.</small>:null}</div></section>:null}
           {isRanger?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Ranger Hunt</span><h2>Hunter's Mark · {getHuntersMarkDamage(activeCharacter.level)}</h2></div><strong>{favoredEnemy?`${favoredEnemy.max-favoredEnemy.used}/${favoredEnemy.max} ücretsiz`:activeCharacter.ruleset==="dnd_2014"?"Spell slot kullanır":"Kaynak yok"}</strong></div>{rangerFeatures.favoredEnemy?<button type="button" disabled={!favoredEnemy||favoredEnemy.used>=favoredEnemy.max||turnEconomy.bonusActionUsed} onClick={useFavoredEnemy}>Favored Enemy · Bonus Action</button>:null}<div className="condition-rule-summary">{rangerFeatures.deftExplorer?<small>Deft Explorer aktif.</small>:null}{rangerFeatures.extraAttack?<small>Extra Attack aktif.</small>:null}{rangerFeatures.roving?<small>Roving aktif.</small>:null}{rangerFeatures.tireless?<small>Tireless aktif.</small>:null}{rangerFeatures.naturesVeil?<small>Nature's Veil aktif.</small>:null}{rangerFeatures.foeSlayer?<small>Foe Slayer aktif.</small>:null}</div></section>:null}
+          {featNames.some(name=>["alert","lucky","tough","mobile","observant"].includes(name.toLowerCase()))?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Feat Runtime</span><h2>Aktif Feat Etkileri</h2></div></div><div className="condition-rule-summary">{featRuntime.alertInitiativeBonus?<small>Alert: Initiative +{featRuntime.alertInitiativeBonus}</small>:null}{featRuntime.speedBonus?<small>Mobile: Speed +{featRuntime.speedBonus} ft.</small>:null}{featRuntime.toughHpBonus?<small>Tough: Max HP katkısı +{featRuntime.toughHpBonus}</small>:null}{featRuntime.passivePerceptionBonus?<small>Observant: Passive Perception/Investigation +5</small>:null}</div>{featRuntime.luckyUses?<button type="button" disabled={luckyUsed>=featRuntime.luckyUses} onClick={()=>setLuckyUsed(value=>value+1)}>Lucky Kullan · {featRuntime.luckyUses-luckyUsed}/{featRuntime.luckyUses}</button>:null}</section>:null}
           <section className="play-mode-card play-mode-hp-card">
             <div className="play-mode-section-head">
               <div><span className="mini-label">Hit Points</span><h2>Can Yönetimi</h2></div>
