@@ -211,6 +211,11 @@ export interface DndItemData {
   curesConditions?: string[];
   clearsExhaustion?: boolean;
   restoresHitDice?: boolean;
+  itemDamageFormula?: string;
+  itemSaveAbility?: AbilityKey;
+  itemSaveDc?: number;
+  itemSaveRule?: "half" | "none";
+  itemDamageTargetTag?: "undead-fiend";
   armorBonus?: number;
   grantedSpellName?: string;
   chargeCost?: number;
