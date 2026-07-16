@@ -15,6 +15,17 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.4.0", date: "2026-07-16", title: "Granted Spell Database Completion",
+    summary: "Domain ve oath paketlerinin ihtiyaç duyduğu eksik büyüler 2014 ve 2024 spell veritabanlarına eklendi.",
+    changes: [
+      { text: "Domain ve oath listeleri için 29 yeni spell kaydı", category: "Özellik" },
+      { text: "Spell level, class, school, duration ve temel mekanik metadata", category: "Teknik" },
+      { text: "Arcane Eye, Moonbeam, Scrying, Wall of Fire ve Zone of Truth dahil tamamlama", category: "Özellik" },
+      { text: "Paladin oath spell listelerinin gerçek veriyle görünür hâle gelmesi", category: "Düzeltme" },
+      { text: "Granted spell veri kapsamı için otomatik regresyon testi", category: "Teknik" },
+    ],
+  },
+  {
     version: "2.3.0", date: "2026-07-16", title: "Paladin Oath Spells",
     summary: "Always Prepared sistemi 2014 ve 2024 Paladin yemin büyülerine genişletildi.",
     changes: [

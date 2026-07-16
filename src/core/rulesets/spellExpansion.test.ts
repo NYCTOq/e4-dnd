@@ -12,4 +12,8 @@ describe("spell database v2 expansion", () => {
   it("includes costly and consumed material metadata", () => {
     expect(SPELL_EXPANSION_2014.find((spell) => spell.name === "True Resurrection")).toMatchObject({ materialCost: "25,000 gp", materialConsumed: true });
   });
+  it("contains every spell needed by the current domain and oath packages", () => {
+    const required = ["Arcane Eye", "Crusader's Mantle", "Moonbeam", "Protection from Evil and Good", "Scrying", "Zone of Truth"];
+    expect(required.every((name) => SPELL_EXPANSION_2014.some((spell) => spell.name === name))).toBe(true);
+  });
 });
