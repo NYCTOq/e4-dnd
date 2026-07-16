@@ -1,10 +1,6 @@
 import type { RulesetId } from "../character/character.types";
 import type { DndBackgroundData, DndClassData, DndItemData, DndSubclassData, DndMonsterData, DndFeatData, DndRaceData, DndSpellData, RulesetData } from "./ruleset.types";
 import { getRulesetDefinition } from "./rulesetRegistry";
-import { SUBCLASS_EXPANSION_2014, SUBCLASS_EXPANSION_2024 } from "./subclassExpansion";
-import { FEAT_EXPANSION_2014, FEAT_EXPANSION_2024 } from "./featExpansion";
-import { SPELL_EXPANSION_2014, SPELL_EXPANSION_2024 } from "./spellExpansion";
-import { ITEM_EXPANSION_2014, ITEM_EXPANSION_2024 } from "./itemExpansion";
 import { enrichClassProgression } from "./classProgressionAudit";
 
 async function loadJson<T>(path: string): Promise<T> {
@@ -29,14 +25,20 @@ export async function loadRuleset(id: RulesetId): Promise<RulesetData> {
     loadJson<DndItemData[]>(`${root}/items.json`),
     loadJson<DndMonsterData[]>(`${root}/monsters.json`),
   ]);
+  const [subclassModule,featModule,spellModule,itemModule]=await Promise.all([
+    import("./subclassExpansion"),
+    import("./featExpansion"),
+    import("./spellExpansion"),
+    import("./itemExpansion"),
+  ]);
   const definition = getRulesetDefinition(id);
-  const expansion = sourceId === "dnd_2024" ? SUBCLASS_EXPANSION_2024 : SUBCLASS_EXPANSION_2014;
+  const expansion = sourceId === "dnd_2024" ? subclassModule.SUBCLASS_EXPANSION_2024 : subclassModule.SUBCLASS_EXPANSION_2014;
   const mergedSubclasses = [...subclasses, ...expansion.filter((candidate) => !subclasses.some((existing) => existing.id === candidate.id))];
-  const featExpansion = sourceId === "dnd_2024" ? FEAT_EXPANSION_2024 : FEAT_EXPANSION_2014;
+  const featExpansion = sourceId === "dnd_2024" ? featModule.FEAT_EXPANSION_2024 : featModule.FEAT_EXPANSION_2014;
   const mergedFeats = [...feats, ...featExpansion.filter((candidate) => !feats.some((existing) => existing.id === candidate.id))];
-  const spellExpansion = sourceId === "dnd_2024" ? SPELL_EXPANSION_2024 : SPELL_EXPANSION_2014;
+  const spellExpansion = sourceId === "dnd_2024" ? spellModule.SPELL_EXPANSION_2024 : spellModule.SPELL_EXPANSION_2014;
   const mergedSpells = [...spells, ...spellExpansion.filter((candidate) => !spells.some((existing) => existing.id === candidate.id))];
-  const itemExpansion = sourceId === "dnd_2024" ? ITEM_EXPANSION_2024 : ITEM_EXPANSION_2014;
+  const itemExpansion = sourceId === "dnd_2024" ? itemModule.ITEM_EXPANSION_2024 : itemModule.ITEM_EXPANSION_2014;
   const mergedItems = [...items, ...itemExpansion.filter((candidate) => !items.some((existing) => existing.id === candidate.id))];
   const enrichedClasses = classes.map((classData) => enrichClassProgression(classData, sourceId));
   return { id, name: definition.name, classes: enrichedClasses, subclasses: mergedSubclasses, races, backgrounds, feats: mergedFeats, spells: mergedSpells, items: mergedItems, monsters };
