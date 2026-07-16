@@ -198,6 +198,8 @@ export interface DndItemData {
   attackBonus?: number;
   damageBonus?: number;
   armorBonus?: number;
+  grantedSpellName?: string;
+  chargeCost?: number;
 
   armorClass?: number;
   armorClassBonus?: number;

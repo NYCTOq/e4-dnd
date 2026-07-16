@@ -305,7 +305,7 @@ export function PlayMode({
     });
   }
 
-  function castSpell(spellId: string, requestedSlotLevel?:number) {
+  function castSpell(spellId: string, requestedSlotLevel?:number, consumeSlot=true) {
     const spell = rulesetData?.spells.find((item) => item.id === spellId);
 
     if (!spell) return;
@@ -313,7 +313,7 @@ export function PlayMode({
     if ((spellTime.includes("bonus")&&turnEconomy.bonusActionUsed)||(spellTime.includes("reaction")&&turnEconomy.reactionUsed)||(!spellTime.includes("bonus")&&!spellTime.includes("reaction")&&turnEconomy.actionUsed)) return;
 
     const slotLevel=spell.level===0?0:requestedSlotLevel??getCastableSlotLevels(spell,spellSlots)[0];
-    if (spell.level > 0) {
+    if (spell.level > 0 && consumeSlot) {
       const slot = spellSlots.find((item) => item.level === slotLevel);
       if (!slot || slot.used >= slot.max) return;
     }
@@ -328,7 +328,7 @@ export function PlayMode({
     commit({
       currentHp:spell.healingDice&&total!==null?Math.min(activeCharacter.maxHp,activeCharacter.currentHp+Math.max(0,total)):activeCharacter.currentHp,
       spellSlots:
-        spell.level === 0
+        spell.level === 0 || !consumeSlot
           ? spellSlots
           : spellSlots.map((slot) =>
               slot.level === slotLevel
@@ -368,7 +368,7 @@ export function PlayMode({
   function useFavoredEnemy(){if(!favoredEnemy||favoredEnemy.used>=favoredEnemy.max||turnEconomy.bonusActionUsed)return;commit({resources:activeCharacter.resources.map(item=>item.id==="favored-enemy"?{...item,used:item.used+1}:item),conditions:activeCharacter.conditions.includes("Concentration")?activeCharacter.conditions:[...activeCharacter.conditions,"Concentration"]});setTurnEconomy(current=>spendTurnResource(current,"bonus-action"))}
   function consumeItem(itemId:string){const item=rulesetData?.items.find(candidate=>candidate.id===itemId);if(!item)return;const formula=getItemHealingFormula(item);let currentHp=activeCharacter.currentHp;if(formula){const total=rollFormula(formula);currentHp=Math.min(activeCharacter.maxHp,currentHp+total);setRollHistory(current=>[{id:crypto.randomUUID(),label:`${item.name} Healing`,notation:formula,total},...current].slice(0,6))}commit({currentHp,inventory:consumeInventoryItem(activeCharacter.inventory,itemId)})}
   function toggleAttunement(itemId:string){const item=rulesetData?.items.find(candidate=>candidate.id===itemId);if(item)commit({inventory:toggleItemAttunement(activeCharacter.inventory,item)})}
-  function spendMagicItemCharge(itemId:string){const item=rulesetData?.items.find(candidate=>candidate.id===itemId);if(item)commit({inventory:spendItemCharge(activeCharacter.inventory,item)})}
+  function spendMagicItemCharge(itemId:string){const item=rulesetData?.items.find(candidate=>candidate.id===itemId);if(!item)return;const cost=item.chargeCost??1;const entry=activeCharacter.inventory.find(candidate=>candidate.itemId===itemId);if(!entry||item.requiresAttunement&&!entry.attuned||!item.charges||item.charges-(entry.chargesUsed??0)<cost)return;commit({inventory:spendItemCharge(activeCharacter.inventory,item,cost)});const spell=rulesetData?.spells.find(candidate=>candidate.name===item.grantedSpellName);if(spell)castSpell(spell.id,spell.level,false)}
 
   function weaponAttack(weapon:(typeof equippedItems.weapons)[number]){if(conditionEffects.blocksActions||exhaustionEffects.dead||turnEconomy.actionUsed)return;const conditionMode=combineRollModes(conditionEffects.attackMode,exhaustionEffects.attackSaveMode);const effectiveMode=combineRollModes(attackMode,conditionMode);const modifier=getWeaponAttackBonus(activeCharacter,weapon)-exhaustionEffects.d20Penalty;const dice=rollDice({count:effectiveMode==="normal"?1:2,sides:20,modifier:0});const attack=resolveAttack(dice.rolls,modifier,targetAc,effectiveMode);const results:RollResult[]=[{id:dice.id,label:`${weapon.name} · ${attack.hit?attack.critical?"CRITICAL":"Hit":"Miss"}`,notation:`${effectiveMode} · [${dice.rolls.join(", ")}] ${formatModifier(modifier)} vs AC ${targetAc}`,total:attack.total}];if(attack.hit){const formula=getCriticalDamageFormula(getWeaponDamageSummary(activeCharacter,weapon),attack.critical);if(formula){const damage=rollDice(formula);results.push({id:damage.id,label:`${weapon.name} Damage${attack.critical?" · Critical":""}`,notation:damage.notation,total:damage.total})}const sneakAllowed=isRogue&&sneakAttackEnabled&&canUseSneakAttack({level:activeCharacter.level,weapon,usedThisTurn:sneakAttackUsed,hasAdvantage:effectiveMode==="advantage",hasDisadvantage:effectiveMode==="disadvantage",allyAdjacent:sneakAllyAdjacent});if(sneakAllowed){const sneak=rollDice({count:getSneakAttackDice(activeCharacter.level)*(attack.critical?2:1),sides:6,modifier:0});results.push({id:sneak.id,label:`Sneak Attack${attack.critical?" · Critical":""}`,notation:sneak.notation,total:sneak.total});setSneakAttackUsed(true)}}setTurnEconomy(current=>spendAttack(current,attacksPerAction));setRollHistory(current=>[...results,...current].slice(0,6))}
 
