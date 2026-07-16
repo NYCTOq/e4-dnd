@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.21.0",date:"2026-07-16",title:"Damage & Survival Engine",
+    summary:"Hasar, temporary HP, concentration ve death save akışı tek bir kurallı masa konsolunda birleştirildi.",
+    changes:[
+      {text:"Temporary HP'yi önce tüketen merkezi hasar motoru",category:"Düzeltme"},
+      {text:"Alınan hasardan otomatik DC 10 veya yarı hasar concentration kontrolü",category:"Özellik"},
+      {text:"Normal ve kritik hasarın 0 HP'de death save failure işlemesi",category:"Özellik"},
+      {text:"Natural 1, Natural 20, başarı ve başarısızlık death save kuralları",category:"Özellik"},
+      {text:"Massive damage ile anlık üç başarısızlık kontrolü",category:"Özellik"},
+      {text:"Survival lifecycle için üç otomatik test",category:"Teknik"},
+    ],
+  },
+  {
     version:"2.20.0",date:"2026-07-16",title:"Concentration & Active Spell Effects",
     summary:"Kalıcı spell etkileri, concentration değişimi, süre ilerletme ve CON save yönetimi Play Mode'a eklendi.",
     changes:[

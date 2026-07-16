@@ -22,6 +22,7 @@ import { getClassFeatureActions } from "../../core/rulesets/classFeatureEngine";
 import { getDivineSmiteDice, getPaladinAuraSummary, isPaladin } from "../../core/rulesets/paladinRules";
 import { getCastableSlotLevels, getSpellRollFormula, rollFormula } from "../../core/rulesets/spellResolution";
 import { addSpellEffect, advanceSpellEffects, createSpellEffect } from "../../core/rulesets/spellEffectRules";
+import { applyDamage, applyHealing, resolveDeathSave } from "../../core/character/survivalRules";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -83,6 +84,8 @@ export function PlayMode({
   const [isFocusMode, setIsFocusMode] = useState(false);
   const [smiteHolyTarget,setSmiteHolyTarget]=useState(false);
   const [castSlotLevels,setCastSlotLevels]=useState<Record<string,number>>({});
+  const [survivalAmount,setSurvivalAmount]=useState(1);
+  const [pendingConcentrationDc,setPendingConcentrationDc]=useState<number|null>(null);
 
   const character =
     characters.find((item) => item.id === selectedCharacterId) ?? characters[0];
@@ -181,7 +184,11 @@ export function PlayMode({
   function divineSmite(slotLevel:number){const slot=spellSlots.find(item=>item.level===slotLevel);if(!slot||slot.used>=slot.max)return;const dice=getDivineSmiteDice(slotLevel,activeCharacter.ruleset,smiteHolyTarget);const result=rollDice({count:dice,sides:8,modifier:0});commit({spellSlots:spellSlots.map(item=>item.level===slotLevel?{...item,used:item.used+1}:item)});setRollHistory(current=>[{id:result.id,label:`Divine Smite · Level ${slotLevel}`,notation:result.notation,total:result.total},...current].slice(0,6))}
   function advanceEffectRound(){const next=advanceSpellEffects(activeSpellEffects);commit({activeSpellEffects:next,conditions:next.some(effect=>effect.concentration)?activeCharacter.conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")})}
   function endSpellEffect(id:string){const next=activeSpellEffects.filter(effect=>effect.id!==id);commit({activeSpellEffects:next,conditions:next.some(effect=>effect.concentration)?activeCharacter.conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")})}
-  function concentrationSave(dc:number){const result=rollDice({count:1,sides:20,modifier:getAbilityModifier(activeCharacter.abilities.con)});const success=result.total>=dc;commit(success?{}:{activeSpellEffects:activeSpellEffects.filter(effect=>!effect.concentration),conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")});setRollHistory(current=>[{id:result.id,label:`Concentration Save DC ${dc} · ${success?"Başarılı":"Başarısız"}`,notation:result.notation,total:result.total},...current].slice(0,6))}
+  function concentrationSave(dc:number){const result=rollDice({count:1,sides:20,modifier:getAbilityModifier(activeCharacter.abilities.con)});const success=result.total>=dc;commit(success?{}:{activeSpellEffects:activeSpellEffects.filter(effect=>!effect.concentration),conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")});setPendingConcentrationDc(null);setRollHistory(current=>[{id:result.id,label:`Concentration Save DC ${dc} · ${success?"Başarılı":"Başarısız"}`,notation:result.notation,total:result.total},...current].slice(0,6))}
+
+  function takeDamage(critical=false){const result=applyDamage({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},survivalAmount,critical);commit({currentHp:result.currentHp,tempHp:result.tempHp,deathSaves:result.deathSaves});if(activeSpellEffects.some(effect=>effect.concentration))setPendingConcentrationDc(result.concentrationDc);setRollHistory(current=>[{id:crypto.randomUUID(),label:`${critical?"Kritik ":""}Hasar${result.absorbedByTempHp?` · ${result.absorbedByTempHp} Temp HP emdi`:""}`,notation:`-${survivalAmount} HP`,total:-survivalAmount},...current].slice(0,6))}
+  function healDamage(){const result=applyHealing({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},survivalAmount);commit({currentHp:result.currentHp,deathSaves:result.deathSaves})}
+  function rollDeathSave(){const roll=rollDice({count:1,sides:20,modifier:0});const result=resolveDeathSave({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},roll.rolls[0]);commit({currentHp:result.currentHp,deathSaves:result.deathSaves});setRollHistory(current=>[{id:roll.id,label:`Death Save${roll.rolls[0]===20?" · Natural 20":roll.rolls[0]===1?" · Natural 1":""}`,notation:roll.notation,total:roll.total},...current].slice(0,6))}
 
   function updateHp(amount: number) {
     commit({
@@ -399,6 +406,15 @@ export function PlayMode({
                 </button>
               ))}
             </div>
+
+            <div className="survival-console">
+              <input type="number" min="1" value={survivalAmount} onChange={event=>setSurvivalAmount(Math.max(1,Number(event.target.value)||1))}/>
+              <button type="button" onClick={()=>takeDamage(false)}>Hasar Al</button>
+              <button type="button" onClick={()=>takeDamage(true)}>Kritik Hasar</button>
+              <button type="button" onClick={healDamage}>İyileştir</button>
+            </div>
+            {pendingConcentrationDc?<button type="button" className="concentration-prompt" onClick={()=>concentrationSave(pendingConcentrationDc)}>Concentration Save At · DC {pendingConcentrationDc}</button>:null}
+            {activeCharacter.currentHp===0?<div className="death-save-console"><strong>Death Saves · ✓ {activeCharacter.deathSaves.successes}/3 · ✕ {activeCharacter.deathSaves.failures}/3</strong><button type="button" disabled={activeCharacter.deathSaves.successes>=3||activeCharacter.deathSaves.failures>=3} onClick={rollDeathSave}>Death Save At</button></div>:null}
 
             <label className="play-mode-temp-hp">
               Temp HP
