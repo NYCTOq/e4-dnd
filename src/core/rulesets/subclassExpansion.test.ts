@@ -22,4 +22,9 @@ describe("subclass expansion", () => {
       expect(subclass.bonusSpells?.length).toBeGreaterThanOrEqual(10);
     }
   });
+  it("includes a full oath spell progression for expanded paladins", () => {
+    for (const subclass of [...SUBCLASS_EXPANSION_2014, ...SUBCLASS_EXPANSION_2024].filter((item) => item.className === "Paladin")) {
+      expect(subclass.bonusSpells?.length).toBe(10);
+    }
+  });
 });

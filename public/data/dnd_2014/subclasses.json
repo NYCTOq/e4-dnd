@@ -212,6 +212,7 @@
     "ruleset": "dnd_2014",
     "selectionLevel": 3,
     "description": "Oath of Devotion, Paladin için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "bonusSpells": ["Protection from Evil and Good", "Sanctuary", "Lesser Restoration", "Zone of Truth", "Beacon of Hope", "Dispel Magic", "Freedom of Movement", "Guardian of Faith", "Commune", "Flame Strike"],
     "features": [
       {
         "level": 3,

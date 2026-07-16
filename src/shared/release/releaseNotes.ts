@@ -15,6 +15,17 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.3.0", date: "2026-07-16", title: "Paladin Oath Spells",
+    summary: "Always Prepared sistemi 2014 ve 2024 Paladin yemin büyülerine genişletildi.",
+    changes: [
+      { text: "2014 ve 2024 Oath of Devotion spell progression", category: "Özellik" },
+      { text: "2014 ve 2024 Oath of the Ancients spell progression", category: "Özellik" },
+      { text: "Paladin spell slot seviyesine göre otomatik oath spell açılması", category: "Özellik" },
+      { text: "Oath büyülerinin normal prepared kotasından bağımsız tutulması", category: "Düzeltme" },
+      { text: "Paladin oath spell kapsamı için otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "2.2.0", date: "2026-07-16", title: "Cleric Domain Spells Expansion",
     summary: "Always Prepared altyapısı Life Domain dışındaki Cleric domainlerine genişletildi.",
     changes: [
