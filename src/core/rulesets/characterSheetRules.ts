@@ -6,6 +6,7 @@ import { getEldritchInvocations } from "./invocationRules";
 import { getWildShapeForms } from "./wildShapeRules";
 import { getBattleMasterManeuvers, getSuperiorityDie } from "./maneuverRules";
 import { getCompanionStats, getRangerCompanions } from "./companionRules";
+import { getPaladinAuraSummary, isPaladin } from "./paladinRules";
 
 export const SKILL_ABILITIES:Record<string,AbilityKey> = {
   Acrobatics:"dex", "Animal Handling":"wis", Arcana:"int", Athletics:"str", Deception:"cha", History:"int",
@@ -34,6 +35,7 @@ export function getCharacterFeatures(character:Character, rulesetData:RulesetDat
   const maneuverFeatures=getBattleMasterManeuvers().filter(item=>character.maneuverIds?.includes(item.id)).map(item=>({source:`Maneuver · ${getSuperiorityDie(character.level)}`,name:item.name,summary:item.summary}));
   const companion=getRangerCompanions(character.ruleset).find(item=>item.id===character.companionId);const companionFeatures=companion?(()=>{const stats=getCompanionStats(companion,character.level,getAbilityModifier(character.abilities.wis));return[{source:"Beast Master Companion",name:companion.name,summary:`AC ${stats.armorClass} · HP ${stats.maxHp} · ${companion.attackName} ${stats.damage} · ${companion.speed}`} ]})():[];
   const arcanumFeatures=(rulesetData?.spells??[]).filter(spell=>character.arcanumSpellIds?.includes(spell.id)).map(spell=>({source:`Mystic Arcanum · Level ${spell.level}`,name:spell.name,summary:spell.description}));
-  return [...classFeatures,...subclassFeatures,...featFeatures,...metamagicFeatures,...invocationFeatures,...wildShapeFeatures,...maneuverFeatures,...companionFeatures,...arcanumFeatures];
+  const aura=isPaladin(character.className)?getPaladinAuraSummary(character.level):null;const auraFeatures=aura?[...(aura.protection?[{source:`Paladin Aura · ${aura.protection.radius} ft.`,name:"Aura of Protection",summary:aura.protection.summary}]:[]),...(aura.courage?[{source:`Paladin Aura · ${aura.courage.radius} ft.`,name:"Aura of Courage",summary:aura.courage.summary}]:[]),...(aura.radiantStrikes?[{source:"Paladin Level 11",name:"Radiant Strikes",summary:aura.radiantStrikes}]:[])]:[];
+  return [...classFeatures,...subclassFeatures,...featFeatures,...metamagicFeatures,...invocationFeatures,...wildShapeFeatures,...maneuverFeatures,...companionFeatures,...arcanumFeatures,...auraFeatures];
 }
 export function getPassiveScore(character:Character, skill:string) { return 10+getSkillBonus(character,skill); }

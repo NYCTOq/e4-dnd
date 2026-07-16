@@ -92,6 +92,10 @@ function hydrateSpellSlots(character: Character): CharacterSpellSlot[] {
     ? character.spellSlots
     : [];
 
+  if (defaults.length === 0) {
+    return existingSlots.map((slot)=>({level:Math.max(1,Math.floor(slot.level)),max:Math.max(0,Math.floor(slot.max)),used:Math.min(Math.max(0,Math.floor(slot.max)),Math.max(0,Math.floor(slot.used)))}));
+  }
+
   return defaults.map((defaultSlot) => {
     const existingSlot = existingSlots.find(
       (slot) => slot.level === defaultSlot.level,

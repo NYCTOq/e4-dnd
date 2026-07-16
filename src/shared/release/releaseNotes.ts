@@ -15,6 +15,18 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version:"2.17.0",date:"2026-07-16",title:"Paladin Smite & Aura System",
+    summary:"Divine Smite slot harcaması, otomatik hasar zarı ve Paladin aura progression masa moduna eklendi.",
+    changes:[
+      {text:"Spell slot seçerek otomatik Divine Smite damage roll",category:"Özellik"},
+      {text:"2014 ve 2024 için ayrı Smite dice sınırları",category:"Özellik"},
+      {text:"Fiend/Undead hedefler için ilave radiant die seçeneği",category:"Özellik"},
+      {text:"Aura of Protection ve Aura of Courage level/radius takibi",category:"Özellik"},
+      {text:"Level 11 Radiant Strikes Character Sheet ve Play Mode bilgisi",category:"Özellik"},
+      {text:"Paladin/Ranger slotlarının yeniden yüklemede silinmesi düzeltildi",category:"Düzeltme"},
+    ],
+  },
+  {
     version:"2.16.0",date:"2026-07-16",title:"Warlock Pact Magic & Mystic Arcanum",
     summary:"Warlock'ın ayrı slot progression'ı, Short Rest yenilemesi ve üst seviye Arcanum seçimleri tamamlandı.",
     changes:[

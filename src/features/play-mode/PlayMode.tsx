@@ -19,6 +19,7 @@ import { getWildShapeForms } from "../../core/rulesets/wildShapeRules";
 import { getBattleMasterManeuvers, getSuperiorityDie } from "../../core/rulesets/maneuverRules";
 import { getCompanionStats, getRangerCompanions } from "../../core/rulesets/companionRules";
 import { getClassFeatureActions } from "../../core/rulesets/classFeatureEngine";
+import { getDivineSmiteDice, getPaladinAuraSummary, isPaladin } from "../../core/rulesets/paladinRules";
 import {
   calculateEffectiveArmorClass,
   getEquippedItems,
@@ -78,6 +79,7 @@ export function PlayMode({
   );
   const [rollHistory, setRollHistory] = useState<RollResult[]>([]);
   const [isFocusMode, setIsFocusMode] = useState(false);
+  const [smiteHolyTarget,setSmiteHolyTarget]=useState(false);
 
   const character =
     characters.find((item) => item.id === selectedCharacterId) ?? characters[0];
@@ -143,6 +145,7 @@ export function PlayMode({
   const handledResourceIds=new Set(["sorcery-points","wild-shape","superiority-dice"]);
   const classActions=getClassFeatureActions(activeCharacter.className,activeCharacter.level,activeCharacter.ruleset).filter(action=>action.resourceId&&!handledResourceIds.has(action.resourceId)&&activeCharacter.resources.some(resource=>resource.id===action.resourceId));
   const arcanumSpells=(rulesetData?.spells??[]).filter(spell=>activeCharacter.arcanumSpellIds?.includes(spell.id));
+  const paladinAuras=isPaladin(activeCharacter.className)?getPaladinAuraSummary(activeCharacter.level):null;
 
   function commit(patch: Partial<Character>) {
     onUpdateCharacter({
@@ -171,6 +174,7 @@ export function PlayMode({
   function updateCompanionHp(amount:number){if(!companionStats)return;commit({companionCurrentHp:Math.min(companionStats.maxHp,Math.max(0,companionCurrentHp+amount))})}
   function executeClassAction(resourceId:string,amount=1){const resource=activeCharacter.resources.find(item=>item.id===resourceId);if(!resource||resource.max-resource.used<amount)return;let currentHp=activeCharacter.currentHp;let conditions=activeCharacter.conditions;if(resourceId==="second-wind"){const result=rollDice({count:1,sides:10,modifier:activeCharacter.level});currentHp=Math.min(activeCharacter.maxHp,currentHp+result.total);setRollHistory(current=>[{id:result.id,label:"Second Wind",notation:result.notation,total:result.total},...current].slice(0,6))}if(resourceId==="lay-on-hands")currentHp=Math.min(activeCharacter.maxHp,currentHp+amount);if(resourceId==="rage"&&!conditions.includes("Rage"))conditions=[...conditions,"Rage"];commit({currentHp,conditions,resources:activeCharacter.resources.map(item=>item.id===resourceId?{...item,used:Math.min(item.max,item.used+amount)}:item)})}
   function castArcanum(spellId:string){if(activeCharacter.usedArcanumSpellIds?.includes(spellId))return;commit({usedArcanumSpellIds:[...(activeCharacter.usedArcanumSpellIds??[]),spellId]})}
+  function divineSmite(slotLevel:number){const slot=spellSlots.find(item=>item.level===slotLevel);if(!slot||slot.used>=slot.max)return;const dice=getDivineSmiteDice(slotLevel,activeCharacter.ruleset,smiteHolyTarget);const result=rollDice({count:dice,sides:8,modifier:0});commit({spellSlots:spellSlots.map(item=>item.level===slotLevel?{...item,used:item.used+1}:item)});setRollHistory(current=>[{id:result.id,label:`Divine Smite · Level ${slotLevel}`,notation:result.notation,total:result.total},...current].slice(0,6))}
 
   function updateHp(amount: number) {
     commit({
@@ -458,6 +462,8 @@ export function PlayMode({
           {classActions.length?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Core Class Actions</span><h2>{activeCharacter.className} Kaynakları</h2></div></div><div className="play-mode-slot-grid">{classActions.map(action=>{const resourceId=action.resourceId!;const resource=activeCharacter.resources.find(item=>item.id===resourceId)!;const remaining=resource.max-resource.used;return <div className="play-mode-slot-row" key={action.id}><div><span>{action.name} · {action.actionType}</span><small>{action.summary}</small><strong>{remaining} / {resource.max} kaldı · {resource.recovery} rest</strong></div>{resourceId==="lay-on-hands"?<div>{[1,5,10].map(amount=><button key={amount} disabled={remaining<amount} onClick={()=>executeClassAction(resourceId,amount)}>+{amount} HP</button>)}</div>:<button type="button" disabled={remaining<1} onClick={()=>executeClassAction(resourceId)}>{resourceId==="second-wind"?"İyileş":"Kullan"}</button>}</div>})}</div></section>:null}
 
           {arcanumSpells.length?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Warlock · Long Rest</span><h2>Mystic Arcanum</h2></div><strong>{arcanumSpells.length-(activeCharacter.usedArcanumSpellIds??[]).length} hazır</strong></div><div className="play-mode-spell-list">{arcanumSpells.sort((a,b)=>a.level-b.level).map(spell=>{const used=activeCharacter.usedArcanumSpellIds?.includes(spell.id);return <button key={spell.id} disabled={used} onClick={()=>castArcanum(spell.id)}><span>Level {spell.level} · {spell.name}</span><small>{used?"Kullanıldı":"Arcanum Kullan"}</small></button>})}</div></section>:null}
+
+          {isPaladin(activeCharacter.className)&&activeCharacter.level>=2?<section className="play-mode-card"><div className="play-mode-section-head"><div><span className="mini-label">Paladin Combat</span><h2>Divine Smite</h2></div><label><input type="checkbox" checked={smiteHolyTarget} onChange={event=>setSmiteHolyTarget(event.target.checked)}/> Fiend / Undead</label></div><div className="play-mode-slot-grid">{spellSlots.map(slot=>{const dice=getDivineSmiteDice(slot.level,activeCharacter.ruleset,smiteHolyTarget);return <div className="play-mode-slot-row" key={slot.level}><div><span>Level {slot.level} Slot · {dice}d8 radiant</span><small>{slot.max-slot.used} / {slot.max} slot kaldı</small></div><button type="button" disabled={slot.used>=slot.max} onClick={()=>divineSmite(slot.level)}>Smite At</button></div>})}</div>{paladinAuras?<div className="play-mode-slot-grid">{paladinAuras.protection?<div className="play-mode-slot-row"><div><span>Aura of Protection · {paladinAuras.protection.radius} ft.</span><small>{paladinAuras.protection.summary}</small></div></div>:null}{paladinAuras.courage?<div className="play-mode-slot-row"><div><span>Aura of Courage · {paladinAuras.courage.radius} ft.</span><small>{paladinAuras.courage.summary}</small></div></div>:null}{paladinAuras.radiantStrikes?<div className="play-mode-slot-row"><div><span>Radiant Strikes</span><small>{paladinAuras.radiantStrikes}</small></div></div>:null}</div>:null}</section>:null}
 
           <section className="play-mode-card">
             <div className="play-mode-section-head">
