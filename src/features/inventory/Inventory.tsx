@@ -55,7 +55,7 @@ export function Inventory({ rulesetData, isRulesetLoading, rulesetError }: {
           <div className="character-filter-panel filter-panel-extended">
             <label>Ara<input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} placeholder="Longsword, armor, potion..." /></label>
             <label>Category<select value={categoryFilter} onChange={(event) => setCategoryFilter(event.target.value as "all" | DndItemData["category"])}>
-              <option value="all">Tümü</option><option value="weapon">Weapon</option><option value="armor">Armor</option><option value="shield">Shield</option><option value="gear">Gear</option>
+              <option value="all">Tümü</option><option value="weapon">Weapon</option><option value="armor">Armor</option><option value="shield">Shield</option><option value="gear">Gear</option><option value="tool">Tool</option><option value="pack">Pack</option><option value="ammunition">Ammunition</option>
             </select></label>
             <label>Kaynak<select value={sourceFilter} onChange={(event) => setSourceFilter(event.target.value as ItemSourceFilter)}>
               <option value="all">Tümü</option><option value="official">Data pack</option><option value="homebrew">Homebrew</option>

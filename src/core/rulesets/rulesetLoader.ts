@@ -4,6 +4,7 @@ import { getRulesetDefinition } from "./rulesetRegistry";
 import { SUBCLASS_EXPANSION_2014, SUBCLASS_EXPANSION_2024 } from "./subclassExpansion";
 import { FEAT_EXPANSION_2014, FEAT_EXPANSION_2024 } from "./featExpansion";
 import { SPELL_EXPANSION_2014, SPELL_EXPANSION_2024 } from "./spellExpansion";
+import { ITEM_EXPANSION_2014, ITEM_EXPANSION_2024 } from "./itemExpansion";
 import { enrichClassProgression } from "./classProgressionAudit";
 
 async function loadJson<T>(path: string): Promise<T> {
@@ -35,8 +36,10 @@ export async function loadRuleset(id: RulesetId): Promise<RulesetData> {
   const mergedFeats = [...feats, ...featExpansion.filter((candidate) => !feats.some((existing) => existing.id === candidate.id))];
   const spellExpansion = sourceId === "dnd_2024" ? SPELL_EXPANSION_2024 : SPELL_EXPANSION_2014;
   const mergedSpells = [...spells, ...spellExpansion.filter((candidate) => !spells.some((existing) => existing.id === candidate.id))];
+  const itemExpansion = sourceId === "dnd_2024" ? ITEM_EXPANSION_2024 : ITEM_EXPANSION_2014;
+  const mergedItems = [...items, ...itemExpansion.filter((candidate) => !items.some((existing) => existing.id === candidate.id))];
   const enrichedClasses = classes.map((classData) => enrichClassProgression(classData, sourceId));
-  return { id, name: definition.name, classes: enrichedClasses, subclasses: mergedSubclasses, races, backgrounds, feats: mergedFeats, spells: mergedSpells, items, monsters };
+  return { id, name: definition.name, classes: enrichedClasses, subclasses: mergedSubclasses, races, backgrounds, feats: mergedFeats, spells: mergedSpells, items: mergedItems, monsters };
 }
 
 export const loadDnd2014Ruleset = () => loadRuleset("dnd_2014");
