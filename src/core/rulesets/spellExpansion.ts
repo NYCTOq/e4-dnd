@@ -3,6 +3,13 @@ import type { DndSpellData } from "./ruleset.types";
 type Edition = "dnd_2014" | "dnd_2024";
 type Seed = [string, number, string, DndSpellData["effectType"], string[], string, Partial<DndSpellData>?];
 const seeds: Seed[] = [
+  ["Blade Ward",0,"Abjuration","defense",["Bard","Sorcerer","Warlock","Wizard"],"Kısa süreli büyülü koruma sağlayarak gelen saldırılara karşı savunmayı güçlendirir.",{castingTime:"1 action",duration:"1 round"}],
+  ["Dancing Lights",0,"Evocation","utility",["Bard","Sorcerer","Wizard"],"Kontrol edilebilen küçük ışık kaynakları oluşturur.",{concentration:true,duration:"Up to 1 minute"}],
+  ["Eldritch Blast",0,"Evocation","damage",["Warlock"],"Uzak bir hedefe force enerjisi taşıyan spell attack gönderir.",{attackType:"spell-attack",damageDice:"1d10",damageType:"force",scaling:{mode:"character-level",dicePerStep:"1d10"}}],
+  ["Friends",0,"Enchantment","utility",["Bard","Sorcerer","Warlock","Wizard"],"Kısa süre boyunca sosyal etkileşimde seçilen hedefe karşı avantaj sağlar.",{concentration:true,duration:"Up to 1 minute"}],
+  ["Message",0,"Transmutation","utility",["Bard","Sorcerer","Wizard"],"Yakındaki bir hedefe yalnızca onun duyabileceği kısa bir mesaj iletir.",{duration:"1 round"}],
+  ["True Strike",0,"Divination","utility",["Bard","Sorcerer","Warlock","Wizard"],"Büyülü öngörüyle takip eden saldırının isabet potansiyelini destekler.",{}],
+  ["Vicious Mockery",0,"Enchantment","damage",["Bard"],"Hedefe psychic hasar verir ve sonraki saldırısını zayıflatır.",{saveAbility:"wis",damageDice:"1d4",damageType:"psychic",scaling:{mode:"character-level",dicePerStep:"1d4"}}],
   ["Banishment",4,"Abjuration","control",["Cleric","Paladin","Sorcerer","Warlock","Wizard"],"Bir hedefi geçici olarak başka bir düzleme uzaklaştırır.",{concentration:true,saveAbility:"cha",conditionEffect:"Banished",target:"One creature"}],
   ["Death Ward",4,"Abjuration","defense",["Cleric","Paladin"],"Hedefi ölümcül bir darbeye veya ani ölüm etkisine karşı bir kez korur.",{duration:"8 hours"}],
   ["Freedom of Movement",4,"Abjuration","movement",["Cleric","Druid","Ranger"],"Hedefin büyülü hareket engellerini aşmasını kolaylaştırır.",{duration:"1 hour"}],

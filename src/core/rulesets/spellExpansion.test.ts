@@ -16,4 +16,9 @@ describe("spell database v2 expansion", () => {
     const required = ["Arcane Eye", "Crusader's Mantle", "Moonbeam", "Protection from Evil and Good", "Scrying", "Zone of Truth"];
     expect(required.every((name) => SPELL_EXPANSION_2014.some((spell) => spell.name === name))).toBe(true);
   });
+  it("expands cantrip coverage for every primary caster", () => {
+    const cantrips = SPELL_EXPANSION_2014.filter((spell) => spell.level === 0);
+    for (const className of ["Bard", "Sorcerer", "Warlock", "Wizard"]) expect(cantrips.some((spell) => spell.classes.includes(className))).toBe(true);
+    expect(cantrips.find((spell) => spell.name === "Eldritch Blast")?.damageType).toBe("force");
+  });
 });

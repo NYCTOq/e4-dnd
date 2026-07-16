@@ -15,6 +15,17 @@ export type ReleaseEntry = {
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
   {
+    version: "2.7.0", date: "2026-07-16", title: "Cantrip Expansion & Class Coverage",
+    summary: "Caster class cantrip havuzları açık lisanslı seçenekler ve yapılandırılmış mekanik metadata ile genişletildi.",
+    changes: [
+      { text: "Blade Ward, Dancing Lights, Friends, Message ve True Strike", category: "Özellik" },
+      { text: "Warlock için Eldritch Blast; Bard için Vicious Mockery", category: "Özellik" },
+      { text: "Damage, save, attack ve character-level scaling metadata", category: "Teknik" },
+      { text: "2014 ve 2024 için edition ayrımlı cantrip kayıtları", category: "Teknik" },
+      { text: "Caster class kapsamı için otomatik test", category: "Teknik" },
+    ],
+  },
+  {
     version: "2.6.0", date: "2026-07-16", title: "Weapon Mastery System",
     summary: "2024 class progression içindeki Weapon Mastery kotaları Builder ve kalıcı karakter verisine bağlandı.",
     changes: [
