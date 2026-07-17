@@ -1,3 +1,12 @@
+# v5.2.0 — Runtime Coverage Closure Mega Pack
+
+- Added a central runtime closure report for classes, subclasses, feats, spells and items.
+- Missing runtime behavior now produces explicit release blockers.
+- Assisted behavior remains visible with a guided Play Mode action policy.
+- Manual behavior is retained only with an explicit table-ruling explanation.
+- Added per-entity closure lookup and release-friendly summary output.
+- Added six runtime closure certification tests.
+
 # v5.1.0 — Stable Player Post-Release QA & Bug Closure Mega Pack
 
 - 2014/2024 martial and caster journeys, multiclass, level 1–20, spell/rest, equipment, backup, offline/mobile and keyboard flows are represented in one QA matrix.
