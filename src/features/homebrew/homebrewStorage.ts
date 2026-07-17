@@ -5,6 +5,7 @@ import type {
 } from "../../core/rulesets/ruleset.types";
 import { readJsonSafely, writeJsonSafely } from "../../core/storage/safeStorage";
 import type { HomebrewLibraryPreference } from "../../core/homebrew/homebrewMarketplaceLibrary";
+import type { HomebrewPackageSnapshot } from "../../core/homebrew/homebrewMarketplaceUpdate";
 
 const HOMEBREW_SPELLS_STORAGE_KEY = "e4_dnd_homebrew_spells_v1";
 const HOMEBREW_ITEMS_STORAGE_KEY = "e4_dnd_homebrew_items_v1";
@@ -58,6 +59,7 @@ import {
 export const HOMEBREW_PACKAGES_STORAGE_KEY = "e4_dnd_homebrew_packages_v1";
 export const HOMEBREW_PACKAGES_CHANGED_EVENT = "e4-dnd-homebrew-packages-changed";
 export const HOMEBREW_LIBRARY_PREFERENCES_STORAGE_KEY = "e4_dnd_homebrew_library_preferences_v1";
+export const HOMEBREW_PACKAGE_SNAPSHOTS_STORAGE_KEY = "e4_dnd_homebrew_package_snapshots_v1";
 
 export function loadHomebrewPackages(): HomebrewPackage[] {
   return loadArray<unknown>(HOMEBREW_PACKAGES_STORAGE_KEY).flatMap((raw) => {
@@ -96,4 +98,12 @@ export function loadHomebrewLibraryPreferences(): HomebrewLibraryPreference[] {
 export function saveHomebrewLibraryPreferences(preferences: HomebrewLibraryPreference[]) {
   saveArray(HOMEBREW_LIBRARY_PREFERENCES_STORAGE_KEY, preferences);
   if (typeof window !== "undefined") window.dispatchEvent(new CustomEvent(HOMEBREW_PACKAGES_CHANGED_EVENT));
+}
+
+export function loadHomebrewPackageSnapshots(): HomebrewPackageSnapshot[] {
+  return loadArray<HomebrewPackageSnapshot>(HOMEBREW_PACKAGE_SNAPSHOTS_STORAGE_KEY);
+}
+
+export function saveHomebrewPackageSnapshots(snapshots: HomebrewPackageSnapshot[]) {
+  saveArray(HOMEBREW_PACKAGE_SNAPSHOTS_STORAGE_KEY, snapshots);
 }

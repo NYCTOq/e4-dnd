@@ -1,8 +1,10 @@
 import { useMemo, useState } from "react";
 import { createEntityFromDraft, createPackageFromDraft, DEFAULT_HOMEBREW_CREATOR_DRAFT, type HomebrewCreatorDraft } from "../../core/homebrew/homebrewCreator";
 import { exportHomebrewPackage, importHomebrewPackage, validateHomebrewPackage, type HomebrewEntity, type HomebrewEntityType, type HomebrewPackage } from "../../core/homebrew/homebrewFoundation";
-import { loadHomebrewLibraryPreferences, loadHomebrewPackages, saveHomebrewLibraryPreferences, saveHomebrewPackages } from "./homebrewStorage";
+import { loadHomebrewLibraryPreferences, loadHomebrewPackages, loadHomebrewPackageSnapshots, saveHomebrewLibraryPreferences, saveHomebrewPackages, saveHomebrewPackageSnapshots } from "./homebrewStorage";
 import { moveHomebrewPackagePriority, normalizeHomebrewLibraryPreferences, resolveHomebrewMarketplaceLibrary, toggleHomebrewPackage, type HomebrewLibraryPreference } from "../../core/homebrew/homebrewMarketplaceLibrary";
+import { applyHomebrewMarketplaceManifest, pruneHomebrewSnapshots, rollbackHomebrewPackage, type HomebrewPackageSnapshot } from "../../core/homebrew/homebrewMarketplaceUpdate";
+import { importHomebrewShareManifest } from "../../core/homebrew/homebrewPackageSharing";
 
 const ENTITY_LABELS: Record<HomebrewEntityType, string> = {
   class: "Class",
@@ -31,6 +33,8 @@ export function HomebrewPackageCreator() {
   const [importText, setImportText] = useState("");
   const [libraryPreferences, setLibraryPreferences] = useState<HomebrewLibraryPreference[]>(() => normalizeHomebrewLibraryPreferences(loadHomebrewPackages(), loadHomebrewLibraryPreferences()));
   const [message, setMessage] = useState("");
+  const [marketplaceText, setMarketplaceText] = useState("");
+  const [snapshots, setSnapshots] = useState<HomebrewPackageSnapshot[]>(() => loadHomebrewPackageSnapshots());
 
   const marketplace = useMemo(() => resolveHomebrewMarketplaceLibrary(packages, libraryPreferences), [packages, libraryPreferences]);
 
@@ -70,6 +74,37 @@ export function HomebrewPackageCreator() {
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "Paket kaydedilemedi.");
     }
+  }
+
+  function applyMarketplaceUpdate() {
+    try {
+      const manifest = importHomebrewShareManifest(marketplaceText, "5.16.0");
+      const result = applyHomebrewMarketplaceManifest(packages, manifest, snapshots, "5.16.0");
+      if (result.blockers.length) throw new Error(result.blockers.join(" "));
+      const nextSnapshots = pruneHomebrewSnapshots(result.snapshots, 5);
+      saveHomebrewPackages(result.packages);
+      saveHomebrewPackageSnapshots(nextSnapshots);
+      setPackages(result.packages);
+      setSnapshots(nextSnapshots);
+      const preferences = normalizeHomebrewLibraryPreferences(result.packages, libraryPreferences);
+      setLibraryPreferences(preferences);
+      saveHomebrewLibraryPreferences(preferences);
+      setMarketplaceText("");
+      setMessage(result.updatedPackageIds.length ? `${result.updatedPackageIds.length} paket güncellendi ve önceki sürümler yedeklendi.` : "Uygulanacak daha yeni paket bulunamadı.");
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Marketplace güncellemesi uygulanamadı.");
+    }
+  }
+
+  function rollbackSnapshot(snapshotId: string) {
+    const result = rollbackHomebrewPackage(packages, snapshots, snapshotId);
+    if (result.blockers.length) { setMessage(result.blockers.join(" ")); return; }
+    const nextSnapshots = pruneHomebrewSnapshots(result.snapshots, 5);
+    saveHomebrewPackages(result.packages);
+    saveHomebrewPackageSnapshots(nextSnapshots);
+    setPackages(result.packages);
+    setSnapshots(nextSnapshots);
+    setMessage(result.warnings[0] ?? "Paket geri alındı.");
   }
 
   function importPackage() {
@@ -159,6 +194,12 @@ export function HomebrewPackageCreator() {
             </article>)}
           </div>
           {marketplace.conflicts.length ? <div className="homebrew-list">{marketplace.conflicts.map((conflict) => <article className="homebrew-list-item" key={conflict.key}><div><span className="mini-label">{conflict.type}</span><h3>{conflict.entityId}</h3><p>Kazanan paket: {conflict.winnerPackageId}. Önceliği değiştirdiğinde sonuç anında yenilenir.</p></div></article>)}</div> : <p>Aktif paketlerde içerik çakışması yok.</p>}
+
+
+          <h3>Marketplace güncelleme ve rollback</h3>
+          <textarea value={marketplaceText} onChange={(event) => setMarketplaceText(event.target.value)} rows={6} placeholder='{"format":"e4-dnd-homebrew-share", ...}' />
+          <button className="secondary-action" type="button" onClick={applyMarketplaceUpdate} disabled={!marketplaceText.trim()}>Güncellemeleri Güvenli Uygula</button>
+          {snapshots.length ? <div className="homebrew-list">{snapshots.map((snapshot) => <article className="homebrew-list-item" key={snapshot.id}><div><span className="mini-label">Snapshot · v{snapshot.version}</span><h3>{snapshot.packageName}</h3><p>{snapshot.reason} · {new Date(snapshot.createdAt).toLocaleString("tr-TR")}</p></div><button type="button" onClick={() => rollbackSnapshot(snapshot.id)}>Bu Sürüme Dön</button></article>)}</div> : <p>Henüz güncelleme snapshot’ı yok.</p>}
 
           <h3>JSON içe aktar</h3>
           <textarea value={importText} onChange={(event) => setImportText(event.target.value)} rows={8} placeholder='{"format":"e4-dnd-homebrew", ...}' />
