@@ -47,12 +47,20 @@ export function saveHomebrewMonsters(monsters: DndMonsterData[]) {
 
 import type { HomebrewPackage } from "../../core/homebrew/homebrewFoundation";
 import { importHomebrewPackage, validateHomebrewPackage } from "../../core/homebrew/homebrewFoundation";
+import {
+  importHomebrewShareManifest,
+  mergeSharedHomebrewPackages,
+  migrateHomebrewPackage,
+  type HomebrewShareManifest,
+} from "../../core/homebrew/homebrewPackageSharing";
 
 export const HOMEBREW_PACKAGES_STORAGE_KEY = "e4_dnd_homebrew_packages_v1";
 export const HOMEBREW_PACKAGES_CHANGED_EVENT = "e4-dnd-homebrew-packages-changed";
 
 export function loadHomebrewPackages(): HomebrewPackage[] {
-  return loadArray<HomebrewPackage>(HOMEBREW_PACKAGES_STORAGE_KEY).filter((pkg) => validateHomebrewPackage(pkg).valid);
+  return loadArray<unknown>(HOMEBREW_PACKAGES_STORAGE_KEY).flatMap((raw) => {
+    try { return [migrateHomebrewPackage(raw).package]; } catch { return []; }
+  });
 }
 
 export function saveHomebrewPackages(packages: HomebrewPackage[]) {
@@ -66,4 +74,14 @@ export function mergeImportedHomebrewPackage(raw: string, packages: HomebrewPack
   const imported = importHomebrewPackage(raw);
   const next = packages.filter((pkg) => pkg.id !== imported.id);
   return [...next, imported];
+}
+
+
+export function mergeImportedHomebrewShareManifest(raw: string, packages: HomebrewPackage[], appVersion = "5.14.0"): HomebrewPackage[] {
+  const manifest = importHomebrewShareManifest(raw, appVersion);
+  return mergeSharedHomebrewPackages(packages, manifest, appVersion);
+}
+
+export function installHomebrewShareManifest(manifest: HomebrewShareManifest, packages: HomebrewPackage[], appVersion = "5.14.0"): HomebrewPackage[] {
+  return mergeSharedHomebrewPackages(packages, manifest, appVersion);
 }
