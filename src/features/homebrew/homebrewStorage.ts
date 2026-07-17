@@ -4,6 +4,7 @@ import type {
   DndSpellData,
 } from "../../core/rulesets/ruleset.types";
 import { readJsonSafely, writeJsonSafely } from "../../core/storage/safeStorage";
+import type { HomebrewLibraryPreference } from "../../core/homebrew/homebrewMarketplaceLibrary";
 
 const HOMEBREW_SPELLS_STORAGE_KEY = "e4_dnd_homebrew_spells_v1";
 const HOMEBREW_ITEMS_STORAGE_KEY = "e4_dnd_homebrew_items_v1";
@@ -56,6 +57,7 @@ import {
 
 export const HOMEBREW_PACKAGES_STORAGE_KEY = "e4_dnd_homebrew_packages_v1";
 export const HOMEBREW_PACKAGES_CHANGED_EVENT = "e4-dnd-homebrew-packages-changed";
+export const HOMEBREW_LIBRARY_PREFERENCES_STORAGE_KEY = "e4_dnd_homebrew_library_preferences_v1";
 
 export function loadHomebrewPackages(): HomebrewPackage[] {
   return loadArray<unknown>(HOMEBREW_PACKAGES_STORAGE_KEY).flatMap((raw) => {
@@ -77,11 +79,21 @@ export function mergeImportedHomebrewPackage(raw: string, packages: HomebrewPack
 }
 
 
-export function mergeImportedHomebrewShareManifest(raw: string, packages: HomebrewPackage[], appVersion = "5.14.0"): HomebrewPackage[] {
+export function mergeImportedHomebrewShareManifest(raw: string, packages: HomebrewPackage[], appVersion = "5.15.0"): HomebrewPackage[] {
   const manifest = importHomebrewShareManifest(raw, appVersion);
   return mergeSharedHomebrewPackages(packages, manifest, appVersion);
 }
 
-export function installHomebrewShareManifest(manifest: HomebrewShareManifest, packages: HomebrewPackage[], appVersion = "5.14.0"): HomebrewPackage[] {
+export function installHomebrewShareManifest(manifest: HomebrewShareManifest, packages: HomebrewPackage[], appVersion = "5.15.0"): HomebrewPackage[] {
   return mergeSharedHomebrewPackages(packages, manifest, appVersion);
+}
+
+
+export function loadHomebrewLibraryPreferences(): HomebrewLibraryPreference[] {
+  return loadArray<HomebrewLibraryPreference>(HOMEBREW_LIBRARY_PREFERENCES_STORAGE_KEY);
+}
+
+export function saveHomebrewLibraryPreferences(preferences: HomebrewLibraryPreference[]) {
+  saveArray(HOMEBREW_LIBRARY_PREFERENCES_STORAGE_KEY, preferences);
+  if (typeof window !== "undefined") window.dispatchEvent(new CustomEvent(HOMEBREW_PACKAGES_CHANGED_EVENT));
 }

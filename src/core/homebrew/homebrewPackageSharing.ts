@@ -138,7 +138,7 @@ function resolveInstallOrder(entries: SharedHomebrewPackage[]): { order: string[
   return { order, cycles: [...cycles] };
 }
 
-export function validateHomebrewShareManifest(manifest: HomebrewShareManifest, appVersion = "5.14.0"): HomebrewShareValidation {
+export function validateHomebrewShareManifest(manifest: HomebrewShareManifest, appVersion = "5.15.0"): HomebrewShareValidation {
   const blockers: string[] = [];
   const warnings: string[] = [];
   if (manifest.format !== "e4-dnd-homebrew-share") blockers.push("Geçersiz paylaşım manifesti formatı.");
@@ -172,7 +172,7 @@ export function validateHomebrewShareManifest(manifest: HomebrewShareManifest, a
 
 export function createHomebrewShareManifest(
   packages: SharedHomebrewPackage[],
-  minimumVersion = "5.14.0",
+  minimumVersion = "5.15.0",
 ): HomebrewShareManifest {
   return {
     format: "e4-dnd-homebrew-share",
@@ -189,7 +189,7 @@ export function exportHomebrewShareManifest(manifest: HomebrewShareManifest): st
   return JSON.stringify(manifest, null, 2);
 }
 
-export function importHomebrewShareManifest(raw: string, appVersion = "5.14.0"): HomebrewShareManifest {
+export function importHomebrewShareManifest(raw: string, appVersion = "5.15.0"): HomebrewShareManifest {
   let parsed: unknown;
   try { parsed = JSON.parse(raw); } catch { throw new Error("Homebrew paylaşım manifesti geçerli JSON değil."); }
   if (!parsed || typeof parsed !== "object") throw new Error("Homebrew paylaşım manifesti nesne olmalıdır.");
@@ -220,7 +220,7 @@ export function importHomebrewShareManifest(raw: string, appVersion = "5.14.0"):
 export function mergeSharedHomebrewPackages(
   current: HomebrewPackage[],
   manifest: HomebrewShareManifest,
-  appVersion = "5.14.0",
+  appVersion = "5.15.0",
 ): HomebrewPackage[] {
   const report = validateHomebrewShareManifest(manifest, appVersion);
   if (!report.valid) throw new Error(report.blockers.join(" "));

@@ -1,7 +1,8 @@
 import { useMemo, useState } from "react";
 import { createEntityFromDraft, createPackageFromDraft, DEFAULT_HOMEBREW_CREATOR_DRAFT, type HomebrewCreatorDraft } from "../../core/homebrew/homebrewCreator";
 import { exportHomebrewPackage, importHomebrewPackage, validateHomebrewPackage, type HomebrewEntity, type HomebrewEntityType, type HomebrewPackage } from "../../core/homebrew/homebrewFoundation";
-import { loadHomebrewPackages, saveHomebrewPackages } from "./homebrewStorage";
+import { loadHomebrewLibraryPreferences, loadHomebrewPackages, saveHomebrewLibraryPreferences, saveHomebrewPackages } from "./homebrewStorage";
+import { moveHomebrewPackagePriority, normalizeHomebrewLibraryPreferences, resolveHomebrewMarketplaceLibrary, toggleHomebrewPackage, type HomebrewLibraryPreference } from "../../core/homebrew/homebrewMarketplaceLibrary";
 
 const ENTITY_LABELS: Record<HomebrewEntityType, string> = {
   class: "Class",
@@ -28,7 +29,10 @@ export function HomebrewPackageCreator() {
   const [stagedEntities, setStagedEntities] = useState<HomebrewEntity[]>([]);
   const [packages, setPackages] = useState<HomebrewPackage[]>(() => loadHomebrewPackages());
   const [importText, setImportText] = useState("");
+  const [libraryPreferences, setLibraryPreferences] = useState<HomebrewLibraryPreference[]>(() => normalizeHomebrewLibraryPreferences(loadHomebrewPackages(), loadHomebrewLibraryPreferences()));
   const [message, setMessage] = useState("");
+
+  const marketplace = useMemo(() => resolveHomebrewMarketplaceLibrary(packages, libraryPreferences), [packages, libraryPreferences]);
 
   const preview = useMemo(() => {
     if (!draft.name.trim()) return null;
@@ -58,6 +62,9 @@ export function HomebrewPackageCreator() {
       const next = [...packages.filter((item) => item.id !== pkg.id), pkg];
       saveHomebrewPackages(next);
       setPackages(next);
+      const preferences = normalizeHomebrewLibraryPreferences(next, libraryPreferences);
+      setLibraryPreferences(preferences);
+      saveHomebrewLibraryPreferences(preferences);
       setStagedEntities([]);
       setMessage(`${pkg.name} kaydedildi.`);
     } catch (error) {
@@ -71,6 +78,9 @@ export function HomebrewPackageCreator() {
       const next = [...packages.filter((item) => item.id !== pkg.id), pkg];
       saveHomebrewPackages(next);
       setPackages(next);
+      const preferences = normalizeHomebrewLibraryPreferences(next, libraryPreferences);
+      setLibraryPreferences(preferences);
+      saveHomebrewLibraryPreferences(preferences);
       setImportText("");
       setMessage(`${pkg.name} içe aktarıldı.`);
     } catch (error) {
@@ -130,7 +140,25 @@ export function HomebrewPackageCreator() {
           {stagedEntities.length ? <div className="homebrew-list">{stagedEntities.map((entity) => <article className="homebrew-list-item" key={entity.id}><div><span className="mini-label">{ENTITY_LABELS[entity.type]}</span><h3>{entity.name}</h3><p>{entity.description}</p><div className="library-pill-row"><span>{entity.resources?.length ?? 0} resource</span><span>{entity.actions?.length ?? 0} action</span></div></div><button type="button" onClick={() => setStagedEntities((current) => current.filter((item) => item.id !== entity.id))}>Çıkar</button></article>)}</div> : <p>Henüz içerik eklenmedi.</p>}
 
           <h3>Kayıtlı paketler</h3>
-          {packages.map((pkg) => <article className="homebrew-list-item" key={pkg.id}><div><span className="mini-label">v{pkg.version}</span><h3>{pkg.name}</h3><p>{pkg.entities.length} içerik</p></div><div className="homebrew-inline-actions"><button type="button" onClick={() => downloadJson(`${pkg.id}.json`, exportHomebrewPackage(pkg))}>Dışa Aktar</button><button type="button" onClick={() => { const next = packages.filter((item) => item.id !== pkg.id); saveHomebrewPackages(next); setPackages(next); }}>Sil</button></div></article>)}
+          {packages.map((pkg) => <article className="homebrew-list-item" key={pkg.id}><div><span className="mini-label">v{pkg.version}</span><h3>{pkg.name}</h3><p>{pkg.entities.length} içerik</p></div><div className="homebrew-inline-actions"><button type="button" onClick={() => downloadJson(`${pkg.id}.json`, exportHomebrewPackage(pkg))}>Dışa Aktar</button><button type="button" onClick={() => { const next = packages.filter((item) => item.id !== pkg.id); saveHomebrewPackages(next); setPackages(next); const preferences = normalizeHomebrewLibraryPreferences(next, libraryPreferences); setLibraryPreferences(preferences); saveHomebrewLibraryPreferences(preferences); }}>Sil</button></div></article>)}
+
+          <h3>Paket kütüphanesi ve çakışmalar</h3>
+          <p className="homebrew-builder-message">Hazırlık skoru: {marketplace.readinessScore}/100 · {marketplace.conflicts.length} çakışma · {marketplace.activePackages.length} aktif paket</p>
+          <div className="homebrew-list">
+            {marketplace.entries.map((entry, index) => <article className="homebrew-list-item" key={`library-${entry.package.id}`}>
+              <div>
+                <span className="mini-label">Öncelik {index + 1} · v{entry.package.version}</span>
+                <h3>{entry.package.name}</h3>
+                <p>{entry.enabled ? "Aktif" : "Devre dışı"}{entry.updateAvailable ? ` · Güncelleme: ${entry.updateVersion}` : ""}</p>
+              </div>
+              <div className="homebrew-inline-actions">
+                <button type="button" onClick={() => { const next = toggleHomebrewPackage(libraryPreferences, entry.package.id); setLibraryPreferences(next); saveHomebrewLibraryPreferences(next); }}>{entry.enabled ? "Devre Dışı" : "Etkinleştir"}</button>
+                <button type="button" disabled={index === 0} onClick={() => { const next = moveHomebrewPackagePriority(libraryPreferences, entry.package.id, "up"); setLibraryPreferences(next); saveHomebrewLibraryPreferences(next); }}>Yukarı</button>
+                <button type="button" disabled={index === marketplace.entries.length - 1} onClick={() => { const next = moveHomebrewPackagePriority(libraryPreferences, entry.package.id, "down"); setLibraryPreferences(next); saveHomebrewLibraryPreferences(next); }}>Aşağı</button>
+              </div>
+            </article>)}
+          </div>
+          {marketplace.conflicts.length ? <div className="homebrew-list">{marketplace.conflicts.map((conflict) => <article className="homebrew-list-item" key={conflict.key}><div><span className="mini-label">{conflict.type}</span><h3>{conflict.entityId}</h3><p>Kazanan paket: {conflict.winnerPackageId}. Önceliği değiştirdiğinde sonuç anında yenilenir.</p></div></article>)}</div> : <p>Aktif paketlerde içerik çakışması yok.</p>}
 
           <h3>JSON içe aktar</h3>
           <textarea value={importText} onChange={(event) => setImportText(event.target.value)} rows={8} placeholder='{"format":"e4-dnd-homebrew", ...}' />
