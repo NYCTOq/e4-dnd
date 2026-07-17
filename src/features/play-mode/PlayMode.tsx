@@ -60,6 +60,7 @@ import { getEncumbrance, getEquipmentLegality, getInventoryWeight, findAmmunitio
 import { getMulticlassAttacksPerAction, normalizeClassLevels } from "../../core/rulesets/multiclassRules";
 import { loadHomebrewPackages } from "../homebrew/homebrewStorage";
 import { executeHomebrewRuntimeAction, getHomebrewCharacterRuntime, recoverHomebrewCharacterResources, synchronizeHomebrewResources } from "../../core/homebrew/homebrewRuntimeIntegration";
+import { getHomebrewContentRuntime } from "../../core/homebrew/homebrewContentRuntimeIntegration";
 import { getAttunedItemCount, recoverHighestSpentSpellSlot, recoverItemCharges, spendItemCharge, toggleItemAttunement } from "../../core/rulesets/magicItemRules";
 import {
   calculateEffectiveArmorClass,
@@ -181,6 +182,7 @@ export function PlayMode({
 
   const activeCharacter = character;
   const homebrewRuntime = getHomebrewCharacterRuntime(activeCharacter, homebrewPackages);
+  const homebrewContentRuntime = getHomebrewContentRuntime(activeCharacter, homebrewPackages, rulesetData);
   const classAbilities=getClassAbilityRuntime(activeCharacter.abilities,activeCharacter.className,activeCharacter.level);
   const magicAccessoryRuntime=getMagicAccessoryRuntime(classAbilities,activeCharacter.inventory,rulesetData?.items);
   const effectiveCharacter={...activeCharacter,abilities:magicAccessoryRuntime.abilities};
@@ -884,6 +886,14 @@ export function PlayMode({
               ))}
             </div>
           </section>
+
+          {(homebrewContentRuntime.feats.length||homebrewContentRuntime.spells.length||homebrewContentRuntime.items.length) ? <section className="play-mode-card">
+            <div className="play-mode-section-head"><div><span className="mini-label">Homebrew Content Runtime</span><h2>Feat, Spell & Item</h2></div><strong>{homebrewContentRuntime.ready?"Ready":"Needs attention"}</strong></div>
+            {homebrewContentRuntime.blockers.length?<div className="condition-rule-summary">{homebrewContentRuntime.blockers.map(message=><small key={message}>Blocker: {message}</small>)}</div>:null}
+            {homebrewContentRuntime.feats.length?<div className="play-mode-roll-history">{homebrewContentRuntime.feats.map(entry=><div key={entry.entityId}><span>{entry.feat.name}<small>{entry.passiveSummaries.join(" · ")}</small></span><strong>{entry.choiceComplete?"Aktif":"Seçim eksik"}</strong></div>)}</div>:null}
+            {homebrewContentRuntime.spells.length?<div className="play-mode-roll-history">{homebrewContentRuntime.spells.map(entry=><div key={entry.entityId}><span>{entry.spell.name}<small>{[entry.formula,entry.spell.effectType,entry.prepared?"Prepared":entry.known?"Known":null,...entry.warnings].filter(Boolean).join(" · ")}</small></span><strong>{entry.automatic?"Automatic":"Guided"}</strong></div>)}</div>:null}
+            {homebrewContentRuntime.items.length?<div className="play-mode-roll-history">{homebrewContentRuntime.items.map(entry=><div key={entry.entityId}><span>{entry.item.name}<small>{[...entry.effectSummary,entry.chargesRemaining!==undefined?`${entry.chargesRemaining} charge`:null,entry.item.requiresAttunement?(entry.attuned?"Attuned":"Attunement gerekli"):null].filter(Boolean).join(" · ")}</small></span><strong>{entry.usable?"Kullanılabilir":"Hazır değil"}</strong></div>)}</div>:null}
+          </section>:null}
 
           {homebrewRuntime.entities.length ? <section className="play-mode-card">
             <div className="play-mode-section-head"><div><span className="mini-label">Homebrew Runtime</span><h2>Özel Özellikler</h2></div>{homebrewRuntime.needsResourceSync?<button type="button" onClick={syncHomebrewResources}>Kaynakları Senkronize Et</button>:null}</div>

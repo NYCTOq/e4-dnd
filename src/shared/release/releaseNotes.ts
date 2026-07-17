@@ -1,4 +1,5 @@
-export type ReleaseCategory = "Özellik" | "İyileştirme" | "Düzeltme" | "Teknik";
+
+  export type ReleaseCategory = "Özellik" | "İyileştirme" | "Düzeltme" | "Teknik";
 
 export type ReleaseChange = {
   text: string;
@@ -14,6 +15,8 @@ export type ReleaseEntry = {
 };
 
 export const RELEASE_NOTES: readonly ReleaseEntry[] = [
+  {version:"5.13.0",date:"2026-07-17",title:"Homebrew Spell, Item & Feat Runtime Integration",summary:"Selected Homebrew feats, spells and items now expose certified runtime behavior in Character Sheet and Play Mode.",changes:[{text:"Homebrew feat choice and passive runtime certification",category:"Özellik"},{text:"Homebrew spell damage, healing, save, concentration and reaction readiness",category:"Özellik"},{text:"Homebrew item attunement, charge and granted-spell runtime",category:"Özellik"},{text:"Ability bonus, self-effect and item-charge helpers",category:"Teknik"},{text:"Feat, spell and item runtime blocker reporting",category:"İyileştirme"},{text:"Homebrew content runtime integration tests",category:"Teknik"}]},
+
   {version:"5.12.0",date:"2026-07-17",title:"Homebrew Character Builder & Level-Up Integration",summary:"Versioned Homebrew class, subclass, species, background and feat packages now participate directly in Builder and Level Up catalogs.",changes:[{text:"Homebrew packages merged into live ruleset catalogs",category:"Özellik"},{text:"Homebrew class, subclass, species and background Builder choices",category:"Özellik"},{text:"Homebrew class and feat Level Up choices",category:"Özellik"},{text:"Duplicate-ID replacement instead of duplicated options",category:"Düzeltme"},{text:"Live package-change refresh event",category:"İyileştirme"},{text:"Builder and Level Up integration certification tests",category:"Teknik"}]},
   {version:"5.11.0",date:"2026-07-17",title:"Homebrew Progression & Play Mode Integration",summary:"Homebrew class/subclass progression, custom resources, recovery and runtime actions now participate in the live character journey.",changes:[{text:"Character-aware Homebrew entity matching",category:"Özellik"},{text:"Level-scaled custom resource synchronization",category:"Özellik"},{text:"Play Mode runtime action execution",category:"Özellik"},{text:"Partial short/long-rest resource recovery",category:"Düzeltme"},{text:"Homebrew progression feature visibility",category:"İyileştirme"},{text:"Homebrew integration certification tests",category:"Teknik"}]},
 
