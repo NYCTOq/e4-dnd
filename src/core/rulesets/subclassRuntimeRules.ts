@@ -24,6 +24,9 @@ export function getSubclassRuntime(subclass:DndSubclassData|null|undefined,level
  if(/cloak of shadows/i.test(names))actions.push(action("cloak-of-shadows","Cloak of Shadows","action","Uygun karanlıkta görünmezlik kazan."));
  if(/assassinate/i.test(names))actions.push(action("assassinate","Assassinate Opening","action","Henüz tur almamış hedefe açılış üstünlüğünü uygula."));
  if(subclass?.className.toLowerCase()==="ranger"&&/ranger's companion|primal companion/i.test(names))actions.push(action("command-companion","Command Companion","bonus-action","Companion hareket ve saldırısını yönet."));
+ if(/combat inspiration/i.test(names))actions.push(action("combat-inspiration","Combat Inspiration","reaction","Bardic Inspiration zarını savunma veya hasar desteği için kullan.","bardic-inspiration"));
+ if(/battle magic/i.test(names))actions.push(action("battle-magic","Battle Magic","bonus-action","Spell kullanımından sonra bonus action weapon attack yap."));
+ if(/clairvoyant combatant/i.test(names))actions.push(action("clairvoyant-combatant","Clairvoyant Combatant","bonus-action","Zihinsel bağ kurulan hedefe karşı savaş üstünlüğünü etkinleştir."));
  if(/tides of chaos/i.test(names))actions.push(action("tides-of-chaos","Tides of Chaos","action","Bir D20 Test için advantage kazan."));
  if(/elder champion/i.test(names))actions.push(action("elder-champion","Elder Champion","bonus-action","Oath capstone dönüşümünü başlat."));
  if(/destructive wrath|guided strike|touch of death|arcane abjuration|path to the grave|twilight sanctuary|emboldening bond|order's demand/i.test(names)){const selected=feature(unlocked,/destructive wrath|guided strike|touch of death|arcane abjuration|path to the grave|twilight sanctuary|emboldening bond|order's demand/i)!;actions.push(action(`domain-${selected.name.toLowerCase().replace(/[^a-z0-9]+/g,"-")}`,selected.name,"action",selected.summary,"channel-divinity"))}

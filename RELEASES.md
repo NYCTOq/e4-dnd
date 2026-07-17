@@ -1,3 +1,11 @@
+## v4.4.0 — Arcane Classes Mega Pack (17 Temmuz 2026)
+
+- Bard, Sorcerer, Warlock ve Wizard için 2014/2024 ortak arcane runtime matrisi.
+- Bardic Inspiration die, kullanım ve recovery progression sertifikası.
+- Sorcery Points, Metamagic, Pact Magic, Invocation ve Mystic Arcanum progression.
+- Wizard Arcane Recovery, Spell Mastery ve Signature Spells doğrulaması.
+- College of Valor, Wild Magic, Great Old One ve Abjurer subclass runtime bağlantıları.
+
 # E4 D&D Releases
 
 ## 1.8.0
