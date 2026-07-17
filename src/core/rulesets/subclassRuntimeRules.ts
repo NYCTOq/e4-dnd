@@ -19,6 +19,10 @@ export function getSubclassRuntime(subclass:DndSubclassData|null|undefined,level
  if(/improved warding flare|projected ward|branches of the tree|opportunist|entropic ward/i.test(names))actions.push(action("subclass-reaction",feature(unlocked,/improved warding flare|projected ward|branches of the tree|opportunist|entropic ward/i)!.name,"reaction","Subclass reaction özelliğini kullan."));
  if(/shadow step|moonlight step|transposition/i.test(names))actions.push(action("subclass-teleport",feature(unlocked,/shadow step|moonlight step|transposition/i)!.name,"bonus-action","Subclass hareket/teleport özelliğini kullan."));
  if(/combat wild shape|circle forms/i.test(names))actions.push(action("combat-wild-shape","Combat Wild Shape","bonus-action","Wild Shape kaynağıyla savaş formuna geç.","wild-shape"));
+ if(/combat superiority/i.test(names))actions.push(action("combat-superiority","Combat Superiority","action","Seçili maneuver ile Superiority Die harca.","superiority-dice"));
+ if(/shadow arts/i.test(names))actions.push(action("shadow-arts","Shadow Arts","action","Ki/Focus ile gölge tekniği kullan.","focus-points"));
+ if(/cloak of shadows/i.test(names))actions.push(action("cloak-of-shadows","Cloak of Shadows","action","Uygun karanlıkta görünmezlik kazan."));
+ if(/assassinate/i.test(names))actions.push(action("assassinate","Assassinate Opening","action","Henüz tur almamış hedefe açılış üstünlüğünü uygula."));
  if(subclass?.className.toLowerCase()==="ranger"&&/ranger's companion|primal companion/i.test(names))actions.push(action("command-companion","Command Companion","bonus-action","Companion hareket ve saldırısını yönet."));
  if(/tides of chaos/i.test(names))actions.push(action("tides-of-chaos","Tides of Chaos","action","Bir D20 Test için advantage kazan."));
  if(/elder champion/i.test(names))actions.push(action("elder-champion","Elder Champion","bonus-action","Oath capstone dönüşümünü başlat."));
