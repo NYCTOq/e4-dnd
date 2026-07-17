@@ -5,6 +5,7 @@ import { RULESET_DEFINITIONS } from "../../core/rulesets/rulesetRegistry";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import { getRulesetCoverage } from "../../core/rulesets/rulesetCoverage";
 import { getLevel20Certification } from "../../core/rulesets/level20Certification";
+import { getRuntimeCoverageCertification } from "../../core/rulesets/runtimeCoverageCertification";
 
 const statusLabels = {
   ready: "Temel veri hazır",
@@ -16,6 +17,7 @@ export function RulesetCenterPage({ rulesetData }: { rulesetData: RulesetData | 
   const { settings, updateSettings } = useAppSettings();
   const coverage = getRulesetCoverage(rulesetData);
   const certification=getLevel20Certification(rulesetData);
+  const runtimeCertification=getRuntimeCoverageCertification(rulesetData);
 
   return (
     <PageShell
@@ -76,6 +78,7 @@ export function RulesetCenterPage({ rulesetData }: { rulesetData: RulesetData | 
         <div className="ruleset-roadmap-grid"><a href="https://www.dndbeyond.com/srd" target="_blank" rel="noreferrer">Resmî SRD kaynağı</a><a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" rel="noreferrer">CC BY 4.0 lisansı</a></div>
       </section>
       <section className="ruleset-roadmap-panel"><span className="mini-label">Level 1–20 Certification · %{certification.score}</span><h2>{certification.certified?"Oynanış matrisi sertifikalı":"Kontrol gereken bloklar var"}</h2><div className="ruleset-roadmap-grid">{certification.checks.map(check=><span key={check.id}><strong>{check.status==="pass"?"✓":check.status==="warning"?"◐":"✕"} {check.label}</strong><small>{check.detail}</small></span>)}</div><details><summary>12 Class Matrisi</summary><div className="ruleset-roadmap-grid">{certification.classes.map(item=><span key={item.className}><strong>{item.ready?"✓":"✕"} {item.className}</strong><small>{item.coveredLevels}/20 level · {item.subclassCount} subclass</small></span>)}</div></details>{certification.blockers.length?<details><summary>Blocker raporu · {certification.blockers.length}</summary><ul className="ruleset-note-list">{certification.blockers.map((blocker,index)=><li key={`${blocker}-${index}`}>{blocker}</li>)}</ul></details>:null}</section>
+      <section className="ruleset-roadmap-panel"><span className="mini-label">Runtime Coverage Certification · %{runtimeCertification.score}</span><h2>{runtimeCertification.status==="certified"?"Mekanik kapsam ölçüldü":"Runtime boşlukları kapatılmalı"}</h2><p>Automatic doğrudan hesaplanır; Assisted sistem yönlendirir; Manual oyuncu/DM tarafından uygulanır; Missing henüz tanımlı değildir.</p><div className="ruleset-roadmap-grid">{runtimeCertification.categories.map(group=><span key={group.id}><strong>{group.label} · %{group.score}</strong><small>{group.total} toplam · {group.automatic} Automatic · {group.assisted} Assisted · {group.manual} Manual · {group.missing} Missing</small></span>)}</div>{runtimeCertification.categories.map(group=><details key={group.id}><summary>{group.label} detayları · {group.total}</summary><ul className="ruleset-note-list">{group.entities.map(entity=><li key={entity.id}><strong>{entity.tier.toUpperCase()}</strong> · {entity.name} — {entity.reason}</li>)}</ul></details>)}{runtimeCertification.priorities.length?<details open><summary>Öncelikli runtime açıkları · {runtimeCertification.priorities.length}</summary><ul className="ruleset-note-list">{runtimeCertification.priorities.map(item=><li key={item}>{item}</li>)}</ul></details>:null}</section>
     </PageShell>
   );
 }
