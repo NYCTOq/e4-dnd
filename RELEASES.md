@@ -1,3 +1,13 @@
+# v5.8.0 — UI, Mobile & Accessibility Polish Mega Pack
+
+- Reusable dialog focus trap, Escape close and opener restoration
+- Release Notes and Storage Recovery dialogs connected to focus management
+- 44 px touch target, safe-area and compact mobile layout guards
+- Horizontal overflow and responsive media safeguards
+- Reduced-motion and validation focus polish
+- UI/mobile/accessibility certification audit and tests
+- 127 test files / 444 tests passing; production and PWA build passing
+
 # v5.5.0 — Level Up, Feat & Choice Completion Mega Pack
 
 - ASI ve feat kilometre taşları aynı Level Up akışında doğrulanır.

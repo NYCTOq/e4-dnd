@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getCurrentRelease, RELEASE_NOTES } from "./releaseNotes";
+import { useDialogFocus } from "../accessibility/dialogFocus";
 
 const LAST_SEEN_VERSION_KEY = "e4_dnd_last_seen_version_v1";
 
@@ -20,7 +21,7 @@ export function ReleaseNotesDialog() {
     }
   }, []);
 
-  function closeReleaseNotes() {
+  const closeReleaseNotes = useCallback(() => {
     setIsOpen(false);
 
     try {
@@ -28,7 +29,9 @@ export function ReleaseNotesDialog() {
     } catch {
       // Sürüm notunu kapatmak storage iznine bağlı kalmamalı.
     }
-  }
+  }, []);
+
+  const dialogRef = useDialogFocus(isOpen, closeReleaseNotes);
 
   return (
     <>
@@ -49,6 +52,9 @@ export function ReleaseNotesDialog() {
           onMouseDown={closeReleaseNotes}
         >
           <section
+            ref={dialogRef}
+            tabIndex={-1}
+            data-dialog-id="release-notes"
             className="release-notes-dialog"
             role="dialog"
             aria-modal="true"

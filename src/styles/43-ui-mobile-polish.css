@@ -1,0 +1,36 @@
+/* v5.8 UI, mobile and accessibility polish */
+html, body, #root { max-width: 100%; }
+body { overflow-x: hidden; }
+:where(.page, .content, main, section, article, .panel, .card) { min-width: 0; }
+:where(img, svg, video, canvas) { max-width: 100%; height: auto; }
+:where(table) { max-width: 100%; }
+:where(.modal, [role="dialog"], .release-notes-dialog, .recovery-modal, .command-palette) {
+  max-width: min(720px, calc(100vw - 24px));
+  max-height: min(88dvh, 900px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  scroll-padding-block: 16px;
+}
+:where(.release-notes-backdrop, .recovery-modal-backdrop, .command-palette-backdrop) {
+  padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+}
+:where(input, select, textarea) { max-width: 100%; font-size: max(16px, 1rem); }
+:where(button, a, input, select, textarea, summary) { touch-action: manipulation; }
+:where(.form-error, [role="alert"], [aria-invalid="true"]) { scroll-margin-block: 96px; }
+:where([aria-invalid="true"]):focus-visible { outline-color: #ff6b7a; }
+
+@media (max-width: 600px) {
+  :where(.toolbar, .page-toolbar, .action-row, .button-row, .release-notes-footer, .release-notes-footer-actions, .recovery-record-actions) {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  :where(.toolbar, .page-toolbar, .action-row, .button-row) > :where(button, a, input, select) { width: 100%; }
+  :where(.release-notes-dialog, .recovery-modal, .command-palette) { border-radius: 16px; }
+  :where(.release-notes-head, .recovery-modal-head) { align-items: flex-start; gap: 12px; }
+}
+
+@media (max-width: 420px) {
+  :where(.content, main) { padding-inline: 12px; }
+  :where(.card, .panel, .release-notes-dialog, .recovery-modal) { padding: 14px; }
+  :where(.bottom-nav, .mobile-nav) { padding-bottom: max(8px, env(safe-area-inset-bottom)); }
+}
