@@ -1,3 +1,12 @@
+## v4.5.0 — Global Spell Runtime Mega Pack (17 Temmuz 2026)
+
+- Damage, healing, spell attack ve saving throw çözümünü ortak global runtime altında birleştirdi.
+- Slot/cantrip scaling, upcast hedef artışı ve normal + Pact Magic slot seçeneklerini ortaklaştırdı.
+- Full/half/zero save sonuçları, healing cap ve overheal raporu eklendi.
+- Concentration değiştirme/bitirme, repeat-save, condition effect ve süre takibi güçlendirildi.
+- AoE, summon, movement, reaction, ritual ve material gereksinimleri için tek davranış planı eklendi.
+- Dispel/effect temizleme yardımcıları ve global spell runtime sertifikasyon testleri eklendi.
+
 ## v4.4.0 — Arcane Classes Mega Pack (17 Temmuz 2026)
 
 - Bard, Sorcerer, Warlock ve Wizard için 2014/2024 ortak arcane runtime matrisi.
