@@ -1,3 +1,13 @@
+# v4.9.0 — Equipment & Magic Item Closure Mega Pack
+
+- Starting equipment ve pack içeriklerini duplicate üretmeden envantere ekleyen ortak runtime
+- Weapon property kombinasyonlarının normalize edilmesi
+- Attunement sınırı ve uygunluk raporu
+- Charge kullanımı, kalan kullanım ve item spell casting planı
+- Curse etiketi, item save DC ve attack bonus fallback desteği
+- Encumbrance, ağırlık, kapasite ve kalan taşıma alanının tek özette birleştirilmesi
+- Yeni equipment closure sertifikasyon testleri
+
 # v4.8.0 — Player Journey Consistency Mega Pack
 
 - Builder, Editor, Detail, Character Sheet ve Play Mode için merkezi karakter snapshot motoru.
