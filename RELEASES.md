@@ -1,3 +1,12 @@
+# v5.3.0 — Spell Certification Expansion Mega Pack
+
+- Spell catalog is certified by mechanical families instead of name-only coverage.
+- Damage, healing, concentration/control, summoning, movement, reaction, restoration, resurrection, material-cost and utility families are reported separately.
+- Every spell receives automatic, guided, table-ruling or blocked disposition.
+- Missing damage resolution, reaction trigger, resurrection cost and critical spell metadata become explicit blockers.
+- Guided summon, restoration, resurrection and reaction instructions remain visible for player/DM resolution.
+- Family-level readiness, score, blocker and warning summaries support release audits.
+
 # v5.2.0 — Runtime Coverage Closure Mega Pack
 
 - Added a central runtime closure report for classes, subclasses, feats, spells and items.
