@@ -1,3 +1,11 @@
+# v4.6.0 — Full Character Certification Mega Pack
+
+- 12 class × 2 edition için 24 kombinasyonluk sertifikasyon matrisi eklendi.
+- Her class için kritik level, subclass unlock, spell progression ve level 20 capstone doğrulaması eklendi.
+- Level 1–20 içerik/referans sertifikası ile runtime coverage tek üst raporda birleştirildi.
+- Character integrity ve create → level up → rest → backup restore lifecycle sertifika yardımcıları eklendi.
+- Gerçek 2014/2024 veri paketleriyle entegrasyon matrisi ve regresyon testleri eklendi.
+
 ## v4.5.0 — Global Spell Runtime Mega Pack (17 Temmuz 2026)
 
 - Damage, healing, spell attack ve saving throw çözümünü ortak global runtime altında birleştirdi.
