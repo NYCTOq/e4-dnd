@@ -1,0 +1,4 @@
+import { expect, test } from "@playwright/test";
+test("mobile navigation is usable", async ({ page }, info) => { test.skip(!info.project.name.includes("mobile"), "Mobile only"); await page.goto("/"); const nav = page.getByRole("navigation", { name: "Mobil navigasyon" }); await expect(nav).toBeVisible(); await expect(nav.getByRole("link").first()).toBeVisible(); });
+test("local data survives refresh", async ({ page }) => { await page.goto("/"); await page.evaluate(() => localStorage.setItem("e4_e2e_refresh_probe", "survives")); await page.reload(); await expect.poll(() => page.evaluate(() => localStorage.getItem("e4_e2e_refresh_probe"))).toBe("survives"); });
+test("built shell reopens offline", async ({ page, context }) => { await page.goto("/"); await page.waitForLoadState("networkidle"); await context.setOffline(true); await page.reload(); await expect(page.getByRole("link", { name: "E4 D&D ana sayfa" })).toBeVisible(); await context.setOffline(false); });

@@ -91,3 +91,11 @@ git push origin v1.0.1
 ## Uygulama içi sürüm notları
 
 Yeni sürüm için `src/shared/release/releaseNotes.ts` dosyasına en üste yeni kayıt eklenir. Kullanıcı yeni sürümü ilk açtığında notlar bir defa otomatik gösterilir.
+
+## v4.10.0 — Browser E2E & Mobile QA Foundation Mega Pack
+- Playwright desktop Chromium and Pixel 7 mobile projects.
+- Direct-route smoke coverage for Dashboard, Characters, Builder, Play Mode and Backup.
+- Keyboard skip-link, mobile navigation, refresh persistence and offline PWA shell scenarios.
+- Shared QA certification manifest for browser, mobile, PWA and data layers.
+- Added `test:e2e`, `test:e2e:headed`, `test:e2e:mobile` and `check:full` scripts.
+- Browser specs are compile-checked; final execution requires a local Playwright browser that can access the preview server.

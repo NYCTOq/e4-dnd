@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 import packageJson from "./package.json" with { type: "json" };
@@ -6,6 +6,7 @@ import packageJson from "./package.json" with { type: "json" };
 const base = process.env.VITE_BASE_PATH ?? "/";
 
 export default defineConfig({
+  test: { exclude: ["e2e/**", "node_modules/**", "dist/**"] },
   base,
   define: {
     __APP_VERSION__: JSON.stringify(packageJson.version),

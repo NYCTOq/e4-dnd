@@ -18,3 +18,11 @@ npm.cmd run build
 - Eski campaign kayıtlarının güvenli migration'ı
 
 Yeni bir helper veya migration eklendiğinde aynı klasörde `*.test.ts` dosyası oluşturulmalıdır.
+
+## Browser E2E and mobile QA
+```powershell
+npx.cmd playwright install chromium
+npm.cmd run build
+npm.cmd run test:e2e
+```
+Use `npm.cmd run test:e2e:mobile` for the mobile project or `npm.cmd run check:full` for the complete chain.
