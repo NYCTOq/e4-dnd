@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { navItems } from "./navItems";
+import { useI18n } from "../i18n/useI18n";
 
 function getPageLabel(pathname: string) {
   const exact = navItems.find((item) => item.to === pathname);
@@ -22,6 +23,7 @@ function getPageLabel(pathname: string) {
 
 export function RouteAccessibility() {
   const location = useLocation();
+  const { t } = useI18n();
   const liveRegionRef = useRef<HTMLParagraphElement>(null);
   const pageLabel = useMemo(
     () => getPageLabel(location.pathname),
@@ -29,7 +31,8 @@ export function RouteAccessibility() {
   );
 
   useEffect(() => {
-    document.title = `${pageLabel} | E4 D&D`;
+    const localizedPageLabel = t(`nav.${location.pathname}`, pageLabel);
+    document.title = `${localizedPageLabel} | E4 D&D`;
 
     const main = document.getElementById("main-content");
 
@@ -39,12 +42,12 @@ export function RouteAccessibility() {
 
     const timeoutId = window.setTimeout(() => {
       if (liveRegionRef.current) {
-        liveRegionRef.current.textContent = `${pageLabel} sayfası açıldı.`;
+        liveRegionRef.current.textContent = t("a11y.routeOpened", "{page} sayfası açıldı.", { page: localizedPageLabel });
       }
     }, 80);
 
     return () => window.clearTimeout(timeoutId);
-  }, [pageLabel]);
+  }, [location.pathname, pageLabel, t]);
 
   return (
     <p

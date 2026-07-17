@@ -30,6 +30,7 @@ function applySettingsToDocument(settings: AppSettings) {
   root.dataset.fontScale = settings.fontScale;
   root.dataset.motion = settings.motion;
   root.lang = settings.locale;
+  root.dir = "ltr";
 }
 
 export function AppSettingsProvider({ children }: { children: ReactNode }) {

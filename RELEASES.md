@@ -1,3 +1,11 @@
+# v4.12.0 — Stable Player Release Hardening Mega Pack
+
+- Unit/integration, production build and browser E2E release gates were unified.
+- Current and legacy full backups are parsed, hydrated and certified before restore.
+- Detached rollback backups protect restore workflows from accidental shared mutation.
+- Migration failures and unresolved crash records are hard release blockers.
+- Recovery quarantine records are visible release warnings instead of silent data loss.
+
 # v4.9.0 — Equipment & Magic Item Closure Mega Pack
 
 - Starting equipment ve pack içeriklerini duplicate üretmeden envantere ekleyen ortak runtime
