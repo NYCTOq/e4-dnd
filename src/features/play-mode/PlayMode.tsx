@@ -58,6 +58,8 @@ import { getSpellBehavior } from "../../core/rulesets/spellBehaviorRules";
 import { getSpellMaterialReadiness } from "../../core/rulesets/spellMaterialRules";
 import { getEncumbrance, getEquipmentLegality, getInventoryWeight, findAmmunitionId, consumeAmmunition } from "../../core/rulesets/equipmentRuntimeRules";
 import { getMulticlassAttacksPerAction, normalizeClassLevels } from "../../core/rulesets/multiclassRules";
+import { loadHomebrewPackages } from "../homebrew/homebrewStorage";
+import { executeHomebrewRuntimeAction, getHomebrewCharacterRuntime, recoverHomebrewCharacterResources, synchronizeHomebrewResources } from "../../core/homebrew/homebrewRuntimeIntegration";
 import { getAttunedItemCount, recoverHighestSpentSpellSlot, recoverItemCharges, spendItemCharge, toggleItemAttunement } from "../../core/rulesets/magicItemRules";
 import {
   calculateEffectiveArmorClass,
@@ -155,6 +157,7 @@ export function PlayMode({
   const [powerAttack,setPowerAttack]=useState(false);
   const [featActionUses,setFeatActionUses]=useState<Record<string,number>>({});
   const [spellTargetCount,setSpellTargetCount]=useState(1);
+  const [homebrewPackages] = useState(() => loadHomebrewPackages());
 
   const character =
     characters.find((item) => item.id === selectedCharacterId) ?? characters[0];
@@ -177,6 +180,7 @@ export function PlayMode({
   }
 
   const activeCharacter = character;
+  const homebrewRuntime = getHomebrewCharacterRuntime(activeCharacter, homebrewPackages);
   const classAbilities=getClassAbilityRuntime(activeCharacter.abilities,activeCharacter.className,activeCharacter.level);
   const magicAccessoryRuntime=getMagicAccessoryRuntime(classAbilities,activeCharacter.inventory,rulesetData?.items);
   const effectiveCharacter={...activeCharacter,abilities:magicAccessoryRuntime.abilities};
@@ -289,6 +293,9 @@ export function PlayMode({
       updatedAt: new Date().toISOString(),
     });
   }
+
+  function syncHomebrewResources(){commit({resources:synchronizeHomebrewResources(activeCharacter,homebrewPackages)})}
+  function executeHomebrewAction(actionId:string){const next=executeHomebrewRuntimeAction(activeCharacter,homebrewPackages,actionId);onUpdateCharacter(next);const action=homebrewRuntime.actions.find(item=>item.id===actionId);if(action)setRollHistory(current=>[{id:crypto.randomUUID(),label:action.action.name,notation:action.action.economy,total:action.action.resourceCost??0},...current].slice(0,6))}
 
   function spendSorceryPoints(cost: number) {
     if (!sorceryPoints || sorceryPoints.max - sorceryPoints.used < cost) return;
@@ -542,7 +549,7 @@ export function PlayMode({
       hitDice: hitDice.map((item) =>
         item.die === die ? { ...item, used: item.used + 1 } : item,
       ),
-      resources: activeCharacter.resources.map(resource=>resource.recovery==="short"?{...resource,used:0}:resource),
+      resources: recoverHomebrewCharacterResources({...activeCharacter,resources:activeCharacter.resources.map(resource=>resource.recovery==="short"?{...resource,used:0}:resource)},homebrewPackages,"short-rest"),
       spellSlots: activeCharacter.className.trim().toLowerCase()==="warlock"?resetSpellSlots(spellSlots):spellSlots,
       pactMagicSlots:resetSpellSlots(pactMagicSlots),
     });
@@ -571,7 +578,7 @@ export function PlayMode({
       exhaustion: Math.max(0, (activeCharacter.exhaustion ?? 0) - 1),
       conditionDurations: {},
       conditions: activeCharacter.conditions.filter((item) => item === "Cursed"),
-      resources: activeCharacter.resources.map(resource=>({...resource,used:0})),
+      resources: recoverHomebrewCharacterResources({...activeCharacter,resources:activeCharacter.resources.map(resource=>resource.id.startsWith("homebrew:")?resource:{...resource,used:0})},homebrewPackages,"long-rest"),
       usedArcanumSpellIds: [],
       activeSpellEffects: [],
       inventory: recoverItemCharges(activeCharacter.inventory, rulesetData?.items ?? []),
@@ -877,6 +884,12 @@ export function PlayMode({
               ))}
             </div>
           </section>
+
+          {homebrewRuntime.entities.length ? <section className="play-mode-card">
+            <div className="play-mode-section-head"><div><span className="mini-label">Homebrew Runtime</span><h2>Özel Özellikler</h2></div>{homebrewRuntime.needsResourceSync?<button type="button" onClick={syncHomebrewResources}>Kaynakları Senkronize Et</button>:null}</div>
+            {homebrewRuntime.progressionFeatures.length?<div className="play-mode-roll-history">{homebrewRuntime.progressionFeatures.map(feature=><div key={`${feature.entityId}-${feature.level}-${feature.name}`}><span>{feature.name}<small>{feature.entityName} · Level {feature.level}</small></span><strong>Aktif</strong></div>)}</div>:null}
+            <div className="play-mode-class-actions">{homebrewRuntime.actions.filter(item=>item.action.economy!=="passive").map(item=><button type="button" key={item.id} disabled={!item.available} onClick={()=>executeHomebrewAction(item.id)}><span>{item.action.name}</span><small>{item.entityName} · {item.action.economy}{item.resourceId?` · ${item.action.resourceCost??0} kaynak`:""}</small>{item.reason?<small>{item.reason}</small>:null}</button>)}</div>
+          </section>:null}
 
           <section className="play-mode-card play-mode-rest-card">
             <div className="play-mode-section-head">
