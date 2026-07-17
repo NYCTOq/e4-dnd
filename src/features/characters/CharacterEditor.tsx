@@ -4,11 +4,14 @@ import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import { getRulesetDefinition } from "../../core/rulesets/rulesetRegistry";
 import { getAlwaysPreparedSpells } from "../../core/rulesets/subclassRules";
 import { getHighestSpellLevel } from "../../core/rulesets/spellRules";
+import { hasValidationErrors, validateCharacterDraft } from "../../core/rulesets/characterValidation";
+import { buildFinalSkillProficiencies, getAvailableClassSkills, getExpertiseLimit, getGrantedSkills, normalizeClassSkillChoices, normalizeExpertise } from "../../core/rulesets/proficiencyRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import type { Character, CharacterDraft } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellAttackBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
-import { CharacterInventoryManager, CharacterSpellSelector, calculateEffectiveArmorClass, createCharacterFromDraft, emptyDraft, normalizeHitDice, normalizeSpellSlots } from "./characterShared";
+import { CharacterInventoryManager, CharacterSpellSelector, calculateEffectiveArmorClass, createCharacterFromDraft, emptyDraft } from "./characterShared";
+import { buildEditedCharacter, characterToEditDraft } from "./characterEditorRules";
 
 export function CharacterEditor({
   characters,
@@ -40,57 +43,7 @@ export function CharacterEditor({
       return;
     }
 
-    setDraft({
-      name: character.name,
-      playerName: character.playerName,
-      ruleset: character.ruleset,
-      race: character.race,
-      className: character.className,
-      subclass: character.subclass,
-      background: character.background,
-      featIds: character.featIds ?? [],
-      fightingStyleIds: character.fightingStyleIds ?? [],
-      masteredWeaponIds: character.masteredWeaponIds ?? [],
-      metamagicIds: character.metamagicIds ?? [],
-      invocationIds: character.invocationIds ?? [],
-      wildShapeFormIds: character.wildShapeFormIds ?? [],
-      maneuverIds: character.maneuverIds ?? [],
-      companionId: character.companionId,
-      companionCurrentHp: character.companionCurrentHp,
-      arcanumSpellIds: character.arcanumSpellIds ?? [],
-      usedArcanumSpellIds: character.usedArcanumSpellIds ?? [],
-      activeSpellEffects: character.activeSpellEffects ?? [],
-      skillProficiencies: character.skillProficiencies ?? [],
-      expertiseSkills: character.expertiseSkills ?? [],
-      toolProficiencies: character.toolProficiencies ?? [],
-      languages: character.languages ?? [],
-      level: character.level,
-      abilities: character.abilities,
-      maxHp: character.maxHp,
-      armorClass: character.armorClass,
-      armorClassMode: character.armorClassMode === "auto" ? "auto" : "manual",
-      knownSpellIds: character.knownSpellIds ?? [],
-      preparedSpellIds: character.preparedSpellIds ?? [],
-      spellSlots: normalizeSpellSlots(
-        character.spellSlots,
-        character.level,
-        character.className,
-      ),
-      inventory: character.inventory ?? [],
-      equippedArmorId: character.equippedArmorId ?? null,
-      equippedShieldId: character.equippedShieldId ?? null,
-      equippedWeaponIds: character.equippedWeaponIds ?? [],
-      gold: character.gold ?? 0,
-      deathSaves: character.deathSaves ?? { successes: 0, failures: 0 },
-      hitDice: normalizeHitDice(
-        character.hitDice,
-        character.level,
-        character.className,
-      ),
-      exhaustion: character.exhaustion ?? 0,
-      conditionDurations: character.conditionDurations ?? {},
-      notes: character.notes,
-    });
+    setDraft(characterToEditDraft(character));
   }, [character]);
 
   const selectedRace = useMemo(() => {
@@ -105,7 +58,12 @@ export function CharacterEditor({
     );
   }, [activeRulesetData, draft.className]);
   const selectedSubclass = useMemo(() => activeRulesetData?.subclasses.find((item) => item.name === draft.subclass && item.className === draft.className) ?? null, [activeRulesetData, draft.subclass, draft.className]);
+  const selectedBackground = useMemo(() => activeRulesetData?.backgrounds.find((item) => item.name === draft.background) ?? null, [activeRulesetData, draft.background]);
   const alwaysPreparedSpells = useMemo(() => getAlwaysPreparedSpells(selectedSubclass, getHighestSpellLevel(selectedClass ?? undefined, draft.level), activeRulesetData?.spells ?? []), [selectedSubclass, selectedClass, draft.level, activeRulesetData]);
+  const validationIssues = useMemo(() => validateCharacterDraft(draft, activeRulesetData, draft.abilities), [draft, activeRulesetData]);
+  const classSkillChoices = useMemo(() => normalizeClassSkillChoices(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
+  const finalSkills = useMemo(() => buildFinalSkillProficiencies(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
+  const expertiseLimit = getExpertiseLimit(draft.className, draft.level);
 
   function updateDraft<K extends keyof CharacterDraft>(
     key: K,
@@ -137,37 +95,11 @@ export function CharacterEditor({
       return;
     }
 
-    if (!draft.name.trim()) {
-      alert("Karakter adı lazım kankam. İsimsiz kahraman ancak yan NPC olur.");
+    if (hasValidationErrors(validationIssues)) {
+      document.getElementById("character-edit-validation")?.scrollIntoView({ behavior: "smooth", block: "start" });
       return;
     }
-
-    if (!draft.className.trim()) {
-      alert("Class seçmeden karakter olmaz. Sistem bile buna güler.");
-      return;
-    }
-
-    const updatedCharacter: Character = {
-      ...character,
-      ...draft,
-      knownSpellIds: [...new Set([...draft.knownSpellIds, ...alwaysPreparedSpells.map((spell) => spell.id)])],
-      preparedSpellIds: [...new Set([...draft.preparedSpellIds, ...alwaysPreparedSpells.map((spell) => spell.id)])],
-      armorClass: calculateEffectiveArmorClass(draft, activeRulesetData?.items),
-      currentHp: Math.min(character.currentHp, draft.maxHp),
-      spellSlots: normalizeSpellSlots(
-        draft.spellSlots,
-        draft.level,
-        draft.className,
-      ),
-      hitDice: normalizeHitDice(
-        draft.hitDice,
-        draft.level,
-        draft.className,
-      ),
-      updatedAt: new Date().toISOString(),
-    };
-
-    onUpdateCharacter(updatedCharacter);
+    onUpdateCharacter(buildEditedCharacter(character, draft, activeRulesetData));
     navigate(`/characters/${character.id}`);
   }
 
@@ -230,7 +162,7 @@ export function CharacterEditor({
                 value={draft.ruleset}
                 onChange={(event) => {
                   const nextRuleset = event.target.value as CharacterDraft["ruleset"];
-                  setDraft((current) => ({ ...current, ruleset: nextRuleset, race: "", className: "", subclass: "", background: "", knownSpellIds: [], preparedSpellIds: [], spellSlots: [], inventory: [], equippedArmorId: null, equippedShieldId: null, equippedWeaponIds: [] }));
+                  setDraft((current) => ({ ...current, ruleset: nextRuleset, race: "", subrace: "", className: "", classLevels: [], subclass: "", background: "", originAbilityPrimary: undefined, originAbilitySecondary: undefined, featIds: [], fightingStyleIds: [], masteredWeaponIds: [], metamagicIds: [], invocationIds: [], wildShapeFormIds: [], maneuverIds: [], knownSpellIds: [], preparedSpellIds: [], spellSlots: [], pactMagicSlots: [], inventory: [], equippedArmorId: null, equippedShieldId: null, equippedWeaponIds: [], skillProficiencies: [], expertiseSkills: [] }));
                 }}
               >
                 <option value="dnd_2014">D&D 2014</option>
@@ -246,9 +178,7 @@ export function CharacterEditor({
                 min={1}
                 max={20}
                 value={draft.level}
-                onChange={(event) =>
-                  updateDraft("level", Number(event.target.value))
-                }
+                onChange={(event) => { const level = Number(event.target.value); setDraft((current) => ({ ...current, level, classLevels: current.classLevels?.length === 1 ? [{ ...current.classLevels[0], level }] : current.classLevels })); }}
               />
             </label>
 
@@ -258,7 +188,7 @@ export function CharacterEditor({
                 <select
                   value={draft.race}
                   disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData}
-                  onChange={(event) => updateDraft("race", event.target.value)}
+                  onChange={(event) => setDraft((current) => ({ ...current, race: event.target.value, subrace: "" }))}
                 >
                   <option value="">
                     {activeRulesetLoading ? `${rulesetDefinition.raceTerm} data yükleniyor...` : `${rulesetDefinition.raceTerm} seç`}
@@ -279,15 +209,15 @@ export function CharacterEditor({
               )}
             </label>
 
+            {selectedRace?.subraces?.length ? <label>Alt soy<select value={draft.subrace ?? ""} onChange={(event) => updateDraft("subrace", event.target.value)}><option value="">Alt soy seç</option>{selectedRace.subraces.map((item) => <option key={item.id} value={item.name}>{item.name}</option>)}</select></label> : null}
+
             <label>
               Class
               {draft.ruleset !== "homebrew" ? (
                 <select
                   value={draft.className}
                   disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData}
-                  onChange={(event) =>
-                    updateDraft("className", event.target.value)
-                  }
+                  onChange={(event) => setDraft((current) => ({ ...current, className: event.target.value, classLevels: [{ className: event.target.value, level: current.level }], subclass: "", featIds: [], fightingStyleIds: [], masteredWeaponIds: [], metamagicIds: [], invocationIds: [], wildShapeFormIds: [], maneuverIds: [], companionId: undefined, arcanumSpellIds: [], knownSpellIds: [], preparedSpellIds: [], spellSlots: [], skillProficiencies: [], expertiseSkills: [] }))}
                 >
                   <option value="">
                     {activeRulesetLoading
@@ -312,27 +242,10 @@ export function CharacterEditor({
               )}
             </label>
 
-            <label>
-              Subclass
-              <input
-                value={draft.subclass}
-                onChange={(event) =>
-                  updateDraft("subclass", event.target.value)
-                }
-                placeholder="Desert Domain..."
-              />
-            </label>
+            <label>Subclass{draft.ruleset !== "homebrew" ? <select value={draft.subclass} disabled={!selectedClass || draft.level < selectedClass.subclassLevel} onChange={(event) => updateDraft("subclass", event.target.value)}><option value="">{selectedClass && draft.level < selectedClass.subclassLevel ? `Level ${selectedClass.subclassLevel}'da açılır` : "Subclass seç"}</option>{activeRulesetData?.subclasses.filter((item) => item.className === draft.className).map((item) => <option key={item.id} value={item.name}>{item.name}</option>)}</select> : <input value={draft.subclass} onChange={(event) => updateDraft("subclass", event.target.value)} placeholder="Custom subclass..." />}</label>
 
-            <label>
-              Background
-              <input
-                value={draft.background}
-                onChange={(event) =>
-                  updateDraft("background", event.target.value)
-                }
-                placeholder="Acolyte, Sailor..."
-              />
-            </label>
+            <label>Background{draft.ruleset !== "homebrew" ? <select value={draft.background} disabled={!activeRulesetData} onChange={(event) => setDraft((current) => ({ ...current, background: event.target.value, originAbilityPrimary: undefined, originAbilitySecondary: undefined, skillProficiencies: normalizeClassSkillChoices(current.skillProficiencies, selectedClass, activeRulesetData?.backgrounds.find((item) => item.name === event.target.value) ?? null) }))}><option value="">Background seç</option>{activeRulesetData?.backgrounds.map((item) => <option key={item.id} value={item.name}>{item.name}</option>)}</select> : <input value={draft.background} onChange={(event) => updateDraft("background", event.target.value)} placeholder="Custom background..." />}</label>
+            {draft.ruleset === "dnd_2024" && selectedBackground ? <><label>Background +2<select value={draft.originAbilityPrimary ?? ""} onChange={(event) => updateDraft("originAbilityPrimary", event.target.value as CharacterDraft["originAbilityPrimary"])}><option value="">Ability seç</option>{(selectedBackground.abilityOptions ?? []).map((ability) => <option key={ability} value={ability} disabled={ability === draft.originAbilitySecondary}>{ability.toUpperCase()}</option>)}</select></label><label>Background +1<select value={draft.originAbilitySecondary ?? ""} onChange={(event) => updateDraft("originAbilitySecondary", event.target.value as CharacterDraft["originAbilitySecondary"])}><option value="">Ability seç</option>{(selectedBackground.abilityOptions ?? []).map((ability) => <option key={ability} value={ability} disabled={ability === draft.originAbilityPrimary}>{ability.toUpperCase()}</option>)}</select></label></> : null}
           </div>
 
           {activeRulesetError ? (
@@ -382,6 +295,8 @@ export function CharacterEditor({
             </div>
           ) : null}
         </section>
+
+        {selectedClass && selectedBackground ? <section className="form-panel character-edit-skills"><h2>Skill Proficiency</h2><p>Background tarafından verilenler otomatik; class için tam {selectedClass.skillChoices.choose} ayrı seçim yap.</p><div className="granted-skill-list"><strong>Background:</strong> {getGrantedSkills(selectedBackground).join(", ") || "Yok"}</div><div className="skill-choice-grid">{getAvailableClassSkills(selectedClass, selectedBackground).map((skill) => { const checked = classSkillChoices.includes(skill); const full = classSkillChoices.length >= selectedClass.skillChoices.choose; return <label key={skill}><input type="checkbox" checked={checked} disabled={!checked && full} onChange={() => setDraft((current) => ({ ...current, skillProficiencies: checked ? classSkillChoices.filter((item) => item !== skill) : [...classSkillChoices, skill] }))} />{skill}</label>; })}</div>{expertiseLimit > 0 ? <><h3>Expertise <small>{draft.expertiseSkills.length}/{expertiseLimit}</small></h3><div className="skill-choice-grid">{finalSkills.map((skill) => { const checked = draft.expertiseSkills.includes(skill); return <label key={skill}><input type="checkbox" checked={checked} disabled={!checked && draft.expertiseSkills.length >= expertiseLimit} onChange={() => updateDraft("expertiseSkills", normalizeExpertise(checked ? draft.expertiseSkills.filter((item) => item !== skill) : [...draft.expertiseSkills, skill], finalSkills, expertiseLimit))} />{skill}</label>; })}</div></> : null}</section> : null}
 
         <section className="form-panel">
           <h2>Ability Scores</h2>
@@ -515,8 +430,10 @@ export function CharacterEditor({
             </span>
           </div>
 
+          <div id="character-edit-validation" className={`character-edit-validation ${hasValidationErrors(validationIssues) ? "has-errors" : "ready"}`} aria-live="polite"><h3>{hasValidationErrors(validationIssues) ? "Kaydetmeden önce düzelt" : "Karakter verisi kayda hazır"}</h3>{validationIssues.length ? <ul>{validationIssues.map((issue) => <li key={issue.id} className={issue.severity}><strong>{issue.step}</strong> · {issue.message}</li>)}</ul> : <p>Zorunlu seçim veya veri hatası bulunmadı.</p>}</div>
+
           <div className="character-actions">
-            <button className="primary-action" type="submit">
+            <button className="primary-action" type="submit" disabled={hasValidationErrors(validationIssues)}>
               Değişiklikleri Kaydet
             </button>
 
