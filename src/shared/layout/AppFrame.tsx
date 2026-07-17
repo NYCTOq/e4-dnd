@@ -12,6 +12,7 @@ import type { Character } from "../../core/character/character.types";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import type { Campaign } from "../../features/campaigns/campaignTypes";
 import { useI18n } from "../i18n/useI18n";
+import { InterfaceTranslationBridge } from "../i18n/InterfaceTranslationBridge";
 
 const START_ROUTE_SESSION_KEY = "e4_dnd_start_route_applied_v1";
 
@@ -47,6 +48,7 @@ export function AppFrame({ children, characters, campaigns, rulesetData }: AppFr
 
   return (
     <div className="app">
+      <InterfaceTranslationBridge />
       <a className="skip-link" href="#main-content">
         {t("nav.skip","Ana içeriğe geç")}
       </a>
