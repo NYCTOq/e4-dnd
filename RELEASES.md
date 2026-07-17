@@ -1,3 +1,11 @@
+# v5.4.0 — Class & Subclass Runtime Closure Mega Pack
+
+- Class progression feature'larını action, bonus action, reaction, resource, recovery, passive ve progression mekaniklerine göre sertifikalar.
+- 12 ana class için dedicated runtime engine ve level 20 capstone bağlantısını denetler.
+- Subclass feature'larını gerçek Play Mode action/resource veya pasif modifier bağlantısına göre automatic, guided, table-ruling ve blocked olarak ayırır.
+- Eksik feature adı/özeti, geçersiz selection level, boş progression ve eksik class engine durumlarını release blocker yapar.
+- Class ve subclass bazlı skor, blocker, warning ve release dostu özet üretir.
+
 # v5.3.0 — Spell Certification Expansion Mega Pack
 
 - Spell catalog is certified by mechanical families instead of name-only coverage.
