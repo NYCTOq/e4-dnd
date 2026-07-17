@@ -1,7 +1,8 @@
 import type { AbilityKey, Character } from "../../core/character/character.types";
 import { getAbilityModifier } from "../../core/character/characterCalculator";
 import { normalizeHitDice, normalizeSpellSlots } from "./characterShared";
-import type { DndClassData } from "../../core/rulesets/ruleset.types";
+import type { DndClassData, DndFeatData } from "../../core/rulesets/ruleset.types";
+import { applyFeatAbilityChoice } from "../../core/rulesets/levelUpChoiceCompletion";
 import { getClassResources, mergeClassResources } from "../../core/rulesets/classFeatureEngine";
 import { getClassSpellSlots } from "../../core/rulesets/spellcastingRules";
 import { addClassLevel, getClassLevel, getMulticlassHitDice, getMulticlassPactMagicSlots, getMulticlassSpellSlots, normalizeClassLevels } from "../../core/rulesets/multiclassRules";
@@ -19,6 +20,8 @@ export type LevelUpOptions = {
   targetClassData?: DndClassData | null;
   allClasses?: DndClassData[];
   featId?: string;
+  featData?: DndFeatData | null;
+  featChoice?: string;
 };
 
 export function isAsiMilestone(level: number, className = ""): boolean {
@@ -72,7 +75,8 @@ export function buildLeveledCharacter(
   const nextTargetClassLevel=getClassLevel(nextClassLevels,targetClassName);
   const hpGain = Math.max(1, Math.floor(options.hpGain || 1));
   const nextMaxHp = character.maxHp + hpGain;
-  const nextAbilities = applyAbilityIncrease(character.abilities,nextTargetClassLevel,options.asiMode,options.primaryAbility,options.secondaryAbility,targetClassName);
+  const asiAbilities = applyAbilityIncrease(character.abilities,nextTargetClassLevel,options.asiMode,options.primaryAbility,options.secondaryAbility,targetClassName);
+  const nextAbilities = options.featId ? applyFeatAbilityChoice(asiAbilities, options.featData, options.featChoice) : asiAbilities;
   const progressionSlots=nextClassLevels.length>1?getMulticlassSpellSlots(nextClassLevels,options.allClasses??[],character.spellSlots):getClassSpellSlots(options.classData??null,nextLevel);
   const currentSlotMap=new Map(character.spellSlots.map(slot=>[slot.level,slot]));
   const nextSlots=progressionSlots.length ? progressionSlots.map(slot=>({...slot,used:Math.min(slot.max,currentSlotMap.get(slot.level)?.used??0)})) : normalizeSpellSlots(character.spellSlots,nextLevel,character.className);
@@ -82,6 +86,9 @@ export function buildLeveledCharacter(
     level: nextLevel,
     classLevels: nextClassLevels,
     featIds: options.featId&&!character.featIds.includes(options.featId)?[...character.featIds,options.featId]:character.featIds,
+    featChoices: options.featId && options.featChoice
+      ? { ...(character.featChoices ?? {}), [options.featId]: [options.featChoice] }
+      : character.featChoices,
     abilities: nextAbilities,
     maxHp: nextMaxHp,
     currentHp: Math.min(nextMaxHp, character.currentHp + hpGain),

@@ -1,3 +1,11 @@
+# v5.5.0 — Level Up, Feat & Choice Completion Mega Pack
+
+- ASI ve feat kilometre taşları aynı Level Up akışında doğrulanır.
+- Ability seçimi isteyen featler alt seçim tamamlanmadan uygulanamaz.
+- Feat alt seçimleri karakter verisinde kalıcı saklanır ve ability artışı 20 sınırıyla uygulanır.
+- Subclass, Fighting Style, Weapon Mastery, Metamagic, Invocation, Wild Shape, Maneuver, Companion, Expertise ve Mystic Arcanum borçları ortak completion raporunda izlenir.
+- Eksik seçenek kataloğu blocker, çözülebilir seçim borcu görünür takip maddesi olur.
+
 # v5.4.0 — Class & Subclass Runtime Closure Mega Pack
 
 - Class progression feature'larını action, bonus action, reaction, resource, recovery, passive ve progression mekaniklerine göre sertifikalar.

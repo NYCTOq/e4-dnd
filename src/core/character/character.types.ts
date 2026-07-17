@@ -81,6 +81,7 @@ export interface Character {
   originAbilityPrimary?: AbilityKey;
   originAbilitySecondary?: AbilityKey;
   featIds: string[];
+  featChoices?: Record<string, string[]>;
   fightingStyleIds?: string[];
   masteredWeaponIds?: string[];
   metamagicIds?: string[];
@@ -144,6 +145,7 @@ export interface CharacterDraft {
   originAbilityPrimary?: AbilityKey;
   originAbilitySecondary?: AbilityKey;
   featIds: string[];
+  featChoices?: Record<string, string[]>;
   fightingStyleIds?: string[];
   masteredWeaponIds?: string[];
   metamagicIds?: string[];
