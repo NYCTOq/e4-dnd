@@ -20,6 +20,7 @@ export function getDefaultRestOptions(kind: RestKind): RestOptions {
 export function applyRestToCharacter(character: Character, kind: RestKind, options: RestOptions) {
   const hpAfter = options.healToFull ? character.maxHp : Math.min(character.maxHp, character.currentHp + Math.max(0, Math.floor(options.shortRestHealing)));
   const spellSlots = kind === "long" ? character.spellSlots.map((slot) => ({ ...slot, used: 0 })) : character.spellSlots;
+  const pactMagicSlots = kind === "long" ? (character.pactMagicSlots??[]).map((slot) => ({ ...slot, used: 0 })) : character.pactMagicSlots;
   const hitDice = kind === "long" ? character.hitDice.map((pool) => ({ ...pool, used: Math.max(0, pool.used - Math.max(1, Math.floor(pool.max / 2))) })) : character.hitDice;
   const resources = restoreResources(character.resources ?? [], kind);
   const next: Character = {
@@ -27,6 +28,9 @@ export function applyRestToCharacter(character: Character, kind: RestKind, optio
     currentHp: hpAfter,
     tempHp: options.clearTempHp ? 0 : character.tempHp,
     spellSlots,
+    pactMagicSlots,
+    usedArcanumSpellIds:kind==="long"?[]:character.usedArcanumSpellIds,
+    activeSpellEffects:kind==="long"?[]:character.activeSpellEffects,
     hitDice,
     resources,
     deathSaves: options.resetDeathSaves ? { successes: 0, failures: 0 } : character.deathSaves,
@@ -38,7 +42,7 @@ export function applyRestToCharacter(character: Character, kind: RestKind, optio
   const summary: RestSummary = {
     characterId: character.id, name: character.name, hpBefore: character.currentHp, hpAfter: next.currentHp,
     tempHpBefore: character.tempHp, tempHpAfter: next.tempHp,
-    spellSlotsRestored: character.spellSlots.reduce((sum, slot, index) => sum + Math.max(0, slot.used - (next.spellSlots[index]?.used ?? slot.used)), 0),
+    spellSlotsRestored: character.spellSlots.reduce((sum, slot, index) => sum + Math.max(0, slot.used - (next.spellSlots[index]?.used ?? slot.used)), 0)+(character.pactMagicSlots??[]).reduce((sum,slot,index)=>sum+Math.max(0,slot.used-(next.pactMagicSlots?.[index]?.used??slot.used)),0),
     hitDiceRestored: character.hitDice.reduce((sum, pool, index) => sum + Math.max(0, pool.used - (next.hitDice[index]?.used ?? pool.used)), 0),
     resourcesRestored: (character.resources ?? []).reduce((sum, resource, index) => sum + Math.max(0, resource.used - (next.resources[index]?.used ?? resource.used)), 0),
     exhaustionBefore: character.exhaustion, exhaustionAfter: next.exhaustion,

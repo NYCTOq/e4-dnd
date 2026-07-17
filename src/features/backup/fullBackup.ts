@@ -6,6 +6,7 @@ import type {
 } from "../../core/rulesets/ruleset.types";
 import type { Campaign } from "../campaigns/campaignTypes";
 import { DEFAULT_APP_SETTINGS, sanitizeAppSettings, type AppSettings } from "../../shared/settings/appSettings";
+import { hydrateCharacterRecord } from "../../core/storage/characterStorage";
 
 export const FULL_BACKUP_VERSION = 2;
 
@@ -182,7 +183,7 @@ export function parseFullBackup(value: unknown): E4FullBackup {
         ? value.exportedAt
         : new Date().toISOString(),
     data: {
-      characters: characters as Character[],
+      characters: (characters as Character[]).map(hydrateCharacterRecord),
       campaigns: campaigns as Campaign[],
       homebrewSpells: homebrewSpells as DndSpellData[],
       homebrewItems: homebrewItems as DndItemData[],

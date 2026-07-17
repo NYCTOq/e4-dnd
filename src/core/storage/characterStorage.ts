@@ -175,7 +175,7 @@ function hydrateConditionDurations(character: Character): CharacterConditionDura
   ) as CharacterConditionDurations;
 }
 
-function hydrateCharacter(character: Character): Character {
+export function hydrateCharacterRecord(character: Character): Character {
   const inventory = hydrateInventory(character);
   const classLevels=normalizeClassLevels(character.classLevels,character.className,clampNumber(character.level,1,20,1));
   const inventoryItemIds = new Set(inventory.map((item) => item.itemId));
@@ -238,13 +238,13 @@ export function loadCharacters(): Character[] {
 
   return parsed
     .filter((character) => Boolean(character) && typeof character === "object")
-    .map((character) => hydrateCharacter(character as Character));
+    .map((character) => hydrateCharacterRecord(character as Character));
 }
 
 export function saveCharacters(characters: Character[]): void {
   writeJsonSafely(
     STORAGE_KEY,
-    characters.map((character) => hydrateCharacter(character)),
+    characters.map((character) => hydrateCharacterRecord(character)),
   );
 }
 
@@ -252,7 +252,7 @@ export function exportCharacters(characters: Character[]): void {
   const blob = new Blob(
     [
       JSON.stringify(
-        characters.map((character) => hydrateCharacter(character)),
+        characters.map((character) => hydrateCharacterRecord(character)),
         null,
         2,
       ),

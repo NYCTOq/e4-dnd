@@ -88,7 +88,7 @@ export function buildLeveledCharacter(
     spellSlots: nextSlots,
     pactMagicSlots:nextClassLevels.length>1?getMulticlassPactMagicSlots(nextClassLevels,options.allClasses??[],character.pactMagicSlots):character.pactMagicSlots,
     hitDice: nextClassLevels.length>1?getMulticlassHitDice(nextClassLevels,character.hitDice):normalizeHitDice(character.hitDice,nextLevel,character.className,options.hitDie),
-    resources: mergeClassResources(character.resources,getClassResources(character.className,nextLevel,nextAbilities,character.ruleset,character.subclass)),
+    resources: mergeClassResources(character.resources,getClassResources(targetClassName,nextTargetClassLevel,nextAbilities,character.ruleset,nextClassLevels.find(item=>item.className===targetClassName)?.subclass??character.subclass)),
     updatedAt: options.updatedAt ?? new Date().toISOString(),
   };
 }
