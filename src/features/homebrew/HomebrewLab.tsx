@@ -9,6 +9,7 @@ import type {
 } from "../../core/rulesets/ruleset.types";
 import type { Character } from "../../core/character/character.types";
 import { PageShell } from "../../shared/layout/PageShell";
+import { HomebrewPackageCreator } from "./HomebrewPackageCreator";
 import {
   formatMonsterModifier,
   getMonsterAbilityModifier,
@@ -703,6 +704,8 @@ export function HomebrewLab({
       title="Homebrew"
       description="Custom spell ve item üret, sonra bunları Spellbook ve Inventory içinde kullan. DM yetkisi verdik, sonuçlarına katlanacağız."
     >
+      <HomebrewPackageCreator />
+
       <div className="homebrew-summary-grid">
         <div className="homebrew-summary-card">
           <span className="mini-label">Custom Spells</span>

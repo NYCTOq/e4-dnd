@@ -166,3 +166,9 @@ Yeni sürüm için `src/shared/release/releaseNotes.ts` dosyasına en üste yeni
 - Shared QA certification manifest for browser, mobile, PWA and data layers.
 - Added `test:e2e`, `test:e2e:headed`, `test:e2e:mobile` and `check:full` scripts.
 - Browser specs are compile-checked; final execution requires a local Playwright browser that can access the preview server.
+
+## v5.10.0 — Homebrew Creator & Runtime Action Builder
+
+- Visual creator for class, subclass, species, background, feat, spell and item packages.
+- Custom resource, recovery and runtime action economy builder.
+- Package preview, local storage, JSON import/export and validation.
