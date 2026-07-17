@@ -1,12 +1,16 @@
-import type{Character}from"../character/character.types";import type{RulesetData}from"./ruleset.types";import{getFightingStyleChoiceCount,getFightingStyles}from"./fightingStyleRules";import{getWeaponMastery,getWeaponMasteryChoiceCount}from"./equipmentRules";import{getMetamagicChoiceCount,getMetamagicOptions}from"./metamagicRules";import{getEldritchInvocations,getInvocationChoiceCount,isInvocationEligible}from"./invocationRules";import{getWildShapeForms,getWildShapeKnownCount,isWildShapeFormEligible}from"./wildShapeRules";import{getBattleMasterManeuvers,getManeuverChoiceCount}from"./maneuverRules";import{getCompanionChoiceCount,getRangerCompanions}from"./companionRules";import{getMysticArcanumLevels}from"./pactMagicRules";
-export type ChoiceDebt={id:string;label:string;required:number;current:number;step:"class"|"feats"|"combat"|"equipment"|"spells";message:string};
-export function getCharacterChoiceDebt(character:Character,rulesetData:RulesetData|null){const debts:ChoiceDebt[]=[];const add=(id:string,label:string,required:number,current:number,step:ChoiceDebt["step"])=>{if(required!==current)debts.push({id,label,required,current,step,message:`${label}: ${current}/${required} seçim tamamlandı.`})};const classData=rulesetData?.classes.find(item=>item.name===character.className);
- if(classData&&character.level>=classData.subclassLevel&&!character.subclass) add("subclass","Subclass",1,0,"class");
- const styleLimit=getFightingStyleChoiceCount(character.className,character.level,character.subclass);const validStyles=new Set(getFightingStyles(character.ruleset).map(x=>x.id));const styles=(character.fightingStyleIds??[]).filter(id=>validStyles.has(id));add("fighting-styles","Fighting Style",styleLimit,styles.length,"combat");
- const masteryLimit=getWeaponMasteryChoiceCount(classData,character.level,character.ruleset);const validMasteries=new Set((rulesetData?.items??[]).filter(item=>getWeaponMastery(item,character.ruleset)).map(item=>item.id));add("weapon-mastery","Weapon Mastery",masteryLimit,(character.masteredWeaponIds??[]).filter(id=>validMasteries.has(id)).length,"equipment");
- const metaLimit=getMetamagicChoiceCount(character.className,character.level,character.ruleset);const validMeta=new Set(getMetamagicOptions(character.ruleset).map(x=>x.id));add("metamagic","Metamagic",metaLimit,(character.metamagicIds??[]).filter(id=>validMeta.has(id)).length,"feats");
- const invocationLimit=getInvocationChoiceCount(character.className,character.level,character.ruleset);const invocationMap=new Map(getEldritchInvocations(character.ruleset).map(x=>[x.id,x]));add("invocations","Eldritch Invocation",invocationLimit,(character.invocationIds??[]).filter(id=>{const x=invocationMap.get(id);return x&&isInvocationEligible(x,character)}).length,"feats");
- const formLimit=getWildShapeKnownCount(character.className,character.level,character.ruleset);const formMap=new Map(getWildShapeForms().map(x=>[x.id,x]));const formCount=(character.wildShapeFormIds??[]).filter(id=>{const x=formMap.get(id);return x&&isWildShapeFormEligible(x,character.level,character.ruleset,character.subclass)}).length;if(character.ruleset==="dnd_2024")add("wild-shape","Wild Shape Form",formLimit,formCount,"feats");
- const maneuverLimit=getManeuverChoiceCount(character.className,character.subclass,character.level,character.ruleset);const validManeuvers=new Set(getBattleMasterManeuvers().map(x=>x.id));add("maneuvers","Battle Master Maneuver",maneuverLimit,(character.maneuverIds??[]).filter(id=>validManeuvers.has(id)).length,"feats");
- const companionLimit=getCompanionChoiceCount(character.className,character.subclass,character.level);const validCompanions=new Set(getRangerCompanions(character.ruleset).map(x=>x.id));add("companion","Beast Master Companion",companionLimit,character.companionId&&validCompanions.has(character.companionId)?1:0,"feats");
- const arcanumLevels=getMysticArcanumLevels(character.className,character.level,character.ruleset);const arcanum=(character.arcanumSpellIds??[]).map(id=>rulesetData?.spells.find(x=>x.id===id)).filter(Boolean);const completed=arcanumLevels.filter(level=>arcanum.some(spell=>spell?.level===level)).length;add("arcanum","Mystic Arcanum",arcanumLevels.length,completed,"spells");return debts;}
+import type { Character } from "../character/character.types";
+import type { RulesetData } from "./ruleset.types";
+import { getIncompleteUnifiedChoices, type UnifiedChoiceStep } from "./unifiedCharacterChoices";
+
+export type ChoiceDebt = { id: string; label: string; required: number; current: number; step: UnifiedChoiceStep; message: string };
+
+export function getCharacterChoiceDebt(character: Character, rulesetData: RulesetData | null): ChoiceDebt[] {
+  return getIncompleteUnifiedChoices(character, rulesetData).map((state) => ({
+    id: state.id,
+    label: state.label,
+    required: state.required,
+    current: state.validSelected.length,
+    step: state.step,
+    message: state.message,
+  }));
+}

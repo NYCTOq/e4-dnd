@@ -1,3 +1,12 @@
+# v4.7.0 — Unified Character Choices Mega Pack
+
+- Builder, Level Up, Character Editor ve Choice Debt Resolver için ortak seçim modeli eklendi.
+- Subclass, Fighting Style, Weapon Mastery, Metamagic, Invocation, Wild Shape, Maneuver, Companion, Expertise ve Mystic Arcanum tek runtime kataloğunda birleştirildi.
+- Seçim limitleri, prerequisite filtreleri, geçerli seçim sayısı ve eksik seçim borcu aynı kaynaktan hesaplanıyor.
+- Tekli, çoklu ve spell-level gruplu seçimler için ortak uygulama motoru eklendi.
+- Choice Debt Resolver tekrar eden class-specific seçenek kodlarından arındırıldı.
+- Yeni unified choice sertifikasyon testleri eklendi.
+
 # v4.6.0 — Full Character Certification Mega Pack
 
 - 12 class × 2 edition için 24 kombinasyonluk sertifikasyon matrisi eklendi.
