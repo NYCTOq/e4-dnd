@@ -48,7 +48,8 @@ export function saveHomebrewMonsters(monsters: DndMonsterData[]) {
 import type { HomebrewPackage } from "../../core/homebrew/homebrewFoundation";
 import { importHomebrewPackage, validateHomebrewPackage } from "../../core/homebrew/homebrewFoundation";
 
-const HOMEBREW_PACKAGES_STORAGE_KEY = "e4_dnd_homebrew_packages_v1";
+export const HOMEBREW_PACKAGES_STORAGE_KEY = "e4_dnd_homebrew_packages_v1";
+export const HOMEBREW_PACKAGES_CHANGED_EVENT = "e4-dnd-homebrew-packages-changed";
 
 export function loadHomebrewPackages(): HomebrewPackage[] {
   return loadArray<HomebrewPackage>(HOMEBREW_PACKAGES_STORAGE_KEY).filter((pkg) => validateHomebrewPackage(pkg).valid);
@@ -58,6 +59,7 @@ export function saveHomebrewPackages(packages: HomebrewPackage[]) {
   const invalid = packages.find((pkg) => !validateHomebrewPackage(pkg).valid);
   if (invalid) throw new Error(`Geçersiz homebrew paketi kaydedilemez: ${invalid.name || invalid.id}`);
   saveArray(HOMEBREW_PACKAGES_STORAGE_KEY, packages);
+  if (typeof window !== "undefined") window.dispatchEvent(new CustomEvent(HOMEBREW_PACKAGES_CHANGED_EVENT));
 }
 
 export function mergeImportedHomebrewPackage(raw: string, packages: HomebrewPackage[]): HomebrewPackage[] {

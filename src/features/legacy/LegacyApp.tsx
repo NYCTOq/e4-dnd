@@ -29,6 +29,8 @@ import {
   saveHomebrewItems,
   saveHomebrewMonsters,
   saveHomebrewSpells,
+  loadHomebrewPackages,
+  HOMEBREW_PACKAGES_CHANGED_EVENT,
 } from "../homebrew/homebrewStorage";
 import { AppFrame } from "../../shared/layout/AppFrame";
 import { AppRoutes } from "./AppRoutes";
@@ -37,6 +39,8 @@ import { mergeRecordsById, mergeUniqueStrings } from "../backup/backupImport";
 import { loadFavoriteMonsterIds, saveFavoriteMonsterIds } from "../monsters/monsterUtils";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import { useDebouncedEffect } from "../../shared/state/useDebouncedEffect";
+import type { HomebrewPackage } from "../../core/homebrew/homebrewFoundation";
+import { mergeHomebrewIntoRuleset } from "../../core/homebrew/homebrewBuilderIntegration";
 
 function App() {
   const { settings, updateSettings, resetSettings } = useAppSettings();
@@ -58,20 +62,33 @@ function App() {
     () => loadHomebrewMonsters(),
   );
   const [campaigns, setCampaigns] = useState<Campaign[]>(() => loadCampaigns());
+  const [homebrewPackages, setHomebrewPackages] = useState<HomebrewPackage[]>(() => loadHomebrewPackages());
 
   const effectiveRulesetData = useMemo<RulesetData | null>(() => {
     if (!rulesetData) {
       return null;
     }
 
+    const withPackages = mergeHomebrewIntoRuleset(rulesetData, homebrewPackages);
+    if (!withPackages) return null;
     return {
-      ...rulesetData,
-      spells: [...rulesetData.spells, ...homebrewSpells],
-      items: [...rulesetData.items, ...homebrewItems],
-      monsters: [...rulesetData.monsters, ...homebrewMonsters],
+      ...withPackages,
+      spells: [...withPackages.spells, ...homebrewSpells.filter((spell) => !withPackages.spells.some((item) => item.id === spell.id))],
+      items: [...withPackages.items, ...homebrewItems.filter((item) => !withPackages.items.some((existing) => existing.id === item.id))],
+      monsters: [...withPackages.monsters, ...homebrewMonsters],
     };
-  }, [rulesetData, homebrewSpells, homebrewItems, homebrewMonsters]);
+  }, [rulesetData, homebrewPackages, homebrewSpells, homebrewItems, homebrewMonsters]);
 
+
+  useEffect(() => {
+    const refreshHomebrewPackages = () => setHomebrewPackages(loadHomebrewPackages());
+    window.addEventListener(HOMEBREW_PACKAGES_CHANGED_EVENT, refreshHomebrewPackages);
+    window.addEventListener("storage", refreshHomebrewPackages);
+    return () => {
+      window.removeEventListener(HOMEBREW_PACKAGES_CHANGED_EVENT, refreshHomebrewPackages);
+      window.removeEventListener("storage", refreshHomebrewPackages);
+    };
+  }, []);
   useEffect(() => {
     let isMounted = true;
 
