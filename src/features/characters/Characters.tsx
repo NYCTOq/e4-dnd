@@ -1,4 +1,4 @@
-import { useDeferredValue, useMemo, useState } from "react";
+import { useDeferredValue, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import type { Character } from "../../core/character/character.types";
@@ -11,6 +11,7 @@ import {
 } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
 import { usePersistentState } from "../../shared/state/usePersistentState";
+import { downloadCharacterTransfer, parseCharacterTransfer, resolveImportedCharacter } from "./characterTransfer";
 
 type CharacterSort = "recent" | "name" | "level-desc" | "level-asc";
 
@@ -18,13 +19,17 @@ export function Characters({
   characters,
   onDeleteCharacter,
   onDuplicateCharacter,
+  onImportCharacters,
 }: {
   characters: Character[];
   onDeleteCharacter: (id: string) => boolean;
   onDuplicateCharacter: (id: string) => Character | null;
+  onImportCharacters: (characters: Character[]) => void;
 }) {
   const navigate = useNavigate();
   const [compareIds, setCompareIds] = useState<string[]>([]);
+  const [transferMessage, setTransferMessage] = useState("");
+  const importInputRef = useRef<HTMLInputElement>(null);
 
   const [searchTerm, setSearchTerm] = usePersistentState(
     "e4_filter_characters_search_v1",
@@ -131,12 +136,33 @@ export function Characters({
     }
   }
 
+  async function importCharacter(event: React.ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    try {
+      const parsed = parseCharacterTransfer(JSON.parse(await file.text()));
+      const imported = resolveImportedCharacter(parsed, characters);
+      onImportCharacters([imported, ...characters]);
+      setTransferMessage(`${imported.name} güvenle içe aktarıldı.`);
+    } catch (error) {
+      setTransferMessage(error instanceof Error ? error.message : "Karakter dosyası okunamadı.");
+    } finally {
+      event.target.value = "";
+    }
+  }
+
   return (
     <PageShell
       eyebrow="Character Vault"
       title="Karakterler"
       description="Kayıtlı karakterlerin burada listelenir. Filtreler artık hatırlanıyor; uygulama nihayet insan hafızasına bel bağlamayı bıraktı."
     >
+      <div className="character-management-toolbar">
+        <div><strong>Karakter taşıma</strong><span>Tek karakteri sürümlü JSON ile başka cihaza aktar.</span></div>
+        <button type="button" onClick={() => importInputRef.current?.click()}>Karakter içe aktar</button>
+        <input ref={importInputRef} type="file" accept="application/json,.json" onChange={importCharacter} hidden />
+      </div>
+      {transferMessage ? <p className="character-transfer-message" role="status">{transferMessage}</p> : null}
       <div className="character-filter-panel filter-panel-extended">
         <label>
           Ara
@@ -267,12 +293,7 @@ export function Characters({
                 <button type="button" onClick={() => toggleCompareCharacter(character.id)}>
                   {compareIds.includes(character.id) ? "Seçimi kaldır" : "Karşılaştır"}
                 </button>
-                <button type="button" onClick={() => duplicateCharacter(character.id)}>
-                  Kopyala
-                </button>
-                <button onClick={() => onDeleteCharacter(character.id)}>
-                  Sil
-                </button>
+                <details className="character-card-menu"><summary aria-label={`${character.name} için diğer işlemler`}>•••</summary><div><button type="button" onClick={() => downloadCharacterTransfer(character)}>Dışa aktar</button><button type="button" onClick={() => duplicateCharacter(character.id)}>Kopyala</button><button type="button" className="danger" onClick={() => onDeleteCharacter(character.id)}>Sil</button></div></details>
               </div>
             </motion.article>
           ))}

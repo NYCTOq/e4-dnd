@@ -225,6 +225,7 @@ export function AppRoutes({
             characters={characters}
             onDeleteCharacter={onDeleteCharacter}
             onDuplicateCharacter={onDuplicateCharacter}
+            onImportCharacters={onImportCharacters}
           />
         }
       />
