@@ -38,6 +38,7 @@ export const navItems: readonly NavItem[] = [
   { to: "/rulesets", label: "Ruleset Center", shortLabel: "Ruleset", icon: "◫", group: "Yönetim" },
   { to: "/library", label: "Ruleset Library", shortLabel: "Library", icon: "▤", group: "Yönetim" },
   { to: "/backup", label: "Yedek & Kurtarma", shortLabel: "Yedek", icon: "↥", group: "Yönetim" },
+  { to: "/player-test", label: "Oyuncu Test Merkezi", shortLabel: "Test", icon: "✓", group: "Yönetim" },
   { to: "/settings", label: "Ayarlar", shortLabel: "Ayarlar", icon: "⚙", group: "Yönetim" },
   { to: "/updates", label: "Sürüm Geçmişi", shortLabel: "Sürümler", icon: "◴", group: "Yönetim" },
   { to: "/help", label: "Yardım Merkezi", shortLabel: "Yardım", icon: "?", group: "Yönetim" },

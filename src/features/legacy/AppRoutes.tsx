@@ -73,6 +73,9 @@ const Library = lazy(() =>
 const Settings = lazy(() =>
   import("../settings/Settings").then((module) => ({ default: module.Settings })),
 );
+const PlayerTestCenter = lazy(() =>
+  import("../player-test/PlayerTestCenter").then((module) => ({ default: module.PlayerTestCenter })),
+);
 const RulesetCenterPage = lazy(() =>
   import("../rulesets/RulesetCenterPage").then((module) => ({ default: module.RulesetCenterPage })),
 );
@@ -408,6 +411,7 @@ export function AppRoutes({
       <Route path="/origins" element={<OriginCatalogPage rulesetData={effectiveRulesetData} />} />
       <Route path="/feats" element={<FeatCatalogPage rulesetData={effectiveRulesetData} />} />
       <Route path="/settings" element={<Settings />} />
+      <Route path="/player-test" element={<PlayerTestCenter characters={characters} rulesetData={effectiveRulesetData} />} />
 
       <Route path="/updates" element={<ReleaseHistory />} />
 
