@@ -18,6 +18,11 @@ export function getSubclassRuntime(subclass:DndSubclassData|null|undefined,level
  if(/combat wild shape|circle forms/i.test(names))actions.push(action("combat-wild-shape","Combat Wild Shape","bonus-action","Wild Shape kaynağıyla savaş formuna geç.","wild-shape"));
  if(/tides of chaos/i.test(names))actions.push(action("tides-of-chaos","Tides of Chaos","action","Bir D20 Test için advantage kazan."));
  if(/elder champion/i.test(names))actions.push(action("elder-champion","Elder Champion","bonus-action","Oath capstone dönüşümünü başlat."));
+ if(/destructive wrath|guided strike|touch of death|arcane abjuration|path to the grave|twilight sanctuary|emboldening bond|order's demand/i.test(names)){const selected=feature(unlocked,/destructive wrath|guided strike|touch of death|arcane abjuration|path to the grave|twilight sanctuary|emboldening bond|order's demand/i)!;actions.push(action(`domain-${selected.name.toLowerCase().replace(/[^a-z0-9]+/g,"-")}`,selected.name,"action",selected.summary,"channel-divinity"))}
+ if(/war priest/i.test(names))actions.push(action("war-priest","War Priest","bonus-action","Weapon attack sonrasında bonus action saldırısı."));
+ if(/arcane ward/i.test(names))actions.push(action("arcane-ward","Arcane Ward","action","Abjuration ward HP havuzunu etkinleştir.","arcane-ward"));
+ if(/bend luck/i.test(names))actions.push(action("bend-luck","Bend Luck","reaction","Yakındaki D20 sonucuna sorcery die uygula.","sorcery-points"));
+ if(/wild magic surge/i.test(names))actions.push(action("wild-magic-surge","Wild Magic Surge","action","Wild Magic tablosu sonucunu tetikle."));
  const champion=/champion/i.test(subclassName);const criticalThreshold=champion?(level>=15?18:level>=3?19:20):20;
  const valor=/college of valor/i.test(subclassName);const attacksPerActionMinimum=valor&&level>=6?2:1;
  const draconic=/draconic/i.test(subclassName);const armorClassFloor=draconic?13+dexModifier:0;
