@@ -2,9 +2,9 @@ import { useEffect, useMemo, useState } from "react";
 import type { DndItemData, DndSpellData, RulesetData } from "../../core/rulesets/ruleset.types";
 import type { Character, CharacterDraft, CharacterHitDiePool } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getProficiencyBonus } from "../../core/character/characterCalculator";
+import { calculateJourneyArmorClass } from "../../core/character/playerJourneyConsistency";
 import { getHighestSpellLevel, getSpellMechanicSummary } from "../../core/rulesets/spellRules";
 import { getItemSearchText, getWeaponMastery } from "../../core/rulesets/equipmentRules";
-import { getAttunedMagicItemBonuses } from "../../core/rulesets/magicItemRules";
 import { getClassResources, mergeClassResources } from "../../core/rulesets/classFeatureEngine";
 import { canPrepareSpell, canRitualCast, canSelectKnownSpell, getSpellcastingProfile } from "../../core/rulesets/spellcastingRules";
 import { getCompanionStats, getRangerCompanions } from "../../core/rulesets/companionRules";
@@ -298,46 +298,26 @@ export function calculateSuggestedArmorClass(
   character: Pick<Character, "abilities" | "equippedArmorId" | "equippedShieldId" | "fightingStyleIds"> & { inventory?: Character["inventory"] },
   items: DndItemData[] | undefined,
 ) {
-  const itemMap = new Map((items ?? []).map((item) => [item.id, item]));
-  const armor = character.equippedArmorId
-    ? itemMap.get(character.equippedArmorId)
-    : null;
-  const shield = character.equippedShieldId
-    ? itemMap.get(character.equippedShieldId)
-    : null;
-  const dexModifier = getAbilityModifier(character.abilities.dex);
-
-  let armorClass = 10 + dexModifier;
-
-  if (armor?.category === "armor" && armor.armorClass) {
-    if (armor.armorType === "heavy") {
-      armorClass = armor.armorClass;
-    } else if (armor.armorType === "medium") {
-      armorClass = armor.armorClass + Math.min(armor.dexBonusMax ?? 2, dexModifier);
-    } else {
-      armorClass = armor.armorClass + dexModifier;
-    }
-  }
-
-  if (shield?.category === "shield") {
-    armorClass += shield.armorClassBonus ?? 2;
-  }
-
-  if (armor?.category === "armor" && character.fightingStyleIds?.includes("defense")) armorClass += 1;
-  armorClass += getAttunedMagicItemBonuses(character.inventory ?? [], items ?? []).armorClass;
-
-  return armorClass;
+  return calculateJourneyArmorClass({
+    ...character,
+    inventory: character.inventory ?? [],
+    armorClass: 10,
+    armorClassMode: "auto",
+    equippedWeaponIds: [],
+    level: 1, className: "", ruleset: "dnd_2014", race: "", background: "", featIds: [], skillProficiencies: [], expertiseSkills: [], resources: [],
+  }, items ?? []);
 }
 
 export function calculateEffectiveArmorClass(
-  character: Pick<Character, "abilities" | "armorClass" | "armorClassMode" | "equippedArmorId" | "equippedShieldId" | "fightingStyleIds">,
+  character: Pick<Character, "abilities" | "armorClass" | "armorClassMode" | "equippedArmorId" | "equippedShieldId" | "fightingStyleIds"> & { inventory?: Character["inventory"] },
   items: DndItemData[] | undefined,
 ) {
-  if (character.armorClassMode !== "auto") {
-    return character.armorClass;
-  }
-
-  return calculateSuggestedArmorClass(character, items);
+  return calculateJourneyArmorClass({
+    ...character,
+    inventory: character.inventory ?? [],
+    equippedWeaponIds: [],
+    level: 1, className: "", ruleset: "dnd_2014", race: "", background: "", featIds: [], skillProficiencies: [], expertiseSkills: [], resources: [],
+  }, items ?? []);
 }
 
 export function getWeaponAbilityModifier(character: Character, weapon: DndItemData) {

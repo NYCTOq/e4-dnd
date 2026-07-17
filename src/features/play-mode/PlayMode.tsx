@@ -13,6 +13,7 @@ import {
 } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
 import { getPlayReadiness } from "../../core/character/playReadiness";
+import { getCharacterSpellcastingAbility } from "../../core/character/playerJourneyConsistency";
 import { useI18n } from "../../shared/i18n/useI18n";
 import { getMetamagicOptions } from "../../core/rulesets/metamagicRules";
 import { getEldritchInvocations } from "../../core/rulesets/invocationRules";
@@ -192,7 +193,7 @@ export function PlayMode({
   const classProfiles=(rulesetData?.classes??[]).filter(item=>classLevels.some(level=>level.className===item.name));
   const selectedSubclass=rulesetData?.subclasses.find(item=>item.name===activeCharacter.subclass&&item.className===activeCharacter.className);
   const subclassRuntime=getSubclassRuntime(selectedSubclass,activeCharacter.level,getAbilityModifier(effectiveCharacter.abilities.dex));
-  const spellcastingAbility:AbilityKey=(["Wizard","Artificer"].includes(activeCharacter.className)?"int":["Bard","Paladin","Sorcerer","Warlock"].includes(activeCharacter.className)?"cha":"wis");
+  const spellcastingAbility:AbilityKey=getCharacterSpellcastingAbility(activeCharacter,rulesetData);
   const hitDice = normalizeHitDice(
     activeCharacter.hitDice,
     activeCharacter.level,

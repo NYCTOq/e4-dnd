@@ -1,3 +1,11 @@
+# v4.8.0 — Player Journey Consistency Mega Pack
+
+- Builder, Editor, Detail, Character Sheet ve Play Mode için merkezi karakter snapshot motoru.
+- AC, initiative, speed, passive Perception, skill/save, spell DC/attack ve attacks-per-action ortak hesap kaynağı.
+- Ruleset verisinden spellcasting ability çözümü.
+- Resource remaining/recovery görünümü ve snapshot tutarlılık denetimi.
+- Mevcut armor helper fonksiyonları merkezi hesap katmanına bağlandı.
+
 # v4.7.0 — Unified Character Choices Mega Pack
 
 - Builder, Level Up, Character Editor ve Choice Debt Resolver için ortak seçim modeli eklendi.
