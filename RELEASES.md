@@ -1,3 +1,11 @@
+# v5.1.0 — Stable Player Post-Release QA & Bug Closure Mega Pack
+
+- 2014/2024 martial and caster journeys, multiclass, level 1–20, spell/rest, equipment, backup, offline/mobile and keyboard flows are represented in one QA matrix.
+- Missing scenario evidence is visible as a warning instead of being silently treated as passed.
+- Critical player journey failures block release readiness.
+- Duplicate evidence keeps the worst result so a later pass cannot hide an earlier unresolved regression.
+- Non-critical visual regressions remain review notes without masking gameplay blockers.
+
 # v5.0.0 — Stable Player Release
 
 - E4 D&D player journey is promoted to the stable release channel.
