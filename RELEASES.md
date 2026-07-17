@@ -1,3 +1,10 @@
+# v5.0.0 — Stable Player Release
+
+- E4 D&D player journey is promoted to the stable release channel.
+- A single stable manifest now combines hardening, runtime coverage, player journey, data integrity, localization, accessibility and licensing gates.
+- Version mismatch, missing runtime behavior, failed migration, unresolved crash, invalid backup or failed test/build/browser gates block the release.
+- The manifest exposes stable status, readiness score, blockers, warnings and explicit player guarantees.
+
 # v4.12.0 — Stable Player Release Hardening Mega Pack
 
 - Unit/integration, production build and browser E2E release gates were unified.
