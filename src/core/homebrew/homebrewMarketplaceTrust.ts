@@ -11,6 +11,9 @@ export type HomebrewMarketplaceSource = {
   publicKeyJwk?: JsonWebKey;
   enabled: boolean;
   addedAt: string;
+  syncIntervalHours?: number;
+  lastSyncedAt?: string;
+  lastSyncError?: string;
 };
 
 export type HomebrewMarketplaceEnvelope = {
@@ -73,6 +76,7 @@ export function normalizeHomebrewMarketplaceSources(sources: HomebrewMarketplace
       trustLevel: source.trustLevel ?? "community",
       enabled: source.enabled !== false,
       addedAt: source.addedAt || new Date().toISOString(),
+      syncIntervalHours: Math.max(1, source.syncIntervalHours ?? 24),
     }];
   });
 }

@@ -1,11 +1,12 @@
 import { useMemo, useState } from "react";
 import { createEntityFromDraft, createPackageFromDraft, DEFAULT_HOMEBREW_CREATOR_DRAFT, type HomebrewCreatorDraft } from "../../core/homebrew/homebrewCreator";
 import { exportHomebrewPackage, importHomebrewPackage, validateHomebrewPackage, type HomebrewEntity, type HomebrewEntityType, type HomebrewPackage } from "../../core/homebrew/homebrewFoundation";
-import { loadHomebrewLibraryPreferences, loadHomebrewMarketplaceSources, loadHomebrewPackages, loadHomebrewPackageSnapshots, saveHomebrewLibraryPreferences, saveHomebrewMarketplaceSources, saveHomebrewPackages, saveHomebrewPackageSnapshots } from "./homebrewStorage";
+import { loadHomebrewLibraryPreferences, loadHomebrewMarketplaceRevocations, loadHomebrewMarketplaceSecurityEvents, loadHomebrewMarketplaceSources, loadHomebrewPackages, loadHomebrewPackageSnapshots, saveHomebrewLibraryPreferences, saveHomebrewMarketplaceRevocations, saveHomebrewMarketplaceSecurityEvents, saveHomebrewMarketplaceSources, saveHomebrewPackages, saveHomebrewPackageSnapshots } from "./homebrewStorage";
 import { moveHomebrewPackagePriority, normalizeHomebrewLibraryPreferences, resolveHomebrewMarketplaceLibrary, toggleHomebrewPackage, type HomebrewLibraryPreference } from "../../core/homebrew/homebrewMarketplaceLibrary";
 import { applyHomebrewMarketplaceManifest, pruneHomebrewSnapshots, rollbackHomebrewPackage, type HomebrewPackageSnapshot } from "../../core/homebrew/homebrewMarketplaceUpdate";
 import { importHomebrewShareManifest } from "../../core/homebrew/homebrewPackageSharing";
 import { importHomebrewMarketplaceEnvelope, normalizeHomebrewMarketplaceSources, verifyHomebrewMarketplaceEnvelope, type HomebrewMarketplaceSource } from "../../core/homebrew/homebrewMarketplaceTrust";
+import { createHomebrewSecurityEvent, evaluateHomebrewMarketplaceSync, importHomebrewRevocationList, markHomebrewMarketplaceSourceSynced, pruneHomebrewSecurityEvents, validateHomebrewRevocationList, verifyHomebrewMarketplaceRevocations, type HomebrewMarketplaceRevocationList, type HomebrewMarketplaceSecurityEvent } from "../../core/homebrew/homebrewMarketplaceSecurity";
 
 const ENTITY_LABELS: Record<HomebrewEntityType, string> = {
   class: "Class",
@@ -40,6 +41,9 @@ export function HomebrewPackageCreator() {
   const [sourceId, setSourceId] = useState("");
   const [sourceName, setSourceName] = useState("");
   const [sourceTrust, setSourceTrust] = useState<HomebrewMarketplaceSource["trustLevel"]>("community");
+  const [revocationText, setRevocationText] = useState("");
+  const [revocations, setRevocations] = useState<HomebrewMarketplaceRevocationList[]>(() => loadHomebrewMarketplaceRevocations());
+  const [securityEvents, setSecurityEvents] = useState<HomebrewMarketplaceSecurityEvent[]>(() => loadHomebrewMarketplaceSecurityEvents());
 
   const marketplace = useMemo(() => resolveHomebrewMarketplaceLibrary(packages, libraryPreferences), [packages, libraryPreferences]);
 
@@ -90,8 +94,16 @@ export function HomebrewPackageCreator() {
         const envelope = importHomebrewMarketplaceEnvelope(marketplaceText);
         const verification = await verifyHomebrewMarketplaceEnvelope(envelope, sources);
         if (!verification.valid) throw new Error(verification.blockers.join(" "));
+        const security = verifyHomebrewMarketplaceRevocations(envelope, verification, revocations);
+        if (!security.valid) {
+          const nextEvents = pruneHomebrewSecurityEvents([...securityEvents, createHomebrewSecurityEvent("block", "critical", security.blockers.join(" "), envelope.sourceId)]);
+          setSecurityEvents(nextEvents); saveHomebrewMarketplaceSecurityEvents(nextEvents);
+          throw new Error(security.blockers.join(" "));
+        }
+        const nextEvents = pruneHomebrewSecurityEvents([...securityEvents, createHomebrewSecurityEvent("verify", security.warnings.length ? "warning" : "info", "Marketplace envelope ve geri çağırma listesi doğrulandı.", envelope.sourceId)]);
+        setSecurityEvents(nextEvents); saveHomebrewMarketplaceSecurityEvents(nextEvents);
         manifest = envelope.manifest;
-        verificationMessage = verification.trusted ? "Güvenilir kaynak ve checksum doğrulandı. " : `Checksum doğrulandı. ${verification.warnings.join(" ")} `;
+        verificationMessage = verification.trusted ? "Güvenilir kaynak, checksum ve revocation kontrolü doğrulandı. " : `Checksum ve revocation kontrolü doğrulandı. ${verification.warnings.join(" ")} `;
       } else {
         manifest = importHomebrewShareManifest(marketplaceText, "5.17.0");
         verificationMessage = "İmzasız legacy paylaşım manifesti uygulandı. ";
@@ -122,6 +134,7 @@ export function HomebrewPackageCreator() {
       trustLevel: sourceTrust,
       enabled: true,
       addedAt: new Date().toISOString(),
+      syncIntervalHours: 24,
     }]);
     setSources(next);
     saveHomebrewMarketplaceSources(next);
@@ -134,6 +147,29 @@ export function HomebrewPackageCreator() {
     const next = sources.map((source) => source.id === id ? { ...source, enabled: !source.enabled } : source);
     setSources(next);
     saveHomebrewMarketplaceSources(next);
+  }
+
+
+  function syncMarketplaceSource(id: string) {
+    const next = sources.map((source) => source.id === id ? markHomebrewMarketplaceSourceSynced(source) : source);
+    setSources(next); saveHomebrewMarketplaceSources(next);
+    const nextEvents = pruneHomebrewSecurityEvents([...securityEvents, createHomebrewSecurityEvent("sync", "info", "Marketplace kaynağı senkronize edildi.", id)]);
+    setSecurityEvents(nextEvents); saveHomebrewMarketplaceSecurityEvents(nextEvents);
+    setMessage("Marketplace kaynak senkronizasyon zamanı güncellendi.");
+  }
+
+  function importRevocations() {
+    try {
+      const list = importHomebrewRevocationList(revocationText);
+      const source = sources.find((entry) => entry.id === list.sourceId);
+      const report = validateHomebrewRevocationList(list, source);
+      if (!report.valid) throw new Error(report.blockers.join(" "));
+      const next = [...revocations.filter((entry) => entry.sourceId !== list.sourceId), list];
+      setRevocations(next); saveHomebrewMarketplaceRevocations(next); setRevocationText("");
+      const nextEvents = pruneHomebrewSecurityEvents([...securityEvents, createHomebrewSecurityEvent("revoke", report.warnings.length ? "warning" : "info", "Geri çağırma listesi güncellendi.", list.sourceId)]);
+      setSecurityEvents(nextEvents); saveHomebrewMarketplaceSecurityEvents(nextEvents);
+      setMessage("Marketplace geri çağırma listesi kaydedildi.");
+    } catch (error) { setMessage(error instanceof Error ? error.message : "Geri çağırma listesi alınamadı."); }
   }
 
   function rollbackSnapshot(snapshotId: string) {
@@ -243,7 +279,13 @@ export function HomebrewPackageCreator() {
             <label>Güven seviyesi<select value={sourceTrust} onChange={(event) => setSourceTrust(event.target.value as HomebrewMarketplaceSource["trustLevel"])}><option value="trusted">Güvenilir</option><option value="community">Topluluk</option><option value="blocked">Engelli</option></select></label>
           </div>
           <button className="secondary-action" type="button" onClick={addMarketplaceSource} disabled={!sourceId.trim()}>Kaynağı Kaydet</button>
-          {sources.length ? <div className="homebrew-list">{sources.map((source) => <article className="homebrew-list-item" key={source.id}><div><span className="mini-label">{source.trustLevel}</span><h3>{source.name}</h3><p>{source.id} · {source.enabled ? "Aktif" : "Devre dışı"}</p></div><button type="button" onClick={() => toggleMarketplaceSource(source.id)}>{source.enabled ? "Devre Dışı" : "Etkinleştir"}</button></article>)}</div> : <p>Henüz kayıtlı marketplace kaynağı yok.</p>}
+          {sources.length ? <div className="homebrew-list">{sources.map((source) => { const sync = evaluateHomebrewMarketplaceSync(source); return <article className="homebrew-list-item" key={source.id}><div><span className="mini-label">{source.trustLevel} · sync: {sync.state}</span><h3>{source.name}</h3><p>{source.id} · {source.enabled ? "Aktif" : "Devre dışı"}{source.lastSyncedAt ? ` · ${new Date(source.lastSyncedAt).toLocaleString("tr-TR")}` : ""}</p></div><div className="homebrew-inline-actions"><button type="button" onClick={() => syncMarketplaceSource(source.id)}>Senkronize Et</button><button type="button" onClick={() => toggleMarketplaceSource(source.id)}>{source.enabled ? "Devre Dışı" : "Etkinleştir"}</button></div></article>; })}</div> : <p>Henüz kayıtlı marketplace kaynağı yok.</p>}
+
+          <h3>Geri çağırma listesi ve güvenlik denetimi</h3>
+          <textarea value={revocationText} onChange={(event) => setRevocationText(event.target.value)} rows={5} placeholder='{"format":"e4-dnd-homebrew-revocations", ...}' />
+          <button className="secondary-action" type="button" onClick={importRevocations} disabled={!revocationText.trim()}>Geri Çağırma Listesini Kaydet</button>
+          {revocations.length ? <p>{revocations.length} kaynak için revocation listesi kayıtlı.</p> : <p>Henüz geri çağırma listesi yok.</p>}
+          {securityEvents.length ? <div className="homebrew-list">{securityEvents.slice(0, 8).map((event) => <article className="homebrew-list-item" key={event.id}><div><span className="mini-label">{event.severity} · {event.action}</span><h3>{event.sourceId ?? "local"}</h3><p>{event.message} · {new Date(event.occurredAt).toLocaleString("tr-TR")}</p></div></article>)}</div> : <p>Henüz güvenlik denetim kaydı yok.</p>}
 
           <h3>Marketplace güncelleme ve rollback</h3>
           <textarea value={marketplaceText} onChange={(event) => setMarketplaceText(event.target.value)} rows={6} placeholder='{"format":"e4-dnd-homebrew-marketplace", "integrity":{"algorithm":"SHA-256",...}}' />

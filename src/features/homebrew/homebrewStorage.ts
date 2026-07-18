@@ -7,6 +7,7 @@ import { readJsonSafely, writeJsonSafely } from "../../core/storage/safeStorage"
 import type { HomebrewLibraryPreference } from "../../core/homebrew/homebrewMarketplaceLibrary";
 import type { HomebrewPackageSnapshot } from "../../core/homebrew/homebrewMarketplaceUpdate";
 import type { HomebrewMarketplaceSource } from "../../core/homebrew/homebrewMarketplaceTrust";
+import type { HomebrewMarketplaceRevocationList, HomebrewMarketplaceSecurityEvent } from "../../core/homebrew/homebrewMarketplaceSecurity";
 
 const HOMEBREW_SPELLS_STORAGE_KEY = "e4_dnd_homebrew_spells_v1";
 const HOMEBREW_ITEMS_STORAGE_KEY = "e4_dnd_homebrew_items_v1";
@@ -62,6 +63,8 @@ export const HOMEBREW_PACKAGES_CHANGED_EVENT = "e4-dnd-homebrew-packages-changed
 export const HOMEBREW_LIBRARY_PREFERENCES_STORAGE_KEY = "e4_dnd_homebrew_library_preferences_v1";
 export const HOMEBREW_PACKAGE_SNAPSHOTS_STORAGE_KEY = "e4_dnd_homebrew_package_snapshots_v1";
 export const HOMEBREW_MARKETPLACE_SOURCES_STORAGE_KEY = "e4_dnd_homebrew_marketplace_sources_v1";
+export const HOMEBREW_MARKETPLACE_REVOCATIONS_STORAGE_KEY = "e4_dnd_homebrew_marketplace_revocations_v1";
+export const HOMEBREW_MARKETPLACE_SECURITY_EVENTS_STORAGE_KEY = "e4_dnd_homebrew_marketplace_security_events_v1";
 
 export function loadHomebrewPackages(): HomebrewPackage[] {
   return loadArray<unknown>(HOMEBREW_PACKAGES_STORAGE_KEY).flatMap((raw) => {
@@ -116,4 +119,20 @@ export function loadHomebrewMarketplaceSources(): HomebrewMarketplaceSource[] {
 
 export function saveHomebrewMarketplaceSources(sources: HomebrewMarketplaceSource[]) {
   saveArray(HOMEBREW_MARKETPLACE_SOURCES_STORAGE_KEY, sources);
+}
+
+export function loadHomebrewMarketplaceRevocations(): HomebrewMarketplaceRevocationList[] {
+  return loadArray<HomebrewMarketplaceRevocationList>(HOMEBREW_MARKETPLACE_REVOCATIONS_STORAGE_KEY);
+}
+
+export function saveHomebrewMarketplaceRevocations(items: HomebrewMarketplaceRevocationList[]) {
+  saveArray(HOMEBREW_MARKETPLACE_REVOCATIONS_STORAGE_KEY, items);
+}
+
+export function loadHomebrewMarketplaceSecurityEvents(): HomebrewMarketplaceSecurityEvent[] {
+  return loadArray<HomebrewMarketplaceSecurityEvent>(HOMEBREW_MARKETPLACE_SECURITY_EVENTS_STORAGE_KEY);
+}
+
+export function saveHomebrewMarketplaceSecurityEvents(items: HomebrewMarketplaceSecurityEvent[]) {
+  saveArray(HOMEBREW_MARKETPLACE_SECURITY_EVENTS_STORAGE_KEY, items);
 }
