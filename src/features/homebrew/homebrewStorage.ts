@@ -6,6 +6,7 @@ import type {
 import { readJsonSafely, writeJsonSafely } from "../../core/storage/safeStorage";
 import type { HomebrewLibraryPreference } from "../../core/homebrew/homebrewMarketplaceLibrary";
 import type { HomebrewPackageSnapshot } from "../../core/homebrew/homebrewMarketplaceUpdate";
+import type { HomebrewMarketplaceSource } from "../../core/homebrew/homebrewMarketplaceTrust";
 
 const HOMEBREW_SPELLS_STORAGE_KEY = "e4_dnd_homebrew_spells_v1";
 const HOMEBREW_ITEMS_STORAGE_KEY = "e4_dnd_homebrew_items_v1";
@@ -60,6 +61,7 @@ export const HOMEBREW_PACKAGES_STORAGE_KEY = "e4_dnd_homebrew_packages_v1";
 export const HOMEBREW_PACKAGES_CHANGED_EVENT = "e4-dnd-homebrew-packages-changed";
 export const HOMEBREW_LIBRARY_PREFERENCES_STORAGE_KEY = "e4_dnd_homebrew_library_preferences_v1";
 export const HOMEBREW_PACKAGE_SNAPSHOTS_STORAGE_KEY = "e4_dnd_homebrew_package_snapshots_v1";
+export const HOMEBREW_MARKETPLACE_SOURCES_STORAGE_KEY = "e4_dnd_homebrew_marketplace_sources_v1";
 
 export function loadHomebrewPackages(): HomebrewPackage[] {
   return loadArray<unknown>(HOMEBREW_PACKAGES_STORAGE_KEY).flatMap((raw) => {
@@ -106,4 +108,12 @@ export function loadHomebrewPackageSnapshots(): HomebrewPackageSnapshot[] {
 
 export function saveHomebrewPackageSnapshots(snapshots: HomebrewPackageSnapshot[]) {
   saveArray(HOMEBREW_PACKAGE_SNAPSHOTS_STORAGE_KEY, snapshots);
+}
+
+export function loadHomebrewMarketplaceSources(): HomebrewMarketplaceSource[] {
+  return loadArray<HomebrewMarketplaceSource>(HOMEBREW_MARKETPLACE_SOURCES_STORAGE_KEY);
+}
+
+export function saveHomebrewMarketplaceSources(sources: HomebrewMarketplaceSource[]) {
+  saveArray(HOMEBREW_MARKETPLACE_SOURCES_STORAGE_KEY, sources);
 }

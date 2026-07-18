@@ -1,10 +1,11 @@
 import { useMemo, useState } from "react";
 import { createEntityFromDraft, createPackageFromDraft, DEFAULT_HOMEBREW_CREATOR_DRAFT, type HomebrewCreatorDraft } from "../../core/homebrew/homebrewCreator";
 import { exportHomebrewPackage, importHomebrewPackage, validateHomebrewPackage, type HomebrewEntity, type HomebrewEntityType, type HomebrewPackage } from "../../core/homebrew/homebrewFoundation";
-import { loadHomebrewLibraryPreferences, loadHomebrewPackages, loadHomebrewPackageSnapshots, saveHomebrewLibraryPreferences, saveHomebrewPackages, saveHomebrewPackageSnapshots } from "./homebrewStorage";
+import { loadHomebrewLibraryPreferences, loadHomebrewMarketplaceSources, loadHomebrewPackages, loadHomebrewPackageSnapshots, saveHomebrewLibraryPreferences, saveHomebrewMarketplaceSources, saveHomebrewPackages, saveHomebrewPackageSnapshots } from "./homebrewStorage";
 import { moveHomebrewPackagePriority, normalizeHomebrewLibraryPreferences, resolveHomebrewMarketplaceLibrary, toggleHomebrewPackage, type HomebrewLibraryPreference } from "../../core/homebrew/homebrewMarketplaceLibrary";
 import { applyHomebrewMarketplaceManifest, pruneHomebrewSnapshots, rollbackHomebrewPackage, type HomebrewPackageSnapshot } from "../../core/homebrew/homebrewMarketplaceUpdate";
 import { importHomebrewShareManifest } from "../../core/homebrew/homebrewPackageSharing";
+import { importHomebrewMarketplaceEnvelope, normalizeHomebrewMarketplaceSources, verifyHomebrewMarketplaceEnvelope, type HomebrewMarketplaceSource } from "../../core/homebrew/homebrewMarketplaceTrust";
 
 const ENTITY_LABELS: Record<HomebrewEntityType, string> = {
   class: "Class",
@@ -35,6 +36,10 @@ export function HomebrewPackageCreator() {
   const [message, setMessage] = useState("");
   const [marketplaceText, setMarketplaceText] = useState("");
   const [snapshots, setSnapshots] = useState<HomebrewPackageSnapshot[]>(() => loadHomebrewPackageSnapshots());
+  const [sources, setSources] = useState<HomebrewMarketplaceSource[]>(() => normalizeHomebrewMarketplaceSources(loadHomebrewMarketplaceSources()));
+  const [sourceId, setSourceId] = useState("");
+  const [sourceName, setSourceName] = useState("");
+  const [sourceTrust, setSourceTrust] = useState<HomebrewMarketplaceSource["trustLevel"]>("community");
 
   const marketplace = useMemo(() => resolveHomebrewMarketplaceLibrary(packages, libraryPreferences), [packages, libraryPreferences]);
 
@@ -76,10 +81,22 @@ export function HomebrewPackageCreator() {
     }
   }
 
-  function applyMarketplaceUpdate() {
+  async function applyMarketplaceUpdate() {
     try {
-      const manifest = importHomebrewShareManifest(marketplaceText, "5.16.0");
-      const result = applyHomebrewMarketplaceManifest(packages, manifest, snapshots, "5.16.0");
+      const parsed = JSON.parse(marketplaceText) as { format?: string };
+      let manifest;
+      let verificationMessage = "";
+      if (parsed.format === "e4-dnd-homebrew-marketplace") {
+        const envelope = importHomebrewMarketplaceEnvelope(marketplaceText);
+        const verification = await verifyHomebrewMarketplaceEnvelope(envelope, sources);
+        if (!verification.valid) throw new Error(verification.blockers.join(" "));
+        manifest = envelope.manifest;
+        verificationMessage = verification.trusted ? "Güvenilir kaynak ve checksum doğrulandı. " : `Checksum doğrulandı. ${verification.warnings.join(" ")} `;
+      } else {
+        manifest = importHomebrewShareManifest(marketplaceText, "5.17.0");
+        verificationMessage = "İmzasız legacy paylaşım manifesti uygulandı. ";
+      }
+      const result = applyHomebrewMarketplaceManifest(packages, manifest, snapshots, "5.17.0");
       if (result.blockers.length) throw new Error(result.blockers.join(" "));
       const nextSnapshots = pruneHomebrewSnapshots(result.snapshots, 5);
       saveHomebrewPackages(result.packages);
@@ -90,10 +107,33 @@ export function HomebrewPackageCreator() {
       setLibraryPreferences(preferences);
       saveHomebrewLibraryPreferences(preferences);
       setMarketplaceText("");
-      setMessage(result.updatedPackageIds.length ? `${result.updatedPackageIds.length} paket güncellendi ve önceki sürümler yedeklendi.` : "Uygulanacak daha yeni paket bulunamadı.");
+      setMessage(verificationMessage + (result.updatedPackageIds.length ? `${result.updatedPackageIds.length} paket güncellendi ve önceki sürümler yedeklendi.` : "Uygulanacak daha yeni paket bulunamadı."));
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "Marketplace güncellemesi uygulanamadı.");
     }
+  }
+
+  function addMarketplaceSource() {
+    const id = sourceId.trim();
+    if (!id) { setMessage("Marketplace kaynak ID zorunludur."); return; }
+    const next = normalizeHomebrewMarketplaceSources([...sources, {
+      id,
+      name: sourceName.trim() || id,
+      trustLevel: sourceTrust,
+      enabled: true,
+      addedAt: new Date().toISOString(),
+    }]);
+    setSources(next);
+    saveHomebrewMarketplaceSources(next);
+    setSourceId("");
+    setSourceName("");
+    setMessage("Marketplace kaynağı kaydedildi.");
+  }
+
+  function toggleMarketplaceSource(id: string) {
+    const next = sources.map((source) => source.id === id ? { ...source, enabled: !source.enabled } : source);
+    setSources(next);
+    saveHomebrewMarketplaceSources(next);
   }
 
   function rollbackSnapshot(snapshotId: string) {
@@ -196,9 +236,18 @@ export function HomebrewPackageCreator() {
           {marketplace.conflicts.length ? <div className="homebrew-list">{marketplace.conflicts.map((conflict) => <article className="homebrew-list-item" key={conflict.key}><div><span className="mini-label">{conflict.type}</span><h3>{conflict.entityId}</h3><p>Kazanan paket: {conflict.winnerPackageId}. Önceliği değiştirdiğinde sonuç anında yenilenir.</p></div></article>)}</div> : <p>Aktif paketlerde içerik çakışması yok.</p>}
 
 
+          <h3>Marketplace kaynak kayıtları</h3>
+          <div className="form-grid">
+            <label>Kaynak ID<input value={sourceId} onChange={(event) => setSourceId(event.target.value)} placeholder="official" /></label>
+            <label>Kaynak adı<input value={sourceName} onChange={(event) => setSourceName(event.target.value)} placeholder="E4 Community" /></label>
+            <label>Güven seviyesi<select value={sourceTrust} onChange={(event) => setSourceTrust(event.target.value as HomebrewMarketplaceSource["trustLevel"])}><option value="trusted">Güvenilir</option><option value="community">Topluluk</option><option value="blocked">Engelli</option></select></label>
+          </div>
+          <button className="secondary-action" type="button" onClick={addMarketplaceSource} disabled={!sourceId.trim()}>Kaynağı Kaydet</button>
+          {sources.length ? <div className="homebrew-list">{sources.map((source) => <article className="homebrew-list-item" key={source.id}><div><span className="mini-label">{source.trustLevel}</span><h3>{source.name}</h3><p>{source.id} · {source.enabled ? "Aktif" : "Devre dışı"}</p></div><button type="button" onClick={() => toggleMarketplaceSource(source.id)}>{source.enabled ? "Devre Dışı" : "Etkinleştir"}</button></article>)}</div> : <p>Henüz kayıtlı marketplace kaynağı yok.</p>}
+
           <h3>Marketplace güncelleme ve rollback</h3>
-          <textarea value={marketplaceText} onChange={(event) => setMarketplaceText(event.target.value)} rows={6} placeholder='{"format":"e4-dnd-homebrew-share", ...}' />
-          <button className="secondary-action" type="button" onClick={applyMarketplaceUpdate} disabled={!marketplaceText.trim()}>Güncellemeleri Güvenli Uygula</button>
+          <textarea value={marketplaceText} onChange={(event) => setMarketplaceText(event.target.value)} rows={6} placeholder='{"format":"e4-dnd-homebrew-marketplace", "integrity":{"algorithm":"SHA-256",...}}' />
+          <button className="secondary-action" type="button" onClick={applyMarketplaceUpdate} disabled={!marketplaceText.trim()}>Doğrula ve Güvenli Uygula</button>
           {snapshots.length ? <div className="homebrew-list">{snapshots.map((snapshot) => <article className="homebrew-list-item" key={snapshot.id}><div><span className="mini-label">Snapshot · v{snapshot.version}</span><h3>{snapshot.packageName}</h3><p>{snapshot.reason} · {new Date(snapshot.createdAt).toLocaleString("tr-TR")}</p></div><button type="button" onClick={() => rollbackSnapshot(snapshot.id)}>Bu Sürüme Dön</button></article>)}</div> : <p>Henüz güncelleme snapshot’ı yok.</p>}
 
           <h3>JSON içe aktar</h3>
