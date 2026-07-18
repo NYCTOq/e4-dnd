@@ -1,7 +1,7 @@
 {
   "name": "e4_dnd",
   "private": true,
-  "version": "5.22.0",
+  "version": "5.25.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

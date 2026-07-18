@@ -26,7 +26,7 @@ function uniqueValues(values: string[]) {
 export function auditNavigationLocalization(): AuditCheck {
   const missing = navItems.flatMap((item) => {
     const keys = [`nav.${item.to}`];
-    if (item.mobile) keys.push(`short.${item.to}`);
+    if (item.mobileQuick) keys.push(`short.${item.to}`);
     return keys.filter((key) => !hasEnglishTranslation(key));
   });
 
@@ -42,7 +42,7 @@ export function auditNavigationLocalization(): AuditCheck {
 export function auditNavigationAccessibility(): AuditCheck {
   const duplicateRoutes = uniqueValues(navItems.map((item) => item.to)) ? [] : ["Navigation routes must be unique."];
   const missingLabels = navItems.filter((item) => !item.label.trim() || !item.shortLabel.trim()).map((item) => item.to);
-  const mobileWithoutShortLabel = navItems.filter((item) => item.mobile && !item.shortLabel.trim()).map((item) => item.to);
+  const mobileWithoutShortLabel = navItems.filter((item) => item.mobileQuick && !item.shortLabel.trim()).map((item) => item.to);
   const details = [...duplicateRoutes, ...missingLabels, ...mobileWithoutShortLabel];
 
   return {

@@ -34,3 +34,157 @@ body { overflow-x: hidden; }
   :where(.card, .panel, .release-notes-dialog, .recovery-modal) { padding: 14px; }
   :where(.bottom-nav, .mobile-nav) { padding-bottom: max(8px, env(safe-area-inset-bottom)); }
 }
+
+/* v5.25 mobile PWA scrolling + grouped navigation overhaul */
+html, body, #root {
+  min-height: 100%;
+  height: auto;
+}
+html {
+  overflow-x: clip;
+  overflow-y: auto;
+  overscroll-behavior-y: none;
+}
+body {
+  min-height: 100dvh;
+  overflow-y: auto;
+  touch-action: pan-y pinch-zoom;
+  -webkit-overflow-scrolling: touch;
+}
+#root, .app {
+  min-height: 100dvh;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.nav-accordion { display: grid; gap: 8px; }
+.nav-group {
+  display: block;
+  border: 1px solid rgba(255,255,255,.065);
+  border-radius: 16px;
+  background: rgba(255,255,255,.025);
+  overflow: clip;
+}
+.nav-group-toggle {
+  width: 100%;
+  min-height: 46px;
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto auto;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 12px;
+  border: 0;
+  color: rgba(255,255,255,.72);
+  background: transparent;
+  text-align: left;
+  font: inherit;
+  font-size: .74rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.nav-group-toggle:hover,
+.nav-group-toggle:focus-visible { color: var(--text); background: rgba(255,255,255,.055); }
+.nav-group-count {
+  min-width: 24px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255,255,255,.07);
+  text-align: center;
+  font-size: .67rem;
+  letter-spacing: 0;
+}
+.nav-group-chevron { transition: transform .2s ease; font-size: 1rem; }
+.nav-group.open .nav-group-chevron { transform: rotate(180deg); }
+.nav-group-items { padding: 0 6px 7px; }
+.nav-group-items[hidden] { display: none; }
+
+.bottom-menu-trigger {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.mobile-nav-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: none;
+  align-items: flex-end;
+  padding: max(16px, env(safe-area-inset-top)) 12px 0;
+  background: rgba(2,5,14,.72);
+  backdrop-filter: blur(12px);
+}
+.mobile-nav-drawer {
+  width: min(100%, 620px);
+  max-height: min(84dvh, 820px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 26px 26px 0 0;
+  background: rgba(8,12,26,.98);
+  box-shadow: 0 -24px 80px rgba(0,0,0,.48);
+  overflow: hidden;
+}
+.mobile-nav-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 18px 14px;
+  border-bottom: 1px solid var(--line);
+}
+.mobile-nav-head strong,
+.mobile-nav-head span { display: block; }
+.mobile-nav-head strong { font-size: 1.1rem; }
+.mobile-nav-head span { margin-top: 3px; color: var(--muted); font-size: .78rem; }
+.mobile-nav-close {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--text);
+  background: rgba(255,255,255,.06);
+  font-size: 1.5rem;
+}
+.nav-accordion-mobile {
+  padding: 12px 12px calc(24px + env(safe-area-inset-bottom));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+.nav-accordion-mobile .nav-group-toggle { min-height: 50px; font-size: .79rem; }
+.nav-accordion-mobile .nav-item { min-height: 48px; }
+
+@media (max-width: 900px) {
+  .mobile-nav-backdrop { display: flex; }
+  .content {
+    min-height: 100dvh;
+    padding-bottom: calc(106px + env(safe-area-inset-bottom));
+    overflow: visible;
+  }
+  .page-shell { min-height: auto; }
+  .bottom-nav {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0,1fr));
+    overflow: visible;
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
+  }
+  .bottom-item {
+    min-width: 0;
+    width: 100%;
+    padding-inline: 4px;
+  }
+}
+
+@media (max-width: 420px) {
+  .bottom-nav { left: 8px; right: 8px; bottom: max(8px, env(safe-area-inset-bottom)); gap: 4px; }
+  .bottom-item { font-size: .62rem; }
+  .mobile-nav-drawer { max-height: 88dvh; border-radius: 22px 22px 0 0; }
+}
