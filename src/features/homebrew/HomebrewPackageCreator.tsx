@@ -1,13 +1,14 @@
 import { useMemo, useState } from "react";
 import { createEntityFromDraft, createPackageFromDraft, DEFAULT_HOMEBREW_CREATOR_DRAFT, type HomebrewCreatorDraft } from "../../core/homebrew/homebrewCreator";
 import { exportHomebrewPackage, importHomebrewPackage, validateHomebrewPackage, type HomebrewEntity, type HomebrewEntityType, type HomebrewPackage } from "../../core/homebrew/homebrewFoundation";
-import { loadHomebrewLibraryPreferences, loadHomebrewMarketplaceRevocations, loadHomebrewMarketplaceSecurityEvents, loadHomebrewMarketplaceSources, loadHomebrewPackages, loadHomebrewPackageSnapshots, loadHomebrewQuarantines, saveHomebrewLibraryPreferences, saveHomebrewMarketplaceRevocations, saveHomebrewMarketplaceSecurityEvents, saveHomebrewMarketplaceSources, saveHomebrewPackages, saveHomebrewPackageSnapshots, saveHomebrewQuarantines } from "./homebrewStorage";
+import { loadHomebrewLibraryPreferences, loadHomebrewMarketplaceRevocations, loadHomebrewMarketplaceSecurityEvents, loadHomebrewMarketplaceSources, loadHomebrewPackages, loadHomebrewPackageSnapshots, loadHomebrewQuarantines, loadHomebrewSourceHealth, saveHomebrewLibraryPreferences, saveHomebrewMarketplaceRevocations, saveHomebrewMarketplaceSecurityEvents, saveHomebrewMarketplaceSources, saveHomebrewPackages, saveHomebrewPackageSnapshots, saveHomebrewQuarantines, saveHomebrewSourceHealth } from "./homebrewStorage";
 import { moveHomebrewPackagePriority, normalizeHomebrewLibraryPreferences, resolveHomebrewMarketplaceLibrary, toggleHomebrewPackage, type HomebrewLibraryPreference } from "../../core/homebrew/homebrewMarketplaceLibrary";
 import { applyHomebrewMarketplaceManifest, pruneHomebrewSnapshots, rollbackHomebrewPackage, type HomebrewPackageSnapshot } from "../../core/homebrew/homebrewMarketplaceUpdate";
 import { importHomebrewShareManifest } from "../../core/homebrew/homebrewPackageSharing";
 import { importHomebrewMarketplaceEnvelope, normalizeHomebrewMarketplaceSources, verifyHomebrewMarketplaceEnvelope, type HomebrewMarketplaceSource } from "../../core/homebrew/homebrewMarketplaceTrust";
 import { createHomebrewSecurityEvent, evaluateHomebrewMarketplaceSync, importHomebrewRevocationList, markHomebrewMarketplaceSourceSynced, pruneHomebrewSecurityEvents, validateHomebrewRevocationList, verifyHomebrewMarketplaceRevocations, type HomebrewMarketplaceRevocationList, type HomebrewMarketplaceSecurityEvent } from "../../core/homebrew/homebrewMarketplaceSecurity";
 import { restoreHomebrewQuarantine, runAutomaticHomebrewSourceSync, scanAndQuarantineHomebrewPackages, type HomebrewQuarantineRecord } from "../../core/homebrew/homebrewSecurityCenter";
+import { appendHomebrewSourceHealthPoint, buildHomebrewSecurityReleaseCertificate, type HomebrewSourceHealthPoint } from "../../core/homebrew/homebrewSecurityResolution";
 
 const ENTITY_LABELS: Record<HomebrewEntityType, string> = {
   class: "Class",
@@ -46,8 +47,10 @@ export function HomebrewPackageCreator() {
   const [revocations, setRevocations] = useState<HomebrewMarketplaceRevocationList[]>(() => loadHomebrewMarketplaceRevocations());
   const [securityEvents, setSecurityEvents] = useState<HomebrewMarketplaceSecurityEvent[]>(() => loadHomebrewMarketplaceSecurityEvents());
   const [quarantines, setQuarantines] = useState<HomebrewQuarantineRecord[]>(() => loadHomebrewQuarantines());
+  const [sourceHealth, setSourceHealth] = useState<HomebrewSourceHealthPoint[]>(() => loadHomebrewSourceHealth());
 
   const marketplace = useMemo(() => resolveHomebrewMarketplaceLibrary(packages, libraryPreferences), [packages, libraryPreferences]);
+  const securityCertificate = useMemo(() => buildHomebrewSecurityReleaseCertificate(sources, sourceHealth, quarantines, securityEvents, revocations), [sources, sourceHealth, quarantines, securityEvents, revocations]);
 
   const preview = useMemo(() => {
     if (!draft.name.trim()) return null;
@@ -153,11 +156,14 @@ export function HomebrewPackageCreator() {
 
 
   function syncMarketplaceSource(id: string) {
-    const next = sources.map((source) => source.id === id ? markHomebrewMarketplaceSourceSynced(source) : source);
+    const checkedAt = new Date().toISOString();
+    const next = sources.map((source) => source.id === id ? markHomebrewMarketplaceSourceSynced(source, checkedAt) : source);
     setSources(next); saveHomebrewMarketplaceSources(next);
-    const nextEvents = pruneHomebrewSecurityEvents([...securityEvents, createHomebrewSecurityEvent("sync", "info", "Marketplace kaynağı senkronize edildi.", id)]);
+    const nextHealth = appendHomebrewSourceHealthPoint(sourceHealth, { sourceId: id, checkedAt, state: "healthy", score: 100, message: "Manuel senkronizasyon başarılı." });
+    setSourceHealth(nextHealth); saveHomebrewSourceHealth(nextHealth);
+    const nextEvents = pruneHomebrewSecurityEvents([...securityEvents, createHomebrewSecurityEvent("sync", "info", "Marketplace kaynağı senkronize edildi.", id, checkedAt)]);
     setSecurityEvents(nextEvents); saveHomebrewMarketplaceSecurityEvents(nextEvents);
-    setMessage("Marketplace kaynak senkronizasyon zamanı güncellendi.");
+    setMessage("Marketplace kaynak senkronizasyon zamanı ve sağlık geçmişi güncellendi.");
   }
 
   function importRevocations() {
@@ -332,6 +338,8 @@ export function HomebrewPackageCreator() {
 
 
           <h3>Homebrew Güvenlik Merkezi</h3>
+          <p className="homebrew-builder-message">Güvenlik sertifikası: {securityCertificate.ready ? "HAZIR" : "BLOCKER VAR"} · Skor {securityCertificate.readinessScore}/100 · {securityCertificate.unresolvedQuarantines} karantina</p>
+          {securityCertificate.sourceHealth.length ? <div className="homebrew-list">{securityCertificate.sourceHealth.map((health) => <article className="homebrew-list-item" key={`health-${health.sourceId}`}><div><span className="mini-label">{health.state} · {health.trend}</span><h3>{health.sourceName}</h3><p>Sağlık skoru {health.score}/100 · ardışık hata {health.consecutiveFailures}</p></div></article>)}</div> : null}
           <p className="homebrew-builder-message">{quarantines.length} karantina kaydı · {sources.filter((source) => evaluateHomebrewMarketplaceSync(source).state !== "current").length} kaynak dikkat bekliyor</p>
           <div className="homebrew-inline-actions">
             <button type="button" onClick={runSecurityScan}>Kurulu Paketleri Tara</button>
