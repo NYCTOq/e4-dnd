@@ -8,6 +8,7 @@ import type { HomebrewLibraryPreference } from "../../core/homebrew/homebrewMark
 import type { HomebrewPackageSnapshot } from "../../core/homebrew/homebrewMarketplaceUpdate";
 import type { HomebrewMarketplaceSource } from "../../core/homebrew/homebrewMarketplaceTrust";
 import type { HomebrewMarketplaceRevocationList, HomebrewMarketplaceSecurityEvent } from "../../core/homebrew/homebrewMarketplaceSecurity";
+import type { HomebrewQuarantineRecord } from "../../core/homebrew/homebrewSecurityCenter";
 
 const HOMEBREW_SPELLS_STORAGE_KEY = "e4_dnd_homebrew_spells_v1";
 const HOMEBREW_ITEMS_STORAGE_KEY = "e4_dnd_homebrew_items_v1";
@@ -65,6 +66,7 @@ export const HOMEBREW_PACKAGE_SNAPSHOTS_STORAGE_KEY = "e4_dnd_homebrew_package_s
 export const HOMEBREW_MARKETPLACE_SOURCES_STORAGE_KEY = "e4_dnd_homebrew_marketplace_sources_v1";
 export const HOMEBREW_MARKETPLACE_REVOCATIONS_STORAGE_KEY = "e4_dnd_homebrew_marketplace_revocations_v1";
 export const HOMEBREW_MARKETPLACE_SECURITY_EVENTS_STORAGE_KEY = "e4_dnd_homebrew_marketplace_security_events_v1";
+export const HOMEBREW_QUARANTINE_STORAGE_KEY = "e4_dnd_homebrew_quarantine_v1";
 
 export function loadHomebrewPackages(): HomebrewPackage[] {
   return loadArray<unknown>(HOMEBREW_PACKAGES_STORAGE_KEY).flatMap((raw) => {
@@ -135,4 +137,12 @@ export function loadHomebrewMarketplaceSecurityEvents(): HomebrewMarketplaceSecu
 
 export function saveHomebrewMarketplaceSecurityEvents(items: HomebrewMarketplaceSecurityEvent[]) {
   saveArray(HOMEBREW_MARKETPLACE_SECURITY_EVENTS_STORAGE_KEY, items);
+}
+
+export function loadHomebrewQuarantines(): HomebrewQuarantineRecord[] {
+  return loadArray<HomebrewQuarantineRecord>(HOMEBREW_QUARANTINE_STORAGE_KEY);
+}
+
+export function saveHomebrewQuarantines(items: HomebrewQuarantineRecord[]) {
+  saveArray(HOMEBREW_QUARANTINE_STORAGE_KEY, items);
 }

@@ -1,12 +1,13 @@
 import { useMemo, useState } from "react";
 import { createEntityFromDraft, createPackageFromDraft, DEFAULT_HOMEBREW_CREATOR_DRAFT, type HomebrewCreatorDraft } from "../../core/homebrew/homebrewCreator";
 import { exportHomebrewPackage, importHomebrewPackage, validateHomebrewPackage, type HomebrewEntity, type HomebrewEntityType, type HomebrewPackage } from "../../core/homebrew/homebrewFoundation";
-import { loadHomebrewLibraryPreferences, loadHomebrewMarketplaceRevocations, loadHomebrewMarketplaceSecurityEvents, loadHomebrewMarketplaceSources, loadHomebrewPackages, loadHomebrewPackageSnapshots, saveHomebrewLibraryPreferences, saveHomebrewMarketplaceRevocations, saveHomebrewMarketplaceSecurityEvents, saveHomebrewMarketplaceSources, saveHomebrewPackages, saveHomebrewPackageSnapshots } from "./homebrewStorage";
+import { loadHomebrewLibraryPreferences, loadHomebrewMarketplaceRevocations, loadHomebrewMarketplaceSecurityEvents, loadHomebrewMarketplaceSources, loadHomebrewPackages, loadHomebrewPackageSnapshots, loadHomebrewQuarantines, saveHomebrewLibraryPreferences, saveHomebrewMarketplaceRevocations, saveHomebrewMarketplaceSecurityEvents, saveHomebrewMarketplaceSources, saveHomebrewPackages, saveHomebrewPackageSnapshots, saveHomebrewQuarantines } from "./homebrewStorage";
 import { moveHomebrewPackagePriority, normalizeHomebrewLibraryPreferences, resolveHomebrewMarketplaceLibrary, toggleHomebrewPackage, type HomebrewLibraryPreference } from "../../core/homebrew/homebrewMarketplaceLibrary";
 import { applyHomebrewMarketplaceManifest, pruneHomebrewSnapshots, rollbackHomebrewPackage, type HomebrewPackageSnapshot } from "../../core/homebrew/homebrewMarketplaceUpdate";
 import { importHomebrewShareManifest } from "../../core/homebrew/homebrewPackageSharing";
 import { importHomebrewMarketplaceEnvelope, normalizeHomebrewMarketplaceSources, verifyHomebrewMarketplaceEnvelope, type HomebrewMarketplaceSource } from "../../core/homebrew/homebrewMarketplaceTrust";
 import { createHomebrewSecurityEvent, evaluateHomebrewMarketplaceSync, importHomebrewRevocationList, markHomebrewMarketplaceSourceSynced, pruneHomebrewSecurityEvents, validateHomebrewRevocationList, verifyHomebrewMarketplaceRevocations, type HomebrewMarketplaceRevocationList, type HomebrewMarketplaceSecurityEvent } from "../../core/homebrew/homebrewMarketplaceSecurity";
+import { restoreHomebrewQuarantine, runAutomaticHomebrewSourceSync, scanAndQuarantineHomebrewPackages, type HomebrewQuarantineRecord } from "../../core/homebrew/homebrewSecurityCenter";
 
 const ENTITY_LABELS: Record<HomebrewEntityType, string> = {
   class: "Class",
@@ -44,6 +45,7 @@ export function HomebrewPackageCreator() {
   const [revocationText, setRevocationText] = useState("");
   const [revocations, setRevocations] = useState<HomebrewMarketplaceRevocationList[]>(() => loadHomebrewMarketplaceRevocations());
   const [securityEvents, setSecurityEvents] = useState<HomebrewMarketplaceSecurityEvent[]>(() => loadHomebrewMarketplaceSecurityEvents());
+  const [quarantines, setQuarantines] = useState<HomebrewQuarantineRecord[]>(() => loadHomebrewQuarantines());
 
   const marketplace = useMemo(() => resolveHomebrewMarketplaceLibrary(packages, libraryPreferences), [packages, libraryPreferences]);
 
@@ -172,6 +174,53 @@ export function HomebrewPackageCreator() {
     } catch (error) { setMessage(error instanceof Error ? error.message : "Geri çağırma listesi alınamadı."); }
   }
 
+
+  function runSecurityScan() {
+    const report = scanAndQuarantineHomebrewPackages(packages, libraryPreferences, revocations, quarantines);
+    saveHomebrewPackages(report.safePackages);
+    saveHomebrewLibraryPreferences(report.preferences);
+    saveHomebrewQuarantines(report.quarantines);
+    setPackages(report.safePackages);
+    setLibraryPreferences(report.preferences);
+    setQuarantines(report.quarantines);
+    const nextEvents = pruneHomebrewSecurityEvents([
+      ...securityEvents,
+      createHomebrewSecurityEvent(report.blockers.length ? "block" : "verify", report.blockers.length ? "critical" : "info", report.blockers.join(" ") || "Kurulu Homebrew paketleri güvenlik taramasından geçti."),
+    ]);
+    setSecurityEvents(nextEvents);
+    saveHomebrewMarketplaceSecurityEvents(nextEvents);
+    setMessage(report.blockers.length ? report.blockers.join(" ") : `Güvenlik taraması tamamlandı. Skor: ${report.readinessScore}/100.`);
+  }
+
+  async function runAutomaticSync() {
+    const result = await runAutomaticHomebrewSourceSync(sources, async (source) => {
+      if (!source.baseUrl) throw new Error("Kaynak URL tanımlı değil.");
+      const response = await fetch(source.baseUrl);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.text();
+    });
+    setSources(result.sources);
+    saveHomebrewMarketplaceSources(result.sources);
+    const nextEvents = pruneHomebrewSecurityEvents([...securityEvents, ...result.events]);
+    setSecurityEvents(nextEvents);
+    saveHomebrewMarketplaceSecurityEvents(nextEvents);
+    if (result.downloaded[0]) setMarketplaceText(result.downloaded[0].raw);
+    setMessage(result.blockers.join(" ") || result.warnings.join(" ") || `${result.downloaded.length} kaynak otomatik senkronize edildi; indirilen manifest doğrulama alanına taşındı.`);
+  }
+
+  function restoreQuarantine(recordId: string) {
+    const result = restoreHomebrewQuarantine(packages, quarantines, recordId, revocations);
+    if (result.blockers.length) { setMessage(result.blockers.join(" ")); return; }
+    saveHomebrewPackages(result.packages);
+    saveHomebrewQuarantines(result.quarantines);
+    setPackages(result.packages);
+    setQuarantines(result.quarantines);
+    const preferences = normalizeHomebrewLibraryPreferences(result.packages, libraryPreferences);
+    setLibraryPreferences(preferences);
+    saveHomebrewLibraryPreferences(preferences);
+    setMessage("Karantinadaki paket geri yüklendi.");
+  }
+
   function rollbackSnapshot(snapshotId: string) {
     const result = rollbackHomebrewPackage(packages, snapshots, snapshotId);
     if (result.blockers.length) { setMessage(result.blockers.join(" ")); return; }
@@ -280,6 +329,15 @@ export function HomebrewPackageCreator() {
           </div>
           <button className="secondary-action" type="button" onClick={addMarketplaceSource} disabled={!sourceId.trim()}>Kaynağı Kaydet</button>
           {sources.length ? <div className="homebrew-list">{sources.map((source) => { const sync = evaluateHomebrewMarketplaceSync(source); return <article className="homebrew-list-item" key={source.id}><div><span className="mini-label">{source.trustLevel} · sync: {sync.state}</span><h3>{source.name}</h3><p>{source.id} · {source.enabled ? "Aktif" : "Devre dışı"}{source.lastSyncedAt ? ` · ${new Date(source.lastSyncedAt).toLocaleString("tr-TR")}` : ""}</p></div><div className="homebrew-inline-actions"><button type="button" onClick={() => syncMarketplaceSource(source.id)}>Senkronize Et</button><button type="button" onClick={() => toggleMarketplaceSource(source.id)}>{source.enabled ? "Devre Dışı" : "Etkinleştir"}</button></div></article>; })}</div> : <p>Henüz kayıtlı marketplace kaynağı yok.</p>}
+
+
+          <h3>Homebrew Güvenlik Merkezi</h3>
+          <p className="homebrew-builder-message">{quarantines.length} karantina kaydı · {sources.filter((source) => evaluateHomebrewMarketplaceSync(source).state !== "current").length} kaynak dikkat bekliyor</p>
+          <div className="homebrew-inline-actions">
+            <button type="button" onClick={runSecurityScan}>Kurulu Paketleri Tara</button>
+            <button type="button" onClick={runAutomaticSync}>Otomatik Kaynak Senkronizasyonu</button>
+          </div>
+          {quarantines.length ? <div className="homebrew-list">{quarantines.map((record) => <article className="homebrew-list-item" key={record.id}><div><span className="mini-label">Karantina · v{record.version}</span><h3>{record.packageName}</h3><p>{record.reason} · {new Date(record.quarantinedAt).toLocaleString("tr-TR")}</p></div><button type="button" onClick={() => restoreQuarantine(record.id)}>Geri Yüklemeyi Dene</button></article>)}</div> : <p>Karantinada paket yok.</p>}
 
           <h3>Geri çağırma listesi ve güvenlik denetimi</h3>
           <textarea value={revocationText} onChange={(event) => setRevocationText(event.target.value)} rows={5} placeholder='{"format":"e4-dnd-homebrew-revocations", ...}' />
