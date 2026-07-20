@@ -1,0 +1,761 @@
+﻿ruleset,race_species,oath,level,lay_on_hands_pool,lay_on_hands_action,prepared_spells,channel_divinity_uses,weapon_mastery,extra_attack,aura_radius,radiant_strikes,touch_feature,warning,result
+dnd_2014,Human,Oath of Devotion,1,5,Action,0,0,0,False,0,False,,,PASS
+dnd_2014,Human,Oath of Devotion,2,10,Action,5,0,0,False,0,False,,,PASS
+dnd_2014,Human,Oath of Devotion,3,15,Action,5,1,0,False,0,False,,,PASS
+dnd_2014,Human,Oath of Devotion,4,20,Action,6,1,0,False,0,False,,,PASS
+dnd_2014,Human,Oath of Devotion,5,25,Action,6,1,0,True,0,False,,,PASS
+dnd_2014,Human,Oath of Devotion,6,30,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Human,Oath of Devotion,7,35,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Human,Oath of Devotion,8,40,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Human,Oath of Devotion,9,45,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Human,Oath of Devotion,10,50,Action,9,1,0,True,10,False,,,PASS
+dnd_2014,Human,Oath of Devotion,11,55,Action,9,1,0,True,10,True,,,PASS
+dnd_2014,Human,Oath of Devotion,12,60,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Human,Oath of Devotion,13,65,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Human,Oath of Devotion,14,70,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Human,Oath of Devotion,15,75,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Human,Oath of Devotion,16,80,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Human,Oath of Devotion,17,85,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Human,Oath of Devotion,18,90,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Human,Oath of Devotion,19,95,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Human,Oath of Devotion,20,100,Action,14,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Human,Oath of the Ancients,1,5,Action,0,0,0,False,0,False,,,PASS
+dnd_2014,Human,Oath of the Ancients,2,10,Action,5,0,0,False,0,False,,,PASS
+dnd_2014,Human,Oath of the Ancients,3,15,Action,5,1,0,False,0,False,,,PASS
+dnd_2014,Human,Oath of the Ancients,4,20,Action,6,1,0,False,0,False,,,PASS
+dnd_2014,Human,Oath of the Ancients,5,25,Action,6,1,0,True,0,False,,,PASS
+dnd_2014,Human,Oath of the Ancients,6,30,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Human,Oath of the Ancients,7,35,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Human,Oath of the Ancients,8,40,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Human,Oath of the Ancients,9,45,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Human,Oath of the Ancients,10,50,Action,9,1,0,True,10,False,,,PASS
+dnd_2014,Human,Oath of the Ancients,11,55,Action,9,1,0,True,10,True,,,PASS
+dnd_2014,Human,Oath of the Ancients,12,60,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Human,Oath of the Ancients,13,65,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Human,Oath of the Ancients,14,70,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Human,Oath of the Ancients,15,75,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Human,Oath of the Ancients,16,80,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Human,Oath of the Ancients,17,85,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Human,Oath of the Ancients,18,90,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Human,Oath of the Ancients,19,95,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Human,Oath of the Ancients,20,100,Action,14,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Dwarf,Oath of Devotion,1,5,Action,0,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,2,10,Action,5,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,3,15,Action,5,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,4,20,Action,6,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,5,25,Action,6,1,0,True,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,6,30,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,7,35,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,8,40,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,9,45,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,10,50,Action,9,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,11,55,Action,9,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,12,60,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,13,65,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,14,70,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,15,75,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,16,80,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,17,85,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,18,90,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,19,95,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of Devotion,20,100,Action,14,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,1,5,Action,0,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,2,10,Action,5,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,3,15,Action,5,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,4,20,Action,6,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,5,25,Action,6,1,0,True,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,6,30,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,7,35,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,8,40,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,9,45,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,10,50,Action,9,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,11,55,Action,9,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,12,60,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,13,65,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,14,70,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,15,75,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,16,80,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,17,85,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,18,90,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,19,95,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dwarf,Oath of the Ancients,20,100,Action,14,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,1,5,Action,0,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,2,10,Action,5,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,3,15,Action,5,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,4,20,Action,6,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,5,25,Action,6,1,0,True,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,6,30,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,7,35,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,8,40,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,9,45,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,10,50,Action,9,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,11,55,Action,9,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,12,60,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,13,65,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,14,70,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,15,75,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,16,80,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,17,85,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,18,90,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,19,95,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of Devotion,20,100,Action,14,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,1,5,Action,0,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,2,10,Action,5,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,3,15,Action,5,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,4,20,Action,6,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,5,25,Action,6,1,0,True,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,6,30,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,7,35,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,8,40,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,9,45,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,10,50,Action,9,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,11,55,Action,9,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,12,60,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,13,65,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,14,70,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,15,75,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,16,80,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,17,85,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,18,90,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,19,95,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Elf,Oath of the Ancients,20,100,Action,14,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,1,5,Action,0,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,2,10,Action,5,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,3,15,Action,5,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,4,20,Action,6,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,5,25,Action,6,1,0,True,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,6,30,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,7,35,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,8,40,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,9,45,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,10,50,Action,9,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,11,55,Action,9,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,12,60,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,13,65,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,14,70,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,15,75,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,16,80,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,17,85,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,18,90,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,19,95,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of Devotion,20,100,Action,14,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,1,5,Action,0,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,2,10,Action,5,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,3,15,Action,5,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,4,20,Action,6,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,5,25,Action,6,1,0,True,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,6,30,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,7,35,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,8,40,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,9,45,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,10,50,Action,9,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,11,55,Action,9,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,12,60,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,13,65,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,14,70,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,15,75,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,16,80,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,17,85,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,18,90,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,19,95,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Halfling,Oath of the Ancients,20,100,Action,14,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Dragonborn,Oath of Devotion,1,5,Action,0,0,0,False,0,False,,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,2,10,Action,5,0,0,False,0,False,,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,3,15,Action,5,1,0,False,0,False,,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,4,20,Action,6,1,0,False,0,False,,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,5,25,Action,6,1,0,True,0,False,,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,6,30,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,7,35,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,8,40,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,9,45,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,10,50,Action,9,1,0,True,10,False,,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,11,55,Action,9,1,0,True,10,True,,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,12,60,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,13,65,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,14,70,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,15,75,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,16,80,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,17,85,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,18,90,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,19,95,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Dragonborn,Oath of Devotion,20,100,Action,14,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,1,5,Action,0,0,0,False,0,False,,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,2,10,Action,5,0,0,False,0,False,,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,3,15,Action,5,1,0,False,0,False,,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,4,20,Action,6,1,0,False,0,False,,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,5,25,Action,6,1,0,True,0,False,,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,6,30,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,7,35,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,8,40,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,9,45,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,10,50,Action,9,1,0,True,10,False,,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,11,55,Action,9,1,0,True,10,True,,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,12,60,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,13,65,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,14,70,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,15,75,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,16,80,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,17,85,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,18,90,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,19,95,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Dragonborn,Oath of the Ancients,20,100,Action,14,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Gnome,Oath of Devotion,1,5,Action,0,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,2,10,Action,5,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,3,15,Action,5,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,4,20,Action,6,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,5,25,Action,6,1,0,True,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,6,30,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,7,35,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,8,40,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,9,45,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,10,50,Action,9,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,11,55,Action,9,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,12,60,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,13,65,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,14,70,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,15,75,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,16,80,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,17,85,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,18,90,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,19,95,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of Devotion,20,100,Action,14,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,1,5,Action,0,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,2,10,Action,5,0,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,3,15,Action,5,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,4,20,Action,6,1,0,False,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,5,25,Action,6,1,0,True,0,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,6,30,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,7,35,Action,7,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,8,40,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,9,45,Action,8,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,10,50,Action,9,1,0,True,10,False,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,11,55,Action,9,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,12,60,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,13,65,Action,10,1,0,True,10,True,,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,14,70,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,15,75,Action,11,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,16,80,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,17,85,Action,12,1,0,True,10,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,18,90,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,19,95,Action,13,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Gnome,Oath of the Ancients,20,100,Action,14,1,0,True,30,True,Cleansing Touch,Subrace seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2014,Half-Elf,Oath of Devotion,1,5,Action,0,0,0,False,0,False,,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,2,10,Action,5,0,0,False,0,False,,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,3,15,Action,5,1,0,False,0,False,,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,4,20,Action,6,1,0,False,0,False,,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,5,25,Action,6,1,0,True,0,False,,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,6,30,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,7,35,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,8,40,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,9,45,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,10,50,Action,9,1,0,True,10,False,,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,11,55,Action,9,1,0,True,10,True,,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,12,60,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,13,65,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,14,70,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,15,75,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,16,80,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,17,85,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,18,90,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,19,95,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Half-Elf,Oath of Devotion,20,100,Action,14,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,1,5,Action,0,0,0,False,0,False,,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,2,10,Action,5,0,0,False,0,False,,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,3,15,Action,5,1,0,False,0,False,,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,4,20,Action,6,1,0,False,0,False,,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,5,25,Action,6,1,0,True,0,False,,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,6,30,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,7,35,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,8,40,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,9,45,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,10,50,Action,9,1,0,True,10,False,,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,11,55,Action,9,1,0,True,10,True,,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,12,60,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,13,65,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,14,70,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,15,75,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,16,80,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,17,85,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,18,90,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,19,95,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Half-Elf,Oath of the Ancients,20,100,Action,14,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,1,5,Action,0,0,0,False,0,False,,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,2,10,Action,5,0,0,False,0,False,,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,3,15,Action,5,1,0,False,0,False,,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,4,20,Action,6,1,0,False,0,False,,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,5,25,Action,6,1,0,True,0,False,,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,6,30,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,7,35,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,8,40,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,9,45,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,10,50,Action,9,1,0,True,10,False,,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,11,55,Action,9,1,0,True,10,True,,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,12,60,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,13,65,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,14,70,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,15,75,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,16,80,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,17,85,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,18,90,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,19,95,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Half-Orc,Oath of Devotion,20,100,Action,14,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,1,5,Action,0,0,0,False,0,False,,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,2,10,Action,5,0,0,False,0,False,,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,3,15,Action,5,1,0,False,0,False,,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,4,20,Action,6,1,0,False,0,False,,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,5,25,Action,6,1,0,True,0,False,,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,6,30,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,7,35,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,8,40,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,9,45,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,10,50,Action,9,1,0,True,10,False,,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,11,55,Action,9,1,0,True,10,True,,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,12,60,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,13,65,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,14,70,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,15,75,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,16,80,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,17,85,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,18,90,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,19,95,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Half-Orc,Oath of the Ancients,20,100,Action,14,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Tiefling,Oath of Devotion,1,5,Action,0,0,0,False,0,False,,,PASS
+dnd_2014,Tiefling,Oath of Devotion,2,10,Action,5,0,0,False,0,False,,,PASS
+dnd_2014,Tiefling,Oath of Devotion,3,15,Action,5,1,0,False,0,False,,,PASS
+dnd_2014,Tiefling,Oath of Devotion,4,20,Action,6,1,0,False,0,False,,,PASS
+dnd_2014,Tiefling,Oath of Devotion,5,25,Action,6,1,0,True,0,False,,,PASS
+dnd_2014,Tiefling,Oath of Devotion,6,30,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Tiefling,Oath of Devotion,7,35,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Tiefling,Oath of Devotion,8,40,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Tiefling,Oath of Devotion,9,45,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Tiefling,Oath of Devotion,10,50,Action,9,1,0,True,10,False,,,PASS
+dnd_2014,Tiefling,Oath of Devotion,11,55,Action,9,1,0,True,10,True,,,PASS
+dnd_2014,Tiefling,Oath of Devotion,12,60,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Tiefling,Oath of Devotion,13,65,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Tiefling,Oath of Devotion,14,70,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Tiefling,Oath of Devotion,15,75,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Tiefling,Oath of Devotion,16,80,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Tiefling,Oath of Devotion,17,85,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Tiefling,Oath of Devotion,18,90,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Tiefling,Oath of Devotion,19,95,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Tiefling,Oath of Devotion,20,100,Action,14,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,1,5,Action,0,0,0,False,0,False,,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,2,10,Action,5,0,0,False,0,False,,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,3,15,Action,5,1,0,False,0,False,,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,4,20,Action,6,1,0,False,0,False,,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,5,25,Action,6,1,0,True,0,False,,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,6,30,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,7,35,Action,7,1,0,True,10,False,,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,8,40,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,9,45,Action,8,1,0,True,10,False,,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,10,50,Action,9,1,0,True,10,False,,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,11,55,Action,9,1,0,True,10,True,,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,12,60,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,13,65,Action,10,1,0,True,10,True,,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,14,70,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,15,75,Action,11,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,16,80,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,17,85,Action,12,1,0,True,10,True,Cleansing Touch,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,18,90,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,19,95,Action,13,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2014,Tiefling,Oath of the Ancients,20,100,Action,14,1,0,True,30,True,Cleansing Touch,,PASS
+dnd_2024,Aasimar,Oath of Devotion,1,5,Bonus Action,2,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,2,10,Bonus Action,3,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,3,15,Bonus Action,4,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,4,20,Bonus Action,5,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,5,25,Bonus Action,6,2,2,True,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,6,30,Bonus Action,6,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,7,35,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,8,40,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,9,45,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,10,50,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,11,55,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,12,60,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,13,65,Bonus Action,11,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of Devotion,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,1,5,Bonus Action,2,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,2,10,Bonus Action,3,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,3,15,Bonus Action,4,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,4,20,Bonus Action,5,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,5,25,Bonus Action,6,2,2,True,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,6,30,Bonus Action,6,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,7,35,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,8,40,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,9,45,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,10,50,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,11,55,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,12,60,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,13,65,Bonus Action,11,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Aasimar,Oath of the Ancients,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,1,5,Bonus Action,2,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,2,10,Bonus Action,3,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,3,15,Bonus Action,4,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,4,20,Bonus Action,5,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,5,25,Bonus Action,6,2,2,True,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,6,30,Bonus Action,6,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,7,35,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,8,40,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,9,45,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,10,50,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,11,55,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,12,60,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,13,65,Bonus Action,11,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of Devotion,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,1,5,Bonus Action,2,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,2,10,Bonus Action,3,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,3,15,Bonus Action,4,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,4,20,Bonus Action,5,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,5,25,Bonus Action,6,2,2,True,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,6,30,Bonus Action,6,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,7,35,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,8,40,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,9,45,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,10,50,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,11,55,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,12,60,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,13,65,Bonus Action,11,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dragonborn,Oath of the Ancients,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Dwarf,Oath of Devotion,1,5,Bonus Action,2,0,2,False,0,False,,,PASS
+dnd_2024,Dwarf,Oath of Devotion,2,10,Bonus Action,3,0,2,False,0,False,,,PASS
+dnd_2024,Dwarf,Oath of Devotion,3,15,Bonus Action,4,2,2,False,0,False,,,PASS
+dnd_2024,Dwarf,Oath of Devotion,4,20,Bonus Action,5,2,2,False,0,False,,,PASS
+dnd_2024,Dwarf,Oath of Devotion,5,25,Bonus Action,6,2,2,True,0,False,,,PASS
+dnd_2024,Dwarf,Oath of Devotion,6,30,Bonus Action,6,2,2,True,10,False,,,PASS
+dnd_2024,Dwarf,Oath of Devotion,7,35,Bonus Action,7,2,2,True,10,False,,,PASS
+dnd_2024,Dwarf,Oath of Devotion,8,40,Bonus Action,7,2,2,True,10,False,,,PASS
+dnd_2024,Dwarf,Oath of Devotion,9,45,Bonus Action,9,2,2,True,10,False,,,PASS
+dnd_2024,Dwarf,Oath of Devotion,10,50,Bonus Action,9,2,2,True,10,False,,,PASS
+dnd_2024,Dwarf,Oath of Devotion,11,55,Bonus Action,10,3,2,True,10,True,,,PASS
+dnd_2024,Dwarf,Oath of Devotion,12,60,Bonus Action,10,3,2,True,10,True,,,PASS
+dnd_2024,Dwarf,Oath of Devotion,13,65,Bonus Action,11,3,2,True,10,True,,,PASS
+dnd_2024,Dwarf,Oath of Devotion,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Dwarf,Oath of Devotion,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Dwarf,Oath of Devotion,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Dwarf,Oath of Devotion,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Dwarf,Oath of Devotion,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Dwarf,Oath of Devotion,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Dwarf,Oath of Devotion,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,1,5,Bonus Action,2,0,2,False,0,False,,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,2,10,Bonus Action,3,0,2,False,0,False,,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,3,15,Bonus Action,4,2,2,False,0,False,,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,4,20,Bonus Action,5,2,2,False,0,False,,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,5,25,Bonus Action,6,2,2,True,0,False,,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,6,30,Bonus Action,6,2,2,True,10,False,,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,7,35,Bonus Action,7,2,2,True,10,False,,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,8,40,Bonus Action,7,2,2,True,10,False,,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,9,45,Bonus Action,9,2,2,True,10,False,,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,10,50,Bonus Action,9,2,2,True,10,False,,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,11,55,Bonus Action,10,3,2,True,10,True,,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,12,60,Bonus Action,10,3,2,True,10,True,,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,13,65,Bonus Action,11,3,2,True,10,True,,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Dwarf,Oath of the Ancients,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Elf,Oath of Devotion,1,5,Bonus Action,2,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,2,10,Bonus Action,3,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,3,15,Bonus Action,4,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,4,20,Bonus Action,5,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,5,25,Bonus Action,6,2,2,True,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,6,30,Bonus Action,6,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,7,35,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,8,40,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,9,45,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,10,50,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,11,55,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,12,60,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,13,65,Bonus Action,11,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of Devotion,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,1,5,Bonus Action,2,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,2,10,Bonus Action,3,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,3,15,Bonus Action,4,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,4,20,Bonus Action,5,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,5,25,Bonus Action,6,2,2,True,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,6,30,Bonus Action,6,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,7,35,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,8,40,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,9,45,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,10,50,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,11,55,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,12,60,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,13,65,Bonus Action,11,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Elf,Oath of the Ancients,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,1,5,Bonus Action,2,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,2,10,Bonus Action,3,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,3,15,Bonus Action,4,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,4,20,Bonus Action,5,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,5,25,Bonus Action,6,2,2,True,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,6,30,Bonus Action,6,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,7,35,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,8,40,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,9,45,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,10,50,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,11,55,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,12,60,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,13,65,Bonus Action,11,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of Devotion,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,1,5,Bonus Action,2,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,2,10,Bonus Action,3,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,3,15,Bonus Action,4,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,4,20,Bonus Action,5,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,5,25,Bonus Action,6,2,2,True,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,6,30,Bonus Action,6,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,7,35,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,8,40,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,9,45,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,10,50,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,11,55,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,12,60,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,13,65,Bonus Action,11,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Gnome,Oath of the Ancients,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,1,5,Bonus Action,2,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,2,10,Bonus Action,3,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,3,15,Bonus Action,4,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,4,20,Bonus Action,5,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,5,25,Bonus Action,6,2,2,True,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,6,30,Bonus Action,6,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,7,35,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,8,40,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,9,45,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,10,50,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,11,55,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,12,60,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,13,65,Bonus Action,11,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of Devotion,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,1,5,Bonus Action,2,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,2,10,Bonus Action,3,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,3,15,Bonus Action,4,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,4,20,Bonus Action,5,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,5,25,Bonus Action,6,2,2,True,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,6,30,Bonus Action,6,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,7,35,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,8,40,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,9,45,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,10,50,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,11,55,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,12,60,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,13,65,Bonus Action,11,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Goliath,Oath of the Ancients,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Halfling,Oath of Devotion,1,5,Bonus Action,2,0,2,False,0,False,,,PASS
+dnd_2024,Halfling,Oath of Devotion,2,10,Bonus Action,3,0,2,False,0,False,,,PASS
+dnd_2024,Halfling,Oath of Devotion,3,15,Bonus Action,4,2,2,False,0,False,,,PASS
+dnd_2024,Halfling,Oath of Devotion,4,20,Bonus Action,5,2,2,False,0,False,,,PASS
+dnd_2024,Halfling,Oath of Devotion,5,25,Bonus Action,6,2,2,True,0,False,,,PASS
+dnd_2024,Halfling,Oath of Devotion,6,30,Bonus Action,6,2,2,True,10,False,,,PASS
+dnd_2024,Halfling,Oath of Devotion,7,35,Bonus Action,7,2,2,True,10,False,,,PASS
+dnd_2024,Halfling,Oath of Devotion,8,40,Bonus Action,7,2,2,True,10,False,,,PASS
+dnd_2024,Halfling,Oath of Devotion,9,45,Bonus Action,9,2,2,True,10,False,,,PASS
+dnd_2024,Halfling,Oath of Devotion,10,50,Bonus Action,9,2,2,True,10,False,,,PASS
+dnd_2024,Halfling,Oath of Devotion,11,55,Bonus Action,10,3,2,True,10,True,,,PASS
+dnd_2024,Halfling,Oath of Devotion,12,60,Bonus Action,10,3,2,True,10,True,,,PASS
+dnd_2024,Halfling,Oath of Devotion,13,65,Bonus Action,11,3,2,True,10,True,,,PASS
+dnd_2024,Halfling,Oath of Devotion,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Halfling,Oath of Devotion,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Halfling,Oath of Devotion,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Halfling,Oath of Devotion,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Halfling,Oath of Devotion,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Halfling,Oath of Devotion,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Halfling,Oath of Devotion,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Halfling,Oath of the Ancients,1,5,Bonus Action,2,0,2,False,0,False,,,PASS
+dnd_2024,Halfling,Oath of the Ancients,2,10,Bonus Action,3,0,2,False,0,False,,,PASS
+dnd_2024,Halfling,Oath of the Ancients,3,15,Bonus Action,4,2,2,False,0,False,,,PASS
+dnd_2024,Halfling,Oath of the Ancients,4,20,Bonus Action,5,2,2,False,0,False,,,PASS
+dnd_2024,Halfling,Oath of the Ancients,5,25,Bonus Action,6,2,2,True,0,False,,,PASS
+dnd_2024,Halfling,Oath of the Ancients,6,30,Bonus Action,6,2,2,True,10,False,,,PASS
+dnd_2024,Halfling,Oath of the Ancients,7,35,Bonus Action,7,2,2,True,10,False,,,PASS
+dnd_2024,Halfling,Oath of the Ancients,8,40,Bonus Action,7,2,2,True,10,False,,,PASS
+dnd_2024,Halfling,Oath of the Ancients,9,45,Bonus Action,9,2,2,True,10,False,,,PASS
+dnd_2024,Halfling,Oath of the Ancients,10,50,Bonus Action,9,2,2,True,10,False,,,PASS
+dnd_2024,Halfling,Oath of the Ancients,11,55,Bonus Action,10,3,2,True,10,True,,,PASS
+dnd_2024,Halfling,Oath of the Ancients,12,60,Bonus Action,10,3,2,True,10,True,,,PASS
+dnd_2024,Halfling,Oath of the Ancients,13,65,Bonus Action,11,3,2,True,10,True,,,PASS
+dnd_2024,Halfling,Oath of the Ancients,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Halfling,Oath of the Ancients,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Halfling,Oath of the Ancients,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Halfling,Oath of the Ancients,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Halfling,Oath of the Ancients,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Halfling,Oath of the Ancients,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Halfling,Oath of the Ancients,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Human,Oath of Devotion,1,5,Bonus Action,2,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,2,10,Bonus Action,3,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,3,15,Bonus Action,4,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,4,20,Bonus Action,5,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,5,25,Bonus Action,6,2,2,True,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,6,30,Bonus Action,6,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,7,35,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,8,40,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,9,45,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,10,50,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,11,55,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,12,60,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,13,65,Bonus Action,11,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of Devotion,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,1,5,Bonus Action,2,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,2,10,Bonus Action,3,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,3,15,Bonus Action,4,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,4,20,Bonus Action,5,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,5,25,Bonus Action,6,2,2,True,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,6,30,Bonus Action,6,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,7,35,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,8,40,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,9,45,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,10,50,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,11,55,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,12,60,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,13,65,Bonus Action,11,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Human,Oath of the Ancients,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Orc,Oath of Devotion,1,5,Bonus Action,2,0,2,False,0,False,,,PASS
+dnd_2024,Orc,Oath of Devotion,2,10,Bonus Action,3,0,2,False,0,False,,,PASS
+dnd_2024,Orc,Oath of Devotion,3,15,Bonus Action,4,2,2,False,0,False,,,PASS
+dnd_2024,Orc,Oath of Devotion,4,20,Bonus Action,5,2,2,False,0,False,,,PASS
+dnd_2024,Orc,Oath of Devotion,5,25,Bonus Action,6,2,2,True,0,False,,,PASS
+dnd_2024,Orc,Oath of Devotion,6,30,Bonus Action,6,2,2,True,10,False,,,PASS
+dnd_2024,Orc,Oath of Devotion,7,35,Bonus Action,7,2,2,True,10,False,,,PASS
+dnd_2024,Orc,Oath of Devotion,8,40,Bonus Action,7,2,2,True,10,False,,,PASS
+dnd_2024,Orc,Oath of Devotion,9,45,Bonus Action,9,2,2,True,10,False,,,PASS
+dnd_2024,Orc,Oath of Devotion,10,50,Bonus Action,9,2,2,True,10,False,,,PASS
+dnd_2024,Orc,Oath of Devotion,11,55,Bonus Action,10,3,2,True,10,True,,,PASS
+dnd_2024,Orc,Oath of Devotion,12,60,Bonus Action,10,3,2,True,10,True,,,PASS
+dnd_2024,Orc,Oath of Devotion,13,65,Bonus Action,11,3,2,True,10,True,,,PASS
+dnd_2024,Orc,Oath of Devotion,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Orc,Oath of Devotion,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Orc,Oath of Devotion,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Orc,Oath of Devotion,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Orc,Oath of Devotion,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Orc,Oath of Devotion,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Orc,Oath of Devotion,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Orc,Oath of the Ancients,1,5,Bonus Action,2,0,2,False,0,False,,,PASS
+dnd_2024,Orc,Oath of the Ancients,2,10,Bonus Action,3,0,2,False,0,False,,,PASS
+dnd_2024,Orc,Oath of the Ancients,3,15,Bonus Action,4,2,2,False,0,False,,,PASS
+dnd_2024,Orc,Oath of the Ancients,4,20,Bonus Action,5,2,2,False,0,False,,,PASS
+dnd_2024,Orc,Oath of the Ancients,5,25,Bonus Action,6,2,2,True,0,False,,,PASS
+dnd_2024,Orc,Oath of the Ancients,6,30,Bonus Action,6,2,2,True,10,False,,,PASS
+dnd_2024,Orc,Oath of the Ancients,7,35,Bonus Action,7,2,2,True,10,False,,,PASS
+dnd_2024,Orc,Oath of the Ancients,8,40,Bonus Action,7,2,2,True,10,False,,,PASS
+dnd_2024,Orc,Oath of the Ancients,9,45,Bonus Action,9,2,2,True,10,False,,,PASS
+dnd_2024,Orc,Oath of the Ancients,10,50,Bonus Action,9,2,2,True,10,False,,,PASS
+dnd_2024,Orc,Oath of the Ancients,11,55,Bonus Action,10,3,2,True,10,True,,,PASS
+dnd_2024,Orc,Oath of the Ancients,12,60,Bonus Action,10,3,2,True,10,True,,,PASS
+dnd_2024,Orc,Oath of the Ancients,13,65,Bonus Action,11,3,2,True,10,True,,,PASS
+dnd_2024,Orc,Oath of the Ancients,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Orc,Oath of the Ancients,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Orc,Oath of the Ancients,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Orc,Oath of the Ancients,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,,PASS
+dnd_2024,Orc,Oath of the Ancients,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Orc,Oath of the Ancients,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Orc,Oath of the Ancients,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,,PASS
+dnd_2024,Tiefling,Oath of Devotion,1,5,Bonus Action,2,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,2,10,Bonus Action,3,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,3,15,Bonus Action,4,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,4,20,Bonus Action,5,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,5,25,Bonus Action,6,2,2,True,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,6,30,Bonus Action,6,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,7,35,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,8,40,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,9,45,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,10,50,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,11,55,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,12,60,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,13,65,Bonus Action,11,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of Devotion,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,1,5,Bonus Action,2,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,2,10,Bonus Action,3,0,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,3,15,Bonus Action,4,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,4,20,Bonus Action,5,2,2,False,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,5,25,Bonus Action,6,2,2,True,0,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,6,30,Bonus Action,6,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,7,35,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,8,40,Bonus Action,7,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,9,45,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,10,50,Bonus Action,9,2,2,True,10,False,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,11,55,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,12,60,Bonus Action,10,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,13,65,Bonus Action,11,3,2,True,10,True,,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,14,70,Bonus Action,11,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,15,75,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,16,80,Bonus Action,12,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,17,85,Bonus Action,14,3,2,True,10,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,18,90,Bonus Action,14,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,19,95,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS
+dnd_2024,Tiefling,Oath of the Ancients,20,100,Bonus Action,15,3,2,True,30,True,Restoring Touch,Species alt seçimi Origin Builder içinde tamamlanmalı.,PASS

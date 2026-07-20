@@ -1,0 +1,761 @@
+﻿ruleset,race_id,race_name,subclass_id,subclass_name,level,second_wind_uses,action_surge_uses,attacks_per_action,indomitable_uses,indomitable_bonus,weapon_mastery_count,critical_threshold,superiority_dice,superiority_die,maneuvers_known,origin_warning,result
+dnd_2014,human,Human,champion,Champion,1,1,0,1,0,0,0,20,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,2,1,1,1,0,0,0,20,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,3,1,1,1,0,0,0,19,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,4,1,1,1,0,0,0,19,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,5,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,6,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,7,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,8,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,9,1,1,2,1,0,0,19,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,10,1,1,2,1,0,0,19,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,11,1,1,3,1,0,0,19,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,12,1,1,3,1,0,0,19,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,13,1,1,3,2,0,0,19,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,14,1,1,3,2,0,0,19,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,15,1,1,3,2,0,0,18,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,16,1,1,3,2,0,0,18,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,17,1,2,3,3,0,0,18,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,18,1,2,3,3,0,0,18,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,19,1,2,3,3,0,0,18,0,,0,,PASS
+dnd_2014,human,Human,champion,Champion,20,1,2,4,3,0,0,18,0,,0,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,1,1,0,1,0,0,0,20,0,,0,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,2,1,1,1,0,0,0,20,0,,0,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,3,1,1,1,0,0,0,20,4,d8,3,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,4,1,1,1,0,0,0,20,4,d8,3,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,5,1,1,2,0,0,0,20,4,d8,3,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,6,1,1,2,0,0,0,20,4,d8,3,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,7,1,1,2,0,0,0,20,5,d8,5,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,8,1,1,2,0,0,0,20,5,d8,5,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,9,1,1,2,1,0,0,20,5,d8,5,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,10,1,1,2,1,0,0,20,5,d10,7,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,11,1,1,3,1,0,0,20,5,d10,7,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,12,1,1,3,1,0,0,20,5,d10,7,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,13,1,1,3,2,0,0,20,5,d10,7,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,14,1,1,3,2,0,0,20,5,d10,7,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,15,1,1,3,2,0,0,20,6,d10,9,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,16,1,1,3,2,0,0,20,6,d10,9,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,17,1,2,3,3,0,0,20,6,d10,9,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,18,1,2,3,3,0,0,20,6,d12,9,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,19,1,2,3,3,0,0,20,6,d12,9,,PASS
+dnd_2014,human,Human,battle-master,Battle Master,20,1,2,4,3,0,0,20,6,d12,9,,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,1,1,0,1,0,0,0,20,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,2,1,1,1,0,0,0,20,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,3,1,1,1,0,0,0,19,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,4,1,1,1,0,0,0,19,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,5,1,1,2,0,0,0,19,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,6,1,1,2,0,0,0,19,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,7,1,1,2,0,0,0,19,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,8,1,1,2,0,0,0,19,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,9,1,1,2,1,0,0,19,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,10,1,1,2,1,0,0,19,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,11,1,1,3,1,0,0,19,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,12,1,1,3,1,0,0,19,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,13,1,1,3,2,0,0,19,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,14,1,1,3,2,0,0,19,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,15,1,1,3,2,0,0,18,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,16,1,1,3,2,0,0,18,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,17,1,2,3,3,0,0,18,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,18,1,2,3,3,0,0,18,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,19,1,2,3,3,0,0,18,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,champion,Champion,20,1,2,4,3,0,0,18,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,1,1,0,1,0,0,0,20,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,2,1,1,1,0,0,0,20,0,,0,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,3,1,1,1,0,0,0,20,4,d8,3,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,4,1,1,1,0,0,0,20,4,d8,3,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,5,1,1,2,0,0,0,20,4,d8,3,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,6,1,1,2,0,0,0,20,4,d8,3,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,7,1,1,2,0,0,0,20,5,d8,5,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,8,1,1,2,0,0,0,20,5,d8,5,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,9,1,1,2,1,0,0,20,5,d8,5,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,10,1,1,2,1,0,0,20,5,d10,7,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,11,1,1,3,1,0,0,20,5,d10,7,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,12,1,1,3,1,0,0,20,5,d10,7,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,13,1,1,3,2,0,0,20,5,d10,7,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,14,1,1,3,2,0,0,20,5,d10,7,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,15,1,1,3,2,0,0,20,6,d10,9,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,16,1,1,3,2,0,0,20,6,d10,9,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,17,1,2,3,3,0,0,20,6,d10,9,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,18,1,2,3,3,0,0,20,6,d12,9,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,19,1,2,3,3,0,0,20,6,d12,9,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,dwarf,Dwarf,battle-master,Battle Master,20,1,2,4,3,0,0,20,6,d12,9,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,1,1,0,1,0,0,0,20,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,2,1,1,1,0,0,0,20,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,3,1,1,1,0,0,0,19,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,4,1,1,1,0,0,0,19,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,5,1,1,2,0,0,0,19,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,6,1,1,2,0,0,0,19,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,7,1,1,2,0,0,0,19,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,8,1,1,2,0,0,0,19,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,9,1,1,2,1,0,0,19,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,10,1,1,2,1,0,0,19,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,11,1,1,3,1,0,0,19,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,12,1,1,3,1,0,0,19,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,13,1,1,3,2,0,0,19,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,14,1,1,3,2,0,0,19,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,15,1,1,3,2,0,0,18,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,16,1,1,3,2,0,0,18,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,17,1,2,3,3,0,0,18,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,18,1,2,3,3,0,0,18,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,19,1,2,3,3,0,0,18,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,champion,Champion,20,1,2,4,3,0,0,18,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,1,1,0,1,0,0,0,20,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,2,1,1,1,0,0,0,20,0,,0,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,3,1,1,1,0,0,0,20,4,d8,3,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,4,1,1,1,0,0,0,20,4,d8,3,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,5,1,1,2,0,0,0,20,4,d8,3,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,6,1,1,2,0,0,0,20,4,d8,3,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,7,1,1,2,0,0,0,20,5,d8,5,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,8,1,1,2,0,0,0,20,5,d8,5,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,9,1,1,2,1,0,0,20,5,d8,5,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,10,1,1,2,1,0,0,20,5,d10,7,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,11,1,1,3,1,0,0,20,5,d10,7,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,12,1,1,3,1,0,0,20,5,d10,7,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,13,1,1,3,2,0,0,20,5,d10,7,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,14,1,1,3,2,0,0,20,5,d10,7,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,15,1,1,3,2,0,0,20,6,d10,9,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,16,1,1,3,2,0,0,20,6,d10,9,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,17,1,2,3,3,0,0,20,6,d10,9,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,18,1,2,3,3,0,0,20,6,d12,9,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,19,1,2,3,3,0,0,20,6,d12,9,Elf subrace seçimi zorunlu,PASS
+dnd_2014,elf,Elf,battle-master,Battle Master,20,1,2,4,3,0,0,20,6,d12,9,Elf subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,1,1,0,1,0,0,0,20,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,2,1,1,1,0,0,0,20,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,3,1,1,1,0,0,0,19,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,4,1,1,1,0,0,0,19,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,5,1,1,2,0,0,0,19,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,6,1,1,2,0,0,0,19,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,7,1,1,2,0,0,0,19,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,8,1,1,2,0,0,0,19,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,9,1,1,2,1,0,0,19,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,10,1,1,2,1,0,0,19,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,11,1,1,3,1,0,0,19,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,12,1,1,3,1,0,0,19,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,13,1,1,3,2,0,0,19,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,14,1,1,3,2,0,0,19,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,15,1,1,3,2,0,0,18,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,16,1,1,3,2,0,0,18,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,17,1,2,3,3,0,0,18,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,18,1,2,3,3,0,0,18,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,19,1,2,3,3,0,0,18,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,champion,Champion,20,1,2,4,3,0,0,18,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,1,1,0,1,0,0,0,20,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,2,1,1,1,0,0,0,20,0,,0,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,3,1,1,1,0,0,0,20,4,d8,3,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,4,1,1,1,0,0,0,20,4,d8,3,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,5,1,1,2,0,0,0,20,4,d8,3,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,6,1,1,2,0,0,0,20,4,d8,3,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,7,1,1,2,0,0,0,20,5,d8,5,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,8,1,1,2,0,0,0,20,5,d8,5,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,9,1,1,2,1,0,0,20,5,d8,5,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,10,1,1,2,1,0,0,20,5,d10,7,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,11,1,1,3,1,0,0,20,5,d10,7,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,12,1,1,3,1,0,0,20,5,d10,7,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,13,1,1,3,2,0,0,20,5,d10,7,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,14,1,1,3,2,0,0,20,5,d10,7,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,15,1,1,3,2,0,0,20,6,d10,9,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,16,1,1,3,2,0,0,20,6,d10,9,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,17,1,2,3,3,0,0,20,6,d10,9,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,18,1,2,3,3,0,0,20,6,d12,9,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,19,1,2,3,3,0,0,20,6,d12,9,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,halfling,Halfling,battle-master,Battle Master,20,1,2,4,3,0,0,20,6,d12,9,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,1,1,0,1,0,0,0,20,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,2,1,1,1,0,0,0,20,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,3,1,1,1,0,0,0,19,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,4,1,1,1,0,0,0,19,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,5,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,6,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,7,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,8,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,9,1,1,2,1,0,0,19,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,10,1,1,2,1,0,0,19,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,11,1,1,3,1,0,0,19,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,12,1,1,3,1,0,0,19,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,13,1,1,3,2,0,0,19,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,14,1,1,3,2,0,0,19,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,15,1,1,3,2,0,0,18,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,16,1,1,3,2,0,0,18,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,17,1,2,3,3,0,0,18,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,18,1,2,3,3,0,0,18,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,19,1,2,3,3,0,0,18,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,champion,Champion,20,1,2,4,3,0,0,18,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,1,1,0,1,0,0,0,20,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,2,1,1,1,0,0,0,20,0,,0,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,3,1,1,1,0,0,0,20,4,d8,3,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,4,1,1,1,0,0,0,20,4,d8,3,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,5,1,1,2,0,0,0,20,4,d8,3,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,6,1,1,2,0,0,0,20,4,d8,3,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,7,1,1,2,0,0,0,20,5,d8,5,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,8,1,1,2,0,0,0,20,5,d8,5,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,9,1,1,2,1,0,0,20,5,d8,5,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,10,1,1,2,1,0,0,20,5,d10,7,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,11,1,1,3,1,0,0,20,5,d10,7,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,12,1,1,3,1,0,0,20,5,d10,7,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,13,1,1,3,2,0,0,20,5,d10,7,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,14,1,1,3,2,0,0,20,5,d10,7,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,15,1,1,3,2,0,0,20,6,d10,9,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,16,1,1,3,2,0,0,20,6,d10,9,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,17,1,2,3,3,0,0,20,6,d10,9,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,18,1,2,3,3,0,0,20,6,d12,9,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,19,1,2,3,3,0,0,20,6,d12,9,,PASS
+dnd_2014,dragonborn,Dragonborn,battle-master,Battle Master,20,1,2,4,3,0,0,20,6,d12,9,,PASS
+dnd_2014,gnome,Gnome,champion,Champion,1,1,0,1,0,0,0,20,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,2,1,1,1,0,0,0,20,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,3,1,1,1,0,0,0,19,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,4,1,1,1,0,0,0,19,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,5,1,1,2,0,0,0,19,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,6,1,1,2,0,0,0,19,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,7,1,1,2,0,0,0,19,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,8,1,1,2,0,0,0,19,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,9,1,1,2,1,0,0,19,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,10,1,1,2,1,0,0,19,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,11,1,1,3,1,0,0,19,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,12,1,1,3,1,0,0,19,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,13,1,1,3,2,0,0,19,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,14,1,1,3,2,0,0,19,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,15,1,1,3,2,0,0,18,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,16,1,1,3,2,0,0,18,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,17,1,2,3,3,0,0,18,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,18,1,2,3,3,0,0,18,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,19,1,2,3,3,0,0,18,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,champion,Champion,20,1,2,4,3,0,0,18,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,1,1,0,1,0,0,0,20,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,2,1,1,1,0,0,0,20,0,,0,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,3,1,1,1,0,0,0,20,4,d8,3,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,4,1,1,1,0,0,0,20,4,d8,3,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,5,1,1,2,0,0,0,20,4,d8,3,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,6,1,1,2,0,0,0,20,4,d8,3,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,7,1,1,2,0,0,0,20,5,d8,5,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,8,1,1,2,0,0,0,20,5,d8,5,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,9,1,1,2,1,0,0,20,5,d8,5,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,10,1,1,2,1,0,0,20,5,d10,7,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,11,1,1,3,1,0,0,20,5,d10,7,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,12,1,1,3,1,0,0,20,5,d10,7,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,13,1,1,3,2,0,0,20,5,d10,7,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,14,1,1,3,2,0,0,20,5,d10,7,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,15,1,1,3,2,0,0,20,6,d10,9,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,16,1,1,3,2,0,0,20,6,d10,9,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,17,1,2,3,3,0,0,20,6,d10,9,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,18,1,2,3,3,0,0,20,6,d12,9,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,19,1,2,3,3,0,0,20,6,d12,9,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,gnome,Gnome,battle-master,Battle Master,20,1,2,4,3,0,0,20,6,d12,9,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,1,1,0,1,0,0,0,20,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,2,1,1,1,0,0,0,20,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,3,1,1,1,0,0,0,19,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,4,1,1,1,0,0,0,19,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,5,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,6,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,7,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,8,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,9,1,1,2,1,0,0,19,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,10,1,1,2,1,0,0,19,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,11,1,1,3,1,0,0,19,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,12,1,1,3,1,0,0,19,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,13,1,1,3,2,0,0,19,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,14,1,1,3,2,0,0,19,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,15,1,1,3,2,0,0,18,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,16,1,1,3,2,0,0,18,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,17,1,2,3,3,0,0,18,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,18,1,2,3,3,0,0,18,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,19,1,2,3,3,0,0,18,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,champion,Champion,20,1,2,4,3,0,0,18,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,1,1,0,1,0,0,0,20,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,2,1,1,1,0,0,0,20,0,,0,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,3,1,1,1,0,0,0,20,4,d8,3,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,4,1,1,1,0,0,0,20,4,d8,3,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,5,1,1,2,0,0,0,20,4,d8,3,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,6,1,1,2,0,0,0,20,4,d8,3,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,7,1,1,2,0,0,0,20,5,d8,5,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,8,1,1,2,0,0,0,20,5,d8,5,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,9,1,1,2,1,0,0,20,5,d8,5,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,10,1,1,2,1,0,0,20,5,d10,7,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,11,1,1,3,1,0,0,20,5,d10,7,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,12,1,1,3,1,0,0,20,5,d10,7,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,13,1,1,3,2,0,0,20,5,d10,7,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,14,1,1,3,2,0,0,20,5,d10,7,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,15,1,1,3,2,0,0,20,6,d10,9,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,16,1,1,3,2,0,0,20,6,d10,9,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,17,1,2,3,3,0,0,20,6,d10,9,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,18,1,2,3,3,0,0,20,6,d12,9,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,19,1,2,3,3,0,0,20,6,d12,9,,PASS
+dnd_2014,half-elf,Half-Elf,battle-master,Battle Master,20,1,2,4,3,0,0,20,6,d12,9,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,1,1,0,1,0,0,0,20,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,2,1,1,1,0,0,0,20,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,3,1,1,1,0,0,0,19,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,4,1,1,1,0,0,0,19,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,5,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,6,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,7,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,8,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,9,1,1,2,1,0,0,19,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,10,1,1,2,1,0,0,19,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,11,1,1,3,1,0,0,19,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,12,1,1,3,1,0,0,19,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,13,1,1,3,2,0,0,19,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,14,1,1,3,2,0,0,19,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,15,1,1,3,2,0,0,18,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,16,1,1,3,2,0,0,18,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,17,1,2,3,3,0,0,18,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,18,1,2,3,3,0,0,18,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,19,1,2,3,3,0,0,18,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,champion,Champion,20,1,2,4,3,0,0,18,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,1,1,0,1,0,0,0,20,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,2,1,1,1,0,0,0,20,0,,0,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,3,1,1,1,0,0,0,20,4,d8,3,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,4,1,1,1,0,0,0,20,4,d8,3,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,5,1,1,2,0,0,0,20,4,d8,3,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,6,1,1,2,0,0,0,20,4,d8,3,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,7,1,1,2,0,0,0,20,5,d8,5,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,8,1,1,2,0,0,0,20,5,d8,5,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,9,1,1,2,1,0,0,20,5,d8,5,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,10,1,1,2,1,0,0,20,5,d10,7,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,11,1,1,3,1,0,0,20,5,d10,7,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,12,1,1,3,1,0,0,20,5,d10,7,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,13,1,1,3,2,0,0,20,5,d10,7,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,14,1,1,3,2,0,0,20,5,d10,7,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,15,1,1,3,2,0,0,20,6,d10,9,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,16,1,1,3,2,0,0,20,6,d10,9,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,17,1,2,3,3,0,0,20,6,d10,9,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,18,1,2,3,3,0,0,20,6,d12,9,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,19,1,2,3,3,0,0,20,6,d12,9,,PASS
+dnd_2014,half-orc,Half-Orc,battle-master,Battle Master,20,1,2,4,3,0,0,20,6,d12,9,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,1,1,0,1,0,0,0,20,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,2,1,1,1,0,0,0,20,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,3,1,1,1,0,0,0,19,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,4,1,1,1,0,0,0,19,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,5,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,6,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,7,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,8,1,1,2,0,0,0,19,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,9,1,1,2,1,0,0,19,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,10,1,1,2,1,0,0,19,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,11,1,1,3,1,0,0,19,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,12,1,1,3,1,0,0,19,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,13,1,1,3,2,0,0,19,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,14,1,1,3,2,0,0,19,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,15,1,1,3,2,0,0,18,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,16,1,1,3,2,0,0,18,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,17,1,2,3,3,0,0,18,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,18,1,2,3,3,0,0,18,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,19,1,2,3,3,0,0,18,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,champion,Champion,20,1,2,4,3,0,0,18,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,1,1,0,1,0,0,0,20,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,2,1,1,1,0,0,0,20,0,,0,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,3,1,1,1,0,0,0,20,4,d8,3,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,4,1,1,1,0,0,0,20,4,d8,3,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,5,1,1,2,0,0,0,20,4,d8,3,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,6,1,1,2,0,0,0,20,4,d8,3,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,7,1,1,2,0,0,0,20,5,d8,5,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,8,1,1,2,0,0,0,20,5,d8,5,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,9,1,1,2,1,0,0,20,5,d8,5,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,10,1,1,2,1,0,0,20,5,d10,7,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,11,1,1,3,1,0,0,20,5,d10,7,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,12,1,1,3,1,0,0,20,5,d10,7,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,13,1,1,3,2,0,0,20,5,d10,7,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,14,1,1,3,2,0,0,20,5,d10,7,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,15,1,1,3,2,0,0,20,6,d10,9,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,16,1,1,3,2,0,0,20,6,d10,9,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,17,1,2,3,3,0,0,20,6,d10,9,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,18,1,2,3,3,0,0,20,6,d12,9,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,19,1,2,3,3,0,0,20,6,d12,9,,PASS
+dnd_2014,tiefling,Tiefling,battle-master,Battle Master,20,1,2,4,3,0,0,20,6,d12,9,,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,1,2,0,1,0,0,3,20,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,2,2,1,1,0,0,3,20,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,3,2,1,1,0,0,3,19,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,4,3,1,1,0,0,4,19,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,5,3,1,2,0,0,4,19,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,6,3,1,2,0,0,4,19,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,7,3,1,2,0,0,4,19,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,8,3,1,2,0,0,4,19,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,9,3,1,2,1,9,4,19,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,10,4,1,2,1,10,5,19,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,11,4,1,3,1,11,5,19,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,12,4,1,3,1,12,5,19,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,13,4,1,3,2,13,5,19,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,14,4,1,3,2,14,5,19,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,15,4,1,3,2,15,5,18,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,16,4,1,3,2,16,6,18,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,17,4,2,3,3,17,6,18,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,18,4,2,3,3,18,6,18,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,19,4,2,3,3,19,6,18,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,champion-2024,Champion,20,4,2,4,3,20,6,18,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,1,2,0,1,0,0,3,20,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,2,2,1,1,0,0,3,20,0,,0,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,3,2,1,1,0,0,3,20,4,d8,3,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,4,3,1,1,0,0,4,20,4,d8,3,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,5,3,1,2,0,0,4,20,4,d8,3,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,6,3,1,2,0,0,4,20,4,d8,3,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,7,3,1,2,0,0,4,20,5,d8,5,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,8,3,1,2,0,0,4,20,5,d8,5,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,9,3,1,2,1,9,4,20,5,d8,5,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,10,4,1,2,1,10,5,20,5,d10,7,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,11,4,1,3,1,11,5,20,5,d10,7,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,12,4,1,3,1,12,5,20,5,d10,7,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,13,4,1,3,2,13,5,20,5,d10,7,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,14,4,1,3,2,14,5,20,5,d10,7,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,15,4,1,3,2,15,5,20,6,d10,9,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,16,4,1,3,2,16,6,20,6,d10,9,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,17,4,2,3,3,17,6,20,6,d10,9,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,18,4,2,3,3,18,6,20,6,d12,9,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,19,4,2,3,3,19,6,20,6,d12,9,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,aasimar,Aasimar,battle-master-2024,Battle Master,20,4,2,4,3,20,6,20,6,d12,9,Aasimar species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,1,2,0,1,0,0,3,20,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,2,2,1,1,0,0,3,20,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,3,2,1,1,0,0,3,19,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,4,3,1,1,0,0,4,19,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,5,3,1,2,0,0,4,19,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,6,3,1,2,0,0,4,19,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,7,3,1,2,0,0,4,19,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,8,3,1,2,0,0,4,19,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,9,3,1,2,1,9,4,19,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,10,4,1,2,1,10,5,19,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,11,4,1,3,1,11,5,19,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,12,4,1,3,1,12,5,19,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,13,4,1,3,2,13,5,19,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,14,4,1,3,2,14,5,19,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,15,4,1,3,2,15,5,18,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,16,4,1,3,2,16,6,18,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,17,4,2,3,3,17,6,18,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,18,4,2,3,3,18,6,18,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,19,4,2,3,3,19,6,18,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,champion-2024,Champion,20,4,2,4,3,20,6,18,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,1,2,0,1,0,0,3,20,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,2,2,1,1,0,0,3,20,0,,0,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,3,2,1,1,0,0,3,20,4,d8,3,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,4,3,1,1,0,0,4,20,4,d8,3,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,5,3,1,2,0,0,4,20,4,d8,3,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,6,3,1,2,0,0,4,20,4,d8,3,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,7,3,1,2,0,0,4,20,5,d8,5,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,8,3,1,2,0,0,4,20,5,d8,5,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,9,3,1,2,1,9,4,20,5,d8,5,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,10,4,1,2,1,10,5,20,5,d10,7,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,11,4,1,3,1,11,5,20,5,d10,7,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,12,4,1,3,1,12,5,20,5,d10,7,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,13,4,1,3,2,13,5,20,5,d10,7,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,14,4,1,3,2,14,5,20,5,d10,7,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,15,4,1,3,2,15,5,20,6,d10,9,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,16,4,1,3,2,16,6,20,6,d10,9,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,17,4,2,3,3,17,6,20,6,d10,9,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,18,4,2,3,3,18,6,20,6,d12,9,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,19,4,2,3,3,19,6,20,6,d12,9,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dragonborn,Dragonborn,battle-master-2024,Battle Master,20,4,2,4,3,20,6,20,6,d12,9,Dragonborn species alt seçimi gerekli,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,1,2,0,1,0,0,3,20,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,2,2,1,1,0,0,3,20,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,3,2,1,1,0,0,3,19,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,4,3,1,1,0,0,4,19,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,5,3,1,2,0,0,4,19,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,6,3,1,2,0,0,4,19,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,7,3,1,2,0,0,4,19,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,8,3,1,2,0,0,4,19,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,9,3,1,2,1,9,4,19,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,10,4,1,2,1,10,5,19,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,11,4,1,3,1,11,5,19,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,12,4,1,3,1,12,5,19,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,13,4,1,3,2,13,5,19,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,14,4,1,3,2,14,5,19,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,15,4,1,3,2,15,5,18,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,16,4,1,3,2,16,6,18,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,17,4,2,3,3,17,6,18,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,18,4,2,3,3,18,6,18,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,19,4,2,3,3,19,6,18,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,champion-2024,Champion,20,4,2,4,3,20,6,18,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,1,2,0,1,0,0,3,20,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,2,2,1,1,0,0,3,20,0,,0,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,3,2,1,1,0,0,3,20,4,d8,3,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,4,3,1,1,0,0,4,20,4,d8,3,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,5,3,1,2,0,0,4,20,4,d8,3,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,6,3,1,2,0,0,4,20,4,d8,3,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,7,3,1,2,0,0,4,20,5,d8,5,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,8,3,1,2,0,0,4,20,5,d8,5,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,9,3,1,2,1,9,4,20,5,d8,5,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,10,4,1,2,1,10,5,20,5,d10,7,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,11,4,1,3,1,11,5,20,5,d10,7,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,12,4,1,3,1,12,5,20,5,d10,7,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,13,4,1,3,2,13,5,20,5,d10,7,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,14,4,1,3,2,14,5,20,5,d10,7,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,15,4,1,3,2,15,5,20,6,d10,9,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,16,4,1,3,2,16,6,20,6,d10,9,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,17,4,2,3,3,17,6,20,6,d10,9,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,18,4,2,3,3,18,6,20,6,d12,9,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,19,4,2,3,3,19,6,20,6,d12,9,,PASS
+dnd_2024,dwarf,Dwarf,battle-master-2024,Battle Master,20,4,2,4,3,20,6,20,6,d12,9,,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,1,2,0,1,0,0,3,20,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,2,2,1,1,0,0,3,20,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,3,2,1,1,0,0,3,19,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,4,3,1,1,0,0,4,19,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,5,3,1,2,0,0,4,19,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,6,3,1,2,0,0,4,19,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,7,3,1,2,0,0,4,19,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,8,3,1,2,0,0,4,19,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,9,3,1,2,1,9,4,19,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,10,4,1,2,1,10,5,19,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,11,4,1,3,1,11,5,19,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,12,4,1,3,1,12,5,19,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,13,4,1,3,2,13,5,19,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,14,4,1,3,2,14,5,19,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,15,4,1,3,2,15,5,18,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,16,4,1,3,2,16,6,18,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,17,4,2,3,3,17,6,18,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,18,4,2,3,3,18,6,18,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,19,4,2,3,3,19,6,18,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,champion-2024,Champion,20,4,2,4,3,20,6,18,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,1,2,0,1,0,0,3,20,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,2,2,1,1,0,0,3,20,0,,0,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,3,2,1,1,0,0,3,20,4,d8,3,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,4,3,1,1,0,0,4,20,4,d8,3,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,5,3,1,2,0,0,4,20,4,d8,3,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,6,3,1,2,0,0,4,20,4,d8,3,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,7,3,1,2,0,0,4,20,5,d8,5,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,8,3,1,2,0,0,4,20,5,d8,5,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,9,3,1,2,1,9,4,20,5,d8,5,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,10,4,1,2,1,10,5,20,5,d10,7,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,11,4,1,3,1,11,5,20,5,d10,7,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,12,4,1,3,1,12,5,20,5,d10,7,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,13,4,1,3,2,13,5,20,5,d10,7,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,14,4,1,3,2,14,5,20,5,d10,7,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,15,4,1,3,2,15,5,20,6,d10,9,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,16,4,1,3,2,16,6,20,6,d10,9,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,17,4,2,3,3,17,6,20,6,d10,9,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,18,4,2,3,3,18,6,20,6,d12,9,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,19,4,2,3,3,19,6,20,6,d12,9,Elf species alt seçimi gerekli,PASS
+dnd_2024,elf,Elf,battle-master-2024,Battle Master,20,4,2,4,3,20,6,20,6,d12,9,Elf species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,1,2,0,1,0,0,3,20,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,2,2,1,1,0,0,3,20,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,3,2,1,1,0,0,3,19,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,4,3,1,1,0,0,4,19,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,5,3,1,2,0,0,4,19,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,6,3,1,2,0,0,4,19,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,7,3,1,2,0,0,4,19,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,8,3,1,2,0,0,4,19,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,9,3,1,2,1,9,4,19,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,10,4,1,2,1,10,5,19,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,11,4,1,3,1,11,5,19,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,12,4,1,3,1,12,5,19,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,13,4,1,3,2,13,5,19,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,14,4,1,3,2,14,5,19,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,15,4,1,3,2,15,5,18,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,16,4,1,3,2,16,6,18,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,17,4,2,3,3,17,6,18,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,18,4,2,3,3,18,6,18,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,19,4,2,3,3,19,6,18,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,champion-2024,Champion,20,4,2,4,3,20,6,18,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,1,2,0,1,0,0,3,20,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,2,2,1,1,0,0,3,20,0,,0,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,3,2,1,1,0,0,3,20,4,d8,3,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,4,3,1,1,0,0,4,20,4,d8,3,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,5,3,1,2,0,0,4,20,4,d8,3,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,6,3,1,2,0,0,4,20,4,d8,3,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,7,3,1,2,0,0,4,20,5,d8,5,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,8,3,1,2,0,0,4,20,5,d8,5,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,9,3,1,2,1,9,4,20,5,d8,5,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,10,4,1,2,1,10,5,20,5,d10,7,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,11,4,1,3,1,11,5,20,5,d10,7,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,12,4,1,3,1,12,5,20,5,d10,7,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,13,4,1,3,2,13,5,20,5,d10,7,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,14,4,1,3,2,14,5,20,5,d10,7,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,15,4,1,3,2,15,5,20,6,d10,9,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,16,4,1,3,2,16,6,20,6,d10,9,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,17,4,2,3,3,17,6,20,6,d10,9,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,18,4,2,3,3,18,6,20,6,d12,9,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,19,4,2,3,3,19,6,20,6,d12,9,Gnome species alt seçimi gerekli,PASS
+dnd_2024,gnome,Gnome,battle-master-2024,Battle Master,20,4,2,4,3,20,6,20,6,d12,9,Gnome species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,1,2,0,1,0,0,3,20,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,2,2,1,1,0,0,3,20,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,3,2,1,1,0,0,3,19,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,4,3,1,1,0,0,4,19,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,5,3,1,2,0,0,4,19,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,6,3,1,2,0,0,4,19,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,7,3,1,2,0,0,4,19,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,8,3,1,2,0,0,4,19,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,9,3,1,2,1,9,4,19,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,10,4,1,2,1,10,5,19,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,11,4,1,3,1,11,5,19,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,12,4,1,3,1,12,5,19,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,13,4,1,3,2,13,5,19,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,14,4,1,3,2,14,5,19,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,15,4,1,3,2,15,5,18,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,16,4,1,3,2,16,6,18,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,17,4,2,3,3,17,6,18,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,18,4,2,3,3,18,6,18,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,19,4,2,3,3,19,6,18,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,champion-2024,Champion,20,4,2,4,3,20,6,18,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,1,2,0,1,0,0,3,20,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,2,2,1,1,0,0,3,20,0,,0,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,3,2,1,1,0,0,3,20,4,d8,3,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,4,3,1,1,0,0,4,20,4,d8,3,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,5,3,1,2,0,0,4,20,4,d8,3,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,6,3,1,2,0,0,4,20,4,d8,3,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,7,3,1,2,0,0,4,20,5,d8,5,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,8,3,1,2,0,0,4,20,5,d8,5,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,9,3,1,2,1,9,4,20,5,d8,5,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,10,4,1,2,1,10,5,20,5,d10,7,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,11,4,1,3,1,11,5,20,5,d10,7,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,12,4,1,3,1,12,5,20,5,d10,7,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,13,4,1,3,2,13,5,20,5,d10,7,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,14,4,1,3,2,14,5,20,5,d10,7,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,15,4,1,3,2,15,5,20,6,d10,9,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,16,4,1,3,2,16,6,20,6,d10,9,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,17,4,2,3,3,17,6,20,6,d10,9,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,18,4,2,3,3,18,6,20,6,d12,9,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,19,4,2,3,3,19,6,20,6,d12,9,Goliath species alt seçimi gerekli,PASS
+dnd_2024,goliath,Goliath,battle-master-2024,Battle Master,20,4,2,4,3,20,6,20,6,d12,9,Goliath species alt seçimi gerekli,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,1,2,0,1,0,0,3,20,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,2,2,1,1,0,0,3,20,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,3,2,1,1,0,0,3,19,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,4,3,1,1,0,0,4,19,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,5,3,1,2,0,0,4,19,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,6,3,1,2,0,0,4,19,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,7,3,1,2,0,0,4,19,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,8,3,1,2,0,0,4,19,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,9,3,1,2,1,9,4,19,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,10,4,1,2,1,10,5,19,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,11,4,1,3,1,11,5,19,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,12,4,1,3,1,12,5,19,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,13,4,1,3,2,13,5,19,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,14,4,1,3,2,14,5,19,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,15,4,1,3,2,15,5,18,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,16,4,1,3,2,16,6,18,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,17,4,2,3,3,17,6,18,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,18,4,2,3,3,18,6,18,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,19,4,2,3,3,19,6,18,0,,0,,PASS
+dnd_2024,halfling,Halfling,champion-2024,Champion,20,4,2,4,3,20,6,18,0,,0,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,1,2,0,1,0,0,3,20,0,,0,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,2,2,1,1,0,0,3,20,0,,0,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,3,2,1,1,0,0,3,20,4,d8,3,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,4,3,1,1,0,0,4,20,4,d8,3,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,5,3,1,2,0,0,4,20,4,d8,3,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,6,3,1,2,0,0,4,20,4,d8,3,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,7,3,1,2,0,0,4,20,5,d8,5,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,8,3,1,2,0,0,4,20,5,d8,5,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,9,3,1,2,1,9,4,20,5,d8,5,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,10,4,1,2,1,10,5,20,5,d10,7,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,11,4,1,3,1,11,5,20,5,d10,7,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,12,4,1,3,1,12,5,20,5,d10,7,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,13,4,1,3,2,13,5,20,5,d10,7,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,14,4,1,3,2,14,5,20,5,d10,7,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,15,4,1,3,2,15,5,20,6,d10,9,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,16,4,1,3,2,16,6,20,6,d10,9,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,17,4,2,3,3,17,6,20,6,d10,9,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,18,4,2,3,3,18,6,20,6,d12,9,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,19,4,2,3,3,19,6,20,6,d12,9,,PASS
+dnd_2024,halfling,Halfling,battle-master-2024,Battle Master,20,4,2,4,3,20,6,20,6,d12,9,,PASS
+dnd_2024,human,Human,champion-2024,Champion,1,2,0,1,0,0,3,20,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,2,2,1,1,0,0,3,20,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,3,2,1,1,0,0,3,19,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,4,3,1,1,0,0,4,19,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,5,3,1,2,0,0,4,19,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,6,3,1,2,0,0,4,19,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,7,3,1,2,0,0,4,19,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,8,3,1,2,0,0,4,19,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,9,3,1,2,1,9,4,19,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,10,4,1,2,1,10,5,19,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,11,4,1,3,1,11,5,19,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,12,4,1,3,1,12,5,19,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,13,4,1,3,2,13,5,19,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,14,4,1,3,2,14,5,19,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,15,4,1,3,2,15,5,18,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,16,4,1,3,2,16,6,18,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,17,4,2,3,3,17,6,18,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,18,4,2,3,3,18,6,18,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,19,4,2,3,3,19,6,18,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,champion-2024,Champion,20,4,2,4,3,20,6,18,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,1,2,0,1,0,0,3,20,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,2,2,1,1,0,0,3,20,0,,0,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,3,2,1,1,0,0,3,20,4,d8,3,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,4,3,1,1,0,0,4,20,4,d8,3,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,5,3,1,2,0,0,4,20,4,d8,3,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,6,3,1,2,0,0,4,20,4,d8,3,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,7,3,1,2,0,0,4,20,5,d8,5,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,8,3,1,2,0,0,4,20,5,d8,5,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,9,3,1,2,1,9,4,20,5,d8,5,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,10,4,1,2,1,10,5,20,5,d10,7,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,11,4,1,3,1,11,5,20,5,d10,7,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,12,4,1,3,1,12,5,20,5,d10,7,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,13,4,1,3,2,13,5,20,5,d10,7,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,14,4,1,3,2,14,5,20,5,d10,7,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,15,4,1,3,2,15,5,20,6,d10,9,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,16,4,1,3,2,16,6,20,6,d10,9,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,17,4,2,3,3,17,6,20,6,d10,9,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,18,4,2,3,3,18,6,20,6,d12,9,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,19,4,2,3,3,19,6,20,6,d12,9,Human species alt seçimi gerekli,PASS
+dnd_2024,human,Human,battle-master-2024,Battle Master,20,4,2,4,3,20,6,20,6,d12,9,Human species alt seçimi gerekli,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,1,2,0,1,0,0,3,20,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,2,2,1,1,0,0,3,20,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,3,2,1,1,0,0,3,19,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,4,3,1,1,0,0,4,19,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,5,3,1,2,0,0,4,19,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,6,3,1,2,0,0,4,19,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,7,3,1,2,0,0,4,19,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,8,3,1,2,0,0,4,19,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,9,3,1,2,1,9,4,19,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,10,4,1,2,1,10,5,19,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,11,4,1,3,1,11,5,19,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,12,4,1,3,1,12,5,19,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,13,4,1,3,2,13,5,19,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,14,4,1,3,2,14,5,19,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,15,4,1,3,2,15,5,18,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,16,4,1,3,2,16,6,18,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,17,4,2,3,3,17,6,18,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,18,4,2,3,3,18,6,18,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,19,4,2,3,3,19,6,18,0,,0,,PASS
+dnd_2024,orc,Orc,champion-2024,Champion,20,4,2,4,3,20,6,18,0,,0,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,1,2,0,1,0,0,3,20,0,,0,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,2,2,1,1,0,0,3,20,0,,0,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,3,2,1,1,0,0,3,20,4,d8,3,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,4,3,1,1,0,0,4,20,4,d8,3,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,5,3,1,2,0,0,4,20,4,d8,3,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,6,3,1,2,0,0,4,20,4,d8,3,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,7,3,1,2,0,0,4,20,5,d8,5,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,8,3,1,2,0,0,4,20,5,d8,5,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,9,3,1,2,1,9,4,20,5,d8,5,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,10,4,1,2,1,10,5,20,5,d10,7,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,11,4,1,3,1,11,5,20,5,d10,7,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,12,4,1,3,1,12,5,20,5,d10,7,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,13,4,1,3,2,13,5,20,5,d10,7,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,14,4,1,3,2,14,5,20,5,d10,7,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,15,4,1,3,2,15,5,20,6,d10,9,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,16,4,1,3,2,16,6,20,6,d10,9,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,17,4,2,3,3,17,6,20,6,d10,9,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,18,4,2,3,3,18,6,20,6,d12,9,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,19,4,2,3,3,19,6,20,6,d12,9,,PASS
+dnd_2024,orc,Orc,battle-master-2024,Battle Master,20,4,2,4,3,20,6,20,6,d12,9,,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,1,2,0,1,0,0,3,20,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,2,2,1,1,0,0,3,20,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,3,2,1,1,0,0,3,19,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,4,3,1,1,0,0,4,19,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,5,3,1,2,0,0,4,19,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,6,3,1,2,0,0,4,19,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,7,3,1,2,0,0,4,19,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,8,3,1,2,0,0,4,19,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,9,3,1,2,1,9,4,19,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,10,4,1,2,1,10,5,19,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,11,4,1,3,1,11,5,19,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,12,4,1,3,1,12,5,19,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,13,4,1,3,2,13,5,19,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,14,4,1,3,2,14,5,19,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,15,4,1,3,2,15,5,18,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,16,4,1,3,2,16,6,18,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,17,4,2,3,3,17,6,18,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,18,4,2,3,3,18,6,18,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,19,4,2,3,3,19,6,18,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,champion-2024,Champion,20,4,2,4,3,20,6,18,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,1,2,0,1,0,0,3,20,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,2,2,1,1,0,0,3,20,0,,0,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,3,2,1,1,0,0,3,20,4,d8,3,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,4,3,1,1,0,0,4,20,4,d8,3,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,5,3,1,2,0,0,4,20,4,d8,3,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,6,3,1,2,0,0,4,20,4,d8,3,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,7,3,1,2,0,0,4,20,5,d8,5,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,8,3,1,2,0,0,4,20,5,d8,5,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,9,3,1,2,1,9,4,20,5,d8,5,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,10,4,1,2,1,10,5,20,5,d10,7,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,11,4,1,3,1,11,5,20,5,d10,7,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,12,4,1,3,1,12,5,20,5,d10,7,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,13,4,1,3,2,13,5,20,5,d10,7,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,14,4,1,3,2,14,5,20,5,d10,7,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,15,4,1,3,2,15,5,20,6,d10,9,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,16,4,1,3,2,16,6,20,6,d10,9,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,17,4,2,3,3,17,6,20,6,d10,9,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,18,4,2,3,3,18,6,20,6,d12,9,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,19,4,2,3,3,19,6,20,6,d12,9,Tiefling species alt seçimi gerekli,PASS
+dnd_2024,tiefling,Tiefling,battle-master-2024,Battle Master,20,4,2,4,3,20,6,20,6,d12,9,Tiefling species alt seçimi gerekli,PASS

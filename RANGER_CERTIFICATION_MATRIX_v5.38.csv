@@ -1,0 +1,761 @@
+﻿ruleset,race_species,subclass,level,favored_enemy_uses,hunters_mark_damage,known_spells,prepared_spells,weapon_mastery,expertise_count,extra_attack,roving,tireless,relentless_hunter,natures_veil,precise_hunter,feral_senses,foe_slayer,companion_attacks,warnings,result
+dnd_2014,Human,Hunter,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Hunter,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,0,,PASS
+dnd_2014,Human,Hunter,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,0,,PASS
+dnd_2014,Human,Hunter,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,0,,PASS
+dnd_2014,Human,Beast Master,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Beast Master,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Human,Beast Master,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Human,Beast Master,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Human,Beast Master,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Human,Beast Master,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Human,Beast Master,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Human,Beast Master,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Human,Beast Master,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Human,Beast Master,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Human,Beast Master,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Human,Beast Master,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Human,Beast Master,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Human,Beast Master,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Human,Beast Master,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Human,Beast Master,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Human,Beast Master,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Human,Beast Master,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,2,,PASS
+dnd_2014,Human,Beast Master,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,2,,PASS
+dnd_2014,Human,Beast Master,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,2,,PASS
+dnd_2014,Dwarf,Hunter,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Hunter,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Beast Master,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Hunter,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Beast Master,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Hunter,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Beast Master,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Dragonborn,Hunter,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,0,,PASS
+dnd_2014,Dragonborn,Hunter,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,0,,PASS
+dnd_2014,Dragonborn,Beast Master,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Beast Master,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Dragonborn,Beast Master,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Dragonborn,Beast Master,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Dragonborn,Beast Master,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Dragonborn,Beast Master,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Dragonborn,Beast Master,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Dragonborn,Beast Master,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Dragonborn,Beast Master,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Dragonborn,Beast Master,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Dragonborn,Beast Master,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Dragonborn,Beast Master,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Dragonborn,Beast Master,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Dragonborn,Beast Master,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Dragonborn,Beast Master,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Dragonborn,Beast Master,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Dragonborn,Beast Master,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Dragonborn,Beast Master,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,2,,PASS
+dnd_2014,Dragonborn,Beast Master,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,2,,PASS
+dnd_2014,Dragonborn,Beast Master,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,2,,PASS
+dnd_2014,Gnome,Hunter,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Hunter,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Beast Master,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,2,Subrace seçimi zorunlu,PASS
+dnd_2014,Half-Elf,Hunter,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Hunter,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,2,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,2,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,2,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Elf,Beast Master,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,2,"Esnek ability, skill ve language seçimleri",PASS
+dnd_2014,Half-Orc,Hunter,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,0,,PASS
+dnd_2014,Half-Orc,Hunter,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,0,,PASS
+dnd_2014,Half-Orc,Beast Master,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Beast Master,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Half-Orc,Beast Master,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Half-Orc,Beast Master,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Half-Orc,Beast Master,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Half-Orc,Beast Master,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Half-Orc,Beast Master,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Half-Orc,Beast Master,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Half-Orc,Beast Master,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Half-Orc,Beast Master,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Half-Orc,Beast Master,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Half-Orc,Beast Master,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Half-Orc,Beast Master,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Half-Orc,Beast Master,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Half-Orc,Beast Master,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Half-Orc,Beast Master,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Half-Orc,Beast Master,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Half-Orc,Beast Master,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,2,,PASS
+dnd_2014,Half-Orc,Beast Master,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,2,,PASS
+dnd_2014,Half-Orc,Beast Master,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,2,,PASS
+dnd_2014,Tiefling,Hunter,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Hunter,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,0,,PASS
+dnd_2014,Tiefling,Hunter,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,0,,PASS
+dnd_2014,Tiefling,Hunter,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,0,,PASS
+dnd_2014,Tiefling,Beast Master,1,0,1d6,0,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Beast Master,2,0,1d6,2,0,0,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2014,Tiefling,Beast Master,3,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Tiefling,Beast Master,4,0,1d6,3,0,0,0,False,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Tiefling,Beast Master,5,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Tiefling,Beast Master,6,0,1d6,4,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Tiefling,Beast Master,7,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Tiefling,Beast Master,8,0,1d6,5,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Tiefling,Beast Master,9,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Tiefling,Beast Master,10,0,1d6,6,0,0,0,True,False,False,False,False,False,False,False,1,,PASS
+dnd_2014,Tiefling,Beast Master,11,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Tiefling,Beast Master,12,0,1d6,7,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Tiefling,Beast Master,13,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Tiefling,Beast Master,14,0,1d6,8,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Tiefling,Beast Master,15,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Tiefling,Beast Master,16,0,1d6,9,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Tiefling,Beast Master,17,0,1d6,10,0,0,0,True,False,False,False,False,False,False,False,2,,PASS
+dnd_2014,Tiefling,Beast Master,18,0,1d6,10,0,0,0,True,False,False,False,False,False,True,False,2,,PASS
+dnd_2014,Tiefling,Beast Master,19,0,1d6,11,0,0,0,True,False,False,False,False,False,True,False,2,,PASS
+dnd_2014,Tiefling,Beast Master,20,0,1d6,11,0,0,0,True,False,False,False,False,False,True,True,2,,PASS
+dnd_2024,Aasimar,Hunter,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Hunter,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Aasimar,Beast Master,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Aasimar,Beast Master,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Hunter,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Hunter,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Dragonborn,Beast Master,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dragonborn,Beast Master,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Hunter,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,0,,PASS
+dnd_2024,Dwarf,Hunter,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,0,,PASS
+dnd_2024,Dwarf,Hunter,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,0,,PASS
+dnd_2024,Dwarf,Hunter,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,0,,PASS
+dnd_2024,Dwarf,Beast Master,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Dwarf,Beast Master,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Hunter,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Hunter,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Elf,Beast Master,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Elf,Beast Master,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Hunter,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Hunter,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Gnome,Beast Master,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Gnome,Beast Master,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Hunter,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Hunter,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Goliath,Beast Master,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Goliath,Beast Master,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Hunter,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,0,,PASS
+dnd_2024,Halfling,Hunter,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,0,,PASS
+dnd_2024,Halfling,Hunter,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,0,,PASS
+dnd_2024,Halfling,Hunter,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,0,,PASS
+dnd_2024,Halfling,Beast Master,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Halfling,Beast Master,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Hunter,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Hunter,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Human,Beast Master,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Human,Beast Master,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Hunter,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,,PASS
+dnd_2024,Orc,Hunter,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,0,,PASS
+dnd_2024,Orc,Hunter,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,0,,PASS
+dnd_2024,Orc,Hunter,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,0,,PASS
+dnd_2024,Orc,Hunter,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,0,,PASS
+dnd_2024,Orc,Beast Master,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,1,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Orc,Beast Master,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,2,Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Hunter,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Hunter,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,0,Species alt seçimi Origin Builder içinde çözülmeli,PASS
+dnd_2024,Tiefling,Beast Master,1,2,1d6,0,2,2,0,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,2,2,1d6,0,3,2,1,False,False,False,False,False,False,False,False,0,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,3,2,1d6,0,4,2,1,False,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,4,2,1d6,0,5,2,1,False,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,5,3,1d6,0,6,2,1,True,False,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,6,3,1d6,0,6,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,7,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,8,3,1d6,0,7,2,1,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,9,4,1d6,0,9,2,3,True,True,False,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,10,4,1d6,0,9,2,3,True,True,True,False,False,False,False,False,1,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,11,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,12,4,1d6,0,10,2,3,True,True,True,False,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,13,5,1d6,0,11,2,3,True,True,True,True,False,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,14,5,1d6,0,11,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,15,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,16,5,1d6,0,12,2,3,True,True,True,True,True,False,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,17,6,1d6,0,14,2,3,True,True,True,True,True,True,False,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,18,6,1d6,0,14,2,3,True,True,True,True,True,True,True,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,19,6,1d6,0,15,2,3,True,True,True,True,True,True,True,False,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS
+dnd_2024,Tiefling,Beast Master,20,6,1d10,0,15,2,3,True,True,True,True,True,True,True,True,2,Species alt seçimi Origin Builder içinde çözülmeli | Tam PHB içeriği; source/lisans etiketi korunmalı,PASS

@@ -61,7 +61,9 @@
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": []
+        "features": [
+          "Ability Score Improvement"
+        ]
       },
       {
         "level": 5,
@@ -74,7 +76,9 @@
       {
         "level": 6,
         "proficiencyBonus": 3,
-        "features": []
+        "features": [
+          "Primal Path Feature"
+        ]
       },
       {
         "level": 7,
@@ -86,19 +90,23 @@
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": []
+        "features": [
+          "Ability Score Improvement"
+        ]
       },
       {
         "level": 9,
         "proficiencyBonus": 4,
         "features": [
-          "Brutal Critical"
+          "Brutal Critical (1 die)"
         ]
       },
       {
         "level": 10,
         "proficiencyBonus": 4,
-        "features": []
+        "features": [
+          "Primal Path Feature"
+        ]
       },
       {
         "level": 11,
@@ -110,17 +118,23 @@
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": []
+        "features": [
+          "Ability Score Improvement"
+        ]
       },
       {
         "level": 13,
         "proficiencyBonus": 5,
-        "features": []
+        "features": [
+          "Brutal Critical (2 dice)"
+        ]
       },
       {
         "level": 14,
         "proficiencyBonus": 5,
-        "features": []
+        "features": [
+          "Primal Path Feature"
+        ]
       },
       {
         "level": 15,
@@ -132,12 +146,16 @@
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": []
+        "features": [
+          "Ability Score Improvement"
+        ]
       },
       {
         "level": 17,
         "proficiencyBonus": 6,
-        "features": []
+        "features": [
+          "Brutal Critical (3 dice)"
+        ]
       },
       {
         "level": 18,
@@ -149,7 +167,9 @@
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": []
+        "features": [
+          "Ability Score Improvement"
+        ]
       },
       {
         "level": 20,
@@ -218,7 +238,9 @@
         ],
         "spellSlots": [
           2
-        ]
+        ],
+        "bardCantrips": 2,
+        "bardSpellsKnown": 4
       },
       {
         "level": 2,
@@ -229,7 +251,9 @@
         ],
         "spellSlots": [
           3
-        ]
+        ],
+        "bardCantrips": 2,
+        "bardSpellsKnown": 5
       },
       {
         "level": 3,
@@ -241,40 +265,52 @@
         "spellSlots": [
           4,
           2
-        ]
+        ],
+        "bardCantrips": 2,
+        "bardSpellsKnown": 6
       },
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3
-        ]
+        ],
+        "bardCantrips": 3,
+        "bardSpellsKnown": 7
       },
       {
         "level": 5,
         "proficiencyBonus": 3,
         "features": [
+          "Bardic Inspiration d8",
           "Font of Inspiration"
         ],
         "spellSlots": [
           4,
           3,
           2
-        ]
+        ],
+        "bardCantrips": 3,
+        "bardSpellsKnown": 8
       },
       {
         "level": 6,
         "proficiencyBonus": 3,
         "features": [
-          "Countercharm"
+          "Countercharm",
+          "Bard College Feature"
         ],
         "spellSlots": [
           4,
           3,
           3
-        ]
+        ],
+        "bardCantrips": 3,
+        "bardSpellsKnown": 9
       },
       {
         "level": 7,
@@ -285,35 +321,47 @@
           3,
           3,
           1
-        ]
+        ],
+        "bardCantrips": 3,
+        "bardSpellsKnown": 10
       },
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
           3,
           2
-        ]
+        ],
+        "bardCantrips": 3,
+        "bardSpellsKnown": 11
       },
       {
         "level": 9,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Song of Rest d8"
+        ],
         "spellSlots": [
           4,
           3,
           3,
           3,
           1
-        ]
+        ],
+        "bardCantrips": 3,
+        "bardSpellsKnown": 12
       },
       {
         "level": 10,
         "proficiencyBonus": 4,
         "features": [
+          "Bardic Inspiration d10",
+          "Expertise",
           "Magical Secrets"
         ],
         "spellSlots": [
@@ -322,7 +370,9 @@
           3,
           3,
           2
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardSpellsKnown": 14
       },
       {
         "level": 11,
@@ -335,12 +385,16 @@
           3,
           2,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardSpellsKnown": 15
       },
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -348,12 +402,16 @@
           3,
           2,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardSpellsKnown": 15
       },
       {
         "level": 13,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Song of Rest d10"
+        ],
         "spellSlots": [
           4,
           3,
@@ -362,12 +420,17 @@
           2,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardSpellsKnown": 16
       },
       {
         "level": 14,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Magical Secrets",
+          "Bard College Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -376,12 +439,16 @@
           2,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardSpellsKnown": 18
       },
       {
         "level": 15,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Bardic Inspiration d12"
+        ],
         "spellSlots": [
           4,
           3,
@@ -391,12 +458,16 @@
           1,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardSpellsKnown": 19
       },
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -406,12 +477,16 @@
           1,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardSpellsKnown": 19
       },
       {
         "level": 17,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Song of Rest d12"
+        ],
         "spellSlots": [
           4,
           3,
@@ -422,12 +497,16 @@
           1,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardSpellsKnown": 20
       },
       {
         "level": 18,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Magical Secrets"
+        ],
         "spellSlots": [
           4,
           3,
@@ -438,12 +517,16 @@
           1,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardSpellsKnown": 22
       },
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -454,7 +537,9 @@
           1,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardSpellsKnown": 22
       },
       {
         "level": 20,
@@ -472,7 +557,9 @@
           2,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardSpellsKnown": 22
       }
     ]
   },
@@ -1298,7 +1385,10 @@
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": []
+        "features": [
+          "Ability Score Improvement",
+          "Slow Fall"
+        ]
       },
       {
         "level": 5,
@@ -1311,7 +1401,10 @@
       {
         "level": 6,
         "proficiencyBonus": 3,
-        "features": []
+        "features": [
+          "Ki-Empowered Strikes",
+          "Monastic Tradition Feature"
+        ]
       },
       {
         "level": 7,
@@ -1324,32 +1417,44 @@
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": []
+        "features": [
+          "Ability Score Improvement"
+        ]
       },
       {
         "level": 9,
         "proficiencyBonus": 4,
-        "features": []
+        "features": [
+          "Unarmored Movement Improvement"
+        ]
       },
       {
         "level": 10,
         "proficiencyBonus": 4,
-        "features": []
+        "features": [
+          "Purity of Body"
+        ]
       },
       {
         "level": 11,
         "proficiencyBonus": 4,
-        "features": []
+        "features": [
+          "Monastic Tradition Feature"
+        ]
       },
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": []
+        "features": [
+          "Ability Score Improvement"
+        ]
       },
       {
         "level": 13,
         "proficiencyBonus": 5,
-        "features": []
+        "features": [
+          "Tongue of the Sun and Moon"
+        ]
       },
       {
         "level": 14,
@@ -1361,17 +1466,23 @@
       {
         "level": 15,
         "proficiencyBonus": 5,
-        "features": []
+        "features": [
+          "Timeless Body"
+        ]
       },
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": []
+        "features": [
+          "Ability Score Improvement"
+        ]
       },
       {
         "level": 17,
         "proficiencyBonus": 6,
-        "features": []
+        "features": [
+          "Monastic Tradition Feature"
+        ]
       },
       {
         "level": 18,
@@ -1383,7 +1494,9 @@
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": []
+        "features": [
+          "Ability Score Improvement"
+        ]
       },
       {
         "level": 20,
@@ -2150,7 +2263,9 @@
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3
@@ -2169,7 +2284,9 @@
       {
         "level": 6,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Sorcerous Origin Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2190,7 +2307,9 @@
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2213,7 +2332,9 @@
       {
         "level": 10,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Metamagic"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2238,7 +2359,9 @@
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2265,7 +2388,9 @@
       {
         "level": 14,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Sorcerous Origin Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2294,7 +2419,9 @@
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2309,7 +2436,9 @@
       {
         "level": 17,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Metamagic"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2325,7 +2454,9 @@
       {
         "level": 18,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Sorcerous Origin Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2341,7 +2472,9 @@
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2445,7 +2578,9 @@
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "pactMagic": {
           "slotLevel": 2,
           "slots": 2
@@ -2481,7 +2616,9 @@
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "pactMagic": {
           "slotLevel": 4,
           "slots": 2
@@ -2519,7 +2656,9 @@
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "pactMagic": {
           "slotLevel": 5,
           "slots": 3
@@ -2559,7 +2698,9 @@
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "pactMagic": {
           "slotLevel": 5,
           "slots": 3
@@ -2588,7 +2729,9 @@
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "pactMagic": {
           "slotLevel": 5,
           "slots": 4
@@ -2675,7 +2818,9 @@
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3
@@ -2715,7 +2860,9 @@
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2763,7 +2910,9 @@
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2819,7 +2968,9 @@
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2868,7 +3019,9 @@
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,

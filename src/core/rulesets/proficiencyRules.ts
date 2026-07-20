@@ -33,9 +33,9 @@ export function normalizeExpertise(expertise: string[], proficientSkills: string
   return uniqueStrings(expertise).filter((skill) => proficient.has(skill)).slice(0, Math.max(0, limit));
 }
 
-export function getExpertiseLimit(className: string, level: number) {
+export function getExpertiseLimit(className: string, level: number, ruleset = "dnd_2014") {
   const normalized = className.trim().toLowerCase();
   if (normalized === "rogue") return level >= 6 ? 4 : 2;
-  if (normalized === "bard") return level >= 10 ? 4 : level >= 3 ? 2 : 0;
+  if (normalized === "bard") return ruleset === "dnd_2024" ? (level >= 9 ? 4 : level >= 2 ? 2 : 0) : (level >= 10 ? 4 : level >= 3 ? 2 : 0);
   return 0;
 }

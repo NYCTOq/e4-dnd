@@ -1,0 +1,761 @@
+﻿Ruleset,Race/Species,Subclass,Level,Martial Arts Die,Ki/Focus Points,Unarmored Movement,Flurry Strikes,Extra Attack,Deflect,Stunning Strike,Evasion,Capstone,Origin Warning,Result
+dnd_2014,Human,Way of the Open Hand,1,d4,0,0,0,False,,False,False,,,PASS
+dnd_2014,Human,Way of the Open Hand,2,d4,2,10,2,False,,False,False,,,PASS
+dnd_2014,Human,Way of the Open Hand,3,d4,3,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Human,Way of the Open Hand,4,d4,4,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Human,Way of the Open Hand,5,d6,5,10,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Human,Way of the Open Hand,6,d6,6,15,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Human,Way of the Open Hand,7,d6,7,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of the Open Hand,8,d6,8,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of the Open Hand,9,d6,9,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of the Open Hand,10,d6,10,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of the Open Hand,11,d8,11,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of the Open Hand,12,d8,12,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of the Open Hand,13,d8,13,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of the Open Hand,14,d8,14,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of the Open Hand,15,d8,15,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of the Open Hand,16,d8,16,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of the Open Hand,17,d10,17,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of the Open Hand,18,d10,18,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of the Open Hand,19,d10,19,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of the Open Hand,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,,PASS
+dnd_2014,Human,Way of Shadow,1,d4,0,0,0,False,,False,False,,,PASS
+dnd_2014,Human,Way of Shadow,2,d4,2,10,2,False,,False,False,,,PASS
+dnd_2014,Human,Way of Shadow,3,d4,3,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Human,Way of Shadow,4,d4,4,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Human,Way of Shadow,5,d6,5,10,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Human,Way of Shadow,6,d6,6,15,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Human,Way of Shadow,7,d6,7,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of Shadow,8,d6,8,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of Shadow,9,d6,9,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of Shadow,10,d6,10,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of Shadow,11,d8,11,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of Shadow,12,d8,12,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of Shadow,13,d8,13,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of Shadow,14,d8,14,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of Shadow,15,d8,15,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of Shadow,16,d8,16,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of Shadow,17,d10,17,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of Shadow,18,d10,18,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of Shadow,19,d10,19,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Human,Way of Shadow,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,,PASS
+dnd_2014,Dwarf,Way of the Open Hand,1,d4,0,0,0,False,,False,False,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,2,d4,2,10,2,False,,False,False,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,3,d4,3,10,2,False,Deflect Missiles,False,False,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,4,d4,4,10,2,False,Deflect Missiles,False,False,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,5,d6,5,10,2,True,Deflect Missiles,True,False,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,6,d6,6,15,2,True,Deflect Missiles,True,False,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,7,d6,7,15,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,8,d6,8,15,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,9,d6,9,15,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,10,d6,10,20,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,11,d8,11,20,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,12,d8,12,20,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,13,d8,13,20,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,14,d8,14,25,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,15,d8,15,25,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,16,d8,16,25,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,17,d10,17,25,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,18,d10,18,30,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,19,d10,19,30,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of the Open Hand,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,1,d4,0,0,0,False,,False,False,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,2,d4,2,10,2,False,,False,False,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,3,d4,3,10,2,False,Deflect Missiles,False,False,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,4,d4,4,10,2,False,Deflect Missiles,False,False,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,5,d6,5,10,2,True,Deflect Missiles,True,False,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,6,d6,6,15,2,True,Deflect Missiles,True,False,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,7,d6,7,15,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,8,d6,8,15,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,9,d6,9,15,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,10,d6,10,20,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,11,d8,11,20,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,12,d8,12,20,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,13,d8,13,20,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,14,d8,14,25,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,15,d8,15,25,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,16,d8,16,25,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,17,d10,17,25,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,18,d10,18,30,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,19,d10,19,30,2,True,Deflect Missiles,True,True,,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Way of Shadow,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,Dwarf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,1,d4,0,0,0,False,,False,False,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,2,d4,2,10,2,False,,False,False,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,3,d4,3,10,2,False,Deflect Missiles,False,False,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,4,d4,4,10,2,False,Deflect Missiles,False,False,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,5,d6,5,10,2,True,Deflect Missiles,True,False,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,6,d6,6,15,2,True,Deflect Missiles,True,False,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,7,d6,7,15,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,8,d6,8,15,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,9,d6,9,15,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,10,d6,10,20,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,11,d8,11,20,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,12,d8,12,20,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,13,d8,13,20,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,14,d8,14,25,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,15,d8,15,25,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,16,d8,16,25,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,17,d10,17,25,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,18,d10,18,30,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,19,d10,19,30,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of the Open Hand,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,1,d4,0,0,0,False,,False,False,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,2,d4,2,10,2,False,,False,False,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,3,d4,3,10,2,False,Deflect Missiles,False,False,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,4,d4,4,10,2,False,Deflect Missiles,False,False,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,5,d6,5,10,2,True,Deflect Missiles,True,False,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,6,d6,6,15,2,True,Deflect Missiles,True,False,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,7,d6,7,15,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,8,d6,8,15,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,9,d6,9,15,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,10,d6,10,20,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,11,d8,11,20,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,12,d8,12,20,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,13,d8,13,20,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,14,d8,14,25,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,15,d8,15,25,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,16,d8,16,25,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,17,d10,17,25,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,18,d10,18,30,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,19,d10,19,30,2,True,Deflect Missiles,True,True,,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Way of Shadow,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,Elf subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,1,d4,0,0,0,False,,False,False,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,2,d4,2,10,2,False,,False,False,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,3,d4,3,10,2,False,Deflect Missiles,False,False,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,4,d4,4,10,2,False,Deflect Missiles,False,False,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,5,d6,5,10,2,True,Deflect Missiles,True,False,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,6,d6,6,15,2,True,Deflect Missiles,True,False,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,7,d6,7,15,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,8,d6,8,15,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,9,d6,9,15,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,10,d6,10,20,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,11,d8,11,20,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,12,d8,12,20,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,13,d8,13,20,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,14,d8,14,25,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,15,d8,15,25,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,16,d8,16,25,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,17,d10,17,25,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,18,d10,18,30,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,19,d10,19,30,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of the Open Hand,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,1,d4,0,0,0,False,,False,False,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,2,d4,2,10,2,False,,False,False,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,3,d4,3,10,2,False,Deflect Missiles,False,False,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,4,d4,4,10,2,False,Deflect Missiles,False,False,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,5,d6,5,10,2,True,Deflect Missiles,True,False,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,6,d6,6,15,2,True,Deflect Missiles,True,False,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,7,d6,7,15,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,8,d6,8,15,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,9,d6,9,15,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,10,d6,10,20,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,11,d8,11,20,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,12,d8,12,20,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,13,d8,13,20,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,14,d8,14,25,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,15,d8,15,25,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,16,d8,16,25,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,17,d10,17,25,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,18,d10,18,30,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,19,d10,19,30,2,True,Deflect Missiles,True,True,,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Way of Shadow,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,Halfling subrace seçimi zorunlu,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,1,d4,0,0,0,False,,False,False,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,2,d4,2,10,2,False,,False,False,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,3,d4,3,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,4,d4,4,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,5,d6,5,10,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,6,d6,6,15,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,7,d6,7,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,8,d6,8,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,9,d6,9,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,10,d6,10,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,11,d8,11,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,12,d8,12,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,13,d8,13,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,14,d8,14,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,15,d8,15,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,16,d8,16,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,17,d10,17,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,18,d10,18,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,19,d10,19,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of the Open Hand,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,,PASS
+dnd_2014,Dragonborn,Way of Shadow,1,d4,0,0,0,False,,False,False,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,2,d4,2,10,2,False,,False,False,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,3,d4,3,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,4,d4,4,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,5,d6,5,10,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,6,d6,6,15,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,7,d6,7,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,8,d6,8,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,9,d6,9,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,10,d6,10,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,11,d8,11,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,12,d8,12,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,13,d8,13,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,14,d8,14,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,15,d8,15,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,16,d8,16,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,17,d10,17,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,18,d10,18,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,19,d10,19,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Dragonborn,Way of Shadow,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,,PASS
+dnd_2014,Gnome,Way of the Open Hand,1,d4,0,0,0,False,,False,False,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,2,d4,2,10,2,False,,False,False,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,3,d4,3,10,2,False,Deflect Missiles,False,False,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,4,d4,4,10,2,False,Deflect Missiles,False,False,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,5,d6,5,10,2,True,Deflect Missiles,True,False,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,6,d6,6,15,2,True,Deflect Missiles,True,False,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,7,d6,7,15,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,8,d6,8,15,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,9,d6,9,15,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,10,d6,10,20,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,11,d8,11,20,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,12,d8,12,20,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,13,d8,13,20,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,14,d8,14,25,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,15,d8,15,25,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,16,d8,16,25,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,17,d10,17,25,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,18,d10,18,30,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,19,d10,19,30,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of the Open Hand,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,1,d4,0,0,0,False,,False,False,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,2,d4,2,10,2,False,,False,False,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,3,d4,3,10,2,False,Deflect Missiles,False,False,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,4,d4,4,10,2,False,Deflect Missiles,False,False,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,5,d6,5,10,2,True,Deflect Missiles,True,False,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,6,d6,6,15,2,True,Deflect Missiles,True,False,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,7,d6,7,15,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,8,d6,8,15,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,9,d6,9,15,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,10,d6,10,20,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,11,d8,11,20,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,12,d8,12,20,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,13,d8,13,20,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,14,d8,14,25,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,15,d8,15,25,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,16,d8,16,25,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,17,d10,17,25,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,18,d10,18,30,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,19,d10,19,30,2,True,Deflect Missiles,True,True,,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Way of Shadow,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,Gnome subrace seçimi zorunlu,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,1,d4,0,0,0,False,,False,False,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,2,d4,2,10,2,False,,False,False,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,3,d4,3,10,2,False,Deflect Missiles,False,False,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,4,d4,4,10,2,False,Deflect Missiles,False,False,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,5,d6,5,10,2,True,Deflect Missiles,True,False,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,6,d6,6,15,2,True,Deflect Missiles,True,False,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,7,d6,7,15,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,8,d6,8,15,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,9,d6,9,15,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,10,d6,10,20,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,11,d8,11,20,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,12,d8,12,20,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,13,d8,13,20,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,14,d8,14,25,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,15,d8,15,25,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,16,d8,16,25,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,17,d10,17,25,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,18,d10,18,30,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,19,d10,19,30,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of the Open Hand,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,1,d4,0,0,0,False,,False,False,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,2,d4,2,10,2,False,,False,False,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,3,d4,3,10,2,False,Deflect Missiles,False,False,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,4,d4,4,10,2,False,Deflect Missiles,False,False,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,5,d6,5,10,2,True,Deflect Missiles,True,False,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,6,d6,6,15,2,True,Deflect Missiles,True,False,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,7,d6,7,15,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,8,d6,8,15,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,9,d6,9,15,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,10,d6,10,20,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,11,d8,11,20,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,12,d8,12,20,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,13,d8,13,20,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,14,d8,14,25,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,15,d8,15,25,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,16,d8,16,25,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,17,d10,17,25,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,18,d10,18,30,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,19,d10,19,30,2,True,Deflect Missiles,True,True,,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Elf,Way of Shadow,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,Half-Elf esnek ability/skill/language seçimleri,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,1,d4,0,0,0,False,,False,False,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,2,d4,2,10,2,False,,False,False,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,3,d4,3,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,4,d4,4,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,5,d6,5,10,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,6,d6,6,15,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,7,d6,7,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,8,d6,8,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,9,d6,9,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,10,d6,10,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,11,d8,11,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,12,d8,12,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,13,d8,13,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,14,d8,14,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,15,d8,15,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,16,d8,16,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,17,d10,17,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,18,d10,18,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,19,d10,19,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of the Open Hand,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,,PASS
+dnd_2014,Half-Orc,Way of Shadow,1,d4,0,0,0,False,,False,False,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,2,d4,2,10,2,False,,False,False,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,3,d4,3,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,4,d4,4,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,5,d6,5,10,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,6,d6,6,15,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,7,d6,7,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,8,d6,8,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,9,d6,9,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,10,d6,10,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,11,d8,11,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,12,d8,12,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,13,d8,13,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,14,d8,14,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,15,d8,15,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,16,d8,16,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,17,d10,17,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,18,d10,18,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,19,d10,19,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Half-Orc,Way of Shadow,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,1,d4,0,0,0,False,,False,False,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,2,d4,2,10,2,False,,False,False,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,3,d4,3,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,4,d4,4,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,5,d6,5,10,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,6,d6,6,15,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,7,d6,7,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,8,d6,8,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,9,d6,9,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,10,d6,10,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,11,d8,11,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,12,d8,12,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,13,d8,13,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,14,d8,14,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,15,d8,15,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,16,d8,16,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,17,d10,17,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,18,d10,18,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,19,d10,19,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of the Open Hand,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,,PASS
+dnd_2014,Tiefling,Way of Shadow,1,d4,0,0,0,False,,False,False,,,PASS
+dnd_2014,Tiefling,Way of Shadow,2,d4,2,10,2,False,,False,False,,,PASS
+dnd_2014,Tiefling,Way of Shadow,3,d4,3,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Tiefling,Way of Shadow,4,d4,4,10,2,False,Deflect Missiles,False,False,,,PASS
+dnd_2014,Tiefling,Way of Shadow,5,d6,5,10,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Tiefling,Way of Shadow,6,d6,6,15,2,True,Deflect Missiles,True,False,,,PASS
+dnd_2014,Tiefling,Way of Shadow,7,d6,7,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of Shadow,8,d6,8,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of Shadow,9,d6,9,15,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of Shadow,10,d6,10,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of Shadow,11,d8,11,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of Shadow,12,d8,12,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of Shadow,13,d8,13,20,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of Shadow,14,d8,14,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of Shadow,15,d8,15,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of Shadow,16,d8,16,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of Shadow,17,d10,17,25,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of Shadow,18,d10,18,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of Shadow,19,d10,19,30,2,True,Deflect Missiles,True,True,,,PASS
+dnd_2014,Tiefling,Way of Shadow,20,d10,20,30,2,True,Deflect Missiles,True,True,Perfect Self,,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,1,d6,0,0,0,False,,False,False,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,2,d6,2,10,2,False,,False,False,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,3,d6,3,10,2,False,Deflect Attacks,False,False,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,4,d6,4,10,2,False,Deflect Attacks,False,False,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,5,d8,5,10,2,True,Deflect Attacks,True,False,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,6,d8,6,15,2,True,Deflect Attacks,True,False,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,7,d8,7,15,2,True,Deflect Attacks,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,8,d8,8,15,2,True,Deflect Attacks,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,9,d8,9,15,2,True,Deflect Attacks,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,10,d8,10,20,3,True,Deflect Attacks,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,11,d10,11,20,3,True,Deflect Attacks,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,12,d10,12,20,3,True,Deflect Attacks,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,13,d10,13,20,3,True,Deflect Energy,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,14,d10,14,25,3,True,Deflect Energy,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,15,d10,15,25,3,True,Deflect Energy,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,16,d10,16,25,3,True,Deflect Energy,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,17,d12,17,25,3,True,Deflect Energy,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,18,d12,18,30,3,True,Deflect Energy,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,19,d12,19,30,3,True,Deflect Energy,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of the Open Hand,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,1,d6,0,0,0,False,,False,False,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,2,d6,2,10,2,False,,False,False,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,3,d6,3,10,2,False,Deflect Attacks,False,False,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,4,d6,4,10,2,False,Deflect Attacks,False,False,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,5,d8,5,10,2,True,Deflect Attacks,True,False,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,6,d8,6,15,2,True,Deflect Attacks,True,False,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,7,d8,7,15,2,True,Deflect Attacks,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,8,d8,8,15,2,True,Deflect Attacks,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,9,d8,9,15,2,True,Deflect Attacks,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,10,d8,10,20,3,True,Deflect Attacks,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,11,d10,11,20,3,True,Deflect Attacks,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,12,d10,12,20,3,True,Deflect Attacks,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,13,d10,13,20,3,True,Deflect Energy,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,14,d10,14,25,3,True,Deflect Energy,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,15,d10,15,25,3,True,Deflect Energy,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,16,d10,16,25,3,True,Deflect Energy,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,17,d12,17,25,3,True,Deflect Energy,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,18,d12,18,30,3,True,Deflect Energy,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,19,d12,19,30,3,True,Deflect Energy,True,True,,Aasimar species alt seçimleri,PASS
+dnd_2024,Aasimar,Warrior of Shadow,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,Aasimar species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,1,d6,0,0,0,False,,False,False,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,2,d6,2,10,2,False,,False,False,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,3,d6,3,10,2,False,Deflect Attacks,False,False,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,4,d6,4,10,2,False,Deflect Attacks,False,False,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,5,d8,5,10,2,True,Deflect Attacks,True,False,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,6,d8,6,15,2,True,Deflect Attacks,True,False,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,7,d8,7,15,2,True,Deflect Attacks,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,8,d8,8,15,2,True,Deflect Attacks,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,9,d8,9,15,2,True,Deflect Attacks,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,10,d8,10,20,3,True,Deflect Attacks,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,11,d10,11,20,3,True,Deflect Attacks,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,12,d10,12,20,3,True,Deflect Attacks,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,13,d10,13,20,3,True,Deflect Energy,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,14,d10,14,25,3,True,Deflect Energy,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,15,d10,15,25,3,True,Deflect Energy,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,16,d10,16,25,3,True,Deflect Energy,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,17,d12,17,25,3,True,Deflect Energy,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,18,d12,18,30,3,True,Deflect Energy,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,19,d12,19,30,3,True,Deflect Energy,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of the Open Hand,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,1,d6,0,0,0,False,,False,False,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,2,d6,2,10,2,False,,False,False,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,3,d6,3,10,2,False,Deflect Attacks,False,False,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,4,d6,4,10,2,False,Deflect Attacks,False,False,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,5,d8,5,10,2,True,Deflect Attacks,True,False,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,6,d8,6,15,2,True,Deflect Attacks,True,False,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,7,d8,7,15,2,True,Deflect Attacks,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,8,d8,8,15,2,True,Deflect Attacks,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,9,d8,9,15,2,True,Deflect Attacks,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,10,d8,10,20,3,True,Deflect Attacks,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,11,d10,11,20,3,True,Deflect Attacks,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,12,d10,12,20,3,True,Deflect Attacks,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,13,d10,13,20,3,True,Deflect Energy,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,14,d10,14,25,3,True,Deflect Energy,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,15,d10,15,25,3,True,Deflect Energy,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,16,d10,16,25,3,True,Deflect Energy,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,17,d12,17,25,3,True,Deflect Energy,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,18,d12,18,30,3,True,Deflect Energy,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,19,d12,19,30,3,True,Deflect Energy,True,True,,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dragonborn,Warrior of Shadow,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,Dragonborn species alt seçimleri,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,1,d6,0,0,0,False,,False,False,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,2,d6,2,10,2,False,,False,False,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,3,d6,3,10,2,False,Deflect Attacks,False,False,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,4,d6,4,10,2,False,Deflect Attacks,False,False,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,5,d8,5,10,2,True,Deflect Attacks,True,False,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,6,d8,6,15,2,True,Deflect Attacks,True,False,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,7,d8,7,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,8,d8,8,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,9,d8,9,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,10,d8,10,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,11,d10,11,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,12,d10,12,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,13,d10,13,20,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,14,d10,14,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,15,d10,15,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,16,d10,16,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,17,d12,17,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,18,d12,18,30,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,19,d12,19,30,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of the Open Hand,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,1,d6,0,0,0,False,,False,False,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,2,d6,2,10,2,False,,False,False,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,3,d6,3,10,2,False,Deflect Attacks,False,False,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,4,d6,4,10,2,False,Deflect Attacks,False,False,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,5,d8,5,10,2,True,Deflect Attacks,True,False,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,6,d8,6,15,2,True,Deflect Attacks,True,False,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,7,d8,7,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,8,d8,8,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,9,d8,9,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,10,d8,10,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,11,d10,11,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,12,d10,12,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,13,d10,13,20,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,14,d10,14,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,15,d10,15,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,16,d10,16,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,17,d12,17,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,18,d12,18,30,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,19,d12,19,30,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Dwarf,Warrior of Shadow,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,,PASS
+dnd_2024,Elf,Warrior of the Open Hand,1,d6,0,0,0,False,,False,False,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,2,d6,2,10,2,False,,False,False,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,3,d6,3,10,2,False,Deflect Attacks,False,False,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,4,d6,4,10,2,False,Deflect Attacks,False,False,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,5,d8,5,10,2,True,Deflect Attacks,True,False,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,6,d8,6,15,2,True,Deflect Attacks,True,False,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,7,d8,7,15,2,True,Deflect Attacks,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,8,d8,8,15,2,True,Deflect Attacks,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,9,d8,9,15,2,True,Deflect Attacks,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,10,d8,10,20,3,True,Deflect Attacks,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,11,d10,11,20,3,True,Deflect Attacks,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,12,d10,12,20,3,True,Deflect Attacks,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,13,d10,13,20,3,True,Deflect Energy,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,14,d10,14,25,3,True,Deflect Energy,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,15,d10,15,25,3,True,Deflect Energy,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,16,d10,16,25,3,True,Deflect Energy,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,17,d12,17,25,3,True,Deflect Energy,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,18,d12,18,30,3,True,Deflect Energy,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,19,d12,19,30,3,True,Deflect Energy,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of the Open Hand,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,1,d6,0,0,0,False,,False,False,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,2,d6,2,10,2,False,,False,False,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,3,d6,3,10,2,False,Deflect Attacks,False,False,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,4,d6,4,10,2,False,Deflect Attacks,False,False,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,5,d8,5,10,2,True,Deflect Attacks,True,False,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,6,d8,6,15,2,True,Deflect Attacks,True,False,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,7,d8,7,15,2,True,Deflect Attacks,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,8,d8,8,15,2,True,Deflect Attacks,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,9,d8,9,15,2,True,Deflect Attacks,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,10,d8,10,20,3,True,Deflect Attacks,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,11,d10,11,20,3,True,Deflect Attacks,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,12,d10,12,20,3,True,Deflect Attacks,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,13,d10,13,20,3,True,Deflect Energy,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,14,d10,14,25,3,True,Deflect Energy,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,15,d10,15,25,3,True,Deflect Energy,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,16,d10,16,25,3,True,Deflect Energy,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,17,d12,17,25,3,True,Deflect Energy,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,18,d12,18,30,3,True,Deflect Energy,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,19,d12,19,30,3,True,Deflect Energy,True,True,,Elf species alt seçimleri,PASS
+dnd_2024,Elf,Warrior of Shadow,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,Elf species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,1,d6,0,0,0,False,,False,False,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,2,d6,2,10,2,False,,False,False,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,3,d6,3,10,2,False,Deflect Attacks,False,False,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,4,d6,4,10,2,False,Deflect Attacks,False,False,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,5,d8,5,10,2,True,Deflect Attacks,True,False,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,6,d8,6,15,2,True,Deflect Attacks,True,False,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,7,d8,7,15,2,True,Deflect Attacks,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,8,d8,8,15,2,True,Deflect Attacks,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,9,d8,9,15,2,True,Deflect Attacks,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,10,d8,10,20,3,True,Deflect Attacks,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,11,d10,11,20,3,True,Deflect Attacks,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,12,d10,12,20,3,True,Deflect Attacks,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,13,d10,13,20,3,True,Deflect Energy,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,14,d10,14,25,3,True,Deflect Energy,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,15,d10,15,25,3,True,Deflect Energy,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,16,d10,16,25,3,True,Deflect Energy,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,17,d12,17,25,3,True,Deflect Energy,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,18,d12,18,30,3,True,Deflect Energy,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,19,d12,19,30,3,True,Deflect Energy,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of the Open Hand,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,1,d6,0,0,0,False,,False,False,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,2,d6,2,10,2,False,,False,False,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,3,d6,3,10,2,False,Deflect Attacks,False,False,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,4,d6,4,10,2,False,Deflect Attacks,False,False,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,5,d8,5,10,2,True,Deflect Attacks,True,False,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,6,d8,6,15,2,True,Deflect Attacks,True,False,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,7,d8,7,15,2,True,Deflect Attacks,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,8,d8,8,15,2,True,Deflect Attacks,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,9,d8,9,15,2,True,Deflect Attacks,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,10,d8,10,20,3,True,Deflect Attacks,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,11,d10,11,20,3,True,Deflect Attacks,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,12,d10,12,20,3,True,Deflect Attacks,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,13,d10,13,20,3,True,Deflect Energy,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,14,d10,14,25,3,True,Deflect Energy,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,15,d10,15,25,3,True,Deflect Energy,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,16,d10,16,25,3,True,Deflect Energy,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,17,d12,17,25,3,True,Deflect Energy,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,18,d12,18,30,3,True,Deflect Energy,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,19,d12,19,30,3,True,Deflect Energy,True,True,,Gnome species alt seçimleri,PASS
+dnd_2024,Gnome,Warrior of Shadow,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,Gnome species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,1,d6,0,0,0,False,,False,False,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,2,d6,2,10,2,False,,False,False,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,3,d6,3,10,2,False,Deflect Attacks,False,False,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,4,d6,4,10,2,False,Deflect Attacks,False,False,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,5,d8,5,10,2,True,Deflect Attacks,True,False,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,6,d8,6,15,2,True,Deflect Attacks,True,False,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,7,d8,7,15,2,True,Deflect Attacks,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,8,d8,8,15,2,True,Deflect Attacks,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,9,d8,9,15,2,True,Deflect Attacks,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,10,d8,10,20,3,True,Deflect Attacks,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,11,d10,11,20,3,True,Deflect Attacks,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,12,d10,12,20,3,True,Deflect Attacks,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,13,d10,13,20,3,True,Deflect Energy,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,14,d10,14,25,3,True,Deflect Energy,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,15,d10,15,25,3,True,Deflect Energy,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,16,d10,16,25,3,True,Deflect Energy,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,17,d12,17,25,3,True,Deflect Energy,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,18,d12,18,30,3,True,Deflect Energy,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,19,d12,19,30,3,True,Deflect Energy,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of the Open Hand,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,1,d6,0,0,0,False,,False,False,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,2,d6,2,10,2,False,,False,False,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,3,d6,3,10,2,False,Deflect Attacks,False,False,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,4,d6,4,10,2,False,Deflect Attacks,False,False,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,5,d8,5,10,2,True,Deflect Attacks,True,False,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,6,d8,6,15,2,True,Deflect Attacks,True,False,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,7,d8,7,15,2,True,Deflect Attacks,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,8,d8,8,15,2,True,Deflect Attacks,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,9,d8,9,15,2,True,Deflect Attacks,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,10,d8,10,20,3,True,Deflect Attacks,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,11,d10,11,20,3,True,Deflect Attacks,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,12,d10,12,20,3,True,Deflect Attacks,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,13,d10,13,20,3,True,Deflect Energy,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,14,d10,14,25,3,True,Deflect Energy,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,15,d10,15,25,3,True,Deflect Energy,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,16,d10,16,25,3,True,Deflect Energy,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,17,d12,17,25,3,True,Deflect Energy,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,18,d12,18,30,3,True,Deflect Energy,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,19,d12,19,30,3,True,Deflect Energy,True,True,,Goliath species alt seçimleri,PASS
+dnd_2024,Goliath,Warrior of Shadow,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,Goliath species alt seçimleri,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,1,d6,0,0,0,False,,False,False,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,2,d6,2,10,2,False,,False,False,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,3,d6,3,10,2,False,Deflect Attacks,False,False,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,4,d6,4,10,2,False,Deflect Attacks,False,False,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,5,d8,5,10,2,True,Deflect Attacks,True,False,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,6,d8,6,15,2,True,Deflect Attacks,True,False,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,7,d8,7,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,8,d8,8,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,9,d8,9,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,10,d8,10,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,11,d10,11,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,12,d10,12,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,13,d10,13,20,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,14,d10,14,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,15,d10,15,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,16,d10,16,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,17,d12,17,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,18,d12,18,30,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,19,d12,19,30,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Halfling,Warrior of the Open Hand,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,,PASS
+dnd_2024,Halfling,Warrior of Shadow,1,d6,0,0,0,False,,False,False,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,2,d6,2,10,2,False,,False,False,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,3,d6,3,10,2,False,Deflect Attacks,False,False,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,4,d6,4,10,2,False,Deflect Attacks,False,False,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,5,d8,5,10,2,True,Deflect Attacks,True,False,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,6,d8,6,15,2,True,Deflect Attacks,True,False,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,7,d8,7,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,8,d8,8,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,9,d8,9,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,10,d8,10,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,11,d10,11,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,12,d10,12,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,13,d10,13,20,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,14,d10,14,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,15,d10,15,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,16,d10,16,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,17,d12,17,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,18,d12,18,30,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,19,d12,19,30,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Halfling,Warrior of Shadow,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,,PASS
+dnd_2024,Human,Warrior of the Open Hand,1,d6,0,0,0,False,,False,False,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,2,d6,2,10,2,False,,False,False,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,3,d6,3,10,2,False,Deflect Attacks,False,False,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,4,d6,4,10,2,False,Deflect Attacks,False,False,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,5,d8,5,10,2,True,Deflect Attacks,True,False,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,6,d8,6,15,2,True,Deflect Attacks,True,False,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,7,d8,7,15,2,True,Deflect Attacks,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,8,d8,8,15,2,True,Deflect Attacks,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,9,d8,9,15,2,True,Deflect Attacks,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,10,d8,10,20,3,True,Deflect Attacks,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,11,d10,11,20,3,True,Deflect Attacks,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,12,d10,12,20,3,True,Deflect Attacks,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,13,d10,13,20,3,True,Deflect Energy,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,14,d10,14,25,3,True,Deflect Energy,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,15,d10,15,25,3,True,Deflect Energy,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,16,d10,16,25,3,True,Deflect Energy,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,17,d12,17,25,3,True,Deflect Energy,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,18,d12,18,30,3,True,Deflect Energy,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,19,d12,19,30,3,True,Deflect Energy,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of the Open Hand,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,1,d6,0,0,0,False,,False,False,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,2,d6,2,10,2,False,,False,False,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,3,d6,3,10,2,False,Deflect Attacks,False,False,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,4,d6,4,10,2,False,Deflect Attacks,False,False,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,5,d8,5,10,2,True,Deflect Attacks,True,False,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,6,d8,6,15,2,True,Deflect Attacks,True,False,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,7,d8,7,15,2,True,Deflect Attacks,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,8,d8,8,15,2,True,Deflect Attacks,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,9,d8,9,15,2,True,Deflect Attacks,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,10,d8,10,20,3,True,Deflect Attacks,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,11,d10,11,20,3,True,Deflect Attacks,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,12,d10,12,20,3,True,Deflect Attacks,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,13,d10,13,20,3,True,Deflect Energy,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,14,d10,14,25,3,True,Deflect Energy,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,15,d10,15,25,3,True,Deflect Energy,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,16,d10,16,25,3,True,Deflect Energy,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,17,d12,17,25,3,True,Deflect Energy,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,18,d12,18,30,3,True,Deflect Energy,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,19,d12,19,30,3,True,Deflect Energy,True,True,,Human species alt seçimleri,PASS
+dnd_2024,Human,Warrior of Shadow,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,Human species alt seçimleri,PASS
+dnd_2024,Orc,Warrior of the Open Hand,1,d6,0,0,0,False,,False,False,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,2,d6,2,10,2,False,,False,False,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,3,d6,3,10,2,False,Deflect Attacks,False,False,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,4,d6,4,10,2,False,Deflect Attacks,False,False,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,5,d8,5,10,2,True,Deflect Attacks,True,False,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,6,d8,6,15,2,True,Deflect Attacks,True,False,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,7,d8,7,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,8,d8,8,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,9,d8,9,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,10,d8,10,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,11,d10,11,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,12,d10,12,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,13,d10,13,20,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,14,d10,14,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,15,d10,15,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,16,d10,16,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,17,d12,17,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,18,d12,18,30,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,19,d12,19,30,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Orc,Warrior of the Open Hand,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,,PASS
+dnd_2024,Orc,Warrior of Shadow,1,d6,0,0,0,False,,False,False,,,PASS
+dnd_2024,Orc,Warrior of Shadow,2,d6,2,10,2,False,,False,False,,,PASS
+dnd_2024,Orc,Warrior of Shadow,3,d6,3,10,2,False,Deflect Attacks,False,False,,,PASS
+dnd_2024,Orc,Warrior of Shadow,4,d6,4,10,2,False,Deflect Attacks,False,False,,,PASS
+dnd_2024,Orc,Warrior of Shadow,5,d8,5,10,2,True,Deflect Attacks,True,False,,,PASS
+dnd_2024,Orc,Warrior of Shadow,6,d8,6,15,2,True,Deflect Attacks,True,False,,,PASS
+dnd_2024,Orc,Warrior of Shadow,7,d8,7,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Orc,Warrior of Shadow,8,d8,8,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Orc,Warrior of Shadow,9,d8,9,15,2,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Orc,Warrior of Shadow,10,d8,10,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Orc,Warrior of Shadow,11,d10,11,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Orc,Warrior of Shadow,12,d10,12,20,3,True,Deflect Attacks,True,True,,,PASS
+dnd_2024,Orc,Warrior of Shadow,13,d10,13,20,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Orc,Warrior of Shadow,14,d10,14,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Orc,Warrior of Shadow,15,d10,15,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Orc,Warrior of Shadow,16,d10,16,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Orc,Warrior of Shadow,17,d12,17,25,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Orc,Warrior of Shadow,18,d12,18,30,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Orc,Warrior of Shadow,19,d12,19,30,3,True,Deflect Energy,True,True,,,PASS
+dnd_2024,Orc,Warrior of Shadow,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,1,d6,0,0,0,False,,False,False,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,2,d6,2,10,2,False,,False,False,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,3,d6,3,10,2,False,Deflect Attacks,False,False,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,4,d6,4,10,2,False,Deflect Attacks,False,False,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,5,d8,5,10,2,True,Deflect Attacks,True,False,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,6,d8,6,15,2,True,Deflect Attacks,True,False,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,7,d8,7,15,2,True,Deflect Attacks,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,8,d8,8,15,2,True,Deflect Attacks,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,9,d8,9,15,2,True,Deflect Attacks,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,10,d8,10,20,3,True,Deflect Attacks,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,11,d10,11,20,3,True,Deflect Attacks,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,12,d10,12,20,3,True,Deflect Attacks,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,13,d10,13,20,3,True,Deflect Energy,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,14,d10,14,25,3,True,Deflect Energy,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,15,d10,15,25,3,True,Deflect Energy,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,16,d10,16,25,3,True,Deflect Energy,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,17,d12,17,25,3,True,Deflect Energy,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,18,d12,18,30,3,True,Deflect Energy,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,19,d12,19,30,3,True,Deflect Energy,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of the Open Hand,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,1,d6,0,0,0,False,,False,False,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,2,d6,2,10,2,False,,False,False,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,3,d6,3,10,2,False,Deflect Attacks,False,False,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,4,d6,4,10,2,False,Deflect Attacks,False,False,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,5,d8,5,10,2,True,Deflect Attacks,True,False,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,6,d8,6,15,2,True,Deflect Attacks,True,False,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,7,d8,7,15,2,True,Deflect Attacks,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,8,d8,8,15,2,True,Deflect Attacks,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,9,d8,9,15,2,True,Deflect Attacks,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,10,d8,10,20,3,True,Deflect Attacks,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,11,d10,11,20,3,True,Deflect Attacks,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,12,d10,12,20,3,True,Deflect Attacks,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,13,d10,13,20,3,True,Deflect Energy,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,14,d10,14,25,3,True,Deflect Energy,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,15,d10,15,25,3,True,Deflect Energy,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,16,d10,16,25,3,True,Deflect Energy,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,17,d12,17,25,3,True,Deflect Energy,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,18,d12,18,30,3,True,Deflect Energy,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,19,d12,19,30,3,True,Deflect Energy,True,True,,Tiefling species alt seçimleri,PASS
+dnd_2024,Tiefling,Warrior of Shadow,20,d12,20,30,3,True,Deflect Energy,True,True,Body and Mind,Tiefling species alt seçimleri,PASS

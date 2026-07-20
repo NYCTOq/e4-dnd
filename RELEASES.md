@@ -1,3 +1,43 @@
+# v5.38.0 — Ranger Race, Subclass & Level Certification
+
+- 760 Ranger race/species × subclass × level senaryosu.
+- 2014 known-spell ve 2024 prepared-spell progression ayrımı.
+- Favored Enemy, Hunter’s Mark, Weapon Mastery, Expertise ve Ranger core checkpoint düzeltmeleri.
+- Hunter ve Beast Master level 3/7/11/15 sertifikası.
+- 2014 companion proficiency scaling ve 2024 primal companion doğrulaması.
+
+# v5.37.0 — Paladin Race, Oath & Level Certification
+
+- 760 Paladin race/species × oath × level senaryosu.
+- 2014/2024 Lay on Hands, Smite, Channel Divinity, prepared spells, aura ve touch ayrımları.
+- Oath of Devotion ve Oath of the Ancients checkpoint sertifikası.
+
+# v5.36.0 — Monk Race, Subclass & Level Certification
+
+- 760 Monk race/species × subclass × level senaryosu
+- 2014 Ki ve 2024 Focus progression ayrımı
+- Martial Arts, Unarmored Movement ve Heightened Focus tabloları doğrulandı
+- Open Hand ve Shadow checkpointleri edition-aware hale getirildi
+- Perfect Self, Perfect Focus ve Body and Mind capstone ayrımı kapatıldı
+
+# v5.35.0 — Fighter Race, Subclass & Level Certification
+
+- 760 Fighter race/species × subclass × level senaryosu
+- 2024 Second Wind ve Weapon Mastery tabloları düzeltildi
+- Tactical Mind/Shift/Master ve Studied Attacks edition-aware oldu
+- Champion 2014/2024 checkpointleri ayrıldı
+- Battle Master level 10 ve 18 progression boşlukları kapatıldı
+- Fighter kaynak, rest ve Play Mode bağlantıları düzeltildi
+
+# v5.31.0 — Barbarian Race, Subclass & Level Certification
+
+- 760 Barbarian race/species × subclass × level senaryosu
+- 2014 ve 2024 resmi progression tabloları
+- Rage use/recovery edition ayrımı
+- Brutal Critical ve Brutal Strike ayrımı
+- 2014 unlimited Rage, 2024 partial Short Rest recovery
+- Berserker/Totem/World Tree feature checkpoint kapanışı
+
 # v5.8.0 — UI, Mobile & Accessibility Polish Mega Pack
 
 - Reusable dialog focus trap, Escape close and opener restoration

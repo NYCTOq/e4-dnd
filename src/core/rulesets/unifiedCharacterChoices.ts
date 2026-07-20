@@ -83,7 +83,7 @@ export function getUnifiedCharacterChoices(character: ChoiceCharacter, rulesetDa
   const companionSelected = character.companionId ? [character.companionId] : [];
   states.push(makeState({ id: "companion", label: "Beast Master Companion", step: "feats", kind: "single", field: "companionId", required: getCompanionChoiceCount(character.className, character.subclass, character.level), selected: companionSelected, validSelected: companionSelected.filter((id) => companionOptions.some((option) => option.id === id)), options: companionOptions }));
 
-  const expertiseRequired = getExpertiseLimit(character.className, character.level);
+  const expertiseRequired = getExpertiseLimit(character.className, character.level, character.ruleset);
   const expertiseOptions = unique(character.skillProficiencies ?? []).map((skill) => ({ id: skill, name: skill }));
   const expertise = unique(character.expertiseSkills ?? []);
   states.push(makeState({ id: "expertise", label: "Expertise", step: "skills", kind: "multiple", field: "expertiseSkills", required: expertiseRequired, selected: expertise, validSelected: expertise.filter((id) => expertiseOptions.some((option) => option.id === id)), options: expertiseOptions }));

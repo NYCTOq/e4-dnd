@@ -43,7 +43,9 @@
           "Unarmored Defense",
           "Weapon Mastery"
         ],
-        "weaponMasteryCount": 2
+        "weaponMasteryCount": 2,
+        "rageUses": 2,
+        "rageDamageBonus": 2
       },
       {
         "level": 2,
@@ -52,22 +54,30 @@
           "Danger Sense",
           "Reckless Attack"
         ],
-        "weaponMasteryCount": 2
+        "weaponMasteryCount": 2,
+        "rageUses": 2,
+        "rageDamageBonus": 2
       },
       {
         "level": 3,
         "proficiencyBonus": 2,
         "features": [
-          "Primal Knowledge",
-          "Subclass"
+          "Barbarian Subclass",
+          "Primal Knowledge"
         ],
-        "weaponMasteryCount": 2
+        "weaponMasteryCount": 2,
+        "rageUses": 3,
+        "rageDamageBonus": 2
       },
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": [],
-        "weaponMasteryCount": 3
+        "features": [
+          "Ability Score Improvement"
+        ],
+        "weaponMasteryCount": 3,
+        "rageUses": 3,
+        "rageDamageBonus": 2
       },
       {
         "level": 5,
@@ -76,13 +86,19 @@
           "Extra Attack",
           "Fast Movement"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 3,
+        "rageUses": 3,
+        "rageDamageBonus": 2
       },
       {
         "level": 6,
         "proficiencyBonus": 3,
-        "features": [],
-        "weaponMasteryCount": 3
+        "features": [
+          "Subclass Feature"
+        ],
+        "weaponMasteryCount": 3,
+        "rageUses": 4,
+        "rageDamageBonus": 2
       },
       {
         "level": 7,
@@ -91,13 +107,19 @@
           "Feral Instinct",
           "Instinctive Pounce"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 3,
+        "rageUses": 4,
+        "rageDamageBonus": 2
       },
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": [],
-        "weaponMasteryCount": 3
+        "features": [
+          "Ability Score Improvement"
+        ],
+        "weaponMasteryCount": 3,
+        "rageUses": 4,
+        "rageDamageBonus": 2
       },
       {
         "level": 9,
@@ -105,13 +127,19 @@
         "features": [
           "Brutal Strike"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 3,
+        "rageUses": 4,
+        "rageDamageBonus": 3
       },
       {
         "level": 10,
         "proficiencyBonus": 4,
-        "features": [],
-        "weaponMasteryCount": 3
+        "features": [
+          "Subclass Feature"
+        ],
+        "weaponMasteryCount": 4,
+        "rageUses": 4,
+        "rageDamageBonus": 3
       },
       {
         "level": 11,
@@ -119,25 +147,39 @@
         "features": [
           "Relentless Rage"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 4,
+        "rageUses": 4,
+        "rageDamageBonus": 3
       },
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": [],
-        "weaponMasteryCount": 3
+        "features": [
+          "Ability Score Improvement"
+        ],
+        "weaponMasteryCount": 4,
+        "rageUses": 5,
+        "rageDamageBonus": 3
       },
       {
         "level": 13,
         "proficiencyBonus": 5,
-        "features": [],
-        "weaponMasteryCount": 3
+        "features": [
+          "Improved Brutal Strike"
+        ],
+        "weaponMasteryCount": 4,
+        "rageUses": 5,
+        "rageDamageBonus": 3
       },
       {
         "level": 14,
         "proficiencyBonus": 5,
-        "features": [],
-        "weaponMasteryCount": 3
+        "features": [
+          "Subclass Feature"
+        ],
+        "weaponMasteryCount": 4,
+        "rageUses": 5,
+        "rageDamageBonus": 3
       },
       {
         "level": 15,
@@ -145,19 +187,29 @@
         "features": [
           "Persistent Rage"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 4,
+        "rageUses": 5,
+        "rageDamageBonus": 3
       },
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": [],
-        "weaponMasteryCount": 3
+        "features": [
+          "Ability Score Improvement"
+        ],
+        "weaponMasteryCount": 4,
+        "rageUses": 5,
+        "rageDamageBonus": 4
       },
       {
         "level": 17,
         "proficiencyBonus": 6,
-        "features": [],
-        "weaponMasteryCount": 3
+        "features": [
+          "Improved Brutal Strike"
+        ],
+        "weaponMasteryCount": 4,
+        "rageUses": 6,
+        "rageDamageBonus": 4
       },
       {
         "level": 18,
@@ -165,13 +217,19 @@
         "features": [
           "Indomitable Might"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 4,
+        "rageUses": 6,
+        "rageDamageBonus": 4
       },
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": [],
-        "weaponMasteryCount": 3
+        "features": [
+          "Epic Boon"
+        ],
+        "weaponMasteryCount": 4,
+        "rageUses": 6,
+        "rageDamageBonus": 4
       },
       {
         "level": 20,
@@ -179,7 +237,9 @@
         "features": [
           "Primal Champion"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 4,
+        "rageUses": 6,
+        "rageDamageBonus": 4
       }
     ]
   },
@@ -199,11 +259,7 @@
       "Light Armor"
     ],
     "weaponProficiencies": [
-      "Simple Weapons",
-      "Hand Crossbows",
-      "Longswords",
-      "Rapiers",
-      "Shortswords"
+      "Simple Weapons"
     ],
     "skillChoices": {
       "choose": 3,
@@ -241,7 +297,9 @@
         ],
         "spellSlots": [
           2
-        ]
+        ],
+        "bardCantrips": 2,
+        "bardPreparedSpells": 4
       },
       {
         "level": 2,
@@ -252,49 +310,64 @@
         ],
         "spellSlots": [
           3
-        ]
+        ],
+        "bardCantrips": 2,
+        "bardPreparedSpells": 5
       },
       {
         "level": 3,
         "proficiencyBonus": 2,
         "features": [
-          "Subclass"
+          "Bard Subclass"
         ],
         "spellSlots": [
           4,
           2
-        ]
+        ],
+        "bardCantrips": 2,
+        "bardPreparedSpells": 6
       },
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3
-        ]
+        ],
+        "bardCantrips": 3,
+        "bardPreparedSpells": 7
       },
       {
         "level": 5,
         "proficiencyBonus": 3,
         "features": [
-          "Font of Inspiration"
+          "Font of Inspiration",
+          "Bardic Inspiration d8"
         ],
         "spellSlots": [
           4,
           3,
           2
-        ]
+        ],
+        "bardCantrips": 3,
+        "bardPreparedSpells": 9
       },
       {
         "level": 6,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,
           3
-        ]
+        ],
+        "bardCantrips": 3,
+        "bardPreparedSpells": 10
       },
       {
         "level": 7,
@@ -307,36 +380,47 @@
           3,
           3,
           1
-        ]
+        ],
+        "bardCantrips": 3,
+        "bardPreparedSpells": 11
       },
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
           3,
           2
-        ]
+        ],
+        "bardCantrips": 3,
+        "bardPreparedSpells": 12
       },
       {
         "level": 9,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Expertise"
+        ],
         "spellSlots": [
           4,
           3,
           3,
           3,
           1
-        ]
+        ],
+        "bardCantrips": 3,
+        "bardPreparedSpells": 14
       },
       {
         "level": 10,
         "proficiencyBonus": 4,
         "features": [
-          "Magical Secrets"
+          "Magical Secrets",
+          "Bardic Inspiration d10"
         ],
         "spellSlots": [
           4,
@@ -344,7 +428,9 @@
           3,
           3,
           2
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardPreparedSpells": 15
       },
       {
         "level": 11,
@@ -357,12 +443,16 @@
           3,
           2,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardPreparedSpells": 16
       },
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -370,7 +460,9 @@
           3,
           2,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardPreparedSpells": 16
       },
       {
         "level": 13,
@@ -384,12 +476,16 @@
           2,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardPreparedSpells": 17
       },
       {
         "level": 14,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -398,12 +494,16 @@
           2,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardPreparedSpells": 17
       },
       {
         "level": 15,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Bardic Inspiration d12"
+        ],
         "spellSlots": [
           4,
           3,
@@ -413,12 +513,16 @@
           1,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardPreparedSpells": 18
       },
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -428,7 +532,9 @@
           1,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardPreparedSpells": 18
       },
       {
         "level": 17,
@@ -444,7 +550,9 @@
           1,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardPreparedSpells": 19
       },
       {
         "level": 18,
@@ -462,12 +570,16 @@
           1,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardPreparedSpells": 20
       },
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Epic Boon"
+        ],
         "spellSlots": [
           4,
           3,
@@ -478,7 +590,9 @@
           1,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardPreparedSpells": 21
       },
       {
         "level": 20,
@@ -496,7 +610,9 @@
           2,
           1,
           1
-        ]
+        ],
+        "bardCantrips": 4,
+        "bardPreparedSpells": 22
       }
     ]
   },
@@ -1164,7 +1280,7 @@
           "Second Wind",
           "Weapon Mastery"
         ],
-        "weaponMasteryCount": 2
+        "weaponMasteryCount": 3
       },
       {
         "level": 2,
@@ -1173,7 +1289,7 @@
           "Action Surge",
           "Tactical Mind"
         ],
-        "weaponMasteryCount": 2
+        "weaponMasteryCount": 3
       },
       {
         "level": 3,
@@ -1181,13 +1297,13 @@
         "features": [
           "Subclass"
         ],
-        "weaponMasteryCount": 2
+        "weaponMasteryCount": 3
       },
       {
         "level": 4,
         "proficiencyBonus": 2,
         "features": [],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 4
       },
       {
         "level": 5,
@@ -1196,25 +1312,25 @@
           "Extra Attack",
           "Tactical Shift"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 4
       },
       {
         "level": 6,
         "proficiencyBonus": 3,
         "features": [],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 4
       },
       {
         "level": 7,
         "proficiencyBonus": 3,
         "features": [],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 4
       },
       {
         "level": 8,
         "proficiencyBonus": 3,
         "features": [],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 4
       },
       {
         "level": 9,
@@ -1223,13 +1339,13 @@
           "Indomitable",
           "Tactical Master"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 4
       },
       {
         "level": 10,
         "proficiencyBonus": 4,
         "features": [],
-        "weaponMasteryCount": 4
+        "weaponMasteryCount": 5
       },
       {
         "level": 11,
@@ -1237,13 +1353,13 @@
         "features": [
           "Two Extra Attacks"
         ],
-        "weaponMasteryCount": 4
+        "weaponMasteryCount": 5
       },
       {
         "level": 12,
         "proficiencyBonus": 4,
         "features": [],
-        "weaponMasteryCount": 4
+        "weaponMasteryCount": 5
       },
       {
         "level": 13,
@@ -1251,25 +1367,25 @@
         "features": [
           "Studied Attacks"
         ],
-        "weaponMasteryCount": 4
+        "weaponMasteryCount": 5
       },
       {
         "level": 14,
         "proficiencyBonus": 5,
         "features": [],
-        "weaponMasteryCount": 4
+        "weaponMasteryCount": 5
       },
       {
         "level": 15,
         "proficiencyBonus": 5,
         "features": [],
-        "weaponMasteryCount": 4
+        "weaponMasteryCount": 5
       },
       {
         "level": 16,
         "proficiencyBonus": 5,
         "features": [],
-        "weaponMasteryCount": 4
+        "weaponMasteryCount": 6
       },
       {
         "level": 17,
@@ -1278,19 +1394,19 @@
           "Action Surge (2)",
           "Indomitable (3)"
         ],
-        "weaponMasteryCount": 4
+        "weaponMasteryCount": 6
       },
       {
         "level": 18,
         "proficiencyBonus": 6,
         "features": [],
-        "weaponMasteryCount": 4
+        "weaponMasteryCount": 6
       },
       {
         "level": 19,
         "proficiencyBonus": 6,
         "features": [],
-        "weaponMasteryCount": 4
+        "weaponMasteryCount": 6
       },
       {
         "level": 20,
@@ -1298,7 +1414,7 @@
         "features": [
           "Three Extra Attacks"
         ],
-        "weaponMasteryCount": 4
+        "weaponMasteryCount": 6
       }
     ]
   },
@@ -1317,8 +1433,8 @@
     "spellcastingAbility": null,
     "armorProficiencies": [],
     "weaponProficiencies": [
-      "Simple Weapons",
-      "Shortswords"
+      "Simple Melee Weapons",
+      "Martial Melee Weapons with Light property"
     ],
     "skillChoices": {
       "choose": 2,
@@ -1347,10 +1463,9 @@
         "level": 2,
         "proficiencyBonus": 2,
         "features": [
-          "Focus Points",
-          "Patient Defense",
-          "Step of the Wind",
-          "Unarmored Movement"
+          "Monk's Focus",
+          "Unarmored Movement",
+          "Uncanny Metabolism"
         ]
       },
       {
@@ -1358,13 +1473,16 @@
         "proficiencyBonus": 2,
         "features": [
           "Deflect Attacks",
-          "Subclass"
+          "Monk Subclass"
         ]
       },
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": []
+        "features": [
+          "Ability Score Improvement",
+          "Slow Fall"
+        ]
       },
       {
         "level": 5,
@@ -1377,7 +1495,10 @@
       {
         "level": 6,
         "proficiencyBonus": 3,
-        "features": []
+        "features": [
+          "Empowered Strikes",
+          "Subclass Feature"
+        ]
       },
       {
         "level": 7,
@@ -1389,12 +1510,16 @@
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": []
+        "features": [
+          "Ability Score Improvement"
+        ]
       },
       {
         "level": 9,
         "proficiencyBonus": 4,
-        "features": []
+        "features": [
+          "Acrobatic Movement"
+        ]
       },
       {
         "level": 10,
@@ -1407,17 +1532,23 @@
       {
         "level": 11,
         "proficiencyBonus": 4,
-        "features": []
+        "features": [
+          "Subclass Feature"
+        ]
       },
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": []
+        "features": [
+          "Ability Score Improvement"
+        ]
       },
       {
         "level": 13,
         "proficiencyBonus": 5,
-        "features": []
+        "features": [
+          "Deflect Energy"
+        ]
       },
       {
         "level": 14,
@@ -1429,17 +1560,23 @@
       {
         "level": 15,
         "proficiencyBonus": 5,
-        "features": []
+        "features": [
+          "Perfect Focus"
+        ]
       },
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": []
+        "features": [
+          "Ability Score Improvement"
+        ]
       },
       {
         "level": 17,
         "proficiencyBonus": 6,
-        "features": []
+        "features": [
+          "Subclass Feature"
+        ]
       },
       {
         "level": 18,
@@ -1451,7 +1588,9 @@
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": []
+        "features": [
+          "Epic Boon"
+        ]
       },
       {
         "level": 20,
@@ -1508,7 +1647,9 @@
           "Spellcasting",
           "Weapon Mastery"
         ],
-        "spellSlots": [],
+        "spellSlots": [
+          2
+        ],
         "weaponMasteryCount": 2
       },
       {
@@ -1542,7 +1683,7 @@
         "spellSlots": [
           3
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 5,
@@ -1555,7 +1696,7 @@
           4,
           2
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 6,
@@ -1567,7 +1708,7 @@
           4,
           2
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 7,
@@ -1577,7 +1718,7 @@
           4,
           3
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 8,
@@ -1587,18 +1728,20 @@
           4,
           3
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 9,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Abjure Foes"
+        ],
         "spellSlots": [
           4,
           3,
           2
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 10,
@@ -1611,7 +1754,7 @@
           3,
           2
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 11,
@@ -1624,7 +1767,7 @@
           3,
           3
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 12,
@@ -1635,7 +1778,7 @@
           3,
           3
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 13,
@@ -1647,7 +1790,7 @@
           3,
           1
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 14,
@@ -1661,7 +1804,7 @@
           3,
           1
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 15,
@@ -1673,7 +1816,7 @@
           3,
           2
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 16,
@@ -1685,7 +1828,7 @@
           3,
           2
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 17,
@@ -1698,7 +1841,7 @@
           3,
           1
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 18,
@@ -1711,23 +1854,10 @@
           3,
           1
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 19,
-        "proficiencyBonus": 6,
-        "features": [],
-        "spellSlots": [
-          4,
-          3,
-          3,
-          3,
-          2
-        ],
-        "weaponMasteryCount": 3
-      },
-      {
-        "level": 20,
         "proficiencyBonus": 6,
         "features": [
           "Epic Boon"
@@ -1739,7 +1869,22 @@
           3,
           2
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
+      },
+      {
+        "level": 20,
+        "proficiencyBonus": 6,
+        "features": [
+          "Subclass Feature"
+        ],
+        "spellSlots": [
+          4,
+          3,
+          3,
+          3,
+          2
+        ],
+        "weaponMasteryCount": 2
       }
     ]
   },
@@ -1786,12 +1931,16 @@
         "level": 1,
         "proficiencyBonus": 2,
         "features": [
-          "Favored Enemy",
           "Spellcasting",
+          "Favored Enemy",
           "Weapon Mastery"
         ],
-        "spellSlots": [],
-        "weaponMasteryCount": 2
+        "spellSlots": [
+          2
+        ],
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 2,
+        "favoredEnemyUses": 2
       },
       {
         "level": 2,
@@ -1803,18 +1952,22 @@
         "spellSlots": [
           2
         ],
-        "weaponMasteryCount": 2
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 3,
+        "favoredEnemyUses": 2
       },
       {
         "level": 3,
         "proficiencyBonus": 2,
         "features": [
-          "Subclass"
+          "Ranger Subclass"
         ],
         "spellSlots": [
           3
         ],
-        "weaponMasteryCount": 2
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 4,
+        "favoredEnemyUses": 2
       },
       {
         "level": 4,
@@ -1823,7 +1976,9 @@
         "spellSlots": [
           3
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 5,
+        "favoredEnemyUses": 2
       },
       {
         "level": 5,
@@ -1835,7 +1990,9 @@
           4,
           2
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 6,
+        "favoredEnemyUses": 3
       },
       {
         "level": 6,
@@ -1847,7 +2004,9 @@
           4,
           2
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 6,
+        "favoredEnemyUses": 3
       },
       {
         "level": 7,
@@ -1857,7 +2016,9 @@
           4,
           3
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 7,
+        "favoredEnemyUses": 3
       },
       {
         "level": 8,
@@ -1867,7 +2028,9 @@
           4,
           3
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 7,
+        "favoredEnemyUses": 3
       },
       {
         "level": 9,
@@ -1880,7 +2043,9 @@
           3,
           2
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 9,
+        "favoredEnemyUses": 4
       },
       {
         "level": 10,
@@ -1893,7 +2058,9 @@
           3,
           2
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 9,
+        "favoredEnemyUses": 4
       },
       {
         "level": 11,
@@ -1904,7 +2071,9 @@
           3,
           3
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 10,
+        "favoredEnemyUses": 4
       },
       {
         "level": 12,
@@ -1915,7 +2084,9 @@
           3,
           3
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 10,
+        "favoredEnemyUses": 4
       },
       {
         "level": 13,
@@ -1929,7 +2100,9 @@
           3,
           1
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 11,
+        "favoredEnemyUses": 5
       },
       {
         "level": 14,
@@ -1943,7 +2116,9 @@
           3,
           1
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 11,
+        "favoredEnemyUses": 5
       },
       {
         "level": 15,
@@ -1955,7 +2130,9 @@
           3,
           2
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 12,
+        "favoredEnemyUses": 5
       },
       {
         "level": 16,
@@ -1967,7 +2144,9 @@
           3,
           2
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 12,
+        "favoredEnemyUses": 5
       },
       {
         "level": 17,
@@ -1982,7 +2161,9 @@
           3,
           1
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 14,
+        "favoredEnemyUses": 6
       },
       {
         "level": 18,
@@ -1997,12 +2178,16 @@
           3,
           1
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 14,
+        "favoredEnemyUses": 6
       },
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Epic Boon"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2010,7 +2195,9 @@
           3,
           2
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 15,
+        "favoredEnemyUses": 6
       },
       {
         "level": 20,
@@ -2025,7 +2212,9 @@
           3,
           2
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2,
+        "preparedSpellCount": 15,
+        "favoredEnemyUses": 6
       }
     ]
   },
@@ -2103,7 +2292,7 @@
         "level": 4,
         "proficiencyBonus": 2,
         "features": [],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 5,
@@ -2112,13 +2301,13 @@
           "Cunning Strike",
           "Uncanny Dodge"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 6,
         "proficiencyBonus": 3,
         "features": [],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 7,
@@ -2127,25 +2316,25 @@
           "Evasion",
           "Reliable Talent"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 8,
         "proficiencyBonus": 3,
         "features": [],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 9,
         "proficiencyBonus": 4,
         "features": [],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 10,
         "proficiencyBonus": 4,
         "features": [],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 11,
@@ -2153,19 +2342,19 @@
         "features": [
           "Improved Cunning Strike"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 12,
         "proficiencyBonus": 4,
         "features": [],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 13,
         "proficiencyBonus": 5,
         "features": [],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 14,
@@ -2173,7 +2362,7 @@
         "features": [
           "Devious Strikes"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 15,
@@ -2181,19 +2370,19 @@
         "features": [
           "Slippery Mind"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 16,
         "proficiencyBonus": 5,
         "features": [],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 17,
         "proficiencyBonus": 6,
         "features": [],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 18,
@@ -2201,13 +2390,13 @@
         "features": [
           "Elusive"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 19,
         "proficiencyBonus": 6,
         "features": [],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       },
       {
         "level": 20,
@@ -2215,7 +2404,7 @@
         "features": [
           "Stroke of Luck"
         ],
-        "weaponMasteryCount": 3
+        "weaponMasteryCount": 2
       }
     ]
   },
@@ -2233,11 +2422,7 @@
     "spellcastingAbility": "cha",
     "armorProficiencies": [],
     "weaponProficiencies": [
-      "Daggers",
-      "Darts",
-      "Slings",
-      "Quarterstaffs",
-      "Light Crossbows"
+      "Simple Weapons"
     ],
     "skillChoices": {
       "choose": 2,
@@ -2258,8 +2443,8 @@
         "level": 1,
         "proficiencyBonus": 2,
         "features": [
-          "Innate Sorcery",
-          "Spellcasting"
+          "Spellcasting",
+          "Innate Sorcery"
         ],
         "spellSlots": [
           2
@@ -2280,7 +2465,7 @@
         "level": 3,
         "proficiencyBonus": 2,
         "features": [
-          "Subclass"
+          "Sorcerer Subclass"
         ],
         "spellSlots": [
           4,
@@ -2290,7 +2475,9 @@
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3
@@ -2311,7 +2498,9 @@
       {
         "level": 6,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2334,7 +2523,9 @@
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2357,7 +2548,9 @@
       {
         "level": 10,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Metamagic"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2382,7 +2575,9 @@
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2409,7 +2604,9 @@
       {
         "level": 14,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2438,7 +2635,9 @@
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2453,7 +2652,9 @@
       {
         "level": 17,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Metamagic"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2469,7 +2670,9 @@
       {
         "level": 18,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2485,7 +2688,9 @@
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Epic Boon"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2589,7 +2794,9 @@
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "pactMagic": {
           "slotLevel": 2,
           "slots": 2
@@ -2625,7 +2832,9 @@
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "pactMagic": {
           "slotLevel": 4,
           "slots": 2
@@ -2665,7 +2874,9 @@
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "pactMagic": {
           "slotLevel": 5,
           "slots": 3
@@ -2705,7 +2916,9 @@
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "pactMagic": {
           "slotLevel": 5,
           "slots": 3
@@ -2734,7 +2947,9 @@
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Epic Boon"
+        ],
         "pactMagic": {
           "slotLevel": 5,
           "slots": 4
@@ -2767,11 +2982,7 @@
     "spellcastingAbility": "int",
     "armorProficiencies": [],
     "weaponProficiencies": [
-      "Daggers",
-      "Darts",
-      "Slings",
-      "Quarterstaffs",
-      "Light Crossbows"
+      "Simple Weapons"
     ],
     "skillChoices": {
       "choose": 2,
@@ -2781,7 +2992,8 @@
         "Insight",
         "Investigation",
         "Medicine",
-        "Religion"
+        "Religion",
+        "Nature"
       ]
     },
     "description": "Prepared arcane caster with the broadest spellbook and strong ritual utility.",
@@ -2824,7 +3036,9 @@
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3
@@ -2866,7 +3080,9 @@
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2914,7 +3130,9 @@
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2970,7 +3188,9 @@
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -3019,7 +3239,9 @@
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Epic Boon"
+        ],
         "spellSlots": [
           4,
           3,

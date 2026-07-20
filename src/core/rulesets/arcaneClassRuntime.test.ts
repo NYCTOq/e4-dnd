@@ -30,7 +30,7 @@ describe("arcane classes mega runtime", () => {
   it("certifies Sorcerer points and edition metamagic progression", () => {
     expect(getArcaneClassRuntime("Sorcerer", 2, "dnd_2014")).toMatchObject({ sorceryPointsMax: 2, metamagicChoices: 0 });
     expect(getArcaneClassRuntime("Sorcerer", 2, "dnd_2024")).toMatchObject({ sorceryPointsMax: 2, metamagicChoices: 2 });
-    expect(getArcaneClassRuntime("Sorcerer", 17, "dnd_2024")).toMatchObject({ sorceryPointsMax: 17, metamagicChoices: 4 });
+    expect(getArcaneClassRuntime("Sorcerer", 17, "dnd_2024")).toMatchObject({ sorceryPointsMax: 17, metamagicChoices: 6 });
   });
 
   it("certifies Warlock Pact Magic, invocations and Mystic Arcanum", () => {

@@ -5,27 +5,27 @@
     "className": "Barbarian",
     "ruleset": "dnd_2024",
     "selectionLevel": 3,
-    "description": "Path of the Berserker, Barbarian için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "description": "Reckless Attack ile ölçeklenen Frenzy hasarı, Rage condition bağışıklıkları, reaction saldırısı ve Strength tabanlı frightened alanı sağlayan 2024 Barbarian yolu.",
     "features": [
       {
         "level": 3,
         "name": "Frenzy",
-        "summary": "Frenzy subclass özelliği."
+        "summary": "Rage aktifken Reckless Attack kullanılırsa turun ilk Strength tabanlı isabetine Rage Damage bonusu kadar d6 ekler."
       },
       {
         "level": 6,
         "name": "Mindless Rage",
-        "summary": "Mindless Rage subclass özelliği."
+        "summary": "Rage sırasında Charmed ve Frightened durumlarına bağışıklık; Rage başlarken mevcut durumları sonlandırır."
       },
       {
         "level": 10,
         "name": "Retaliation",
-        "summary": "Retaliation subclass özelliği."
+        "summary": "5 feet içindeki bir yaratık hasar verdiğinde reaction ile melee attack."
       },
       {
         "level": 14,
         "name": "Intimidating Presence",
-        "summary": "Intimidating Presence subclass özelliği."
+        "summary": "Bonus action ile 30-foot emanation; Strength tabanlı save DC ile frightened, Long Rest veya Rage harcayarak yenileme."
       }
     ]
   },
@@ -40,22 +40,22 @@
       {
         "level": 3,
         "name": "Bonus Proficiencies",
-        "summary": "Bonus Proficiencies subclass özelliği."
+        "summary": "Seçtiğin üç skill proficiency kazanırsın."
       },
       {
         "level": 3,
         "name": "Cutting Words",
-        "summary": "Cutting Words subclass özelliği."
+        "summary": "Reaction ile Bardic Inspiration harcayıp başarılı attack/ability check veya damage roll sonucunu azaltırsın."
       },
       {
         "level": 6,
         "name": "Magical Discoveries",
-        "summary": "Magical Discoveries subclass özelliği."
+        "summary": "Cleric, Druid veya Wizard listesinden iki spell seçersin; her zaman prepared kalır."
       },
       {
         "level": 14,
         "name": "Peerless Skill",
-        "summary": "Peerless Skill subclass özelliği."
+        "summary": "Başarısız ability check veya attack roll için Bardic Inspiration ekler; yine başarısızsa kullanım harcanmaz."
       }
     ]
   },
@@ -66,7 +66,15 @@
     "ruleset": "dnd_2024",
     "selectionLevel": 3,
     "description": "Life Domain, Cleric için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
-    "bonusSpells": ["Aid", "Bless", "Cure Wounds", "Lesser Restoration", "Revivify", "Greater Restoration", "Mass Cure Wounds"],
+    "bonusSpells": [
+      "Aid",
+      "Bless",
+      "Cure Wounds",
+      "Lesser Restoration",
+      "Revivify",
+      "Greater Restoration",
+      "Mass Cure Wounds"
+    ],
     "features": [
       {
         "level": 3,
@@ -202,7 +210,18 @@
     "ruleset": "dnd_2024",
     "selectionLevel": 3,
     "description": "Oath of Devotion, Paladin için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
-    "bonusSpells": ["Protection from Evil and Good", "Shield of Faith", "Aid", "Zone of Truth", "Beacon of Hope", "Dispel Magic", "Freedom of Movement", "Guardian of Faith", "Commune", "Flame Strike"],
+    "bonusSpells": [
+      "Protection from Evil and Good",
+      "Shield of Faith",
+      "Aid",
+      "Zone of Truth",
+      "Beacon of Hope",
+      "Dispel Magic",
+      "Freedom of Movement",
+      "Guardian of Faith",
+      "Commune",
+      "Flame Strike"
+    ],
     "features": [
       {
         "level": 3,

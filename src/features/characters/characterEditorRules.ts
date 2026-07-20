@@ -43,7 +43,7 @@ export function buildEditedCharacter(character: Character, draft: CharacterDraft
   const multiclass = (draft.classLevels?.length ?? 0) > 1;
   return {
     ...character, ...draft, knownSpellIds, preparedSpellIds, skillProficiencies,
-    expertiseSkills: normalizeExpertise(draft.expertiseSkills, skillProficiencies, getExpertiseLimit(draft.className, draft.level)),
+    expertiseSkills: normalizeExpertise(draft.expertiseSkills, skillProficiencies, getExpertiseLimit(draft.className, draft.level, draft.ruleset)),
     armorClass: calculateEffectiveArmorClass(draft, rulesetData?.items),
     currentHp: Math.min(character.currentHp, draft.maxHp),
     spellSlots: multiclass ? draft.spellSlots : normalizeSpellSlots(draft.spellSlots, draft.level, draft.className),

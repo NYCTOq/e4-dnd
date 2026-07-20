@@ -5,27 +5,27 @@
     "className": "Barbarian",
     "ruleset": "dnd_2014",
     "selectionLevel": 3,
-    "description": "Path of the Berserker, Barbarian için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
+    "description": "Rage sırasında saldırgan bonus-action baskısı, condition bağışıklığı, korkutma ve reaction saldırısı sağlayan 2014 Barbarian yolu.",
     "features": [
       {
         "level": 3,
         "name": "Frenzy",
-        "summary": "Frenzy subclass özelliği."
+        "summary": "Rage başlarken Frenzy seçilirse sonraki turlarda bonus action melee weapon attack açılır; Rage bitince exhaustion uygulanır."
       },
       {
         "level": 6,
         "name": "Mindless Rage",
-        "summary": "Mindless Rage subclass özelliği."
+        "summary": "Rage sırasında Charmed ve Frightened durumlarına bağışıklık; Rage başlarken mevcut durumları sonlandırır."
       },
       {
         "level": 10,
         "name": "Intimidating Presence",
-        "summary": "Intimidating Presence subclass özelliği."
+        "summary": "Action ile Wisdom save isteyen frightened etkisi; sonraki turlarda action ile sürdürülebilir."
       },
       {
         "level": 14,
         "name": "Retaliation",
-        "summary": "Retaliation subclass özelliği."
+        "summary": "5 feet içindeki bir yaratık hasar verdiğinde reaction ile melee weapon attack."
       }
     ]
   },
@@ -40,22 +40,22 @@
       {
         "level": 3,
         "name": "Bonus Proficiencies",
-        "summary": "Bonus Proficiencies subclass özelliği."
+        "summary": "Seçtiğin üç skill proficiency kazanırsın."
       },
       {
         "level": 3,
         "name": "Cutting Words",
-        "summary": "Cutting Words subclass özelliği."
+        "summary": "Reaction ve Bardic Inspiration kullanarak görülen/heard hedefin attack, ability check veya damage roll sonucunu azaltırsın."
       },
       {
         "level": 6,
         "name": "Additional Magical Secrets",
-        "summary": "Additional Magical Secrets subclass özelliği."
+        "summary": "Herhangi class listesinden iki cantrip/spell öğrenirsin; Bard spells known limitine dahil olmaz."
       },
       {
         "level": 14,
         "name": "Peerless Skill",
-        "summary": "Peerless Skill subclass özelliği."
+        "summary": "Kendi ability check sonucuna Bardic Inspiration die ekleyebilirsin."
       }
     ]
   },
@@ -66,7 +66,16 @@
     "ruleset": "dnd_2014",
     "selectionLevel": 1,
     "description": "Life Domain, Cleric için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
-    "bonusSpells": ["Bless", "Cure Wounds", "Lesser Restoration", "Spiritual Weapon", "Beacon of Hope", "Revivify", "Greater Restoration", "Mass Cure Wounds"],
+    "bonusSpells": [
+      "Bless",
+      "Cure Wounds",
+      "Lesser Restoration",
+      "Spiritual Weapon",
+      "Beacon of Hope",
+      "Revivify",
+      "Greater Restoration",
+      "Mass Cure Wounds"
+    ],
     "features": [
       {
         "level": 1,
@@ -212,7 +221,18 @@
     "ruleset": "dnd_2014",
     "selectionLevel": 3,
     "description": "Oath of Devotion, Paladin için odaklanmış bir subclass yoludur. Özellikler level ilerledikçe otomatik görünür.",
-    "bonusSpells": ["Protection from Evil and Good", "Sanctuary", "Lesser Restoration", "Zone of Truth", "Beacon of Hope", "Dispel Magic", "Freedom of Movement", "Guardian of Faith", "Commune", "Flame Strike"],
+    "bonusSpells": [
+      "Protection from Evil and Good",
+      "Sanctuary",
+      "Lesser Restoration",
+      "Zone of Truth",
+      "Beacon of Hope",
+      "Dispel Magic",
+      "Freedom of Movement",
+      "Guardian of Faith",
+      "Commune",
+      "Flame Strike"
+    ],
     "features": [
       {
         "level": 3,

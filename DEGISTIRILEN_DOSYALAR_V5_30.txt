@@ -1,0 +1,14 @@
+E4 D&D v5.30.0 - Origin, Ability & High-Level Character Builder Reconstruction
+
+Degistirilen / eklenen ana dosyalar:
+- src/features/builder/Builder.tsx
+- src/core/character/character.types.ts
+- src/core/rulesets/originRules.ts
+- src/core/rulesets/characterValidation.ts
+- src/core/rulesets/highLevelAbilityBuilder.ts
+- src/core/rulesets/highLevelAbilityBuilder.test.ts
+- src/features/characters/characterShared.tsx
+- src/styles/03-builder.css
+- src/shared/release/releaseNotes.ts
+- package.json
+- package-lock.json

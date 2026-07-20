@@ -1,0 +1,761 @@
+﻿ruleset,race_species,subclass,level,wild_shape_uses,known_forms,max_cr,swim,fly,cantrips,prepared_spells,natural_recovery_budget,primal_order,wild_companion,wild_resurgence,elemental_fury,improved_elemental_fury,beast_spells,archdruid,warnings,result
+dnd_2014,Human,Circle of the Land,1,0,0,0,False,False,2,5,1,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,2,2,0,0.25,False,False,2,6,1,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,3,2,0,0.25,False,False,2,7,2,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,4,2,0,0.5,True,False,3,8,2,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,5,2,0,0.5,True,False,3,9,3,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,6,2,0,0.5,True,False,3,10,3,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,7,2,0,0.5,True,False,3,11,4,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,8,2,0,1,True,True,3,12,4,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,9,2,0,1,True,True,3,13,5,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,10,2,0,1,True,True,4,14,5,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,11,2,0,1,True,True,4,15,6,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,12,2,0,1,True,True,4,16,6,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,13,2,0,1,True,True,4,17,7,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,14,2,0,1,True,True,4,18,7,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,15,2,0,1,True,True,4,19,8,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,16,2,0,1,True,True,4,20,8,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,17,2,0,1,True,True,4,21,9,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Land,18,2,0,1,True,True,4,22,9,False,False,False,False,False,True,False,,PASS
+dnd_2014,Human,Circle of the Land,19,2,0,1,True,True,4,23,10,False,False,False,False,False,True,False,,PASS
+dnd_2014,Human,Circle of the Land,20,unlimited,0,1,True,True,4,24,10,False,False,False,False,False,True,True,,PASS
+dnd_2014,Human,Circle of the Moon,1,0,0,0,False,False,2,5,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,2,2,0,1,False,False,2,6,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,3,2,0,1,False,False,2,7,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,4,2,0,1,True,False,3,8,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,5,2,0,1,True,False,3,9,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,6,2,0,2,True,False,3,10,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,7,2,0,2,True,False,3,11,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,8,2,0,2,True,True,3,12,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,9,2,0,3,True,True,3,13,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,10,2,0,3,True,True,4,14,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,11,2,0,3,True,True,4,15,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,12,2,0,4,True,True,4,16,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,13,2,0,4,True,True,4,17,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,14,2,0,4,True,True,4,18,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,15,2,0,5,True,True,4,19,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,16,2,0,5,True,True,4,20,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,17,2,0,5,True,True,4,21,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Human,Circle of the Moon,18,2,0,6,True,True,4,22,0,False,False,False,False,False,True,False,,PASS
+dnd_2014,Human,Circle of the Moon,19,2,0,6,True,True,4,23,0,False,False,False,False,False,True,False,,PASS
+dnd_2014,Human,Circle of the Moon,20,unlimited,0,6,True,True,4,24,0,False,False,False,False,False,True,True,,PASS
+dnd_2014,Dwarf,Circle of the Land,1,0,0,0,False,False,2,5,1,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,2,2,0,0.25,False,False,2,6,1,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,3,2,0,0.25,False,False,2,7,2,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,4,2,0,0.5,True,False,3,8,2,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,5,2,0,0.5,True,False,3,9,3,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,6,2,0,0.5,True,False,3,10,3,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,7,2,0,0.5,True,False,3,11,4,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,8,2,0,1,True,True,3,12,4,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,9,2,0,1,True,True,3,13,5,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,10,2,0,1,True,True,4,14,5,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,11,2,0,1,True,True,4,15,6,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,12,2,0,1,True,True,4,16,6,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,13,2,0,1,True,True,4,17,7,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,14,2,0,1,True,True,4,18,7,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,15,2,0,1,True,True,4,19,8,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,16,2,0,1,True,True,4,20,8,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,17,2,0,1,True,True,4,21,9,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,18,2,0,1,True,True,4,22,9,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,19,2,0,1,True,True,4,23,10,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Land,20,unlimited,0,1,True,True,4,24,10,False,False,False,False,False,True,True,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,1,0,0,0,False,False,2,5,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,2,2,0,1,False,False,2,6,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,3,2,0,1,False,False,2,7,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,4,2,0,1,True,False,3,8,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,5,2,0,1,True,False,3,9,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,6,2,0,2,True,False,3,10,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,7,2,0,2,True,False,3,11,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,8,2,0,2,True,True,3,12,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,9,2,0,3,True,True,3,13,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,10,2,0,3,True,True,4,14,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,11,2,0,3,True,True,4,15,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,12,2,0,4,True,True,4,16,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,13,2,0,4,True,True,4,17,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,14,2,0,4,True,True,4,18,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,15,2,0,5,True,True,4,19,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,16,2,0,5,True,True,4,20,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,17,2,0,5,True,True,4,21,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,18,2,0,6,True,True,4,22,0,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,19,2,0,6,True,True,4,23,0,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Dwarf,Circle of the Moon,20,unlimited,0,6,True,True,4,24,0,False,False,False,False,False,True,True,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,1,0,0,0,False,False,2,5,1,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,2,2,0,0.25,False,False,2,6,1,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,3,2,0,0.25,False,False,2,7,2,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,4,2,0,0.5,True,False,3,8,2,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,5,2,0,0.5,True,False,3,9,3,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,6,2,0,0.5,True,False,3,10,3,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,7,2,0,0.5,True,False,3,11,4,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,8,2,0,1,True,True,3,12,4,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,9,2,0,1,True,True,3,13,5,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,10,2,0,1,True,True,4,14,5,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,11,2,0,1,True,True,4,15,6,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,12,2,0,1,True,True,4,16,6,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,13,2,0,1,True,True,4,17,7,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,14,2,0,1,True,True,4,18,7,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,15,2,0,1,True,True,4,19,8,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,16,2,0,1,True,True,4,20,8,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,17,2,0,1,True,True,4,21,9,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,18,2,0,1,True,True,4,22,9,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,19,2,0,1,True,True,4,23,10,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Land,20,unlimited,0,1,True,True,4,24,10,False,False,False,False,False,True,True,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,1,0,0,0,False,False,2,5,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,2,2,0,1,False,False,2,6,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,3,2,0,1,False,False,2,7,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,4,2,0,1,True,False,3,8,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,5,2,0,1,True,False,3,9,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,6,2,0,2,True,False,3,10,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,7,2,0,2,True,False,3,11,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,8,2,0,2,True,True,3,12,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,9,2,0,3,True,True,3,13,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,10,2,0,3,True,True,4,14,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,11,2,0,3,True,True,4,15,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,12,2,0,4,True,True,4,16,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,13,2,0,4,True,True,4,17,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,14,2,0,4,True,True,4,18,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,15,2,0,5,True,True,4,19,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,16,2,0,5,True,True,4,20,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,17,2,0,5,True,True,4,21,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,18,2,0,6,True,True,4,22,0,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,19,2,0,6,True,True,4,23,0,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Elf,Circle of the Moon,20,unlimited,0,6,True,True,4,24,0,False,False,False,False,False,True,True,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,1,0,0,0,False,False,2,5,1,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,2,2,0,0.25,False,False,2,6,1,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,3,2,0,0.25,False,False,2,7,2,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,4,2,0,0.5,True,False,3,8,2,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,5,2,0,0.5,True,False,3,9,3,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,6,2,0,0.5,True,False,3,10,3,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,7,2,0,0.5,True,False,3,11,4,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,8,2,0,1,True,True,3,12,4,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,9,2,0,1,True,True,3,13,5,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,10,2,0,1,True,True,4,14,5,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,11,2,0,1,True,True,4,15,6,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,12,2,0,1,True,True,4,16,6,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,13,2,0,1,True,True,4,17,7,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,14,2,0,1,True,True,4,18,7,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,15,2,0,1,True,True,4,19,8,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,16,2,0,1,True,True,4,20,8,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,17,2,0,1,True,True,4,21,9,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,18,2,0,1,True,True,4,22,9,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,19,2,0,1,True,True,4,23,10,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Land,20,unlimited,0,1,True,True,4,24,10,False,False,False,False,False,True,True,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,1,0,0,0,False,False,2,5,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,2,2,0,1,False,False,2,6,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,3,2,0,1,False,False,2,7,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,4,2,0,1,True,False,3,8,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,5,2,0,1,True,False,3,9,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,6,2,0,2,True,False,3,10,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,7,2,0,2,True,False,3,11,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,8,2,0,2,True,True,3,12,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,9,2,0,3,True,True,3,13,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,10,2,0,3,True,True,4,14,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,11,2,0,3,True,True,4,15,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,12,2,0,4,True,True,4,16,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,13,2,0,4,True,True,4,17,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,14,2,0,4,True,True,4,18,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,15,2,0,5,True,True,4,19,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,16,2,0,5,True,True,4,20,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,17,2,0,5,True,True,4,21,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,18,2,0,6,True,True,4,22,0,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,19,2,0,6,True,True,4,23,0,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Halfling,Circle of the Moon,20,unlimited,0,6,True,True,4,24,0,False,False,False,False,False,True,True,Subrace seçimi zorunlu,PASS
+dnd_2014,Dragonborn,Circle of the Land,1,0,0,0,False,False,2,5,1,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,2,2,0,0.25,False,False,2,6,1,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,3,2,0,0.25,False,False,2,7,2,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,4,2,0,0.5,True,False,3,8,2,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,5,2,0,0.5,True,False,3,9,3,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,6,2,0,0.5,True,False,3,10,3,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,7,2,0,0.5,True,False,3,11,4,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,8,2,0,1,True,True,3,12,4,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,9,2,0,1,True,True,3,13,5,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,10,2,0,1,True,True,4,14,5,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,11,2,0,1,True,True,4,15,6,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,12,2,0,1,True,True,4,16,6,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,13,2,0,1,True,True,4,17,7,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,14,2,0,1,True,True,4,18,7,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,15,2,0,1,True,True,4,19,8,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,16,2,0,1,True,True,4,20,8,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,17,2,0,1,True,True,4,21,9,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,18,2,0,1,True,True,4,22,9,False,False,False,False,False,True,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,19,2,0,1,True,True,4,23,10,False,False,False,False,False,True,False,,PASS
+dnd_2014,Dragonborn,Circle of the Land,20,unlimited,0,1,True,True,4,24,10,False,False,False,False,False,True,True,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,1,0,0,0,False,False,2,5,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,2,2,0,1,False,False,2,6,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,3,2,0,1,False,False,2,7,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,4,2,0,1,True,False,3,8,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,5,2,0,1,True,False,3,9,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,6,2,0,2,True,False,3,10,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,7,2,0,2,True,False,3,11,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,8,2,0,2,True,True,3,12,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,9,2,0,3,True,True,3,13,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,10,2,0,3,True,True,4,14,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,11,2,0,3,True,True,4,15,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,12,2,0,4,True,True,4,16,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,13,2,0,4,True,True,4,17,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,14,2,0,4,True,True,4,18,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,15,2,0,5,True,True,4,19,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,16,2,0,5,True,True,4,20,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,17,2,0,5,True,True,4,21,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,18,2,0,6,True,True,4,22,0,False,False,False,False,False,True,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,19,2,0,6,True,True,4,23,0,False,False,False,False,False,True,False,,PASS
+dnd_2014,Dragonborn,Circle of the Moon,20,unlimited,0,6,True,True,4,24,0,False,False,False,False,False,True,True,,PASS
+dnd_2014,Gnome,Circle of the Land,1,0,0,0,False,False,2,5,1,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,2,2,0,0.25,False,False,2,6,1,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,3,2,0,0.25,False,False,2,7,2,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,4,2,0,0.5,True,False,3,8,2,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,5,2,0,0.5,True,False,3,9,3,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,6,2,0,0.5,True,False,3,10,3,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,7,2,0,0.5,True,False,3,11,4,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,8,2,0,1,True,True,3,12,4,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,9,2,0,1,True,True,3,13,5,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,10,2,0,1,True,True,4,14,5,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,11,2,0,1,True,True,4,15,6,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,12,2,0,1,True,True,4,16,6,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,13,2,0,1,True,True,4,17,7,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,14,2,0,1,True,True,4,18,7,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,15,2,0,1,True,True,4,19,8,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,16,2,0,1,True,True,4,20,8,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,17,2,0,1,True,True,4,21,9,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,18,2,0,1,True,True,4,22,9,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,19,2,0,1,True,True,4,23,10,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Land,20,unlimited,0,1,True,True,4,24,10,False,False,False,False,False,True,True,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,1,0,0,0,False,False,2,5,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,2,2,0,1,False,False,2,6,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,3,2,0,1,False,False,2,7,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,4,2,0,1,True,False,3,8,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,5,2,0,1,True,False,3,9,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,6,2,0,2,True,False,3,10,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,7,2,0,2,True,False,3,11,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,8,2,0,2,True,True,3,12,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,9,2,0,3,True,True,3,13,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,10,2,0,3,True,True,4,14,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,11,2,0,3,True,True,4,15,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,12,2,0,4,True,True,4,16,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,13,2,0,4,True,True,4,17,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,14,2,0,4,True,True,4,18,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,15,2,0,5,True,True,4,19,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,16,2,0,5,True,True,4,20,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,17,2,0,5,True,True,4,21,0,False,False,False,False,False,False,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,18,2,0,6,True,True,4,22,0,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,19,2,0,6,True,True,4,23,0,False,False,False,False,False,True,False,Subrace seçimi zorunlu,PASS
+dnd_2014,Gnome,Circle of the Moon,20,unlimited,0,6,True,True,4,24,0,False,False,False,False,False,True,True,Subrace seçimi zorunlu,PASS
+dnd_2014,Half-Elf,Circle of the Land,1,0,0,0,False,False,2,5,1,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,2,2,0,0.25,False,False,2,6,1,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,3,2,0,0.25,False,False,2,7,2,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,4,2,0,0.5,True,False,3,8,2,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,5,2,0,0.5,True,False,3,9,3,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,6,2,0,0.5,True,False,3,10,3,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,7,2,0,0.5,True,False,3,11,4,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,8,2,0,1,True,True,3,12,4,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,9,2,0,1,True,True,3,13,5,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,10,2,0,1,True,True,4,14,5,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,11,2,0,1,True,True,4,15,6,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,12,2,0,1,True,True,4,16,6,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,13,2,0,1,True,True,4,17,7,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,14,2,0,1,True,True,4,18,7,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,15,2,0,1,True,True,4,19,8,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,16,2,0,1,True,True,4,20,8,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,17,2,0,1,True,True,4,21,9,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,18,2,0,1,True,True,4,22,9,False,False,False,False,False,True,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,19,2,0,1,True,True,4,23,10,False,False,False,False,False,True,False,,PASS
+dnd_2014,Half-Elf,Circle of the Land,20,unlimited,0,1,True,True,4,24,10,False,False,False,False,False,True,True,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,1,0,0,0,False,False,2,5,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,2,2,0,1,False,False,2,6,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,3,2,0,1,False,False,2,7,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,4,2,0,1,True,False,3,8,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,5,2,0,1,True,False,3,9,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,6,2,0,2,True,False,3,10,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,7,2,0,2,True,False,3,11,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,8,2,0,2,True,True,3,12,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,9,2,0,3,True,True,3,13,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,10,2,0,3,True,True,4,14,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,11,2,0,3,True,True,4,15,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,12,2,0,4,True,True,4,16,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,13,2,0,4,True,True,4,17,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,14,2,0,4,True,True,4,18,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,15,2,0,5,True,True,4,19,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,16,2,0,5,True,True,4,20,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,17,2,0,5,True,True,4,21,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,18,2,0,6,True,True,4,22,0,False,False,False,False,False,True,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,19,2,0,6,True,True,4,23,0,False,False,False,False,False,True,False,,PASS
+dnd_2014,Half-Elf,Circle of the Moon,20,unlimited,0,6,True,True,4,24,0,False,False,False,False,False,True,True,,PASS
+dnd_2014,Half-Orc,Circle of the Land,1,0,0,0,False,False,2,5,1,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,2,2,0,0.25,False,False,2,6,1,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,3,2,0,0.25,False,False,2,7,2,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,4,2,0,0.5,True,False,3,8,2,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,5,2,0,0.5,True,False,3,9,3,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,6,2,0,0.5,True,False,3,10,3,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,7,2,0,0.5,True,False,3,11,4,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,8,2,0,1,True,True,3,12,4,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,9,2,0,1,True,True,3,13,5,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,10,2,0,1,True,True,4,14,5,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,11,2,0,1,True,True,4,15,6,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,12,2,0,1,True,True,4,16,6,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,13,2,0,1,True,True,4,17,7,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,14,2,0,1,True,True,4,18,7,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,15,2,0,1,True,True,4,19,8,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,16,2,0,1,True,True,4,20,8,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,17,2,0,1,True,True,4,21,9,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,18,2,0,1,True,True,4,22,9,False,False,False,False,False,True,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,19,2,0,1,True,True,4,23,10,False,False,False,False,False,True,False,,PASS
+dnd_2014,Half-Orc,Circle of the Land,20,unlimited,0,1,True,True,4,24,10,False,False,False,False,False,True,True,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,1,0,0,0,False,False,2,5,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,2,2,0,1,False,False,2,6,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,3,2,0,1,False,False,2,7,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,4,2,0,1,True,False,3,8,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,5,2,0,1,True,False,3,9,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,6,2,0,2,True,False,3,10,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,7,2,0,2,True,False,3,11,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,8,2,0,2,True,True,3,12,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,9,2,0,3,True,True,3,13,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,10,2,0,3,True,True,4,14,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,11,2,0,3,True,True,4,15,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,12,2,0,4,True,True,4,16,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,13,2,0,4,True,True,4,17,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,14,2,0,4,True,True,4,18,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,15,2,0,5,True,True,4,19,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,16,2,0,5,True,True,4,20,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,17,2,0,5,True,True,4,21,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,18,2,0,6,True,True,4,22,0,False,False,False,False,False,True,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,19,2,0,6,True,True,4,23,0,False,False,False,False,False,True,False,,PASS
+dnd_2014,Half-Orc,Circle of the Moon,20,unlimited,0,6,True,True,4,24,0,False,False,False,False,False,True,True,,PASS
+dnd_2014,Tiefling,Circle of the Land,1,0,0,0,False,False,2,5,1,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,2,2,0,0.25,False,False,2,6,1,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,3,2,0,0.25,False,False,2,7,2,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,4,2,0,0.5,True,False,3,8,2,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,5,2,0,0.5,True,False,3,9,3,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,6,2,0,0.5,True,False,3,10,3,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,7,2,0,0.5,True,False,3,11,4,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,8,2,0,1,True,True,3,12,4,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,9,2,0,1,True,True,3,13,5,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,10,2,0,1,True,True,4,14,5,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,11,2,0,1,True,True,4,15,6,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,12,2,0,1,True,True,4,16,6,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,13,2,0,1,True,True,4,17,7,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,14,2,0,1,True,True,4,18,7,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,15,2,0,1,True,True,4,19,8,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,16,2,0,1,True,True,4,20,8,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,17,2,0,1,True,True,4,21,9,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,18,2,0,1,True,True,4,22,9,False,False,False,False,False,True,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,19,2,0,1,True,True,4,23,10,False,False,False,False,False,True,False,,PASS
+dnd_2014,Tiefling,Circle of the Land,20,unlimited,0,1,True,True,4,24,10,False,False,False,False,False,True,True,,PASS
+dnd_2014,Tiefling,Circle of the Moon,1,0,0,0,False,False,2,5,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,2,2,0,1,False,False,2,6,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,3,2,0,1,False,False,2,7,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,4,2,0,1,True,False,3,8,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,5,2,0,1,True,False,3,9,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,6,2,0,2,True,False,3,10,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,7,2,0,2,True,False,3,11,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,8,2,0,2,True,True,3,12,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,9,2,0,3,True,True,3,13,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,10,2,0,3,True,True,4,14,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,11,2,0,3,True,True,4,15,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,12,2,0,4,True,True,4,16,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,13,2,0,4,True,True,4,17,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,14,2,0,4,True,True,4,18,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,15,2,0,5,True,True,4,19,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,16,2,0,5,True,True,4,20,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,17,2,0,5,True,True,4,21,0,False,False,False,False,False,False,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,18,2,0,6,True,True,4,22,0,False,False,False,False,False,True,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,19,2,0,6,True,True,4,23,0,False,False,False,False,False,True,False,,PASS
+dnd_2014,Tiefling,Circle of the Moon,20,unlimited,0,6,True,True,4,24,0,False,False,False,False,False,True,True,,PASS
+dnd_2024,Aasimar,Circle of the Land,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,6,3,6,0.5,True,False,3,10,3,True,True,True,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,7,3,6,0.5,True,False,3,11,4,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,8,3,8,1,True,True,3,12,4,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,9,3,8,1,True,True,3,14,5,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,10,3,8,1,True,True,4,15,5,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,11,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,12,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,13,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,14,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,15,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,16,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,17,4,8,1,True,True,4,19,9,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,18,4,8,1,True,True,4,20,9,True,True,True,True,True,True,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,19,4,8,1,True,True,4,21,10,True,True,True,True,True,True,False,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Land,20,4,8,1,True,True,4,22,10,True,True,True,True,True,True,True,Species alt seçimi gerekli,PASS
+dnd_2024,Aasimar,Circle of the Moon,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,6,3,6,0.5,True,False,3,10,0,True,True,True,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,7,3,6,0.5,True,False,3,11,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,8,3,8,1,True,True,3,12,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,9,3,8,1,True,True,3,14,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,10,3,8,1,True,True,4,15,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,11,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,12,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,13,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,14,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,15,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,16,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,17,4,8,1,True,True,4,19,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,18,4,8,1,True,True,4,20,0,True,True,True,True,True,True,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,19,4,8,1,True,True,4,21,0,True,True,True,True,True,True,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Aasimar,Circle of the Moon,20,4,8,1,True,True,4,22,0,True,True,True,True,True,True,True,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Land,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,6,3,6,0.5,True,False,3,10,3,True,True,True,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,7,3,6,0.5,True,False,3,11,4,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,8,3,8,1,True,True,3,12,4,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,9,3,8,1,True,True,3,14,5,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,10,3,8,1,True,True,4,15,5,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,11,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,12,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,13,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,14,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,15,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,16,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,17,4,8,1,True,True,4,19,9,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,18,4,8,1,True,True,4,20,9,True,True,True,True,True,True,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,19,4,8,1,True,True,4,21,10,True,True,True,True,True,True,False,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Land,20,4,8,1,True,True,4,22,10,True,True,True,True,True,True,True,Species alt seçimi gerekli,PASS
+dnd_2024,Dragonborn,Circle of the Moon,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,6,3,6,0.5,True,False,3,10,0,True,True,True,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,7,3,6,0.5,True,False,3,11,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,8,3,8,1,True,True,3,12,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,9,3,8,1,True,True,3,14,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,10,3,8,1,True,True,4,15,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,11,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,12,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,13,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,14,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,15,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,16,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,17,4,8,1,True,True,4,19,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,18,4,8,1,True,True,4,20,0,True,True,True,True,True,True,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,19,4,8,1,True,True,4,21,0,True,True,True,True,True,True,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dragonborn,Circle of the Moon,20,4,8,1,True,True,4,22,0,True,True,True,True,True,True,True,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Land,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,6,3,6,0.5,True,False,3,10,3,True,True,True,False,False,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,7,3,6,0.5,True,False,3,11,4,True,True,True,True,False,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,8,3,8,1,True,True,3,12,4,True,True,True,True,False,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,9,3,8,1,True,True,3,14,5,True,True,True,True,False,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,10,3,8,1,True,True,4,15,5,True,True,True,True,False,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,11,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,12,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,13,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,14,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,15,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,16,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,17,4,8,1,True,True,4,19,9,True,True,True,True,True,False,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,18,4,8,1,True,True,4,20,9,True,True,True,True,True,True,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,19,4,8,1,True,True,4,21,10,True,True,True,True,True,True,False,,PASS
+dnd_2024,Dwarf,Circle of the Land,20,4,8,1,True,True,4,22,10,True,True,True,True,True,True,True,,PASS
+dnd_2024,Dwarf,Circle of the Moon,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,6,3,6,0.5,True,False,3,10,0,True,True,True,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,7,3,6,0.5,True,False,3,11,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,8,3,8,1,True,True,3,12,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,9,3,8,1,True,True,3,14,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,10,3,8,1,True,True,4,15,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,11,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,12,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,13,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,14,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,15,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,16,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,17,4,8,1,True,True,4,19,0,True,True,True,True,True,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,18,4,8,1,True,True,4,20,0,True,True,True,True,True,True,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,19,4,8,1,True,True,4,21,0,True,True,True,True,True,True,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Dwarf,Circle of the Moon,20,4,8,1,True,True,4,22,0,True,True,True,True,True,True,True,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Land,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,6,3,6,0.5,True,False,3,10,3,True,True,True,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,7,3,6,0.5,True,False,3,11,4,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,8,3,8,1,True,True,3,12,4,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,9,3,8,1,True,True,3,14,5,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,10,3,8,1,True,True,4,15,5,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,11,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,12,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,13,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,14,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,15,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,16,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,17,4,8,1,True,True,4,19,9,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,18,4,8,1,True,True,4,20,9,True,True,True,True,True,True,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,19,4,8,1,True,True,4,21,10,True,True,True,True,True,True,False,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Land,20,4,8,1,True,True,4,22,10,True,True,True,True,True,True,True,Species alt seçimi gerekli,PASS
+dnd_2024,Elf,Circle of the Moon,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,6,3,6,0.5,True,False,3,10,0,True,True,True,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,7,3,6,0.5,True,False,3,11,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,8,3,8,1,True,True,3,12,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,9,3,8,1,True,True,3,14,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,10,3,8,1,True,True,4,15,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,11,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,12,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,13,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,14,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,15,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,16,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,17,4,8,1,True,True,4,19,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,18,4,8,1,True,True,4,20,0,True,True,True,True,True,True,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,19,4,8,1,True,True,4,21,0,True,True,True,True,True,True,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Elf,Circle of the Moon,20,4,8,1,True,True,4,22,0,True,True,True,True,True,True,True,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Land,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,6,3,6,0.5,True,False,3,10,3,True,True,True,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,7,3,6,0.5,True,False,3,11,4,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,8,3,8,1,True,True,3,12,4,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,9,3,8,1,True,True,3,14,5,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,10,3,8,1,True,True,4,15,5,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,11,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,12,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,13,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,14,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,15,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,16,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,17,4,8,1,True,True,4,19,9,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,18,4,8,1,True,True,4,20,9,True,True,True,True,True,True,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,19,4,8,1,True,True,4,21,10,True,True,True,True,True,True,False,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Land,20,4,8,1,True,True,4,22,10,True,True,True,True,True,True,True,Species alt seçimi gerekli,PASS
+dnd_2024,Gnome,Circle of the Moon,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,6,3,6,0.5,True,False,3,10,0,True,True,True,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,7,3,6,0.5,True,False,3,11,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,8,3,8,1,True,True,3,12,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,9,3,8,1,True,True,3,14,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,10,3,8,1,True,True,4,15,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,11,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,12,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,13,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,14,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,15,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,16,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,17,4,8,1,True,True,4,19,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,18,4,8,1,True,True,4,20,0,True,True,True,True,True,True,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,19,4,8,1,True,True,4,21,0,True,True,True,True,True,True,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Gnome,Circle of the Moon,20,4,8,1,True,True,4,22,0,True,True,True,True,True,True,True,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Land,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,6,3,6,0.5,True,False,3,10,3,True,True,True,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,7,3,6,0.5,True,False,3,11,4,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,8,3,8,1,True,True,3,12,4,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,9,3,8,1,True,True,3,14,5,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,10,3,8,1,True,True,4,15,5,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,11,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,12,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,13,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,14,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,15,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,16,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,17,4,8,1,True,True,4,19,9,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,18,4,8,1,True,True,4,20,9,True,True,True,True,True,True,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,19,4,8,1,True,True,4,21,10,True,True,True,True,True,True,False,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Land,20,4,8,1,True,True,4,22,10,True,True,True,True,True,True,True,Species alt seçimi gerekli,PASS
+dnd_2024,Goliath,Circle of the Moon,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,6,3,6,0.5,True,False,3,10,0,True,True,True,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,7,3,6,0.5,True,False,3,11,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,8,3,8,1,True,True,3,12,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,9,3,8,1,True,True,3,14,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,10,3,8,1,True,True,4,15,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,11,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,12,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,13,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,14,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,15,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,16,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,17,4,8,1,True,True,4,19,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,18,4,8,1,True,True,4,20,0,True,True,True,True,True,True,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,19,4,8,1,True,True,4,21,0,True,True,True,True,True,True,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Goliath,Circle of the Moon,20,4,8,1,True,True,4,22,0,True,True,True,True,True,True,True,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Land,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,6,3,6,0.5,True,False,3,10,3,True,True,True,False,False,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,7,3,6,0.5,True,False,3,11,4,True,True,True,True,False,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,8,3,8,1,True,True,3,12,4,True,True,True,True,False,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,9,3,8,1,True,True,3,14,5,True,True,True,True,False,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,10,3,8,1,True,True,4,15,5,True,True,True,True,False,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,11,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,12,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,13,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,14,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,15,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,16,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,17,4,8,1,True,True,4,19,9,True,True,True,True,True,False,False,,PASS
+dnd_2024,Halfling,Circle of the Land,18,4,8,1,True,True,4,20,9,True,True,True,True,True,True,False,,PASS
+dnd_2024,Halfling,Circle of the Land,19,4,8,1,True,True,4,21,10,True,True,True,True,True,True,False,,PASS
+dnd_2024,Halfling,Circle of the Land,20,4,8,1,True,True,4,22,10,True,True,True,True,True,True,True,,PASS
+dnd_2024,Halfling,Circle of the Moon,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,6,3,6,0.5,True,False,3,10,0,True,True,True,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,7,3,6,0.5,True,False,3,11,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,8,3,8,1,True,True,3,12,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,9,3,8,1,True,True,3,14,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,10,3,8,1,True,True,4,15,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,11,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,12,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,13,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,14,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,15,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,16,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,17,4,8,1,True,True,4,19,0,True,True,True,True,True,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,18,4,8,1,True,True,4,20,0,True,True,True,True,True,True,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,19,4,8,1,True,True,4,21,0,True,True,True,True,True,True,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Halfling,Circle of the Moon,20,4,8,1,True,True,4,22,0,True,True,True,True,True,True,True,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Land,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,6,3,6,0.5,True,False,3,10,3,True,True,True,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,7,3,6,0.5,True,False,3,11,4,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,8,3,8,1,True,True,3,12,4,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,9,3,8,1,True,True,3,14,5,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,10,3,8,1,True,True,4,15,5,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,11,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,12,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,13,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,14,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,15,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,16,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,17,4,8,1,True,True,4,19,9,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,18,4,8,1,True,True,4,20,9,True,True,True,True,True,True,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,19,4,8,1,True,True,4,21,10,True,True,True,True,True,True,False,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Land,20,4,8,1,True,True,4,22,10,True,True,True,True,True,True,True,Species alt seçimi gerekli,PASS
+dnd_2024,Human,Circle of the Moon,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,6,3,6,0.5,True,False,3,10,0,True,True,True,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,7,3,6,0.5,True,False,3,11,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,8,3,8,1,True,True,3,12,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,9,3,8,1,True,True,3,14,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,10,3,8,1,True,True,4,15,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,11,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,12,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,13,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,14,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,15,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,16,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,17,4,8,1,True,True,4,19,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,18,4,8,1,True,True,4,20,0,True,True,True,True,True,True,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,19,4,8,1,True,True,4,21,0,True,True,True,True,True,True,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Human,Circle of the Moon,20,4,8,1,True,True,4,22,0,True,True,True,True,True,True,True,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Land,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,6,3,6,0.5,True,False,3,10,3,True,True,True,False,False,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,7,3,6,0.5,True,False,3,11,4,True,True,True,True,False,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,8,3,8,1,True,True,3,12,4,True,True,True,True,False,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,9,3,8,1,True,True,3,14,5,True,True,True,True,False,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,10,3,8,1,True,True,4,15,5,True,True,True,True,False,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,11,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,12,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,13,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,14,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,15,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,16,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,17,4,8,1,True,True,4,19,9,True,True,True,True,True,False,False,,PASS
+dnd_2024,Orc,Circle of the Land,18,4,8,1,True,True,4,20,9,True,True,True,True,True,True,False,,PASS
+dnd_2024,Orc,Circle of the Land,19,4,8,1,True,True,4,21,10,True,True,True,True,True,True,False,,PASS
+dnd_2024,Orc,Circle of the Land,20,4,8,1,True,True,4,22,10,True,True,True,True,True,True,True,,PASS
+dnd_2024,Orc,Circle of the Moon,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,6,3,6,0.5,True,False,3,10,0,True,True,True,False,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,7,3,6,0.5,True,False,3,11,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,8,3,8,1,True,True,3,12,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,9,3,8,1,True,True,3,14,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,10,3,8,1,True,True,4,15,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,11,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,12,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,13,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,14,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,15,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,16,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,17,4,8,1,True,True,4,19,0,True,True,True,True,True,False,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,18,4,8,1,True,True,4,20,0,True,True,True,True,True,True,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,19,4,8,1,True,True,4,21,0,True,True,True,True,True,True,False,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Orc,Circle of the Moon,20,4,8,1,True,True,4,22,0,True,True,True,True,True,True,True,Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Land,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,6,3,6,0.5,True,False,3,10,3,True,True,True,False,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,7,3,6,0.5,True,False,3,11,4,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,8,3,8,1,True,True,3,12,4,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,9,3,8,1,True,True,3,14,5,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,10,3,8,1,True,True,4,15,5,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,11,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,12,3,8,1,True,True,4,16,6,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,13,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,14,3,8,1,True,True,4,17,7,True,True,True,True,False,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,15,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,16,3,8,1,True,True,4,18,8,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,17,4,8,1,True,True,4,19,9,True,True,True,True,True,False,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,18,4,8,1,True,True,4,20,9,True,True,True,True,True,True,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,19,4,8,1,True,True,4,21,10,True,True,True,True,True,True,False,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Land,20,4,8,1,True,True,4,22,10,True,True,True,True,True,True,True,Species alt seçimi gerekli,PASS
+dnd_2024,Tiefling,Circle of the Moon,1,0,0,0,False,False,2,4,0,True,False,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,2,2,4,0.25,True,False,2,5,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,3,2,4,0.25,True,False,2,6,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,4,2,6,0.5,True,False,3,7,0,True,True,False,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,5,2,6,0.5,True,False,3,9,0,True,True,True,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,6,3,6,0.5,True,False,3,10,0,True,True,True,False,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,7,3,6,0.5,True,False,3,11,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,8,3,8,1,True,True,3,12,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,9,3,8,1,True,True,3,14,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,10,3,8,1,True,True,4,15,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,11,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,12,3,8,1,True,True,4,16,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,13,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,14,3,8,1,True,True,4,17,0,True,True,True,True,False,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,15,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,16,3,8,1,True,True,4,18,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,17,4,8,1,True,True,4,19,0,True,True,True,True,True,False,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,18,4,8,1,True,True,4,20,0,True,True,True,True,True,True,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,19,4,8,1,True,True,4,21,0,True,True,True,True,True,True,False,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS
+dnd_2024,Tiefling,Circle of the Moon,20,4,8,1,True,True,4,22,0,True,True,True,True,True,True,True,Species alt seçimi gerekli | Tam PHB lisans/source kontrolü,PASS

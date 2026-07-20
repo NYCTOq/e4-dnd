@@ -1,0 +1,761 @@
+﻿ruleset,race_species,subclass,level,inspiration_die,recovery,cantrips,spell_limit,spell_mode,expertise_count,song_of_rest_die,magical_secrets_count,countercharm,initiative_recovery,words_of_creation,status,warnings
+dnd_2014,Human,College of Lore,1,d6,long,2,4,known,0,,0,,0,False,PASS,
+dnd_2014,Human,College of Lore,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,
+dnd_2014,Human,College of Lore,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,
+dnd_2014,Human,College of Lore,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,
+dnd_2014,Human,College of Lore,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,
+dnd_2014,Human,College of Lore,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Human,College of Lore,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Human,College of Lore,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Human,College of Lore,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,
+dnd_2014,Human,College of Lore,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Human,College of Lore,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Human,College of Lore,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Human,College of Lore,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,
+dnd_2014,Human,College of Lore,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Human,College of Lore,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Human,College of Lore,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Human,College of Lore,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,
+dnd_2014,Human,College of Lore,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Human,College of Lore,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Human,College of Lore,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,
+dnd_2014,Human,College of Valor,1,d6,long,2,4,known,0,,0,,0,False,PASS,
+dnd_2014,Human,College of Valor,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,
+dnd_2014,Human,College of Valor,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,
+dnd_2014,Human,College of Valor,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,
+dnd_2014,Human,College of Valor,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,
+dnd_2014,Human,College of Valor,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Human,College of Valor,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Human,College of Valor,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Human,College of Valor,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,
+dnd_2014,Human,College of Valor,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Human,College of Valor,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Human,College of Valor,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Human,College of Valor,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,
+dnd_2014,Human,College of Valor,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Human,College of Valor,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Human,College of Valor,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Human,College of Valor,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,
+dnd_2014,Human,College of Valor,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Human,College of Valor,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Human,College of Valor,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,
+dnd_2014,Dwarf,College of Lore,1,d6,long,2,4,known,0,,0,,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Lore,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,1,d6,long,2,4,known,0,,0,,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Dwarf,College of Valor,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,1,d6,long,2,4,known,0,,0,,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Lore,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,1,d6,long,2,4,known,0,,0,,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Elf,College of Valor,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,1,d6,long,2,4,known,0,,0,,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Lore,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,1,d6,long,2,4,known,0,,0,,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Halfling,College of Valor,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,Subrace choice required
+dnd_2014,Dragonborn,College of Lore,1,d6,long,2,4,known,0,,0,,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Lore,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,
+dnd_2014,Dragonborn,College of Valor,1,d6,long,2,4,known,0,,0,,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Dragonborn,College of Valor,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,
+dnd_2014,Gnome,College of Lore,1,d6,long,2,4,known,0,,0,,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Lore,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,1,d6,long,2,4,known,0,,0,,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,Subrace choice required
+dnd_2014,Gnome,College of Valor,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,Subrace choice required
+dnd_2014,Half-Elf,College of Lore,1,d6,long,2,4,known,0,,0,,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Lore,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,1,d6,long,2,4,known,0,,0,,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Elf,College of Valor,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,"Flexible ability, skill and language choices"
+dnd_2014,Half-Orc,College of Lore,1,d6,long,2,4,known,0,,0,,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Lore,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,
+dnd_2014,Half-Orc,College of Valor,1,d6,long,2,4,known,0,,0,,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Half-Orc,College of Valor,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,
+dnd_2014,Tiefling,College of Lore,1,d6,long,2,4,known,0,,0,,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Tiefling,College of Lore,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,
+dnd_2014,Tiefling,College of Valor,1,d6,long,2,4,known,0,,0,,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,2,d6,long,2,5,known,0,d6,0,,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,3,d6,long,2,6,known,2,d6,0,,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,4,d6,long,3,7,known,2,d6,0,,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,5,d8,short,3,8,known,2,d6,0,,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,6,d8,short,3,9,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,7,d8,short,3,10,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,8,d8,short,3,11,known,2,d6,0,action,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,9,d8,short,3,12,known,2,d8,0,action,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,10,d10,short,4,14,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,11,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,12,d10,short,4,15,known,4,d8,2,action,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,13,d10,short,4,16,known,4,d10,2,action,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,14,d10,short,4,18,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,15,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,16,d12,short,4,19,known,4,d10,4,action,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,17,d12,short,4,20,known,4,d12,4,action,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,18,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,19,d12,short,4,22,known,4,d12,6,action,0,False,PASS,
+dnd_2014,Tiefling,College of Valor,20,d12,short,4,22,known,4,d12,6,action,1,False,PASS,
+dnd_2024,Aasimar,College of Lore,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Lore,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Aasimar,College of Valor,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Lore,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Dragonborn,College of Valor,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,Species configuration choice required
+dnd_2024,Dwarf,College of Lore,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Lore,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,
+dnd_2024,Dwarf,College of Lore,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,
+dnd_2024,Dwarf,College of Lore,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,
+dnd_2024,Dwarf,College of Valor,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Dwarf,College of Valor,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,
+dnd_2024,Dwarf,College of Valor,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,
+dnd_2024,Dwarf,College of Valor,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,
+dnd_2024,Elf,College of Lore,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Lore,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Elf,College of Valor,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Lore,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Gnome,College of Valor,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Lore,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Goliath,College of Valor,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,Species configuration choice required
+dnd_2024,Halfling,College of Lore,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,
+dnd_2024,Halfling,College of Lore,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,
+dnd_2024,Halfling,College of Lore,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,
+dnd_2024,Halfling,College of Lore,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,
+dnd_2024,Halfling,College of Lore,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,
+dnd_2024,Halfling,College of Lore,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,
+dnd_2024,Halfling,College of Lore,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Lore,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Lore,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Lore,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Lore,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Lore,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Lore,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Lore,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Lore,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Lore,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Lore,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Lore,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,
+dnd_2024,Halfling,College of Lore,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,
+dnd_2024,Halfling,College of Lore,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,
+dnd_2024,Halfling,College of Valor,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,
+dnd_2024,Halfling,College of Valor,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,
+dnd_2024,Halfling,College of Valor,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,
+dnd_2024,Halfling,College of Valor,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,
+dnd_2024,Halfling,College of Valor,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,
+dnd_2024,Halfling,College of Valor,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,
+dnd_2024,Halfling,College of Valor,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Valor,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Valor,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Valor,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Valor,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Valor,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Valor,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Valor,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Valor,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Valor,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Valor,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Halfling,College of Valor,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,
+dnd_2024,Halfling,College of Valor,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,
+dnd_2024,Halfling,College of Valor,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,
+dnd_2024,Human,College of Lore,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Lore,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Human,College of Valor,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,Species configuration choice required
+dnd_2024,Orc,College of Lore,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,
+dnd_2024,Orc,College of Lore,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,
+dnd_2024,Orc,College of Lore,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,
+dnd_2024,Orc,College of Lore,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,
+dnd_2024,Orc,College of Lore,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,
+dnd_2024,Orc,College of Lore,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,
+dnd_2024,Orc,College of Lore,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Lore,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Lore,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Lore,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Lore,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Lore,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Lore,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Lore,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Lore,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Lore,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Lore,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Lore,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,
+dnd_2024,Orc,College of Lore,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,
+dnd_2024,Orc,College of Lore,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,
+dnd_2024,Orc,College of Valor,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,
+dnd_2024,Orc,College of Valor,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,
+dnd_2024,Orc,College of Valor,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,
+dnd_2024,Orc,College of Valor,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,
+dnd_2024,Orc,College of Valor,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,
+dnd_2024,Orc,College of Valor,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,
+dnd_2024,Orc,College of Valor,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Valor,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Valor,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Valor,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Valor,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Valor,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Valor,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Valor,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Valor,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Valor,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Valor,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,
+dnd_2024,Orc,College of Valor,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,
+dnd_2024,Orc,College of Valor,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,
+dnd_2024,Orc,College of Valor,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,
+dnd_2024,Tiefling,College of Lore,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Lore,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,1,d6,long,2,4,prepared,0,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,2,d6,long,2,5,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,3,d6,long,2,6,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,4,d6,long,3,7,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,5,d8,short,3,9,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,6,d8,short,3,10,prepared,2,,0,,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,7,d8,short,3,11,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,8,d8,short,3,12,prepared,2,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,9,d8,short,3,14,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,10,d10,short,4,15,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,11,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,12,d10,short,4,16,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,13,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,14,d10,short,4,17,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,15,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,16,d12,short,4,18,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,17,d12,short,4,19,prepared,4,,0,reaction,0,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,18,d12,short,4,20,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,19,d12,short,4,21,prepared,4,,0,reaction,2,False,PASS,Species configuration choice required
+dnd_2024,Tiefling,College of Valor,20,d12,short,4,22,prepared,4,,0,reaction,2,True,PASS,Species configuration choice required

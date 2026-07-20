@@ -7,26 +7,26 @@ export type ClassFeatureAction = {
   resourceId?: string; summary: string;
 };
 
-const resource = (id: string, name: string, max: number, recovery: ResourceRecovery): CharacterResource => ({ id, name, max: Math.max(1, Math.floor(max)), used: 0, recovery });
+const resource = (id: string, name: string, max: number, recovery: ResourceRecovery, extras: Partial<CharacterResource> = {}): CharacterResource => ({ id, name, max: Math.max(1, Math.floor(max)), used: 0, recovery, ...extras });
 const modifier = (score: number) => Math.max(1, Math.floor((score - 10) / 2));
 
 export function getClassResources(className: string, level: number, abilities: AbilityScores, ruleset: RulesetId, subclass = ""): CharacterResource[] {
   const key = className.trim().toLowerCase();
   const safeLevel = Math.max(1, Math.min(20, Math.floor(level)));
   switch (key) {
-    case "barbarian": return [resource("rage", "Rage", safeLevel >= 17 ? 6 : safeLevel >= 12 ? 5 : safeLevel >= 6 ? 4 : safeLevel >= 3 ? 3 : 2, "long")];
+    case "barbarian": { const max = safeLevel >= 17 ? 6 : safeLevel >= 12 ? 5 : safeLevel >= 6 ? 4 : safeLevel >= 3 ? 3 : 2; return [resource("rage", "Rage", max, "long", ruleset === "dnd_2014" && safeLevel === 20 ? { unlimited: true } : ruleset === "dnd_2024" ? { shortRecoveryAmount: 1 } : {})]; }
     case "bard": return [resource("bardic-inspiration", "Bardic Inspiration", modifier(abilities.cha), safeLevel >= 5 ? "short" : "long")];
-    case "cleric": return safeLevel >= 2 ? [resource("channel-divinity", "Channel Divinity", safeLevel >= 18 ? 3 : safeLevel >= 6 ? 2 : 1, "short")] : [];
-    case "druid": return safeLevel >= 2 ? [resource("wild-shape", "Wild Shape", ruleset === "dnd_2024" ? (safeLevel >= 17 ? 4 : safeLevel >= 6 ? 3 : 2) : 2, "short")] : [];
+    case "cleric": return safeLevel >= 2 ? [resource("channel-divinity", "Channel Divinity", ruleset === "dnd_2024" ? (safeLevel >= 18 ? 4 : safeLevel >= 6 ? 3 : 2) : (safeLevel >= 18 ? 3 : safeLevel >= 6 ? 2 : 1), "short", ruleset === "dnd_2024" ? { shortRecoveryAmount: 1 } : {})] : [];
+    case "druid": return safeLevel >= 2 ? [resource("wild-shape", "Wild Shape", ruleset === "dnd_2024" ? (safeLevel >= 17 ? 4 : safeLevel >= 6 ? 3 : 2) : 2, "short", ruleset === "dnd_2014" && safeLevel === 20 ? { unlimited: true } : ruleset === "dnd_2024" ? { shortRecoveryAmount: 1 } : {})] : [];
     case "fighter": return [
-      resource("second-wind", "Second Wind", ruleset === "dnd_2024" ? (safeLevel >= 10 ? 4 : safeLevel >= 4 ? 3 : 2) : 1, "short"),
+      resource("second-wind", "Second Wind", ruleset === "dnd_2024" ? (safeLevel >= 10 ? 4 : safeLevel >= 4 ? 3 : 2) : 1, "short", ruleset === "dnd_2024" ? { shortRecoveryAmount: 1 } : {}),
       ...(safeLevel >= 2 ? [resource("action-surge", "Action Surge", safeLevel >= 17 ? 2 : 1, "short")] : []),
       ...(safeLevel >= 9 ? [resource("indomitable", "Indomitable", safeLevel >= 17 ? 3 : safeLevel >= 13 ? 2 : 1, "long")] : []),
       ...(isBattleMaster(className,subclass)&&safeLevel>=3?[resource("superiority-dice","Superiority Dice",getSuperiorityDiceCount(safeLevel),"short")]:[]),
     ];
     case "monk": return safeLevel >= 2 ? [resource("focus-points", ruleset === "dnd_2024" ? "Focus Points" : "Ki Points", safeLevel, "short")] : [];
-    case "paladin": return [resource("lay-on-hands", "Lay on Hands", safeLevel * 5, "long"), ...(safeLevel >= 3 ? [resource("channel-divinity", "Channel Divinity", 1, "short")] : [])];
-    case "ranger": return ruleset === "dnd_2024" ? [resource("favored-enemy", "Favored Enemy", modifier(abilities.wis), "long")] : [];
+    case "paladin": return [resource("lay-on-hands", "Lay on Hands", safeLevel * 5, "long"), ...(safeLevel >= 3 ? [resource("channel-divinity", "Channel Divinity", ruleset === "dnd_2024" ? (safeLevel >= 11 ? 3 : 2) : 1, "short", ruleset === "dnd_2024" ? { shortRecoveryAmount: 1 } : {})] : [])];
+    case "ranger": return ruleset === "dnd_2024" ? [resource("favored-enemy", "Favored Enemy", safeLevel >= 17 ? 6 : safeLevel >= 13 ? 5 : safeLevel >= 9 ? 4 : safeLevel >= 5 ? 3 : 2, "long")] : [];
     case "rogue": return safeLevel >= 20 ? [resource("stroke-of-luck", "Stroke of Luck", 1, "short")] : [];
     case "sorcerer": return safeLevel >= 2 ? [resource("sorcery-points", "Sorcery Points", safeLevel, "long")] : [];
     case "warlock": { const arcanumCount=getMysticArcanumLevels(className,safeLevel,ruleset).length;return arcanumCount?[resource("mystic-arcanum", "Mystic Arcanum", arcanumCount, "long")]:[]; }
@@ -53,7 +53,7 @@ export function getClassFeatureActions(className: string, level: number, ruleset
     druid: [{ id: "wild-shape", name: "Wild Shape", actionType: ruleset === "dnd_2024" ? "Bonus Action" : "Action", resourceId: "wild-shape", summary: "Wild Shape kullanımını harca ve form özelliklerini uygula." }],
     fighter: [{ id: "second-wind", name: "Second Wind", actionType: "Bonus Action", resourceId: "second-wind", summary: "Kendini iyileştirmek için bir kullanım harca." }, ...(level >= 2 ? [{ id: "action-surge", name: "Action Surge", actionType: "Passive", resourceId: "action-surge", summary: "Turunda ek bir Action kazan." } as ClassFeatureAction] : [])],
     monk: level >= 2 ? [{ id: "flurry", name: "Flurry of Blows", actionType: "Bonus Action", resourceId: "focus-points", summary: "Focus/Ki harcayarak ilave Unarmed Strike yap." }] : [],
-    paladin: [{ id: "lay-on-hands", name: "Lay on Hands", actionType: "Action", resourceId: "lay-on-hands", summary: "Havuzdan puan harcayarak hedefi iyileştir." }],
+    paladin: [{ id: "lay-on-hands", name: "Lay on Hands", actionType: ruleset === "dnd_2024" ? "Bonus Action" : "Action", resourceId: "lay-on-hands", summary: "Havuzdan puan harcayarak hedefi iyileştir." }],
     ranger: ruleset === "dnd_2024" ? [{ id: "favored-enemy", name: "Favored Enemy", actionType: "Bonus Action", resourceId: "favored-enemy", summary: "Ücretsiz Hunter's Mark kullanımını takip et." }] : [],
     rogue: [], sorcerer: level >= 2 ? [{ id: "font-of-magic", name: "Font of Magic", actionType: "Bonus Action", resourceId: "sorcery-points", summary: "Sorcery Points ve spell slotları arasında dönüşüm yap." }] : [],
     warlock: [], wizard: [{ id: "arcane-recovery", name: "Arcane Recovery", actionType: "Passive", resourceId: "arcane-recovery", summary: "Short Rest sonrasında sınırlı spell slot yenile." }],

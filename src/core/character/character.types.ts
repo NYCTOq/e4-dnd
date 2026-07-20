@@ -39,6 +39,8 @@ export interface CharacterResource {
   max: number;
   used: number;
   recovery: ResourceRecovery;
+  unlimited?: boolean;
+  shortRecoveryAmount?: number;
 }
 export interface CharacterClassLevel { className:string; level:number; subclass?:string }
 export interface CharacterSpellEffect{ id:string;spellId:string;name:string;remainingRounds:number|null;concentration:boolean;summary:string }
@@ -80,6 +82,11 @@ export interface Character {
   background: string;
   originAbilityPrimary?: AbilityKey;
   originAbilitySecondary?: AbilityKey;
+  originAbilityTertiary?: AbilityKey;
+  originAbilityMode?: "2-1" | "1-1-1";
+  flexibleRaceAbilityPrimary?: AbilityKey;
+  flexibleRaceAbilitySecondary?: AbilityKey;
+  abilityScoreIncreases?: Partial<Record<AbilityKey, number>>;
   featIds: string[];
   featChoices?: Record<string, string[]>;
   fightingStyleIds?: string[];
@@ -144,6 +151,11 @@ export interface CharacterDraft {
   background: string;
   originAbilityPrimary?: AbilityKey;
   originAbilitySecondary?: AbilityKey;
+  originAbilityTertiary?: AbilityKey;
+  originAbilityMode?: "2-1" | "1-1-1";
+  flexibleRaceAbilityPrimary?: AbilityKey;
+  flexibleRaceAbilitySecondary?: AbilityKey;
+  abilityScoreIncreases?: Partial<Record<AbilityKey, number>>;
   featIds: string[];
   featChoices?: Record<string, string[]>;
   fightingStyleIds?: string[];

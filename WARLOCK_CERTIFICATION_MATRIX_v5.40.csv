@@ -1,0 +1,2421 @@
+﻿Ruleset,Race/Species,Subclass,Level,Pact Slot Level,Pact Slots,Cantrips,Known Spells,Prepared Spells,Invocations,Mystic Arcanum,Magical Cunning Recovery,Status
+2014,Human,The Fiend,1,1,1,2,2,0,0,,0,READY
+2014,Human,The Fiend,2,1,2,2,3,0,2,,0,READY
+2014,Human,The Fiend,3,2,2,2,4,0,2,,0,READY
+2014,Human,The Fiend,4,2,2,3,5,0,2,,0,READY
+2014,Human,The Fiend,5,3,2,3,6,0,3,,0,READY
+2014,Human,The Fiend,6,3,2,3,7,0,3,,0,READY
+2014,Human,The Fiend,7,4,2,3,8,0,4,,0,READY
+2014,Human,The Fiend,8,4,2,3,9,0,4,,0,READY
+2014,Human,The Fiend,9,5,2,3,10,0,5,,0,READY
+2014,Human,The Fiend,10,5,2,4,10,0,5,,0,READY
+2014,Human,The Fiend,11,5,3,4,11,0,5,6,0,READY
+2014,Human,The Fiend,12,5,3,4,11,0,6,6,0,READY
+2014,Human,The Fiend,13,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Fiend,14,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Fiend,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Fiend,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Fiend,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Human,The Fiend,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Human,The Fiend,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Fiend,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Archfey,1,1,1,2,2,0,0,,0,READY
+2014,Human,The Archfey,2,1,2,2,3,0,2,,0,READY
+2014,Human,The Archfey,3,2,2,2,4,0,2,,0,READY
+2014,Human,The Archfey,4,2,2,3,5,0,2,,0,READY
+2014,Human,The Archfey,5,3,2,3,6,0,3,,0,READY
+2014,Human,The Archfey,6,3,2,3,7,0,3,,0,READY
+2014,Human,The Archfey,7,4,2,3,8,0,4,,0,READY
+2014,Human,The Archfey,8,4,2,3,9,0,4,,0,READY
+2014,Human,The Archfey,9,5,2,3,10,0,5,,0,READY
+2014,Human,The Archfey,10,5,2,4,10,0,5,,0,READY
+2014,Human,The Archfey,11,5,3,4,11,0,5,6,0,READY
+2014,Human,The Archfey,12,5,3,4,11,0,6,6,0,READY
+2014,Human,The Archfey,13,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Archfey,14,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Archfey,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Archfey,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Archfey,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Human,The Archfey,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Human,The Archfey,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Archfey,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Celestial,1,1,1,2,2,0,0,,0,READY
+2014,Human,The Celestial,2,1,2,2,3,0,2,,0,READY
+2014,Human,The Celestial,3,2,2,2,4,0,2,,0,READY
+2014,Human,The Celestial,4,2,2,3,5,0,2,,0,READY
+2014,Human,The Celestial,5,3,2,3,6,0,3,,0,READY
+2014,Human,The Celestial,6,3,2,3,7,0,3,,0,READY
+2014,Human,The Celestial,7,4,2,3,8,0,4,,0,READY
+2014,Human,The Celestial,8,4,2,3,9,0,4,,0,READY
+2014,Human,The Celestial,9,5,2,3,10,0,5,,0,READY
+2014,Human,The Celestial,10,5,2,4,10,0,5,,0,READY
+2014,Human,The Celestial,11,5,3,4,11,0,5,6,0,READY
+2014,Human,The Celestial,12,5,3,4,11,0,6,6,0,READY
+2014,Human,The Celestial,13,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Celestial,14,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Celestial,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Celestial,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Celestial,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Human,The Celestial,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Human,The Celestial,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Celestial,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Fathomless,1,1,1,2,2,0,0,,0,READY
+2014,Human,The Fathomless,2,1,2,2,3,0,2,,0,READY
+2014,Human,The Fathomless,3,2,2,2,4,0,2,,0,READY
+2014,Human,The Fathomless,4,2,2,3,5,0,2,,0,READY
+2014,Human,The Fathomless,5,3,2,3,6,0,3,,0,READY
+2014,Human,The Fathomless,6,3,2,3,7,0,3,,0,READY
+2014,Human,The Fathomless,7,4,2,3,8,0,4,,0,READY
+2014,Human,The Fathomless,8,4,2,3,9,0,4,,0,READY
+2014,Human,The Fathomless,9,5,2,3,10,0,5,,0,READY
+2014,Human,The Fathomless,10,5,2,4,10,0,5,,0,READY
+2014,Human,The Fathomless,11,5,3,4,11,0,5,6,0,READY
+2014,Human,The Fathomless,12,5,3,4,11,0,6,6,0,READY
+2014,Human,The Fathomless,13,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Fathomless,14,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Fathomless,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Fathomless,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Fathomless,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Human,The Fathomless,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Human,The Fathomless,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Fathomless,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Genie,1,1,1,2,2,0,0,,0,READY
+2014,Human,The Genie,2,1,2,2,3,0,2,,0,READY
+2014,Human,The Genie,3,2,2,2,4,0,2,,0,READY
+2014,Human,The Genie,4,2,2,3,5,0,2,,0,READY
+2014,Human,The Genie,5,3,2,3,6,0,3,,0,READY
+2014,Human,The Genie,6,3,2,3,7,0,3,,0,READY
+2014,Human,The Genie,7,4,2,3,8,0,4,,0,READY
+2014,Human,The Genie,8,4,2,3,9,0,4,,0,READY
+2014,Human,The Genie,9,5,2,3,10,0,5,,0,READY
+2014,Human,The Genie,10,5,2,4,10,0,5,,0,READY
+2014,Human,The Genie,11,5,3,4,11,0,5,6,0,READY
+2014,Human,The Genie,12,5,3,4,11,0,6,6,0,READY
+2014,Human,The Genie,13,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Genie,14,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Genie,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Genie,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Genie,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Human,The Genie,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Human,The Genie,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Genie,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Great Old One,1,1,1,2,2,0,0,,0,READY
+2014,Human,The Great Old One,2,1,2,2,3,0,2,,0,READY
+2014,Human,The Great Old One,3,2,2,2,4,0,2,,0,READY
+2014,Human,The Great Old One,4,2,2,3,5,0,2,,0,READY
+2014,Human,The Great Old One,5,3,2,3,6,0,3,,0,READY
+2014,Human,The Great Old One,6,3,2,3,7,0,3,,0,READY
+2014,Human,The Great Old One,7,4,2,3,8,0,4,,0,READY
+2014,Human,The Great Old One,8,4,2,3,9,0,4,,0,READY
+2014,Human,The Great Old One,9,5,2,3,10,0,5,,0,READY
+2014,Human,The Great Old One,10,5,2,4,10,0,5,,0,READY
+2014,Human,The Great Old One,11,5,3,4,11,0,5,6,0,READY
+2014,Human,The Great Old One,12,5,3,4,11,0,6,6,0,READY
+2014,Human,The Great Old One,13,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Great Old One,14,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Great Old One,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Great Old One,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Great Old One,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Human,The Great Old One,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Human,The Great Old One,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Great Old One,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Hexblade,1,1,1,2,2,0,0,,0,READY
+2014,Human,The Hexblade,2,1,2,2,3,0,2,,0,READY
+2014,Human,The Hexblade,3,2,2,2,4,0,2,,0,READY
+2014,Human,The Hexblade,4,2,2,3,5,0,2,,0,READY
+2014,Human,The Hexblade,5,3,2,3,6,0,3,,0,READY
+2014,Human,The Hexblade,6,3,2,3,7,0,3,,0,READY
+2014,Human,The Hexblade,7,4,2,3,8,0,4,,0,READY
+2014,Human,The Hexblade,8,4,2,3,9,0,4,,0,READY
+2014,Human,The Hexblade,9,5,2,3,10,0,5,,0,READY
+2014,Human,The Hexblade,10,5,2,4,10,0,5,,0,READY
+2014,Human,The Hexblade,11,5,3,4,11,0,5,6,0,READY
+2014,Human,The Hexblade,12,5,3,4,11,0,6,6,0,READY
+2014,Human,The Hexblade,13,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Hexblade,14,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Hexblade,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Hexblade,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Hexblade,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Human,The Hexblade,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Human,The Hexblade,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Hexblade,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Undead,1,1,1,2,2,0,0,,0,READY
+2014,Human,The Undead,2,1,2,2,3,0,2,,0,READY
+2014,Human,The Undead,3,2,2,2,4,0,2,,0,READY
+2014,Human,The Undead,4,2,2,3,5,0,2,,0,READY
+2014,Human,The Undead,5,3,2,3,6,0,3,,0,READY
+2014,Human,The Undead,6,3,2,3,7,0,3,,0,READY
+2014,Human,The Undead,7,4,2,3,8,0,4,,0,READY
+2014,Human,The Undead,8,4,2,3,9,0,4,,0,READY
+2014,Human,The Undead,9,5,2,3,10,0,5,,0,READY
+2014,Human,The Undead,10,5,2,4,10,0,5,,0,READY
+2014,Human,The Undead,11,5,3,4,11,0,5,6,0,READY
+2014,Human,The Undead,12,5,3,4,11,0,6,6,0,READY
+2014,Human,The Undead,13,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Undead,14,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Undead,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Undead,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Undead,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Human,The Undead,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Human,The Undead,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Undead,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Undying,1,1,1,2,2,0,0,,0,READY
+2014,Human,The Undying,2,1,2,2,3,0,2,,0,READY
+2014,Human,The Undying,3,2,2,2,4,0,2,,0,READY
+2014,Human,The Undying,4,2,2,3,5,0,2,,0,READY
+2014,Human,The Undying,5,3,2,3,6,0,3,,0,READY
+2014,Human,The Undying,6,3,2,3,7,0,3,,0,READY
+2014,Human,The Undying,7,4,2,3,8,0,4,,0,READY
+2014,Human,The Undying,8,4,2,3,9,0,4,,0,READY
+2014,Human,The Undying,9,5,2,3,10,0,5,,0,READY
+2014,Human,The Undying,10,5,2,4,10,0,5,,0,READY
+2014,Human,The Undying,11,5,3,4,11,0,5,6,0,READY
+2014,Human,The Undying,12,5,3,4,11,0,6,6,0,READY
+2014,Human,The Undying,13,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Undying,14,5,3,4,12,0,6,6/7,0,READY
+2014,Human,The Undying,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Undying,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Human,The Undying,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Human,The Undying,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Human,The Undying,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Human,The Undying,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Fiend,1,1,1,2,2,0,0,,0,READY
+2014,Dwarf,The Fiend,2,1,2,2,3,0,2,,0,READY
+2014,Dwarf,The Fiend,3,2,2,2,4,0,2,,0,READY
+2014,Dwarf,The Fiend,4,2,2,3,5,0,2,,0,READY
+2014,Dwarf,The Fiend,5,3,2,3,6,0,3,,0,READY
+2014,Dwarf,The Fiend,6,3,2,3,7,0,3,,0,READY
+2014,Dwarf,The Fiend,7,4,2,3,8,0,4,,0,READY
+2014,Dwarf,The Fiend,8,4,2,3,9,0,4,,0,READY
+2014,Dwarf,The Fiend,9,5,2,3,10,0,5,,0,READY
+2014,Dwarf,The Fiend,10,5,2,4,10,0,5,,0,READY
+2014,Dwarf,The Fiend,11,5,3,4,11,0,5,6,0,READY
+2014,Dwarf,The Fiend,12,5,3,4,11,0,6,6,0,READY
+2014,Dwarf,The Fiend,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Fiend,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Fiend,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Fiend,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Fiend,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dwarf,The Fiend,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Fiend,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Fiend,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Archfey,1,1,1,2,2,0,0,,0,READY
+2014,Dwarf,The Archfey,2,1,2,2,3,0,2,,0,READY
+2014,Dwarf,The Archfey,3,2,2,2,4,0,2,,0,READY
+2014,Dwarf,The Archfey,4,2,2,3,5,0,2,,0,READY
+2014,Dwarf,The Archfey,5,3,2,3,6,0,3,,0,READY
+2014,Dwarf,The Archfey,6,3,2,3,7,0,3,,0,READY
+2014,Dwarf,The Archfey,7,4,2,3,8,0,4,,0,READY
+2014,Dwarf,The Archfey,8,4,2,3,9,0,4,,0,READY
+2014,Dwarf,The Archfey,9,5,2,3,10,0,5,,0,READY
+2014,Dwarf,The Archfey,10,5,2,4,10,0,5,,0,READY
+2014,Dwarf,The Archfey,11,5,3,4,11,0,5,6,0,READY
+2014,Dwarf,The Archfey,12,5,3,4,11,0,6,6,0,READY
+2014,Dwarf,The Archfey,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Archfey,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Archfey,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Archfey,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Archfey,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dwarf,The Archfey,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Archfey,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Archfey,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Celestial,1,1,1,2,2,0,0,,0,READY
+2014,Dwarf,The Celestial,2,1,2,2,3,0,2,,0,READY
+2014,Dwarf,The Celestial,3,2,2,2,4,0,2,,0,READY
+2014,Dwarf,The Celestial,4,2,2,3,5,0,2,,0,READY
+2014,Dwarf,The Celestial,5,3,2,3,6,0,3,,0,READY
+2014,Dwarf,The Celestial,6,3,2,3,7,0,3,,0,READY
+2014,Dwarf,The Celestial,7,4,2,3,8,0,4,,0,READY
+2014,Dwarf,The Celestial,8,4,2,3,9,0,4,,0,READY
+2014,Dwarf,The Celestial,9,5,2,3,10,0,5,,0,READY
+2014,Dwarf,The Celestial,10,5,2,4,10,0,5,,0,READY
+2014,Dwarf,The Celestial,11,5,3,4,11,0,5,6,0,READY
+2014,Dwarf,The Celestial,12,5,3,4,11,0,6,6,0,READY
+2014,Dwarf,The Celestial,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Celestial,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Celestial,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Celestial,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Celestial,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dwarf,The Celestial,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Celestial,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Celestial,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Fathomless,1,1,1,2,2,0,0,,0,READY
+2014,Dwarf,The Fathomless,2,1,2,2,3,0,2,,0,READY
+2014,Dwarf,The Fathomless,3,2,2,2,4,0,2,,0,READY
+2014,Dwarf,The Fathomless,4,2,2,3,5,0,2,,0,READY
+2014,Dwarf,The Fathomless,5,3,2,3,6,0,3,,0,READY
+2014,Dwarf,The Fathomless,6,3,2,3,7,0,3,,0,READY
+2014,Dwarf,The Fathomless,7,4,2,3,8,0,4,,0,READY
+2014,Dwarf,The Fathomless,8,4,2,3,9,0,4,,0,READY
+2014,Dwarf,The Fathomless,9,5,2,3,10,0,5,,0,READY
+2014,Dwarf,The Fathomless,10,5,2,4,10,0,5,,0,READY
+2014,Dwarf,The Fathomless,11,5,3,4,11,0,5,6,0,READY
+2014,Dwarf,The Fathomless,12,5,3,4,11,0,6,6,0,READY
+2014,Dwarf,The Fathomless,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Fathomless,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Fathomless,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Fathomless,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Fathomless,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dwarf,The Fathomless,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Fathomless,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Fathomless,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Genie,1,1,1,2,2,0,0,,0,READY
+2014,Dwarf,The Genie,2,1,2,2,3,0,2,,0,READY
+2014,Dwarf,The Genie,3,2,2,2,4,0,2,,0,READY
+2014,Dwarf,The Genie,4,2,2,3,5,0,2,,0,READY
+2014,Dwarf,The Genie,5,3,2,3,6,0,3,,0,READY
+2014,Dwarf,The Genie,6,3,2,3,7,0,3,,0,READY
+2014,Dwarf,The Genie,7,4,2,3,8,0,4,,0,READY
+2014,Dwarf,The Genie,8,4,2,3,9,0,4,,0,READY
+2014,Dwarf,The Genie,9,5,2,3,10,0,5,,0,READY
+2014,Dwarf,The Genie,10,5,2,4,10,0,5,,0,READY
+2014,Dwarf,The Genie,11,5,3,4,11,0,5,6,0,READY
+2014,Dwarf,The Genie,12,5,3,4,11,0,6,6,0,READY
+2014,Dwarf,The Genie,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Genie,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Genie,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Genie,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Genie,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dwarf,The Genie,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Genie,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Genie,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Great Old One,1,1,1,2,2,0,0,,0,READY
+2014,Dwarf,The Great Old One,2,1,2,2,3,0,2,,0,READY
+2014,Dwarf,The Great Old One,3,2,2,2,4,0,2,,0,READY
+2014,Dwarf,The Great Old One,4,2,2,3,5,0,2,,0,READY
+2014,Dwarf,The Great Old One,5,3,2,3,6,0,3,,0,READY
+2014,Dwarf,The Great Old One,6,3,2,3,7,0,3,,0,READY
+2014,Dwarf,The Great Old One,7,4,2,3,8,0,4,,0,READY
+2014,Dwarf,The Great Old One,8,4,2,3,9,0,4,,0,READY
+2014,Dwarf,The Great Old One,9,5,2,3,10,0,5,,0,READY
+2014,Dwarf,The Great Old One,10,5,2,4,10,0,5,,0,READY
+2014,Dwarf,The Great Old One,11,5,3,4,11,0,5,6,0,READY
+2014,Dwarf,The Great Old One,12,5,3,4,11,0,6,6,0,READY
+2014,Dwarf,The Great Old One,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Great Old One,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Great Old One,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Great Old One,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Great Old One,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dwarf,The Great Old One,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Great Old One,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Great Old One,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Hexblade,1,1,1,2,2,0,0,,0,READY
+2014,Dwarf,The Hexblade,2,1,2,2,3,0,2,,0,READY
+2014,Dwarf,The Hexblade,3,2,2,2,4,0,2,,0,READY
+2014,Dwarf,The Hexblade,4,2,2,3,5,0,2,,0,READY
+2014,Dwarf,The Hexblade,5,3,2,3,6,0,3,,0,READY
+2014,Dwarf,The Hexblade,6,3,2,3,7,0,3,,0,READY
+2014,Dwarf,The Hexblade,7,4,2,3,8,0,4,,0,READY
+2014,Dwarf,The Hexblade,8,4,2,3,9,0,4,,0,READY
+2014,Dwarf,The Hexblade,9,5,2,3,10,0,5,,0,READY
+2014,Dwarf,The Hexblade,10,5,2,4,10,0,5,,0,READY
+2014,Dwarf,The Hexblade,11,5,3,4,11,0,5,6,0,READY
+2014,Dwarf,The Hexblade,12,5,3,4,11,0,6,6,0,READY
+2014,Dwarf,The Hexblade,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Hexblade,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Hexblade,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Hexblade,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Hexblade,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dwarf,The Hexblade,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Hexblade,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Hexblade,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Undead,1,1,1,2,2,0,0,,0,READY
+2014,Dwarf,The Undead,2,1,2,2,3,0,2,,0,READY
+2014,Dwarf,The Undead,3,2,2,2,4,0,2,,0,READY
+2014,Dwarf,The Undead,4,2,2,3,5,0,2,,0,READY
+2014,Dwarf,The Undead,5,3,2,3,6,0,3,,0,READY
+2014,Dwarf,The Undead,6,3,2,3,7,0,3,,0,READY
+2014,Dwarf,The Undead,7,4,2,3,8,0,4,,0,READY
+2014,Dwarf,The Undead,8,4,2,3,9,0,4,,0,READY
+2014,Dwarf,The Undead,9,5,2,3,10,0,5,,0,READY
+2014,Dwarf,The Undead,10,5,2,4,10,0,5,,0,READY
+2014,Dwarf,The Undead,11,5,3,4,11,0,5,6,0,READY
+2014,Dwarf,The Undead,12,5,3,4,11,0,6,6,0,READY
+2014,Dwarf,The Undead,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Undead,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Undead,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Undead,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Undead,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dwarf,The Undead,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Undead,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Undead,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Undying,1,1,1,2,2,0,0,,0,READY
+2014,Dwarf,The Undying,2,1,2,2,3,0,2,,0,READY
+2014,Dwarf,The Undying,3,2,2,2,4,0,2,,0,READY
+2014,Dwarf,The Undying,4,2,2,3,5,0,2,,0,READY
+2014,Dwarf,The Undying,5,3,2,3,6,0,3,,0,READY
+2014,Dwarf,The Undying,6,3,2,3,7,0,3,,0,READY
+2014,Dwarf,The Undying,7,4,2,3,8,0,4,,0,READY
+2014,Dwarf,The Undying,8,4,2,3,9,0,4,,0,READY
+2014,Dwarf,The Undying,9,5,2,3,10,0,5,,0,READY
+2014,Dwarf,The Undying,10,5,2,4,10,0,5,,0,READY
+2014,Dwarf,The Undying,11,5,3,4,11,0,5,6,0,READY
+2014,Dwarf,The Undying,12,5,3,4,11,0,6,6,0,READY
+2014,Dwarf,The Undying,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Undying,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dwarf,The Undying,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Undying,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dwarf,The Undying,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dwarf,The Undying,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Undying,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dwarf,The Undying,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Fiend,1,1,1,2,2,0,0,,0,READY
+2014,Elf,The Fiend,2,1,2,2,3,0,2,,0,READY
+2014,Elf,The Fiend,3,2,2,2,4,0,2,,0,READY
+2014,Elf,The Fiend,4,2,2,3,5,0,2,,0,READY
+2014,Elf,The Fiend,5,3,2,3,6,0,3,,0,READY
+2014,Elf,The Fiend,6,3,2,3,7,0,3,,0,READY
+2014,Elf,The Fiend,7,4,2,3,8,0,4,,0,READY
+2014,Elf,The Fiend,8,4,2,3,9,0,4,,0,READY
+2014,Elf,The Fiend,9,5,2,3,10,0,5,,0,READY
+2014,Elf,The Fiend,10,5,2,4,10,0,5,,0,READY
+2014,Elf,The Fiend,11,5,3,4,11,0,5,6,0,READY
+2014,Elf,The Fiend,12,5,3,4,11,0,6,6,0,READY
+2014,Elf,The Fiend,13,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Fiend,14,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Fiend,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Fiend,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Fiend,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Elf,The Fiend,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Elf,The Fiend,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Fiend,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Archfey,1,1,1,2,2,0,0,,0,READY
+2014,Elf,The Archfey,2,1,2,2,3,0,2,,0,READY
+2014,Elf,The Archfey,3,2,2,2,4,0,2,,0,READY
+2014,Elf,The Archfey,4,2,2,3,5,0,2,,0,READY
+2014,Elf,The Archfey,5,3,2,3,6,0,3,,0,READY
+2014,Elf,The Archfey,6,3,2,3,7,0,3,,0,READY
+2014,Elf,The Archfey,7,4,2,3,8,0,4,,0,READY
+2014,Elf,The Archfey,8,4,2,3,9,0,4,,0,READY
+2014,Elf,The Archfey,9,5,2,3,10,0,5,,0,READY
+2014,Elf,The Archfey,10,5,2,4,10,0,5,,0,READY
+2014,Elf,The Archfey,11,5,3,4,11,0,5,6,0,READY
+2014,Elf,The Archfey,12,5,3,4,11,0,6,6,0,READY
+2014,Elf,The Archfey,13,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Archfey,14,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Archfey,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Archfey,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Archfey,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Elf,The Archfey,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Elf,The Archfey,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Archfey,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Celestial,1,1,1,2,2,0,0,,0,READY
+2014,Elf,The Celestial,2,1,2,2,3,0,2,,0,READY
+2014,Elf,The Celestial,3,2,2,2,4,0,2,,0,READY
+2014,Elf,The Celestial,4,2,2,3,5,0,2,,0,READY
+2014,Elf,The Celestial,5,3,2,3,6,0,3,,0,READY
+2014,Elf,The Celestial,6,3,2,3,7,0,3,,0,READY
+2014,Elf,The Celestial,7,4,2,3,8,0,4,,0,READY
+2014,Elf,The Celestial,8,4,2,3,9,0,4,,0,READY
+2014,Elf,The Celestial,9,5,2,3,10,0,5,,0,READY
+2014,Elf,The Celestial,10,5,2,4,10,0,5,,0,READY
+2014,Elf,The Celestial,11,5,3,4,11,0,5,6,0,READY
+2014,Elf,The Celestial,12,5,3,4,11,0,6,6,0,READY
+2014,Elf,The Celestial,13,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Celestial,14,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Celestial,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Celestial,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Celestial,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Elf,The Celestial,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Elf,The Celestial,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Celestial,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Fathomless,1,1,1,2,2,0,0,,0,READY
+2014,Elf,The Fathomless,2,1,2,2,3,0,2,,0,READY
+2014,Elf,The Fathomless,3,2,2,2,4,0,2,,0,READY
+2014,Elf,The Fathomless,4,2,2,3,5,0,2,,0,READY
+2014,Elf,The Fathomless,5,3,2,3,6,0,3,,0,READY
+2014,Elf,The Fathomless,6,3,2,3,7,0,3,,0,READY
+2014,Elf,The Fathomless,7,4,2,3,8,0,4,,0,READY
+2014,Elf,The Fathomless,8,4,2,3,9,0,4,,0,READY
+2014,Elf,The Fathomless,9,5,2,3,10,0,5,,0,READY
+2014,Elf,The Fathomless,10,5,2,4,10,0,5,,0,READY
+2014,Elf,The Fathomless,11,5,3,4,11,0,5,6,0,READY
+2014,Elf,The Fathomless,12,5,3,4,11,0,6,6,0,READY
+2014,Elf,The Fathomless,13,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Fathomless,14,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Fathomless,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Fathomless,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Fathomless,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Elf,The Fathomless,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Elf,The Fathomless,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Fathomless,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Genie,1,1,1,2,2,0,0,,0,READY
+2014,Elf,The Genie,2,1,2,2,3,0,2,,0,READY
+2014,Elf,The Genie,3,2,2,2,4,0,2,,0,READY
+2014,Elf,The Genie,4,2,2,3,5,0,2,,0,READY
+2014,Elf,The Genie,5,3,2,3,6,0,3,,0,READY
+2014,Elf,The Genie,6,3,2,3,7,0,3,,0,READY
+2014,Elf,The Genie,7,4,2,3,8,0,4,,0,READY
+2014,Elf,The Genie,8,4,2,3,9,0,4,,0,READY
+2014,Elf,The Genie,9,5,2,3,10,0,5,,0,READY
+2014,Elf,The Genie,10,5,2,4,10,0,5,,0,READY
+2014,Elf,The Genie,11,5,3,4,11,0,5,6,0,READY
+2014,Elf,The Genie,12,5,3,4,11,0,6,6,0,READY
+2014,Elf,The Genie,13,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Genie,14,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Genie,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Genie,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Genie,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Elf,The Genie,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Elf,The Genie,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Genie,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Great Old One,1,1,1,2,2,0,0,,0,READY
+2014,Elf,The Great Old One,2,1,2,2,3,0,2,,0,READY
+2014,Elf,The Great Old One,3,2,2,2,4,0,2,,0,READY
+2014,Elf,The Great Old One,4,2,2,3,5,0,2,,0,READY
+2014,Elf,The Great Old One,5,3,2,3,6,0,3,,0,READY
+2014,Elf,The Great Old One,6,3,2,3,7,0,3,,0,READY
+2014,Elf,The Great Old One,7,4,2,3,8,0,4,,0,READY
+2014,Elf,The Great Old One,8,4,2,3,9,0,4,,0,READY
+2014,Elf,The Great Old One,9,5,2,3,10,0,5,,0,READY
+2014,Elf,The Great Old One,10,5,2,4,10,0,5,,0,READY
+2014,Elf,The Great Old One,11,5,3,4,11,0,5,6,0,READY
+2014,Elf,The Great Old One,12,5,3,4,11,0,6,6,0,READY
+2014,Elf,The Great Old One,13,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Great Old One,14,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Great Old One,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Great Old One,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Great Old One,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Elf,The Great Old One,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Elf,The Great Old One,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Great Old One,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Hexblade,1,1,1,2,2,0,0,,0,READY
+2014,Elf,The Hexblade,2,1,2,2,3,0,2,,0,READY
+2014,Elf,The Hexblade,3,2,2,2,4,0,2,,0,READY
+2014,Elf,The Hexblade,4,2,2,3,5,0,2,,0,READY
+2014,Elf,The Hexblade,5,3,2,3,6,0,3,,0,READY
+2014,Elf,The Hexblade,6,3,2,3,7,0,3,,0,READY
+2014,Elf,The Hexblade,7,4,2,3,8,0,4,,0,READY
+2014,Elf,The Hexblade,8,4,2,3,9,0,4,,0,READY
+2014,Elf,The Hexblade,9,5,2,3,10,0,5,,0,READY
+2014,Elf,The Hexblade,10,5,2,4,10,0,5,,0,READY
+2014,Elf,The Hexblade,11,5,3,4,11,0,5,6,0,READY
+2014,Elf,The Hexblade,12,5,3,4,11,0,6,6,0,READY
+2014,Elf,The Hexblade,13,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Hexblade,14,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Hexblade,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Hexblade,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Hexblade,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Elf,The Hexblade,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Elf,The Hexblade,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Hexblade,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Undead,1,1,1,2,2,0,0,,0,READY
+2014,Elf,The Undead,2,1,2,2,3,0,2,,0,READY
+2014,Elf,The Undead,3,2,2,2,4,0,2,,0,READY
+2014,Elf,The Undead,4,2,2,3,5,0,2,,0,READY
+2014,Elf,The Undead,5,3,2,3,6,0,3,,0,READY
+2014,Elf,The Undead,6,3,2,3,7,0,3,,0,READY
+2014,Elf,The Undead,7,4,2,3,8,0,4,,0,READY
+2014,Elf,The Undead,8,4,2,3,9,0,4,,0,READY
+2014,Elf,The Undead,9,5,2,3,10,0,5,,0,READY
+2014,Elf,The Undead,10,5,2,4,10,0,5,,0,READY
+2014,Elf,The Undead,11,5,3,4,11,0,5,6,0,READY
+2014,Elf,The Undead,12,5,3,4,11,0,6,6,0,READY
+2014,Elf,The Undead,13,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Undead,14,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Undead,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Undead,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Undead,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Elf,The Undead,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Elf,The Undead,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Undead,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Undying,1,1,1,2,2,0,0,,0,READY
+2014,Elf,The Undying,2,1,2,2,3,0,2,,0,READY
+2014,Elf,The Undying,3,2,2,2,4,0,2,,0,READY
+2014,Elf,The Undying,4,2,2,3,5,0,2,,0,READY
+2014,Elf,The Undying,5,3,2,3,6,0,3,,0,READY
+2014,Elf,The Undying,6,3,2,3,7,0,3,,0,READY
+2014,Elf,The Undying,7,4,2,3,8,0,4,,0,READY
+2014,Elf,The Undying,8,4,2,3,9,0,4,,0,READY
+2014,Elf,The Undying,9,5,2,3,10,0,5,,0,READY
+2014,Elf,The Undying,10,5,2,4,10,0,5,,0,READY
+2014,Elf,The Undying,11,5,3,4,11,0,5,6,0,READY
+2014,Elf,The Undying,12,5,3,4,11,0,6,6,0,READY
+2014,Elf,The Undying,13,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Undying,14,5,3,4,12,0,6,6/7,0,READY
+2014,Elf,The Undying,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Undying,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Elf,The Undying,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Elf,The Undying,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Elf,The Undying,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Elf,The Undying,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Fiend,1,1,1,2,2,0,0,,0,READY
+2014,Halfling,The Fiend,2,1,2,2,3,0,2,,0,READY
+2014,Halfling,The Fiend,3,2,2,2,4,0,2,,0,READY
+2014,Halfling,The Fiend,4,2,2,3,5,0,2,,0,READY
+2014,Halfling,The Fiend,5,3,2,3,6,0,3,,0,READY
+2014,Halfling,The Fiend,6,3,2,3,7,0,3,,0,READY
+2014,Halfling,The Fiend,7,4,2,3,8,0,4,,0,READY
+2014,Halfling,The Fiend,8,4,2,3,9,0,4,,0,READY
+2014,Halfling,The Fiend,9,5,2,3,10,0,5,,0,READY
+2014,Halfling,The Fiend,10,5,2,4,10,0,5,,0,READY
+2014,Halfling,The Fiend,11,5,3,4,11,0,5,6,0,READY
+2014,Halfling,The Fiend,12,5,3,4,11,0,6,6,0,READY
+2014,Halfling,The Fiend,13,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Fiend,14,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Fiend,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Fiend,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Fiend,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Halfling,The Fiend,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Halfling,The Fiend,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Fiend,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Archfey,1,1,1,2,2,0,0,,0,READY
+2014,Halfling,The Archfey,2,1,2,2,3,0,2,,0,READY
+2014,Halfling,The Archfey,3,2,2,2,4,0,2,,0,READY
+2014,Halfling,The Archfey,4,2,2,3,5,0,2,,0,READY
+2014,Halfling,The Archfey,5,3,2,3,6,0,3,,0,READY
+2014,Halfling,The Archfey,6,3,2,3,7,0,3,,0,READY
+2014,Halfling,The Archfey,7,4,2,3,8,0,4,,0,READY
+2014,Halfling,The Archfey,8,4,2,3,9,0,4,,0,READY
+2014,Halfling,The Archfey,9,5,2,3,10,0,5,,0,READY
+2014,Halfling,The Archfey,10,5,2,4,10,0,5,,0,READY
+2014,Halfling,The Archfey,11,5,3,4,11,0,5,6,0,READY
+2014,Halfling,The Archfey,12,5,3,4,11,0,6,6,0,READY
+2014,Halfling,The Archfey,13,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Archfey,14,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Archfey,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Archfey,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Archfey,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Halfling,The Archfey,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Halfling,The Archfey,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Archfey,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Celestial,1,1,1,2,2,0,0,,0,READY
+2014,Halfling,The Celestial,2,1,2,2,3,0,2,,0,READY
+2014,Halfling,The Celestial,3,2,2,2,4,0,2,,0,READY
+2014,Halfling,The Celestial,4,2,2,3,5,0,2,,0,READY
+2014,Halfling,The Celestial,5,3,2,3,6,0,3,,0,READY
+2014,Halfling,The Celestial,6,3,2,3,7,0,3,,0,READY
+2014,Halfling,The Celestial,7,4,2,3,8,0,4,,0,READY
+2014,Halfling,The Celestial,8,4,2,3,9,0,4,,0,READY
+2014,Halfling,The Celestial,9,5,2,3,10,0,5,,0,READY
+2014,Halfling,The Celestial,10,5,2,4,10,0,5,,0,READY
+2014,Halfling,The Celestial,11,5,3,4,11,0,5,6,0,READY
+2014,Halfling,The Celestial,12,5,3,4,11,0,6,6,0,READY
+2014,Halfling,The Celestial,13,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Celestial,14,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Celestial,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Celestial,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Celestial,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Halfling,The Celestial,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Halfling,The Celestial,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Celestial,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Fathomless,1,1,1,2,2,0,0,,0,READY
+2014,Halfling,The Fathomless,2,1,2,2,3,0,2,,0,READY
+2014,Halfling,The Fathomless,3,2,2,2,4,0,2,,0,READY
+2014,Halfling,The Fathomless,4,2,2,3,5,0,2,,0,READY
+2014,Halfling,The Fathomless,5,3,2,3,6,0,3,,0,READY
+2014,Halfling,The Fathomless,6,3,2,3,7,0,3,,0,READY
+2014,Halfling,The Fathomless,7,4,2,3,8,0,4,,0,READY
+2014,Halfling,The Fathomless,8,4,2,3,9,0,4,,0,READY
+2014,Halfling,The Fathomless,9,5,2,3,10,0,5,,0,READY
+2014,Halfling,The Fathomless,10,5,2,4,10,0,5,,0,READY
+2014,Halfling,The Fathomless,11,5,3,4,11,0,5,6,0,READY
+2014,Halfling,The Fathomless,12,5,3,4,11,0,6,6,0,READY
+2014,Halfling,The Fathomless,13,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Fathomless,14,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Fathomless,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Fathomless,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Fathomless,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Halfling,The Fathomless,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Halfling,The Fathomless,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Fathomless,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Genie,1,1,1,2,2,0,0,,0,READY
+2014,Halfling,The Genie,2,1,2,2,3,0,2,,0,READY
+2014,Halfling,The Genie,3,2,2,2,4,0,2,,0,READY
+2014,Halfling,The Genie,4,2,2,3,5,0,2,,0,READY
+2014,Halfling,The Genie,5,3,2,3,6,0,3,,0,READY
+2014,Halfling,The Genie,6,3,2,3,7,0,3,,0,READY
+2014,Halfling,The Genie,7,4,2,3,8,0,4,,0,READY
+2014,Halfling,The Genie,8,4,2,3,9,0,4,,0,READY
+2014,Halfling,The Genie,9,5,2,3,10,0,5,,0,READY
+2014,Halfling,The Genie,10,5,2,4,10,0,5,,0,READY
+2014,Halfling,The Genie,11,5,3,4,11,0,5,6,0,READY
+2014,Halfling,The Genie,12,5,3,4,11,0,6,6,0,READY
+2014,Halfling,The Genie,13,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Genie,14,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Genie,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Genie,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Genie,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Halfling,The Genie,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Halfling,The Genie,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Genie,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Great Old One,1,1,1,2,2,0,0,,0,READY
+2014,Halfling,The Great Old One,2,1,2,2,3,0,2,,0,READY
+2014,Halfling,The Great Old One,3,2,2,2,4,0,2,,0,READY
+2014,Halfling,The Great Old One,4,2,2,3,5,0,2,,0,READY
+2014,Halfling,The Great Old One,5,3,2,3,6,0,3,,0,READY
+2014,Halfling,The Great Old One,6,3,2,3,7,0,3,,0,READY
+2014,Halfling,The Great Old One,7,4,2,3,8,0,4,,0,READY
+2014,Halfling,The Great Old One,8,4,2,3,9,0,4,,0,READY
+2014,Halfling,The Great Old One,9,5,2,3,10,0,5,,0,READY
+2014,Halfling,The Great Old One,10,5,2,4,10,0,5,,0,READY
+2014,Halfling,The Great Old One,11,5,3,4,11,0,5,6,0,READY
+2014,Halfling,The Great Old One,12,5,3,4,11,0,6,6,0,READY
+2014,Halfling,The Great Old One,13,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Great Old One,14,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Great Old One,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Great Old One,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Great Old One,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Halfling,The Great Old One,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Halfling,The Great Old One,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Great Old One,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Hexblade,1,1,1,2,2,0,0,,0,READY
+2014,Halfling,The Hexblade,2,1,2,2,3,0,2,,0,READY
+2014,Halfling,The Hexblade,3,2,2,2,4,0,2,,0,READY
+2014,Halfling,The Hexblade,4,2,2,3,5,0,2,,0,READY
+2014,Halfling,The Hexblade,5,3,2,3,6,0,3,,0,READY
+2014,Halfling,The Hexblade,6,3,2,3,7,0,3,,0,READY
+2014,Halfling,The Hexblade,7,4,2,3,8,0,4,,0,READY
+2014,Halfling,The Hexblade,8,4,2,3,9,0,4,,0,READY
+2014,Halfling,The Hexblade,9,5,2,3,10,0,5,,0,READY
+2014,Halfling,The Hexblade,10,5,2,4,10,0,5,,0,READY
+2014,Halfling,The Hexblade,11,5,3,4,11,0,5,6,0,READY
+2014,Halfling,The Hexblade,12,5,3,4,11,0,6,6,0,READY
+2014,Halfling,The Hexblade,13,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Hexblade,14,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Hexblade,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Hexblade,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Hexblade,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Halfling,The Hexblade,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Halfling,The Hexblade,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Hexblade,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Undead,1,1,1,2,2,0,0,,0,READY
+2014,Halfling,The Undead,2,1,2,2,3,0,2,,0,READY
+2014,Halfling,The Undead,3,2,2,2,4,0,2,,0,READY
+2014,Halfling,The Undead,4,2,2,3,5,0,2,,0,READY
+2014,Halfling,The Undead,5,3,2,3,6,0,3,,0,READY
+2014,Halfling,The Undead,6,3,2,3,7,0,3,,0,READY
+2014,Halfling,The Undead,7,4,2,3,8,0,4,,0,READY
+2014,Halfling,The Undead,8,4,2,3,9,0,4,,0,READY
+2014,Halfling,The Undead,9,5,2,3,10,0,5,,0,READY
+2014,Halfling,The Undead,10,5,2,4,10,0,5,,0,READY
+2014,Halfling,The Undead,11,5,3,4,11,0,5,6,0,READY
+2014,Halfling,The Undead,12,5,3,4,11,0,6,6,0,READY
+2014,Halfling,The Undead,13,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Undead,14,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Undead,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Undead,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Undead,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Halfling,The Undead,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Halfling,The Undead,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Undead,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Undying,1,1,1,2,2,0,0,,0,READY
+2014,Halfling,The Undying,2,1,2,2,3,0,2,,0,READY
+2014,Halfling,The Undying,3,2,2,2,4,0,2,,0,READY
+2014,Halfling,The Undying,4,2,2,3,5,0,2,,0,READY
+2014,Halfling,The Undying,5,3,2,3,6,0,3,,0,READY
+2014,Halfling,The Undying,6,3,2,3,7,0,3,,0,READY
+2014,Halfling,The Undying,7,4,2,3,8,0,4,,0,READY
+2014,Halfling,The Undying,8,4,2,3,9,0,4,,0,READY
+2014,Halfling,The Undying,9,5,2,3,10,0,5,,0,READY
+2014,Halfling,The Undying,10,5,2,4,10,0,5,,0,READY
+2014,Halfling,The Undying,11,5,3,4,11,0,5,6,0,READY
+2014,Halfling,The Undying,12,5,3,4,11,0,6,6,0,READY
+2014,Halfling,The Undying,13,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Undying,14,5,3,4,12,0,6,6/7,0,READY
+2014,Halfling,The Undying,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Undying,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Halfling,The Undying,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Halfling,The Undying,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Halfling,The Undying,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Halfling,The Undying,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Fiend,1,1,1,2,2,0,0,,0,READY
+2014,Dragonborn,The Fiend,2,1,2,2,3,0,2,,0,READY
+2014,Dragonborn,The Fiend,3,2,2,2,4,0,2,,0,READY
+2014,Dragonborn,The Fiend,4,2,2,3,5,0,2,,0,READY
+2014,Dragonborn,The Fiend,5,3,2,3,6,0,3,,0,READY
+2014,Dragonborn,The Fiend,6,3,2,3,7,0,3,,0,READY
+2014,Dragonborn,The Fiend,7,4,2,3,8,0,4,,0,READY
+2014,Dragonborn,The Fiend,8,4,2,3,9,0,4,,0,READY
+2014,Dragonborn,The Fiend,9,5,2,3,10,0,5,,0,READY
+2014,Dragonborn,The Fiend,10,5,2,4,10,0,5,,0,READY
+2014,Dragonborn,The Fiend,11,5,3,4,11,0,5,6,0,READY
+2014,Dragonborn,The Fiend,12,5,3,4,11,0,6,6,0,READY
+2014,Dragonborn,The Fiend,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Fiend,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Fiend,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Fiend,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Fiend,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dragonborn,The Fiend,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Fiend,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Fiend,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Archfey,1,1,1,2,2,0,0,,0,READY
+2014,Dragonborn,The Archfey,2,1,2,2,3,0,2,,0,READY
+2014,Dragonborn,The Archfey,3,2,2,2,4,0,2,,0,READY
+2014,Dragonborn,The Archfey,4,2,2,3,5,0,2,,0,READY
+2014,Dragonborn,The Archfey,5,3,2,3,6,0,3,,0,READY
+2014,Dragonborn,The Archfey,6,3,2,3,7,0,3,,0,READY
+2014,Dragonborn,The Archfey,7,4,2,3,8,0,4,,0,READY
+2014,Dragonborn,The Archfey,8,4,2,3,9,0,4,,0,READY
+2014,Dragonborn,The Archfey,9,5,2,3,10,0,5,,0,READY
+2014,Dragonborn,The Archfey,10,5,2,4,10,0,5,,0,READY
+2014,Dragonborn,The Archfey,11,5,3,4,11,0,5,6,0,READY
+2014,Dragonborn,The Archfey,12,5,3,4,11,0,6,6,0,READY
+2014,Dragonborn,The Archfey,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Archfey,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Archfey,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Archfey,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Archfey,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dragonborn,The Archfey,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Archfey,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Archfey,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Celestial,1,1,1,2,2,0,0,,0,READY
+2014,Dragonborn,The Celestial,2,1,2,2,3,0,2,,0,READY
+2014,Dragonborn,The Celestial,3,2,2,2,4,0,2,,0,READY
+2014,Dragonborn,The Celestial,4,2,2,3,5,0,2,,0,READY
+2014,Dragonborn,The Celestial,5,3,2,3,6,0,3,,0,READY
+2014,Dragonborn,The Celestial,6,3,2,3,7,0,3,,0,READY
+2014,Dragonborn,The Celestial,7,4,2,3,8,0,4,,0,READY
+2014,Dragonborn,The Celestial,8,4,2,3,9,0,4,,0,READY
+2014,Dragonborn,The Celestial,9,5,2,3,10,0,5,,0,READY
+2014,Dragonborn,The Celestial,10,5,2,4,10,0,5,,0,READY
+2014,Dragonborn,The Celestial,11,5,3,4,11,0,5,6,0,READY
+2014,Dragonborn,The Celestial,12,5,3,4,11,0,6,6,0,READY
+2014,Dragonborn,The Celestial,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Celestial,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Celestial,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Celestial,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Celestial,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dragonborn,The Celestial,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Celestial,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Celestial,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Fathomless,1,1,1,2,2,0,0,,0,READY
+2014,Dragonborn,The Fathomless,2,1,2,2,3,0,2,,0,READY
+2014,Dragonborn,The Fathomless,3,2,2,2,4,0,2,,0,READY
+2014,Dragonborn,The Fathomless,4,2,2,3,5,0,2,,0,READY
+2014,Dragonborn,The Fathomless,5,3,2,3,6,0,3,,0,READY
+2014,Dragonborn,The Fathomless,6,3,2,3,7,0,3,,0,READY
+2014,Dragonborn,The Fathomless,7,4,2,3,8,0,4,,0,READY
+2014,Dragonborn,The Fathomless,8,4,2,3,9,0,4,,0,READY
+2014,Dragonborn,The Fathomless,9,5,2,3,10,0,5,,0,READY
+2014,Dragonborn,The Fathomless,10,5,2,4,10,0,5,,0,READY
+2014,Dragonborn,The Fathomless,11,5,3,4,11,0,5,6,0,READY
+2014,Dragonborn,The Fathomless,12,5,3,4,11,0,6,6,0,READY
+2014,Dragonborn,The Fathomless,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Fathomless,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Fathomless,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Fathomless,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Fathomless,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dragonborn,The Fathomless,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Fathomless,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Fathomless,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Genie,1,1,1,2,2,0,0,,0,READY
+2014,Dragonborn,The Genie,2,1,2,2,3,0,2,,0,READY
+2014,Dragonborn,The Genie,3,2,2,2,4,0,2,,0,READY
+2014,Dragonborn,The Genie,4,2,2,3,5,0,2,,0,READY
+2014,Dragonborn,The Genie,5,3,2,3,6,0,3,,0,READY
+2014,Dragonborn,The Genie,6,3,2,3,7,0,3,,0,READY
+2014,Dragonborn,The Genie,7,4,2,3,8,0,4,,0,READY
+2014,Dragonborn,The Genie,8,4,2,3,9,0,4,,0,READY
+2014,Dragonborn,The Genie,9,5,2,3,10,0,5,,0,READY
+2014,Dragonborn,The Genie,10,5,2,4,10,0,5,,0,READY
+2014,Dragonborn,The Genie,11,5,3,4,11,0,5,6,0,READY
+2014,Dragonborn,The Genie,12,5,3,4,11,0,6,6,0,READY
+2014,Dragonborn,The Genie,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Genie,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Genie,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Genie,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Genie,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dragonborn,The Genie,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Genie,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Genie,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Great Old One,1,1,1,2,2,0,0,,0,READY
+2014,Dragonborn,The Great Old One,2,1,2,2,3,0,2,,0,READY
+2014,Dragonborn,The Great Old One,3,2,2,2,4,0,2,,0,READY
+2014,Dragonborn,The Great Old One,4,2,2,3,5,0,2,,0,READY
+2014,Dragonborn,The Great Old One,5,3,2,3,6,0,3,,0,READY
+2014,Dragonborn,The Great Old One,6,3,2,3,7,0,3,,0,READY
+2014,Dragonborn,The Great Old One,7,4,2,3,8,0,4,,0,READY
+2014,Dragonborn,The Great Old One,8,4,2,3,9,0,4,,0,READY
+2014,Dragonborn,The Great Old One,9,5,2,3,10,0,5,,0,READY
+2014,Dragonborn,The Great Old One,10,5,2,4,10,0,5,,0,READY
+2014,Dragonborn,The Great Old One,11,5,3,4,11,0,5,6,0,READY
+2014,Dragonborn,The Great Old One,12,5,3,4,11,0,6,6,0,READY
+2014,Dragonborn,The Great Old One,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Great Old One,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Great Old One,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Great Old One,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Great Old One,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dragonborn,The Great Old One,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Great Old One,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Great Old One,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Hexblade,1,1,1,2,2,0,0,,0,READY
+2014,Dragonborn,The Hexblade,2,1,2,2,3,0,2,,0,READY
+2014,Dragonborn,The Hexblade,3,2,2,2,4,0,2,,0,READY
+2014,Dragonborn,The Hexblade,4,2,2,3,5,0,2,,0,READY
+2014,Dragonborn,The Hexblade,5,3,2,3,6,0,3,,0,READY
+2014,Dragonborn,The Hexblade,6,3,2,3,7,0,3,,0,READY
+2014,Dragonborn,The Hexblade,7,4,2,3,8,0,4,,0,READY
+2014,Dragonborn,The Hexblade,8,4,2,3,9,0,4,,0,READY
+2014,Dragonborn,The Hexblade,9,5,2,3,10,0,5,,0,READY
+2014,Dragonborn,The Hexblade,10,5,2,4,10,0,5,,0,READY
+2014,Dragonborn,The Hexblade,11,5,3,4,11,0,5,6,0,READY
+2014,Dragonborn,The Hexblade,12,5,3,4,11,0,6,6,0,READY
+2014,Dragonborn,The Hexblade,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Hexblade,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Hexblade,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Hexblade,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Hexblade,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dragonborn,The Hexblade,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Hexblade,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Hexblade,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Undead,1,1,1,2,2,0,0,,0,READY
+2014,Dragonborn,The Undead,2,1,2,2,3,0,2,,0,READY
+2014,Dragonborn,The Undead,3,2,2,2,4,0,2,,0,READY
+2014,Dragonborn,The Undead,4,2,2,3,5,0,2,,0,READY
+2014,Dragonborn,The Undead,5,3,2,3,6,0,3,,0,READY
+2014,Dragonborn,The Undead,6,3,2,3,7,0,3,,0,READY
+2014,Dragonborn,The Undead,7,4,2,3,8,0,4,,0,READY
+2014,Dragonborn,The Undead,8,4,2,3,9,0,4,,0,READY
+2014,Dragonborn,The Undead,9,5,2,3,10,0,5,,0,READY
+2014,Dragonborn,The Undead,10,5,2,4,10,0,5,,0,READY
+2014,Dragonborn,The Undead,11,5,3,4,11,0,5,6,0,READY
+2014,Dragonborn,The Undead,12,5,3,4,11,0,6,6,0,READY
+2014,Dragonborn,The Undead,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Undead,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Undead,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Undead,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Undead,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dragonborn,The Undead,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Undead,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Undead,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Undying,1,1,1,2,2,0,0,,0,READY
+2014,Dragonborn,The Undying,2,1,2,2,3,0,2,,0,READY
+2014,Dragonborn,The Undying,3,2,2,2,4,0,2,,0,READY
+2014,Dragonborn,The Undying,4,2,2,3,5,0,2,,0,READY
+2014,Dragonborn,The Undying,5,3,2,3,6,0,3,,0,READY
+2014,Dragonborn,The Undying,6,3,2,3,7,0,3,,0,READY
+2014,Dragonborn,The Undying,7,4,2,3,8,0,4,,0,READY
+2014,Dragonborn,The Undying,8,4,2,3,9,0,4,,0,READY
+2014,Dragonborn,The Undying,9,5,2,3,10,0,5,,0,READY
+2014,Dragonborn,The Undying,10,5,2,4,10,0,5,,0,READY
+2014,Dragonborn,The Undying,11,5,3,4,11,0,5,6,0,READY
+2014,Dragonborn,The Undying,12,5,3,4,11,0,6,6,0,READY
+2014,Dragonborn,The Undying,13,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Undying,14,5,3,4,12,0,6,6/7,0,READY
+2014,Dragonborn,The Undying,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Undying,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Dragonborn,The Undying,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Dragonborn,The Undying,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Undying,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Dragonborn,The Undying,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Fiend,1,1,1,2,2,0,0,,0,READY
+2014,Gnome,The Fiend,2,1,2,2,3,0,2,,0,READY
+2014,Gnome,The Fiend,3,2,2,2,4,0,2,,0,READY
+2014,Gnome,The Fiend,4,2,2,3,5,0,2,,0,READY
+2014,Gnome,The Fiend,5,3,2,3,6,0,3,,0,READY
+2014,Gnome,The Fiend,6,3,2,3,7,0,3,,0,READY
+2014,Gnome,The Fiend,7,4,2,3,8,0,4,,0,READY
+2014,Gnome,The Fiend,8,4,2,3,9,0,4,,0,READY
+2014,Gnome,The Fiend,9,5,2,3,10,0,5,,0,READY
+2014,Gnome,The Fiend,10,5,2,4,10,0,5,,0,READY
+2014,Gnome,The Fiend,11,5,3,4,11,0,5,6,0,READY
+2014,Gnome,The Fiend,12,5,3,4,11,0,6,6,0,READY
+2014,Gnome,The Fiend,13,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Fiend,14,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Fiend,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Fiend,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Fiend,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Gnome,The Fiend,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Gnome,The Fiend,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Fiend,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Archfey,1,1,1,2,2,0,0,,0,READY
+2014,Gnome,The Archfey,2,1,2,2,3,0,2,,0,READY
+2014,Gnome,The Archfey,3,2,2,2,4,0,2,,0,READY
+2014,Gnome,The Archfey,4,2,2,3,5,0,2,,0,READY
+2014,Gnome,The Archfey,5,3,2,3,6,0,3,,0,READY
+2014,Gnome,The Archfey,6,3,2,3,7,0,3,,0,READY
+2014,Gnome,The Archfey,7,4,2,3,8,0,4,,0,READY
+2014,Gnome,The Archfey,8,4,2,3,9,0,4,,0,READY
+2014,Gnome,The Archfey,9,5,2,3,10,0,5,,0,READY
+2014,Gnome,The Archfey,10,5,2,4,10,0,5,,0,READY
+2014,Gnome,The Archfey,11,5,3,4,11,0,5,6,0,READY
+2014,Gnome,The Archfey,12,5,3,4,11,0,6,6,0,READY
+2014,Gnome,The Archfey,13,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Archfey,14,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Archfey,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Archfey,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Archfey,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Gnome,The Archfey,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Gnome,The Archfey,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Archfey,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Celestial,1,1,1,2,2,0,0,,0,READY
+2014,Gnome,The Celestial,2,1,2,2,3,0,2,,0,READY
+2014,Gnome,The Celestial,3,2,2,2,4,0,2,,0,READY
+2014,Gnome,The Celestial,4,2,2,3,5,0,2,,0,READY
+2014,Gnome,The Celestial,5,3,2,3,6,0,3,,0,READY
+2014,Gnome,The Celestial,6,3,2,3,7,0,3,,0,READY
+2014,Gnome,The Celestial,7,4,2,3,8,0,4,,0,READY
+2014,Gnome,The Celestial,8,4,2,3,9,0,4,,0,READY
+2014,Gnome,The Celestial,9,5,2,3,10,0,5,,0,READY
+2014,Gnome,The Celestial,10,5,2,4,10,0,5,,0,READY
+2014,Gnome,The Celestial,11,5,3,4,11,0,5,6,0,READY
+2014,Gnome,The Celestial,12,5,3,4,11,0,6,6,0,READY
+2014,Gnome,The Celestial,13,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Celestial,14,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Celestial,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Celestial,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Celestial,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Gnome,The Celestial,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Gnome,The Celestial,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Celestial,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Fathomless,1,1,1,2,2,0,0,,0,READY
+2014,Gnome,The Fathomless,2,1,2,2,3,0,2,,0,READY
+2014,Gnome,The Fathomless,3,2,2,2,4,0,2,,0,READY
+2014,Gnome,The Fathomless,4,2,2,3,5,0,2,,0,READY
+2014,Gnome,The Fathomless,5,3,2,3,6,0,3,,0,READY
+2014,Gnome,The Fathomless,6,3,2,3,7,0,3,,0,READY
+2014,Gnome,The Fathomless,7,4,2,3,8,0,4,,0,READY
+2014,Gnome,The Fathomless,8,4,2,3,9,0,4,,0,READY
+2014,Gnome,The Fathomless,9,5,2,3,10,0,5,,0,READY
+2014,Gnome,The Fathomless,10,5,2,4,10,0,5,,0,READY
+2014,Gnome,The Fathomless,11,5,3,4,11,0,5,6,0,READY
+2014,Gnome,The Fathomless,12,5,3,4,11,0,6,6,0,READY
+2014,Gnome,The Fathomless,13,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Fathomless,14,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Fathomless,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Fathomless,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Fathomless,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Gnome,The Fathomless,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Gnome,The Fathomless,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Fathomless,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Genie,1,1,1,2,2,0,0,,0,READY
+2014,Gnome,The Genie,2,1,2,2,3,0,2,,0,READY
+2014,Gnome,The Genie,3,2,2,2,4,0,2,,0,READY
+2014,Gnome,The Genie,4,2,2,3,5,0,2,,0,READY
+2014,Gnome,The Genie,5,3,2,3,6,0,3,,0,READY
+2014,Gnome,The Genie,6,3,2,3,7,0,3,,0,READY
+2014,Gnome,The Genie,7,4,2,3,8,0,4,,0,READY
+2014,Gnome,The Genie,8,4,2,3,9,0,4,,0,READY
+2014,Gnome,The Genie,9,5,2,3,10,0,5,,0,READY
+2014,Gnome,The Genie,10,5,2,4,10,0,5,,0,READY
+2014,Gnome,The Genie,11,5,3,4,11,0,5,6,0,READY
+2014,Gnome,The Genie,12,5,3,4,11,0,6,6,0,READY
+2014,Gnome,The Genie,13,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Genie,14,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Genie,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Genie,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Genie,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Gnome,The Genie,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Gnome,The Genie,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Genie,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Great Old One,1,1,1,2,2,0,0,,0,READY
+2014,Gnome,The Great Old One,2,1,2,2,3,0,2,,0,READY
+2014,Gnome,The Great Old One,3,2,2,2,4,0,2,,0,READY
+2014,Gnome,The Great Old One,4,2,2,3,5,0,2,,0,READY
+2014,Gnome,The Great Old One,5,3,2,3,6,0,3,,0,READY
+2014,Gnome,The Great Old One,6,3,2,3,7,0,3,,0,READY
+2014,Gnome,The Great Old One,7,4,2,3,8,0,4,,0,READY
+2014,Gnome,The Great Old One,8,4,2,3,9,0,4,,0,READY
+2014,Gnome,The Great Old One,9,5,2,3,10,0,5,,0,READY
+2014,Gnome,The Great Old One,10,5,2,4,10,0,5,,0,READY
+2014,Gnome,The Great Old One,11,5,3,4,11,0,5,6,0,READY
+2014,Gnome,The Great Old One,12,5,3,4,11,0,6,6,0,READY
+2014,Gnome,The Great Old One,13,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Great Old One,14,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Great Old One,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Great Old One,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Great Old One,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Gnome,The Great Old One,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Gnome,The Great Old One,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Great Old One,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Hexblade,1,1,1,2,2,0,0,,0,READY
+2014,Gnome,The Hexblade,2,1,2,2,3,0,2,,0,READY
+2014,Gnome,The Hexblade,3,2,2,2,4,0,2,,0,READY
+2014,Gnome,The Hexblade,4,2,2,3,5,0,2,,0,READY
+2014,Gnome,The Hexblade,5,3,2,3,6,0,3,,0,READY
+2014,Gnome,The Hexblade,6,3,2,3,7,0,3,,0,READY
+2014,Gnome,The Hexblade,7,4,2,3,8,0,4,,0,READY
+2014,Gnome,The Hexblade,8,4,2,3,9,0,4,,0,READY
+2014,Gnome,The Hexblade,9,5,2,3,10,0,5,,0,READY
+2014,Gnome,The Hexblade,10,5,2,4,10,0,5,,0,READY
+2014,Gnome,The Hexblade,11,5,3,4,11,0,5,6,0,READY
+2014,Gnome,The Hexblade,12,5,3,4,11,0,6,6,0,READY
+2014,Gnome,The Hexblade,13,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Hexblade,14,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Hexblade,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Hexblade,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Hexblade,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Gnome,The Hexblade,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Gnome,The Hexblade,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Hexblade,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Undead,1,1,1,2,2,0,0,,0,READY
+2014,Gnome,The Undead,2,1,2,2,3,0,2,,0,READY
+2014,Gnome,The Undead,3,2,2,2,4,0,2,,0,READY
+2014,Gnome,The Undead,4,2,2,3,5,0,2,,0,READY
+2014,Gnome,The Undead,5,3,2,3,6,0,3,,0,READY
+2014,Gnome,The Undead,6,3,2,3,7,0,3,,0,READY
+2014,Gnome,The Undead,7,4,2,3,8,0,4,,0,READY
+2014,Gnome,The Undead,8,4,2,3,9,0,4,,0,READY
+2014,Gnome,The Undead,9,5,2,3,10,0,5,,0,READY
+2014,Gnome,The Undead,10,5,2,4,10,0,5,,0,READY
+2014,Gnome,The Undead,11,5,3,4,11,0,5,6,0,READY
+2014,Gnome,The Undead,12,5,3,4,11,0,6,6,0,READY
+2014,Gnome,The Undead,13,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Undead,14,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Undead,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Undead,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Undead,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Gnome,The Undead,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Gnome,The Undead,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Undead,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Undying,1,1,1,2,2,0,0,,0,READY
+2014,Gnome,The Undying,2,1,2,2,3,0,2,,0,READY
+2014,Gnome,The Undying,3,2,2,2,4,0,2,,0,READY
+2014,Gnome,The Undying,4,2,2,3,5,0,2,,0,READY
+2014,Gnome,The Undying,5,3,2,3,6,0,3,,0,READY
+2014,Gnome,The Undying,6,3,2,3,7,0,3,,0,READY
+2014,Gnome,The Undying,7,4,2,3,8,0,4,,0,READY
+2014,Gnome,The Undying,8,4,2,3,9,0,4,,0,READY
+2014,Gnome,The Undying,9,5,2,3,10,0,5,,0,READY
+2014,Gnome,The Undying,10,5,2,4,10,0,5,,0,READY
+2014,Gnome,The Undying,11,5,3,4,11,0,5,6,0,READY
+2014,Gnome,The Undying,12,5,3,4,11,0,6,6,0,READY
+2014,Gnome,The Undying,13,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Undying,14,5,3,4,12,0,6,6/7,0,READY
+2014,Gnome,The Undying,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Undying,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Gnome,The Undying,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Gnome,The Undying,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Gnome,The Undying,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Gnome,The Undying,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Fiend,1,1,1,2,2,0,0,,0,READY
+2014,Half-Elf,The Fiend,2,1,2,2,3,0,2,,0,READY
+2014,Half-Elf,The Fiend,3,2,2,2,4,0,2,,0,READY
+2014,Half-Elf,The Fiend,4,2,2,3,5,0,2,,0,READY
+2014,Half-Elf,The Fiend,5,3,2,3,6,0,3,,0,READY
+2014,Half-Elf,The Fiend,6,3,2,3,7,0,3,,0,READY
+2014,Half-Elf,The Fiend,7,4,2,3,8,0,4,,0,READY
+2014,Half-Elf,The Fiend,8,4,2,3,9,0,4,,0,READY
+2014,Half-Elf,The Fiend,9,5,2,3,10,0,5,,0,READY
+2014,Half-Elf,The Fiend,10,5,2,4,10,0,5,,0,READY
+2014,Half-Elf,The Fiend,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Elf,The Fiend,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Elf,The Fiend,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Fiend,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Fiend,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Fiend,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Fiend,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Elf,The Fiend,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Fiend,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Fiend,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Archfey,1,1,1,2,2,0,0,,0,READY
+2014,Half-Elf,The Archfey,2,1,2,2,3,0,2,,0,READY
+2014,Half-Elf,The Archfey,3,2,2,2,4,0,2,,0,READY
+2014,Half-Elf,The Archfey,4,2,2,3,5,0,2,,0,READY
+2014,Half-Elf,The Archfey,5,3,2,3,6,0,3,,0,READY
+2014,Half-Elf,The Archfey,6,3,2,3,7,0,3,,0,READY
+2014,Half-Elf,The Archfey,7,4,2,3,8,0,4,,0,READY
+2014,Half-Elf,The Archfey,8,4,2,3,9,0,4,,0,READY
+2014,Half-Elf,The Archfey,9,5,2,3,10,0,5,,0,READY
+2014,Half-Elf,The Archfey,10,5,2,4,10,0,5,,0,READY
+2014,Half-Elf,The Archfey,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Elf,The Archfey,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Elf,The Archfey,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Archfey,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Archfey,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Archfey,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Archfey,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Elf,The Archfey,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Archfey,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Archfey,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Celestial,1,1,1,2,2,0,0,,0,READY
+2014,Half-Elf,The Celestial,2,1,2,2,3,0,2,,0,READY
+2014,Half-Elf,The Celestial,3,2,2,2,4,0,2,,0,READY
+2014,Half-Elf,The Celestial,4,2,2,3,5,0,2,,0,READY
+2014,Half-Elf,The Celestial,5,3,2,3,6,0,3,,0,READY
+2014,Half-Elf,The Celestial,6,3,2,3,7,0,3,,0,READY
+2014,Half-Elf,The Celestial,7,4,2,3,8,0,4,,0,READY
+2014,Half-Elf,The Celestial,8,4,2,3,9,0,4,,0,READY
+2014,Half-Elf,The Celestial,9,5,2,3,10,0,5,,0,READY
+2014,Half-Elf,The Celestial,10,5,2,4,10,0,5,,0,READY
+2014,Half-Elf,The Celestial,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Elf,The Celestial,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Elf,The Celestial,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Celestial,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Celestial,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Celestial,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Celestial,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Elf,The Celestial,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Celestial,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Celestial,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Fathomless,1,1,1,2,2,0,0,,0,READY
+2014,Half-Elf,The Fathomless,2,1,2,2,3,0,2,,0,READY
+2014,Half-Elf,The Fathomless,3,2,2,2,4,0,2,,0,READY
+2014,Half-Elf,The Fathomless,4,2,2,3,5,0,2,,0,READY
+2014,Half-Elf,The Fathomless,5,3,2,3,6,0,3,,0,READY
+2014,Half-Elf,The Fathomless,6,3,2,3,7,0,3,,0,READY
+2014,Half-Elf,The Fathomless,7,4,2,3,8,0,4,,0,READY
+2014,Half-Elf,The Fathomless,8,4,2,3,9,0,4,,0,READY
+2014,Half-Elf,The Fathomless,9,5,2,3,10,0,5,,0,READY
+2014,Half-Elf,The Fathomless,10,5,2,4,10,0,5,,0,READY
+2014,Half-Elf,The Fathomless,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Elf,The Fathomless,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Elf,The Fathomless,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Fathomless,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Fathomless,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Fathomless,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Fathomless,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Elf,The Fathomless,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Fathomless,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Fathomless,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Genie,1,1,1,2,2,0,0,,0,READY
+2014,Half-Elf,The Genie,2,1,2,2,3,0,2,,0,READY
+2014,Half-Elf,The Genie,3,2,2,2,4,0,2,,0,READY
+2014,Half-Elf,The Genie,4,2,2,3,5,0,2,,0,READY
+2014,Half-Elf,The Genie,5,3,2,3,6,0,3,,0,READY
+2014,Half-Elf,The Genie,6,3,2,3,7,0,3,,0,READY
+2014,Half-Elf,The Genie,7,4,2,3,8,0,4,,0,READY
+2014,Half-Elf,The Genie,8,4,2,3,9,0,4,,0,READY
+2014,Half-Elf,The Genie,9,5,2,3,10,0,5,,0,READY
+2014,Half-Elf,The Genie,10,5,2,4,10,0,5,,0,READY
+2014,Half-Elf,The Genie,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Elf,The Genie,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Elf,The Genie,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Genie,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Genie,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Genie,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Genie,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Elf,The Genie,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Genie,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Genie,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Great Old One,1,1,1,2,2,0,0,,0,READY
+2014,Half-Elf,The Great Old One,2,1,2,2,3,0,2,,0,READY
+2014,Half-Elf,The Great Old One,3,2,2,2,4,0,2,,0,READY
+2014,Half-Elf,The Great Old One,4,2,2,3,5,0,2,,0,READY
+2014,Half-Elf,The Great Old One,5,3,2,3,6,0,3,,0,READY
+2014,Half-Elf,The Great Old One,6,3,2,3,7,0,3,,0,READY
+2014,Half-Elf,The Great Old One,7,4,2,3,8,0,4,,0,READY
+2014,Half-Elf,The Great Old One,8,4,2,3,9,0,4,,0,READY
+2014,Half-Elf,The Great Old One,9,5,2,3,10,0,5,,0,READY
+2014,Half-Elf,The Great Old One,10,5,2,4,10,0,5,,0,READY
+2014,Half-Elf,The Great Old One,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Elf,The Great Old One,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Elf,The Great Old One,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Great Old One,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Great Old One,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Great Old One,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Great Old One,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Elf,The Great Old One,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Great Old One,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Great Old One,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Hexblade,1,1,1,2,2,0,0,,0,READY
+2014,Half-Elf,The Hexblade,2,1,2,2,3,0,2,,0,READY
+2014,Half-Elf,The Hexblade,3,2,2,2,4,0,2,,0,READY
+2014,Half-Elf,The Hexblade,4,2,2,3,5,0,2,,0,READY
+2014,Half-Elf,The Hexblade,5,3,2,3,6,0,3,,0,READY
+2014,Half-Elf,The Hexblade,6,3,2,3,7,0,3,,0,READY
+2014,Half-Elf,The Hexblade,7,4,2,3,8,0,4,,0,READY
+2014,Half-Elf,The Hexblade,8,4,2,3,9,0,4,,0,READY
+2014,Half-Elf,The Hexblade,9,5,2,3,10,0,5,,0,READY
+2014,Half-Elf,The Hexblade,10,5,2,4,10,0,5,,0,READY
+2014,Half-Elf,The Hexblade,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Elf,The Hexblade,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Elf,The Hexblade,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Hexblade,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Hexblade,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Hexblade,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Hexblade,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Elf,The Hexblade,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Hexblade,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Hexblade,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Undead,1,1,1,2,2,0,0,,0,READY
+2014,Half-Elf,The Undead,2,1,2,2,3,0,2,,0,READY
+2014,Half-Elf,The Undead,3,2,2,2,4,0,2,,0,READY
+2014,Half-Elf,The Undead,4,2,2,3,5,0,2,,0,READY
+2014,Half-Elf,The Undead,5,3,2,3,6,0,3,,0,READY
+2014,Half-Elf,The Undead,6,3,2,3,7,0,3,,0,READY
+2014,Half-Elf,The Undead,7,4,2,3,8,0,4,,0,READY
+2014,Half-Elf,The Undead,8,4,2,3,9,0,4,,0,READY
+2014,Half-Elf,The Undead,9,5,2,3,10,0,5,,0,READY
+2014,Half-Elf,The Undead,10,5,2,4,10,0,5,,0,READY
+2014,Half-Elf,The Undead,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Elf,The Undead,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Elf,The Undead,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Undead,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Undead,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Undead,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Undead,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Elf,The Undead,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Undead,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Undead,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Undying,1,1,1,2,2,0,0,,0,READY
+2014,Half-Elf,The Undying,2,1,2,2,3,0,2,,0,READY
+2014,Half-Elf,The Undying,3,2,2,2,4,0,2,,0,READY
+2014,Half-Elf,The Undying,4,2,2,3,5,0,2,,0,READY
+2014,Half-Elf,The Undying,5,3,2,3,6,0,3,,0,READY
+2014,Half-Elf,The Undying,6,3,2,3,7,0,3,,0,READY
+2014,Half-Elf,The Undying,7,4,2,3,8,0,4,,0,READY
+2014,Half-Elf,The Undying,8,4,2,3,9,0,4,,0,READY
+2014,Half-Elf,The Undying,9,5,2,3,10,0,5,,0,READY
+2014,Half-Elf,The Undying,10,5,2,4,10,0,5,,0,READY
+2014,Half-Elf,The Undying,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Elf,The Undying,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Elf,The Undying,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Undying,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Elf,The Undying,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Undying,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Elf,The Undying,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Elf,The Undying,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Undying,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Elf,The Undying,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Fiend,1,1,1,2,2,0,0,,0,READY
+2014,Half-Orc,The Fiend,2,1,2,2,3,0,2,,0,READY
+2014,Half-Orc,The Fiend,3,2,2,2,4,0,2,,0,READY
+2014,Half-Orc,The Fiend,4,2,2,3,5,0,2,,0,READY
+2014,Half-Orc,The Fiend,5,3,2,3,6,0,3,,0,READY
+2014,Half-Orc,The Fiend,6,3,2,3,7,0,3,,0,READY
+2014,Half-Orc,The Fiend,7,4,2,3,8,0,4,,0,READY
+2014,Half-Orc,The Fiend,8,4,2,3,9,0,4,,0,READY
+2014,Half-Orc,The Fiend,9,5,2,3,10,0,5,,0,READY
+2014,Half-Orc,The Fiend,10,5,2,4,10,0,5,,0,READY
+2014,Half-Orc,The Fiend,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Orc,The Fiend,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Orc,The Fiend,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Fiend,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Fiend,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Fiend,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Fiend,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Orc,The Fiend,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Fiend,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Fiend,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Archfey,1,1,1,2,2,0,0,,0,READY
+2014,Half-Orc,The Archfey,2,1,2,2,3,0,2,,0,READY
+2014,Half-Orc,The Archfey,3,2,2,2,4,0,2,,0,READY
+2014,Half-Orc,The Archfey,4,2,2,3,5,0,2,,0,READY
+2014,Half-Orc,The Archfey,5,3,2,3,6,0,3,,0,READY
+2014,Half-Orc,The Archfey,6,3,2,3,7,0,3,,0,READY
+2014,Half-Orc,The Archfey,7,4,2,3,8,0,4,,0,READY
+2014,Half-Orc,The Archfey,8,4,2,3,9,0,4,,0,READY
+2014,Half-Orc,The Archfey,9,5,2,3,10,0,5,,0,READY
+2014,Half-Orc,The Archfey,10,5,2,4,10,0,5,,0,READY
+2014,Half-Orc,The Archfey,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Orc,The Archfey,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Orc,The Archfey,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Archfey,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Archfey,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Archfey,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Archfey,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Orc,The Archfey,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Archfey,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Archfey,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Celestial,1,1,1,2,2,0,0,,0,READY
+2014,Half-Orc,The Celestial,2,1,2,2,3,0,2,,0,READY
+2014,Half-Orc,The Celestial,3,2,2,2,4,0,2,,0,READY
+2014,Half-Orc,The Celestial,4,2,2,3,5,0,2,,0,READY
+2014,Half-Orc,The Celestial,5,3,2,3,6,0,3,,0,READY
+2014,Half-Orc,The Celestial,6,3,2,3,7,0,3,,0,READY
+2014,Half-Orc,The Celestial,7,4,2,3,8,0,4,,0,READY
+2014,Half-Orc,The Celestial,8,4,2,3,9,0,4,,0,READY
+2014,Half-Orc,The Celestial,9,5,2,3,10,0,5,,0,READY
+2014,Half-Orc,The Celestial,10,5,2,4,10,0,5,,0,READY
+2014,Half-Orc,The Celestial,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Orc,The Celestial,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Orc,The Celestial,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Celestial,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Celestial,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Celestial,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Celestial,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Orc,The Celestial,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Celestial,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Celestial,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Fathomless,1,1,1,2,2,0,0,,0,READY
+2014,Half-Orc,The Fathomless,2,1,2,2,3,0,2,,0,READY
+2014,Half-Orc,The Fathomless,3,2,2,2,4,0,2,,0,READY
+2014,Half-Orc,The Fathomless,4,2,2,3,5,0,2,,0,READY
+2014,Half-Orc,The Fathomless,5,3,2,3,6,0,3,,0,READY
+2014,Half-Orc,The Fathomless,6,3,2,3,7,0,3,,0,READY
+2014,Half-Orc,The Fathomless,7,4,2,3,8,0,4,,0,READY
+2014,Half-Orc,The Fathomless,8,4,2,3,9,0,4,,0,READY
+2014,Half-Orc,The Fathomless,9,5,2,3,10,0,5,,0,READY
+2014,Half-Orc,The Fathomless,10,5,2,4,10,0,5,,0,READY
+2014,Half-Orc,The Fathomless,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Orc,The Fathomless,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Orc,The Fathomless,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Fathomless,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Fathomless,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Fathomless,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Fathomless,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Orc,The Fathomless,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Fathomless,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Fathomless,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Genie,1,1,1,2,2,0,0,,0,READY
+2014,Half-Orc,The Genie,2,1,2,2,3,0,2,,0,READY
+2014,Half-Orc,The Genie,3,2,2,2,4,0,2,,0,READY
+2014,Half-Orc,The Genie,4,2,2,3,5,0,2,,0,READY
+2014,Half-Orc,The Genie,5,3,2,3,6,0,3,,0,READY
+2014,Half-Orc,The Genie,6,3,2,3,7,0,3,,0,READY
+2014,Half-Orc,The Genie,7,4,2,3,8,0,4,,0,READY
+2014,Half-Orc,The Genie,8,4,2,3,9,0,4,,0,READY
+2014,Half-Orc,The Genie,9,5,2,3,10,0,5,,0,READY
+2014,Half-Orc,The Genie,10,5,2,4,10,0,5,,0,READY
+2014,Half-Orc,The Genie,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Orc,The Genie,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Orc,The Genie,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Genie,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Genie,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Genie,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Genie,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Orc,The Genie,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Genie,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Genie,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Great Old One,1,1,1,2,2,0,0,,0,READY
+2014,Half-Orc,The Great Old One,2,1,2,2,3,0,2,,0,READY
+2014,Half-Orc,The Great Old One,3,2,2,2,4,0,2,,0,READY
+2014,Half-Orc,The Great Old One,4,2,2,3,5,0,2,,0,READY
+2014,Half-Orc,The Great Old One,5,3,2,3,6,0,3,,0,READY
+2014,Half-Orc,The Great Old One,6,3,2,3,7,0,3,,0,READY
+2014,Half-Orc,The Great Old One,7,4,2,3,8,0,4,,0,READY
+2014,Half-Orc,The Great Old One,8,4,2,3,9,0,4,,0,READY
+2014,Half-Orc,The Great Old One,9,5,2,3,10,0,5,,0,READY
+2014,Half-Orc,The Great Old One,10,5,2,4,10,0,5,,0,READY
+2014,Half-Orc,The Great Old One,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Orc,The Great Old One,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Orc,The Great Old One,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Great Old One,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Great Old One,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Great Old One,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Great Old One,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Orc,The Great Old One,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Great Old One,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Great Old One,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Hexblade,1,1,1,2,2,0,0,,0,READY
+2014,Half-Orc,The Hexblade,2,1,2,2,3,0,2,,0,READY
+2014,Half-Orc,The Hexblade,3,2,2,2,4,0,2,,0,READY
+2014,Half-Orc,The Hexblade,4,2,2,3,5,0,2,,0,READY
+2014,Half-Orc,The Hexblade,5,3,2,3,6,0,3,,0,READY
+2014,Half-Orc,The Hexblade,6,3,2,3,7,0,3,,0,READY
+2014,Half-Orc,The Hexblade,7,4,2,3,8,0,4,,0,READY
+2014,Half-Orc,The Hexblade,8,4,2,3,9,0,4,,0,READY
+2014,Half-Orc,The Hexblade,9,5,2,3,10,0,5,,0,READY
+2014,Half-Orc,The Hexblade,10,5,2,4,10,0,5,,0,READY
+2014,Half-Orc,The Hexblade,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Orc,The Hexblade,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Orc,The Hexblade,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Hexblade,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Hexblade,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Hexblade,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Hexblade,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Orc,The Hexblade,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Hexblade,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Hexblade,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Undead,1,1,1,2,2,0,0,,0,READY
+2014,Half-Orc,The Undead,2,1,2,2,3,0,2,,0,READY
+2014,Half-Orc,The Undead,3,2,2,2,4,0,2,,0,READY
+2014,Half-Orc,The Undead,4,2,2,3,5,0,2,,0,READY
+2014,Half-Orc,The Undead,5,3,2,3,6,0,3,,0,READY
+2014,Half-Orc,The Undead,6,3,2,3,7,0,3,,0,READY
+2014,Half-Orc,The Undead,7,4,2,3,8,0,4,,0,READY
+2014,Half-Orc,The Undead,8,4,2,3,9,0,4,,0,READY
+2014,Half-Orc,The Undead,9,5,2,3,10,0,5,,0,READY
+2014,Half-Orc,The Undead,10,5,2,4,10,0,5,,0,READY
+2014,Half-Orc,The Undead,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Orc,The Undead,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Orc,The Undead,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Undead,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Undead,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Undead,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Undead,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Orc,The Undead,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Undead,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Undead,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Undying,1,1,1,2,2,0,0,,0,READY
+2014,Half-Orc,The Undying,2,1,2,2,3,0,2,,0,READY
+2014,Half-Orc,The Undying,3,2,2,2,4,0,2,,0,READY
+2014,Half-Orc,The Undying,4,2,2,3,5,0,2,,0,READY
+2014,Half-Orc,The Undying,5,3,2,3,6,0,3,,0,READY
+2014,Half-Orc,The Undying,6,3,2,3,7,0,3,,0,READY
+2014,Half-Orc,The Undying,7,4,2,3,8,0,4,,0,READY
+2014,Half-Orc,The Undying,8,4,2,3,9,0,4,,0,READY
+2014,Half-Orc,The Undying,9,5,2,3,10,0,5,,0,READY
+2014,Half-Orc,The Undying,10,5,2,4,10,0,5,,0,READY
+2014,Half-Orc,The Undying,11,5,3,4,11,0,5,6,0,READY
+2014,Half-Orc,The Undying,12,5,3,4,11,0,6,6,0,READY
+2014,Half-Orc,The Undying,13,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Undying,14,5,3,4,12,0,6,6/7,0,READY
+2014,Half-Orc,The Undying,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Undying,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Half-Orc,The Undying,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Half-Orc,The Undying,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Undying,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Half-Orc,The Undying,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Fiend,1,1,1,2,2,0,0,,0,READY
+2014,Tiefling,The Fiend,2,1,2,2,3,0,2,,0,READY
+2014,Tiefling,The Fiend,3,2,2,2,4,0,2,,0,READY
+2014,Tiefling,The Fiend,4,2,2,3,5,0,2,,0,READY
+2014,Tiefling,The Fiend,5,3,2,3,6,0,3,,0,READY
+2014,Tiefling,The Fiend,6,3,2,3,7,0,3,,0,READY
+2014,Tiefling,The Fiend,7,4,2,3,8,0,4,,0,READY
+2014,Tiefling,The Fiend,8,4,2,3,9,0,4,,0,READY
+2014,Tiefling,The Fiend,9,5,2,3,10,0,5,,0,READY
+2014,Tiefling,The Fiend,10,5,2,4,10,0,5,,0,READY
+2014,Tiefling,The Fiend,11,5,3,4,11,0,5,6,0,READY
+2014,Tiefling,The Fiend,12,5,3,4,11,0,6,6,0,READY
+2014,Tiefling,The Fiend,13,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Fiend,14,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Fiend,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Fiend,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Fiend,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Tiefling,The Fiend,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Fiend,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Fiend,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Archfey,1,1,1,2,2,0,0,,0,READY
+2014,Tiefling,The Archfey,2,1,2,2,3,0,2,,0,READY
+2014,Tiefling,The Archfey,3,2,2,2,4,0,2,,0,READY
+2014,Tiefling,The Archfey,4,2,2,3,5,0,2,,0,READY
+2014,Tiefling,The Archfey,5,3,2,3,6,0,3,,0,READY
+2014,Tiefling,The Archfey,6,3,2,3,7,0,3,,0,READY
+2014,Tiefling,The Archfey,7,4,2,3,8,0,4,,0,READY
+2014,Tiefling,The Archfey,8,4,2,3,9,0,4,,0,READY
+2014,Tiefling,The Archfey,9,5,2,3,10,0,5,,0,READY
+2014,Tiefling,The Archfey,10,5,2,4,10,0,5,,0,READY
+2014,Tiefling,The Archfey,11,5,3,4,11,0,5,6,0,READY
+2014,Tiefling,The Archfey,12,5,3,4,11,0,6,6,0,READY
+2014,Tiefling,The Archfey,13,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Archfey,14,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Archfey,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Archfey,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Archfey,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Tiefling,The Archfey,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Archfey,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Archfey,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Celestial,1,1,1,2,2,0,0,,0,READY
+2014,Tiefling,The Celestial,2,1,2,2,3,0,2,,0,READY
+2014,Tiefling,The Celestial,3,2,2,2,4,0,2,,0,READY
+2014,Tiefling,The Celestial,4,2,2,3,5,0,2,,0,READY
+2014,Tiefling,The Celestial,5,3,2,3,6,0,3,,0,READY
+2014,Tiefling,The Celestial,6,3,2,3,7,0,3,,0,READY
+2014,Tiefling,The Celestial,7,4,2,3,8,0,4,,0,READY
+2014,Tiefling,The Celestial,8,4,2,3,9,0,4,,0,READY
+2014,Tiefling,The Celestial,9,5,2,3,10,0,5,,0,READY
+2014,Tiefling,The Celestial,10,5,2,4,10,0,5,,0,READY
+2014,Tiefling,The Celestial,11,5,3,4,11,0,5,6,0,READY
+2014,Tiefling,The Celestial,12,5,3,4,11,0,6,6,0,READY
+2014,Tiefling,The Celestial,13,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Celestial,14,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Celestial,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Celestial,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Celestial,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Tiefling,The Celestial,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Celestial,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Celestial,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Fathomless,1,1,1,2,2,0,0,,0,READY
+2014,Tiefling,The Fathomless,2,1,2,2,3,0,2,,0,READY
+2014,Tiefling,The Fathomless,3,2,2,2,4,0,2,,0,READY
+2014,Tiefling,The Fathomless,4,2,2,3,5,0,2,,0,READY
+2014,Tiefling,The Fathomless,5,3,2,3,6,0,3,,0,READY
+2014,Tiefling,The Fathomless,6,3,2,3,7,0,3,,0,READY
+2014,Tiefling,The Fathomless,7,4,2,3,8,0,4,,0,READY
+2014,Tiefling,The Fathomless,8,4,2,3,9,0,4,,0,READY
+2014,Tiefling,The Fathomless,9,5,2,3,10,0,5,,0,READY
+2014,Tiefling,The Fathomless,10,5,2,4,10,0,5,,0,READY
+2014,Tiefling,The Fathomless,11,5,3,4,11,0,5,6,0,READY
+2014,Tiefling,The Fathomless,12,5,3,4,11,0,6,6,0,READY
+2014,Tiefling,The Fathomless,13,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Fathomless,14,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Fathomless,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Fathomless,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Fathomless,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Tiefling,The Fathomless,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Fathomless,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Fathomless,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Genie,1,1,1,2,2,0,0,,0,READY
+2014,Tiefling,The Genie,2,1,2,2,3,0,2,,0,READY
+2014,Tiefling,The Genie,3,2,2,2,4,0,2,,0,READY
+2014,Tiefling,The Genie,4,2,2,3,5,0,2,,0,READY
+2014,Tiefling,The Genie,5,3,2,3,6,0,3,,0,READY
+2014,Tiefling,The Genie,6,3,2,3,7,0,3,,0,READY
+2014,Tiefling,The Genie,7,4,2,3,8,0,4,,0,READY
+2014,Tiefling,The Genie,8,4,2,3,9,0,4,,0,READY
+2014,Tiefling,The Genie,9,5,2,3,10,0,5,,0,READY
+2014,Tiefling,The Genie,10,5,2,4,10,0,5,,0,READY
+2014,Tiefling,The Genie,11,5,3,4,11,0,5,6,0,READY
+2014,Tiefling,The Genie,12,5,3,4,11,0,6,6,0,READY
+2014,Tiefling,The Genie,13,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Genie,14,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Genie,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Genie,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Genie,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Tiefling,The Genie,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Genie,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Genie,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Great Old One,1,1,1,2,2,0,0,,0,READY
+2014,Tiefling,The Great Old One,2,1,2,2,3,0,2,,0,READY
+2014,Tiefling,The Great Old One,3,2,2,2,4,0,2,,0,READY
+2014,Tiefling,The Great Old One,4,2,2,3,5,0,2,,0,READY
+2014,Tiefling,The Great Old One,5,3,2,3,6,0,3,,0,READY
+2014,Tiefling,The Great Old One,6,3,2,3,7,0,3,,0,READY
+2014,Tiefling,The Great Old One,7,4,2,3,8,0,4,,0,READY
+2014,Tiefling,The Great Old One,8,4,2,3,9,0,4,,0,READY
+2014,Tiefling,The Great Old One,9,5,2,3,10,0,5,,0,READY
+2014,Tiefling,The Great Old One,10,5,2,4,10,0,5,,0,READY
+2014,Tiefling,The Great Old One,11,5,3,4,11,0,5,6,0,READY
+2014,Tiefling,The Great Old One,12,5,3,4,11,0,6,6,0,READY
+2014,Tiefling,The Great Old One,13,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Great Old One,14,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Great Old One,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Great Old One,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Great Old One,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Tiefling,The Great Old One,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Great Old One,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Great Old One,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Hexblade,1,1,1,2,2,0,0,,0,READY
+2014,Tiefling,The Hexblade,2,1,2,2,3,0,2,,0,READY
+2014,Tiefling,The Hexblade,3,2,2,2,4,0,2,,0,READY
+2014,Tiefling,The Hexblade,4,2,2,3,5,0,2,,0,READY
+2014,Tiefling,The Hexblade,5,3,2,3,6,0,3,,0,READY
+2014,Tiefling,The Hexblade,6,3,2,3,7,0,3,,0,READY
+2014,Tiefling,The Hexblade,7,4,2,3,8,0,4,,0,READY
+2014,Tiefling,The Hexblade,8,4,2,3,9,0,4,,0,READY
+2014,Tiefling,The Hexblade,9,5,2,3,10,0,5,,0,READY
+2014,Tiefling,The Hexblade,10,5,2,4,10,0,5,,0,READY
+2014,Tiefling,The Hexblade,11,5,3,4,11,0,5,6,0,READY
+2014,Tiefling,The Hexblade,12,5,3,4,11,0,6,6,0,READY
+2014,Tiefling,The Hexblade,13,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Hexblade,14,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Hexblade,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Hexblade,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Hexblade,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Tiefling,The Hexblade,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Hexblade,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Hexblade,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Undead,1,1,1,2,2,0,0,,0,READY
+2014,Tiefling,The Undead,2,1,2,2,3,0,2,,0,READY
+2014,Tiefling,The Undead,3,2,2,2,4,0,2,,0,READY
+2014,Tiefling,The Undead,4,2,2,3,5,0,2,,0,READY
+2014,Tiefling,The Undead,5,3,2,3,6,0,3,,0,READY
+2014,Tiefling,The Undead,6,3,2,3,7,0,3,,0,READY
+2014,Tiefling,The Undead,7,4,2,3,8,0,4,,0,READY
+2014,Tiefling,The Undead,8,4,2,3,9,0,4,,0,READY
+2014,Tiefling,The Undead,9,5,2,3,10,0,5,,0,READY
+2014,Tiefling,The Undead,10,5,2,4,10,0,5,,0,READY
+2014,Tiefling,The Undead,11,5,3,4,11,0,5,6,0,READY
+2014,Tiefling,The Undead,12,5,3,4,11,0,6,6,0,READY
+2014,Tiefling,The Undead,13,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Undead,14,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Undead,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Undead,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Undead,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Tiefling,The Undead,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Undead,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Undead,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Undying,1,1,1,2,2,0,0,,0,READY
+2014,Tiefling,The Undying,2,1,2,2,3,0,2,,0,READY
+2014,Tiefling,The Undying,3,2,2,2,4,0,2,,0,READY
+2014,Tiefling,The Undying,4,2,2,3,5,0,2,,0,READY
+2014,Tiefling,The Undying,5,3,2,3,6,0,3,,0,READY
+2014,Tiefling,The Undying,6,3,2,3,7,0,3,,0,READY
+2014,Tiefling,The Undying,7,4,2,3,8,0,4,,0,READY
+2014,Tiefling,The Undying,8,4,2,3,9,0,4,,0,READY
+2014,Tiefling,The Undying,9,5,2,3,10,0,5,,0,READY
+2014,Tiefling,The Undying,10,5,2,4,10,0,5,,0,READY
+2014,Tiefling,The Undying,11,5,3,4,11,0,5,6,0,READY
+2014,Tiefling,The Undying,12,5,3,4,11,0,6,6,0,READY
+2014,Tiefling,The Undying,13,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Undying,14,5,3,4,12,0,6,6/7,0,READY
+2014,Tiefling,The Undying,15,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Undying,16,5,3,4,13,0,7,6/7/8,0,READY
+2014,Tiefling,The Undying,17,5,4,4,14,0,7,6/7/8/9,0,READY
+2014,Tiefling,The Undying,18,5,4,4,14,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Undying,19,5,4,4,15,0,8,6/7/8/9,0,READY
+2014,Tiefling,The Undying,20,5,4,4,15,0,8,6/7/8/9,0,READY
+2024,Aasimar,Fiend Patron,1,1,1,2,0,2,1,,0,READY
+2024,Aasimar,Fiend Patron,2,1,2,2,0,3,3,,1,READY
+2024,Aasimar,Fiend Patron,3,2,2,2,0,4,3,,1,READY
+2024,Aasimar,Fiend Patron,4,2,2,3,0,5,3,,1,READY
+2024,Aasimar,Fiend Patron,5,3,2,3,0,6,5,,1,READY
+2024,Aasimar,Fiend Patron,6,3,2,3,0,7,5,,1,READY
+2024,Aasimar,Fiend Patron,7,4,2,3,0,8,6,,1,READY
+2024,Aasimar,Fiend Patron,8,4,2,3,0,9,6,,1,READY
+2024,Aasimar,Fiend Patron,9,5,2,3,0,10,7,,1,READY
+2024,Aasimar,Fiend Patron,10,5,2,4,0,10,7,,1,READY
+2024,Aasimar,Fiend Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Aasimar,Fiend Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Aasimar,Fiend Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Aasimar,Fiend Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Aasimar,Fiend Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Aasimar,Fiend Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Aasimar,Fiend Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Aasimar,Fiend Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Aasimar,Fiend Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Aasimar,Fiend Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Aasimar,Archfey Patron,1,1,1,2,0,2,1,,0,READY
+2024,Aasimar,Archfey Patron,2,1,2,2,0,3,3,,1,READY
+2024,Aasimar,Archfey Patron,3,2,2,2,0,4,3,,1,READY
+2024,Aasimar,Archfey Patron,4,2,2,3,0,5,3,,1,READY
+2024,Aasimar,Archfey Patron,5,3,2,3,0,6,5,,1,READY
+2024,Aasimar,Archfey Patron,6,3,2,3,0,7,5,,1,READY
+2024,Aasimar,Archfey Patron,7,4,2,3,0,8,6,,1,READY
+2024,Aasimar,Archfey Patron,8,4,2,3,0,9,6,,1,READY
+2024,Aasimar,Archfey Patron,9,5,2,3,0,10,7,,1,READY
+2024,Aasimar,Archfey Patron,10,5,2,4,0,10,7,,1,READY
+2024,Aasimar,Archfey Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Aasimar,Archfey Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Aasimar,Archfey Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Aasimar,Archfey Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Aasimar,Archfey Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Aasimar,Archfey Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Aasimar,Archfey Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Aasimar,Archfey Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Aasimar,Archfey Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Aasimar,Archfey Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Aasimar,Celestial Patron,1,1,1,2,0,2,1,,0,READY
+2024,Aasimar,Celestial Patron,2,1,2,2,0,3,3,,1,READY
+2024,Aasimar,Celestial Patron,3,2,2,2,0,4,3,,1,READY
+2024,Aasimar,Celestial Patron,4,2,2,3,0,5,3,,1,READY
+2024,Aasimar,Celestial Patron,5,3,2,3,0,6,5,,1,READY
+2024,Aasimar,Celestial Patron,6,3,2,3,0,7,5,,1,READY
+2024,Aasimar,Celestial Patron,7,4,2,3,0,8,6,,1,READY
+2024,Aasimar,Celestial Patron,8,4,2,3,0,9,6,,1,READY
+2024,Aasimar,Celestial Patron,9,5,2,3,0,10,7,,1,READY
+2024,Aasimar,Celestial Patron,10,5,2,4,0,10,7,,1,READY
+2024,Aasimar,Celestial Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Aasimar,Celestial Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Aasimar,Celestial Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Aasimar,Celestial Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Aasimar,Celestial Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Aasimar,Celestial Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Aasimar,Celestial Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Aasimar,Celestial Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Aasimar,Celestial Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Aasimar,Celestial Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Aasimar,Great Old One Patron,1,1,1,2,0,2,1,,0,READY
+2024,Aasimar,Great Old One Patron,2,1,2,2,0,3,3,,1,READY
+2024,Aasimar,Great Old One Patron,3,2,2,2,0,4,3,,1,READY
+2024,Aasimar,Great Old One Patron,4,2,2,3,0,5,3,,1,READY
+2024,Aasimar,Great Old One Patron,5,3,2,3,0,6,5,,1,READY
+2024,Aasimar,Great Old One Patron,6,3,2,3,0,7,5,,1,READY
+2024,Aasimar,Great Old One Patron,7,4,2,3,0,8,6,,1,READY
+2024,Aasimar,Great Old One Patron,8,4,2,3,0,9,6,,1,READY
+2024,Aasimar,Great Old One Patron,9,5,2,3,0,10,7,,1,READY
+2024,Aasimar,Great Old One Patron,10,5,2,4,0,10,7,,1,READY
+2024,Aasimar,Great Old One Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Aasimar,Great Old One Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Aasimar,Great Old One Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Aasimar,Great Old One Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Aasimar,Great Old One Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Aasimar,Great Old One Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Aasimar,Great Old One Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Aasimar,Great Old One Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Aasimar,Great Old One Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Aasimar,Great Old One Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Dragonborn,Fiend Patron,1,1,1,2,0,2,1,,0,READY
+2024,Dragonborn,Fiend Patron,2,1,2,2,0,3,3,,1,READY
+2024,Dragonborn,Fiend Patron,3,2,2,2,0,4,3,,1,READY
+2024,Dragonborn,Fiend Patron,4,2,2,3,0,5,3,,1,READY
+2024,Dragonborn,Fiend Patron,5,3,2,3,0,6,5,,1,READY
+2024,Dragonborn,Fiend Patron,6,3,2,3,0,7,5,,1,READY
+2024,Dragonborn,Fiend Patron,7,4,2,3,0,8,6,,1,READY
+2024,Dragonborn,Fiend Patron,8,4,2,3,0,9,6,,1,READY
+2024,Dragonborn,Fiend Patron,9,5,2,3,0,10,7,,1,READY
+2024,Dragonborn,Fiend Patron,10,5,2,4,0,10,7,,1,READY
+2024,Dragonborn,Fiend Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Dragonborn,Fiend Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Dragonborn,Fiend Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Dragonborn,Fiend Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Dragonborn,Fiend Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dragonborn,Fiend Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dragonborn,Fiend Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Dragonborn,Fiend Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Dragonborn,Fiend Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Dragonborn,Fiend Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Dragonborn,Archfey Patron,1,1,1,2,0,2,1,,0,READY
+2024,Dragonborn,Archfey Patron,2,1,2,2,0,3,3,,1,READY
+2024,Dragonborn,Archfey Patron,3,2,2,2,0,4,3,,1,READY
+2024,Dragonborn,Archfey Patron,4,2,2,3,0,5,3,,1,READY
+2024,Dragonborn,Archfey Patron,5,3,2,3,0,6,5,,1,READY
+2024,Dragonborn,Archfey Patron,6,3,2,3,0,7,5,,1,READY
+2024,Dragonborn,Archfey Patron,7,4,2,3,0,8,6,,1,READY
+2024,Dragonborn,Archfey Patron,8,4,2,3,0,9,6,,1,READY
+2024,Dragonborn,Archfey Patron,9,5,2,3,0,10,7,,1,READY
+2024,Dragonborn,Archfey Patron,10,5,2,4,0,10,7,,1,READY
+2024,Dragonborn,Archfey Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Dragonborn,Archfey Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Dragonborn,Archfey Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Dragonborn,Archfey Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Dragonborn,Archfey Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dragonborn,Archfey Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dragonborn,Archfey Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Dragonborn,Archfey Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Dragonborn,Archfey Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Dragonborn,Archfey Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Dragonborn,Celestial Patron,1,1,1,2,0,2,1,,0,READY
+2024,Dragonborn,Celestial Patron,2,1,2,2,0,3,3,,1,READY
+2024,Dragonborn,Celestial Patron,3,2,2,2,0,4,3,,1,READY
+2024,Dragonborn,Celestial Patron,4,2,2,3,0,5,3,,1,READY
+2024,Dragonborn,Celestial Patron,5,3,2,3,0,6,5,,1,READY
+2024,Dragonborn,Celestial Patron,6,3,2,3,0,7,5,,1,READY
+2024,Dragonborn,Celestial Patron,7,4,2,3,0,8,6,,1,READY
+2024,Dragonborn,Celestial Patron,8,4,2,3,0,9,6,,1,READY
+2024,Dragonborn,Celestial Patron,9,5,2,3,0,10,7,,1,READY
+2024,Dragonborn,Celestial Patron,10,5,2,4,0,10,7,,1,READY
+2024,Dragonborn,Celestial Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Dragonborn,Celestial Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Dragonborn,Celestial Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Dragonborn,Celestial Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Dragonborn,Celestial Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dragonborn,Celestial Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dragonborn,Celestial Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Dragonborn,Celestial Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Dragonborn,Celestial Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Dragonborn,Celestial Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Dragonborn,Great Old One Patron,1,1,1,2,0,2,1,,0,READY
+2024,Dragonborn,Great Old One Patron,2,1,2,2,0,3,3,,1,READY
+2024,Dragonborn,Great Old One Patron,3,2,2,2,0,4,3,,1,READY
+2024,Dragonborn,Great Old One Patron,4,2,2,3,0,5,3,,1,READY
+2024,Dragonborn,Great Old One Patron,5,3,2,3,0,6,5,,1,READY
+2024,Dragonborn,Great Old One Patron,6,3,2,3,0,7,5,,1,READY
+2024,Dragonborn,Great Old One Patron,7,4,2,3,0,8,6,,1,READY
+2024,Dragonborn,Great Old One Patron,8,4,2,3,0,9,6,,1,READY
+2024,Dragonborn,Great Old One Patron,9,5,2,3,0,10,7,,1,READY
+2024,Dragonborn,Great Old One Patron,10,5,2,4,0,10,7,,1,READY
+2024,Dragonborn,Great Old One Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Dragonborn,Great Old One Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Dragonborn,Great Old One Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Dragonborn,Great Old One Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Dragonborn,Great Old One Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dragonborn,Great Old One Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dragonborn,Great Old One Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Dragonborn,Great Old One Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Dragonborn,Great Old One Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Dragonborn,Great Old One Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Dwarf,Fiend Patron,1,1,1,2,0,2,1,,0,READY
+2024,Dwarf,Fiend Patron,2,1,2,2,0,3,3,,1,READY
+2024,Dwarf,Fiend Patron,3,2,2,2,0,4,3,,1,READY
+2024,Dwarf,Fiend Patron,4,2,2,3,0,5,3,,1,READY
+2024,Dwarf,Fiend Patron,5,3,2,3,0,6,5,,1,READY
+2024,Dwarf,Fiend Patron,6,3,2,3,0,7,5,,1,READY
+2024,Dwarf,Fiend Patron,7,4,2,3,0,8,6,,1,READY
+2024,Dwarf,Fiend Patron,8,4,2,3,0,9,6,,1,READY
+2024,Dwarf,Fiend Patron,9,5,2,3,0,10,7,,1,READY
+2024,Dwarf,Fiend Patron,10,5,2,4,0,10,7,,1,READY
+2024,Dwarf,Fiend Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Dwarf,Fiend Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Dwarf,Fiend Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Dwarf,Fiend Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Dwarf,Fiend Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dwarf,Fiend Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dwarf,Fiend Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Dwarf,Fiend Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Dwarf,Fiend Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Dwarf,Fiend Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Dwarf,Archfey Patron,1,1,1,2,0,2,1,,0,READY
+2024,Dwarf,Archfey Patron,2,1,2,2,0,3,3,,1,READY
+2024,Dwarf,Archfey Patron,3,2,2,2,0,4,3,,1,READY
+2024,Dwarf,Archfey Patron,4,2,2,3,0,5,3,,1,READY
+2024,Dwarf,Archfey Patron,5,3,2,3,0,6,5,,1,READY
+2024,Dwarf,Archfey Patron,6,3,2,3,0,7,5,,1,READY
+2024,Dwarf,Archfey Patron,7,4,2,3,0,8,6,,1,READY
+2024,Dwarf,Archfey Patron,8,4,2,3,0,9,6,,1,READY
+2024,Dwarf,Archfey Patron,9,5,2,3,0,10,7,,1,READY
+2024,Dwarf,Archfey Patron,10,5,2,4,0,10,7,,1,READY
+2024,Dwarf,Archfey Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Dwarf,Archfey Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Dwarf,Archfey Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Dwarf,Archfey Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Dwarf,Archfey Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dwarf,Archfey Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dwarf,Archfey Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Dwarf,Archfey Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Dwarf,Archfey Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Dwarf,Archfey Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Dwarf,Celestial Patron,1,1,1,2,0,2,1,,0,READY
+2024,Dwarf,Celestial Patron,2,1,2,2,0,3,3,,1,READY
+2024,Dwarf,Celestial Patron,3,2,2,2,0,4,3,,1,READY
+2024,Dwarf,Celestial Patron,4,2,2,3,0,5,3,,1,READY
+2024,Dwarf,Celestial Patron,5,3,2,3,0,6,5,,1,READY
+2024,Dwarf,Celestial Patron,6,3,2,3,0,7,5,,1,READY
+2024,Dwarf,Celestial Patron,7,4,2,3,0,8,6,,1,READY
+2024,Dwarf,Celestial Patron,8,4,2,3,0,9,6,,1,READY
+2024,Dwarf,Celestial Patron,9,5,2,3,0,10,7,,1,READY
+2024,Dwarf,Celestial Patron,10,5,2,4,0,10,7,,1,READY
+2024,Dwarf,Celestial Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Dwarf,Celestial Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Dwarf,Celestial Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Dwarf,Celestial Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Dwarf,Celestial Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dwarf,Celestial Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dwarf,Celestial Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Dwarf,Celestial Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Dwarf,Celestial Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Dwarf,Celestial Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Dwarf,Great Old One Patron,1,1,1,2,0,2,1,,0,READY
+2024,Dwarf,Great Old One Patron,2,1,2,2,0,3,3,,1,READY
+2024,Dwarf,Great Old One Patron,3,2,2,2,0,4,3,,1,READY
+2024,Dwarf,Great Old One Patron,4,2,2,3,0,5,3,,1,READY
+2024,Dwarf,Great Old One Patron,5,3,2,3,0,6,5,,1,READY
+2024,Dwarf,Great Old One Patron,6,3,2,3,0,7,5,,1,READY
+2024,Dwarf,Great Old One Patron,7,4,2,3,0,8,6,,1,READY
+2024,Dwarf,Great Old One Patron,8,4,2,3,0,9,6,,1,READY
+2024,Dwarf,Great Old One Patron,9,5,2,3,0,10,7,,1,READY
+2024,Dwarf,Great Old One Patron,10,5,2,4,0,10,7,,1,READY
+2024,Dwarf,Great Old One Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Dwarf,Great Old One Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Dwarf,Great Old One Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Dwarf,Great Old One Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Dwarf,Great Old One Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dwarf,Great Old One Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Dwarf,Great Old One Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Dwarf,Great Old One Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Dwarf,Great Old One Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Dwarf,Great Old One Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Elf,Fiend Patron,1,1,1,2,0,2,1,,0,READY
+2024,Elf,Fiend Patron,2,1,2,2,0,3,3,,1,READY
+2024,Elf,Fiend Patron,3,2,2,2,0,4,3,,1,READY
+2024,Elf,Fiend Patron,4,2,2,3,0,5,3,,1,READY
+2024,Elf,Fiend Patron,5,3,2,3,0,6,5,,1,READY
+2024,Elf,Fiend Patron,6,3,2,3,0,7,5,,1,READY
+2024,Elf,Fiend Patron,7,4,2,3,0,8,6,,1,READY
+2024,Elf,Fiend Patron,8,4,2,3,0,9,6,,1,READY
+2024,Elf,Fiend Patron,9,5,2,3,0,10,7,,1,READY
+2024,Elf,Fiend Patron,10,5,2,4,0,10,7,,1,READY
+2024,Elf,Fiend Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Elf,Fiend Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Elf,Fiend Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Elf,Fiend Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Elf,Fiend Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Elf,Fiend Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Elf,Fiend Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Elf,Fiend Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Elf,Fiend Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Elf,Fiend Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Elf,Archfey Patron,1,1,1,2,0,2,1,,0,READY
+2024,Elf,Archfey Patron,2,1,2,2,0,3,3,,1,READY
+2024,Elf,Archfey Patron,3,2,2,2,0,4,3,,1,READY
+2024,Elf,Archfey Patron,4,2,2,3,0,5,3,,1,READY
+2024,Elf,Archfey Patron,5,3,2,3,0,6,5,,1,READY
+2024,Elf,Archfey Patron,6,3,2,3,0,7,5,,1,READY
+2024,Elf,Archfey Patron,7,4,2,3,0,8,6,,1,READY
+2024,Elf,Archfey Patron,8,4,2,3,0,9,6,,1,READY
+2024,Elf,Archfey Patron,9,5,2,3,0,10,7,,1,READY
+2024,Elf,Archfey Patron,10,5,2,4,0,10,7,,1,READY
+2024,Elf,Archfey Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Elf,Archfey Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Elf,Archfey Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Elf,Archfey Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Elf,Archfey Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Elf,Archfey Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Elf,Archfey Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Elf,Archfey Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Elf,Archfey Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Elf,Archfey Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Elf,Celestial Patron,1,1,1,2,0,2,1,,0,READY
+2024,Elf,Celestial Patron,2,1,2,2,0,3,3,,1,READY
+2024,Elf,Celestial Patron,3,2,2,2,0,4,3,,1,READY
+2024,Elf,Celestial Patron,4,2,2,3,0,5,3,,1,READY
+2024,Elf,Celestial Patron,5,3,2,3,0,6,5,,1,READY
+2024,Elf,Celestial Patron,6,3,2,3,0,7,5,,1,READY
+2024,Elf,Celestial Patron,7,4,2,3,0,8,6,,1,READY
+2024,Elf,Celestial Patron,8,4,2,3,0,9,6,,1,READY
+2024,Elf,Celestial Patron,9,5,2,3,0,10,7,,1,READY
+2024,Elf,Celestial Patron,10,5,2,4,0,10,7,,1,READY
+2024,Elf,Celestial Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Elf,Celestial Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Elf,Celestial Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Elf,Celestial Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Elf,Celestial Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Elf,Celestial Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Elf,Celestial Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Elf,Celestial Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Elf,Celestial Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Elf,Celestial Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Elf,Great Old One Patron,1,1,1,2,0,2,1,,0,READY
+2024,Elf,Great Old One Patron,2,1,2,2,0,3,3,,1,READY
+2024,Elf,Great Old One Patron,3,2,2,2,0,4,3,,1,READY
+2024,Elf,Great Old One Patron,4,2,2,3,0,5,3,,1,READY
+2024,Elf,Great Old One Patron,5,3,2,3,0,6,5,,1,READY
+2024,Elf,Great Old One Patron,6,3,2,3,0,7,5,,1,READY
+2024,Elf,Great Old One Patron,7,4,2,3,0,8,6,,1,READY
+2024,Elf,Great Old One Patron,8,4,2,3,0,9,6,,1,READY
+2024,Elf,Great Old One Patron,9,5,2,3,0,10,7,,1,READY
+2024,Elf,Great Old One Patron,10,5,2,4,0,10,7,,1,READY
+2024,Elf,Great Old One Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Elf,Great Old One Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Elf,Great Old One Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Elf,Great Old One Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Elf,Great Old One Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Elf,Great Old One Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Elf,Great Old One Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Elf,Great Old One Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Elf,Great Old One Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Elf,Great Old One Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Gnome,Fiend Patron,1,1,1,2,0,2,1,,0,READY
+2024,Gnome,Fiend Patron,2,1,2,2,0,3,3,,1,READY
+2024,Gnome,Fiend Patron,3,2,2,2,0,4,3,,1,READY
+2024,Gnome,Fiend Patron,4,2,2,3,0,5,3,,1,READY
+2024,Gnome,Fiend Patron,5,3,2,3,0,6,5,,1,READY
+2024,Gnome,Fiend Patron,6,3,2,3,0,7,5,,1,READY
+2024,Gnome,Fiend Patron,7,4,2,3,0,8,6,,1,READY
+2024,Gnome,Fiend Patron,8,4,2,3,0,9,6,,1,READY
+2024,Gnome,Fiend Patron,9,5,2,3,0,10,7,,1,READY
+2024,Gnome,Fiend Patron,10,5,2,4,0,10,7,,1,READY
+2024,Gnome,Fiend Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Gnome,Fiend Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Gnome,Fiend Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Gnome,Fiend Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Gnome,Fiend Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Gnome,Fiend Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Gnome,Fiend Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Gnome,Fiend Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Gnome,Fiend Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Gnome,Fiend Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Gnome,Archfey Patron,1,1,1,2,0,2,1,,0,READY
+2024,Gnome,Archfey Patron,2,1,2,2,0,3,3,,1,READY
+2024,Gnome,Archfey Patron,3,2,2,2,0,4,3,,1,READY
+2024,Gnome,Archfey Patron,4,2,2,3,0,5,3,,1,READY
+2024,Gnome,Archfey Patron,5,3,2,3,0,6,5,,1,READY
+2024,Gnome,Archfey Patron,6,3,2,3,0,7,5,,1,READY
+2024,Gnome,Archfey Patron,7,4,2,3,0,8,6,,1,READY
+2024,Gnome,Archfey Patron,8,4,2,3,0,9,6,,1,READY
+2024,Gnome,Archfey Patron,9,5,2,3,0,10,7,,1,READY
+2024,Gnome,Archfey Patron,10,5,2,4,0,10,7,,1,READY
+2024,Gnome,Archfey Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Gnome,Archfey Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Gnome,Archfey Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Gnome,Archfey Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Gnome,Archfey Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Gnome,Archfey Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Gnome,Archfey Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Gnome,Archfey Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Gnome,Archfey Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Gnome,Archfey Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Gnome,Celestial Patron,1,1,1,2,0,2,1,,0,READY
+2024,Gnome,Celestial Patron,2,1,2,2,0,3,3,,1,READY
+2024,Gnome,Celestial Patron,3,2,2,2,0,4,3,,1,READY
+2024,Gnome,Celestial Patron,4,2,2,3,0,5,3,,1,READY
+2024,Gnome,Celestial Patron,5,3,2,3,0,6,5,,1,READY
+2024,Gnome,Celestial Patron,6,3,2,3,0,7,5,,1,READY
+2024,Gnome,Celestial Patron,7,4,2,3,0,8,6,,1,READY
+2024,Gnome,Celestial Patron,8,4,2,3,0,9,6,,1,READY
+2024,Gnome,Celestial Patron,9,5,2,3,0,10,7,,1,READY
+2024,Gnome,Celestial Patron,10,5,2,4,0,10,7,,1,READY
+2024,Gnome,Celestial Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Gnome,Celestial Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Gnome,Celestial Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Gnome,Celestial Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Gnome,Celestial Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Gnome,Celestial Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Gnome,Celestial Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Gnome,Celestial Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Gnome,Celestial Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Gnome,Celestial Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Gnome,Great Old One Patron,1,1,1,2,0,2,1,,0,READY
+2024,Gnome,Great Old One Patron,2,1,2,2,0,3,3,,1,READY
+2024,Gnome,Great Old One Patron,3,2,2,2,0,4,3,,1,READY
+2024,Gnome,Great Old One Patron,4,2,2,3,0,5,3,,1,READY
+2024,Gnome,Great Old One Patron,5,3,2,3,0,6,5,,1,READY
+2024,Gnome,Great Old One Patron,6,3,2,3,0,7,5,,1,READY
+2024,Gnome,Great Old One Patron,7,4,2,3,0,8,6,,1,READY
+2024,Gnome,Great Old One Patron,8,4,2,3,0,9,6,,1,READY
+2024,Gnome,Great Old One Patron,9,5,2,3,0,10,7,,1,READY
+2024,Gnome,Great Old One Patron,10,5,2,4,0,10,7,,1,READY
+2024,Gnome,Great Old One Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Gnome,Great Old One Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Gnome,Great Old One Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Gnome,Great Old One Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Gnome,Great Old One Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Gnome,Great Old One Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Gnome,Great Old One Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Gnome,Great Old One Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Gnome,Great Old One Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Gnome,Great Old One Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Goliath,Fiend Patron,1,1,1,2,0,2,1,,0,READY
+2024,Goliath,Fiend Patron,2,1,2,2,0,3,3,,1,READY
+2024,Goliath,Fiend Patron,3,2,2,2,0,4,3,,1,READY
+2024,Goliath,Fiend Patron,4,2,2,3,0,5,3,,1,READY
+2024,Goliath,Fiend Patron,5,3,2,3,0,6,5,,1,READY
+2024,Goliath,Fiend Patron,6,3,2,3,0,7,5,,1,READY
+2024,Goliath,Fiend Patron,7,4,2,3,0,8,6,,1,READY
+2024,Goliath,Fiend Patron,8,4,2,3,0,9,6,,1,READY
+2024,Goliath,Fiend Patron,9,5,2,3,0,10,7,,1,READY
+2024,Goliath,Fiend Patron,10,5,2,4,0,10,7,,1,READY
+2024,Goliath,Fiend Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Goliath,Fiend Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Goliath,Fiend Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Goliath,Fiend Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Goliath,Fiend Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Goliath,Fiend Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Goliath,Fiend Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Goliath,Fiend Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Goliath,Fiend Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Goliath,Fiend Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Goliath,Archfey Patron,1,1,1,2,0,2,1,,0,READY
+2024,Goliath,Archfey Patron,2,1,2,2,0,3,3,,1,READY
+2024,Goliath,Archfey Patron,3,2,2,2,0,4,3,,1,READY
+2024,Goliath,Archfey Patron,4,2,2,3,0,5,3,,1,READY
+2024,Goliath,Archfey Patron,5,3,2,3,0,6,5,,1,READY
+2024,Goliath,Archfey Patron,6,3,2,3,0,7,5,,1,READY
+2024,Goliath,Archfey Patron,7,4,2,3,0,8,6,,1,READY
+2024,Goliath,Archfey Patron,8,4,2,3,0,9,6,,1,READY
+2024,Goliath,Archfey Patron,9,5,2,3,0,10,7,,1,READY
+2024,Goliath,Archfey Patron,10,5,2,4,0,10,7,,1,READY
+2024,Goliath,Archfey Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Goliath,Archfey Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Goliath,Archfey Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Goliath,Archfey Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Goliath,Archfey Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Goliath,Archfey Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Goliath,Archfey Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Goliath,Archfey Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Goliath,Archfey Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Goliath,Archfey Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Goliath,Celestial Patron,1,1,1,2,0,2,1,,0,READY
+2024,Goliath,Celestial Patron,2,1,2,2,0,3,3,,1,READY
+2024,Goliath,Celestial Patron,3,2,2,2,0,4,3,,1,READY
+2024,Goliath,Celestial Patron,4,2,2,3,0,5,3,,1,READY
+2024,Goliath,Celestial Patron,5,3,2,3,0,6,5,,1,READY
+2024,Goliath,Celestial Patron,6,3,2,3,0,7,5,,1,READY
+2024,Goliath,Celestial Patron,7,4,2,3,0,8,6,,1,READY
+2024,Goliath,Celestial Patron,8,4,2,3,0,9,6,,1,READY
+2024,Goliath,Celestial Patron,9,5,2,3,0,10,7,,1,READY
+2024,Goliath,Celestial Patron,10,5,2,4,0,10,7,,1,READY
+2024,Goliath,Celestial Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Goliath,Celestial Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Goliath,Celestial Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Goliath,Celestial Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Goliath,Celestial Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Goliath,Celestial Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Goliath,Celestial Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Goliath,Celestial Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Goliath,Celestial Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Goliath,Celestial Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Goliath,Great Old One Patron,1,1,1,2,0,2,1,,0,READY
+2024,Goliath,Great Old One Patron,2,1,2,2,0,3,3,,1,READY
+2024,Goliath,Great Old One Patron,3,2,2,2,0,4,3,,1,READY
+2024,Goliath,Great Old One Patron,4,2,2,3,0,5,3,,1,READY
+2024,Goliath,Great Old One Patron,5,3,2,3,0,6,5,,1,READY
+2024,Goliath,Great Old One Patron,6,3,2,3,0,7,5,,1,READY
+2024,Goliath,Great Old One Patron,7,4,2,3,0,8,6,,1,READY
+2024,Goliath,Great Old One Patron,8,4,2,3,0,9,6,,1,READY
+2024,Goliath,Great Old One Patron,9,5,2,3,0,10,7,,1,READY
+2024,Goliath,Great Old One Patron,10,5,2,4,0,10,7,,1,READY
+2024,Goliath,Great Old One Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Goliath,Great Old One Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Goliath,Great Old One Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Goliath,Great Old One Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Goliath,Great Old One Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Goliath,Great Old One Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Goliath,Great Old One Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Goliath,Great Old One Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Goliath,Great Old One Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Goliath,Great Old One Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Halfling,Fiend Patron,1,1,1,2,0,2,1,,0,READY
+2024,Halfling,Fiend Patron,2,1,2,2,0,3,3,,1,READY
+2024,Halfling,Fiend Patron,3,2,2,2,0,4,3,,1,READY
+2024,Halfling,Fiend Patron,4,2,2,3,0,5,3,,1,READY
+2024,Halfling,Fiend Patron,5,3,2,3,0,6,5,,1,READY
+2024,Halfling,Fiend Patron,6,3,2,3,0,7,5,,1,READY
+2024,Halfling,Fiend Patron,7,4,2,3,0,8,6,,1,READY
+2024,Halfling,Fiend Patron,8,4,2,3,0,9,6,,1,READY
+2024,Halfling,Fiend Patron,9,5,2,3,0,10,7,,1,READY
+2024,Halfling,Fiend Patron,10,5,2,4,0,10,7,,1,READY
+2024,Halfling,Fiend Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Halfling,Fiend Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Halfling,Fiend Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Halfling,Fiend Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Halfling,Fiend Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Halfling,Fiend Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Halfling,Fiend Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Halfling,Fiend Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Halfling,Fiend Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Halfling,Fiend Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Halfling,Archfey Patron,1,1,1,2,0,2,1,,0,READY
+2024,Halfling,Archfey Patron,2,1,2,2,0,3,3,,1,READY
+2024,Halfling,Archfey Patron,3,2,2,2,0,4,3,,1,READY
+2024,Halfling,Archfey Patron,4,2,2,3,0,5,3,,1,READY
+2024,Halfling,Archfey Patron,5,3,2,3,0,6,5,,1,READY
+2024,Halfling,Archfey Patron,6,3,2,3,0,7,5,,1,READY
+2024,Halfling,Archfey Patron,7,4,2,3,0,8,6,,1,READY
+2024,Halfling,Archfey Patron,8,4,2,3,0,9,6,,1,READY
+2024,Halfling,Archfey Patron,9,5,2,3,0,10,7,,1,READY
+2024,Halfling,Archfey Patron,10,5,2,4,0,10,7,,1,READY
+2024,Halfling,Archfey Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Halfling,Archfey Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Halfling,Archfey Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Halfling,Archfey Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Halfling,Archfey Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Halfling,Archfey Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Halfling,Archfey Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Halfling,Archfey Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Halfling,Archfey Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Halfling,Archfey Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Halfling,Celestial Patron,1,1,1,2,0,2,1,,0,READY
+2024,Halfling,Celestial Patron,2,1,2,2,0,3,3,,1,READY
+2024,Halfling,Celestial Patron,3,2,2,2,0,4,3,,1,READY
+2024,Halfling,Celestial Patron,4,2,2,3,0,5,3,,1,READY
+2024,Halfling,Celestial Patron,5,3,2,3,0,6,5,,1,READY
+2024,Halfling,Celestial Patron,6,3,2,3,0,7,5,,1,READY
+2024,Halfling,Celestial Patron,7,4,2,3,0,8,6,,1,READY
+2024,Halfling,Celestial Patron,8,4,2,3,0,9,6,,1,READY
+2024,Halfling,Celestial Patron,9,5,2,3,0,10,7,,1,READY
+2024,Halfling,Celestial Patron,10,5,2,4,0,10,7,,1,READY
+2024,Halfling,Celestial Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Halfling,Celestial Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Halfling,Celestial Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Halfling,Celestial Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Halfling,Celestial Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Halfling,Celestial Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Halfling,Celestial Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Halfling,Celestial Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Halfling,Celestial Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Halfling,Celestial Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Halfling,Great Old One Patron,1,1,1,2,0,2,1,,0,READY
+2024,Halfling,Great Old One Patron,2,1,2,2,0,3,3,,1,READY
+2024,Halfling,Great Old One Patron,3,2,2,2,0,4,3,,1,READY
+2024,Halfling,Great Old One Patron,4,2,2,3,0,5,3,,1,READY
+2024,Halfling,Great Old One Patron,5,3,2,3,0,6,5,,1,READY
+2024,Halfling,Great Old One Patron,6,3,2,3,0,7,5,,1,READY
+2024,Halfling,Great Old One Patron,7,4,2,3,0,8,6,,1,READY
+2024,Halfling,Great Old One Patron,8,4,2,3,0,9,6,,1,READY
+2024,Halfling,Great Old One Patron,9,5,2,3,0,10,7,,1,READY
+2024,Halfling,Great Old One Patron,10,5,2,4,0,10,7,,1,READY
+2024,Halfling,Great Old One Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Halfling,Great Old One Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Halfling,Great Old One Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Halfling,Great Old One Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Halfling,Great Old One Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Halfling,Great Old One Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Halfling,Great Old One Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Halfling,Great Old One Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Halfling,Great Old One Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Halfling,Great Old One Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Human,Fiend Patron,1,1,1,2,0,2,1,,0,READY
+2024,Human,Fiend Patron,2,1,2,2,0,3,3,,1,READY
+2024,Human,Fiend Patron,3,2,2,2,0,4,3,,1,READY
+2024,Human,Fiend Patron,4,2,2,3,0,5,3,,1,READY
+2024,Human,Fiend Patron,5,3,2,3,0,6,5,,1,READY
+2024,Human,Fiend Patron,6,3,2,3,0,7,5,,1,READY
+2024,Human,Fiend Patron,7,4,2,3,0,8,6,,1,READY
+2024,Human,Fiend Patron,8,4,2,3,0,9,6,,1,READY
+2024,Human,Fiend Patron,9,5,2,3,0,10,7,,1,READY
+2024,Human,Fiend Patron,10,5,2,4,0,10,7,,1,READY
+2024,Human,Fiend Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Human,Fiend Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Human,Fiend Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Human,Fiend Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Human,Fiend Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Human,Fiend Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Human,Fiend Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Human,Fiend Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Human,Fiend Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Human,Fiend Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Human,Archfey Patron,1,1,1,2,0,2,1,,0,READY
+2024,Human,Archfey Patron,2,1,2,2,0,3,3,,1,READY
+2024,Human,Archfey Patron,3,2,2,2,0,4,3,,1,READY
+2024,Human,Archfey Patron,4,2,2,3,0,5,3,,1,READY
+2024,Human,Archfey Patron,5,3,2,3,0,6,5,,1,READY
+2024,Human,Archfey Patron,6,3,2,3,0,7,5,,1,READY
+2024,Human,Archfey Patron,7,4,2,3,0,8,6,,1,READY
+2024,Human,Archfey Patron,8,4,2,3,0,9,6,,1,READY
+2024,Human,Archfey Patron,9,5,2,3,0,10,7,,1,READY
+2024,Human,Archfey Patron,10,5,2,4,0,10,7,,1,READY
+2024,Human,Archfey Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Human,Archfey Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Human,Archfey Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Human,Archfey Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Human,Archfey Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Human,Archfey Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Human,Archfey Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Human,Archfey Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Human,Archfey Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Human,Archfey Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Human,Celestial Patron,1,1,1,2,0,2,1,,0,READY
+2024,Human,Celestial Patron,2,1,2,2,0,3,3,,1,READY
+2024,Human,Celestial Patron,3,2,2,2,0,4,3,,1,READY
+2024,Human,Celestial Patron,4,2,2,3,0,5,3,,1,READY
+2024,Human,Celestial Patron,5,3,2,3,0,6,5,,1,READY
+2024,Human,Celestial Patron,6,3,2,3,0,7,5,,1,READY
+2024,Human,Celestial Patron,7,4,2,3,0,8,6,,1,READY
+2024,Human,Celestial Patron,8,4,2,3,0,9,6,,1,READY
+2024,Human,Celestial Patron,9,5,2,3,0,10,7,,1,READY
+2024,Human,Celestial Patron,10,5,2,4,0,10,7,,1,READY
+2024,Human,Celestial Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Human,Celestial Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Human,Celestial Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Human,Celestial Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Human,Celestial Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Human,Celestial Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Human,Celestial Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Human,Celestial Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Human,Celestial Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Human,Celestial Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Human,Great Old One Patron,1,1,1,2,0,2,1,,0,READY
+2024,Human,Great Old One Patron,2,1,2,2,0,3,3,,1,READY
+2024,Human,Great Old One Patron,3,2,2,2,0,4,3,,1,READY
+2024,Human,Great Old One Patron,4,2,2,3,0,5,3,,1,READY
+2024,Human,Great Old One Patron,5,3,2,3,0,6,5,,1,READY
+2024,Human,Great Old One Patron,6,3,2,3,0,7,5,,1,READY
+2024,Human,Great Old One Patron,7,4,2,3,0,8,6,,1,READY
+2024,Human,Great Old One Patron,8,4,2,3,0,9,6,,1,READY
+2024,Human,Great Old One Patron,9,5,2,3,0,10,7,,1,READY
+2024,Human,Great Old One Patron,10,5,2,4,0,10,7,,1,READY
+2024,Human,Great Old One Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Human,Great Old One Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Human,Great Old One Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Human,Great Old One Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Human,Great Old One Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Human,Great Old One Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Human,Great Old One Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Human,Great Old One Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Human,Great Old One Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Human,Great Old One Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Orc,Fiend Patron,1,1,1,2,0,2,1,,0,READY
+2024,Orc,Fiend Patron,2,1,2,2,0,3,3,,1,READY
+2024,Orc,Fiend Patron,3,2,2,2,0,4,3,,1,READY
+2024,Orc,Fiend Patron,4,2,2,3,0,5,3,,1,READY
+2024,Orc,Fiend Patron,5,3,2,3,0,6,5,,1,READY
+2024,Orc,Fiend Patron,6,3,2,3,0,7,5,,1,READY
+2024,Orc,Fiend Patron,7,4,2,3,0,8,6,,1,READY
+2024,Orc,Fiend Patron,8,4,2,3,0,9,6,,1,READY
+2024,Orc,Fiend Patron,9,5,2,3,0,10,7,,1,READY
+2024,Orc,Fiend Patron,10,5,2,4,0,10,7,,1,READY
+2024,Orc,Fiend Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Orc,Fiend Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Orc,Fiend Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Orc,Fiend Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Orc,Fiend Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Orc,Fiend Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Orc,Fiend Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Orc,Fiend Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Orc,Fiend Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Orc,Fiend Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Orc,Archfey Patron,1,1,1,2,0,2,1,,0,READY
+2024,Orc,Archfey Patron,2,1,2,2,0,3,3,,1,READY
+2024,Orc,Archfey Patron,3,2,2,2,0,4,3,,1,READY
+2024,Orc,Archfey Patron,4,2,2,3,0,5,3,,1,READY
+2024,Orc,Archfey Patron,5,3,2,3,0,6,5,,1,READY
+2024,Orc,Archfey Patron,6,3,2,3,0,7,5,,1,READY
+2024,Orc,Archfey Patron,7,4,2,3,0,8,6,,1,READY
+2024,Orc,Archfey Patron,8,4,2,3,0,9,6,,1,READY
+2024,Orc,Archfey Patron,9,5,2,3,0,10,7,,1,READY
+2024,Orc,Archfey Patron,10,5,2,4,0,10,7,,1,READY
+2024,Orc,Archfey Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Orc,Archfey Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Orc,Archfey Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Orc,Archfey Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Orc,Archfey Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Orc,Archfey Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Orc,Archfey Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Orc,Archfey Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Orc,Archfey Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Orc,Archfey Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Orc,Celestial Patron,1,1,1,2,0,2,1,,0,READY
+2024,Orc,Celestial Patron,2,1,2,2,0,3,3,,1,READY
+2024,Orc,Celestial Patron,3,2,2,2,0,4,3,,1,READY
+2024,Orc,Celestial Patron,4,2,2,3,0,5,3,,1,READY
+2024,Orc,Celestial Patron,5,3,2,3,0,6,5,,1,READY
+2024,Orc,Celestial Patron,6,3,2,3,0,7,5,,1,READY
+2024,Orc,Celestial Patron,7,4,2,3,0,8,6,,1,READY
+2024,Orc,Celestial Patron,8,4,2,3,0,9,6,,1,READY
+2024,Orc,Celestial Patron,9,5,2,3,0,10,7,,1,READY
+2024,Orc,Celestial Patron,10,5,2,4,0,10,7,,1,READY
+2024,Orc,Celestial Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Orc,Celestial Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Orc,Celestial Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Orc,Celestial Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Orc,Celestial Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Orc,Celestial Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Orc,Celestial Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Orc,Celestial Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Orc,Celestial Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Orc,Celestial Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Orc,Great Old One Patron,1,1,1,2,0,2,1,,0,READY
+2024,Orc,Great Old One Patron,2,1,2,2,0,3,3,,1,READY
+2024,Orc,Great Old One Patron,3,2,2,2,0,4,3,,1,READY
+2024,Orc,Great Old One Patron,4,2,2,3,0,5,3,,1,READY
+2024,Orc,Great Old One Patron,5,3,2,3,0,6,5,,1,READY
+2024,Orc,Great Old One Patron,6,3,2,3,0,7,5,,1,READY
+2024,Orc,Great Old One Patron,7,4,2,3,0,8,6,,1,READY
+2024,Orc,Great Old One Patron,8,4,2,3,0,9,6,,1,READY
+2024,Orc,Great Old One Patron,9,5,2,3,0,10,7,,1,READY
+2024,Orc,Great Old One Patron,10,5,2,4,0,10,7,,1,READY
+2024,Orc,Great Old One Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Orc,Great Old One Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Orc,Great Old One Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Orc,Great Old One Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Orc,Great Old One Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Orc,Great Old One Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Orc,Great Old One Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Orc,Great Old One Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Orc,Great Old One Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Orc,Great Old One Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Tiefling,Fiend Patron,1,1,1,2,0,2,1,,0,READY
+2024,Tiefling,Fiend Patron,2,1,2,2,0,3,3,,1,READY
+2024,Tiefling,Fiend Patron,3,2,2,2,0,4,3,,1,READY
+2024,Tiefling,Fiend Patron,4,2,2,3,0,5,3,,1,READY
+2024,Tiefling,Fiend Patron,5,3,2,3,0,6,5,,1,READY
+2024,Tiefling,Fiend Patron,6,3,2,3,0,7,5,,1,READY
+2024,Tiefling,Fiend Patron,7,4,2,3,0,8,6,,1,READY
+2024,Tiefling,Fiend Patron,8,4,2,3,0,9,6,,1,READY
+2024,Tiefling,Fiend Patron,9,5,2,3,0,10,7,,1,READY
+2024,Tiefling,Fiend Patron,10,5,2,4,0,10,7,,1,READY
+2024,Tiefling,Fiend Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Tiefling,Fiend Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Tiefling,Fiend Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Tiefling,Fiend Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Tiefling,Fiend Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Tiefling,Fiend Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Tiefling,Fiend Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Tiefling,Fiend Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Tiefling,Fiend Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Tiefling,Fiend Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Tiefling,Archfey Patron,1,1,1,2,0,2,1,,0,READY
+2024,Tiefling,Archfey Patron,2,1,2,2,0,3,3,,1,READY
+2024,Tiefling,Archfey Patron,3,2,2,2,0,4,3,,1,READY
+2024,Tiefling,Archfey Patron,4,2,2,3,0,5,3,,1,READY
+2024,Tiefling,Archfey Patron,5,3,2,3,0,6,5,,1,READY
+2024,Tiefling,Archfey Patron,6,3,2,3,0,7,5,,1,READY
+2024,Tiefling,Archfey Patron,7,4,2,3,0,8,6,,1,READY
+2024,Tiefling,Archfey Patron,8,4,2,3,0,9,6,,1,READY
+2024,Tiefling,Archfey Patron,9,5,2,3,0,10,7,,1,READY
+2024,Tiefling,Archfey Patron,10,5,2,4,0,10,7,,1,READY
+2024,Tiefling,Archfey Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Tiefling,Archfey Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Tiefling,Archfey Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Tiefling,Archfey Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Tiefling,Archfey Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Tiefling,Archfey Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Tiefling,Archfey Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Tiefling,Archfey Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Tiefling,Archfey Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Tiefling,Archfey Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Tiefling,Celestial Patron,1,1,1,2,0,2,1,,0,READY
+2024,Tiefling,Celestial Patron,2,1,2,2,0,3,3,,1,READY
+2024,Tiefling,Celestial Patron,3,2,2,2,0,4,3,,1,READY
+2024,Tiefling,Celestial Patron,4,2,2,3,0,5,3,,1,READY
+2024,Tiefling,Celestial Patron,5,3,2,3,0,6,5,,1,READY
+2024,Tiefling,Celestial Patron,6,3,2,3,0,7,5,,1,READY
+2024,Tiefling,Celestial Patron,7,4,2,3,0,8,6,,1,READY
+2024,Tiefling,Celestial Patron,8,4,2,3,0,9,6,,1,READY
+2024,Tiefling,Celestial Patron,9,5,2,3,0,10,7,,1,READY
+2024,Tiefling,Celestial Patron,10,5,2,4,0,10,7,,1,READY
+2024,Tiefling,Celestial Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Tiefling,Celestial Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Tiefling,Celestial Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Tiefling,Celestial Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Tiefling,Celestial Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Tiefling,Celestial Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Tiefling,Celestial Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Tiefling,Celestial Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Tiefling,Celestial Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Tiefling,Celestial Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY
+2024,Tiefling,Great Old One Patron,1,1,1,2,0,2,1,,0,READY
+2024,Tiefling,Great Old One Patron,2,1,2,2,0,3,3,,1,READY
+2024,Tiefling,Great Old One Patron,3,2,2,2,0,4,3,,1,READY
+2024,Tiefling,Great Old One Patron,4,2,2,3,0,5,3,,1,READY
+2024,Tiefling,Great Old One Patron,5,3,2,3,0,6,5,,1,READY
+2024,Tiefling,Great Old One Patron,6,3,2,3,0,7,5,,1,READY
+2024,Tiefling,Great Old One Patron,7,4,2,3,0,8,6,,1,READY
+2024,Tiefling,Great Old One Patron,8,4,2,3,0,9,6,,1,READY
+2024,Tiefling,Great Old One Patron,9,5,2,3,0,10,7,,1,READY
+2024,Tiefling,Great Old One Patron,10,5,2,4,0,10,7,,1,READY
+2024,Tiefling,Great Old One Patron,11,5,3,4,0,11,7,6,2,READY
+2024,Tiefling,Great Old One Patron,12,5,3,4,0,11,8,6,2,READY
+2024,Tiefling,Great Old One Patron,13,5,3,4,0,12,8,6/7,2,READY
+2024,Tiefling,Great Old One Patron,14,5,3,4,0,12,8,6/7,2,READY
+2024,Tiefling,Great Old One Patron,15,5,3,4,0,13,9,6/7/8,2,READY
+2024,Tiefling,Great Old One Patron,16,5,3,4,0,13,9,6/7/8,2,READY
+2024,Tiefling,Great Old One Patron,17,5,4,4,0,14,9,6/7/8/9,2,READY
+2024,Tiefling,Great Old One Patron,18,5,4,4,0,14,10,6/7/8/9,2,READY
+2024,Tiefling,Great Old One Patron,19,5,4,4,0,15,10,6/7/8/9,2,READY
+2024,Tiefling,Great Old One Patron,20,5,4,4,0,15,10,6/7/8/9,4,READY

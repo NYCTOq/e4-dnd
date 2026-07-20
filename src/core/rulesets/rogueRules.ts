@@ -1,25 +1,16 @@
 import type { DndItemData } from "./ruleset.types";
-
-export function getSneakAttackDice(level: number) {
-  return Math.max(1, Math.ceil(Math.min(20, Math.max(1, level)) / 2));
-}
-
-export function isSneakAttackWeapon(weapon: DndItemData) {
-  const properties = weapon.properties?.map(value => value.toLowerCase()) ?? [];
-  return weapon.category === "weapon" && (properties.includes("finesse") || Boolean(weapon.range) || properties.includes("ammunition"));
-}
-
-export function canUseSneakAttack(input: { level: number; weapon: DndItemData; usedThisTurn: boolean; hasAdvantage: boolean; hasDisadvantage: boolean; allyAdjacent: boolean }) {
-  if (input.level < 1 || input.usedThisTurn || !isSneakAttackWeapon(input.weapon) || input.hasDisadvantage) return false;
-  return input.hasAdvantage || input.allyAdjacent;
-}
-
-export function getRogueCombatFeatures(level: number) {
-  return {
-    cunningAction: level >= 2,
-    uncannyDodge: level >= 5,
-    evasion: level >= 7,
-    reliableTalent: level >= 11,
-    elusive: level >= 18,
-  };
-}
+export type RogueEdition="dnd_2014"|"dnd_2024";
+const clamp=(level:number)=>Math.max(1,Math.min(20,Math.floor(level)));
+export function getSneakAttackDice(level:number){return Math.max(1,Math.ceil(clamp(level)/2))}
+export function getRogueExpertiseCount(level:number){const safe=clamp(level);return safe>=6?4:2}
+export function getRogueWeaponMasteryCount(_level:number,ruleset:RogueEdition){return ruleset==="dnd_2024"?2:0}
+export function getRogueSubclassLevel(){return 3}
+export function getRogueSubclassFeatureLevels(){return[3,9,13,17]}
+export function getCunningStrikeSaveDc(proficiencyBonus:number,dexterityModifier:number){return 8+proficiencyBonus+dexterityModifier}
+export function getCunningStrikeOptions(level:number,ruleset:RogueEdition){const safe=clamp(level);if(ruleset!=="dnd_2024"||safe<5)return[];const base=[{name:"Poison",cost:1,save:"con"},{name:"Trip",cost:1,save:"dex"},{name:"Withdraw",cost:1,save:null}];if(safe>=14)base.push({name:"Daze",cost:2,save:"con"},{name:"Knock Out",cost:6,save:"con"},{name:"Obscure",cost:3,save:"dex"});return base}
+export function isSneakAttackWeapon(weapon:DndItemData){const properties=weapon.properties?.map(value=>value.toLowerCase())??[];return weapon.category==="weapon"&&(properties.includes("finesse")||Boolean(weapon.range)||properties.includes("ammunition"))}
+export function canUseSneakAttack(input:{level:number;weapon:DndItemData;usedThisTurn:boolean;hasAdvantage:boolean;hasDisadvantage:boolean;allyAdjacent:boolean}){if(input.level<1||input.usedThisTurn||!isSneakAttackWeapon(input.weapon)||input.hasDisadvantage)return false;return input.hasAdvantage||input.allyAdjacent}
+export function getRogueCombatFeatures(level:number,ruleset:RogueEdition="dnd_2014"){const safe=clamp(level),modern=ruleset==="dnd_2024";return{
+ expertiseCount:getRogueExpertiseCount(safe),weaponMasteryCount:getRogueWeaponMasteryCount(safe,ruleset),sneakAttackDice:getSneakAttackDice(safe),cunningAction:safe>=2,steadyAim:modern&&safe>=3,cunningStrike:modern&&safe>=5,cunningStrikeOptions:getCunningStrikeOptions(safe,ruleset),uncannyDodge:safe>=5,evasion:safe>=7,reliableTalent:modern?safe>=7:safe>=11,improvedCunningStrike:modern&&safe>=11,maxCunningStrikeEffects:modern&&safe>=11?2:modern&&safe>=5?1:0,blindsense:!modern&&safe>=14?10:0,deviousStrikes:modern&&safe>=14,slipperyMindWisdom:safe>=15,slipperyMindCharisma:modern&&safe>=15,elusive:safe>=18,strokeOfLuck:safe>=20,strokeOfLuckCritical:modern&&safe>=20,strokeOfLuckRecovery:safe>=20?"short-or-long-rest":null}}
+export function getThiefProgression(level:number,ruleset:RogueEdition){const safe=clamp(level),modern=ruleset==="dnd_2024";return{fastHands:safe>=3,fastHandsMagicItems:modern&&safe>=3,secondStoryWork:safe>=3,climbSpeed:modern&&safe>=3,supremeSneak:safe>=9,supremeSneakMode:safe>=9?(modern?"Stealth Attack Cunning Strike (1d6)":"Stealth advantage while moving no more than half speed"):null,useMagicDevice:safe>=13,attunementLimit:safe>=13?(modern?4:3):3,chargeConservation:modern&&safe>=13,scrollCasting:modern&&safe>=13,thiefsReflexes:safe>=17,extraFirstRoundTurn:safe>=17}}
+export function getAssassinProgression(level:number,ruleset:RogueEdition){const safe=clamp(level),modern=ruleset==="dnd_2024";return{bonusProficiencies:!modern&&safe>=3,assassinsTools:modern&&safe>=3,assassinate:safe>=3,initiativeAdvantage:modern&&safe>=3,openingAdvantage:safe>=3,assassinateBonus:modern&&safe>=3?`+${safe} damage on first-round Sneak Attack`:!modern&&safe>=3?"Critical hit against surprised creature":null,infiltrationExpertise:safe>=9,impostor:!modern&&safe>=13,envenomWeapons:modern&&safe>=13,deathStrike:safe>=17,sourceWarning:modern?"Assassin is full PHB content; preserve source and license metadata.":null}}

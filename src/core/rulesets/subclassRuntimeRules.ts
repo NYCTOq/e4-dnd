@@ -34,6 +34,12 @@ export function getSubclassRuntime(subclass:DndSubclassData|null|undefined,level
  if(/arcane ward/i.test(names))actions.push(action("arcane-ward","Arcane Ward","action","Abjuration ward HP havuzunu etkinleştir.","arcane-ward"));
  if(/bend luck/i.test(names))actions.push(action("bend-luck","Bend Luck","reaction","Yakındaki D20 sonucuna sorcery die uygula.","sorcery-points"));
  if(/wild magic surge/i.test(names))actions.push(action("wild-magic-surge","Wild Magic Surge","action","Wild Magic tablosu sonucunu tetikle."));
+ if(subclass?.className.toLowerCase()==="barbarian"){
+  const edition=subclass.ruleset;
+  if(/frenzy/i.test(names)&&edition==="dnd_2014")actions.push(action("berserker-frenzy","Frenzy Attack","bonus-action","Rage sırasında sonraki turlarda bonus action melee weapon attack; Rage bitince exhaustion uygula."));
+  if(/retaliation/i.test(names))actions.push(action("berserker-retaliation","Retaliation","reaction","5 feet içindeki saldırgana melee attack yap."));
+  if(/intimidating presence/i.test(names))actions.push(action("berserker-intimidating-presence","Intimidating Presence",edition==="dnd_2024"?"bonus-action":"action",edition==="dnd_2024"?"30-foot emanation içinde Strength tabanlı save DC ile frightened uygula.":"Bir hedefe Wisdom save ile frightened uygula ve action ile sürdür."));
+ }
  const champion=/champion/i.test(subclassName);const criticalThreshold=champion?(level>=15?18:level>=3?19:20):20;
  const valor=/college of valor/i.test(subclassName);const attacksPerActionMinimum=valor&&level>=6?2:1;
  const draconic=/draconic/i.test(subclassName);const armorClassFloor=draconic?13+dexModifier:0;

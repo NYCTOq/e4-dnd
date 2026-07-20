@@ -1,5 +1,10 @@
 import type { AbilityScores, RulesetId } from "../character/character.types";
 import type { DndClassData, DndSpellData } from "./ruleset.types";
+import { getBardCantripCount, getBardSpellLimit } from "./bardRules";
+import { getClericCantripCount, getClericPreparedSpellLimit } from "./clericRules";
+import { getDruidCantripCount, getDruidPreparedSpellLimit } from "./druidRules";
+import { getPaladinPreparedSpellLimit } from "./paladinRules";
+import { getRangerPreparedSpellLimit } from "./rangerRules";
 
 export type SpellcastingProfile = {
   cantripLimit: number; knownSpellLimit: number | null; preparedSpellLimit: number | null;
@@ -19,12 +24,16 @@ const knownBase:Record<string,number[]> = {
 export function getSpellcastingProfile(classData:DndClassData|null, level:number, abilities:AbilityScores, ruleset:RulesetId):SpellcastingProfile {
   if (!classData || classData.spellProgression === "none") return {cantripLimit:0,knownSpellLimit:0,preparedSpellLimit:0,ritualCasting:false,pactMagic:false};
   const key=classData.name.toLowerCase(); const safe=Math.max(1,Math.min(20,Math.floor(level)));
-  const base=cantripBase[key]; const cantripLimit=base ? (safe>=10?base[2]:safe>=4?base[1]:base[0]) : 0;
+  const base=cantripBase[key]; const cantripLimit=key === "bard" ? getBardCantripCount(safe) : key === "cleric" ? getClericCantripCount(safe) : key === "druid" ? getDruidCantripCount(safe,ruleset === "dnd_2024" ? "dnd_2024" : "dnd_2014") : base ? (safe>=10?base[2]:safe>=4?base[1]:base[0]) : 0;
   const ability=classData.spellcastingAbility ? abilities[classData.spellcastingAbility] : 10;
   let preparedSpellLimit:number|null=null; let knownSpellLimit:number|null=knownBase[key]?.[safe] ?? null;
   if (["cleric","druid","wizard"].includes(key)) preparedSpellLimit=Math.max(1,safe+mod(ability));
-  if (key==="paladin") preparedSpellLimit=Math.max(1,Math.floor(safe/2)+mod(ability));
-  if (ruleset==="dnd_2024" && ["bard","ranger","sorcerer","warlock"].includes(key)) knownSpellLimit=null;
+  if (key === "cleric" && ruleset === "dnd_2024") preparedSpellLimit=getClericPreparedSpellLimit(safe,"dnd_2024",mod(ability));
+  if (key === "druid") preparedSpellLimit=getDruidPreparedSpellLimit(safe,ruleset === "dnd_2024" ? "dnd_2024" : "dnd_2014",mod(ability));
+  if (key==="paladin") preparedSpellLimit=getPaladinPreparedSpellLimit(safe,ruleset === "dnd_2024" ? "dnd_2024" : "dnd_2014",mod(ability));
+  if (key === "bard" && ruleset === "dnd_2024") { knownSpellLimit = null; preparedSpellLimit = getBardSpellLimit(safe, "dnd_2024"); }
+  if (key === "ranger" && ruleset === "dnd_2024") { knownSpellLimit = null; preparedSpellLimit = getRangerPreparedSpellLimit(safe,"dnd_2024"); }
+  if (ruleset==="dnd_2024" && ["sorcerer","warlock"].includes(key)) knownSpellLimit=null;
   return { cantripLimit, knownSpellLimit, preparedSpellLimit, ritualCasting:["bard","cleric","druid","wizard"].includes(key), pactMagic:classData.spellProgression==="pact" };
 }
 

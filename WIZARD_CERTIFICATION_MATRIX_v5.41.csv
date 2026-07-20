@@ -1,0 +1,3141 @@
+﻿ruleset,race_or_species,subclass,level,ready,cantrips,prepared_spells_int_mod_3,spellbook_minimum,arcane_recovery_budget,max_spell_level
+dnd_2014,Human,School of Evocation,1,true,3,4,6,1,1
+dnd_2014,Human,School of Evocation,2,true,3,5,8,1,1
+dnd_2014,Human,School of Evocation,3,true,3,6,10,2,2
+dnd_2014,Human,School of Evocation,4,true,4,7,12,2,2
+dnd_2014,Human,School of Evocation,5,true,4,8,14,3,3
+dnd_2014,Human,School of Evocation,6,true,4,9,16,3,3
+dnd_2014,Human,School of Evocation,7,true,4,10,18,4,4
+dnd_2014,Human,School of Evocation,8,true,4,11,20,4,4
+dnd_2014,Human,School of Evocation,9,true,4,12,22,5,5
+dnd_2014,Human,School of Evocation,10,true,5,13,24,5,5
+dnd_2014,Human,School of Evocation,11,true,5,14,26,6,6
+dnd_2014,Human,School of Evocation,12,true,5,15,28,6,6
+dnd_2014,Human,School of Evocation,13,true,5,16,30,7,7
+dnd_2014,Human,School of Evocation,14,true,5,17,32,7,7
+dnd_2014,Human,School of Evocation,15,true,5,18,34,8,8
+dnd_2014,Human,School of Evocation,16,true,5,19,36,8,8
+dnd_2014,Human,School of Evocation,17,true,5,20,38,9,9
+dnd_2014,Human,School of Evocation,18,true,5,21,40,9,9
+dnd_2014,Human,School of Evocation,19,true,5,22,42,10,9
+dnd_2014,Human,School of Evocation,20,true,5,23,44,10,9
+dnd_2014,Human,School of Abjuration,1,true,3,4,6,1,1
+dnd_2014,Human,School of Abjuration,2,true,3,5,8,1,1
+dnd_2014,Human,School of Abjuration,3,true,3,6,10,2,2
+dnd_2014,Human,School of Abjuration,4,true,4,7,12,2,2
+dnd_2014,Human,School of Abjuration,5,true,4,8,14,3,3
+dnd_2014,Human,School of Abjuration,6,true,4,9,16,3,3
+dnd_2014,Human,School of Abjuration,7,true,4,10,18,4,4
+dnd_2014,Human,School of Abjuration,8,true,4,11,20,4,4
+dnd_2014,Human,School of Abjuration,9,true,4,12,22,5,5
+dnd_2014,Human,School of Abjuration,10,true,5,13,24,5,5
+dnd_2014,Human,School of Abjuration,11,true,5,14,26,6,6
+dnd_2014,Human,School of Abjuration,12,true,5,15,28,6,6
+dnd_2014,Human,School of Abjuration,13,true,5,16,30,7,7
+dnd_2014,Human,School of Abjuration,14,true,5,17,32,7,7
+dnd_2014,Human,School of Abjuration,15,true,5,18,34,8,8
+dnd_2014,Human,School of Abjuration,16,true,5,19,36,8,8
+dnd_2014,Human,School of Abjuration,17,true,5,20,38,9,9
+dnd_2014,Human,School of Abjuration,18,true,5,21,40,9,9
+dnd_2014,Human,School of Abjuration,19,true,5,22,42,10,9
+dnd_2014,Human,School of Abjuration,20,true,5,23,44,10,9
+dnd_2014,Human,School of Conjuration,1,true,3,4,6,1,1
+dnd_2014,Human,School of Conjuration,2,true,3,5,8,1,1
+dnd_2014,Human,School of Conjuration,3,true,3,6,10,2,2
+dnd_2014,Human,School of Conjuration,4,true,4,7,12,2,2
+dnd_2014,Human,School of Conjuration,5,true,4,8,14,3,3
+dnd_2014,Human,School of Conjuration,6,true,4,9,16,3,3
+dnd_2014,Human,School of Conjuration,7,true,4,10,18,4,4
+dnd_2014,Human,School of Conjuration,8,true,4,11,20,4,4
+dnd_2014,Human,School of Conjuration,9,true,4,12,22,5,5
+dnd_2014,Human,School of Conjuration,10,true,5,13,24,5,5
+dnd_2014,Human,School of Conjuration,11,true,5,14,26,6,6
+dnd_2014,Human,School of Conjuration,12,true,5,15,28,6,6
+dnd_2014,Human,School of Conjuration,13,true,5,16,30,7,7
+dnd_2014,Human,School of Conjuration,14,true,5,17,32,7,7
+dnd_2014,Human,School of Conjuration,15,true,5,18,34,8,8
+dnd_2014,Human,School of Conjuration,16,true,5,19,36,8,8
+dnd_2014,Human,School of Conjuration,17,true,5,20,38,9,9
+dnd_2014,Human,School of Conjuration,18,true,5,21,40,9,9
+dnd_2014,Human,School of Conjuration,19,true,5,22,42,10,9
+dnd_2014,Human,School of Conjuration,20,true,5,23,44,10,9
+dnd_2014,Human,School of Divination,1,true,3,4,6,1,1
+dnd_2014,Human,School of Divination,2,true,3,5,8,1,1
+dnd_2014,Human,School of Divination,3,true,3,6,10,2,2
+dnd_2014,Human,School of Divination,4,true,4,7,12,2,2
+dnd_2014,Human,School of Divination,5,true,4,8,14,3,3
+dnd_2014,Human,School of Divination,6,true,4,9,16,3,3
+dnd_2014,Human,School of Divination,7,true,4,10,18,4,4
+dnd_2014,Human,School of Divination,8,true,4,11,20,4,4
+dnd_2014,Human,School of Divination,9,true,4,12,22,5,5
+dnd_2014,Human,School of Divination,10,true,5,13,24,5,5
+dnd_2014,Human,School of Divination,11,true,5,14,26,6,6
+dnd_2014,Human,School of Divination,12,true,5,15,28,6,6
+dnd_2014,Human,School of Divination,13,true,5,16,30,7,7
+dnd_2014,Human,School of Divination,14,true,5,17,32,7,7
+dnd_2014,Human,School of Divination,15,true,5,18,34,8,8
+dnd_2014,Human,School of Divination,16,true,5,19,36,8,8
+dnd_2014,Human,School of Divination,17,true,5,20,38,9,9
+dnd_2014,Human,School of Divination,18,true,5,21,40,9,9
+dnd_2014,Human,School of Divination,19,true,5,22,42,10,9
+dnd_2014,Human,School of Divination,20,true,5,23,44,10,9
+dnd_2014,Human,School of Enchantment,1,true,3,4,6,1,1
+dnd_2014,Human,School of Enchantment,2,true,3,5,8,1,1
+dnd_2014,Human,School of Enchantment,3,true,3,6,10,2,2
+dnd_2014,Human,School of Enchantment,4,true,4,7,12,2,2
+dnd_2014,Human,School of Enchantment,5,true,4,8,14,3,3
+dnd_2014,Human,School of Enchantment,6,true,4,9,16,3,3
+dnd_2014,Human,School of Enchantment,7,true,4,10,18,4,4
+dnd_2014,Human,School of Enchantment,8,true,4,11,20,4,4
+dnd_2014,Human,School of Enchantment,9,true,4,12,22,5,5
+dnd_2014,Human,School of Enchantment,10,true,5,13,24,5,5
+dnd_2014,Human,School of Enchantment,11,true,5,14,26,6,6
+dnd_2014,Human,School of Enchantment,12,true,5,15,28,6,6
+dnd_2014,Human,School of Enchantment,13,true,5,16,30,7,7
+dnd_2014,Human,School of Enchantment,14,true,5,17,32,7,7
+dnd_2014,Human,School of Enchantment,15,true,5,18,34,8,8
+dnd_2014,Human,School of Enchantment,16,true,5,19,36,8,8
+dnd_2014,Human,School of Enchantment,17,true,5,20,38,9,9
+dnd_2014,Human,School of Enchantment,18,true,5,21,40,9,9
+dnd_2014,Human,School of Enchantment,19,true,5,22,42,10,9
+dnd_2014,Human,School of Enchantment,20,true,5,23,44,10,9
+dnd_2014,Human,School of Illusion,1,true,3,4,6,1,1
+dnd_2014,Human,School of Illusion,2,true,3,5,8,1,1
+dnd_2014,Human,School of Illusion,3,true,3,6,10,2,2
+dnd_2014,Human,School of Illusion,4,true,4,7,12,2,2
+dnd_2014,Human,School of Illusion,5,true,4,8,14,3,3
+dnd_2014,Human,School of Illusion,6,true,4,9,16,3,3
+dnd_2014,Human,School of Illusion,7,true,4,10,18,4,4
+dnd_2014,Human,School of Illusion,8,true,4,11,20,4,4
+dnd_2014,Human,School of Illusion,9,true,4,12,22,5,5
+dnd_2014,Human,School of Illusion,10,true,5,13,24,5,5
+dnd_2014,Human,School of Illusion,11,true,5,14,26,6,6
+dnd_2014,Human,School of Illusion,12,true,5,15,28,6,6
+dnd_2014,Human,School of Illusion,13,true,5,16,30,7,7
+dnd_2014,Human,School of Illusion,14,true,5,17,32,7,7
+dnd_2014,Human,School of Illusion,15,true,5,18,34,8,8
+dnd_2014,Human,School of Illusion,16,true,5,19,36,8,8
+dnd_2014,Human,School of Illusion,17,true,5,20,38,9,9
+dnd_2014,Human,School of Illusion,18,true,5,21,40,9,9
+dnd_2014,Human,School of Illusion,19,true,5,22,42,10,9
+dnd_2014,Human,School of Illusion,20,true,5,23,44,10,9
+dnd_2014,Human,School of Necromancy,1,true,3,4,6,1,1
+dnd_2014,Human,School of Necromancy,2,true,3,5,8,1,1
+dnd_2014,Human,School of Necromancy,3,true,3,6,10,2,2
+dnd_2014,Human,School of Necromancy,4,true,4,7,12,2,2
+dnd_2014,Human,School of Necromancy,5,true,4,8,14,3,3
+dnd_2014,Human,School of Necromancy,6,true,4,9,16,3,3
+dnd_2014,Human,School of Necromancy,7,true,4,10,18,4,4
+dnd_2014,Human,School of Necromancy,8,true,4,11,20,4,4
+dnd_2014,Human,School of Necromancy,9,true,4,12,22,5,5
+dnd_2014,Human,School of Necromancy,10,true,5,13,24,5,5
+dnd_2014,Human,School of Necromancy,11,true,5,14,26,6,6
+dnd_2014,Human,School of Necromancy,12,true,5,15,28,6,6
+dnd_2014,Human,School of Necromancy,13,true,5,16,30,7,7
+dnd_2014,Human,School of Necromancy,14,true,5,17,32,7,7
+dnd_2014,Human,School of Necromancy,15,true,5,18,34,8,8
+dnd_2014,Human,School of Necromancy,16,true,5,19,36,8,8
+dnd_2014,Human,School of Necromancy,17,true,5,20,38,9,9
+dnd_2014,Human,School of Necromancy,18,true,5,21,40,9,9
+dnd_2014,Human,School of Necromancy,19,true,5,22,42,10,9
+dnd_2014,Human,School of Necromancy,20,true,5,23,44,10,9
+dnd_2014,Human,School of Transmutation,1,true,3,4,6,1,1
+dnd_2014,Human,School of Transmutation,2,true,3,5,8,1,1
+dnd_2014,Human,School of Transmutation,3,true,3,6,10,2,2
+dnd_2014,Human,School of Transmutation,4,true,4,7,12,2,2
+dnd_2014,Human,School of Transmutation,5,true,4,8,14,3,3
+dnd_2014,Human,School of Transmutation,6,true,4,9,16,3,3
+dnd_2014,Human,School of Transmutation,7,true,4,10,18,4,4
+dnd_2014,Human,School of Transmutation,8,true,4,11,20,4,4
+dnd_2014,Human,School of Transmutation,9,true,4,12,22,5,5
+dnd_2014,Human,School of Transmutation,10,true,5,13,24,5,5
+dnd_2014,Human,School of Transmutation,11,true,5,14,26,6,6
+dnd_2014,Human,School of Transmutation,12,true,5,15,28,6,6
+dnd_2014,Human,School of Transmutation,13,true,5,16,30,7,7
+dnd_2014,Human,School of Transmutation,14,true,5,17,32,7,7
+dnd_2014,Human,School of Transmutation,15,true,5,18,34,8,8
+dnd_2014,Human,School of Transmutation,16,true,5,19,36,8,8
+dnd_2014,Human,School of Transmutation,17,true,5,20,38,9,9
+dnd_2014,Human,School of Transmutation,18,true,5,21,40,9,9
+dnd_2014,Human,School of Transmutation,19,true,5,22,42,10,9
+dnd_2014,Human,School of Transmutation,20,true,5,23,44,10,9
+dnd_2014,Human,Bladesinging,1,true,3,4,6,1,1
+dnd_2014,Human,Bladesinging,2,true,3,5,8,1,1
+dnd_2014,Human,Bladesinging,3,true,3,6,10,2,2
+dnd_2014,Human,Bladesinging,4,true,4,7,12,2,2
+dnd_2014,Human,Bladesinging,5,true,4,8,14,3,3
+dnd_2014,Human,Bladesinging,6,true,4,9,16,3,3
+dnd_2014,Human,Bladesinging,7,true,4,10,18,4,4
+dnd_2014,Human,Bladesinging,8,true,4,11,20,4,4
+dnd_2014,Human,Bladesinging,9,true,4,12,22,5,5
+dnd_2014,Human,Bladesinging,10,true,5,13,24,5,5
+dnd_2014,Human,Bladesinging,11,true,5,14,26,6,6
+dnd_2014,Human,Bladesinging,12,true,5,15,28,6,6
+dnd_2014,Human,Bladesinging,13,true,5,16,30,7,7
+dnd_2014,Human,Bladesinging,14,true,5,17,32,7,7
+dnd_2014,Human,Bladesinging,15,true,5,18,34,8,8
+dnd_2014,Human,Bladesinging,16,true,5,19,36,8,8
+dnd_2014,Human,Bladesinging,17,true,5,20,38,9,9
+dnd_2014,Human,Bladesinging,18,true,5,21,40,9,9
+dnd_2014,Human,Bladesinging,19,true,5,22,42,10,9
+dnd_2014,Human,Bladesinging,20,true,5,23,44,10,9
+dnd_2014,Human,War Magic,1,true,3,4,6,1,1
+dnd_2014,Human,War Magic,2,true,3,5,8,1,1
+dnd_2014,Human,War Magic,3,true,3,6,10,2,2
+dnd_2014,Human,War Magic,4,true,4,7,12,2,2
+dnd_2014,Human,War Magic,5,true,4,8,14,3,3
+dnd_2014,Human,War Magic,6,true,4,9,16,3,3
+dnd_2014,Human,War Magic,7,true,4,10,18,4,4
+dnd_2014,Human,War Magic,8,true,4,11,20,4,4
+dnd_2014,Human,War Magic,9,true,4,12,22,5,5
+dnd_2014,Human,War Magic,10,true,5,13,24,5,5
+dnd_2014,Human,War Magic,11,true,5,14,26,6,6
+dnd_2014,Human,War Magic,12,true,5,15,28,6,6
+dnd_2014,Human,War Magic,13,true,5,16,30,7,7
+dnd_2014,Human,War Magic,14,true,5,17,32,7,7
+dnd_2014,Human,War Magic,15,true,5,18,34,8,8
+dnd_2014,Human,War Magic,16,true,5,19,36,8,8
+dnd_2014,Human,War Magic,17,true,5,20,38,9,9
+dnd_2014,Human,War Magic,18,true,5,21,40,9,9
+dnd_2014,Human,War Magic,19,true,5,22,42,10,9
+dnd_2014,Human,War Magic,20,true,5,23,44,10,9
+dnd_2014,Human,Order of Scribes,1,true,3,4,6,1,1
+dnd_2014,Human,Order of Scribes,2,true,3,5,8,1,1
+dnd_2014,Human,Order of Scribes,3,true,3,6,10,2,2
+dnd_2014,Human,Order of Scribes,4,true,4,7,12,2,2
+dnd_2014,Human,Order of Scribes,5,true,4,8,14,3,3
+dnd_2014,Human,Order of Scribes,6,true,4,9,16,3,3
+dnd_2014,Human,Order of Scribes,7,true,4,10,18,4,4
+dnd_2014,Human,Order of Scribes,8,true,4,11,20,4,4
+dnd_2014,Human,Order of Scribes,9,true,4,12,22,5,5
+dnd_2014,Human,Order of Scribes,10,true,5,13,24,5,5
+dnd_2014,Human,Order of Scribes,11,true,5,14,26,6,6
+dnd_2014,Human,Order of Scribes,12,true,5,15,28,6,6
+dnd_2014,Human,Order of Scribes,13,true,5,16,30,7,7
+dnd_2014,Human,Order of Scribes,14,true,5,17,32,7,7
+dnd_2014,Human,Order of Scribes,15,true,5,18,34,8,8
+dnd_2014,Human,Order of Scribes,16,true,5,19,36,8,8
+dnd_2014,Human,Order of Scribes,17,true,5,20,38,9,9
+dnd_2014,Human,Order of Scribes,18,true,5,21,40,9,9
+dnd_2014,Human,Order of Scribes,19,true,5,22,42,10,9
+dnd_2014,Human,Order of Scribes,20,true,5,23,44,10,9
+dnd_2014,Human,Chronurgy Magic,1,true,3,4,6,1,1
+dnd_2014,Human,Chronurgy Magic,2,true,3,5,8,1,1
+dnd_2014,Human,Chronurgy Magic,3,true,3,6,10,2,2
+dnd_2014,Human,Chronurgy Magic,4,true,4,7,12,2,2
+dnd_2014,Human,Chronurgy Magic,5,true,4,8,14,3,3
+dnd_2014,Human,Chronurgy Magic,6,true,4,9,16,3,3
+dnd_2014,Human,Chronurgy Magic,7,true,4,10,18,4,4
+dnd_2014,Human,Chronurgy Magic,8,true,4,11,20,4,4
+dnd_2014,Human,Chronurgy Magic,9,true,4,12,22,5,5
+dnd_2014,Human,Chronurgy Magic,10,true,5,13,24,5,5
+dnd_2014,Human,Chronurgy Magic,11,true,5,14,26,6,6
+dnd_2014,Human,Chronurgy Magic,12,true,5,15,28,6,6
+dnd_2014,Human,Chronurgy Magic,13,true,5,16,30,7,7
+dnd_2014,Human,Chronurgy Magic,14,true,5,17,32,7,7
+dnd_2014,Human,Chronurgy Magic,15,true,5,18,34,8,8
+dnd_2014,Human,Chronurgy Magic,16,true,5,19,36,8,8
+dnd_2014,Human,Chronurgy Magic,17,true,5,20,38,9,9
+dnd_2014,Human,Chronurgy Magic,18,true,5,21,40,9,9
+dnd_2014,Human,Chronurgy Magic,19,true,5,22,42,10,9
+dnd_2014,Human,Chronurgy Magic,20,true,5,23,44,10,9
+dnd_2014,Human,Graviturgy Magic,1,true,3,4,6,1,1
+dnd_2014,Human,Graviturgy Magic,2,true,3,5,8,1,1
+dnd_2014,Human,Graviturgy Magic,3,true,3,6,10,2,2
+dnd_2014,Human,Graviturgy Magic,4,true,4,7,12,2,2
+dnd_2014,Human,Graviturgy Magic,5,true,4,8,14,3,3
+dnd_2014,Human,Graviturgy Magic,6,true,4,9,16,3,3
+dnd_2014,Human,Graviturgy Magic,7,true,4,10,18,4,4
+dnd_2014,Human,Graviturgy Magic,8,true,4,11,20,4,4
+dnd_2014,Human,Graviturgy Magic,9,true,4,12,22,5,5
+dnd_2014,Human,Graviturgy Magic,10,true,5,13,24,5,5
+dnd_2014,Human,Graviturgy Magic,11,true,5,14,26,6,6
+dnd_2014,Human,Graviturgy Magic,12,true,5,15,28,6,6
+dnd_2014,Human,Graviturgy Magic,13,true,5,16,30,7,7
+dnd_2014,Human,Graviturgy Magic,14,true,5,17,32,7,7
+dnd_2014,Human,Graviturgy Magic,15,true,5,18,34,8,8
+dnd_2014,Human,Graviturgy Magic,16,true,5,19,36,8,8
+dnd_2014,Human,Graviturgy Magic,17,true,5,20,38,9,9
+dnd_2014,Human,Graviturgy Magic,18,true,5,21,40,9,9
+dnd_2014,Human,Graviturgy Magic,19,true,5,22,42,10,9
+dnd_2014,Human,Graviturgy Magic,20,true,5,23,44,10,9
+dnd_2014,Dwarf,School of Evocation,1,true,3,4,6,1,1
+dnd_2014,Dwarf,School of Evocation,2,true,3,5,8,1,1
+dnd_2014,Dwarf,School of Evocation,3,true,3,6,10,2,2
+dnd_2014,Dwarf,School of Evocation,4,true,4,7,12,2,2
+dnd_2014,Dwarf,School of Evocation,5,true,4,8,14,3,3
+dnd_2014,Dwarf,School of Evocation,6,true,4,9,16,3,3
+dnd_2014,Dwarf,School of Evocation,7,true,4,10,18,4,4
+dnd_2014,Dwarf,School of Evocation,8,true,4,11,20,4,4
+dnd_2014,Dwarf,School of Evocation,9,true,4,12,22,5,5
+dnd_2014,Dwarf,School of Evocation,10,true,5,13,24,5,5
+dnd_2014,Dwarf,School of Evocation,11,true,5,14,26,6,6
+dnd_2014,Dwarf,School of Evocation,12,true,5,15,28,6,6
+dnd_2014,Dwarf,School of Evocation,13,true,5,16,30,7,7
+dnd_2014,Dwarf,School of Evocation,14,true,5,17,32,7,7
+dnd_2014,Dwarf,School of Evocation,15,true,5,18,34,8,8
+dnd_2014,Dwarf,School of Evocation,16,true,5,19,36,8,8
+dnd_2014,Dwarf,School of Evocation,17,true,5,20,38,9,9
+dnd_2014,Dwarf,School of Evocation,18,true,5,21,40,9,9
+dnd_2014,Dwarf,School of Evocation,19,true,5,22,42,10,9
+dnd_2014,Dwarf,School of Evocation,20,true,5,23,44,10,9
+dnd_2014,Dwarf,School of Abjuration,1,true,3,4,6,1,1
+dnd_2014,Dwarf,School of Abjuration,2,true,3,5,8,1,1
+dnd_2014,Dwarf,School of Abjuration,3,true,3,6,10,2,2
+dnd_2014,Dwarf,School of Abjuration,4,true,4,7,12,2,2
+dnd_2014,Dwarf,School of Abjuration,5,true,4,8,14,3,3
+dnd_2014,Dwarf,School of Abjuration,6,true,4,9,16,3,3
+dnd_2014,Dwarf,School of Abjuration,7,true,4,10,18,4,4
+dnd_2014,Dwarf,School of Abjuration,8,true,4,11,20,4,4
+dnd_2014,Dwarf,School of Abjuration,9,true,4,12,22,5,5
+dnd_2014,Dwarf,School of Abjuration,10,true,5,13,24,5,5
+dnd_2014,Dwarf,School of Abjuration,11,true,5,14,26,6,6
+dnd_2014,Dwarf,School of Abjuration,12,true,5,15,28,6,6
+dnd_2014,Dwarf,School of Abjuration,13,true,5,16,30,7,7
+dnd_2014,Dwarf,School of Abjuration,14,true,5,17,32,7,7
+dnd_2014,Dwarf,School of Abjuration,15,true,5,18,34,8,8
+dnd_2014,Dwarf,School of Abjuration,16,true,5,19,36,8,8
+dnd_2014,Dwarf,School of Abjuration,17,true,5,20,38,9,9
+dnd_2014,Dwarf,School of Abjuration,18,true,5,21,40,9,9
+dnd_2014,Dwarf,School of Abjuration,19,true,5,22,42,10,9
+dnd_2014,Dwarf,School of Abjuration,20,true,5,23,44,10,9
+dnd_2014,Dwarf,School of Conjuration,1,true,3,4,6,1,1
+dnd_2014,Dwarf,School of Conjuration,2,true,3,5,8,1,1
+dnd_2014,Dwarf,School of Conjuration,3,true,3,6,10,2,2
+dnd_2014,Dwarf,School of Conjuration,4,true,4,7,12,2,2
+dnd_2014,Dwarf,School of Conjuration,5,true,4,8,14,3,3
+dnd_2014,Dwarf,School of Conjuration,6,true,4,9,16,3,3
+dnd_2014,Dwarf,School of Conjuration,7,true,4,10,18,4,4
+dnd_2014,Dwarf,School of Conjuration,8,true,4,11,20,4,4
+dnd_2014,Dwarf,School of Conjuration,9,true,4,12,22,5,5
+dnd_2014,Dwarf,School of Conjuration,10,true,5,13,24,5,5
+dnd_2014,Dwarf,School of Conjuration,11,true,5,14,26,6,6
+dnd_2014,Dwarf,School of Conjuration,12,true,5,15,28,6,6
+dnd_2014,Dwarf,School of Conjuration,13,true,5,16,30,7,7
+dnd_2014,Dwarf,School of Conjuration,14,true,5,17,32,7,7
+dnd_2014,Dwarf,School of Conjuration,15,true,5,18,34,8,8
+dnd_2014,Dwarf,School of Conjuration,16,true,5,19,36,8,8
+dnd_2014,Dwarf,School of Conjuration,17,true,5,20,38,9,9
+dnd_2014,Dwarf,School of Conjuration,18,true,5,21,40,9,9
+dnd_2014,Dwarf,School of Conjuration,19,true,5,22,42,10,9
+dnd_2014,Dwarf,School of Conjuration,20,true,5,23,44,10,9
+dnd_2014,Dwarf,School of Divination,1,true,3,4,6,1,1
+dnd_2014,Dwarf,School of Divination,2,true,3,5,8,1,1
+dnd_2014,Dwarf,School of Divination,3,true,3,6,10,2,2
+dnd_2014,Dwarf,School of Divination,4,true,4,7,12,2,2
+dnd_2014,Dwarf,School of Divination,5,true,4,8,14,3,3
+dnd_2014,Dwarf,School of Divination,6,true,4,9,16,3,3
+dnd_2014,Dwarf,School of Divination,7,true,4,10,18,4,4
+dnd_2014,Dwarf,School of Divination,8,true,4,11,20,4,4
+dnd_2014,Dwarf,School of Divination,9,true,4,12,22,5,5
+dnd_2014,Dwarf,School of Divination,10,true,5,13,24,5,5
+dnd_2014,Dwarf,School of Divination,11,true,5,14,26,6,6
+dnd_2014,Dwarf,School of Divination,12,true,5,15,28,6,6
+dnd_2014,Dwarf,School of Divination,13,true,5,16,30,7,7
+dnd_2014,Dwarf,School of Divination,14,true,5,17,32,7,7
+dnd_2014,Dwarf,School of Divination,15,true,5,18,34,8,8
+dnd_2014,Dwarf,School of Divination,16,true,5,19,36,8,8
+dnd_2014,Dwarf,School of Divination,17,true,5,20,38,9,9
+dnd_2014,Dwarf,School of Divination,18,true,5,21,40,9,9
+dnd_2014,Dwarf,School of Divination,19,true,5,22,42,10,9
+dnd_2014,Dwarf,School of Divination,20,true,5,23,44,10,9
+dnd_2014,Dwarf,School of Enchantment,1,true,3,4,6,1,1
+dnd_2014,Dwarf,School of Enchantment,2,true,3,5,8,1,1
+dnd_2014,Dwarf,School of Enchantment,3,true,3,6,10,2,2
+dnd_2014,Dwarf,School of Enchantment,4,true,4,7,12,2,2
+dnd_2014,Dwarf,School of Enchantment,5,true,4,8,14,3,3
+dnd_2014,Dwarf,School of Enchantment,6,true,4,9,16,3,3
+dnd_2014,Dwarf,School of Enchantment,7,true,4,10,18,4,4
+dnd_2014,Dwarf,School of Enchantment,8,true,4,11,20,4,4
+dnd_2014,Dwarf,School of Enchantment,9,true,4,12,22,5,5
+dnd_2014,Dwarf,School of Enchantment,10,true,5,13,24,5,5
+dnd_2014,Dwarf,School of Enchantment,11,true,5,14,26,6,6
+dnd_2014,Dwarf,School of Enchantment,12,true,5,15,28,6,6
+dnd_2014,Dwarf,School of Enchantment,13,true,5,16,30,7,7
+dnd_2014,Dwarf,School of Enchantment,14,true,5,17,32,7,7
+dnd_2014,Dwarf,School of Enchantment,15,true,5,18,34,8,8
+dnd_2014,Dwarf,School of Enchantment,16,true,5,19,36,8,8
+dnd_2014,Dwarf,School of Enchantment,17,true,5,20,38,9,9
+dnd_2014,Dwarf,School of Enchantment,18,true,5,21,40,9,9
+dnd_2014,Dwarf,School of Enchantment,19,true,5,22,42,10,9
+dnd_2014,Dwarf,School of Enchantment,20,true,5,23,44,10,9
+dnd_2014,Dwarf,School of Illusion,1,true,3,4,6,1,1
+dnd_2014,Dwarf,School of Illusion,2,true,3,5,8,1,1
+dnd_2014,Dwarf,School of Illusion,3,true,3,6,10,2,2
+dnd_2014,Dwarf,School of Illusion,4,true,4,7,12,2,2
+dnd_2014,Dwarf,School of Illusion,5,true,4,8,14,3,3
+dnd_2014,Dwarf,School of Illusion,6,true,4,9,16,3,3
+dnd_2014,Dwarf,School of Illusion,7,true,4,10,18,4,4
+dnd_2014,Dwarf,School of Illusion,8,true,4,11,20,4,4
+dnd_2014,Dwarf,School of Illusion,9,true,4,12,22,5,5
+dnd_2014,Dwarf,School of Illusion,10,true,5,13,24,5,5
+dnd_2014,Dwarf,School of Illusion,11,true,5,14,26,6,6
+dnd_2014,Dwarf,School of Illusion,12,true,5,15,28,6,6
+dnd_2014,Dwarf,School of Illusion,13,true,5,16,30,7,7
+dnd_2014,Dwarf,School of Illusion,14,true,5,17,32,7,7
+dnd_2014,Dwarf,School of Illusion,15,true,5,18,34,8,8
+dnd_2014,Dwarf,School of Illusion,16,true,5,19,36,8,8
+dnd_2014,Dwarf,School of Illusion,17,true,5,20,38,9,9
+dnd_2014,Dwarf,School of Illusion,18,true,5,21,40,9,9
+dnd_2014,Dwarf,School of Illusion,19,true,5,22,42,10,9
+dnd_2014,Dwarf,School of Illusion,20,true,5,23,44,10,9
+dnd_2014,Dwarf,School of Necromancy,1,true,3,4,6,1,1
+dnd_2014,Dwarf,School of Necromancy,2,true,3,5,8,1,1
+dnd_2014,Dwarf,School of Necromancy,3,true,3,6,10,2,2
+dnd_2014,Dwarf,School of Necromancy,4,true,4,7,12,2,2
+dnd_2014,Dwarf,School of Necromancy,5,true,4,8,14,3,3
+dnd_2014,Dwarf,School of Necromancy,6,true,4,9,16,3,3
+dnd_2014,Dwarf,School of Necromancy,7,true,4,10,18,4,4
+dnd_2014,Dwarf,School of Necromancy,8,true,4,11,20,4,4
+dnd_2014,Dwarf,School of Necromancy,9,true,4,12,22,5,5
+dnd_2014,Dwarf,School of Necromancy,10,true,5,13,24,5,5
+dnd_2014,Dwarf,School of Necromancy,11,true,5,14,26,6,6
+dnd_2014,Dwarf,School of Necromancy,12,true,5,15,28,6,6
+dnd_2014,Dwarf,School of Necromancy,13,true,5,16,30,7,7
+dnd_2014,Dwarf,School of Necromancy,14,true,5,17,32,7,7
+dnd_2014,Dwarf,School of Necromancy,15,true,5,18,34,8,8
+dnd_2014,Dwarf,School of Necromancy,16,true,5,19,36,8,8
+dnd_2014,Dwarf,School of Necromancy,17,true,5,20,38,9,9
+dnd_2014,Dwarf,School of Necromancy,18,true,5,21,40,9,9
+dnd_2014,Dwarf,School of Necromancy,19,true,5,22,42,10,9
+dnd_2014,Dwarf,School of Necromancy,20,true,5,23,44,10,9
+dnd_2014,Dwarf,School of Transmutation,1,true,3,4,6,1,1
+dnd_2014,Dwarf,School of Transmutation,2,true,3,5,8,1,1
+dnd_2014,Dwarf,School of Transmutation,3,true,3,6,10,2,2
+dnd_2014,Dwarf,School of Transmutation,4,true,4,7,12,2,2
+dnd_2014,Dwarf,School of Transmutation,5,true,4,8,14,3,3
+dnd_2014,Dwarf,School of Transmutation,6,true,4,9,16,3,3
+dnd_2014,Dwarf,School of Transmutation,7,true,4,10,18,4,4
+dnd_2014,Dwarf,School of Transmutation,8,true,4,11,20,4,4
+dnd_2014,Dwarf,School of Transmutation,9,true,4,12,22,5,5
+dnd_2014,Dwarf,School of Transmutation,10,true,5,13,24,5,5
+dnd_2014,Dwarf,School of Transmutation,11,true,5,14,26,6,6
+dnd_2014,Dwarf,School of Transmutation,12,true,5,15,28,6,6
+dnd_2014,Dwarf,School of Transmutation,13,true,5,16,30,7,7
+dnd_2014,Dwarf,School of Transmutation,14,true,5,17,32,7,7
+dnd_2014,Dwarf,School of Transmutation,15,true,5,18,34,8,8
+dnd_2014,Dwarf,School of Transmutation,16,true,5,19,36,8,8
+dnd_2014,Dwarf,School of Transmutation,17,true,5,20,38,9,9
+dnd_2014,Dwarf,School of Transmutation,18,true,5,21,40,9,9
+dnd_2014,Dwarf,School of Transmutation,19,true,5,22,42,10,9
+dnd_2014,Dwarf,School of Transmutation,20,true,5,23,44,10,9
+dnd_2014,Dwarf,Bladesinging,1,true,3,4,6,1,1
+dnd_2014,Dwarf,Bladesinging,2,true,3,5,8,1,1
+dnd_2014,Dwarf,Bladesinging,3,true,3,6,10,2,2
+dnd_2014,Dwarf,Bladesinging,4,true,4,7,12,2,2
+dnd_2014,Dwarf,Bladesinging,5,true,4,8,14,3,3
+dnd_2014,Dwarf,Bladesinging,6,true,4,9,16,3,3
+dnd_2014,Dwarf,Bladesinging,7,true,4,10,18,4,4
+dnd_2014,Dwarf,Bladesinging,8,true,4,11,20,4,4
+dnd_2014,Dwarf,Bladesinging,9,true,4,12,22,5,5
+dnd_2014,Dwarf,Bladesinging,10,true,5,13,24,5,5
+dnd_2014,Dwarf,Bladesinging,11,true,5,14,26,6,6
+dnd_2014,Dwarf,Bladesinging,12,true,5,15,28,6,6
+dnd_2014,Dwarf,Bladesinging,13,true,5,16,30,7,7
+dnd_2014,Dwarf,Bladesinging,14,true,5,17,32,7,7
+dnd_2014,Dwarf,Bladesinging,15,true,5,18,34,8,8
+dnd_2014,Dwarf,Bladesinging,16,true,5,19,36,8,8
+dnd_2014,Dwarf,Bladesinging,17,true,5,20,38,9,9
+dnd_2014,Dwarf,Bladesinging,18,true,5,21,40,9,9
+dnd_2014,Dwarf,Bladesinging,19,true,5,22,42,10,9
+dnd_2014,Dwarf,Bladesinging,20,true,5,23,44,10,9
+dnd_2014,Dwarf,War Magic,1,true,3,4,6,1,1
+dnd_2014,Dwarf,War Magic,2,true,3,5,8,1,1
+dnd_2014,Dwarf,War Magic,3,true,3,6,10,2,2
+dnd_2014,Dwarf,War Magic,4,true,4,7,12,2,2
+dnd_2014,Dwarf,War Magic,5,true,4,8,14,3,3
+dnd_2014,Dwarf,War Magic,6,true,4,9,16,3,3
+dnd_2014,Dwarf,War Magic,7,true,4,10,18,4,4
+dnd_2014,Dwarf,War Magic,8,true,4,11,20,4,4
+dnd_2014,Dwarf,War Magic,9,true,4,12,22,5,5
+dnd_2014,Dwarf,War Magic,10,true,5,13,24,5,5
+dnd_2014,Dwarf,War Magic,11,true,5,14,26,6,6
+dnd_2014,Dwarf,War Magic,12,true,5,15,28,6,6
+dnd_2014,Dwarf,War Magic,13,true,5,16,30,7,7
+dnd_2014,Dwarf,War Magic,14,true,5,17,32,7,7
+dnd_2014,Dwarf,War Magic,15,true,5,18,34,8,8
+dnd_2014,Dwarf,War Magic,16,true,5,19,36,8,8
+dnd_2014,Dwarf,War Magic,17,true,5,20,38,9,9
+dnd_2014,Dwarf,War Magic,18,true,5,21,40,9,9
+dnd_2014,Dwarf,War Magic,19,true,5,22,42,10,9
+dnd_2014,Dwarf,War Magic,20,true,5,23,44,10,9
+dnd_2014,Dwarf,Order of Scribes,1,true,3,4,6,1,1
+dnd_2014,Dwarf,Order of Scribes,2,true,3,5,8,1,1
+dnd_2014,Dwarf,Order of Scribes,3,true,3,6,10,2,2
+dnd_2014,Dwarf,Order of Scribes,4,true,4,7,12,2,2
+dnd_2014,Dwarf,Order of Scribes,5,true,4,8,14,3,3
+dnd_2014,Dwarf,Order of Scribes,6,true,4,9,16,3,3
+dnd_2014,Dwarf,Order of Scribes,7,true,4,10,18,4,4
+dnd_2014,Dwarf,Order of Scribes,8,true,4,11,20,4,4
+dnd_2014,Dwarf,Order of Scribes,9,true,4,12,22,5,5
+dnd_2014,Dwarf,Order of Scribes,10,true,5,13,24,5,5
+dnd_2014,Dwarf,Order of Scribes,11,true,5,14,26,6,6
+dnd_2014,Dwarf,Order of Scribes,12,true,5,15,28,6,6
+dnd_2014,Dwarf,Order of Scribes,13,true,5,16,30,7,7
+dnd_2014,Dwarf,Order of Scribes,14,true,5,17,32,7,7
+dnd_2014,Dwarf,Order of Scribes,15,true,5,18,34,8,8
+dnd_2014,Dwarf,Order of Scribes,16,true,5,19,36,8,8
+dnd_2014,Dwarf,Order of Scribes,17,true,5,20,38,9,9
+dnd_2014,Dwarf,Order of Scribes,18,true,5,21,40,9,9
+dnd_2014,Dwarf,Order of Scribes,19,true,5,22,42,10,9
+dnd_2014,Dwarf,Order of Scribes,20,true,5,23,44,10,9
+dnd_2014,Dwarf,Chronurgy Magic,1,true,3,4,6,1,1
+dnd_2014,Dwarf,Chronurgy Magic,2,true,3,5,8,1,1
+dnd_2014,Dwarf,Chronurgy Magic,3,true,3,6,10,2,2
+dnd_2014,Dwarf,Chronurgy Magic,4,true,4,7,12,2,2
+dnd_2014,Dwarf,Chronurgy Magic,5,true,4,8,14,3,3
+dnd_2014,Dwarf,Chronurgy Magic,6,true,4,9,16,3,3
+dnd_2014,Dwarf,Chronurgy Magic,7,true,4,10,18,4,4
+dnd_2014,Dwarf,Chronurgy Magic,8,true,4,11,20,4,4
+dnd_2014,Dwarf,Chronurgy Magic,9,true,4,12,22,5,5
+dnd_2014,Dwarf,Chronurgy Magic,10,true,5,13,24,5,5
+dnd_2014,Dwarf,Chronurgy Magic,11,true,5,14,26,6,6
+dnd_2014,Dwarf,Chronurgy Magic,12,true,5,15,28,6,6
+dnd_2014,Dwarf,Chronurgy Magic,13,true,5,16,30,7,7
+dnd_2014,Dwarf,Chronurgy Magic,14,true,5,17,32,7,7
+dnd_2014,Dwarf,Chronurgy Magic,15,true,5,18,34,8,8
+dnd_2014,Dwarf,Chronurgy Magic,16,true,5,19,36,8,8
+dnd_2014,Dwarf,Chronurgy Magic,17,true,5,20,38,9,9
+dnd_2014,Dwarf,Chronurgy Magic,18,true,5,21,40,9,9
+dnd_2014,Dwarf,Chronurgy Magic,19,true,5,22,42,10,9
+dnd_2014,Dwarf,Chronurgy Magic,20,true,5,23,44,10,9
+dnd_2014,Dwarf,Graviturgy Magic,1,true,3,4,6,1,1
+dnd_2014,Dwarf,Graviturgy Magic,2,true,3,5,8,1,1
+dnd_2014,Dwarf,Graviturgy Magic,3,true,3,6,10,2,2
+dnd_2014,Dwarf,Graviturgy Magic,4,true,4,7,12,2,2
+dnd_2014,Dwarf,Graviturgy Magic,5,true,4,8,14,3,3
+dnd_2014,Dwarf,Graviturgy Magic,6,true,4,9,16,3,3
+dnd_2014,Dwarf,Graviturgy Magic,7,true,4,10,18,4,4
+dnd_2014,Dwarf,Graviturgy Magic,8,true,4,11,20,4,4
+dnd_2014,Dwarf,Graviturgy Magic,9,true,4,12,22,5,5
+dnd_2014,Dwarf,Graviturgy Magic,10,true,5,13,24,5,5
+dnd_2014,Dwarf,Graviturgy Magic,11,true,5,14,26,6,6
+dnd_2014,Dwarf,Graviturgy Magic,12,true,5,15,28,6,6
+dnd_2014,Dwarf,Graviturgy Magic,13,true,5,16,30,7,7
+dnd_2014,Dwarf,Graviturgy Magic,14,true,5,17,32,7,7
+dnd_2014,Dwarf,Graviturgy Magic,15,true,5,18,34,8,8
+dnd_2014,Dwarf,Graviturgy Magic,16,true,5,19,36,8,8
+dnd_2014,Dwarf,Graviturgy Magic,17,true,5,20,38,9,9
+dnd_2014,Dwarf,Graviturgy Magic,18,true,5,21,40,9,9
+dnd_2014,Dwarf,Graviturgy Magic,19,true,5,22,42,10,9
+dnd_2014,Dwarf,Graviturgy Magic,20,true,5,23,44,10,9
+dnd_2014,Elf,School of Evocation,1,true,3,4,6,1,1
+dnd_2014,Elf,School of Evocation,2,true,3,5,8,1,1
+dnd_2014,Elf,School of Evocation,3,true,3,6,10,2,2
+dnd_2014,Elf,School of Evocation,4,true,4,7,12,2,2
+dnd_2014,Elf,School of Evocation,5,true,4,8,14,3,3
+dnd_2014,Elf,School of Evocation,6,true,4,9,16,3,3
+dnd_2014,Elf,School of Evocation,7,true,4,10,18,4,4
+dnd_2014,Elf,School of Evocation,8,true,4,11,20,4,4
+dnd_2014,Elf,School of Evocation,9,true,4,12,22,5,5
+dnd_2014,Elf,School of Evocation,10,true,5,13,24,5,5
+dnd_2014,Elf,School of Evocation,11,true,5,14,26,6,6
+dnd_2014,Elf,School of Evocation,12,true,5,15,28,6,6
+dnd_2014,Elf,School of Evocation,13,true,5,16,30,7,7
+dnd_2014,Elf,School of Evocation,14,true,5,17,32,7,7
+dnd_2014,Elf,School of Evocation,15,true,5,18,34,8,8
+dnd_2014,Elf,School of Evocation,16,true,5,19,36,8,8
+dnd_2014,Elf,School of Evocation,17,true,5,20,38,9,9
+dnd_2014,Elf,School of Evocation,18,true,5,21,40,9,9
+dnd_2014,Elf,School of Evocation,19,true,5,22,42,10,9
+dnd_2014,Elf,School of Evocation,20,true,5,23,44,10,9
+dnd_2014,Elf,School of Abjuration,1,true,3,4,6,1,1
+dnd_2014,Elf,School of Abjuration,2,true,3,5,8,1,1
+dnd_2014,Elf,School of Abjuration,3,true,3,6,10,2,2
+dnd_2014,Elf,School of Abjuration,4,true,4,7,12,2,2
+dnd_2014,Elf,School of Abjuration,5,true,4,8,14,3,3
+dnd_2014,Elf,School of Abjuration,6,true,4,9,16,3,3
+dnd_2014,Elf,School of Abjuration,7,true,4,10,18,4,4
+dnd_2014,Elf,School of Abjuration,8,true,4,11,20,4,4
+dnd_2014,Elf,School of Abjuration,9,true,4,12,22,5,5
+dnd_2014,Elf,School of Abjuration,10,true,5,13,24,5,5
+dnd_2014,Elf,School of Abjuration,11,true,5,14,26,6,6
+dnd_2014,Elf,School of Abjuration,12,true,5,15,28,6,6
+dnd_2014,Elf,School of Abjuration,13,true,5,16,30,7,7
+dnd_2014,Elf,School of Abjuration,14,true,5,17,32,7,7
+dnd_2014,Elf,School of Abjuration,15,true,5,18,34,8,8
+dnd_2014,Elf,School of Abjuration,16,true,5,19,36,8,8
+dnd_2014,Elf,School of Abjuration,17,true,5,20,38,9,9
+dnd_2014,Elf,School of Abjuration,18,true,5,21,40,9,9
+dnd_2014,Elf,School of Abjuration,19,true,5,22,42,10,9
+dnd_2014,Elf,School of Abjuration,20,true,5,23,44,10,9
+dnd_2014,Elf,School of Conjuration,1,true,3,4,6,1,1
+dnd_2014,Elf,School of Conjuration,2,true,3,5,8,1,1
+dnd_2014,Elf,School of Conjuration,3,true,3,6,10,2,2
+dnd_2014,Elf,School of Conjuration,4,true,4,7,12,2,2
+dnd_2014,Elf,School of Conjuration,5,true,4,8,14,3,3
+dnd_2014,Elf,School of Conjuration,6,true,4,9,16,3,3
+dnd_2014,Elf,School of Conjuration,7,true,4,10,18,4,4
+dnd_2014,Elf,School of Conjuration,8,true,4,11,20,4,4
+dnd_2014,Elf,School of Conjuration,9,true,4,12,22,5,5
+dnd_2014,Elf,School of Conjuration,10,true,5,13,24,5,5
+dnd_2014,Elf,School of Conjuration,11,true,5,14,26,6,6
+dnd_2014,Elf,School of Conjuration,12,true,5,15,28,6,6
+dnd_2014,Elf,School of Conjuration,13,true,5,16,30,7,7
+dnd_2014,Elf,School of Conjuration,14,true,5,17,32,7,7
+dnd_2014,Elf,School of Conjuration,15,true,5,18,34,8,8
+dnd_2014,Elf,School of Conjuration,16,true,5,19,36,8,8
+dnd_2014,Elf,School of Conjuration,17,true,5,20,38,9,9
+dnd_2014,Elf,School of Conjuration,18,true,5,21,40,9,9
+dnd_2014,Elf,School of Conjuration,19,true,5,22,42,10,9
+dnd_2014,Elf,School of Conjuration,20,true,5,23,44,10,9
+dnd_2014,Elf,School of Divination,1,true,3,4,6,1,1
+dnd_2014,Elf,School of Divination,2,true,3,5,8,1,1
+dnd_2014,Elf,School of Divination,3,true,3,6,10,2,2
+dnd_2014,Elf,School of Divination,4,true,4,7,12,2,2
+dnd_2014,Elf,School of Divination,5,true,4,8,14,3,3
+dnd_2014,Elf,School of Divination,6,true,4,9,16,3,3
+dnd_2014,Elf,School of Divination,7,true,4,10,18,4,4
+dnd_2014,Elf,School of Divination,8,true,4,11,20,4,4
+dnd_2014,Elf,School of Divination,9,true,4,12,22,5,5
+dnd_2014,Elf,School of Divination,10,true,5,13,24,5,5
+dnd_2014,Elf,School of Divination,11,true,5,14,26,6,6
+dnd_2014,Elf,School of Divination,12,true,5,15,28,6,6
+dnd_2014,Elf,School of Divination,13,true,5,16,30,7,7
+dnd_2014,Elf,School of Divination,14,true,5,17,32,7,7
+dnd_2014,Elf,School of Divination,15,true,5,18,34,8,8
+dnd_2014,Elf,School of Divination,16,true,5,19,36,8,8
+dnd_2014,Elf,School of Divination,17,true,5,20,38,9,9
+dnd_2014,Elf,School of Divination,18,true,5,21,40,9,9
+dnd_2014,Elf,School of Divination,19,true,5,22,42,10,9
+dnd_2014,Elf,School of Divination,20,true,5,23,44,10,9
+dnd_2014,Elf,School of Enchantment,1,true,3,4,6,1,1
+dnd_2014,Elf,School of Enchantment,2,true,3,5,8,1,1
+dnd_2014,Elf,School of Enchantment,3,true,3,6,10,2,2
+dnd_2014,Elf,School of Enchantment,4,true,4,7,12,2,2
+dnd_2014,Elf,School of Enchantment,5,true,4,8,14,3,3
+dnd_2014,Elf,School of Enchantment,6,true,4,9,16,3,3
+dnd_2014,Elf,School of Enchantment,7,true,4,10,18,4,4
+dnd_2014,Elf,School of Enchantment,8,true,4,11,20,4,4
+dnd_2014,Elf,School of Enchantment,9,true,4,12,22,5,5
+dnd_2014,Elf,School of Enchantment,10,true,5,13,24,5,5
+dnd_2014,Elf,School of Enchantment,11,true,5,14,26,6,6
+dnd_2014,Elf,School of Enchantment,12,true,5,15,28,6,6
+dnd_2014,Elf,School of Enchantment,13,true,5,16,30,7,7
+dnd_2014,Elf,School of Enchantment,14,true,5,17,32,7,7
+dnd_2014,Elf,School of Enchantment,15,true,5,18,34,8,8
+dnd_2014,Elf,School of Enchantment,16,true,5,19,36,8,8
+dnd_2014,Elf,School of Enchantment,17,true,5,20,38,9,9
+dnd_2014,Elf,School of Enchantment,18,true,5,21,40,9,9
+dnd_2014,Elf,School of Enchantment,19,true,5,22,42,10,9
+dnd_2014,Elf,School of Enchantment,20,true,5,23,44,10,9
+dnd_2014,Elf,School of Illusion,1,true,3,4,6,1,1
+dnd_2014,Elf,School of Illusion,2,true,3,5,8,1,1
+dnd_2014,Elf,School of Illusion,3,true,3,6,10,2,2
+dnd_2014,Elf,School of Illusion,4,true,4,7,12,2,2
+dnd_2014,Elf,School of Illusion,5,true,4,8,14,3,3
+dnd_2014,Elf,School of Illusion,6,true,4,9,16,3,3
+dnd_2014,Elf,School of Illusion,7,true,4,10,18,4,4
+dnd_2014,Elf,School of Illusion,8,true,4,11,20,4,4
+dnd_2014,Elf,School of Illusion,9,true,4,12,22,5,5
+dnd_2014,Elf,School of Illusion,10,true,5,13,24,5,5
+dnd_2014,Elf,School of Illusion,11,true,5,14,26,6,6
+dnd_2014,Elf,School of Illusion,12,true,5,15,28,6,6
+dnd_2014,Elf,School of Illusion,13,true,5,16,30,7,7
+dnd_2014,Elf,School of Illusion,14,true,5,17,32,7,7
+dnd_2014,Elf,School of Illusion,15,true,5,18,34,8,8
+dnd_2014,Elf,School of Illusion,16,true,5,19,36,8,8
+dnd_2014,Elf,School of Illusion,17,true,5,20,38,9,9
+dnd_2014,Elf,School of Illusion,18,true,5,21,40,9,9
+dnd_2014,Elf,School of Illusion,19,true,5,22,42,10,9
+dnd_2014,Elf,School of Illusion,20,true,5,23,44,10,9
+dnd_2014,Elf,School of Necromancy,1,true,3,4,6,1,1
+dnd_2014,Elf,School of Necromancy,2,true,3,5,8,1,1
+dnd_2014,Elf,School of Necromancy,3,true,3,6,10,2,2
+dnd_2014,Elf,School of Necromancy,4,true,4,7,12,2,2
+dnd_2014,Elf,School of Necromancy,5,true,4,8,14,3,3
+dnd_2014,Elf,School of Necromancy,6,true,4,9,16,3,3
+dnd_2014,Elf,School of Necromancy,7,true,4,10,18,4,4
+dnd_2014,Elf,School of Necromancy,8,true,4,11,20,4,4
+dnd_2014,Elf,School of Necromancy,9,true,4,12,22,5,5
+dnd_2014,Elf,School of Necromancy,10,true,5,13,24,5,5
+dnd_2014,Elf,School of Necromancy,11,true,5,14,26,6,6
+dnd_2014,Elf,School of Necromancy,12,true,5,15,28,6,6
+dnd_2014,Elf,School of Necromancy,13,true,5,16,30,7,7
+dnd_2014,Elf,School of Necromancy,14,true,5,17,32,7,7
+dnd_2014,Elf,School of Necromancy,15,true,5,18,34,8,8
+dnd_2014,Elf,School of Necromancy,16,true,5,19,36,8,8
+dnd_2014,Elf,School of Necromancy,17,true,5,20,38,9,9
+dnd_2014,Elf,School of Necromancy,18,true,5,21,40,9,9
+dnd_2014,Elf,School of Necromancy,19,true,5,22,42,10,9
+dnd_2014,Elf,School of Necromancy,20,true,5,23,44,10,9
+dnd_2014,Elf,School of Transmutation,1,true,3,4,6,1,1
+dnd_2014,Elf,School of Transmutation,2,true,3,5,8,1,1
+dnd_2014,Elf,School of Transmutation,3,true,3,6,10,2,2
+dnd_2014,Elf,School of Transmutation,4,true,4,7,12,2,2
+dnd_2014,Elf,School of Transmutation,5,true,4,8,14,3,3
+dnd_2014,Elf,School of Transmutation,6,true,4,9,16,3,3
+dnd_2014,Elf,School of Transmutation,7,true,4,10,18,4,4
+dnd_2014,Elf,School of Transmutation,8,true,4,11,20,4,4
+dnd_2014,Elf,School of Transmutation,9,true,4,12,22,5,5
+dnd_2014,Elf,School of Transmutation,10,true,5,13,24,5,5
+dnd_2014,Elf,School of Transmutation,11,true,5,14,26,6,6
+dnd_2014,Elf,School of Transmutation,12,true,5,15,28,6,6
+dnd_2014,Elf,School of Transmutation,13,true,5,16,30,7,7
+dnd_2014,Elf,School of Transmutation,14,true,5,17,32,7,7
+dnd_2014,Elf,School of Transmutation,15,true,5,18,34,8,8
+dnd_2014,Elf,School of Transmutation,16,true,5,19,36,8,8
+dnd_2014,Elf,School of Transmutation,17,true,5,20,38,9,9
+dnd_2014,Elf,School of Transmutation,18,true,5,21,40,9,9
+dnd_2014,Elf,School of Transmutation,19,true,5,22,42,10,9
+dnd_2014,Elf,School of Transmutation,20,true,5,23,44,10,9
+dnd_2014,Elf,Bladesinging,1,true,3,4,6,1,1
+dnd_2014,Elf,Bladesinging,2,true,3,5,8,1,1
+dnd_2014,Elf,Bladesinging,3,true,3,6,10,2,2
+dnd_2014,Elf,Bladesinging,4,true,4,7,12,2,2
+dnd_2014,Elf,Bladesinging,5,true,4,8,14,3,3
+dnd_2014,Elf,Bladesinging,6,true,4,9,16,3,3
+dnd_2014,Elf,Bladesinging,7,true,4,10,18,4,4
+dnd_2014,Elf,Bladesinging,8,true,4,11,20,4,4
+dnd_2014,Elf,Bladesinging,9,true,4,12,22,5,5
+dnd_2014,Elf,Bladesinging,10,true,5,13,24,5,5
+dnd_2014,Elf,Bladesinging,11,true,5,14,26,6,6
+dnd_2014,Elf,Bladesinging,12,true,5,15,28,6,6
+dnd_2014,Elf,Bladesinging,13,true,5,16,30,7,7
+dnd_2014,Elf,Bladesinging,14,true,5,17,32,7,7
+dnd_2014,Elf,Bladesinging,15,true,5,18,34,8,8
+dnd_2014,Elf,Bladesinging,16,true,5,19,36,8,8
+dnd_2014,Elf,Bladesinging,17,true,5,20,38,9,9
+dnd_2014,Elf,Bladesinging,18,true,5,21,40,9,9
+dnd_2014,Elf,Bladesinging,19,true,5,22,42,10,9
+dnd_2014,Elf,Bladesinging,20,true,5,23,44,10,9
+dnd_2014,Elf,War Magic,1,true,3,4,6,1,1
+dnd_2014,Elf,War Magic,2,true,3,5,8,1,1
+dnd_2014,Elf,War Magic,3,true,3,6,10,2,2
+dnd_2014,Elf,War Magic,4,true,4,7,12,2,2
+dnd_2014,Elf,War Magic,5,true,4,8,14,3,3
+dnd_2014,Elf,War Magic,6,true,4,9,16,3,3
+dnd_2014,Elf,War Magic,7,true,4,10,18,4,4
+dnd_2014,Elf,War Magic,8,true,4,11,20,4,4
+dnd_2014,Elf,War Magic,9,true,4,12,22,5,5
+dnd_2014,Elf,War Magic,10,true,5,13,24,5,5
+dnd_2014,Elf,War Magic,11,true,5,14,26,6,6
+dnd_2014,Elf,War Magic,12,true,5,15,28,6,6
+dnd_2014,Elf,War Magic,13,true,5,16,30,7,7
+dnd_2014,Elf,War Magic,14,true,5,17,32,7,7
+dnd_2014,Elf,War Magic,15,true,5,18,34,8,8
+dnd_2014,Elf,War Magic,16,true,5,19,36,8,8
+dnd_2014,Elf,War Magic,17,true,5,20,38,9,9
+dnd_2014,Elf,War Magic,18,true,5,21,40,9,9
+dnd_2014,Elf,War Magic,19,true,5,22,42,10,9
+dnd_2014,Elf,War Magic,20,true,5,23,44,10,9
+dnd_2014,Elf,Order of Scribes,1,true,3,4,6,1,1
+dnd_2014,Elf,Order of Scribes,2,true,3,5,8,1,1
+dnd_2014,Elf,Order of Scribes,3,true,3,6,10,2,2
+dnd_2014,Elf,Order of Scribes,4,true,4,7,12,2,2
+dnd_2014,Elf,Order of Scribes,5,true,4,8,14,3,3
+dnd_2014,Elf,Order of Scribes,6,true,4,9,16,3,3
+dnd_2014,Elf,Order of Scribes,7,true,4,10,18,4,4
+dnd_2014,Elf,Order of Scribes,8,true,4,11,20,4,4
+dnd_2014,Elf,Order of Scribes,9,true,4,12,22,5,5
+dnd_2014,Elf,Order of Scribes,10,true,5,13,24,5,5
+dnd_2014,Elf,Order of Scribes,11,true,5,14,26,6,6
+dnd_2014,Elf,Order of Scribes,12,true,5,15,28,6,6
+dnd_2014,Elf,Order of Scribes,13,true,5,16,30,7,7
+dnd_2014,Elf,Order of Scribes,14,true,5,17,32,7,7
+dnd_2014,Elf,Order of Scribes,15,true,5,18,34,8,8
+dnd_2014,Elf,Order of Scribes,16,true,5,19,36,8,8
+dnd_2014,Elf,Order of Scribes,17,true,5,20,38,9,9
+dnd_2014,Elf,Order of Scribes,18,true,5,21,40,9,9
+dnd_2014,Elf,Order of Scribes,19,true,5,22,42,10,9
+dnd_2014,Elf,Order of Scribes,20,true,5,23,44,10,9
+dnd_2014,Elf,Chronurgy Magic,1,true,3,4,6,1,1
+dnd_2014,Elf,Chronurgy Magic,2,true,3,5,8,1,1
+dnd_2014,Elf,Chronurgy Magic,3,true,3,6,10,2,2
+dnd_2014,Elf,Chronurgy Magic,4,true,4,7,12,2,2
+dnd_2014,Elf,Chronurgy Magic,5,true,4,8,14,3,3
+dnd_2014,Elf,Chronurgy Magic,6,true,4,9,16,3,3
+dnd_2014,Elf,Chronurgy Magic,7,true,4,10,18,4,4
+dnd_2014,Elf,Chronurgy Magic,8,true,4,11,20,4,4
+dnd_2014,Elf,Chronurgy Magic,9,true,4,12,22,5,5
+dnd_2014,Elf,Chronurgy Magic,10,true,5,13,24,5,5
+dnd_2014,Elf,Chronurgy Magic,11,true,5,14,26,6,6
+dnd_2014,Elf,Chronurgy Magic,12,true,5,15,28,6,6
+dnd_2014,Elf,Chronurgy Magic,13,true,5,16,30,7,7
+dnd_2014,Elf,Chronurgy Magic,14,true,5,17,32,7,7
+dnd_2014,Elf,Chronurgy Magic,15,true,5,18,34,8,8
+dnd_2014,Elf,Chronurgy Magic,16,true,5,19,36,8,8
+dnd_2014,Elf,Chronurgy Magic,17,true,5,20,38,9,9
+dnd_2014,Elf,Chronurgy Magic,18,true,5,21,40,9,9
+dnd_2014,Elf,Chronurgy Magic,19,true,5,22,42,10,9
+dnd_2014,Elf,Chronurgy Magic,20,true,5,23,44,10,9
+dnd_2014,Elf,Graviturgy Magic,1,true,3,4,6,1,1
+dnd_2014,Elf,Graviturgy Magic,2,true,3,5,8,1,1
+dnd_2014,Elf,Graviturgy Magic,3,true,3,6,10,2,2
+dnd_2014,Elf,Graviturgy Magic,4,true,4,7,12,2,2
+dnd_2014,Elf,Graviturgy Magic,5,true,4,8,14,3,3
+dnd_2014,Elf,Graviturgy Magic,6,true,4,9,16,3,3
+dnd_2014,Elf,Graviturgy Magic,7,true,4,10,18,4,4
+dnd_2014,Elf,Graviturgy Magic,8,true,4,11,20,4,4
+dnd_2014,Elf,Graviturgy Magic,9,true,4,12,22,5,5
+dnd_2014,Elf,Graviturgy Magic,10,true,5,13,24,5,5
+dnd_2014,Elf,Graviturgy Magic,11,true,5,14,26,6,6
+dnd_2014,Elf,Graviturgy Magic,12,true,5,15,28,6,6
+dnd_2014,Elf,Graviturgy Magic,13,true,5,16,30,7,7
+dnd_2014,Elf,Graviturgy Magic,14,true,5,17,32,7,7
+dnd_2014,Elf,Graviturgy Magic,15,true,5,18,34,8,8
+dnd_2014,Elf,Graviturgy Magic,16,true,5,19,36,8,8
+dnd_2014,Elf,Graviturgy Magic,17,true,5,20,38,9,9
+dnd_2014,Elf,Graviturgy Magic,18,true,5,21,40,9,9
+dnd_2014,Elf,Graviturgy Magic,19,true,5,22,42,10,9
+dnd_2014,Elf,Graviturgy Magic,20,true,5,23,44,10,9
+dnd_2014,Halfling,School of Evocation,1,true,3,4,6,1,1
+dnd_2014,Halfling,School of Evocation,2,true,3,5,8,1,1
+dnd_2014,Halfling,School of Evocation,3,true,3,6,10,2,2
+dnd_2014,Halfling,School of Evocation,4,true,4,7,12,2,2
+dnd_2014,Halfling,School of Evocation,5,true,4,8,14,3,3
+dnd_2014,Halfling,School of Evocation,6,true,4,9,16,3,3
+dnd_2014,Halfling,School of Evocation,7,true,4,10,18,4,4
+dnd_2014,Halfling,School of Evocation,8,true,4,11,20,4,4
+dnd_2014,Halfling,School of Evocation,9,true,4,12,22,5,5
+dnd_2014,Halfling,School of Evocation,10,true,5,13,24,5,5
+dnd_2014,Halfling,School of Evocation,11,true,5,14,26,6,6
+dnd_2014,Halfling,School of Evocation,12,true,5,15,28,6,6
+dnd_2014,Halfling,School of Evocation,13,true,5,16,30,7,7
+dnd_2014,Halfling,School of Evocation,14,true,5,17,32,7,7
+dnd_2014,Halfling,School of Evocation,15,true,5,18,34,8,8
+dnd_2014,Halfling,School of Evocation,16,true,5,19,36,8,8
+dnd_2014,Halfling,School of Evocation,17,true,5,20,38,9,9
+dnd_2014,Halfling,School of Evocation,18,true,5,21,40,9,9
+dnd_2014,Halfling,School of Evocation,19,true,5,22,42,10,9
+dnd_2014,Halfling,School of Evocation,20,true,5,23,44,10,9
+dnd_2014,Halfling,School of Abjuration,1,true,3,4,6,1,1
+dnd_2014,Halfling,School of Abjuration,2,true,3,5,8,1,1
+dnd_2014,Halfling,School of Abjuration,3,true,3,6,10,2,2
+dnd_2014,Halfling,School of Abjuration,4,true,4,7,12,2,2
+dnd_2014,Halfling,School of Abjuration,5,true,4,8,14,3,3
+dnd_2014,Halfling,School of Abjuration,6,true,4,9,16,3,3
+dnd_2014,Halfling,School of Abjuration,7,true,4,10,18,4,4
+dnd_2014,Halfling,School of Abjuration,8,true,4,11,20,4,4
+dnd_2014,Halfling,School of Abjuration,9,true,4,12,22,5,5
+dnd_2014,Halfling,School of Abjuration,10,true,5,13,24,5,5
+dnd_2014,Halfling,School of Abjuration,11,true,5,14,26,6,6
+dnd_2014,Halfling,School of Abjuration,12,true,5,15,28,6,6
+dnd_2014,Halfling,School of Abjuration,13,true,5,16,30,7,7
+dnd_2014,Halfling,School of Abjuration,14,true,5,17,32,7,7
+dnd_2014,Halfling,School of Abjuration,15,true,5,18,34,8,8
+dnd_2014,Halfling,School of Abjuration,16,true,5,19,36,8,8
+dnd_2014,Halfling,School of Abjuration,17,true,5,20,38,9,9
+dnd_2014,Halfling,School of Abjuration,18,true,5,21,40,9,9
+dnd_2014,Halfling,School of Abjuration,19,true,5,22,42,10,9
+dnd_2014,Halfling,School of Abjuration,20,true,5,23,44,10,9
+dnd_2014,Halfling,School of Conjuration,1,true,3,4,6,1,1
+dnd_2014,Halfling,School of Conjuration,2,true,3,5,8,1,1
+dnd_2014,Halfling,School of Conjuration,3,true,3,6,10,2,2
+dnd_2014,Halfling,School of Conjuration,4,true,4,7,12,2,2
+dnd_2014,Halfling,School of Conjuration,5,true,4,8,14,3,3
+dnd_2014,Halfling,School of Conjuration,6,true,4,9,16,3,3
+dnd_2014,Halfling,School of Conjuration,7,true,4,10,18,4,4
+dnd_2014,Halfling,School of Conjuration,8,true,4,11,20,4,4
+dnd_2014,Halfling,School of Conjuration,9,true,4,12,22,5,5
+dnd_2014,Halfling,School of Conjuration,10,true,5,13,24,5,5
+dnd_2014,Halfling,School of Conjuration,11,true,5,14,26,6,6
+dnd_2014,Halfling,School of Conjuration,12,true,5,15,28,6,6
+dnd_2014,Halfling,School of Conjuration,13,true,5,16,30,7,7
+dnd_2014,Halfling,School of Conjuration,14,true,5,17,32,7,7
+dnd_2014,Halfling,School of Conjuration,15,true,5,18,34,8,8
+dnd_2014,Halfling,School of Conjuration,16,true,5,19,36,8,8
+dnd_2014,Halfling,School of Conjuration,17,true,5,20,38,9,9
+dnd_2014,Halfling,School of Conjuration,18,true,5,21,40,9,9
+dnd_2014,Halfling,School of Conjuration,19,true,5,22,42,10,9
+dnd_2014,Halfling,School of Conjuration,20,true,5,23,44,10,9
+dnd_2014,Halfling,School of Divination,1,true,3,4,6,1,1
+dnd_2014,Halfling,School of Divination,2,true,3,5,8,1,1
+dnd_2014,Halfling,School of Divination,3,true,3,6,10,2,2
+dnd_2014,Halfling,School of Divination,4,true,4,7,12,2,2
+dnd_2014,Halfling,School of Divination,5,true,4,8,14,3,3
+dnd_2014,Halfling,School of Divination,6,true,4,9,16,3,3
+dnd_2014,Halfling,School of Divination,7,true,4,10,18,4,4
+dnd_2014,Halfling,School of Divination,8,true,4,11,20,4,4
+dnd_2014,Halfling,School of Divination,9,true,4,12,22,5,5
+dnd_2014,Halfling,School of Divination,10,true,5,13,24,5,5
+dnd_2014,Halfling,School of Divination,11,true,5,14,26,6,6
+dnd_2014,Halfling,School of Divination,12,true,5,15,28,6,6
+dnd_2014,Halfling,School of Divination,13,true,5,16,30,7,7
+dnd_2014,Halfling,School of Divination,14,true,5,17,32,7,7
+dnd_2014,Halfling,School of Divination,15,true,5,18,34,8,8
+dnd_2014,Halfling,School of Divination,16,true,5,19,36,8,8
+dnd_2014,Halfling,School of Divination,17,true,5,20,38,9,9
+dnd_2014,Halfling,School of Divination,18,true,5,21,40,9,9
+dnd_2014,Halfling,School of Divination,19,true,5,22,42,10,9
+dnd_2014,Halfling,School of Divination,20,true,5,23,44,10,9
+dnd_2014,Halfling,School of Enchantment,1,true,3,4,6,1,1
+dnd_2014,Halfling,School of Enchantment,2,true,3,5,8,1,1
+dnd_2014,Halfling,School of Enchantment,3,true,3,6,10,2,2
+dnd_2014,Halfling,School of Enchantment,4,true,4,7,12,2,2
+dnd_2014,Halfling,School of Enchantment,5,true,4,8,14,3,3
+dnd_2014,Halfling,School of Enchantment,6,true,4,9,16,3,3
+dnd_2014,Halfling,School of Enchantment,7,true,4,10,18,4,4
+dnd_2014,Halfling,School of Enchantment,8,true,4,11,20,4,4
+dnd_2014,Halfling,School of Enchantment,9,true,4,12,22,5,5
+dnd_2014,Halfling,School of Enchantment,10,true,5,13,24,5,5
+dnd_2014,Halfling,School of Enchantment,11,true,5,14,26,6,6
+dnd_2014,Halfling,School of Enchantment,12,true,5,15,28,6,6
+dnd_2014,Halfling,School of Enchantment,13,true,5,16,30,7,7
+dnd_2014,Halfling,School of Enchantment,14,true,5,17,32,7,7
+dnd_2014,Halfling,School of Enchantment,15,true,5,18,34,8,8
+dnd_2014,Halfling,School of Enchantment,16,true,5,19,36,8,8
+dnd_2014,Halfling,School of Enchantment,17,true,5,20,38,9,9
+dnd_2014,Halfling,School of Enchantment,18,true,5,21,40,9,9
+dnd_2014,Halfling,School of Enchantment,19,true,5,22,42,10,9
+dnd_2014,Halfling,School of Enchantment,20,true,5,23,44,10,9
+dnd_2014,Halfling,School of Illusion,1,true,3,4,6,1,1
+dnd_2014,Halfling,School of Illusion,2,true,3,5,8,1,1
+dnd_2014,Halfling,School of Illusion,3,true,3,6,10,2,2
+dnd_2014,Halfling,School of Illusion,4,true,4,7,12,2,2
+dnd_2014,Halfling,School of Illusion,5,true,4,8,14,3,3
+dnd_2014,Halfling,School of Illusion,6,true,4,9,16,3,3
+dnd_2014,Halfling,School of Illusion,7,true,4,10,18,4,4
+dnd_2014,Halfling,School of Illusion,8,true,4,11,20,4,4
+dnd_2014,Halfling,School of Illusion,9,true,4,12,22,5,5
+dnd_2014,Halfling,School of Illusion,10,true,5,13,24,5,5
+dnd_2014,Halfling,School of Illusion,11,true,5,14,26,6,6
+dnd_2014,Halfling,School of Illusion,12,true,5,15,28,6,6
+dnd_2014,Halfling,School of Illusion,13,true,5,16,30,7,7
+dnd_2014,Halfling,School of Illusion,14,true,5,17,32,7,7
+dnd_2014,Halfling,School of Illusion,15,true,5,18,34,8,8
+dnd_2014,Halfling,School of Illusion,16,true,5,19,36,8,8
+dnd_2014,Halfling,School of Illusion,17,true,5,20,38,9,9
+dnd_2014,Halfling,School of Illusion,18,true,5,21,40,9,9
+dnd_2014,Halfling,School of Illusion,19,true,5,22,42,10,9
+dnd_2014,Halfling,School of Illusion,20,true,5,23,44,10,9
+dnd_2014,Halfling,School of Necromancy,1,true,3,4,6,1,1
+dnd_2014,Halfling,School of Necromancy,2,true,3,5,8,1,1
+dnd_2014,Halfling,School of Necromancy,3,true,3,6,10,2,2
+dnd_2014,Halfling,School of Necromancy,4,true,4,7,12,2,2
+dnd_2014,Halfling,School of Necromancy,5,true,4,8,14,3,3
+dnd_2014,Halfling,School of Necromancy,6,true,4,9,16,3,3
+dnd_2014,Halfling,School of Necromancy,7,true,4,10,18,4,4
+dnd_2014,Halfling,School of Necromancy,8,true,4,11,20,4,4
+dnd_2014,Halfling,School of Necromancy,9,true,4,12,22,5,5
+dnd_2014,Halfling,School of Necromancy,10,true,5,13,24,5,5
+dnd_2014,Halfling,School of Necromancy,11,true,5,14,26,6,6
+dnd_2014,Halfling,School of Necromancy,12,true,5,15,28,6,6
+dnd_2014,Halfling,School of Necromancy,13,true,5,16,30,7,7
+dnd_2014,Halfling,School of Necromancy,14,true,5,17,32,7,7
+dnd_2014,Halfling,School of Necromancy,15,true,5,18,34,8,8
+dnd_2014,Halfling,School of Necromancy,16,true,5,19,36,8,8
+dnd_2014,Halfling,School of Necromancy,17,true,5,20,38,9,9
+dnd_2014,Halfling,School of Necromancy,18,true,5,21,40,9,9
+dnd_2014,Halfling,School of Necromancy,19,true,5,22,42,10,9
+dnd_2014,Halfling,School of Necromancy,20,true,5,23,44,10,9
+dnd_2014,Halfling,School of Transmutation,1,true,3,4,6,1,1
+dnd_2014,Halfling,School of Transmutation,2,true,3,5,8,1,1
+dnd_2014,Halfling,School of Transmutation,3,true,3,6,10,2,2
+dnd_2014,Halfling,School of Transmutation,4,true,4,7,12,2,2
+dnd_2014,Halfling,School of Transmutation,5,true,4,8,14,3,3
+dnd_2014,Halfling,School of Transmutation,6,true,4,9,16,3,3
+dnd_2014,Halfling,School of Transmutation,7,true,4,10,18,4,4
+dnd_2014,Halfling,School of Transmutation,8,true,4,11,20,4,4
+dnd_2014,Halfling,School of Transmutation,9,true,4,12,22,5,5
+dnd_2014,Halfling,School of Transmutation,10,true,5,13,24,5,5
+dnd_2014,Halfling,School of Transmutation,11,true,5,14,26,6,6
+dnd_2014,Halfling,School of Transmutation,12,true,5,15,28,6,6
+dnd_2014,Halfling,School of Transmutation,13,true,5,16,30,7,7
+dnd_2014,Halfling,School of Transmutation,14,true,5,17,32,7,7
+dnd_2014,Halfling,School of Transmutation,15,true,5,18,34,8,8
+dnd_2014,Halfling,School of Transmutation,16,true,5,19,36,8,8
+dnd_2014,Halfling,School of Transmutation,17,true,5,20,38,9,9
+dnd_2014,Halfling,School of Transmutation,18,true,5,21,40,9,9
+dnd_2014,Halfling,School of Transmutation,19,true,5,22,42,10,9
+dnd_2014,Halfling,School of Transmutation,20,true,5,23,44,10,9
+dnd_2014,Halfling,Bladesinging,1,true,3,4,6,1,1
+dnd_2014,Halfling,Bladesinging,2,true,3,5,8,1,1
+dnd_2014,Halfling,Bladesinging,3,true,3,6,10,2,2
+dnd_2014,Halfling,Bladesinging,4,true,4,7,12,2,2
+dnd_2014,Halfling,Bladesinging,5,true,4,8,14,3,3
+dnd_2014,Halfling,Bladesinging,6,true,4,9,16,3,3
+dnd_2014,Halfling,Bladesinging,7,true,4,10,18,4,4
+dnd_2014,Halfling,Bladesinging,8,true,4,11,20,4,4
+dnd_2014,Halfling,Bladesinging,9,true,4,12,22,5,5
+dnd_2014,Halfling,Bladesinging,10,true,5,13,24,5,5
+dnd_2014,Halfling,Bladesinging,11,true,5,14,26,6,6
+dnd_2014,Halfling,Bladesinging,12,true,5,15,28,6,6
+dnd_2014,Halfling,Bladesinging,13,true,5,16,30,7,7
+dnd_2014,Halfling,Bladesinging,14,true,5,17,32,7,7
+dnd_2014,Halfling,Bladesinging,15,true,5,18,34,8,8
+dnd_2014,Halfling,Bladesinging,16,true,5,19,36,8,8
+dnd_2014,Halfling,Bladesinging,17,true,5,20,38,9,9
+dnd_2014,Halfling,Bladesinging,18,true,5,21,40,9,9
+dnd_2014,Halfling,Bladesinging,19,true,5,22,42,10,9
+dnd_2014,Halfling,Bladesinging,20,true,5,23,44,10,9
+dnd_2014,Halfling,War Magic,1,true,3,4,6,1,1
+dnd_2014,Halfling,War Magic,2,true,3,5,8,1,1
+dnd_2014,Halfling,War Magic,3,true,3,6,10,2,2
+dnd_2014,Halfling,War Magic,4,true,4,7,12,2,2
+dnd_2014,Halfling,War Magic,5,true,4,8,14,3,3
+dnd_2014,Halfling,War Magic,6,true,4,9,16,3,3
+dnd_2014,Halfling,War Magic,7,true,4,10,18,4,4
+dnd_2014,Halfling,War Magic,8,true,4,11,20,4,4
+dnd_2014,Halfling,War Magic,9,true,4,12,22,5,5
+dnd_2014,Halfling,War Magic,10,true,5,13,24,5,5
+dnd_2014,Halfling,War Magic,11,true,5,14,26,6,6
+dnd_2014,Halfling,War Magic,12,true,5,15,28,6,6
+dnd_2014,Halfling,War Magic,13,true,5,16,30,7,7
+dnd_2014,Halfling,War Magic,14,true,5,17,32,7,7
+dnd_2014,Halfling,War Magic,15,true,5,18,34,8,8
+dnd_2014,Halfling,War Magic,16,true,5,19,36,8,8
+dnd_2014,Halfling,War Magic,17,true,5,20,38,9,9
+dnd_2014,Halfling,War Magic,18,true,5,21,40,9,9
+dnd_2014,Halfling,War Magic,19,true,5,22,42,10,9
+dnd_2014,Halfling,War Magic,20,true,5,23,44,10,9
+dnd_2014,Halfling,Order of Scribes,1,true,3,4,6,1,1
+dnd_2014,Halfling,Order of Scribes,2,true,3,5,8,1,1
+dnd_2014,Halfling,Order of Scribes,3,true,3,6,10,2,2
+dnd_2014,Halfling,Order of Scribes,4,true,4,7,12,2,2
+dnd_2014,Halfling,Order of Scribes,5,true,4,8,14,3,3
+dnd_2014,Halfling,Order of Scribes,6,true,4,9,16,3,3
+dnd_2014,Halfling,Order of Scribes,7,true,4,10,18,4,4
+dnd_2014,Halfling,Order of Scribes,8,true,4,11,20,4,4
+dnd_2014,Halfling,Order of Scribes,9,true,4,12,22,5,5
+dnd_2014,Halfling,Order of Scribes,10,true,5,13,24,5,5
+dnd_2014,Halfling,Order of Scribes,11,true,5,14,26,6,6
+dnd_2014,Halfling,Order of Scribes,12,true,5,15,28,6,6
+dnd_2014,Halfling,Order of Scribes,13,true,5,16,30,7,7
+dnd_2014,Halfling,Order of Scribes,14,true,5,17,32,7,7
+dnd_2014,Halfling,Order of Scribes,15,true,5,18,34,8,8
+dnd_2014,Halfling,Order of Scribes,16,true,5,19,36,8,8
+dnd_2014,Halfling,Order of Scribes,17,true,5,20,38,9,9
+dnd_2014,Halfling,Order of Scribes,18,true,5,21,40,9,9
+dnd_2014,Halfling,Order of Scribes,19,true,5,22,42,10,9
+dnd_2014,Halfling,Order of Scribes,20,true,5,23,44,10,9
+dnd_2014,Halfling,Chronurgy Magic,1,true,3,4,6,1,1
+dnd_2014,Halfling,Chronurgy Magic,2,true,3,5,8,1,1
+dnd_2014,Halfling,Chronurgy Magic,3,true,3,6,10,2,2
+dnd_2014,Halfling,Chronurgy Magic,4,true,4,7,12,2,2
+dnd_2014,Halfling,Chronurgy Magic,5,true,4,8,14,3,3
+dnd_2014,Halfling,Chronurgy Magic,6,true,4,9,16,3,3
+dnd_2014,Halfling,Chronurgy Magic,7,true,4,10,18,4,4
+dnd_2014,Halfling,Chronurgy Magic,8,true,4,11,20,4,4
+dnd_2014,Halfling,Chronurgy Magic,9,true,4,12,22,5,5
+dnd_2014,Halfling,Chronurgy Magic,10,true,5,13,24,5,5
+dnd_2014,Halfling,Chronurgy Magic,11,true,5,14,26,6,6
+dnd_2014,Halfling,Chronurgy Magic,12,true,5,15,28,6,6
+dnd_2014,Halfling,Chronurgy Magic,13,true,5,16,30,7,7
+dnd_2014,Halfling,Chronurgy Magic,14,true,5,17,32,7,7
+dnd_2014,Halfling,Chronurgy Magic,15,true,5,18,34,8,8
+dnd_2014,Halfling,Chronurgy Magic,16,true,5,19,36,8,8
+dnd_2014,Halfling,Chronurgy Magic,17,true,5,20,38,9,9
+dnd_2014,Halfling,Chronurgy Magic,18,true,5,21,40,9,9
+dnd_2014,Halfling,Chronurgy Magic,19,true,5,22,42,10,9
+dnd_2014,Halfling,Chronurgy Magic,20,true,5,23,44,10,9
+dnd_2014,Halfling,Graviturgy Magic,1,true,3,4,6,1,1
+dnd_2014,Halfling,Graviturgy Magic,2,true,3,5,8,1,1
+dnd_2014,Halfling,Graviturgy Magic,3,true,3,6,10,2,2
+dnd_2014,Halfling,Graviturgy Magic,4,true,4,7,12,2,2
+dnd_2014,Halfling,Graviturgy Magic,5,true,4,8,14,3,3
+dnd_2014,Halfling,Graviturgy Magic,6,true,4,9,16,3,3
+dnd_2014,Halfling,Graviturgy Magic,7,true,4,10,18,4,4
+dnd_2014,Halfling,Graviturgy Magic,8,true,4,11,20,4,4
+dnd_2014,Halfling,Graviturgy Magic,9,true,4,12,22,5,5
+dnd_2014,Halfling,Graviturgy Magic,10,true,5,13,24,5,5
+dnd_2014,Halfling,Graviturgy Magic,11,true,5,14,26,6,6
+dnd_2014,Halfling,Graviturgy Magic,12,true,5,15,28,6,6
+dnd_2014,Halfling,Graviturgy Magic,13,true,5,16,30,7,7
+dnd_2014,Halfling,Graviturgy Magic,14,true,5,17,32,7,7
+dnd_2014,Halfling,Graviturgy Magic,15,true,5,18,34,8,8
+dnd_2014,Halfling,Graviturgy Magic,16,true,5,19,36,8,8
+dnd_2014,Halfling,Graviturgy Magic,17,true,5,20,38,9,9
+dnd_2014,Halfling,Graviturgy Magic,18,true,5,21,40,9,9
+dnd_2014,Halfling,Graviturgy Magic,19,true,5,22,42,10,9
+dnd_2014,Halfling,Graviturgy Magic,20,true,5,23,44,10,9
+dnd_2014,Dragonborn,School of Evocation,1,true,3,4,6,1,1
+dnd_2014,Dragonborn,School of Evocation,2,true,3,5,8,1,1
+dnd_2014,Dragonborn,School of Evocation,3,true,3,6,10,2,2
+dnd_2014,Dragonborn,School of Evocation,4,true,4,7,12,2,2
+dnd_2014,Dragonborn,School of Evocation,5,true,4,8,14,3,3
+dnd_2014,Dragonborn,School of Evocation,6,true,4,9,16,3,3
+dnd_2014,Dragonborn,School of Evocation,7,true,4,10,18,4,4
+dnd_2014,Dragonborn,School of Evocation,8,true,4,11,20,4,4
+dnd_2014,Dragonborn,School of Evocation,9,true,4,12,22,5,5
+dnd_2014,Dragonborn,School of Evocation,10,true,5,13,24,5,5
+dnd_2014,Dragonborn,School of Evocation,11,true,5,14,26,6,6
+dnd_2014,Dragonborn,School of Evocation,12,true,5,15,28,6,6
+dnd_2014,Dragonborn,School of Evocation,13,true,5,16,30,7,7
+dnd_2014,Dragonborn,School of Evocation,14,true,5,17,32,7,7
+dnd_2014,Dragonborn,School of Evocation,15,true,5,18,34,8,8
+dnd_2014,Dragonborn,School of Evocation,16,true,5,19,36,8,8
+dnd_2014,Dragonborn,School of Evocation,17,true,5,20,38,9,9
+dnd_2014,Dragonborn,School of Evocation,18,true,5,21,40,9,9
+dnd_2014,Dragonborn,School of Evocation,19,true,5,22,42,10,9
+dnd_2014,Dragonborn,School of Evocation,20,true,5,23,44,10,9
+dnd_2014,Dragonborn,School of Abjuration,1,true,3,4,6,1,1
+dnd_2014,Dragonborn,School of Abjuration,2,true,3,5,8,1,1
+dnd_2014,Dragonborn,School of Abjuration,3,true,3,6,10,2,2
+dnd_2014,Dragonborn,School of Abjuration,4,true,4,7,12,2,2
+dnd_2014,Dragonborn,School of Abjuration,5,true,4,8,14,3,3
+dnd_2014,Dragonborn,School of Abjuration,6,true,4,9,16,3,3
+dnd_2014,Dragonborn,School of Abjuration,7,true,4,10,18,4,4
+dnd_2014,Dragonborn,School of Abjuration,8,true,4,11,20,4,4
+dnd_2014,Dragonborn,School of Abjuration,9,true,4,12,22,5,5
+dnd_2014,Dragonborn,School of Abjuration,10,true,5,13,24,5,5
+dnd_2014,Dragonborn,School of Abjuration,11,true,5,14,26,6,6
+dnd_2014,Dragonborn,School of Abjuration,12,true,5,15,28,6,6
+dnd_2014,Dragonborn,School of Abjuration,13,true,5,16,30,7,7
+dnd_2014,Dragonborn,School of Abjuration,14,true,5,17,32,7,7
+dnd_2014,Dragonborn,School of Abjuration,15,true,5,18,34,8,8
+dnd_2014,Dragonborn,School of Abjuration,16,true,5,19,36,8,8
+dnd_2014,Dragonborn,School of Abjuration,17,true,5,20,38,9,9
+dnd_2014,Dragonborn,School of Abjuration,18,true,5,21,40,9,9
+dnd_2014,Dragonborn,School of Abjuration,19,true,5,22,42,10,9
+dnd_2014,Dragonborn,School of Abjuration,20,true,5,23,44,10,9
+dnd_2014,Dragonborn,School of Conjuration,1,true,3,4,6,1,1
+dnd_2014,Dragonborn,School of Conjuration,2,true,3,5,8,1,1
+dnd_2014,Dragonborn,School of Conjuration,3,true,3,6,10,2,2
+dnd_2014,Dragonborn,School of Conjuration,4,true,4,7,12,2,2
+dnd_2014,Dragonborn,School of Conjuration,5,true,4,8,14,3,3
+dnd_2014,Dragonborn,School of Conjuration,6,true,4,9,16,3,3
+dnd_2014,Dragonborn,School of Conjuration,7,true,4,10,18,4,4
+dnd_2014,Dragonborn,School of Conjuration,8,true,4,11,20,4,4
+dnd_2014,Dragonborn,School of Conjuration,9,true,4,12,22,5,5
+dnd_2014,Dragonborn,School of Conjuration,10,true,5,13,24,5,5
+dnd_2014,Dragonborn,School of Conjuration,11,true,5,14,26,6,6
+dnd_2014,Dragonborn,School of Conjuration,12,true,5,15,28,6,6
+dnd_2014,Dragonborn,School of Conjuration,13,true,5,16,30,7,7
+dnd_2014,Dragonborn,School of Conjuration,14,true,5,17,32,7,7
+dnd_2014,Dragonborn,School of Conjuration,15,true,5,18,34,8,8
+dnd_2014,Dragonborn,School of Conjuration,16,true,5,19,36,8,8
+dnd_2014,Dragonborn,School of Conjuration,17,true,5,20,38,9,9
+dnd_2014,Dragonborn,School of Conjuration,18,true,5,21,40,9,9
+dnd_2014,Dragonborn,School of Conjuration,19,true,5,22,42,10,9
+dnd_2014,Dragonborn,School of Conjuration,20,true,5,23,44,10,9
+dnd_2014,Dragonborn,School of Divination,1,true,3,4,6,1,1
+dnd_2014,Dragonborn,School of Divination,2,true,3,5,8,1,1
+dnd_2014,Dragonborn,School of Divination,3,true,3,6,10,2,2
+dnd_2014,Dragonborn,School of Divination,4,true,4,7,12,2,2
+dnd_2014,Dragonborn,School of Divination,5,true,4,8,14,3,3
+dnd_2014,Dragonborn,School of Divination,6,true,4,9,16,3,3
+dnd_2014,Dragonborn,School of Divination,7,true,4,10,18,4,4
+dnd_2014,Dragonborn,School of Divination,8,true,4,11,20,4,4
+dnd_2014,Dragonborn,School of Divination,9,true,4,12,22,5,5
+dnd_2014,Dragonborn,School of Divination,10,true,5,13,24,5,5
+dnd_2014,Dragonborn,School of Divination,11,true,5,14,26,6,6
+dnd_2014,Dragonborn,School of Divination,12,true,5,15,28,6,6
+dnd_2014,Dragonborn,School of Divination,13,true,5,16,30,7,7
+dnd_2014,Dragonborn,School of Divination,14,true,5,17,32,7,7
+dnd_2014,Dragonborn,School of Divination,15,true,5,18,34,8,8
+dnd_2014,Dragonborn,School of Divination,16,true,5,19,36,8,8
+dnd_2014,Dragonborn,School of Divination,17,true,5,20,38,9,9
+dnd_2014,Dragonborn,School of Divination,18,true,5,21,40,9,9
+dnd_2014,Dragonborn,School of Divination,19,true,5,22,42,10,9
+dnd_2014,Dragonborn,School of Divination,20,true,5,23,44,10,9
+dnd_2014,Dragonborn,School of Enchantment,1,true,3,4,6,1,1
+dnd_2014,Dragonborn,School of Enchantment,2,true,3,5,8,1,1
+dnd_2014,Dragonborn,School of Enchantment,3,true,3,6,10,2,2
+dnd_2014,Dragonborn,School of Enchantment,4,true,4,7,12,2,2
+dnd_2014,Dragonborn,School of Enchantment,5,true,4,8,14,3,3
+dnd_2014,Dragonborn,School of Enchantment,6,true,4,9,16,3,3
+dnd_2014,Dragonborn,School of Enchantment,7,true,4,10,18,4,4
+dnd_2014,Dragonborn,School of Enchantment,8,true,4,11,20,4,4
+dnd_2014,Dragonborn,School of Enchantment,9,true,4,12,22,5,5
+dnd_2014,Dragonborn,School of Enchantment,10,true,5,13,24,5,5
+dnd_2014,Dragonborn,School of Enchantment,11,true,5,14,26,6,6
+dnd_2014,Dragonborn,School of Enchantment,12,true,5,15,28,6,6
+dnd_2014,Dragonborn,School of Enchantment,13,true,5,16,30,7,7
+dnd_2014,Dragonborn,School of Enchantment,14,true,5,17,32,7,7
+dnd_2014,Dragonborn,School of Enchantment,15,true,5,18,34,8,8
+dnd_2014,Dragonborn,School of Enchantment,16,true,5,19,36,8,8
+dnd_2014,Dragonborn,School of Enchantment,17,true,5,20,38,9,9
+dnd_2014,Dragonborn,School of Enchantment,18,true,5,21,40,9,9
+dnd_2014,Dragonborn,School of Enchantment,19,true,5,22,42,10,9
+dnd_2014,Dragonborn,School of Enchantment,20,true,5,23,44,10,9
+dnd_2014,Dragonborn,School of Illusion,1,true,3,4,6,1,1
+dnd_2014,Dragonborn,School of Illusion,2,true,3,5,8,1,1
+dnd_2014,Dragonborn,School of Illusion,3,true,3,6,10,2,2
+dnd_2014,Dragonborn,School of Illusion,4,true,4,7,12,2,2
+dnd_2014,Dragonborn,School of Illusion,5,true,4,8,14,3,3
+dnd_2014,Dragonborn,School of Illusion,6,true,4,9,16,3,3
+dnd_2014,Dragonborn,School of Illusion,7,true,4,10,18,4,4
+dnd_2014,Dragonborn,School of Illusion,8,true,4,11,20,4,4
+dnd_2014,Dragonborn,School of Illusion,9,true,4,12,22,5,5
+dnd_2014,Dragonborn,School of Illusion,10,true,5,13,24,5,5
+dnd_2014,Dragonborn,School of Illusion,11,true,5,14,26,6,6
+dnd_2014,Dragonborn,School of Illusion,12,true,5,15,28,6,6
+dnd_2014,Dragonborn,School of Illusion,13,true,5,16,30,7,7
+dnd_2014,Dragonborn,School of Illusion,14,true,5,17,32,7,7
+dnd_2014,Dragonborn,School of Illusion,15,true,5,18,34,8,8
+dnd_2014,Dragonborn,School of Illusion,16,true,5,19,36,8,8
+dnd_2014,Dragonborn,School of Illusion,17,true,5,20,38,9,9
+dnd_2014,Dragonborn,School of Illusion,18,true,5,21,40,9,9
+dnd_2014,Dragonborn,School of Illusion,19,true,5,22,42,10,9
+dnd_2014,Dragonborn,School of Illusion,20,true,5,23,44,10,9
+dnd_2014,Dragonborn,School of Necromancy,1,true,3,4,6,1,1
+dnd_2014,Dragonborn,School of Necromancy,2,true,3,5,8,1,1
+dnd_2014,Dragonborn,School of Necromancy,3,true,3,6,10,2,2
+dnd_2014,Dragonborn,School of Necromancy,4,true,4,7,12,2,2
+dnd_2014,Dragonborn,School of Necromancy,5,true,4,8,14,3,3
+dnd_2014,Dragonborn,School of Necromancy,6,true,4,9,16,3,3
+dnd_2014,Dragonborn,School of Necromancy,7,true,4,10,18,4,4
+dnd_2014,Dragonborn,School of Necromancy,8,true,4,11,20,4,4
+dnd_2014,Dragonborn,School of Necromancy,9,true,4,12,22,5,5
+dnd_2014,Dragonborn,School of Necromancy,10,true,5,13,24,5,5
+dnd_2014,Dragonborn,School of Necromancy,11,true,5,14,26,6,6
+dnd_2014,Dragonborn,School of Necromancy,12,true,5,15,28,6,6
+dnd_2014,Dragonborn,School of Necromancy,13,true,5,16,30,7,7
+dnd_2014,Dragonborn,School of Necromancy,14,true,5,17,32,7,7
+dnd_2014,Dragonborn,School of Necromancy,15,true,5,18,34,8,8
+dnd_2014,Dragonborn,School of Necromancy,16,true,5,19,36,8,8
+dnd_2014,Dragonborn,School of Necromancy,17,true,5,20,38,9,9
+dnd_2014,Dragonborn,School of Necromancy,18,true,5,21,40,9,9
+dnd_2014,Dragonborn,School of Necromancy,19,true,5,22,42,10,9
+dnd_2014,Dragonborn,School of Necromancy,20,true,5,23,44,10,9
+dnd_2014,Dragonborn,School of Transmutation,1,true,3,4,6,1,1
+dnd_2014,Dragonborn,School of Transmutation,2,true,3,5,8,1,1
+dnd_2014,Dragonborn,School of Transmutation,3,true,3,6,10,2,2
+dnd_2014,Dragonborn,School of Transmutation,4,true,4,7,12,2,2
+dnd_2014,Dragonborn,School of Transmutation,5,true,4,8,14,3,3
+dnd_2014,Dragonborn,School of Transmutation,6,true,4,9,16,3,3
+dnd_2014,Dragonborn,School of Transmutation,7,true,4,10,18,4,4
+dnd_2014,Dragonborn,School of Transmutation,8,true,4,11,20,4,4
+dnd_2014,Dragonborn,School of Transmutation,9,true,4,12,22,5,5
+dnd_2014,Dragonborn,School of Transmutation,10,true,5,13,24,5,5
+dnd_2014,Dragonborn,School of Transmutation,11,true,5,14,26,6,6
+dnd_2014,Dragonborn,School of Transmutation,12,true,5,15,28,6,6
+dnd_2014,Dragonborn,School of Transmutation,13,true,5,16,30,7,7
+dnd_2014,Dragonborn,School of Transmutation,14,true,5,17,32,7,7
+dnd_2014,Dragonborn,School of Transmutation,15,true,5,18,34,8,8
+dnd_2014,Dragonborn,School of Transmutation,16,true,5,19,36,8,8
+dnd_2014,Dragonborn,School of Transmutation,17,true,5,20,38,9,9
+dnd_2014,Dragonborn,School of Transmutation,18,true,5,21,40,9,9
+dnd_2014,Dragonborn,School of Transmutation,19,true,5,22,42,10,9
+dnd_2014,Dragonborn,School of Transmutation,20,true,5,23,44,10,9
+dnd_2014,Dragonborn,Bladesinging,1,true,3,4,6,1,1
+dnd_2014,Dragonborn,Bladesinging,2,true,3,5,8,1,1
+dnd_2014,Dragonborn,Bladesinging,3,true,3,6,10,2,2
+dnd_2014,Dragonborn,Bladesinging,4,true,4,7,12,2,2
+dnd_2014,Dragonborn,Bladesinging,5,true,4,8,14,3,3
+dnd_2014,Dragonborn,Bladesinging,6,true,4,9,16,3,3
+dnd_2014,Dragonborn,Bladesinging,7,true,4,10,18,4,4
+dnd_2014,Dragonborn,Bladesinging,8,true,4,11,20,4,4
+dnd_2014,Dragonborn,Bladesinging,9,true,4,12,22,5,5
+dnd_2014,Dragonborn,Bladesinging,10,true,5,13,24,5,5
+dnd_2014,Dragonborn,Bladesinging,11,true,5,14,26,6,6
+dnd_2014,Dragonborn,Bladesinging,12,true,5,15,28,6,6
+dnd_2014,Dragonborn,Bladesinging,13,true,5,16,30,7,7
+dnd_2014,Dragonborn,Bladesinging,14,true,5,17,32,7,7
+dnd_2014,Dragonborn,Bladesinging,15,true,5,18,34,8,8
+dnd_2014,Dragonborn,Bladesinging,16,true,5,19,36,8,8
+dnd_2014,Dragonborn,Bladesinging,17,true,5,20,38,9,9
+dnd_2014,Dragonborn,Bladesinging,18,true,5,21,40,9,9
+dnd_2014,Dragonborn,Bladesinging,19,true,5,22,42,10,9
+dnd_2014,Dragonborn,Bladesinging,20,true,5,23,44,10,9
+dnd_2014,Dragonborn,War Magic,1,true,3,4,6,1,1
+dnd_2014,Dragonborn,War Magic,2,true,3,5,8,1,1
+dnd_2014,Dragonborn,War Magic,3,true,3,6,10,2,2
+dnd_2014,Dragonborn,War Magic,4,true,4,7,12,2,2
+dnd_2014,Dragonborn,War Magic,5,true,4,8,14,3,3
+dnd_2014,Dragonborn,War Magic,6,true,4,9,16,3,3
+dnd_2014,Dragonborn,War Magic,7,true,4,10,18,4,4
+dnd_2014,Dragonborn,War Magic,8,true,4,11,20,4,4
+dnd_2014,Dragonborn,War Magic,9,true,4,12,22,5,5
+dnd_2014,Dragonborn,War Magic,10,true,5,13,24,5,5
+dnd_2014,Dragonborn,War Magic,11,true,5,14,26,6,6
+dnd_2014,Dragonborn,War Magic,12,true,5,15,28,6,6
+dnd_2014,Dragonborn,War Magic,13,true,5,16,30,7,7
+dnd_2014,Dragonborn,War Magic,14,true,5,17,32,7,7
+dnd_2014,Dragonborn,War Magic,15,true,5,18,34,8,8
+dnd_2014,Dragonborn,War Magic,16,true,5,19,36,8,8
+dnd_2014,Dragonborn,War Magic,17,true,5,20,38,9,9
+dnd_2014,Dragonborn,War Magic,18,true,5,21,40,9,9
+dnd_2014,Dragonborn,War Magic,19,true,5,22,42,10,9
+dnd_2014,Dragonborn,War Magic,20,true,5,23,44,10,9
+dnd_2014,Dragonborn,Order of Scribes,1,true,3,4,6,1,1
+dnd_2014,Dragonborn,Order of Scribes,2,true,3,5,8,1,1
+dnd_2014,Dragonborn,Order of Scribes,3,true,3,6,10,2,2
+dnd_2014,Dragonborn,Order of Scribes,4,true,4,7,12,2,2
+dnd_2014,Dragonborn,Order of Scribes,5,true,4,8,14,3,3
+dnd_2014,Dragonborn,Order of Scribes,6,true,4,9,16,3,3
+dnd_2014,Dragonborn,Order of Scribes,7,true,4,10,18,4,4
+dnd_2014,Dragonborn,Order of Scribes,8,true,4,11,20,4,4
+dnd_2014,Dragonborn,Order of Scribes,9,true,4,12,22,5,5
+dnd_2014,Dragonborn,Order of Scribes,10,true,5,13,24,5,5
+dnd_2014,Dragonborn,Order of Scribes,11,true,5,14,26,6,6
+dnd_2014,Dragonborn,Order of Scribes,12,true,5,15,28,6,6
+dnd_2014,Dragonborn,Order of Scribes,13,true,5,16,30,7,7
+dnd_2014,Dragonborn,Order of Scribes,14,true,5,17,32,7,7
+dnd_2014,Dragonborn,Order of Scribes,15,true,5,18,34,8,8
+dnd_2014,Dragonborn,Order of Scribes,16,true,5,19,36,8,8
+dnd_2014,Dragonborn,Order of Scribes,17,true,5,20,38,9,9
+dnd_2014,Dragonborn,Order of Scribes,18,true,5,21,40,9,9
+dnd_2014,Dragonborn,Order of Scribes,19,true,5,22,42,10,9
+dnd_2014,Dragonborn,Order of Scribes,20,true,5,23,44,10,9
+dnd_2014,Dragonborn,Chronurgy Magic,1,true,3,4,6,1,1
+dnd_2014,Dragonborn,Chronurgy Magic,2,true,3,5,8,1,1
+dnd_2014,Dragonborn,Chronurgy Magic,3,true,3,6,10,2,2
+dnd_2014,Dragonborn,Chronurgy Magic,4,true,4,7,12,2,2
+dnd_2014,Dragonborn,Chronurgy Magic,5,true,4,8,14,3,3
+dnd_2014,Dragonborn,Chronurgy Magic,6,true,4,9,16,3,3
+dnd_2014,Dragonborn,Chronurgy Magic,7,true,4,10,18,4,4
+dnd_2014,Dragonborn,Chronurgy Magic,8,true,4,11,20,4,4
+dnd_2014,Dragonborn,Chronurgy Magic,9,true,4,12,22,5,5
+dnd_2014,Dragonborn,Chronurgy Magic,10,true,5,13,24,5,5
+dnd_2014,Dragonborn,Chronurgy Magic,11,true,5,14,26,6,6
+dnd_2014,Dragonborn,Chronurgy Magic,12,true,5,15,28,6,6
+dnd_2014,Dragonborn,Chronurgy Magic,13,true,5,16,30,7,7
+dnd_2014,Dragonborn,Chronurgy Magic,14,true,5,17,32,7,7
+dnd_2014,Dragonborn,Chronurgy Magic,15,true,5,18,34,8,8
+dnd_2014,Dragonborn,Chronurgy Magic,16,true,5,19,36,8,8
+dnd_2014,Dragonborn,Chronurgy Magic,17,true,5,20,38,9,9
+dnd_2014,Dragonborn,Chronurgy Magic,18,true,5,21,40,9,9
+dnd_2014,Dragonborn,Chronurgy Magic,19,true,5,22,42,10,9
+dnd_2014,Dragonborn,Chronurgy Magic,20,true,5,23,44,10,9
+dnd_2014,Dragonborn,Graviturgy Magic,1,true,3,4,6,1,1
+dnd_2014,Dragonborn,Graviturgy Magic,2,true,3,5,8,1,1
+dnd_2014,Dragonborn,Graviturgy Magic,3,true,3,6,10,2,2
+dnd_2014,Dragonborn,Graviturgy Magic,4,true,4,7,12,2,2
+dnd_2014,Dragonborn,Graviturgy Magic,5,true,4,8,14,3,3
+dnd_2014,Dragonborn,Graviturgy Magic,6,true,4,9,16,3,3
+dnd_2014,Dragonborn,Graviturgy Magic,7,true,4,10,18,4,4
+dnd_2014,Dragonborn,Graviturgy Magic,8,true,4,11,20,4,4
+dnd_2014,Dragonborn,Graviturgy Magic,9,true,4,12,22,5,5
+dnd_2014,Dragonborn,Graviturgy Magic,10,true,5,13,24,5,5
+dnd_2014,Dragonborn,Graviturgy Magic,11,true,5,14,26,6,6
+dnd_2014,Dragonborn,Graviturgy Magic,12,true,5,15,28,6,6
+dnd_2014,Dragonborn,Graviturgy Magic,13,true,5,16,30,7,7
+dnd_2014,Dragonborn,Graviturgy Magic,14,true,5,17,32,7,7
+dnd_2014,Dragonborn,Graviturgy Magic,15,true,5,18,34,8,8
+dnd_2014,Dragonborn,Graviturgy Magic,16,true,5,19,36,8,8
+dnd_2014,Dragonborn,Graviturgy Magic,17,true,5,20,38,9,9
+dnd_2014,Dragonborn,Graviturgy Magic,18,true,5,21,40,9,9
+dnd_2014,Dragonborn,Graviturgy Magic,19,true,5,22,42,10,9
+dnd_2014,Dragonborn,Graviturgy Magic,20,true,5,23,44,10,9
+dnd_2014,Gnome,School of Evocation,1,true,3,4,6,1,1
+dnd_2014,Gnome,School of Evocation,2,true,3,5,8,1,1
+dnd_2014,Gnome,School of Evocation,3,true,3,6,10,2,2
+dnd_2014,Gnome,School of Evocation,4,true,4,7,12,2,2
+dnd_2014,Gnome,School of Evocation,5,true,4,8,14,3,3
+dnd_2014,Gnome,School of Evocation,6,true,4,9,16,3,3
+dnd_2014,Gnome,School of Evocation,7,true,4,10,18,4,4
+dnd_2014,Gnome,School of Evocation,8,true,4,11,20,4,4
+dnd_2014,Gnome,School of Evocation,9,true,4,12,22,5,5
+dnd_2014,Gnome,School of Evocation,10,true,5,13,24,5,5
+dnd_2014,Gnome,School of Evocation,11,true,5,14,26,6,6
+dnd_2014,Gnome,School of Evocation,12,true,5,15,28,6,6
+dnd_2014,Gnome,School of Evocation,13,true,5,16,30,7,7
+dnd_2014,Gnome,School of Evocation,14,true,5,17,32,7,7
+dnd_2014,Gnome,School of Evocation,15,true,5,18,34,8,8
+dnd_2014,Gnome,School of Evocation,16,true,5,19,36,8,8
+dnd_2014,Gnome,School of Evocation,17,true,5,20,38,9,9
+dnd_2014,Gnome,School of Evocation,18,true,5,21,40,9,9
+dnd_2014,Gnome,School of Evocation,19,true,5,22,42,10,9
+dnd_2014,Gnome,School of Evocation,20,true,5,23,44,10,9
+dnd_2014,Gnome,School of Abjuration,1,true,3,4,6,1,1
+dnd_2014,Gnome,School of Abjuration,2,true,3,5,8,1,1
+dnd_2014,Gnome,School of Abjuration,3,true,3,6,10,2,2
+dnd_2014,Gnome,School of Abjuration,4,true,4,7,12,2,2
+dnd_2014,Gnome,School of Abjuration,5,true,4,8,14,3,3
+dnd_2014,Gnome,School of Abjuration,6,true,4,9,16,3,3
+dnd_2014,Gnome,School of Abjuration,7,true,4,10,18,4,4
+dnd_2014,Gnome,School of Abjuration,8,true,4,11,20,4,4
+dnd_2014,Gnome,School of Abjuration,9,true,4,12,22,5,5
+dnd_2014,Gnome,School of Abjuration,10,true,5,13,24,5,5
+dnd_2014,Gnome,School of Abjuration,11,true,5,14,26,6,6
+dnd_2014,Gnome,School of Abjuration,12,true,5,15,28,6,6
+dnd_2014,Gnome,School of Abjuration,13,true,5,16,30,7,7
+dnd_2014,Gnome,School of Abjuration,14,true,5,17,32,7,7
+dnd_2014,Gnome,School of Abjuration,15,true,5,18,34,8,8
+dnd_2014,Gnome,School of Abjuration,16,true,5,19,36,8,8
+dnd_2014,Gnome,School of Abjuration,17,true,5,20,38,9,9
+dnd_2014,Gnome,School of Abjuration,18,true,5,21,40,9,9
+dnd_2014,Gnome,School of Abjuration,19,true,5,22,42,10,9
+dnd_2014,Gnome,School of Abjuration,20,true,5,23,44,10,9
+dnd_2014,Gnome,School of Conjuration,1,true,3,4,6,1,1
+dnd_2014,Gnome,School of Conjuration,2,true,3,5,8,1,1
+dnd_2014,Gnome,School of Conjuration,3,true,3,6,10,2,2
+dnd_2014,Gnome,School of Conjuration,4,true,4,7,12,2,2
+dnd_2014,Gnome,School of Conjuration,5,true,4,8,14,3,3
+dnd_2014,Gnome,School of Conjuration,6,true,4,9,16,3,3
+dnd_2014,Gnome,School of Conjuration,7,true,4,10,18,4,4
+dnd_2014,Gnome,School of Conjuration,8,true,4,11,20,4,4
+dnd_2014,Gnome,School of Conjuration,9,true,4,12,22,5,5
+dnd_2014,Gnome,School of Conjuration,10,true,5,13,24,5,5
+dnd_2014,Gnome,School of Conjuration,11,true,5,14,26,6,6
+dnd_2014,Gnome,School of Conjuration,12,true,5,15,28,6,6
+dnd_2014,Gnome,School of Conjuration,13,true,5,16,30,7,7
+dnd_2014,Gnome,School of Conjuration,14,true,5,17,32,7,7
+dnd_2014,Gnome,School of Conjuration,15,true,5,18,34,8,8
+dnd_2014,Gnome,School of Conjuration,16,true,5,19,36,8,8
+dnd_2014,Gnome,School of Conjuration,17,true,5,20,38,9,9
+dnd_2014,Gnome,School of Conjuration,18,true,5,21,40,9,9
+dnd_2014,Gnome,School of Conjuration,19,true,5,22,42,10,9
+dnd_2014,Gnome,School of Conjuration,20,true,5,23,44,10,9
+dnd_2014,Gnome,School of Divination,1,true,3,4,6,1,1
+dnd_2014,Gnome,School of Divination,2,true,3,5,8,1,1
+dnd_2014,Gnome,School of Divination,3,true,3,6,10,2,2
+dnd_2014,Gnome,School of Divination,4,true,4,7,12,2,2
+dnd_2014,Gnome,School of Divination,5,true,4,8,14,3,3
+dnd_2014,Gnome,School of Divination,6,true,4,9,16,3,3
+dnd_2014,Gnome,School of Divination,7,true,4,10,18,4,4
+dnd_2014,Gnome,School of Divination,8,true,4,11,20,4,4
+dnd_2014,Gnome,School of Divination,9,true,4,12,22,5,5
+dnd_2014,Gnome,School of Divination,10,true,5,13,24,5,5
+dnd_2014,Gnome,School of Divination,11,true,5,14,26,6,6
+dnd_2014,Gnome,School of Divination,12,true,5,15,28,6,6
+dnd_2014,Gnome,School of Divination,13,true,5,16,30,7,7
+dnd_2014,Gnome,School of Divination,14,true,5,17,32,7,7
+dnd_2014,Gnome,School of Divination,15,true,5,18,34,8,8
+dnd_2014,Gnome,School of Divination,16,true,5,19,36,8,8
+dnd_2014,Gnome,School of Divination,17,true,5,20,38,9,9
+dnd_2014,Gnome,School of Divination,18,true,5,21,40,9,9
+dnd_2014,Gnome,School of Divination,19,true,5,22,42,10,9
+dnd_2014,Gnome,School of Divination,20,true,5,23,44,10,9
+dnd_2014,Gnome,School of Enchantment,1,true,3,4,6,1,1
+dnd_2014,Gnome,School of Enchantment,2,true,3,5,8,1,1
+dnd_2014,Gnome,School of Enchantment,3,true,3,6,10,2,2
+dnd_2014,Gnome,School of Enchantment,4,true,4,7,12,2,2
+dnd_2014,Gnome,School of Enchantment,5,true,4,8,14,3,3
+dnd_2014,Gnome,School of Enchantment,6,true,4,9,16,3,3
+dnd_2014,Gnome,School of Enchantment,7,true,4,10,18,4,4
+dnd_2014,Gnome,School of Enchantment,8,true,4,11,20,4,4
+dnd_2014,Gnome,School of Enchantment,9,true,4,12,22,5,5
+dnd_2014,Gnome,School of Enchantment,10,true,5,13,24,5,5
+dnd_2014,Gnome,School of Enchantment,11,true,5,14,26,6,6
+dnd_2014,Gnome,School of Enchantment,12,true,5,15,28,6,6
+dnd_2014,Gnome,School of Enchantment,13,true,5,16,30,7,7
+dnd_2014,Gnome,School of Enchantment,14,true,5,17,32,7,7
+dnd_2014,Gnome,School of Enchantment,15,true,5,18,34,8,8
+dnd_2014,Gnome,School of Enchantment,16,true,5,19,36,8,8
+dnd_2014,Gnome,School of Enchantment,17,true,5,20,38,9,9
+dnd_2014,Gnome,School of Enchantment,18,true,5,21,40,9,9
+dnd_2014,Gnome,School of Enchantment,19,true,5,22,42,10,9
+dnd_2014,Gnome,School of Enchantment,20,true,5,23,44,10,9
+dnd_2014,Gnome,School of Illusion,1,true,3,4,6,1,1
+dnd_2014,Gnome,School of Illusion,2,true,3,5,8,1,1
+dnd_2014,Gnome,School of Illusion,3,true,3,6,10,2,2
+dnd_2014,Gnome,School of Illusion,4,true,4,7,12,2,2
+dnd_2014,Gnome,School of Illusion,5,true,4,8,14,3,3
+dnd_2014,Gnome,School of Illusion,6,true,4,9,16,3,3
+dnd_2014,Gnome,School of Illusion,7,true,4,10,18,4,4
+dnd_2014,Gnome,School of Illusion,8,true,4,11,20,4,4
+dnd_2014,Gnome,School of Illusion,9,true,4,12,22,5,5
+dnd_2014,Gnome,School of Illusion,10,true,5,13,24,5,5
+dnd_2014,Gnome,School of Illusion,11,true,5,14,26,6,6
+dnd_2014,Gnome,School of Illusion,12,true,5,15,28,6,6
+dnd_2014,Gnome,School of Illusion,13,true,5,16,30,7,7
+dnd_2014,Gnome,School of Illusion,14,true,5,17,32,7,7
+dnd_2014,Gnome,School of Illusion,15,true,5,18,34,8,8
+dnd_2014,Gnome,School of Illusion,16,true,5,19,36,8,8
+dnd_2014,Gnome,School of Illusion,17,true,5,20,38,9,9
+dnd_2014,Gnome,School of Illusion,18,true,5,21,40,9,9
+dnd_2014,Gnome,School of Illusion,19,true,5,22,42,10,9
+dnd_2014,Gnome,School of Illusion,20,true,5,23,44,10,9
+dnd_2014,Gnome,School of Necromancy,1,true,3,4,6,1,1
+dnd_2014,Gnome,School of Necromancy,2,true,3,5,8,1,1
+dnd_2014,Gnome,School of Necromancy,3,true,3,6,10,2,2
+dnd_2014,Gnome,School of Necromancy,4,true,4,7,12,2,2
+dnd_2014,Gnome,School of Necromancy,5,true,4,8,14,3,3
+dnd_2014,Gnome,School of Necromancy,6,true,4,9,16,3,3
+dnd_2014,Gnome,School of Necromancy,7,true,4,10,18,4,4
+dnd_2014,Gnome,School of Necromancy,8,true,4,11,20,4,4
+dnd_2014,Gnome,School of Necromancy,9,true,4,12,22,5,5
+dnd_2014,Gnome,School of Necromancy,10,true,5,13,24,5,5
+dnd_2014,Gnome,School of Necromancy,11,true,5,14,26,6,6
+dnd_2014,Gnome,School of Necromancy,12,true,5,15,28,6,6
+dnd_2014,Gnome,School of Necromancy,13,true,5,16,30,7,7
+dnd_2014,Gnome,School of Necromancy,14,true,5,17,32,7,7
+dnd_2014,Gnome,School of Necromancy,15,true,5,18,34,8,8
+dnd_2014,Gnome,School of Necromancy,16,true,5,19,36,8,8
+dnd_2014,Gnome,School of Necromancy,17,true,5,20,38,9,9
+dnd_2014,Gnome,School of Necromancy,18,true,5,21,40,9,9
+dnd_2014,Gnome,School of Necromancy,19,true,5,22,42,10,9
+dnd_2014,Gnome,School of Necromancy,20,true,5,23,44,10,9
+dnd_2014,Gnome,School of Transmutation,1,true,3,4,6,1,1
+dnd_2014,Gnome,School of Transmutation,2,true,3,5,8,1,1
+dnd_2014,Gnome,School of Transmutation,3,true,3,6,10,2,2
+dnd_2014,Gnome,School of Transmutation,4,true,4,7,12,2,2
+dnd_2014,Gnome,School of Transmutation,5,true,4,8,14,3,3
+dnd_2014,Gnome,School of Transmutation,6,true,4,9,16,3,3
+dnd_2014,Gnome,School of Transmutation,7,true,4,10,18,4,4
+dnd_2014,Gnome,School of Transmutation,8,true,4,11,20,4,4
+dnd_2014,Gnome,School of Transmutation,9,true,4,12,22,5,5
+dnd_2014,Gnome,School of Transmutation,10,true,5,13,24,5,5
+dnd_2014,Gnome,School of Transmutation,11,true,5,14,26,6,6
+dnd_2014,Gnome,School of Transmutation,12,true,5,15,28,6,6
+dnd_2014,Gnome,School of Transmutation,13,true,5,16,30,7,7
+dnd_2014,Gnome,School of Transmutation,14,true,5,17,32,7,7
+dnd_2014,Gnome,School of Transmutation,15,true,5,18,34,8,8
+dnd_2014,Gnome,School of Transmutation,16,true,5,19,36,8,8
+dnd_2014,Gnome,School of Transmutation,17,true,5,20,38,9,9
+dnd_2014,Gnome,School of Transmutation,18,true,5,21,40,9,9
+dnd_2014,Gnome,School of Transmutation,19,true,5,22,42,10,9
+dnd_2014,Gnome,School of Transmutation,20,true,5,23,44,10,9
+dnd_2014,Gnome,Bladesinging,1,true,3,4,6,1,1
+dnd_2014,Gnome,Bladesinging,2,true,3,5,8,1,1
+dnd_2014,Gnome,Bladesinging,3,true,3,6,10,2,2
+dnd_2014,Gnome,Bladesinging,4,true,4,7,12,2,2
+dnd_2014,Gnome,Bladesinging,5,true,4,8,14,3,3
+dnd_2014,Gnome,Bladesinging,6,true,4,9,16,3,3
+dnd_2014,Gnome,Bladesinging,7,true,4,10,18,4,4
+dnd_2014,Gnome,Bladesinging,8,true,4,11,20,4,4
+dnd_2014,Gnome,Bladesinging,9,true,4,12,22,5,5
+dnd_2014,Gnome,Bladesinging,10,true,5,13,24,5,5
+dnd_2014,Gnome,Bladesinging,11,true,5,14,26,6,6
+dnd_2014,Gnome,Bladesinging,12,true,5,15,28,6,6
+dnd_2014,Gnome,Bladesinging,13,true,5,16,30,7,7
+dnd_2014,Gnome,Bladesinging,14,true,5,17,32,7,7
+dnd_2014,Gnome,Bladesinging,15,true,5,18,34,8,8
+dnd_2014,Gnome,Bladesinging,16,true,5,19,36,8,8
+dnd_2014,Gnome,Bladesinging,17,true,5,20,38,9,9
+dnd_2014,Gnome,Bladesinging,18,true,5,21,40,9,9
+dnd_2014,Gnome,Bladesinging,19,true,5,22,42,10,9
+dnd_2014,Gnome,Bladesinging,20,true,5,23,44,10,9
+dnd_2014,Gnome,War Magic,1,true,3,4,6,1,1
+dnd_2014,Gnome,War Magic,2,true,3,5,8,1,1
+dnd_2014,Gnome,War Magic,3,true,3,6,10,2,2
+dnd_2014,Gnome,War Magic,4,true,4,7,12,2,2
+dnd_2014,Gnome,War Magic,5,true,4,8,14,3,3
+dnd_2014,Gnome,War Magic,6,true,4,9,16,3,3
+dnd_2014,Gnome,War Magic,7,true,4,10,18,4,4
+dnd_2014,Gnome,War Magic,8,true,4,11,20,4,4
+dnd_2014,Gnome,War Magic,9,true,4,12,22,5,5
+dnd_2014,Gnome,War Magic,10,true,5,13,24,5,5
+dnd_2014,Gnome,War Magic,11,true,5,14,26,6,6
+dnd_2014,Gnome,War Magic,12,true,5,15,28,6,6
+dnd_2014,Gnome,War Magic,13,true,5,16,30,7,7
+dnd_2014,Gnome,War Magic,14,true,5,17,32,7,7
+dnd_2014,Gnome,War Magic,15,true,5,18,34,8,8
+dnd_2014,Gnome,War Magic,16,true,5,19,36,8,8
+dnd_2014,Gnome,War Magic,17,true,5,20,38,9,9
+dnd_2014,Gnome,War Magic,18,true,5,21,40,9,9
+dnd_2014,Gnome,War Magic,19,true,5,22,42,10,9
+dnd_2014,Gnome,War Magic,20,true,5,23,44,10,9
+dnd_2014,Gnome,Order of Scribes,1,true,3,4,6,1,1
+dnd_2014,Gnome,Order of Scribes,2,true,3,5,8,1,1
+dnd_2014,Gnome,Order of Scribes,3,true,3,6,10,2,2
+dnd_2014,Gnome,Order of Scribes,4,true,4,7,12,2,2
+dnd_2014,Gnome,Order of Scribes,5,true,4,8,14,3,3
+dnd_2014,Gnome,Order of Scribes,6,true,4,9,16,3,3
+dnd_2014,Gnome,Order of Scribes,7,true,4,10,18,4,4
+dnd_2014,Gnome,Order of Scribes,8,true,4,11,20,4,4
+dnd_2014,Gnome,Order of Scribes,9,true,4,12,22,5,5
+dnd_2014,Gnome,Order of Scribes,10,true,5,13,24,5,5
+dnd_2014,Gnome,Order of Scribes,11,true,5,14,26,6,6
+dnd_2014,Gnome,Order of Scribes,12,true,5,15,28,6,6
+dnd_2014,Gnome,Order of Scribes,13,true,5,16,30,7,7
+dnd_2014,Gnome,Order of Scribes,14,true,5,17,32,7,7
+dnd_2014,Gnome,Order of Scribes,15,true,5,18,34,8,8
+dnd_2014,Gnome,Order of Scribes,16,true,5,19,36,8,8
+dnd_2014,Gnome,Order of Scribes,17,true,5,20,38,9,9
+dnd_2014,Gnome,Order of Scribes,18,true,5,21,40,9,9
+dnd_2014,Gnome,Order of Scribes,19,true,5,22,42,10,9
+dnd_2014,Gnome,Order of Scribes,20,true,5,23,44,10,9
+dnd_2014,Gnome,Chronurgy Magic,1,true,3,4,6,1,1
+dnd_2014,Gnome,Chronurgy Magic,2,true,3,5,8,1,1
+dnd_2014,Gnome,Chronurgy Magic,3,true,3,6,10,2,2
+dnd_2014,Gnome,Chronurgy Magic,4,true,4,7,12,2,2
+dnd_2014,Gnome,Chronurgy Magic,5,true,4,8,14,3,3
+dnd_2014,Gnome,Chronurgy Magic,6,true,4,9,16,3,3
+dnd_2014,Gnome,Chronurgy Magic,7,true,4,10,18,4,4
+dnd_2014,Gnome,Chronurgy Magic,8,true,4,11,20,4,4
+dnd_2014,Gnome,Chronurgy Magic,9,true,4,12,22,5,5
+dnd_2014,Gnome,Chronurgy Magic,10,true,5,13,24,5,5
+dnd_2014,Gnome,Chronurgy Magic,11,true,5,14,26,6,6
+dnd_2014,Gnome,Chronurgy Magic,12,true,5,15,28,6,6
+dnd_2014,Gnome,Chronurgy Magic,13,true,5,16,30,7,7
+dnd_2014,Gnome,Chronurgy Magic,14,true,5,17,32,7,7
+dnd_2014,Gnome,Chronurgy Magic,15,true,5,18,34,8,8
+dnd_2014,Gnome,Chronurgy Magic,16,true,5,19,36,8,8
+dnd_2014,Gnome,Chronurgy Magic,17,true,5,20,38,9,9
+dnd_2014,Gnome,Chronurgy Magic,18,true,5,21,40,9,9
+dnd_2014,Gnome,Chronurgy Magic,19,true,5,22,42,10,9
+dnd_2014,Gnome,Chronurgy Magic,20,true,5,23,44,10,9
+dnd_2014,Gnome,Graviturgy Magic,1,true,3,4,6,1,1
+dnd_2014,Gnome,Graviturgy Magic,2,true,3,5,8,1,1
+dnd_2014,Gnome,Graviturgy Magic,3,true,3,6,10,2,2
+dnd_2014,Gnome,Graviturgy Magic,4,true,4,7,12,2,2
+dnd_2014,Gnome,Graviturgy Magic,5,true,4,8,14,3,3
+dnd_2014,Gnome,Graviturgy Magic,6,true,4,9,16,3,3
+dnd_2014,Gnome,Graviturgy Magic,7,true,4,10,18,4,4
+dnd_2014,Gnome,Graviturgy Magic,8,true,4,11,20,4,4
+dnd_2014,Gnome,Graviturgy Magic,9,true,4,12,22,5,5
+dnd_2014,Gnome,Graviturgy Magic,10,true,5,13,24,5,5
+dnd_2014,Gnome,Graviturgy Magic,11,true,5,14,26,6,6
+dnd_2014,Gnome,Graviturgy Magic,12,true,5,15,28,6,6
+dnd_2014,Gnome,Graviturgy Magic,13,true,5,16,30,7,7
+dnd_2014,Gnome,Graviturgy Magic,14,true,5,17,32,7,7
+dnd_2014,Gnome,Graviturgy Magic,15,true,5,18,34,8,8
+dnd_2014,Gnome,Graviturgy Magic,16,true,5,19,36,8,8
+dnd_2014,Gnome,Graviturgy Magic,17,true,5,20,38,9,9
+dnd_2014,Gnome,Graviturgy Magic,18,true,5,21,40,9,9
+dnd_2014,Gnome,Graviturgy Magic,19,true,5,22,42,10,9
+dnd_2014,Gnome,Graviturgy Magic,20,true,5,23,44,10,9
+dnd_2014,Half-Elf,School of Evocation,1,true,3,4,6,1,1
+dnd_2014,Half-Elf,School of Evocation,2,true,3,5,8,1,1
+dnd_2014,Half-Elf,School of Evocation,3,true,3,6,10,2,2
+dnd_2014,Half-Elf,School of Evocation,4,true,4,7,12,2,2
+dnd_2014,Half-Elf,School of Evocation,5,true,4,8,14,3,3
+dnd_2014,Half-Elf,School of Evocation,6,true,4,9,16,3,3
+dnd_2014,Half-Elf,School of Evocation,7,true,4,10,18,4,4
+dnd_2014,Half-Elf,School of Evocation,8,true,4,11,20,4,4
+dnd_2014,Half-Elf,School of Evocation,9,true,4,12,22,5,5
+dnd_2014,Half-Elf,School of Evocation,10,true,5,13,24,5,5
+dnd_2014,Half-Elf,School of Evocation,11,true,5,14,26,6,6
+dnd_2014,Half-Elf,School of Evocation,12,true,5,15,28,6,6
+dnd_2014,Half-Elf,School of Evocation,13,true,5,16,30,7,7
+dnd_2014,Half-Elf,School of Evocation,14,true,5,17,32,7,7
+dnd_2014,Half-Elf,School of Evocation,15,true,5,18,34,8,8
+dnd_2014,Half-Elf,School of Evocation,16,true,5,19,36,8,8
+dnd_2014,Half-Elf,School of Evocation,17,true,5,20,38,9,9
+dnd_2014,Half-Elf,School of Evocation,18,true,5,21,40,9,9
+dnd_2014,Half-Elf,School of Evocation,19,true,5,22,42,10,9
+dnd_2014,Half-Elf,School of Evocation,20,true,5,23,44,10,9
+dnd_2014,Half-Elf,School of Abjuration,1,true,3,4,6,1,1
+dnd_2014,Half-Elf,School of Abjuration,2,true,3,5,8,1,1
+dnd_2014,Half-Elf,School of Abjuration,3,true,3,6,10,2,2
+dnd_2014,Half-Elf,School of Abjuration,4,true,4,7,12,2,2
+dnd_2014,Half-Elf,School of Abjuration,5,true,4,8,14,3,3
+dnd_2014,Half-Elf,School of Abjuration,6,true,4,9,16,3,3
+dnd_2014,Half-Elf,School of Abjuration,7,true,4,10,18,4,4
+dnd_2014,Half-Elf,School of Abjuration,8,true,4,11,20,4,4
+dnd_2014,Half-Elf,School of Abjuration,9,true,4,12,22,5,5
+dnd_2014,Half-Elf,School of Abjuration,10,true,5,13,24,5,5
+dnd_2014,Half-Elf,School of Abjuration,11,true,5,14,26,6,6
+dnd_2014,Half-Elf,School of Abjuration,12,true,5,15,28,6,6
+dnd_2014,Half-Elf,School of Abjuration,13,true,5,16,30,7,7
+dnd_2014,Half-Elf,School of Abjuration,14,true,5,17,32,7,7
+dnd_2014,Half-Elf,School of Abjuration,15,true,5,18,34,8,8
+dnd_2014,Half-Elf,School of Abjuration,16,true,5,19,36,8,8
+dnd_2014,Half-Elf,School of Abjuration,17,true,5,20,38,9,9
+dnd_2014,Half-Elf,School of Abjuration,18,true,5,21,40,9,9
+dnd_2014,Half-Elf,School of Abjuration,19,true,5,22,42,10,9
+dnd_2014,Half-Elf,School of Abjuration,20,true,5,23,44,10,9
+dnd_2014,Half-Elf,School of Conjuration,1,true,3,4,6,1,1
+dnd_2014,Half-Elf,School of Conjuration,2,true,3,5,8,1,1
+dnd_2014,Half-Elf,School of Conjuration,3,true,3,6,10,2,2
+dnd_2014,Half-Elf,School of Conjuration,4,true,4,7,12,2,2
+dnd_2014,Half-Elf,School of Conjuration,5,true,4,8,14,3,3
+dnd_2014,Half-Elf,School of Conjuration,6,true,4,9,16,3,3
+dnd_2014,Half-Elf,School of Conjuration,7,true,4,10,18,4,4
+dnd_2014,Half-Elf,School of Conjuration,8,true,4,11,20,4,4
+dnd_2014,Half-Elf,School of Conjuration,9,true,4,12,22,5,5
+dnd_2014,Half-Elf,School of Conjuration,10,true,5,13,24,5,5
+dnd_2014,Half-Elf,School of Conjuration,11,true,5,14,26,6,6
+dnd_2014,Half-Elf,School of Conjuration,12,true,5,15,28,6,6
+dnd_2014,Half-Elf,School of Conjuration,13,true,5,16,30,7,7
+dnd_2014,Half-Elf,School of Conjuration,14,true,5,17,32,7,7
+dnd_2014,Half-Elf,School of Conjuration,15,true,5,18,34,8,8
+dnd_2014,Half-Elf,School of Conjuration,16,true,5,19,36,8,8
+dnd_2014,Half-Elf,School of Conjuration,17,true,5,20,38,9,9
+dnd_2014,Half-Elf,School of Conjuration,18,true,5,21,40,9,9
+dnd_2014,Half-Elf,School of Conjuration,19,true,5,22,42,10,9
+dnd_2014,Half-Elf,School of Conjuration,20,true,5,23,44,10,9
+dnd_2014,Half-Elf,School of Divination,1,true,3,4,6,1,1
+dnd_2014,Half-Elf,School of Divination,2,true,3,5,8,1,1
+dnd_2014,Half-Elf,School of Divination,3,true,3,6,10,2,2
+dnd_2014,Half-Elf,School of Divination,4,true,4,7,12,2,2
+dnd_2014,Half-Elf,School of Divination,5,true,4,8,14,3,3
+dnd_2014,Half-Elf,School of Divination,6,true,4,9,16,3,3
+dnd_2014,Half-Elf,School of Divination,7,true,4,10,18,4,4
+dnd_2014,Half-Elf,School of Divination,8,true,4,11,20,4,4
+dnd_2014,Half-Elf,School of Divination,9,true,4,12,22,5,5
+dnd_2014,Half-Elf,School of Divination,10,true,5,13,24,5,5
+dnd_2014,Half-Elf,School of Divination,11,true,5,14,26,6,6
+dnd_2014,Half-Elf,School of Divination,12,true,5,15,28,6,6
+dnd_2014,Half-Elf,School of Divination,13,true,5,16,30,7,7
+dnd_2014,Half-Elf,School of Divination,14,true,5,17,32,7,7
+dnd_2014,Half-Elf,School of Divination,15,true,5,18,34,8,8
+dnd_2014,Half-Elf,School of Divination,16,true,5,19,36,8,8
+dnd_2014,Half-Elf,School of Divination,17,true,5,20,38,9,9
+dnd_2014,Half-Elf,School of Divination,18,true,5,21,40,9,9
+dnd_2014,Half-Elf,School of Divination,19,true,5,22,42,10,9
+dnd_2014,Half-Elf,School of Divination,20,true,5,23,44,10,9
+dnd_2014,Half-Elf,School of Enchantment,1,true,3,4,6,1,1
+dnd_2014,Half-Elf,School of Enchantment,2,true,3,5,8,1,1
+dnd_2014,Half-Elf,School of Enchantment,3,true,3,6,10,2,2
+dnd_2014,Half-Elf,School of Enchantment,4,true,4,7,12,2,2
+dnd_2014,Half-Elf,School of Enchantment,5,true,4,8,14,3,3
+dnd_2014,Half-Elf,School of Enchantment,6,true,4,9,16,3,3
+dnd_2014,Half-Elf,School of Enchantment,7,true,4,10,18,4,4
+dnd_2014,Half-Elf,School of Enchantment,8,true,4,11,20,4,4
+dnd_2014,Half-Elf,School of Enchantment,9,true,4,12,22,5,5
+dnd_2014,Half-Elf,School of Enchantment,10,true,5,13,24,5,5
+dnd_2014,Half-Elf,School of Enchantment,11,true,5,14,26,6,6
+dnd_2014,Half-Elf,School of Enchantment,12,true,5,15,28,6,6
+dnd_2014,Half-Elf,School of Enchantment,13,true,5,16,30,7,7
+dnd_2014,Half-Elf,School of Enchantment,14,true,5,17,32,7,7
+dnd_2014,Half-Elf,School of Enchantment,15,true,5,18,34,8,8
+dnd_2014,Half-Elf,School of Enchantment,16,true,5,19,36,8,8
+dnd_2014,Half-Elf,School of Enchantment,17,true,5,20,38,9,9
+dnd_2014,Half-Elf,School of Enchantment,18,true,5,21,40,9,9
+dnd_2014,Half-Elf,School of Enchantment,19,true,5,22,42,10,9
+dnd_2014,Half-Elf,School of Enchantment,20,true,5,23,44,10,9
+dnd_2014,Half-Elf,School of Illusion,1,true,3,4,6,1,1
+dnd_2014,Half-Elf,School of Illusion,2,true,3,5,8,1,1
+dnd_2014,Half-Elf,School of Illusion,3,true,3,6,10,2,2
+dnd_2014,Half-Elf,School of Illusion,4,true,4,7,12,2,2
+dnd_2014,Half-Elf,School of Illusion,5,true,4,8,14,3,3
+dnd_2014,Half-Elf,School of Illusion,6,true,4,9,16,3,3
+dnd_2014,Half-Elf,School of Illusion,7,true,4,10,18,4,4
+dnd_2014,Half-Elf,School of Illusion,8,true,4,11,20,4,4
+dnd_2014,Half-Elf,School of Illusion,9,true,4,12,22,5,5
+dnd_2014,Half-Elf,School of Illusion,10,true,5,13,24,5,5
+dnd_2014,Half-Elf,School of Illusion,11,true,5,14,26,6,6
+dnd_2014,Half-Elf,School of Illusion,12,true,5,15,28,6,6
+dnd_2014,Half-Elf,School of Illusion,13,true,5,16,30,7,7
+dnd_2014,Half-Elf,School of Illusion,14,true,5,17,32,7,7
+dnd_2014,Half-Elf,School of Illusion,15,true,5,18,34,8,8
+dnd_2014,Half-Elf,School of Illusion,16,true,5,19,36,8,8
+dnd_2014,Half-Elf,School of Illusion,17,true,5,20,38,9,9
+dnd_2014,Half-Elf,School of Illusion,18,true,5,21,40,9,9
+dnd_2014,Half-Elf,School of Illusion,19,true,5,22,42,10,9
+dnd_2014,Half-Elf,School of Illusion,20,true,5,23,44,10,9
+dnd_2014,Half-Elf,School of Necromancy,1,true,3,4,6,1,1
+dnd_2014,Half-Elf,School of Necromancy,2,true,3,5,8,1,1
+dnd_2014,Half-Elf,School of Necromancy,3,true,3,6,10,2,2
+dnd_2014,Half-Elf,School of Necromancy,4,true,4,7,12,2,2
+dnd_2014,Half-Elf,School of Necromancy,5,true,4,8,14,3,3
+dnd_2014,Half-Elf,School of Necromancy,6,true,4,9,16,3,3
+dnd_2014,Half-Elf,School of Necromancy,7,true,4,10,18,4,4
+dnd_2014,Half-Elf,School of Necromancy,8,true,4,11,20,4,4
+dnd_2014,Half-Elf,School of Necromancy,9,true,4,12,22,5,5
+dnd_2014,Half-Elf,School of Necromancy,10,true,5,13,24,5,5
+dnd_2014,Half-Elf,School of Necromancy,11,true,5,14,26,6,6
+dnd_2014,Half-Elf,School of Necromancy,12,true,5,15,28,6,6
+dnd_2014,Half-Elf,School of Necromancy,13,true,5,16,30,7,7
+dnd_2014,Half-Elf,School of Necromancy,14,true,5,17,32,7,7
+dnd_2014,Half-Elf,School of Necromancy,15,true,5,18,34,8,8
+dnd_2014,Half-Elf,School of Necromancy,16,true,5,19,36,8,8
+dnd_2014,Half-Elf,School of Necromancy,17,true,5,20,38,9,9
+dnd_2014,Half-Elf,School of Necromancy,18,true,5,21,40,9,9
+dnd_2014,Half-Elf,School of Necromancy,19,true,5,22,42,10,9
+dnd_2014,Half-Elf,School of Necromancy,20,true,5,23,44,10,9
+dnd_2014,Half-Elf,School of Transmutation,1,true,3,4,6,1,1
+dnd_2014,Half-Elf,School of Transmutation,2,true,3,5,8,1,1
+dnd_2014,Half-Elf,School of Transmutation,3,true,3,6,10,2,2
+dnd_2014,Half-Elf,School of Transmutation,4,true,4,7,12,2,2
+dnd_2014,Half-Elf,School of Transmutation,5,true,4,8,14,3,3
+dnd_2014,Half-Elf,School of Transmutation,6,true,4,9,16,3,3
+dnd_2014,Half-Elf,School of Transmutation,7,true,4,10,18,4,4
+dnd_2014,Half-Elf,School of Transmutation,8,true,4,11,20,4,4
+dnd_2014,Half-Elf,School of Transmutation,9,true,4,12,22,5,5
+dnd_2014,Half-Elf,School of Transmutation,10,true,5,13,24,5,5
+dnd_2014,Half-Elf,School of Transmutation,11,true,5,14,26,6,6
+dnd_2014,Half-Elf,School of Transmutation,12,true,5,15,28,6,6
+dnd_2014,Half-Elf,School of Transmutation,13,true,5,16,30,7,7
+dnd_2014,Half-Elf,School of Transmutation,14,true,5,17,32,7,7
+dnd_2014,Half-Elf,School of Transmutation,15,true,5,18,34,8,8
+dnd_2014,Half-Elf,School of Transmutation,16,true,5,19,36,8,8
+dnd_2014,Half-Elf,School of Transmutation,17,true,5,20,38,9,9
+dnd_2014,Half-Elf,School of Transmutation,18,true,5,21,40,9,9
+dnd_2014,Half-Elf,School of Transmutation,19,true,5,22,42,10,9
+dnd_2014,Half-Elf,School of Transmutation,20,true,5,23,44,10,9
+dnd_2014,Half-Elf,Bladesinging,1,true,3,4,6,1,1
+dnd_2014,Half-Elf,Bladesinging,2,true,3,5,8,1,1
+dnd_2014,Half-Elf,Bladesinging,3,true,3,6,10,2,2
+dnd_2014,Half-Elf,Bladesinging,4,true,4,7,12,2,2
+dnd_2014,Half-Elf,Bladesinging,5,true,4,8,14,3,3
+dnd_2014,Half-Elf,Bladesinging,6,true,4,9,16,3,3
+dnd_2014,Half-Elf,Bladesinging,7,true,4,10,18,4,4
+dnd_2014,Half-Elf,Bladesinging,8,true,4,11,20,4,4
+dnd_2014,Half-Elf,Bladesinging,9,true,4,12,22,5,5
+dnd_2014,Half-Elf,Bladesinging,10,true,5,13,24,5,5
+dnd_2014,Half-Elf,Bladesinging,11,true,5,14,26,6,6
+dnd_2014,Half-Elf,Bladesinging,12,true,5,15,28,6,6
+dnd_2014,Half-Elf,Bladesinging,13,true,5,16,30,7,7
+dnd_2014,Half-Elf,Bladesinging,14,true,5,17,32,7,7
+dnd_2014,Half-Elf,Bladesinging,15,true,5,18,34,8,8
+dnd_2014,Half-Elf,Bladesinging,16,true,5,19,36,8,8
+dnd_2014,Half-Elf,Bladesinging,17,true,5,20,38,9,9
+dnd_2014,Half-Elf,Bladesinging,18,true,5,21,40,9,9
+dnd_2014,Half-Elf,Bladesinging,19,true,5,22,42,10,9
+dnd_2014,Half-Elf,Bladesinging,20,true,5,23,44,10,9
+dnd_2014,Half-Elf,War Magic,1,true,3,4,6,1,1
+dnd_2014,Half-Elf,War Magic,2,true,3,5,8,1,1
+dnd_2014,Half-Elf,War Magic,3,true,3,6,10,2,2
+dnd_2014,Half-Elf,War Magic,4,true,4,7,12,2,2
+dnd_2014,Half-Elf,War Magic,5,true,4,8,14,3,3
+dnd_2014,Half-Elf,War Magic,6,true,4,9,16,3,3
+dnd_2014,Half-Elf,War Magic,7,true,4,10,18,4,4
+dnd_2014,Half-Elf,War Magic,8,true,4,11,20,4,4
+dnd_2014,Half-Elf,War Magic,9,true,4,12,22,5,5
+dnd_2014,Half-Elf,War Magic,10,true,5,13,24,5,5
+dnd_2014,Half-Elf,War Magic,11,true,5,14,26,6,6
+dnd_2014,Half-Elf,War Magic,12,true,5,15,28,6,6
+dnd_2014,Half-Elf,War Magic,13,true,5,16,30,7,7
+dnd_2014,Half-Elf,War Magic,14,true,5,17,32,7,7
+dnd_2014,Half-Elf,War Magic,15,true,5,18,34,8,8
+dnd_2014,Half-Elf,War Magic,16,true,5,19,36,8,8
+dnd_2014,Half-Elf,War Magic,17,true,5,20,38,9,9
+dnd_2014,Half-Elf,War Magic,18,true,5,21,40,9,9
+dnd_2014,Half-Elf,War Magic,19,true,5,22,42,10,9
+dnd_2014,Half-Elf,War Magic,20,true,5,23,44,10,9
+dnd_2014,Half-Elf,Order of Scribes,1,true,3,4,6,1,1
+dnd_2014,Half-Elf,Order of Scribes,2,true,3,5,8,1,1
+dnd_2014,Half-Elf,Order of Scribes,3,true,3,6,10,2,2
+dnd_2014,Half-Elf,Order of Scribes,4,true,4,7,12,2,2
+dnd_2014,Half-Elf,Order of Scribes,5,true,4,8,14,3,3
+dnd_2014,Half-Elf,Order of Scribes,6,true,4,9,16,3,3
+dnd_2014,Half-Elf,Order of Scribes,7,true,4,10,18,4,4
+dnd_2014,Half-Elf,Order of Scribes,8,true,4,11,20,4,4
+dnd_2014,Half-Elf,Order of Scribes,9,true,4,12,22,5,5
+dnd_2014,Half-Elf,Order of Scribes,10,true,5,13,24,5,5
+dnd_2014,Half-Elf,Order of Scribes,11,true,5,14,26,6,6
+dnd_2014,Half-Elf,Order of Scribes,12,true,5,15,28,6,6
+dnd_2014,Half-Elf,Order of Scribes,13,true,5,16,30,7,7
+dnd_2014,Half-Elf,Order of Scribes,14,true,5,17,32,7,7
+dnd_2014,Half-Elf,Order of Scribes,15,true,5,18,34,8,8
+dnd_2014,Half-Elf,Order of Scribes,16,true,5,19,36,8,8
+dnd_2014,Half-Elf,Order of Scribes,17,true,5,20,38,9,9
+dnd_2014,Half-Elf,Order of Scribes,18,true,5,21,40,9,9
+dnd_2014,Half-Elf,Order of Scribes,19,true,5,22,42,10,9
+dnd_2014,Half-Elf,Order of Scribes,20,true,5,23,44,10,9
+dnd_2014,Half-Elf,Chronurgy Magic,1,true,3,4,6,1,1
+dnd_2014,Half-Elf,Chronurgy Magic,2,true,3,5,8,1,1
+dnd_2014,Half-Elf,Chronurgy Magic,3,true,3,6,10,2,2
+dnd_2014,Half-Elf,Chronurgy Magic,4,true,4,7,12,2,2
+dnd_2014,Half-Elf,Chronurgy Magic,5,true,4,8,14,3,3
+dnd_2014,Half-Elf,Chronurgy Magic,6,true,4,9,16,3,3
+dnd_2014,Half-Elf,Chronurgy Magic,7,true,4,10,18,4,4
+dnd_2014,Half-Elf,Chronurgy Magic,8,true,4,11,20,4,4
+dnd_2014,Half-Elf,Chronurgy Magic,9,true,4,12,22,5,5
+dnd_2014,Half-Elf,Chronurgy Magic,10,true,5,13,24,5,5
+dnd_2014,Half-Elf,Chronurgy Magic,11,true,5,14,26,6,6
+dnd_2014,Half-Elf,Chronurgy Magic,12,true,5,15,28,6,6
+dnd_2014,Half-Elf,Chronurgy Magic,13,true,5,16,30,7,7
+dnd_2014,Half-Elf,Chronurgy Magic,14,true,5,17,32,7,7
+dnd_2014,Half-Elf,Chronurgy Magic,15,true,5,18,34,8,8
+dnd_2014,Half-Elf,Chronurgy Magic,16,true,5,19,36,8,8
+dnd_2014,Half-Elf,Chronurgy Magic,17,true,5,20,38,9,9
+dnd_2014,Half-Elf,Chronurgy Magic,18,true,5,21,40,9,9
+dnd_2014,Half-Elf,Chronurgy Magic,19,true,5,22,42,10,9
+dnd_2014,Half-Elf,Chronurgy Magic,20,true,5,23,44,10,9
+dnd_2014,Half-Elf,Graviturgy Magic,1,true,3,4,6,1,1
+dnd_2014,Half-Elf,Graviturgy Magic,2,true,3,5,8,1,1
+dnd_2014,Half-Elf,Graviturgy Magic,3,true,3,6,10,2,2
+dnd_2014,Half-Elf,Graviturgy Magic,4,true,4,7,12,2,2
+dnd_2014,Half-Elf,Graviturgy Magic,5,true,4,8,14,3,3
+dnd_2014,Half-Elf,Graviturgy Magic,6,true,4,9,16,3,3
+dnd_2014,Half-Elf,Graviturgy Magic,7,true,4,10,18,4,4
+dnd_2014,Half-Elf,Graviturgy Magic,8,true,4,11,20,4,4
+dnd_2014,Half-Elf,Graviturgy Magic,9,true,4,12,22,5,5
+dnd_2014,Half-Elf,Graviturgy Magic,10,true,5,13,24,5,5
+dnd_2014,Half-Elf,Graviturgy Magic,11,true,5,14,26,6,6
+dnd_2014,Half-Elf,Graviturgy Magic,12,true,5,15,28,6,6
+dnd_2014,Half-Elf,Graviturgy Magic,13,true,5,16,30,7,7
+dnd_2014,Half-Elf,Graviturgy Magic,14,true,5,17,32,7,7
+dnd_2014,Half-Elf,Graviturgy Magic,15,true,5,18,34,8,8
+dnd_2014,Half-Elf,Graviturgy Magic,16,true,5,19,36,8,8
+dnd_2014,Half-Elf,Graviturgy Magic,17,true,5,20,38,9,9
+dnd_2014,Half-Elf,Graviturgy Magic,18,true,5,21,40,9,9
+dnd_2014,Half-Elf,Graviturgy Magic,19,true,5,22,42,10,9
+dnd_2014,Half-Elf,Graviturgy Magic,20,true,5,23,44,10,9
+dnd_2014,Half-Orc,School of Evocation,1,true,3,4,6,1,1
+dnd_2014,Half-Orc,School of Evocation,2,true,3,5,8,1,1
+dnd_2014,Half-Orc,School of Evocation,3,true,3,6,10,2,2
+dnd_2014,Half-Orc,School of Evocation,4,true,4,7,12,2,2
+dnd_2014,Half-Orc,School of Evocation,5,true,4,8,14,3,3
+dnd_2014,Half-Orc,School of Evocation,6,true,4,9,16,3,3
+dnd_2014,Half-Orc,School of Evocation,7,true,4,10,18,4,4
+dnd_2014,Half-Orc,School of Evocation,8,true,4,11,20,4,4
+dnd_2014,Half-Orc,School of Evocation,9,true,4,12,22,5,5
+dnd_2014,Half-Orc,School of Evocation,10,true,5,13,24,5,5
+dnd_2014,Half-Orc,School of Evocation,11,true,5,14,26,6,6
+dnd_2014,Half-Orc,School of Evocation,12,true,5,15,28,6,6
+dnd_2014,Half-Orc,School of Evocation,13,true,5,16,30,7,7
+dnd_2014,Half-Orc,School of Evocation,14,true,5,17,32,7,7
+dnd_2014,Half-Orc,School of Evocation,15,true,5,18,34,8,8
+dnd_2014,Half-Orc,School of Evocation,16,true,5,19,36,8,8
+dnd_2014,Half-Orc,School of Evocation,17,true,5,20,38,9,9
+dnd_2014,Half-Orc,School of Evocation,18,true,5,21,40,9,9
+dnd_2014,Half-Orc,School of Evocation,19,true,5,22,42,10,9
+dnd_2014,Half-Orc,School of Evocation,20,true,5,23,44,10,9
+dnd_2014,Half-Orc,School of Abjuration,1,true,3,4,6,1,1
+dnd_2014,Half-Orc,School of Abjuration,2,true,3,5,8,1,1
+dnd_2014,Half-Orc,School of Abjuration,3,true,3,6,10,2,2
+dnd_2014,Half-Orc,School of Abjuration,4,true,4,7,12,2,2
+dnd_2014,Half-Orc,School of Abjuration,5,true,4,8,14,3,3
+dnd_2014,Half-Orc,School of Abjuration,6,true,4,9,16,3,3
+dnd_2014,Half-Orc,School of Abjuration,7,true,4,10,18,4,4
+dnd_2014,Half-Orc,School of Abjuration,8,true,4,11,20,4,4
+dnd_2014,Half-Orc,School of Abjuration,9,true,4,12,22,5,5
+dnd_2014,Half-Orc,School of Abjuration,10,true,5,13,24,5,5
+dnd_2014,Half-Orc,School of Abjuration,11,true,5,14,26,6,6
+dnd_2014,Half-Orc,School of Abjuration,12,true,5,15,28,6,6
+dnd_2014,Half-Orc,School of Abjuration,13,true,5,16,30,7,7
+dnd_2014,Half-Orc,School of Abjuration,14,true,5,17,32,7,7
+dnd_2014,Half-Orc,School of Abjuration,15,true,5,18,34,8,8
+dnd_2014,Half-Orc,School of Abjuration,16,true,5,19,36,8,8
+dnd_2014,Half-Orc,School of Abjuration,17,true,5,20,38,9,9
+dnd_2014,Half-Orc,School of Abjuration,18,true,5,21,40,9,9
+dnd_2014,Half-Orc,School of Abjuration,19,true,5,22,42,10,9
+dnd_2014,Half-Orc,School of Abjuration,20,true,5,23,44,10,9
+dnd_2014,Half-Orc,School of Conjuration,1,true,3,4,6,1,1
+dnd_2014,Half-Orc,School of Conjuration,2,true,3,5,8,1,1
+dnd_2014,Half-Orc,School of Conjuration,3,true,3,6,10,2,2
+dnd_2014,Half-Orc,School of Conjuration,4,true,4,7,12,2,2
+dnd_2014,Half-Orc,School of Conjuration,5,true,4,8,14,3,3
+dnd_2014,Half-Orc,School of Conjuration,6,true,4,9,16,3,3
+dnd_2014,Half-Orc,School of Conjuration,7,true,4,10,18,4,4
+dnd_2014,Half-Orc,School of Conjuration,8,true,4,11,20,4,4
+dnd_2014,Half-Orc,School of Conjuration,9,true,4,12,22,5,5
+dnd_2014,Half-Orc,School of Conjuration,10,true,5,13,24,5,5
+dnd_2014,Half-Orc,School of Conjuration,11,true,5,14,26,6,6
+dnd_2014,Half-Orc,School of Conjuration,12,true,5,15,28,6,6
+dnd_2014,Half-Orc,School of Conjuration,13,true,5,16,30,7,7
+dnd_2014,Half-Orc,School of Conjuration,14,true,5,17,32,7,7
+dnd_2014,Half-Orc,School of Conjuration,15,true,5,18,34,8,8
+dnd_2014,Half-Orc,School of Conjuration,16,true,5,19,36,8,8
+dnd_2014,Half-Orc,School of Conjuration,17,true,5,20,38,9,9
+dnd_2014,Half-Orc,School of Conjuration,18,true,5,21,40,9,9
+dnd_2014,Half-Orc,School of Conjuration,19,true,5,22,42,10,9
+dnd_2014,Half-Orc,School of Conjuration,20,true,5,23,44,10,9
+dnd_2014,Half-Orc,School of Divination,1,true,3,4,6,1,1
+dnd_2014,Half-Orc,School of Divination,2,true,3,5,8,1,1
+dnd_2014,Half-Orc,School of Divination,3,true,3,6,10,2,2
+dnd_2014,Half-Orc,School of Divination,4,true,4,7,12,2,2
+dnd_2014,Half-Orc,School of Divination,5,true,4,8,14,3,3
+dnd_2014,Half-Orc,School of Divination,6,true,4,9,16,3,3
+dnd_2014,Half-Orc,School of Divination,7,true,4,10,18,4,4
+dnd_2014,Half-Orc,School of Divination,8,true,4,11,20,4,4
+dnd_2014,Half-Orc,School of Divination,9,true,4,12,22,5,5
+dnd_2014,Half-Orc,School of Divination,10,true,5,13,24,5,5
+dnd_2014,Half-Orc,School of Divination,11,true,5,14,26,6,6
+dnd_2014,Half-Orc,School of Divination,12,true,5,15,28,6,6
+dnd_2014,Half-Orc,School of Divination,13,true,5,16,30,7,7
+dnd_2014,Half-Orc,School of Divination,14,true,5,17,32,7,7
+dnd_2014,Half-Orc,School of Divination,15,true,5,18,34,8,8
+dnd_2014,Half-Orc,School of Divination,16,true,5,19,36,8,8
+dnd_2014,Half-Orc,School of Divination,17,true,5,20,38,9,9
+dnd_2014,Half-Orc,School of Divination,18,true,5,21,40,9,9
+dnd_2014,Half-Orc,School of Divination,19,true,5,22,42,10,9
+dnd_2014,Half-Orc,School of Divination,20,true,5,23,44,10,9
+dnd_2014,Half-Orc,School of Enchantment,1,true,3,4,6,1,1
+dnd_2014,Half-Orc,School of Enchantment,2,true,3,5,8,1,1
+dnd_2014,Half-Orc,School of Enchantment,3,true,3,6,10,2,2
+dnd_2014,Half-Orc,School of Enchantment,4,true,4,7,12,2,2
+dnd_2014,Half-Orc,School of Enchantment,5,true,4,8,14,3,3
+dnd_2014,Half-Orc,School of Enchantment,6,true,4,9,16,3,3
+dnd_2014,Half-Orc,School of Enchantment,7,true,4,10,18,4,4
+dnd_2014,Half-Orc,School of Enchantment,8,true,4,11,20,4,4
+dnd_2014,Half-Orc,School of Enchantment,9,true,4,12,22,5,5
+dnd_2014,Half-Orc,School of Enchantment,10,true,5,13,24,5,5
+dnd_2014,Half-Orc,School of Enchantment,11,true,5,14,26,6,6
+dnd_2014,Half-Orc,School of Enchantment,12,true,5,15,28,6,6
+dnd_2014,Half-Orc,School of Enchantment,13,true,5,16,30,7,7
+dnd_2014,Half-Orc,School of Enchantment,14,true,5,17,32,7,7
+dnd_2014,Half-Orc,School of Enchantment,15,true,5,18,34,8,8
+dnd_2014,Half-Orc,School of Enchantment,16,true,5,19,36,8,8
+dnd_2014,Half-Orc,School of Enchantment,17,true,5,20,38,9,9
+dnd_2014,Half-Orc,School of Enchantment,18,true,5,21,40,9,9
+dnd_2014,Half-Orc,School of Enchantment,19,true,5,22,42,10,9
+dnd_2014,Half-Orc,School of Enchantment,20,true,5,23,44,10,9
+dnd_2014,Half-Orc,School of Illusion,1,true,3,4,6,1,1
+dnd_2014,Half-Orc,School of Illusion,2,true,3,5,8,1,1
+dnd_2014,Half-Orc,School of Illusion,3,true,3,6,10,2,2
+dnd_2014,Half-Orc,School of Illusion,4,true,4,7,12,2,2
+dnd_2014,Half-Orc,School of Illusion,5,true,4,8,14,3,3
+dnd_2014,Half-Orc,School of Illusion,6,true,4,9,16,3,3
+dnd_2014,Half-Orc,School of Illusion,7,true,4,10,18,4,4
+dnd_2014,Half-Orc,School of Illusion,8,true,4,11,20,4,4
+dnd_2014,Half-Orc,School of Illusion,9,true,4,12,22,5,5
+dnd_2014,Half-Orc,School of Illusion,10,true,5,13,24,5,5
+dnd_2014,Half-Orc,School of Illusion,11,true,5,14,26,6,6
+dnd_2014,Half-Orc,School of Illusion,12,true,5,15,28,6,6
+dnd_2014,Half-Orc,School of Illusion,13,true,5,16,30,7,7
+dnd_2014,Half-Orc,School of Illusion,14,true,5,17,32,7,7
+dnd_2014,Half-Orc,School of Illusion,15,true,5,18,34,8,8
+dnd_2014,Half-Orc,School of Illusion,16,true,5,19,36,8,8
+dnd_2014,Half-Orc,School of Illusion,17,true,5,20,38,9,9
+dnd_2014,Half-Orc,School of Illusion,18,true,5,21,40,9,9
+dnd_2014,Half-Orc,School of Illusion,19,true,5,22,42,10,9
+dnd_2014,Half-Orc,School of Illusion,20,true,5,23,44,10,9
+dnd_2014,Half-Orc,School of Necromancy,1,true,3,4,6,1,1
+dnd_2014,Half-Orc,School of Necromancy,2,true,3,5,8,1,1
+dnd_2014,Half-Orc,School of Necromancy,3,true,3,6,10,2,2
+dnd_2014,Half-Orc,School of Necromancy,4,true,4,7,12,2,2
+dnd_2014,Half-Orc,School of Necromancy,5,true,4,8,14,3,3
+dnd_2014,Half-Orc,School of Necromancy,6,true,4,9,16,3,3
+dnd_2014,Half-Orc,School of Necromancy,7,true,4,10,18,4,4
+dnd_2014,Half-Orc,School of Necromancy,8,true,4,11,20,4,4
+dnd_2014,Half-Orc,School of Necromancy,9,true,4,12,22,5,5
+dnd_2014,Half-Orc,School of Necromancy,10,true,5,13,24,5,5
+dnd_2014,Half-Orc,School of Necromancy,11,true,5,14,26,6,6
+dnd_2014,Half-Orc,School of Necromancy,12,true,5,15,28,6,6
+dnd_2014,Half-Orc,School of Necromancy,13,true,5,16,30,7,7
+dnd_2014,Half-Orc,School of Necromancy,14,true,5,17,32,7,7
+dnd_2014,Half-Orc,School of Necromancy,15,true,5,18,34,8,8
+dnd_2014,Half-Orc,School of Necromancy,16,true,5,19,36,8,8
+dnd_2014,Half-Orc,School of Necromancy,17,true,5,20,38,9,9
+dnd_2014,Half-Orc,School of Necromancy,18,true,5,21,40,9,9
+dnd_2014,Half-Orc,School of Necromancy,19,true,5,22,42,10,9
+dnd_2014,Half-Orc,School of Necromancy,20,true,5,23,44,10,9
+dnd_2014,Half-Orc,School of Transmutation,1,true,3,4,6,1,1
+dnd_2014,Half-Orc,School of Transmutation,2,true,3,5,8,1,1
+dnd_2014,Half-Orc,School of Transmutation,3,true,3,6,10,2,2
+dnd_2014,Half-Orc,School of Transmutation,4,true,4,7,12,2,2
+dnd_2014,Half-Orc,School of Transmutation,5,true,4,8,14,3,3
+dnd_2014,Half-Orc,School of Transmutation,6,true,4,9,16,3,3
+dnd_2014,Half-Orc,School of Transmutation,7,true,4,10,18,4,4
+dnd_2014,Half-Orc,School of Transmutation,8,true,4,11,20,4,4
+dnd_2014,Half-Orc,School of Transmutation,9,true,4,12,22,5,5
+dnd_2014,Half-Orc,School of Transmutation,10,true,5,13,24,5,5
+dnd_2014,Half-Orc,School of Transmutation,11,true,5,14,26,6,6
+dnd_2014,Half-Orc,School of Transmutation,12,true,5,15,28,6,6
+dnd_2014,Half-Orc,School of Transmutation,13,true,5,16,30,7,7
+dnd_2014,Half-Orc,School of Transmutation,14,true,5,17,32,7,7
+dnd_2014,Half-Orc,School of Transmutation,15,true,5,18,34,8,8
+dnd_2014,Half-Orc,School of Transmutation,16,true,5,19,36,8,8
+dnd_2014,Half-Orc,School of Transmutation,17,true,5,20,38,9,9
+dnd_2014,Half-Orc,School of Transmutation,18,true,5,21,40,9,9
+dnd_2014,Half-Orc,School of Transmutation,19,true,5,22,42,10,9
+dnd_2014,Half-Orc,School of Transmutation,20,true,5,23,44,10,9
+dnd_2014,Half-Orc,Bladesinging,1,true,3,4,6,1,1
+dnd_2014,Half-Orc,Bladesinging,2,true,3,5,8,1,1
+dnd_2014,Half-Orc,Bladesinging,3,true,3,6,10,2,2
+dnd_2014,Half-Orc,Bladesinging,4,true,4,7,12,2,2
+dnd_2014,Half-Orc,Bladesinging,5,true,4,8,14,3,3
+dnd_2014,Half-Orc,Bladesinging,6,true,4,9,16,3,3
+dnd_2014,Half-Orc,Bladesinging,7,true,4,10,18,4,4
+dnd_2014,Half-Orc,Bladesinging,8,true,4,11,20,4,4
+dnd_2014,Half-Orc,Bladesinging,9,true,4,12,22,5,5
+dnd_2014,Half-Orc,Bladesinging,10,true,5,13,24,5,5
+dnd_2014,Half-Orc,Bladesinging,11,true,5,14,26,6,6
+dnd_2014,Half-Orc,Bladesinging,12,true,5,15,28,6,6
+dnd_2014,Half-Orc,Bladesinging,13,true,5,16,30,7,7
+dnd_2014,Half-Orc,Bladesinging,14,true,5,17,32,7,7
+dnd_2014,Half-Orc,Bladesinging,15,true,5,18,34,8,8
+dnd_2014,Half-Orc,Bladesinging,16,true,5,19,36,8,8
+dnd_2014,Half-Orc,Bladesinging,17,true,5,20,38,9,9
+dnd_2014,Half-Orc,Bladesinging,18,true,5,21,40,9,9
+dnd_2014,Half-Orc,Bladesinging,19,true,5,22,42,10,9
+dnd_2014,Half-Orc,Bladesinging,20,true,5,23,44,10,9
+dnd_2014,Half-Orc,War Magic,1,true,3,4,6,1,1
+dnd_2014,Half-Orc,War Magic,2,true,3,5,8,1,1
+dnd_2014,Half-Orc,War Magic,3,true,3,6,10,2,2
+dnd_2014,Half-Orc,War Magic,4,true,4,7,12,2,2
+dnd_2014,Half-Orc,War Magic,5,true,4,8,14,3,3
+dnd_2014,Half-Orc,War Magic,6,true,4,9,16,3,3
+dnd_2014,Half-Orc,War Magic,7,true,4,10,18,4,4
+dnd_2014,Half-Orc,War Magic,8,true,4,11,20,4,4
+dnd_2014,Half-Orc,War Magic,9,true,4,12,22,5,5
+dnd_2014,Half-Orc,War Magic,10,true,5,13,24,5,5
+dnd_2014,Half-Orc,War Magic,11,true,5,14,26,6,6
+dnd_2014,Half-Orc,War Magic,12,true,5,15,28,6,6
+dnd_2014,Half-Orc,War Magic,13,true,5,16,30,7,7
+dnd_2014,Half-Orc,War Magic,14,true,5,17,32,7,7
+dnd_2014,Half-Orc,War Magic,15,true,5,18,34,8,8
+dnd_2014,Half-Orc,War Magic,16,true,5,19,36,8,8
+dnd_2014,Half-Orc,War Magic,17,true,5,20,38,9,9
+dnd_2014,Half-Orc,War Magic,18,true,5,21,40,9,9
+dnd_2014,Half-Orc,War Magic,19,true,5,22,42,10,9
+dnd_2014,Half-Orc,War Magic,20,true,5,23,44,10,9
+dnd_2014,Half-Orc,Order of Scribes,1,true,3,4,6,1,1
+dnd_2014,Half-Orc,Order of Scribes,2,true,3,5,8,1,1
+dnd_2014,Half-Orc,Order of Scribes,3,true,3,6,10,2,2
+dnd_2014,Half-Orc,Order of Scribes,4,true,4,7,12,2,2
+dnd_2014,Half-Orc,Order of Scribes,5,true,4,8,14,3,3
+dnd_2014,Half-Orc,Order of Scribes,6,true,4,9,16,3,3
+dnd_2014,Half-Orc,Order of Scribes,7,true,4,10,18,4,4
+dnd_2014,Half-Orc,Order of Scribes,8,true,4,11,20,4,4
+dnd_2014,Half-Orc,Order of Scribes,9,true,4,12,22,5,5
+dnd_2014,Half-Orc,Order of Scribes,10,true,5,13,24,5,5
+dnd_2014,Half-Orc,Order of Scribes,11,true,5,14,26,6,6
+dnd_2014,Half-Orc,Order of Scribes,12,true,5,15,28,6,6
+dnd_2014,Half-Orc,Order of Scribes,13,true,5,16,30,7,7
+dnd_2014,Half-Orc,Order of Scribes,14,true,5,17,32,7,7
+dnd_2014,Half-Orc,Order of Scribes,15,true,5,18,34,8,8
+dnd_2014,Half-Orc,Order of Scribes,16,true,5,19,36,8,8
+dnd_2014,Half-Orc,Order of Scribes,17,true,5,20,38,9,9
+dnd_2014,Half-Orc,Order of Scribes,18,true,5,21,40,9,9
+dnd_2014,Half-Orc,Order of Scribes,19,true,5,22,42,10,9
+dnd_2014,Half-Orc,Order of Scribes,20,true,5,23,44,10,9
+dnd_2014,Half-Orc,Chronurgy Magic,1,true,3,4,6,1,1
+dnd_2014,Half-Orc,Chronurgy Magic,2,true,3,5,8,1,1
+dnd_2014,Half-Orc,Chronurgy Magic,3,true,3,6,10,2,2
+dnd_2014,Half-Orc,Chronurgy Magic,4,true,4,7,12,2,2
+dnd_2014,Half-Orc,Chronurgy Magic,5,true,4,8,14,3,3
+dnd_2014,Half-Orc,Chronurgy Magic,6,true,4,9,16,3,3
+dnd_2014,Half-Orc,Chronurgy Magic,7,true,4,10,18,4,4
+dnd_2014,Half-Orc,Chronurgy Magic,8,true,4,11,20,4,4
+dnd_2014,Half-Orc,Chronurgy Magic,9,true,4,12,22,5,5
+dnd_2014,Half-Orc,Chronurgy Magic,10,true,5,13,24,5,5
+dnd_2014,Half-Orc,Chronurgy Magic,11,true,5,14,26,6,6
+dnd_2014,Half-Orc,Chronurgy Magic,12,true,5,15,28,6,6
+dnd_2014,Half-Orc,Chronurgy Magic,13,true,5,16,30,7,7
+dnd_2014,Half-Orc,Chronurgy Magic,14,true,5,17,32,7,7
+dnd_2014,Half-Orc,Chronurgy Magic,15,true,5,18,34,8,8
+dnd_2014,Half-Orc,Chronurgy Magic,16,true,5,19,36,8,8
+dnd_2014,Half-Orc,Chronurgy Magic,17,true,5,20,38,9,9
+dnd_2014,Half-Orc,Chronurgy Magic,18,true,5,21,40,9,9
+dnd_2014,Half-Orc,Chronurgy Magic,19,true,5,22,42,10,9
+dnd_2014,Half-Orc,Chronurgy Magic,20,true,5,23,44,10,9
+dnd_2014,Half-Orc,Graviturgy Magic,1,true,3,4,6,1,1
+dnd_2014,Half-Orc,Graviturgy Magic,2,true,3,5,8,1,1
+dnd_2014,Half-Orc,Graviturgy Magic,3,true,3,6,10,2,2
+dnd_2014,Half-Orc,Graviturgy Magic,4,true,4,7,12,2,2
+dnd_2014,Half-Orc,Graviturgy Magic,5,true,4,8,14,3,3
+dnd_2014,Half-Orc,Graviturgy Magic,6,true,4,9,16,3,3
+dnd_2014,Half-Orc,Graviturgy Magic,7,true,4,10,18,4,4
+dnd_2014,Half-Orc,Graviturgy Magic,8,true,4,11,20,4,4
+dnd_2014,Half-Orc,Graviturgy Magic,9,true,4,12,22,5,5
+dnd_2014,Half-Orc,Graviturgy Magic,10,true,5,13,24,5,5
+dnd_2014,Half-Orc,Graviturgy Magic,11,true,5,14,26,6,6
+dnd_2014,Half-Orc,Graviturgy Magic,12,true,5,15,28,6,6
+dnd_2014,Half-Orc,Graviturgy Magic,13,true,5,16,30,7,7
+dnd_2014,Half-Orc,Graviturgy Magic,14,true,5,17,32,7,7
+dnd_2014,Half-Orc,Graviturgy Magic,15,true,5,18,34,8,8
+dnd_2014,Half-Orc,Graviturgy Magic,16,true,5,19,36,8,8
+dnd_2014,Half-Orc,Graviturgy Magic,17,true,5,20,38,9,9
+dnd_2014,Half-Orc,Graviturgy Magic,18,true,5,21,40,9,9
+dnd_2014,Half-Orc,Graviturgy Magic,19,true,5,22,42,10,9
+dnd_2014,Half-Orc,Graviturgy Magic,20,true,5,23,44,10,9
+dnd_2014,Tiefling,School of Evocation,1,true,3,4,6,1,1
+dnd_2014,Tiefling,School of Evocation,2,true,3,5,8,1,1
+dnd_2014,Tiefling,School of Evocation,3,true,3,6,10,2,2
+dnd_2014,Tiefling,School of Evocation,4,true,4,7,12,2,2
+dnd_2014,Tiefling,School of Evocation,5,true,4,8,14,3,3
+dnd_2014,Tiefling,School of Evocation,6,true,4,9,16,3,3
+dnd_2014,Tiefling,School of Evocation,7,true,4,10,18,4,4
+dnd_2014,Tiefling,School of Evocation,8,true,4,11,20,4,4
+dnd_2014,Tiefling,School of Evocation,9,true,4,12,22,5,5
+dnd_2014,Tiefling,School of Evocation,10,true,5,13,24,5,5
+dnd_2014,Tiefling,School of Evocation,11,true,5,14,26,6,6
+dnd_2014,Tiefling,School of Evocation,12,true,5,15,28,6,6
+dnd_2014,Tiefling,School of Evocation,13,true,5,16,30,7,7
+dnd_2014,Tiefling,School of Evocation,14,true,5,17,32,7,7
+dnd_2014,Tiefling,School of Evocation,15,true,5,18,34,8,8
+dnd_2014,Tiefling,School of Evocation,16,true,5,19,36,8,8
+dnd_2014,Tiefling,School of Evocation,17,true,5,20,38,9,9
+dnd_2014,Tiefling,School of Evocation,18,true,5,21,40,9,9
+dnd_2014,Tiefling,School of Evocation,19,true,5,22,42,10,9
+dnd_2014,Tiefling,School of Evocation,20,true,5,23,44,10,9
+dnd_2014,Tiefling,School of Abjuration,1,true,3,4,6,1,1
+dnd_2014,Tiefling,School of Abjuration,2,true,3,5,8,1,1
+dnd_2014,Tiefling,School of Abjuration,3,true,3,6,10,2,2
+dnd_2014,Tiefling,School of Abjuration,4,true,4,7,12,2,2
+dnd_2014,Tiefling,School of Abjuration,5,true,4,8,14,3,3
+dnd_2014,Tiefling,School of Abjuration,6,true,4,9,16,3,3
+dnd_2014,Tiefling,School of Abjuration,7,true,4,10,18,4,4
+dnd_2014,Tiefling,School of Abjuration,8,true,4,11,20,4,4
+dnd_2014,Tiefling,School of Abjuration,9,true,4,12,22,5,5
+dnd_2014,Tiefling,School of Abjuration,10,true,5,13,24,5,5
+dnd_2014,Tiefling,School of Abjuration,11,true,5,14,26,6,6
+dnd_2014,Tiefling,School of Abjuration,12,true,5,15,28,6,6
+dnd_2014,Tiefling,School of Abjuration,13,true,5,16,30,7,7
+dnd_2014,Tiefling,School of Abjuration,14,true,5,17,32,7,7
+dnd_2014,Tiefling,School of Abjuration,15,true,5,18,34,8,8
+dnd_2014,Tiefling,School of Abjuration,16,true,5,19,36,8,8
+dnd_2014,Tiefling,School of Abjuration,17,true,5,20,38,9,9
+dnd_2014,Tiefling,School of Abjuration,18,true,5,21,40,9,9
+dnd_2014,Tiefling,School of Abjuration,19,true,5,22,42,10,9
+dnd_2014,Tiefling,School of Abjuration,20,true,5,23,44,10,9
+dnd_2014,Tiefling,School of Conjuration,1,true,3,4,6,1,1
+dnd_2014,Tiefling,School of Conjuration,2,true,3,5,8,1,1
+dnd_2014,Tiefling,School of Conjuration,3,true,3,6,10,2,2
+dnd_2014,Tiefling,School of Conjuration,4,true,4,7,12,2,2
+dnd_2014,Tiefling,School of Conjuration,5,true,4,8,14,3,3
+dnd_2014,Tiefling,School of Conjuration,6,true,4,9,16,3,3
+dnd_2014,Tiefling,School of Conjuration,7,true,4,10,18,4,4
+dnd_2014,Tiefling,School of Conjuration,8,true,4,11,20,4,4
+dnd_2014,Tiefling,School of Conjuration,9,true,4,12,22,5,5
+dnd_2014,Tiefling,School of Conjuration,10,true,5,13,24,5,5
+dnd_2014,Tiefling,School of Conjuration,11,true,5,14,26,6,6
+dnd_2014,Tiefling,School of Conjuration,12,true,5,15,28,6,6
+dnd_2014,Tiefling,School of Conjuration,13,true,5,16,30,7,7
+dnd_2014,Tiefling,School of Conjuration,14,true,5,17,32,7,7
+dnd_2014,Tiefling,School of Conjuration,15,true,5,18,34,8,8
+dnd_2014,Tiefling,School of Conjuration,16,true,5,19,36,8,8
+dnd_2014,Tiefling,School of Conjuration,17,true,5,20,38,9,9
+dnd_2014,Tiefling,School of Conjuration,18,true,5,21,40,9,9
+dnd_2014,Tiefling,School of Conjuration,19,true,5,22,42,10,9
+dnd_2014,Tiefling,School of Conjuration,20,true,5,23,44,10,9
+dnd_2014,Tiefling,School of Divination,1,true,3,4,6,1,1
+dnd_2014,Tiefling,School of Divination,2,true,3,5,8,1,1
+dnd_2014,Tiefling,School of Divination,3,true,3,6,10,2,2
+dnd_2014,Tiefling,School of Divination,4,true,4,7,12,2,2
+dnd_2014,Tiefling,School of Divination,5,true,4,8,14,3,3
+dnd_2014,Tiefling,School of Divination,6,true,4,9,16,3,3
+dnd_2014,Tiefling,School of Divination,7,true,4,10,18,4,4
+dnd_2014,Tiefling,School of Divination,8,true,4,11,20,4,4
+dnd_2014,Tiefling,School of Divination,9,true,4,12,22,5,5
+dnd_2014,Tiefling,School of Divination,10,true,5,13,24,5,5
+dnd_2014,Tiefling,School of Divination,11,true,5,14,26,6,6
+dnd_2014,Tiefling,School of Divination,12,true,5,15,28,6,6
+dnd_2014,Tiefling,School of Divination,13,true,5,16,30,7,7
+dnd_2014,Tiefling,School of Divination,14,true,5,17,32,7,7
+dnd_2014,Tiefling,School of Divination,15,true,5,18,34,8,8
+dnd_2014,Tiefling,School of Divination,16,true,5,19,36,8,8
+dnd_2014,Tiefling,School of Divination,17,true,5,20,38,9,9
+dnd_2014,Tiefling,School of Divination,18,true,5,21,40,9,9
+dnd_2014,Tiefling,School of Divination,19,true,5,22,42,10,9
+dnd_2014,Tiefling,School of Divination,20,true,5,23,44,10,9
+dnd_2014,Tiefling,School of Enchantment,1,true,3,4,6,1,1
+dnd_2014,Tiefling,School of Enchantment,2,true,3,5,8,1,1
+dnd_2014,Tiefling,School of Enchantment,3,true,3,6,10,2,2
+dnd_2014,Tiefling,School of Enchantment,4,true,4,7,12,2,2
+dnd_2014,Tiefling,School of Enchantment,5,true,4,8,14,3,3
+dnd_2014,Tiefling,School of Enchantment,6,true,4,9,16,3,3
+dnd_2014,Tiefling,School of Enchantment,7,true,4,10,18,4,4
+dnd_2014,Tiefling,School of Enchantment,8,true,4,11,20,4,4
+dnd_2014,Tiefling,School of Enchantment,9,true,4,12,22,5,5
+dnd_2014,Tiefling,School of Enchantment,10,true,5,13,24,5,5
+dnd_2014,Tiefling,School of Enchantment,11,true,5,14,26,6,6
+dnd_2014,Tiefling,School of Enchantment,12,true,5,15,28,6,6
+dnd_2014,Tiefling,School of Enchantment,13,true,5,16,30,7,7
+dnd_2014,Tiefling,School of Enchantment,14,true,5,17,32,7,7
+dnd_2014,Tiefling,School of Enchantment,15,true,5,18,34,8,8
+dnd_2014,Tiefling,School of Enchantment,16,true,5,19,36,8,8
+dnd_2014,Tiefling,School of Enchantment,17,true,5,20,38,9,9
+dnd_2014,Tiefling,School of Enchantment,18,true,5,21,40,9,9
+dnd_2014,Tiefling,School of Enchantment,19,true,5,22,42,10,9
+dnd_2014,Tiefling,School of Enchantment,20,true,5,23,44,10,9
+dnd_2014,Tiefling,School of Illusion,1,true,3,4,6,1,1
+dnd_2014,Tiefling,School of Illusion,2,true,3,5,8,1,1
+dnd_2014,Tiefling,School of Illusion,3,true,3,6,10,2,2
+dnd_2014,Tiefling,School of Illusion,4,true,4,7,12,2,2
+dnd_2014,Tiefling,School of Illusion,5,true,4,8,14,3,3
+dnd_2014,Tiefling,School of Illusion,6,true,4,9,16,3,3
+dnd_2014,Tiefling,School of Illusion,7,true,4,10,18,4,4
+dnd_2014,Tiefling,School of Illusion,8,true,4,11,20,4,4
+dnd_2014,Tiefling,School of Illusion,9,true,4,12,22,5,5
+dnd_2014,Tiefling,School of Illusion,10,true,5,13,24,5,5
+dnd_2014,Tiefling,School of Illusion,11,true,5,14,26,6,6
+dnd_2014,Tiefling,School of Illusion,12,true,5,15,28,6,6
+dnd_2014,Tiefling,School of Illusion,13,true,5,16,30,7,7
+dnd_2014,Tiefling,School of Illusion,14,true,5,17,32,7,7
+dnd_2014,Tiefling,School of Illusion,15,true,5,18,34,8,8
+dnd_2014,Tiefling,School of Illusion,16,true,5,19,36,8,8
+dnd_2014,Tiefling,School of Illusion,17,true,5,20,38,9,9
+dnd_2014,Tiefling,School of Illusion,18,true,5,21,40,9,9
+dnd_2014,Tiefling,School of Illusion,19,true,5,22,42,10,9
+dnd_2014,Tiefling,School of Illusion,20,true,5,23,44,10,9
+dnd_2014,Tiefling,School of Necromancy,1,true,3,4,6,1,1
+dnd_2014,Tiefling,School of Necromancy,2,true,3,5,8,1,1
+dnd_2014,Tiefling,School of Necromancy,3,true,3,6,10,2,2
+dnd_2014,Tiefling,School of Necromancy,4,true,4,7,12,2,2
+dnd_2014,Tiefling,School of Necromancy,5,true,4,8,14,3,3
+dnd_2014,Tiefling,School of Necromancy,6,true,4,9,16,3,3
+dnd_2014,Tiefling,School of Necromancy,7,true,4,10,18,4,4
+dnd_2014,Tiefling,School of Necromancy,8,true,4,11,20,4,4
+dnd_2014,Tiefling,School of Necromancy,9,true,4,12,22,5,5
+dnd_2014,Tiefling,School of Necromancy,10,true,5,13,24,5,5
+dnd_2014,Tiefling,School of Necromancy,11,true,5,14,26,6,6
+dnd_2014,Tiefling,School of Necromancy,12,true,5,15,28,6,6
+dnd_2014,Tiefling,School of Necromancy,13,true,5,16,30,7,7
+dnd_2014,Tiefling,School of Necromancy,14,true,5,17,32,7,7
+dnd_2014,Tiefling,School of Necromancy,15,true,5,18,34,8,8
+dnd_2014,Tiefling,School of Necromancy,16,true,5,19,36,8,8
+dnd_2014,Tiefling,School of Necromancy,17,true,5,20,38,9,9
+dnd_2014,Tiefling,School of Necromancy,18,true,5,21,40,9,9
+dnd_2014,Tiefling,School of Necromancy,19,true,5,22,42,10,9
+dnd_2014,Tiefling,School of Necromancy,20,true,5,23,44,10,9
+dnd_2014,Tiefling,School of Transmutation,1,true,3,4,6,1,1
+dnd_2014,Tiefling,School of Transmutation,2,true,3,5,8,1,1
+dnd_2014,Tiefling,School of Transmutation,3,true,3,6,10,2,2
+dnd_2014,Tiefling,School of Transmutation,4,true,4,7,12,2,2
+dnd_2014,Tiefling,School of Transmutation,5,true,4,8,14,3,3
+dnd_2014,Tiefling,School of Transmutation,6,true,4,9,16,3,3
+dnd_2014,Tiefling,School of Transmutation,7,true,4,10,18,4,4
+dnd_2014,Tiefling,School of Transmutation,8,true,4,11,20,4,4
+dnd_2014,Tiefling,School of Transmutation,9,true,4,12,22,5,5
+dnd_2014,Tiefling,School of Transmutation,10,true,5,13,24,5,5
+dnd_2014,Tiefling,School of Transmutation,11,true,5,14,26,6,6
+dnd_2014,Tiefling,School of Transmutation,12,true,5,15,28,6,6
+dnd_2014,Tiefling,School of Transmutation,13,true,5,16,30,7,7
+dnd_2014,Tiefling,School of Transmutation,14,true,5,17,32,7,7
+dnd_2014,Tiefling,School of Transmutation,15,true,5,18,34,8,8
+dnd_2014,Tiefling,School of Transmutation,16,true,5,19,36,8,8
+dnd_2014,Tiefling,School of Transmutation,17,true,5,20,38,9,9
+dnd_2014,Tiefling,School of Transmutation,18,true,5,21,40,9,9
+dnd_2014,Tiefling,School of Transmutation,19,true,5,22,42,10,9
+dnd_2014,Tiefling,School of Transmutation,20,true,5,23,44,10,9
+dnd_2014,Tiefling,Bladesinging,1,true,3,4,6,1,1
+dnd_2014,Tiefling,Bladesinging,2,true,3,5,8,1,1
+dnd_2014,Tiefling,Bladesinging,3,true,3,6,10,2,2
+dnd_2014,Tiefling,Bladesinging,4,true,4,7,12,2,2
+dnd_2014,Tiefling,Bladesinging,5,true,4,8,14,3,3
+dnd_2014,Tiefling,Bladesinging,6,true,4,9,16,3,3
+dnd_2014,Tiefling,Bladesinging,7,true,4,10,18,4,4
+dnd_2014,Tiefling,Bladesinging,8,true,4,11,20,4,4
+dnd_2014,Tiefling,Bladesinging,9,true,4,12,22,5,5
+dnd_2014,Tiefling,Bladesinging,10,true,5,13,24,5,5
+dnd_2014,Tiefling,Bladesinging,11,true,5,14,26,6,6
+dnd_2014,Tiefling,Bladesinging,12,true,5,15,28,6,6
+dnd_2014,Tiefling,Bladesinging,13,true,5,16,30,7,7
+dnd_2014,Tiefling,Bladesinging,14,true,5,17,32,7,7
+dnd_2014,Tiefling,Bladesinging,15,true,5,18,34,8,8
+dnd_2014,Tiefling,Bladesinging,16,true,5,19,36,8,8
+dnd_2014,Tiefling,Bladesinging,17,true,5,20,38,9,9
+dnd_2014,Tiefling,Bladesinging,18,true,5,21,40,9,9
+dnd_2014,Tiefling,Bladesinging,19,true,5,22,42,10,9
+dnd_2014,Tiefling,Bladesinging,20,true,5,23,44,10,9
+dnd_2014,Tiefling,War Magic,1,true,3,4,6,1,1
+dnd_2014,Tiefling,War Magic,2,true,3,5,8,1,1
+dnd_2014,Tiefling,War Magic,3,true,3,6,10,2,2
+dnd_2014,Tiefling,War Magic,4,true,4,7,12,2,2
+dnd_2014,Tiefling,War Magic,5,true,4,8,14,3,3
+dnd_2014,Tiefling,War Magic,6,true,4,9,16,3,3
+dnd_2014,Tiefling,War Magic,7,true,4,10,18,4,4
+dnd_2014,Tiefling,War Magic,8,true,4,11,20,4,4
+dnd_2014,Tiefling,War Magic,9,true,4,12,22,5,5
+dnd_2014,Tiefling,War Magic,10,true,5,13,24,5,5
+dnd_2014,Tiefling,War Magic,11,true,5,14,26,6,6
+dnd_2014,Tiefling,War Magic,12,true,5,15,28,6,6
+dnd_2014,Tiefling,War Magic,13,true,5,16,30,7,7
+dnd_2014,Tiefling,War Magic,14,true,5,17,32,7,7
+dnd_2014,Tiefling,War Magic,15,true,5,18,34,8,8
+dnd_2014,Tiefling,War Magic,16,true,5,19,36,8,8
+dnd_2014,Tiefling,War Magic,17,true,5,20,38,9,9
+dnd_2014,Tiefling,War Magic,18,true,5,21,40,9,9
+dnd_2014,Tiefling,War Magic,19,true,5,22,42,10,9
+dnd_2014,Tiefling,War Magic,20,true,5,23,44,10,9
+dnd_2014,Tiefling,Order of Scribes,1,true,3,4,6,1,1
+dnd_2014,Tiefling,Order of Scribes,2,true,3,5,8,1,1
+dnd_2014,Tiefling,Order of Scribes,3,true,3,6,10,2,2
+dnd_2014,Tiefling,Order of Scribes,4,true,4,7,12,2,2
+dnd_2014,Tiefling,Order of Scribes,5,true,4,8,14,3,3
+dnd_2014,Tiefling,Order of Scribes,6,true,4,9,16,3,3
+dnd_2014,Tiefling,Order of Scribes,7,true,4,10,18,4,4
+dnd_2014,Tiefling,Order of Scribes,8,true,4,11,20,4,4
+dnd_2014,Tiefling,Order of Scribes,9,true,4,12,22,5,5
+dnd_2014,Tiefling,Order of Scribes,10,true,5,13,24,5,5
+dnd_2014,Tiefling,Order of Scribes,11,true,5,14,26,6,6
+dnd_2014,Tiefling,Order of Scribes,12,true,5,15,28,6,6
+dnd_2014,Tiefling,Order of Scribes,13,true,5,16,30,7,7
+dnd_2014,Tiefling,Order of Scribes,14,true,5,17,32,7,7
+dnd_2014,Tiefling,Order of Scribes,15,true,5,18,34,8,8
+dnd_2014,Tiefling,Order of Scribes,16,true,5,19,36,8,8
+dnd_2014,Tiefling,Order of Scribes,17,true,5,20,38,9,9
+dnd_2014,Tiefling,Order of Scribes,18,true,5,21,40,9,9
+dnd_2014,Tiefling,Order of Scribes,19,true,5,22,42,10,9
+dnd_2014,Tiefling,Order of Scribes,20,true,5,23,44,10,9
+dnd_2014,Tiefling,Chronurgy Magic,1,true,3,4,6,1,1
+dnd_2014,Tiefling,Chronurgy Magic,2,true,3,5,8,1,1
+dnd_2014,Tiefling,Chronurgy Magic,3,true,3,6,10,2,2
+dnd_2014,Tiefling,Chronurgy Magic,4,true,4,7,12,2,2
+dnd_2014,Tiefling,Chronurgy Magic,5,true,4,8,14,3,3
+dnd_2014,Tiefling,Chronurgy Magic,6,true,4,9,16,3,3
+dnd_2014,Tiefling,Chronurgy Magic,7,true,4,10,18,4,4
+dnd_2014,Tiefling,Chronurgy Magic,8,true,4,11,20,4,4
+dnd_2014,Tiefling,Chronurgy Magic,9,true,4,12,22,5,5
+dnd_2014,Tiefling,Chronurgy Magic,10,true,5,13,24,5,5
+dnd_2014,Tiefling,Chronurgy Magic,11,true,5,14,26,6,6
+dnd_2014,Tiefling,Chronurgy Magic,12,true,5,15,28,6,6
+dnd_2014,Tiefling,Chronurgy Magic,13,true,5,16,30,7,7
+dnd_2014,Tiefling,Chronurgy Magic,14,true,5,17,32,7,7
+dnd_2014,Tiefling,Chronurgy Magic,15,true,5,18,34,8,8
+dnd_2014,Tiefling,Chronurgy Magic,16,true,5,19,36,8,8
+dnd_2014,Tiefling,Chronurgy Magic,17,true,5,20,38,9,9
+dnd_2014,Tiefling,Chronurgy Magic,18,true,5,21,40,9,9
+dnd_2014,Tiefling,Chronurgy Magic,19,true,5,22,42,10,9
+dnd_2014,Tiefling,Chronurgy Magic,20,true,5,23,44,10,9
+dnd_2014,Tiefling,Graviturgy Magic,1,true,3,4,6,1,1
+dnd_2014,Tiefling,Graviturgy Magic,2,true,3,5,8,1,1
+dnd_2014,Tiefling,Graviturgy Magic,3,true,3,6,10,2,2
+dnd_2014,Tiefling,Graviturgy Magic,4,true,4,7,12,2,2
+dnd_2014,Tiefling,Graviturgy Magic,5,true,4,8,14,3,3
+dnd_2014,Tiefling,Graviturgy Magic,6,true,4,9,16,3,3
+dnd_2014,Tiefling,Graviturgy Magic,7,true,4,10,18,4,4
+dnd_2014,Tiefling,Graviturgy Magic,8,true,4,11,20,4,4
+dnd_2014,Tiefling,Graviturgy Magic,9,true,4,12,22,5,5
+dnd_2014,Tiefling,Graviturgy Magic,10,true,5,13,24,5,5
+dnd_2014,Tiefling,Graviturgy Magic,11,true,5,14,26,6,6
+dnd_2014,Tiefling,Graviturgy Magic,12,true,5,15,28,6,6
+dnd_2014,Tiefling,Graviturgy Magic,13,true,5,16,30,7,7
+dnd_2014,Tiefling,Graviturgy Magic,14,true,5,17,32,7,7
+dnd_2014,Tiefling,Graviturgy Magic,15,true,5,18,34,8,8
+dnd_2014,Tiefling,Graviturgy Magic,16,true,5,19,36,8,8
+dnd_2014,Tiefling,Graviturgy Magic,17,true,5,20,38,9,9
+dnd_2014,Tiefling,Graviturgy Magic,18,true,5,21,40,9,9
+dnd_2014,Tiefling,Graviturgy Magic,19,true,5,22,42,10,9
+dnd_2014,Tiefling,Graviturgy Magic,20,true,5,23,44,10,9
+dnd_2024,Aasimar,Evoker,1,true,3,4,6,1,1
+dnd_2024,Aasimar,Evoker,2,true,3,5,8,1,1
+dnd_2024,Aasimar,Evoker,3,true,3,6,10,2,2
+dnd_2024,Aasimar,Evoker,4,true,4,7,12,2,2
+dnd_2024,Aasimar,Evoker,5,true,4,9,14,3,3
+dnd_2024,Aasimar,Evoker,6,true,4,10,16,3,3
+dnd_2024,Aasimar,Evoker,7,true,4,11,18,4,4
+dnd_2024,Aasimar,Evoker,8,true,4,12,20,4,4
+dnd_2024,Aasimar,Evoker,9,true,4,14,22,5,5
+dnd_2024,Aasimar,Evoker,10,true,5,15,24,5,5
+dnd_2024,Aasimar,Evoker,11,true,5,16,26,6,6
+dnd_2024,Aasimar,Evoker,12,true,5,16,28,6,6
+dnd_2024,Aasimar,Evoker,13,true,5,17,30,7,7
+dnd_2024,Aasimar,Evoker,14,true,5,18,32,7,7
+dnd_2024,Aasimar,Evoker,15,true,5,19,34,8,8
+dnd_2024,Aasimar,Evoker,16,true,5,21,36,8,8
+dnd_2024,Aasimar,Evoker,17,true,5,22,38,9,9
+dnd_2024,Aasimar,Evoker,18,true,5,23,40,9,9
+dnd_2024,Aasimar,Evoker,19,true,5,24,42,10,9
+dnd_2024,Aasimar,Evoker,20,true,5,25,44,10,9
+dnd_2024,Aasimar,Abjurer,1,true,3,4,6,1,1
+dnd_2024,Aasimar,Abjurer,2,true,3,5,8,1,1
+dnd_2024,Aasimar,Abjurer,3,true,3,6,10,2,2
+dnd_2024,Aasimar,Abjurer,4,true,4,7,12,2,2
+dnd_2024,Aasimar,Abjurer,5,true,4,9,14,3,3
+dnd_2024,Aasimar,Abjurer,6,true,4,10,16,3,3
+dnd_2024,Aasimar,Abjurer,7,true,4,11,18,4,4
+dnd_2024,Aasimar,Abjurer,8,true,4,12,20,4,4
+dnd_2024,Aasimar,Abjurer,9,true,4,14,22,5,5
+dnd_2024,Aasimar,Abjurer,10,true,5,15,24,5,5
+dnd_2024,Aasimar,Abjurer,11,true,5,16,26,6,6
+dnd_2024,Aasimar,Abjurer,12,true,5,16,28,6,6
+dnd_2024,Aasimar,Abjurer,13,true,5,17,30,7,7
+dnd_2024,Aasimar,Abjurer,14,true,5,18,32,7,7
+dnd_2024,Aasimar,Abjurer,15,true,5,19,34,8,8
+dnd_2024,Aasimar,Abjurer,16,true,5,21,36,8,8
+dnd_2024,Aasimar,Abjurer,17,true,5,22,38,9,9
+dnd_2024,Aasimar,Abjurer,18,true,5,23,40,9,9
+dnd_2024,Aasimar,Abjurer,19,true,5,24,42,10,9
+dnd_2024,Aasimar,Abjurer,20,true,5,25,44,10,9
+dnd_2024,Aasimar,Diviner,1,true,3,4,6,1,1
+dnd_2024,Aasimar,Diviner,2,true,3,5,8,1,1
+dnd_2024,Aasimar,Diviner,3,true,3,6,10,2,2
+dnd_2024,Aasimar,Diviner,4,true,4,7,12,2,2
+dnd_2024,Aasimar,Diviner,5,true,4,9,14,3,3
+dnd_2024,Aasimar,Diviner,6,true,4,10,16,3,3
+dnd_2024,Aasimar,Diviner,7,true,4,11,18,4,4
+dnd_2024,Aasimar,Diviner,8,true,4,12,20,4,4
+dnd_2024,Aasimar,Diviner,9,true,4,14,22,5,5
+dnd_2024,Aasimar,Diviner,10,true,5,15,24,5,5
+dnd_2024,Aasimar,Diviner,11,true,5,16,26,6,6
+dnd_2024,Aasimar,Diviner,12,true,5,16,28,6,6
+dnd_2024,Aasimar,Diviner,13,true,5,17,30,7,7
+dnd_2024,Aasimar,Diviner,14,true,5,18,32,7,7
+dnd_2024,Aasimar,Diviner,15,true,5,19,34,8,8
+dnd_2024,Aasimar,Diviner,16,true,5,21,36,8,8
+dnd_2024,Aasimar,Diviner,17,true,5,22,38,9,9
+dnd_2024,Aasimar,Diviner,18,true,5,23,40,9,9
+dnd_2024,Aasimar,Diviner,19,true,5,24,42,10,9
+dnd_2024,Aasimar,Diviner,20,true,5,25,44,10,9
+dnd_2024,Aasimar,Illusionist,1,true,3,4,6,1,1
+dnd_2024,Aasimar,Illusionist,2,true,3,5,8,1,1
+dnd_2024,Aasimar,Illusionist,3,true,3,6,10,2,2
+dnd_2024,Aasimar,Illusionist,4,true,4,7,12,2,2
+dnd_2024,Aasimar,Illusionist,5,true,4,9,14,3,3
+dnd_2024,Aasimar,Illusionist,6,true,4,10,16,3,3
+dnd_2024,Aasimar,Illusionist,7,true,4,11,18,4,4
+dnd_2024,Aasimar,Illusionist,8,true,4,12,20,4,4
+dnd_2024,Aasimar,Illusionist,9,true,4,14,22,5,5
+dnd_2024,Aasimar,Illusionist,10,true,5,15,24,5,5
+dnd_2024,Aasimar,Illusionist,11,true,5,16,26,6,6
+dnd_2024,Aasimar,Illusionist,12,true,5,16,28,6,6
+dnd_2024,Aasimar,Illusionist,13,true,5,17,30,7,7
+dnd_2024,Aasimar,Illusionist,14,true,5,18,32,7,7
+dnd_2024,Aasimar,Illusionist,15,true,5,19,34,8,8
+dnd_2024,Aasimar,Illusionist,16,true,5,21,36,8,8
+dnd_2024,Aasimar,Illusionist,17,true,5,22,38,9,9
+dnd_2024,Aasimar,Illusionist,18,true,5,23,40,9,9
+dnd_2024,Aasimar,Illusionist,19,true,5,24,42,10,9
+dnd_2024,Aasimar,Illusionist,20,true,5,25,44,10,9
+dnd_2024,Dragonborn,Evoker,1,true,3,4,6,1,1
+dnd_2024,Dragonborn,Evoker,2,true,3,5,8,1,1
+dnd_2024,Dragonborn,Evoker,3,true,3,6,10,2,2
+dnd_2024,Dragonborn,Evoker,4,true,4,7,12,2,2
+dnd_2024,Dragonborn,Evoker,5,true,4,9,14,3,3
+dnd_2024,Dragonborn,Evoker,6,true,4,10,16,3,3
+dnd_2024,Dragonborn,Evoker,7,true,4,11,18,4,4
+dnd_2024,Dragonborn,Evoker,8,true,4,12,20,4,4
+dnd_2024,Dragonborn,Evoker,9,true,4,14,22,5,5
+dnd_2024,Dragonborn,Evoker,10,true,5,15,24,5,5
+dnd_2024,Dragonborn,Evoker,11,true,5,16,26,6,6
+dnd_2024,Dragonborn,Evoker,12,true,5,16,28,6,6
+dnd_2024,Dragonborn,Evoker,13,true,5,17,30,7,7
+dnd_2024,Dragonborn,Evoker,14,true,5,18,32,7,7
+dnd_2024,Dragonborn,Evoker,15,true,5,19,34,8,8
+dnd_2024,Dragonborn,Evoker,16,true,5,21,36,8,8
+dnd_2024,Dragonborn,Evoker,17,true,5,22,38,9,9
+dnd_2024,Dragonborn,Evoker,18,true,5,23,40,9,9
+dnd_2024,Dragonborn,Evoker,19,true,5,24,42,10,9
+dnd_2024,Dragonborn,Evoker,20,true,5,25,44,10,9
+dnd_2024,Dragonborn,Abjurer,1,true,3,4,6,1,1
+dnd_2024,Dragonborn,Abjurer,2,true,3,5,8,1,1
+dnd_2024,Dragonborn,Abjurer,3,true,3,6,10,2,2
+dnd_2024,Dragonborn,Abjurer,4,true,4,7,12,2,2
+dnd_2024,Dragonborn,Abjurer,5,true,4,9,14,3,3
+dnd_2024,Dragonborn,Abjurer,6,true,4,10,16,3,3
+dnd_2024,Dragonborn,Abjurer,7,true,4,11,18,4,4
+dnd_2024,Dragonborn,Abjurer,8,true,4,12,20,4,4
+dnd_2024,Dragonborn,Abjurer,9,true,4,14,22,5,5
+dnd_2024,Dragonborn,Abjurer,10,true,5,15,24,5,5
+dnd_2024,Dragonborn,Abjurer,11,true,5,16,26,6,6
+dnd_2024,Dragonborn,Abjurer,12,true,5,16,28,6,6
+dnd_2024,Dragonborn,Abjurer,13,true,5,17,30,7,7
+dnd_2024,Dragonborn,Abjurer,14,true,5,18,32,7,7
+dnd_2024,Dragonborn,Abjurer,15,true,5,19,34,8,8
+dnd_2024,Dragonborn,Abjurer,16,true,5,21,36,8,8
+dnd_2024,Dragonborn,Abjurer,17,true,5,22,38,9,9
+dnd_2024,Dragonborn,Abjurer,18,true,5,23,40,9,9
+dnd_2024,Dragonborn,Abjurer,19,true,5,24,42,10,9
+dnd_2024,Dragonborn,Abjurer,20,true,5,25,44,10,9
+dnd_2024,Dragonborn,Diviner,1,true,3,4,6,1,1
+dnd_2024,Dragonborn,Diviner,2,true,3,5,8,1,1
+dnd_2024,Dragonborn,Diviner,3,true,3,6,10,2,2
+dnd_2024,Dragonborn,Diviner,4,true,4,7,12,2,2
+dnd_2024,Dragonborn,Diviner,5,true,4,9,14,3,3
+dnd_2024,Dragonborn,Diviner,6,true,4,10,16,3,3
+dnd_2024,Dragonborn,Diviner,7,true,4,11,18,4,4
+dnd_2024,Dragonborn,Diviner,8,true,4,12,20,4,4
+dnd_2024,Dragonborn,Diviner,9,true,4,14,22,5,5
+dnd_2024,Dragonborn,Diviner,10,true,5,15,24,5,5
+dnd_2024,Dragonborn,Diviner,11,true,5,16,26,6,6
+dnd_2024,Dragonborn,Diviner,12,true,5,16,28,6,6
+dnd_2024,Dragonborn,Diviner,13,true,5,17,30,7,7
+dnd_2024,Dragonborn,Diviner,14,true,5,18,32,7,7
+dnd_2024,Dragonborn,Diviner,15,true,5,19,34,8,8
+dnd_2024,Dragonborn,Diviner,16,true,5,21,36,8,8
+dnd_2024,Dragonborn,Diviner,17,true,5,22,38,9,9
+dnd_2024,Dragonborn,Diviner,18,true,5,23,40,9,9
+dnd_2024,Dragonborn,Diviner,19,true,5,24,42,10,9
+dnd_2024,Dragonborn,Diviner,20,true,5,25,44,10,9
+dnd_2024,Dragonborn,Illusionist,1,true,3,4,6,1,1
+dnd_2024,Dragonborn,Illusionist,2,true,3,5,8,1,1
+dnd_2024,Dragonborn,Illusionist,3,true,3,6,10,2,2
+dnd_2024,Dragonborn,Illusionist,4,true,4,7,12,2,2
+dnd_2024,Dragonborn,Illusionist,5,true,4,9,14,3,3
+dnd_2024,Dragonborn,Illusionist,6,true,4,10,16,3,3
+dnd_2024,Dragonborn,Illusionist,7,true,4,11,18,4,4
+dnd_2024,Dragonborn,Illusionist,8,true,4,12,20,4,4
+dnd_2024,Dragonborn,Illusionist,9,true,4,14,22,5,5
+dnd_2024,Dragonborn,Illusionist,10,true,5,15,24,5,5
+dnd_2024,Dragonborn,Illusionist,11,true,5,16,26,6,6
+dnd_2024,Dragonborn,Illusionist,12,true,5,16,28,6,6
+dnd_2024,Dragonborn,Illusionist,13,true,5,17,30,7,7
+dnd_2024,Dragonborn,Illusionist,14,true,5,18,32,7,7
+dnd_2024,Dragonborn,Illusionist,15,true,5,19,34,8,8
+dnd_2024,Dragonborn,Illusionist,16,true,5,21,36,8,8
+dnd_2024,Dragonborn,Illusionist,17,true,5,22,38,9,9
+dnd_2024,Dragonborn,Illusionist,18,true,5,23,40,9,9
+dnd_2024,Dragonborn,Illusionist,19,true,5,24,42,10,9
+dnd_2024,Dragonborn,Illusionist,20,true,5,25,44,10,9
+dnd_2024,Dwarf,Evoker,1,true,3,4,6,1,1
+dnd_2024,Dwarf,Evoker,2,true,3,5,8,1,1
+dnd_2024,Dwarf,Evoker,3,true,3,6,10,2,2
+dnd_2024,Dwarf,Evoker,4,true,4,7,12,2,2
+dnd_2024,Dwarf,Evoker,5,true,4,9,14,3,3
+dnd_2024,Dwarf,Evoker,6,true,4,10,16,3,3
+dnd_2024,Dwarf,Evoker,7,true,4,11,18,4,4
+dnd_2024,Dwarf,Evoker,8,true,4,12,20,4,4
+dnd_2024,Dwarf,Evoker,9,true,4,14,22,5,5
+dnd_2024,Dwarf,Evoker,10,true,5,15,24,5,5
+dnd_2024,Dwarf,Evoker,11,true,5,16,26,6,6
+dnd_2024,Dwarf,Evoker,12,true,5,16,28,6,6
+dnd_2024,Dwarf,Evoker,13,true,5,17,30,7,7
+dnd_2024,Dwarf,Evoker,14,true,5,18,32,7,7
+dnd_2024,Dwarf,Evoker,15,true,5,19,34,8,8
+dnd_2024,Dwarf,Evoker,16,true,5,21,36,8,8
+dnd_2024,Dwarf,Evoker,17,true,5,22,38,9,9
+dnd_2024,Dwarf,Evoker,18,true,5,23,40,9,9
+dnd_2024,Dwarf,Evoker,19,true,5,24,42,10,9
+dnd_2024,Dwarf,Evoker,20,true,5,25,44,10,9
+dnd_2024,Dwarf,Abjurer,1,true,3,4,6,1,1
+dnd_2024,Dwarf,Abjurer,2,true,3,5,8,1,1
+dnd_2024,Dwarf,Abjurer,3,true,3,6,10,2,2
+dnd_2024,Dwarf,Abjurer,4,true,4,7,12,2,2
+dnd_2024,Dwarf,Abjurer,5,true,4,9,14,3,3
+dnd_2024,Dwarf,Abjurer,6,true,4,10,16,3,3
+dnd_2024,Dwarf,Abjurer,7,true,4,11,18,4,4
+dnd_2024,Dwarf,Abjurer,8,true,4,12,20,4,4
+dnd_2024,Dwarf,Abjurer,9,true,4,14,22,5,5
+dnd_2024,Dwarf,Abjurer,10,true,5,15,24,5,5
+dnd_2024,Dwarf,Abjurer,11,true,5,16,26,6,6
+dnd_2024,Dwarf,Abjurer,12,true,5,16,28,6,6
+dnd_2024,Dwarf,Abjurer,13,true,5,17,30,7,7
+dnd_2024,Dwarf,Abjurer,14,true,5,18,32,7,7
+dnd_2024,Dwarf,Abjurer,15,true,5,19,34,8,8
+dnd_2024,Dwarf,Abjurer,16,true,5,21,36,8,8
+dnd_2024,Dwarf,Abjurer,17,true,5,22,38,9,9
+dnd_2024,Dwarf,Abjurer,18,true,5,23,40,9,9
+dnd_2024,Dwarf,Abjurer,19,true,5,24,42,10,9
+dnd_2024,Dwarf,Abjurer,20,true,5,25,44,10,9
+dnd_2024,Dwarf,Diviner,1,true,3,4,6,1,1
+dnd_2024,Dwarf,Diviner,2,true,3,5,8,1,1
+dnd_2024,Dwarf,Diviner,3,true,3,6,10,2,2
+dnd_2024,Dwarf,Diviner,4,true,4,7,12,2,2
+dnd_2024,Dwarf,Diviner,5,true,4,9,14,3,3
+dnd_2024,Dwarf,Diviner,6,true,4,10,16,3,3
+dnd_2024,Dwarf,Diviner,7,true,4,11,18,4,4
+dnd_2024,Dwarf,Diviner,8,true,4,12,20,4,4
+dnd_2024,Dwarf,Diviner,9,true,4,14,22,5,5
+dnd_2024,Dwarf,Diviner,10,true,5,15,24,5,5
+dnd_2024,Dwarf,Diviner,11,true,5,16,26,6,6
+dnd_2024,Dwarf,Diviner,12,true,5,16,28,6,6
+dnd_2024,Dwarf,Diviner,13,true,5,17,30,7,7
+dnd_2024,Dwarf,Diviner,14,true,5,18,32,7,7
+dnd_2024,Dwarf,Diviner,15,true,5,19,34,8,8
+dnd_2024,Dwarf,Diviner,16,true,5,21,36,8,8
+dnd_2024,Dwarf,Diviner,17,true,5,22,38,9,9
+dnd_2024,Dwarf,Diviner,18,true,5,23,40,9,9
+dnd_2024,Dwarf,Diviner,19,true,5,24,42,10,9
+dnd_2024,Dwarf,Diviner,20,true,5,25,44,10,9
+dnd_2024,Dwarf,Illusionist,1,true,3,4,6,1,1
+dnd_2024,Dwarf,Illusionist,2,true,3,5,8,1,1
+dnd_2024,Dwarf,Illusionist,3,true,3,6,10,2,2
+dnd_2024,Dwarf,Illusionist,4,true,4,7,12,2,2
+dnd_2024,Dwarf,Illusionist,5,true,4,9,14,3,3
+dnd_2024,Dwarf,Illusionist,6,true,4,10,16,3,3
+dnd_2024,Dwarf,Illusionist,7,true,4,11,18,4,4
+dnd_2024,Dwarf,Illusionist,8,true,4,12,20,4,4
+dnd_2024,Dwarf,Illusionist,9,true,4,14,22,5,5
+dnd_2024,Dwarf,Illusionist,10,true,5,15,24,5,5
+dnd_2024,Dwarf,Illusionist,11,true,5,16,26,6,6
+dnd_2024,Dwarf,Illusionist,12,true,5,16,28,6,6
+dnd_2024,Dwarf,Illusionist,13,true,5,17,30,7,7
+dnd_2024,Dwarf,Illusionist,14,true,5,18,32,7,7
+dnd_2024,Dwarf,Illusionist,15,true,5,19,34,8,8
+dnd_2024,Dwarf,Illusionist,16,true,5,21,36,8,8
+dnd_2024,Dwarf,Illusionist,17,true,5,22,38,9,9
+dnd_2024,Dwarf,Illusionist,18,true,5,23,40,9,9
+dnd_2024,Dwarf,Illusionist,19,true,5,24,42,10,9
+dnd_2024,Dwarf,Illusionist,20,true,5,25,44,10,9
+dnd_2024,Elf,Evoker,1,true,3,4,6,1,1
+dnd_2024,Elf,Evoker,2,true,3,5,8,1,1
+dnd_2024,Elf,Evoker,3,true,3,6,10,2,2
+dnd_2024,Elf,Evoker,4,true,4,7,12,2,2
+dnd_2024,Elf,Evoker,5,true,4,9,14,3,3
+dnd_2024,Elf,Evoker,6,true,4,10,16,3,3
+dnd_2024,Elf,Evoker,7,true,4,11,18,4,4
+dnd_2024,Elf,Evoker,8,true,4,12,20,4,4
+dnd_2024,Elf,Evoker,9,true,4,14,22,5,5
+dnd_2024,Elf,Evoker,10,true,5,15,24,5,5
+dnd_2024,Elf,Evoker,11,true,5,16,26,6,6
+dnd_2024,Elf,Evoker,12,true,5,16,28,6,6
+dnd_2024,Elf,Evoker,13,true,5,17,30,7,7
+dnd_2024,Elf,Evoker,14,true,5,18,32,7,7
+dnd_2024,Elf,Evoker,15,true,5,19,34,8,8
+dnd_2024,Elf,Evoker,16,true,5,21,36,8,8
+dnd_2024,Elf,Evoker,17,true,5,22,38,9,9
+dnd_2024,Elf,Evoker,18,true,5,23,40,9,9
+dnd_2024,Elf,Evoker,19,true,5,24,42,10,9
+dnd_2024,Elf,Evoker,20,true,5,25,44,10,9
+dnd_2024,Elf,Abjurer,1,true,3,4,6,1,1
+dnd_2024,Elf,Abjurer,2,true,3,5,8,1,1
+dnd_2024,Elf,Abjurer,3,true,3,6,10,2,2
+dnd_2024,Elf,Abjurer,4,true,4,7,12,2,2
+dnd_2024,Elf,Abjurer,5,true,4,9,14,3,3
+dnd_2024,Elf,Abjurer,6,true,4,10,16,3,3
+dnd_2024,Elf,Abjurer,7,true,4,11,18,4,4
+dnd_2024,Elf,Abjurer,8,true,4,12,20,4,4
+dnd_2024,Elf,Abjurer,9,true,4,14,22,5,5
+dnd_2024,Elf,Abjurer,10,true,5,15,24,5,5
+dnd_2024,Elf,Abjurer,11,true,5,16,26,6,6
+dnd_2024,Elf,Abjurer,12,true,5,16,28,6,6
+dnd_2024,Elf,Abjurer,13,true,5,17,30,7,7
+dnd_2024,Elf,Abjurer,14,true,5,18,32,7,7
+dnd_2024,Elf,Abjurer,15,true,5,19,34,8,8
+dnd_2024,Elf,Abjurer,16,true,5,21,36,8,8
+dnd_2024,Elf,Abjurer,17,true,5,22,38,9,9
+dnd_2024,Elf,Abjurer,18,true,5,23,40,9,9
+dnd_2024,Elf,Abjurer,19,true,5,24,42,10,9
+dnd_2024,Elf,Abjurer,20,true,5,25,44,10,9
+dnd_2024,Elf,Diviner,1,true,3,4,6,1,1
+dnd_2024,Elf,Diviner,2,true,3,5,8,1,1
+dnd_2024,Elf,Diviner,3,true,3,6,10,2,2
+dnd_2024,Elf,Diviner,4,true,4,7,12,2,2
+dnd_2024,Elf,Diviner,5,true,4,9,14,3,3
+dnd_2024,Elf,Diviner,6,true,4,10,16,3,3
+dnd_2024,Elf,Diviner,7,true,4,11,18,4,4
+dnd_2024,Elf,Diviner,8,true,4,12,20,4,4
+dnd_2024,Elf,Diviner,9,true,4,14,22,5,5
+dnd_2024,Elf,Diviner,10,true,5,15,24,5,5
+dnd_2024,Elf,Diviner,11,true,5,16,26,6,6
+dnd_2024,Elf,Diviner,12,true,5,16,28,6,6
+dnd_2024,Elf,Diviner,13,true,5,17,30,7,7
+dnd_2024,Elf,Diviner,14,true,5,18,32,7,7
+dnd_2024,Elf,Diviner,15,true,5,19,34,8,8
+dnd_2024,Elf,Diviner,16,true,5,21,36,8,8
+dnd_2024,Elf,Diviner,17,true,5,22,38,9,9
+dnd_2024,Elf,Diviner,18,true,5,23,40,9,9
+dnd_2024,Elf,Diviner,19,true,5,24,42,10,9
+dnd_2024,Elf,Diviner,20,true,5,25,44,10,9
+dnd_2024,Elf,Illusionist,1,true,3,4,6,1,1
+dnd_2024,Elf,Illusionist,2,true,3,5,8,1,1
+dnd_2024,Elf,Illusionist,3,true,3,6,10,2,2
+dnd_2024,Elf,Illusionist,4,true,4,7,12,2,2
+dnd_2024,Elf,Illusionist,5,true,4,9,14,3,3
+dnd_2024,Elf,Illusionist,6,true,4,10,16,3,3
+dnd_2024,Elf,Illusionist,7,true,4,11,18,4,4
+dnd_2024,Elf,Illusionist,8,true,4,12,20,4,4
+dnd_2024,Elf,Illusionist,9,true,4,14,22,5,5
+dnd_2024,Elf,Illusionist,10,true,5,15,24,5,5
+dnd_2024,Elf,Illusionist,11,true,5,16,26,6,6
+dnd_2024,Elf,Illusionist,12,true,5,16,28,6,6
+dnd_2024,Elf,Illusionist,13,true,5,17,30,7,7
+dnd_2024,Elf,Illusionist,14,true,5,18,32,7,7
+dnd_2024,Elf,Illusionist,15,true,5,19,34,8,8
+dnd_2024,Elf,Illusionist,16,true,5,21,36,8,8
+dnd_2024,Elf,Illusionist,17,true,5,22,38,9,9
+dnd_2024,Elf,Illusionist,18,true,5,23,40,9,9
+dnd_2024,Elf,Illusionist,19,true,5,24,42,10,9
+dnd_2024,Elf,Illusionist,20,true,5,25,44,10,9
+dnd_2024,Gnome,Evoker,1,true,3,4,6,1,1
+dnd_2024,Gnome,Evoker,2,true,3,5,8,1,1
+dnd_2024,Gnome,Evoker,3,true,3,6,10,2,2
+dnd_2024,Gnome,Evoker,4,true,4,7,12,2,2
+dnd_2024,Gnome,Evoker,5,true,4,9,14,3,3
+dnd_2024,Gnome,Evoker,6,true,4,10,16,3,3
+dnd_2024,Gnome,Evoker,7,true,4,11,18,4,4
+dnd_2024,Gnome,Evoker,8,true,4,12,20,4,4
+dnd_2024,Gnome,Evoker,9,true,4,14,22,5,5
+dnd_2024,Gnome,Evoker,10,true,5,15,24,5,5
+dnd_2024,Gnome,Evoker,11,true,5,16,26,6,6
+dnd_2024,Gnome,Evoker,12,true,5,16,28,6,6
+dnd_2024,Gnome,Evoker,13,true,5,17,30,7,7
+dnd_2024,Gnome,Evoker,14,true,5,18,32,7,7
+dnd_2024,Gnome,Evoker,15,true,5,19,34,8,8
+dnd_2024,Gnome,Evoker,16,true,5,21,36,8,8
+dnd_2024,Gnome,Evoker,17,true,5,22,38,9,9
+dnd_2024,Gnome,Evoker,18,true,5,23,40,9,9
+dnd_2024,Gnome,Evoker,19,true,5,24,42,10,9
+dnd_2024,Gnome,Evoker,20,true,5,25,44,10,9
+dnd_2024,Gnome,Abjurer,1,true,3,4,6,1,1
+dnd_2024,Gnome,Abjurer,2,true,3,5,8,1,1
+dnd_2024,Gnome,Abjurer,3,true,3,6,10,2,2
+dnd_2024,Gnome,Abjurer,4,true,4,7,12,2,2
+dnd_2024,Gnome,Abjurer,5,true,4,9,14,3,3
+dnd_2024,Gnome,Abjurer,6,true,4,10,16,3,3
+dnd_2024,Gnome,Abjurer,7,true,4,11,18,4,4
+dnd_2024,Gnome,Abjurer,8,true,4,12,20,4,4
+dnd_2024,Gnome,Abjurer,9,true,4,14,22,5,5
+dnd_2024,Gnome,Abjurer,10,true,5,15,24,5,5
+dnd_2024,Gnome,Abjurer,11,true,5,16,26,6,6
+dnd_2024,Gnome,Abjurer,12,true,5,16,28,6,6
+dnd_2024,Gnome,Abjurer,13,true,5,17,30,7,7
+dnd_2024,Gnome,Abjurer,14,true,5,18,32,7,7
+dnd_2024,Gnome,Abjurer,15,true,5,19,34,8,8
+dnd_2024,Gnome,Abjurer,16,true,5,21,36,8,8
+dnd_2024,Gnome,Abjurer,17,true,5,22,38,9,9
+dnd_2024,Gnome,Abjurer,18,true,5,23,40,9,9
+dnd_2024,Gnome,Abjurer,19,true,5,24,42,10,9
+dnd_2024,Gnome,Abjurer,20,true,5,25,44,10,9
+dnd_2024,Gnome,Diviner,1,true,3,4,6,1,1
+dnd_2024,Gnome,Diviner,2,true,3,5,8,1,1
+dnd_2024,Gnome,Diviner,3,true,3,6,10,2,2
+dnd_2024,Gnome,Diviner,4,true,4,7,12,2,2
+dnd_2024,Gnome,Diviner,5,true,4,9,14,3,3
+dnd_2024,Gnome,Diviner,6,true,4,10,16,3,3
+dnd_2024,Gnome,Diviner,7,true,4,11,18,4,4
+dnd_2024,Gnome,Diviner,8,true,4,12,20,4,4
+dnd_2024,Gnome,Diviner,9,true,4,14,22,5,5
+dnd_2024,Gnome,Diviner,10,true,5,15,24,5,5
+dnd_2024,Gnome,Diviner,11,true,5,16,26,6,6
+dnd_2024,Gnome,Diviner,12,true,5,16,28,6,6
+dnd_2024,Gnome,Diviner,13,true,5,17,30,7,7
+dnd_2024,Gnome,Diviner,14,true,5,18,32,7,7
+dnd_2024,Gnome,Diviner,15,true,5,19,34,8,8
+dnd_2024,Gnome,Diviner,16,true,5,21,36,8,8
+dnd_2024,Gnome,Diviner,17,true,5,22,38,9,9
+dnd_2024,Gnome,Diviner,18,true,5,23,40,9,9
+dnd_2024,Gnome,Diviner,19,true,5,24,42,10,9
+dnd_2024,Gnome,Diviner,20,true,5,25,44,10,9
+dnd_2024,Gnome,Illusionist,1,true,3,4,6,1,1
+dnd_2024,Gnome,Illusionist,2,true,3,5,8,1,1
+dnd_2024,Gnome,Illusionist,3,true,3,6,10,2,2
+dnd_2024,Gnome,Illusionist,4,true,4,7,12,2,2
+dnd_2024,Gnome,Illusionist,5,true,4,9,14,3,3
+dnd_2024,Gnome,Illusionist,6,true,4,10,16,3,3
+dnd_2024,Gnome,Illusionist,7,true,4,11,18,4,4
+dnd_2024,Gnome,Illusionist,8,true,4,12,20,4,4
+dnd_2024,Gnome,Illusionist,9,true,4,14,22,5,5
+dnd_2024,Gnome,Illusionist,10,true,5,15,24,5,5
+dnd_2024,Gnome,Illusionist,11,true,5,16,26,6,6
+dnd_2024,Gnome,Illusionist,12,true,5,16,28,6,6
+dnd_2024,Gnome,Illusionist,13,true,5,17,30,7,7
+dnd_2024,Gnome,Illusionist,14,true,5,18,32,7,7
+dnd_2024,Gnome,Illusionist,15,true,5,19,34,8,8
+dnd_2024,Gnome,Illusionist,16,true,5,21,36,8,8
+dnd_2024,Gnome,Illusionist,17,true,5,22,38,9,9
+dnd_2024,Gnome,Illusionist,18,true,5,23,40,9,9
+dnd_2024,Gnome,Illusionist,19,true,5,24,42,10,9
+dnd_2024,Gnome,Illusionist,20,true,5,25,44,10,9
+dnd_2024,Goliath,Evoker,1,true,3,4,6,1,1
+dnd_2024,Goliath,Evoker,2,true,3,5,8,1,1
+dnd_2024,Goliath,Evoker,3,true,3,6,10,2,2
+dnd_2024,Goliath,Evoker,4,true,4,7,12,2,2
+dnd_2024,Goliath,Evoker,5,true,4,9,14,3,3
+dnd_2024,Goliath,Evoker,6,true,4,10,16,3,3
+dnd_2024,Goliath,Evoker,7,true,4,11,18,4,4
+dnd_2024,Goliath,Evoker,8,true,4,12,20,4,4
+dnd_2024,Goliath,Evoker,9,true,4,14,22,5,5
+dnd_2024,Goliath,Evoker,10,true,5,15,24,5,5
+dnd_2024,Goliath,Evoker,11,true,5,16,26,6,6
+dnd_2024,Goliath,Evoker,12,true,5,16,28,6,6
+dnd_2024,Goliath,Evoker,13,true,5,17,30,7,7
+dnd_2024,Goliath,Evoker,14,true,5,18,32,7,7
+dnd_2024,Goliath,Evoker,15,true,5,19,34,8,8
+dnd_2024,Goliath,Evoker,16,true,5,21,36,8,8
+dnd_2024,Goliath,Evoker,17,true,5,22,38,9,9
+dnd_2024,Goliath,Evoker,18,true,5,23,40,9,9
+dnd_2024,Goliath,Evoker,19,true,5,24,42,10,9
+dnd_2024,Goliath,Evoker,20,true,5,25,44,10,9
+dnd_2024,Goliath,Abjurer,1,true,3,4,6,1,1
+dnd_2024,Goliath,Abjurer,2,true,3,5,8,1,1
+dnd_2024,Goliath,Abjurer,3,true,3,6,10,2,2
+dnd_2024,Goliath,Abjurer,4,true,4,7,12,2,2
+dnd_2024,Goliath,Abjurer,5,true,4,9,14,3,3
+dnd_2024,Goliath,Abjurer,6,true,4,10,16,3,3
+dnd_2024,Goliath,Abjurer,7,true,4,11,18,4,4
+dnd_2024,Goliath,Abjurer,8,true,4,12,20,4,4
+dnd_2024,Goliath,Abjurer,9,true,4,14,22,5,5
+dnd_2024,Goliath,Abjurer,10,true,5,15,24,5,5
+dnd_2024,Goliath,Abjurer,11,true,5,16,26,6,6
+dnd_2024,Goliath,Abjurer,12,true,5,16,28,6,6
+dnd_2024,Goliath,Abjurer,13,true,5,17,30,7,7
+dnd_2024,Goliath,Abjurer,14,true,5,18,32,7,7
+dnd_2024,Goliath,Abjurer,15,true,5,19,34,8,8
+dnd_2024,Goliath,Abjurer,16,true,5,21,36,8,8
+dnd_2024,Goliath,Abjurer,17,true,5,22,38,9,9
+dnd_2024,Goliath,Abjurer,18,true,5,23,40,9,9
+dnd_2024,Goliath,Abjurer,19,true,5,24,42,10,9
+dnd_2024,Goliath,Abjurer,20,true,5,25,44,10,9
+dnd_2024,Goliath,Diviner,1,true,3,4,6,1,1
+dnd_2024,Goliath,Diviner,2,true,3,5,8,1,1
+dnd_2024,Goliath,Diviner,3,true,3,6,10,2,2
+dnd_2024,Goliath,Diviner,4,true,4,7,12,2,2
+dnd_2024,Goliath,Diviner,5,true,4,9,14,3,3
+dnd_2024,Goliath,Diviner,6,true,4,10,16,3,3
+dnd_2024,Goliath,Diviner,7,true,4,11,18,4,4
+dnd_2024,Goliath,Diviner,8,true,4,12,20,4,4
+dnd_2024,Goliath,Diviner,9,true,4,14,22,5,5
+dnd_2024,Goliath,Diviner,10,true,5,15,24,5,5
+dnd_2024,Goliath,Diviner,11,true,5,16,26,6,6
+dnd_2024,Goliath,Diviner,12,true,5,16,28,6,6
+dnd_2024,Goliath,Diviner,13,true,5,17,30,7,7
+dnd_2024,Goliath,Diviner,14,true,5,18,32,7,7
+dnd_2024,Goliath,Diviner,15,true,5,19,34,8,8
+dnd_2024,Goliath,Diviner,16,true,5,21,36,8,8
+dnd_2024,Goliath,Diviner,17,true,5,22,38,9,9
+dnd_2024,Goliath,Diviner,18,true,5,23,40,9,9
+dnd_2024,Goliath,Diviner,19,true,5,24,42,10,9
+dnd_2024,Goliath,Diviner,20,true,5,25,44,10,9
+dnd_2024,Goliath,Illusionist,1,true,3,4,6,1,1
+dnd_2024,Goliath,Illusionist,2,true,3,5,8,1,1
+dnd_2024,Goliath,Illusionist,3,true,3,6,10,2,2
+dnd_2024,Goliath,Illusionist,4,true,4,7,12,2,2
+dnd_2024,Goliath,Illusionist,5,true,4,9,14,3,3
+dnd_2024,Goliath,Illusionist,6,true,4,10,16,3,3
+dnd_2024,Goliath,Illusionist,7,true,4,11,18,4,4
+dnd_2024,Goliath,Illusionist,8,true,4,12,20,4,4
+dnd_2024,Goliath,Illusionist,9,true,4,14,22,5,5
+dnd_2024,Goliath,Illusionist,10,true,5,15,24,5,5
+dnd_2024,Goliath,Illusionist,11,true,5,16,26,6,6
+dnd_2024,Goliath,Illusionist,12,true,5,16,28,6,6
+dnd_2024,Goliath,Illusionist,13,true,5,17,30,7,7
+dnd_2024,Goliath,Illusionist,14,true,5,18,32,7,7
+dnd_2024,Goliath,Illusionist,15,true,5,19,34,8,8
+dnd_2024,Goliath,Illusionist,16,true,5,21,36,8,8
+dnd_2024,Goliath,Illusionist,17,true,5,22,38,9,9
+dnd_2024,Goliath,Illusionist,18,true,5,23,40,9,9
+dnd_2024,Goliath,Illusionist,19,true,5,24,42,10,9
+dnd_2024,Goliath,Illusionist,20,true,5,25,44,10,9
+dnd_2024,Halfling,Evoker,1,true,3,4,6,1,1
+dnd_2024,Halfling,Evoker,2,true,3,5,8,1,1
+dnd_2024,Halfling,Evoker,3,true,3,6,10,2,2
+dnd_2024,Halfling,Evoker,4,true,4,7,12,2,2
+dnd_2024,Halfling,Evoker,5,true,4,9,14,3,3
+dnd_2024,Halfling,Evoker,6,true,4,10,16,3,3
+dnd_2024,Halfling,Evoker,7,true,4,11,18,4,4
+dnd_2024,Halfling,Evoker,8,true,4,12,20,4,4
+dnd_2024,Halfling,Evoker,9,true,4,14,22,5,5
+dnd_2024,Halfling,Evoker,10,true,5,15,24,5,5
+dnd_2024,Halfling,Evoker,11,true,5,16,26,6,6
+dnd_2024,Halfling,Evoker,12,true,5,16,28,6,6
+dnd_2024,Halfling,Evoker,13,true,5,17,30,7,7
+dnd_2024,Halfling,Evoker,14,true,5,18,32,7,7
+dnd_2024,Halfling,Evoker,15,true,5,19,34,8,8
+dnd_2024,Halfling,Evoker,16,true,5,21,36,8,8
+dnd_2024,Halfling,Evoker,17,true,5,22,38,9,9
+dnd_2024,Halfling,Evoker,18,true,5,23,40,9,9
+dnd_2024,Halfling,Evoker,19,true,5,24,42,10,9
+dnd_2024,Halfling,Evoker,20,true,5,25,44,10,9
+dnd_2024,Halfling,Abjurer,1,true,3,4,6,1,1
+dnd_2024,Halfling,Abjurer,2,true,3,5,8,1,1
+dnd_2024,Halfling,Abjurer,3,true,3,6,10,2,2
+dnd_2024,Halfling,Abjurer,4,true,4,7,12,2,2
+dnd_2024,Halfling,Abjurer,5,true,4,9,14,3,3
+dnd_2024,Halfling,Abjurer,6,true,4,10,16,3,3
+dnd_2024,Halfling,Abjurer,7,true,4,11,18,4,4
+dnd_2024,Halfling,Abjurer,8,true,4,12,20,4,4
+dnd_2024,Halfling,Abjurer,9,true,4,14,22,5,5
+dnd_2024,Halfling,Abjurer,10,true,5,15,24,5,5
+dnd_2024,Halfling,Abjurer,11,true,5,16,26,6,6
+dnd_2024,Halfling,Abjurer,12,true,5,16,28,6,6
+dnd_2024,Halfling,Abjurer,13,true,5,17,30,7,7
+dnd_2024,Halfling,Abjurer,14,true,5,18,32,7,7
+dnd_2024,Halfling,Abjurer,15,true,5,19,34,8,8
+dnd_2024,Halfling,Abjurer,16,true,5,21,36,8,8
+dnd_2024,Halfling,Abjurer,17,true,5,22,38,9,9
+dnd_2024,Halfling,Abjurer,18,true,5,23,40,9,9
+dnd_2024,Halfling,Abjurer,19,true,5,24,42,10,9
+dnd_2024,Halfling,Abjurer,20,true,5,25,44,10,9
+dnd_2024,Halfling,Diviner,1,true,3,4,6,1,1
+dnd_2024,Halfling,Diviner,2,true,3,5,8,1,1
+dnd_2024,Halfling,Diviner,3,true,3,6,10,2,2
+dnd_2024,Halfling,Diviner,4,true,4,7,12,2,2
+dnd_2024,Halfling,Diviner,5,true,4,9,14,3,3
+dnd_2024,Halfling,Diviner,6,true,4,10,16,3,3
+dnd_2024,Halfling,Diviner,7,true,4,11,18,4,4
+dnd_2024,Halfling,Diviner,8,true,4,12,20,4,4
+dnd_2024,Halfling,Diviner,9,true,4,14,22,5,5
+dnd_2024,Halfling,Diviner,10,true,5,15,24,5,5
+dnd_2024,Halfling,Diviner,11,true,5,16,26,6,6
+dnd_2024,Halfling,Diviner,12,true,5,16,28,6,6
+dnd_2024,Halfling,Diviner,13,true,5,17,30,7,7
+dnd_2024,Halfling,Diviner,14,true,5,18,32,7,7
+dnd_2024,Halfling,Diviner,15,true,5,19,34,8,8
+dnd_2024,Halfling,Diviner,16,true,5,21,36,8,8
+dnd_2024,Halfling,Diviner,17,true,5,22,38,9,9
+dnd_2024,Halfling,Diviner,18,true,5,23,40,9,9
+dnd_2024,Halfling,Diviner,19,true,5,24,42,10,9
+dnd_2024,Halfling,Diviner,20,true,5,25,44,10,9
+dnd_2024,Halfling,Illusionist,1,true,3,4,6,1,1
+dnd_2024,Halfling,Illusionist,2,true,3,5,8,1,1
+dnd_2024,Halfling,Illusionist,3,true,3,6,10,2,2
+dnd_2024,Halfling,Illusionist,4,true,4,7,12,2,2
+dnd_2024,Halfling,Illusionist,5,true,4,9,14,3,3
+dnd_2024,Halfling,Illusionist,6,true,4,10,16,3,3
+dnd_2024,Halfling,Illusionist,7,true,4,11,18,4,4
+dnd_2024,Halfling,Illusionist,8,true,4,12,20,4,4
+dnd_2024,Halfling,Illusionist,9,true,4,14,22,5,5
+dnd_2024,Halfling,Illusionist,10,true,5,15,24,5,5
+dnd_2024,Halfling,Illusionist,11,true,5,16,26,6,6
+dnd_2024,Halfling,Illusionist,12,true,5,16,28,6,6
+dnd_2024,Halfling,Illusionist,13,true,5,17,30,7,7
+dnd_2024,Halfling,Illusionist,14,true,5,18,32,7,7
+dnd_2024,Halfling,Illusionist,15,true,5,19,34,8,8
+dnd_2024,Halfling,Illusionist,16,true,5,21,36,8,8
+dnd_2024,Halfling,Illusionist,17,true,5,22,38,9,9
+dnd_2024,Halfling,Illusionist,18,true,5,23,40,9,9
+dnd_2024,Halfling,Illusionist,19,true,5,24,42,10,9
+dnd_2024,Halfling,Illusionist,20,true,5,25,44,10,9
+dnd_2024,Human,Evoker,1,true,3,4,6,1,1
+dnd_2024,Human,Evoker,2,true,3,5,8,1,1
+dnd_2024,Human,Evoker,3,true,3,6,10,2,2
+dnd_2024,Human,Evoker,4,true,4,7,12,2,2
+dnd_2024,Human,Evoker,5,true,4,9,14,3,3
+dnd_2024,Human,Evoker,6,true,4,10,16,3,3
+dnd_2024,Human,Evoker,7,true,4,11,18,4,4
+dnd_2024,Human,Evoker,8,true,4,12,20,4,4
+dnd_2024,Human,Evoker,9,true,4,14,22,5,5
+dnd_2024,Human,Evoker,10,true,5,15,24,5,5
+dnd_2024,Human,Evoker,11,true,5,16,26,6,6
+dnd_2024,Human,Evoker,12,true,5,16,28,6,6
+dnd_2024,Human,Evoker,13,true,5,17,30,7,7
+dnd_2024,Human,Evoker,14,true,5,18,32,7,7
+dnd_2024,Human,Evoker,15,true,5,19,34,8,8
+dnd_2024,Human,Evoker,16,true,5,21,36,8,8
+dnd_2024,Human,Evoker,17,true,5,22,38,9,9
+dnd_2024,Human,Evoker,18,true,5,23,40,9,9
+dnd_2024,Human,Evoker,19,true,5,24,42,10,9
+dnd_2024,Human,Evoker,20,true,5,25,44,10,9
+dnd_2024,Human,Abjurer,1,true,3,4,6,1,1
+dnd_2024,Human,Abjurer,2,true,3,5,8,1,1
+dnd_2024,Human,Abjurer,3,true,3,6,10,2,2
+dnd_2024,Human,Abjurer,4,true,4,7,12,2,2
+dnd_2024,Human,Abjurer,5,true,4,9,14,3,3
+dnd_2024,Human,Abjurer,6,true,4,10,16,3,3
+dnd_2024,Human,Abjurer,7,true,4,11,18,4,4
+dnd_2024,Human,Abjurer,8,true,4,12,20,4,4
+dnd_2024,Human,Abjurer,9,true,4,14,22,5,5
+dnd_2024,Human,Abjurer,10,true,5,15,24,5,5
+dnd_2024,Human,Abjurer,11,true,5,16,26,6,6
+dnd_2024,Human,Abjurer,12,true,5,16,28,6,6
+dnd_2024,Human,Abjurer,13,true,5,17,30,7,7
+dnd_2024,Human,Abjurer,14,true,5,18,32,7,7
+dnd_2024,Human,Abjurer,15,true,5,19,34,8,8
+dnd_2024,Human,Abjurer,16,true,5,21,36,8,8
+dnd_2024,Human,Abjurer,17,true,5,22,38,9,9
+dnd_2024,Human,Abjurer,18,true,5,23,40,9,9
+dnd_2024,Human,Abjurer,19,true,5,24,42,10,9
+dnd_2024,Human,Abjurer,20,true,5,25,44,10,9
+dnd_2024,Human,Diviner,1,true,3,4,6,1,1
+dnd_2024,Human,Diviner,2,true,3,5,8,1,1
+dnd_2024,Human,Diviner,3,true,3,6,10,2,2
+dnd_2024,Human,Diviner,4,true,4,7,12,2,2
+dnd_2024,Human,Diviner,5,true,4,9,14,3,3
+dnd_2024,Human,Diviner,6,true,4,10,16,3,3
+dnd_2024,Human,Diviner,7,true,4,11,18,4,4
+dnd_2024,Human,Diviner,8,true,4,12,20,4,4
+dnd_2024,Human,Diviner,9,true,4,14,22,5,5
+dnd_2024,Human,Diviner,10,true,5,15,24,5,5
+dnd_2024,Human,Diviner,11,true,5,16,26,6,6
+dnd_2024,Human,Diviner,12,true,5,16,28,6,6
+dnd_2024,Human,Diviner,13,true,5,17,30,7,7
+dnd_2024,Human,Diviner,14,true,5,18,32,7,7
+dnd_2024,Human,Diviner,15,true,5,19,34,8,8
+dnd_2024,Human,Diviner,16,true,5,21,36,8,8
+dnd_2024,Human,Diviner,17,true,5,22,38,9,9
+dnd_2024,Human,Diviner,18,true,5,23,40,9,9
+dnd_2024,Human,Diviner,19,true,5,24,42,10,9
+dnd_2024,Human,Diviner,20,true,5,25,44,10,9
+dnd_2024,Human,Illusionist,1,true,3,4,6,1,1
+dnd_2024,Human,Illusionist,2,true,3,5,8,1,1
+dnd_2024,Human,Illusionist,3,true,3,6,10,2,2
+dnd_2024,Human,Illusionist,4,true,4,7,12,2,2
+dnd_2024,Human,Illusionist,5,true,4,9,14,3,3
+dnd_2024,Human,Illusionist,6,true,4,10,16,3,3
+dnd_2024,Human,Illusionist,7,true,4,11,18,4,4
+dnd_2024,Human,Illusionist,8,true,4,12,20,4,4
+dnd_2024,Human,Illusionist,9,true,4,14,22,5,5
+dnd_2024,Human,Illusionist,10,true,5,15,24,5,5
+dnd_2024,Human,Illusionist,11,true,5,16,26,6,6
+dnd_2024,Human,Illusionist,12,true,5,16,28,6,6
+dnd_2024,Human,Illusionist,13,true,5,17,30,7,7
+dnd_2024,Human,Illusionist,14,true,5,18,32,7,7
+dnd_2024,Human,Illusionist,15,true,5,19,34,8,8
+dnd_2024,Human,Illusionist,16,true,5,21,36,8,8
+dnd_2024,Human,Illusionist,17,true,5,22,38,9,9
+dnd_2024,Human,Illusionist,18,true,5,23,40,9,9
+dnd_2024,Human,Illusionist,19,true,5,24,42,10,9
+dnd_2024,Human,Illusionist,20,true,5,25,44,10,9
+dnd_2024,Orc,Evoker,1,true,3,4,6,1,1
+dnd_2024,Orc,Evoker,2,true,3,5,8,1,1
+dnd_2024,Orc,Evoker,3,true,3,6,10,2,2
+dnd_2024,Orc,Evoker,4,true,4,7,12,2,2
+dnd_2024,Orc,Evoker,5,true,4,9,14,3,3
+dnd_2024,Orc,Evoker,6,true,4,10,16,3,3
+dnd_2024,Orc,Evoker,7,true,4,11,18,4,4
+dnd_2024,Orc,Evoker,8,true,4,12,20,4,4
+dnd_2024,Orc,Evoker,9,true,4,14,22,5,5
+dnd_2024,Orc,Evoker,10,true,5,15,24,5,5
+dnd_2024,Orc,Evoker,11,true,5,16,26,6,6
+dnd_2024,Orc,Evoker,12,true,5,16,28,6,6
+dnd_2024,Orc,Evoker,13,true,5,17,30,7,7
+dnd_2024,Orc,Evoker,14,true,5,18,32,7,7
+dnd_2024,Orc,Evoker,15,true,5,19,34,8,8
+dnd_2024,Orc,Evoker,16,true,5,21,36,8,8
+dnd_2024,Orc,Evoker,17,true,5,22,38,9,9
+dnd_2024,Orc,Evoker,18,true,5,23,40,9,9
+dnd_2024,Orc,Evoker,19,true,5,24,42,10,9
+dnd_2024,Orc,Evoker,20,true,5,25,44,10,9
+dnd_2024,Orc,Abjurer,1,true,3,4,6,1,1
+dnd_2024,Orc,Abjurer,2,true,3,5,8,1,1
+dnd_2024,Orc,Abjurer,3,true,3,6,10,2,2
+dnd_2024,Orc,Abjurer,4,true,4,7,12,2,2
+dnd_2024,Orc,Abjurer,5,true,4,9,14,3,3
+dnd_2024,Orc,Abjurer,6,true,4,10,16,3,3
+dnd_2024,Orc,Abjurer,7,true,4,11,18,4,4
+dnd_2024,Orc,Abjurer,8,true,4,12,20,4,4
+dnd_2024,Orc,Abjurer,9,true,4,14,22,5,5
+dnd_2024,Orc,Abjurer,10,true,5,15,24,5,5
+dnd_2024,Orc,Abjurer,11,true,5,16,26,6,6
+dnd_2024,Orc,Abjurer,12,true,5,16,28,6,6
+dnd_2024,Orc,Abjurer,13,true,5,17,30,7,7
+dnd_2024,Orc,Abjurer,14,true,5,18,32,7,7
+dnd_2024,Orc,Abjurer,15,true,5,19,34,8,8
+dnd_2024,Orc,Abjurer,16,true,5,21,36,8,8
+dnd_2024,Orc,Abjurer,17,true,5,22,38,9,9
+dnd_2024,Orc,Abjurer,18,true,5,23,40,9,9
+dnd_2024,Orc,Abjurer,19,true,5,24,42,10,9
+dnd_2024,Orc,Abjurer,20,true,5,25,44,10,9
+dnd_2024,Orc,Diviner,1,true,3,4,6,1,1
+dnd_2024,Orc,Diviner,2,true,3,5,8,1,1
+dnd_2024,Orc,Diviner,3,true,3,6,10,2,2
+dnd_2024,Orc,Diviner,4,true,4,7,12,2,2
+dnd_2024,Orc,Diviner,5,true,4,9,14,3,3
+dnd_2024,Orc,Diviner,6,true,4,10,16,3,3
+dnd_2024,Orc,Diviner,7,true,4,11,18,4,4
+dnd_2024,Orc,Diviner,8,true,4,12,20,4,4
+dnd_2024,Orc,Diviner,9,true,4,14,22,5,5
+dnd_2024,Orc,Diviner,10,true,5,15,24,5,5
+dnd_2024,Orc,Diviner,11,true,5,16,26,6,6
+dnd_2024,Orc,Diviner,12,true,5,16,28,6,6
+dnd_2024,Orc,Diviner,13,true,5,17,30,7,7
+dnd_2024,Orc,Diviner,14,true,5,18,32,7,7
+dnd_2024,Orc,Diviner,15,true,5,19,34,8,8
+dnd_2024,Orc,Diviner,16,true,5,21,36,8,8
+dnd_2024,Orc,Diviner,17,true,5,22,38,9,9
+dnd_2024,Orc,Diviner,18,true,5,23,40,9,9
+dnd_2024,Orc,Diviner,19,true,5,24,42,10,9
+dnd_2024,Orc,Diviner,20,true,5,25,44,10,9
+dnd_2024,Orc,Illusionist,1,true,3,4,6,1,1
+dnd_2024,Orc,Illusionist,2,true,3,5,8,1,1
+dnd_2024,Orc,Illusionist,3,true,3,6,10,2,2
+dnd_2024,Orc,Illusionist,4,true,4,7,12,2,2
+dnd_2024,Orc,Illusionist,5,true,4,9,14,3,3
+dnd_2024,Orc,Illusionist,6,true,4,10,16,3,3
+dnd_2024,Orc,Illusionist,7,true,4,11,18,4,4
+dnd_2024,Orc,Illusionist,8,true,4,12,20,4,4
+dnd_2024,Orc,Illusionist,9,true,4,14,22,5,5
+dnd_2024,Orc,Illusionist,10,true,5,15,24,5,5
+dnd_2024,Orc,Illusionist,11,true,5,16,26,6,6
+dnd_2024,Orc,Illusionist,12,true,5,16,28,6,6
+dnd_2024,Orc,Illusionist,13,true,5,17,30,7,7
+dnd_2024,Orc,Illusionist,14,true,5,18,32,7,7
+dnd_2024,Orc,Illusionist,15,true,5,19,34,8,8
+dnd_2024,Orc,Illusionist,16,true,5,21,36,8,8
+dnd_2024,Orc,Illusionist,17,true,5,22,38,9,9
+dnd_2024,Orc,Illusionist,18,true,5,23,40,9,9
+dnd_2024,Orc,Illusionist,19,true,5,24,42,10,9
+dnd_2024,Orc,Illusionist,20,true,5,25,44,10,9
+dnd_2024,Tiefling,Evoker,1,true,3,4,6,1,1
+dnd_2024,Tiefling,Evoker,2,true,3,5,8,1,1
+dnd_2024,Tiefling,Evoker,3,true,3,6,10,2,2
+dnd_2024,Tiefling,Evoker,4,true,4,7,12,2,2
+dnd_2024,Tiefling,Evoker,5,true,4,9,14,3,3
+dnd_2024,Tiefling,Evoker,6,true,4,10,16,3,3
+dnd_2024,Tiefling,Evoker,7,true,4,11,18,4,4
+dnd_2024,Tiefling,Evoker,8,true,4,12,20,4,4
+dnd_2024,Tiefling,Evoker,9,true,4,14,22,5,5
+dnd_2024,Tiefling,Evoker,10,true,5,15,24,5,5
+dnd_2024,Tiefling,Evoker,11,true,5,16,26,6,6
+dnd_2024,Tiefling,Evoker,12,true,5,16,28,6,6
+dnd_2024,Tiefling,Evoker,13,true,5,17,30,7,7
+dnd_2024,Tiefling,Evoker,14,true,5,18,32,7,7
+dnd_2024,Tiefling,Evoker,15,true,5,19,34,8,8
+dnd_2024,Tiefling,Evoker,16,true,5,21,36,8,8
+dnd_2024,Tiefling,Evoker,17,true,5,22,38,9,9
+dnd_2024,Tiefling,Evoker,18,true,5,23,40,9,9
+dnd_2024,Tiefling,Evoker,19,true,5,24,42,10,9
+dnd_2024,Tiefling,Evoker,20,true,5,25,44,10,9
+dnd_2024,Tiefling,Abjurer,1,true,3,4,6,1,1
+dnd_2024,Tiefling,Abjurer,2,true,3,5,8,1,1
+dnd_2024,Tiefling,Abjurer,3,true,3,6,10,2,2
+dnd_2024,Tiefling,Abjurer,4,true,4,7,12,2,2
+dnd_2024,Tiefling,Abjurer,5,true,4,9,14,3,3
+dnd_2024,Tiefling,Abjurer,6,true,4,10,16,3,3
+dnd_2024,Tiefling,Abjurer,7,true,4,11,18,4,4
+dnd_2024,Tiefling,Abjurer,8,true,4,12,20,4,4
+dnd_2024,Tiefling,Abjurer,9,true,4,14,22,5,5
+dnd_2024,Tiefling,Abjurer,10,true,5,15,24,5,5
+dnd_2024,Tiefling,Abjurer,11,true,5,16,26,6,6
+dnd_2024,Tiefling,Abjurer,12,true,5,16,28,6,6
+dnd_2024,Tiefling,Abjurer,13,true,5,17,30,7,7
+dnd_2024,Tiefling,Abjurer,14,true,5,18,32,7,7
+dnd_2024,Tiefling,Abjurer,15,true,5,19,34,8,8
+dnd_2024,Tiefling,Abjurer,16,true,5,21,36,8,8
+dnd_2024,Tiefling,Abjurer,17,true,5,22,38,9,9
+dnd_2024,Tiefling,Abjurer,18,true,5,23,40,9,9
+dnd_2024,Tiefling,Abjurer,19,true,5,24,42,10,9
+dnd_2024,Tiefling,Abjurer,20,true,5,25,44,10,9
+dnd_2024,Tiefling,Diviner,1,true,3,4,6,1,1
+dnd_2024,Tiefling,Diviner,2,true,3,5,8,1,1
+dnd_2024,Tiefling,Diviner,3,true,3,6,10,2,2
+dnd_2024,Tiefling,Diviner,4,true,4,7,12,2,2
+dnd_2024,Tiefling,Diviner,5,true,4,9,14,3,3
+dnd_2024,Tiefling,Diviner,6,true,4,10,16,3,3
+dnd_2024,Tiefling,Diviner,7,true,4,11,18,4,4
+dnd_2024,Tiefling,Diviner,8,true,4,12,20,4,4
+dnd_2024,Tiefling,Diviner,9,true,4,14,22,5,5
+dnd_2024,Tiefling,Diviner,10,true,5,15,24,5,5
+dnd_2024,Tiefling,Diviner,11,true,5,16,26,6,6
+dnd_2024,Tiefling,Diviner,12,true,5,16,28,6,6
+dnd_2024,Tiefling,Diviner,13,true,5,17,30,7,7
+dnd_2024,Tiefling,Diviner,14,true,5,18,32,7,7
+dnd_2024,Tiefling,Diviner,15,true,5,19,34,8,8
+dnd_2024,Tiefling,Diviner,16,true,5,21,36,8,8
+dnd_2024,Tiefling,Diviner,17,true,5,22,38,9,9
+dnd_2024,Tiefling,Diviner,18,true,5,23,40,9,9
+dnd_2024,Tiefling,Diviner,19,true,5,24,42,10,9
+dnd_2024,Tiefling,Diviner,20,true,5,25,44,10,9
+dnd_2024,Tiefling,Illusionist,1,true,3,4,6,1,1
+dnd_2024,Tiefling,Illusionist,2,true,3,5,8,1,1
+dnd_2024,Tiefling,Illusionist,3,true,3,6,10,2,2
+dnd_2024,Tiefling,Illusionist,4,true,4,7,12,2,2
+dnd_2024,Tiefling,Illusionist,5,true,4,9,14,3,3
+dnd_2024,Tiefling,Illusionist,6,true,4,10,16,3,3
+dnd_2024,Tiefling,Illusionist,7,true,4,11,18,4,4
+dnd_2024,Tiefling,Illusionist,8,true,4,12,20,4,4
+dnd_2024,Tiefling,Illusionist,9,true,4,14,22,5,5
+dnd_2024,Tiefling,Illusionist,10,true,5,15,24,5,5
+dnd_2024,Tiefling,Illusionist,11,true,5,16,26,6,6
+dnd_2024,Tiefling,Illusionist,12,true,5,16,28,6,6
+dnd_2024,Tiefling,Illusionist,13,true,5,17,30,7,7
+dnd_2024,Tiefling,Illusionist,14,true,5,18,32,7,7
+dnd_2024,Tiefling,Illusionist,15,true,5,19,34,8,8
+dnd_2024,Tiefling,Illusionist,16,true,5,21,36,8,8
+dnd_2024,Tiefling,Illusionist,17,true,5,22,38,9,9
+dnd_2024,Tiefling,Illusionist,18,true,5,23,40,9,9
+dnd_2024,Tiefling,Illusionist,19,true,5,24,42,10,9
+dnd_2024,Tiefling,Illusionist,20,true,5,25,44,10,9

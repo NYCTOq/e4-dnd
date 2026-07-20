@@ -158,6 +158,8 @@ function hydrateResources(character: Character): CharacterResource[] {
       max: clampNumber(resource.max, 1, 999, 1),
       used: clampNumber(resource.used, 0, clampNumber(resource.max, 1, 999, 1), 0),
       recovery: resource.recovery === "short" || resource.recovery === "long" ? resource.recovery : "manual",
+      unlimited: resource.unlimited === true,
+      shortRecoveryAmount: typeof resource.shortRecoveryAmount === "number" ? clampNumber(resource.shortRecoveryAmount, 1, 999, 1) : undefined,
     }));
 }
 

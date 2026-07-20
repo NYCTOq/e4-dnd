@@ -63,7 +63,7 @@ export function CharacterEditor({
   const validationIssues = useMemo(() => validateCharacterDraft(draft, activeRulesetData, draft.abilities), [draft, activeRulesetData]);
   const classSkillChoices = useMemo(() => normalizeClassSkillChoices(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
   const finalSkills = useMemo(() => buildFinalSkillProficiencies(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
-  const expertiseLimit = getExpertiseLimit(draft.className, draft.level);
+  const expertiseLimit = getExpertiseLimit(draft.className, draft.level, draft.ruleset);
 
   function updateDraft<K extends keyof CharacterDraft>(
     key: K,

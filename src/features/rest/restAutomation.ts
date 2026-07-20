@@ -8,8 +8,10 @@ const HISTORY_KEY = "e4_dnd_rest_history_v1";
 
 function restoreResources(resources: CharacterResource[], kind: RestKind) {
   return resources.map((resource) => {
-    const shouldRestore = kind === "long" ? resource.recovery === "short" || resource.recovery === "long" : resource.recovery === "short";
-    return shouldRestore ? { ...resource, used: 0 } : resource;
+    const shouldRestore = kind === "long" ? resource.recovery === "short" || resource.recovery === "long" : resource.recovery === "short" || Boolean(resource.shortRecoveryAmount);
+    if (!shouldRestore || resource.unlimited) return resource;
+    if (kind === "short" && resource.shortRecoveryAmount) return { ...resource, used: Math.max(0, resource.used - resource.shortRecoveryAmount) };
+    return { ...resource, used: 0 };
   });
 }
 

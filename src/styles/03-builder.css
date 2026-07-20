@@ -260,3 +260,14 @@
     width: 100%;
   }
 }
+
+/* v5.30 layered ability builder */
+.ability-layer-card { display: grid; gap: .45rem; align-content: start; }
+.ability-layer-card select { width: 100%; }
+.ability-final-score { font-size: 1.35rem; }
+.ability-stepper, .ability-asi-row { display: flex; align-items: center; justify-content: center; gap: .65rem; }
+.ability-stepper button, .ability-asi-row button { min-width: 44px; min-height: 44px; }
+.ability-asi-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; }
+.ability-asi-row { padding: .65rem; border: 1px solid var(--border-color, rgba(255,255,255,.12)); border-radius: 12px; }
+@media (max-width: 700px) { .ability-asi-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .ability-asi-grid { grid-template-columns: 1fr; } }

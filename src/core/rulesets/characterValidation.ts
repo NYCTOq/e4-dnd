@@ -20,11 +20,14 @@ export function validateCharacterDraft(draft: CharacterDraft, rulesetData: Rules
   const add = (id: string, severity: ValidationSeverity, step: string, message: string) => issues.push({ id, severity, step, message });
   const classData = rulesetData?.classes.find((item) => item.name === draft.className) ?? null;
   const background = rulesetData?.backgrounds.find((item) => item.name === draft.background) ?? null;
+  const race = rulesetData?.races.find((item) => item.name === draft.race) ?? null;
 
   if (!draft.name.trim()) add("name", "error", "Basic", "Karakter adı zorunlu.");
   if (draft.level < 1 || draft.level > 20 || !Number.isInteger(draft.level)) add("level", "error", "Class", "Level 1 ile 20 arasında tam sayı olmalı.");
   if (!draft.className.trim() || (draft.ruleset !== "homebrew" && !classData)) add("class", "error", "Class", "Geçerli bir class seçilmeli.");
-  if (draft.ruleset !== "homebrew" && !rulesetData?.races.some((item) => item.name === draft.race)) add("race", "error", "Class", "Geçerli bir race/species seçilmeli.");
+  if (draft.ruleset !== "homebrew" && !race) add("race", "error", "Class", "Geçerli bir race/species seçilmeli.");
+  if (draft.ruleset === "dnd_2014" && race?.subraces?.length && !draft.subrace) add("subrace", "error", "Class", `${race.name} için subrace seçilmeli.`);
+  if (draft.ruleset === "dnd_2014" && race?.name === "Half-Elf" && (!draft.flexibleRaceAbilityPrimary || !draft.flexibleRaceAbilitySecondary || draft.flexibleRaceAbilityPrimary === draft.flexibleRaceAbilitySecondary || draft.flexibleRaceAbilityPrimary === "cha" || draft.flexibleRaceAbilitySecondary === "cha")) add("half-elf-abilities", "error", "Class", "Half-Elf için CHA dışında iki farklı ability’ye +1 seçilmeli.");
   if (draft.ruleset !== "homebrew" && !background) add("background", "error", "Class", "Background seçilmeli.");
   if (classData && draft.level >= classData.subclassLevel && !draft.subclass) add("subclass", "error", "Class", `Level ${classData.subclassLevel} itibarıyla subclass seçilmeli.`);
 
@@ -32,8 +35,13 @@ export function validateCharacterDraft(draft: CharacterDraft, rulesetData: Rules
     if (!Number.isInteger(score) || score < 1 || score > 20) add(`ability-${ability}`, "error", "Abilities", `${ability.toUpperCase()} nihai skoru oyuncu karakteri için 1–20 arasında tam sayı olmalı.`);
   }
   if (draft.ruleset === "dnd_2024" && background) {
-    if (!draft.originAbilityPrimary || !draft.originAbilitySecondary) add("origin-abilities", "error", "Class", "2024 background için +2 ve +1 ability seçimleri tamamlanmalı.");
-    if (draft.originAbilityPrimary === draft.originAbilitySecondary) add("origin-duplicate", "error", "Class", "+2 ve +1 aynı ability üzerine verilemez.");
+    if ((draft.originAbilityMode ?? "2-1") === "1-1-1") {
+      if (!draft.originAbilityPrimary || !draft.originAbilitySecondary || !draft.originAbilityTertiary) add("origin-abilities", "error", "Class", "2024 background için üç ayrı +1 ability seçimi tamamlanmalı.");
+      if (new Set([draft.originAbilityPrimary, draft.originAbilitySecondary, draft.originAbilityTertiary].filter(Boolean)).size !== 3) add("origin-duplicate", "error", "Class", "+1/+1/+1 dağılımında üç farklı ability seçilmeli.");
+    } else {
+      if (!draft.originAbilityPrimary || !draft.originAbilitySecondary) add("origin-abilities", "error", "Class", "2024 background için +2 ve +1 ability seçimleri tamamlanmalı.");
+      if (draft.originAbilityPrimary === draft.originAbilitySecondary) add("origin-duplicate", "error", "Class", "+2 ve +1 aynı ability üzerine verilemez.");
+    }
   }
 
   if (classData) {

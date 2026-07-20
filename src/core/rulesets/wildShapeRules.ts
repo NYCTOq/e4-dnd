@@ -1,4 +1,5 @@
 import type { RulesetId } from "../character/character.types";
+import { getWildShapeKnownForms, getWildShapeMaxCr, canWildShapeFly, canWildShapeSwim } from "./druidRules";
 
 export type WildShapeForm = {
   id: string; name: string; challengeRating: number; armorClass: number; hitPoints: number;
@@ -24,12 +25,11 @@ export function getWildShapeForms() { return forms; }
 export function getWildShapeKnownCount(className:string,level:number,ruleset:RulesetId) {
   if(className.trim().toLowerCase()!=="druid"||level<2)return 0;
   if(ruleset!=="dnd_2024")return 8;
-  return level>=8?8:level>=4?6:4;
+  return getWildShapeKnownForms(level,"dnd_2024");
 }
 export function getWildShapeLimits(level:number,ruleset:RulesetId,subclass:string) {
-  const moon=subclass.trim().toLowerCase().includes("moon");
-  if(ruleset==="dnd_2014"&&moon)return {maxCr:level>=18?6:level>=6?Math.floor(level/3):1,swim:true,fly:level>=8};
-  return {maxCr:level>=8?1:level>=4 ? .5 : .25,swim:level>=4,fly:level>=8};
+  const edition=ruleset==="dnd_2024"?"dnd_2024":"dnd_2014";
+  return {maxCr:getWildShapeMaxCr(level,edition,subclass),swim:canWildShapeSwim(level,edition),fly:canWildShapeFly(level,edition)};
 }
 export function isWildShapeFormEligible(form:WildShapeForm,level:number,ruleset:RulesetId,subclass:string) {
   if(level<2)return false;

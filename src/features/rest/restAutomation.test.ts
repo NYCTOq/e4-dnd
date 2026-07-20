@@ -19,3 +19,10 @@ describe("rest automation", () => {
     expect(restored[0].currentHp).toBe(3);
   });
 });
+
+describe("Barbarian Rage recovery",()=>{
+  it("restores only one 2024 Rage use on a Short Rest",()=>{
+    const character=makeCharacter({resources:[{id:"rage",name:"Rage",max:4,used:3,recovery:"long",shortRecoveryAmount:1}]});
+    expect(applyRestToCharacter(character,"short",getDefaultRestOptions("short")).character.resources[0].used).toBe(2);
+  });
+});

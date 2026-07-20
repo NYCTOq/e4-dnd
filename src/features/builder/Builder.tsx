@@ -2,7 +2,8 @@ import { useMemo, useState } from "react";
 import { AutosaveStatus } from "../../shared/forms/AutosaveStatus";
 import { useAutosavedDraft } from "../../shared/state/useAutosavedDraft";
 import type { RulesetData, DndSpellData } from "../../core/rulesets/ruleset.types";
-import { applyAbilityBonuses, getOriginAbilityBonuses } from "../../core/rulesets/originRules";
+import { getOriginAbilityBonuses } from "../../core/rulesets/originRules";
+import { ABILITY_KEYS, STANDARD_ARRAY_VALUES, applyAbilityLayers, getAsiBudget, getFeatSelectionAsiError, getHighLevelAbilityError, getPointBuyRemaining, getSpentAsi, updateAbilityIncrease } from "../../core/rulesets/highLevelAbilityBuilder";
 import { getRulesetDefinition } from "../../core/rulesets/rulesetRegistry";
 import { getAlwaysPreparedSpells, getSubclassesForClass, getUnlockedSubclassFeatures } from "../../core/rulesets/subclassRules";
 import { getGeneralFeatSlotCount, getGrantedOriginFeatName, isFeatEligible } from "../../core/rulesets/featRules";
@@ -65,6 +66,7 @@ export function Builder({
   );
   const [activeStepIndex, setActiveStepIndex] = useState(0);
   const [abilityMethod, setAbilityMethod] = useState<AbilityGenerationMethod>("standard-array");
+  const [featSelectionNotice, setFeatSelectionNotice] = useState("");
   const selectedRuleset = useSelectedRuleset(draft.ruleset, rulesetData);
   const activeRulesetData = selectedRuleset.data;
   const activeRulesetLoading = selectedRuleset.loading || (draft.ruleset === rulesetData?.id && isRulesetLoading);
@@ -106,8 +108,20 @@ export function Builder({
 
   const selectedSubrace = useMemo(() => selectedRace?.subraces?.find((item) => item.name === draft.subrace) ?? null, [selectedRace, draft.subrace]);
   const selectedBackground = useMemo(() => activeRulesetData?.backgrounds.find((item) => item.name === draft.background) ?? null, [activeRulesetData, draft.background]);
-  const originBonuses = useMemo(() => getOriginAbilityBonuses(draft.ruleset, selectedRace, selectedSubrace, selectedBackground, draft.originAbilityPrimary, draft.originAbilitySecondary), [draft.ruleset, draft.originAbilityPrimary, draft.originAbilitySecondary, selectedRace, selectedSubrace, selectedBackground]);
-  const finalAbilities = useMemo(() => applyAbilityBonuses(draft.abilities, originBonuses), [draft.abilities, originBonuses]);
+  const originBonuses = useMemo(() => getOriginAbilityBonuses(
+    draft.ruleset,
+    selectedRace,
+    selectedSubrace,
+    selectedBackground,
+    draft.originAbilityPrimary,
+    draft.originAbilitySecondary,
+    draft.originAbilityTertiary,
+    draft.originAbilityMode ?? "2-1",
+    draft.flexibleRaceAbilityPrimary,
+    draft.flexibleRaceAbilitySecondary,
+  ), [draft.ruleset, draft.originAbilityPrimary, draft.originAbilitySecondary, draft.originAbilityTertiary, draft.originAbilityMode, draft.flexibleRaceAbilityPrimary, draft.flexibleRaceAbilitySecondary, selectedRace, selectedSubrace, selectedBackground]);
+  const asiBudget = getAsiBudget(draft.level, draft.className, draft.ruleset, draft.featIds.length);
+  const finalAbilities = useMemo(() => applyAbilityLayers(draft.abilities, originBonuses, draft.abilityScoreIncreases), [draft.abilities, originBonuses, draft.abilityScoreIncreases]);
   const generalFeatSlots = useMemo(() => getGeneralFeatSlotCount(draft.level, draft.className, draft.ruleset), [draft.level, draft.className, draft.ruleset]);
   const grantedOriginFeatName = getGrantedOriginFeatName(draft.ruleset, selectedBackground?.originFeat);
   const selectableFeats = useMemo(() => (activeRulesetData?.feats ?? []).filter((feat) => feat.category !== "origin"), [activeRulesetData]);
@@ -139,9 +153,10 @@ export function Builder({
   const availableClassSkills = useMemo(() => getAvailableClassSkills(selectedClass, selectedBackground), [selectedClass, selectedBackground]);
   const normalizedClassSkills = useMemo(() => normalizeClassSkillChoices(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
   const finalSkillProficiencies = useMemo(() => buildFinalSkillProficiencies(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
-  const expertiseLimit = getExpertiseLimit(draft.className, draft.level);
-  const availableAsiPoints = Math.max(0, (generalFeatSlots - draft.featIds.length) * 2);
-  const abilityBudgetError = getAbilityBudgetError(abilityMethod, draft.abilities, availableAsiPoints);
+  const expertiseLimit = getExpertiseLimit(draft.className, draft.level, draft.ruleset);
+  const baseAbilityBudgetError = getAbilityBudgetError(abilityMethod, draft.abilities, 0);
+  const highLevelAbilityError = getHighLevelAbilityError(draft, asiBudget);
+  const abilityBudgetError = baseAbilityBudgetError ?? highLevelAbilityError;
   const validationIssues = useMemo(() => {
     const issues = validateCharacterDraft(draft, activeRulesetData, finalAbilities);
     if (abilityBudgetError) issues.push({ id: "ability-budget", severity: "error", step: "Abilities", message: abilityBudgetError });
@@ -179,6 +194,15 @@ export function Builder({
   }
 
   function toggleFeat(featId: string) {
+    const selected = draft.featIds.includes(featId);
+    if (!selected) {
+      const conflict = getFeatSelectionAsiError(draft, draft.featIds.length + 1);
+      if (conflict) {
+        setFeatSelectionNotice(conflict);
+        return;
+      }
+    }
+    setFeatSelectionNotice("");
     setDraft((current) => {
       if (current.featIds.includes(featId)) {
         return { ...current, featIds: current.featIds.filter((id) => id !== featId) };
@@ -261,6 +285,31 @@ export function Builder({
   function applyStandardArray() {
     setAbilityMethod("standard-array");
     setDraft((current) => ({ ...current, abilities: getStandardArrayAbilities() }));
+  }
+
+  function assignStandardArray(ability: keyof CharacterDraft["abilities"], value: number) {
+    setDraft((current) => {
+      const abilities = { ...current.abilities };
+      const previous = abilities[ability];
+      const occupied = ABILITY_KEYS.find((key) => key !== ability && abilities[key] === value);
+      abilities[ability] = value;
+      if (occupied) abilities[occupied] = previous;
+      return { ...current, abilities };
+    });
+  }
+
+  function adjustPointBuy(ability: keyof CharacterDraft["abilities"], delta: number) {
+    setDraft((current) => {
+      const currentValue = current.abilities[ability];
+      const nextValue = Math.max(8, Math.min(15, currentValue + delta));
+      const next = { ...current.abilities, [ability]: nextValue };
+      if (getPointBuyRemaining(next) < 0) return current;
+      return { ...current, abilities: next };
+    });
+  }
+
+  function adjustAsi(ability: keyof CharacterDraft["abilities"], delta: number) {
+    setDraft((current) => ({ ...current, abilityScoreIncreases: updateAbilityIncrease(current.abilityScoreIncreases, ability, delta, asiBudget) }));
   }
 
   function goToStep(index: number) {
@@ -464,7 +513,7 @@ export function Builder({
                     <select
                       value={draft.race}
                       disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData}
-                      onChange={(event) => setDraft((current) => ({ ...current, race: event.target.value, subrace: "" }))}
+                      onChange={(event) => setDraft((current) => ({ ...current, race: event.target.value, subrace: "", flexibleRaceAbilityPrimary: undefined, flexibleRaceAbilitySecondary: undefined }))}
                     >
                       <option value="">
                         {activeRulesetLoading ? `${rulesetDefinition.raceTerm} data yükleniyor...` : `${rulesetDefinition.raceTerm} seç`}
@@ -543,7 +592,7 @@ export function Builder({
                 <label>
                   Background
                   {draft.ruleset !== "homebrew" ? (
-                    <select value={draft.background} disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData} onChange={(event) => setDraft((current) => ({ ...current, background: event.target.value, originAbilityPrimary: undefined, originAbilitySecondary: undefined, skillProficiencies: [], expertiseSkills: [], toolProficiencies: [], languages: [] }))}>
+                    <select value={draft.background} disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData} onChange={(event) => setDraft((current) => ({ ...current, background: event.target.value, originAbilityPrimary: undefined, originAbilitySecondary: undefined, originAbilityTertiary: undefined, originAbilityMode: "2-1", skillProficiencies: [], expertiseSkills: [], toolProficiencies: [], languages: [] }))}>
                       <option value="">Background seç</option>
                       {activeRulesetData?.backgrounds.map((item) => <option key={item.id} value={item.name}>{item.name}</option>)}
                     </select>
@@ -554,20 +603,44 @@ export function Builder({
 
                 {draft.ruleset === "dnd_2024" && selectedBackground ? (
                   <>
-                    <label>+2 Ability
+                    <label>Background Ability Dağılımı
+                      <select value={draft.originAbilityMode ?? "2-1"} onChange={(event) => setDraft((current) => ({ ...current, originAbilityMode: event.target.value as "2-1" | "1-1-1", originAbilityPrimary: undefined, originAbilitySecondary: undefined, originAbilityTertiary: undefined }))}>
+                        <option value="2-1">+2 / +1</option>
+                        <option value="1-1-1">+1 / +1 / +1</option>
+                      </select>
+                    </label>
+                    <label>{draft.originAbilityMode === "1-1-1" ? "İlk +1" : "+2 Ability"}
                       <select value={draft.originAbilityPrimary ?? ""} onChange={(event) => updateDraft("originAbilityPrimary", event.target.value as CharacterDraft["originAbilityPrimary"])}>
                         <option value="">Seç</option>
                         {selectedBackground.abilityOptions?.map((ability) => <option key={ability} value={ability}>{ability.toUpperCase()}</option>)}
                       </select>
                     </label>
-                    <label>+1 Ability
+                    <label>{draft.originAbilityMode === "1-1-1" ? "İkinci +1" : "+1 Ability"}
                       <select value={draft.originAbilitySecondary ?? ""} onChange={(event) => updateDraft("originAbilitySecondary", event.target.value as CharacterDraft["originAbilitySecondary"])}>
                         <option value="">Seç</option>
                         {selectedBackground.abilityOptions?.filter((ability) => ability !== draft.originAbilityPrimary).map((ability) => <option key={ability} value={ability}>{ability.toUpperCase()}</option>)}
                       </select>
                     </label>
+                    {draft.originAbilityMode === "1-1-1" ? <label>Üçüncü +1
+                      <select value={draft.originAbilityTertiary ?? ""} onChange={(event) => updateDraft("originAbilityTertiary", event.target.value as CharacterDraft["originAbilityTertiary"])}>
+                        <option value="">Seç</option>
+                        {selectedBackground.abilityOptions?.filter((ability) => ability !== draft.originAbilityPrimary && ability !== draft.originAbilitySecondary).map((ability) => <option key={ability} value={ability}>{ability.toUpperCase()}</option>)}
+                      </select>
+                    </label> : null}
                   </>
                 ) : null}
+                {draft.ruleset === "dnd_2014" && selectedRace?.name === "Half-Elf" ? <>
+                  <label>Half-Elf Esnek +1
+                    <select value={draft.flexibleRaceAbilityPrimary ?? ""} onChange={(event) => updateDraft("flexibleRaceAbilityPrimary", event.target.value as CharacterDraft["flexibleRaceAbilityPrimary"])}>
+                      <option value="">Seç</option>{ABILITY_KEYS.filter((key) => key !== "cha").map((key) => <option key={key} value={key}>{key.toUpperCase()}</option>)}
+                    </select>
+                  </label>
+                  <label>Half-Elf İkinci +1
+                    <select value={draft.flexibleRaceAbilitySecondary ?? ""} onChange={(event) => updateDraft("flexibleRaceAbilitySecondary", event.target.value as CharacterDraft["flexibleRaceAbilitySecondary"])}>
+                      <option value="">Seç</option>{ABILITY_KEYS.filter((key) => key !== "cha" && key !== draft.flexibleRaceAbilityPrimary).map((key) => <option key={key} value={key}>{key.toUpperCase()}</option>)}
+                    </select>
+                  </label>
+                </> : null}
               </div>
 
               {activeRulesetError ? (
@@ -655,48 +728,60 @@ export function Builder({
               <div className="panel-heading-row">
                 <div>
                   <h2>Ability Scores</h2>
-                  <p>Skorları gir, modifierlar otomatik hesaplanır. Matematik yine yazılıma kaldı, insanlık rahat.</p>
+                  <p>Başlangıç skorları, origin bonusları ve level ASI artışları artık ayrı katmanlarda hesaplanır.</p>
                 </div>
-
-                <button type="button" onClick={applyStandardArray}>
-                  Standard Array
-                </button>
+                <button type="button" onClick={applyStandardArray}>Standard Array’i Sıfırla</button>
               </div>
 
               <div className="ability-method-picker" role="group" aria-label="Ability oluşturma yöntemi">
                 {(["standard-array", "point-buy", "rolled"] as const).map((method) => (
-                  <button type="button" className={abilityMethod === method ? "active" : ""} key={method} onClick={() => setAbilityMethod(method)}>
+                  <button type="button" className={abilityMethod === method ? "active" : ""} key={method} onClick={() => {
+                    setAbilityMethod(method);
+                    if (method === "standard-array") applyStandardArray();
+                    if (method === "point-buy") setDraft((current) => ({ ...current, abilities: { str: 8, dex: 8, con: 8, int: 8, wis: 8, cha: 8 } }));
+                  }}>
                     {method === "standard-array" ? "Standard Array" : method === "point-buy" ? "Point Buy" : "Rolled / Manual"}
                   </button>
                 ))}
               </div>
+
               <div className={`ability-budget-status ${abilityBudgetError ? "invalid" : "valid"}`}>
                 <strong>{abilityBudgetError ? "Dağılım kurala uymuyor" : "Dağılım geçerli"}</strong>
-                <span>{abilityBudgetError ?? `${availableAsiPoints} ASI puanı kullanılabilir. Feat seçimi bu bütçeyi tüketir.`}</span>
+                <span>{abilityBudgetError ?? (abilityMethod === "point-buy" ? `${getPointBuyRemaining(draft.abilities)} / 27 Point Buy puanı kaldı.` : abilityMethod === "standard-array" ? "15, 14, 13, 12, 10 ve 8 değerlerini istediğin ability’lere dağıt." : "Manuel skorlar nihai bonuslardan önce girilir.")}</span>
+                {getSpentAsi(draft.abilityScoreIncreases) > asiBudget ? <button type="button" onClick={() => updateDraft("abilityScoreIncreases", {})}>ASI dağılımını sıfırla</button> : null}
               </div>
 
               <div className="ability-editor ability-editor-v2">
-                {Object.entries(draft.abilities).map(([ability, score]) => (
-                  <label className="ability-input" key={ability}>
+                {ABILITY_KEYS.map((ability) => {
+                  const base = draft.abilities[ability];
+                  const origin = originBonuses[ability] ?? 0;
+                  const asi = draft.abilityScoreIncreases?.[ability] ?? 0;
+                  const final = finalAbilities[ability];
+                  return <article className="ability-input ability-layer-card" key={ability}>
                     <span>{ability.toUpperCase()}</span>
+                    {abilityMethod === "standard-array" ? <select value={base} onChange={(event) => assignStandardArray(ability, Number(event.target.value))}>
+                      {STANDARD_ARRAY_VALUES.map((value) => <option key={value} value={value}>{value}</option>)}
+                    </select> : null}
+                    {abilityMethod === "point-buy" ? <div className="ability-stepper"><button type="button" onClick={() => adjustPointBuy(ability, -1)} disabled={base <= 8}>−</button><strong>{base}</strong><button type="button" onClick={() => adjustPointBuy(ability, 1)} disabled={base >= 15}>+</button></div> : null}
+                    {abilityMethod === "rolled" ? <input type="number" min={3} max={20} value={base} onChange={(event) => updateAbility(ability, Number(event.target.value))} /> : null}
+                    <small>Başlangıç {base} · Origin {origin >= 0 ? "+" : ""}{origin} · Level {asi >= 0 ? "+" : ""}{asi}</small>
+                    <strong className="ability-final-score">{final} ({formatModifier(getAbilityModifier(final))})</strong>
+                  </article>;
+                })}
+              </div>
 
-                    <input
-                      type="number"
-                      min={1}
-                      max={20}
-                      value={score}
-                      onChange={(event) =>
-                        updateAbility(
-                          ability as keyof CharacterDraft["abilities"],
-                          Number(event.target.value),
-                        )
-                      }
-                    />
+              <div className="form-panel nested-panel">
+                <div className="panel-heading-row"><div><h3>Level ASI / Feat Bütçesi</h3><p>Level {draft.level} için featlerden sonra kalan ASI puanlarını burada dağıt.</p></div><span className="mini-label">{getSpentAsi(draft.abilityScoreIncreases)} / {asiBudget}</span></div>
+                <div className="ability-asi-grid">
+                  {ABILITY_KEYS.map((ability) => <div className="ability-asi-row" key={ability}><strong>{ability.toUpperCase()}</strong><button type="button" onClick={() => adjustAsi(ability, -1)} disabled={(draft.abilityScoreIncreases?.[ability] ?? 0) <= 0}>−</button><span>+{draft.abilityScoreIncreases?.[ability] ?? 0}</span><button type="button" onClick={() => adjustAsi(ability, 1)} disabled={getSpentAsi(draft.abilityScoreIncreases) >= asiBudget || finalAbilities[ability] >= 20}>+</button></div>)}
+                </div>
+                {asiBudget > 0 && getSpentAsi(draft.abilityScoreIncreases) < asiBudget ? <p className="validation-message warning">Kullanılmamış {asiBudget - getSpentAsi(draft.abilityScoreIncreases)} ASI puanı var. Feat seçebilir veya ability artışı dağıtabilirsin.</p> : null}
+              </div>
 
-                    <strong>{formatModifier(getAbilityModifier(finalAbilities[ability as keyof CharacterDraft["abilities"]]))}</strong>
-                    {originBonuses[ability as keyof CharacterDraft["abilities"]] ? <small>{score} + {originBonuses[ability as keyof CharacterDraft["abilities"]]} = {finalAbilities[ability as keyof CharacterDraft["abilities"]]}</small> : null}
-                  </label>
-                ))}
+              <div className="builder-choice-card">
+                <span className="mini-label">Nihai Ability Dökümü</span>
+                <h3>{ABILITY_KEYS.map((key) => `${key.toUpperCase()} ${finalAbilities[key]}`).join(" · ")}</h3>
+                <p>Başlangıç yöntemi ile race/species/background ve level bonusları birbirine karıştırılmadan gösterilir.</p>
               </div>
             </section>
           ) : null}
@@ -769,6 +854,14 @@ export function Builder({
                 </div>
                 <span className="mini-label">{draft.featIds.length} / {generalFeatSlots} general feat</span>
               </div>
+
+              {featSelectionNotice ? (
+                <div className="ability-budget-status invalid" role="alert">
+                  <strong>ASI ve feat aynı slotu kullanıyor</strong>
+                  <span>{featSelectionNotice}</span>
+                  <button type="button" onClick={() => { setDraft((current) => ({ ...current, abilityScoreIncreases: {} })); setFeatSelectionNotice(""); }}>ASI dağılımını sıfırla</button>
+                </div>
+              ) : null}
 
               {metamagicLimit ? <div className="ruleset-foundation-card"><div className="panel-heading-row"><div><span className="mini-label">Sorcerer Class Choice</span><strong>Metamagic</strong></div><span>{selectedMetamagicIds.length} / {metamagicLimit}</span></div><div className="builder-choice-grid">{metamagicOptions.map(option=>{const selected=selectedMetamagicIds.includes(option.id);return <article className={`builder-choice-card ${selected?"selected":""}`} key={option.id}><div className="panel-heading-row"><div><h3>{option.name}</h3><span className="mini-label">{option.cost} Sorcery Point</span></div><button type="button" disabled={!selected&&selectedMetamagicIds.length>=metamagicLimit} onClick={()=>toggleMetamagic(option.id)}>{selected?"Kaldır":"Seç"}</button></div><p>{option.summary}</p></article>})}</div></div>:null}
 

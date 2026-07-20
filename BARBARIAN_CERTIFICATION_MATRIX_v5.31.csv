@@ -1,0 +1,761 @@
+﻿ruleset,race_species,subclass,level,rage_uses,rage_damage,weapon_mastery_count,brutal_critical_dice,brutal_strike_d10,status
+dnd_2014,Human,Path of the Berserker,1,2,2,0,0,0,PASS
+dnd_2014,Human,Path of the Berserker,2,2,2,0,0,0,PASS
+dnd_2014,Human,Path of the Berserker,3,3,2,0,0,0,PASS
+dnd_2014,Human,Path of the Berserker,4,3,2,0,0,0,PASS
+dnd_2014,Human,Path of the Berserker,5,3,2,0,0,0,PASS
+dnd_2014,Human,Path of the Berserker,6,4,2,0,0,0,PASS
+dnd_2014,Human,Path of the Berserker,7,4,2,0,0,0,PASS
+dnd_2014,Human,Path of the Berserker,8,4,2,0,0,0,PASS
+dnd_2014,Human,Path of the Berserker,9,4,3,0,1,0,PASS
+dnd_2014,Human,Path of the Berserker,10,4,3,0,1,0,PASS
+dnd_2014,Human,Path of the Berserker,11,4,3,0,1,0,PASS
+dnd_2014,Human,Path of the Berserker,12,5,3,0,1,0,PASS
+dnd_2014,Human,Path of the Berserker,13,5,3,0,2,0,PASS
+dnd_2014,Human,Path of the Berserker,14,5,3,0,2,0,PASS
+dnd_2014,Human,Path of the Berserker,15,5,3,0,2,0,PASS
+dnd_2014,Human,Path of the Berserker,16,5,4,0,2,0,PASS
+dnd_2014,Human,Path of the Berserker,17,6,4,0,3,0,PASS
+dnd_2014,Human,Path of the Berserker,18,6,4,0,3,0,PASS
+dnd_2014,Human,Path of the Berserker,19,6,4,0,3,0,PASS
+dnd_2014,Human,Path of the Berserker,20,unlimited,4,0,3,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,1,2,2,0,0,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,2,2,2,0,0,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,3,3,2,0,0,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,4,3,2,0,0,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,5,3,2,0,0,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,6,4,2,0,0,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,7,4,2,0,0,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,8,4,2,0,0,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,9,4,3,0,1,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,10,4,3,0,1,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,11,4,3,0,1,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,12,5,3,0,1,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,13,5,3,0,2,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,14,5,3,0,2,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,15,5,3,0,2,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,16,5,4,0,2,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,17,6,4,0,3,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,18,6,4,0,3,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,19,6,4,0,3,0,PASS
+dnd_2014,Human,Path of the Totem Warrior,20,unlimited,4,0,3,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,1,2,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,2,2,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,3,3,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,4,3,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,5,3,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,6,4,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,7,4,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,8,4,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,9,4,3,0,1,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,10,4,3,0,1,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,11,4,3,0,1,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,12,5,3,0,1,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,13,5,3,0,2,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,14,5,3,0,2,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,15,5,3,0,2,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,16,5,4,0,2,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,17,6,4,0,3,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,18,6,4,0,3,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,19,6,4,0,3,0,PASS
+dnd_2014,Dwarf,Path of the Berserker,20,unlimited,4,0,3,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,1,2,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,2,2,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,3,3,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,4,3,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,5,3,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,6,4,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,7,4,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,8,4,2,0,0,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,9,4,3,0,1,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,10,4,3,0,1,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,11,4,3,0,1,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,12,5,3,0,1,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,13,5,3,0,2,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,14,5,3,0,2,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,15,5,3,0,2,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,16,5,4,0,2,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,17,6,4,0,3,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,18,6,4,0,3,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,19,6,4,0,3,0,PASS
+dnd_2014,Dwarf,Path of the Totem Warrior,20,unlimited,4,0,3,0,PASS
+dnd_2014,Elf,Path of the Berserker,1,2,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Berserker,2,2,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Berserker,3,3,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Berserker,4,3,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Berserker,5,3,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Berserker,6,4,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Berserker,7,4,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Berserker,8,4,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Berserker,9,4,3,0,1,0,PASS
+dnd_2014,Elf,Path of the Berserker,10,4,3,0,1,0,PASS
+dnd_2014,Elf,Path of the Berserker,11,4,3,0,1,0,PASS
+dnd_2014,Elf,Path of the Berserker,12,5,3,0,1,0,PASS
+dnd_2014,Elf,Path of the Berserker,13,5,3,0,2,0,PASS
+dnd_2014,Elf,Path of the Berserker,14,5,3,0,2,0,PASS
+dnd_2014,Elf,Path of the Berserker,15,5,3,0,2,0,PASS
+dnd_2014,Elf,Path of the Berserker,16,5,4,0,2,0,PASS
+dnd_2014,Elf,Path of the Berserker,17,6,4,0,3,0,PASS
+dnd_2014,Elf,Path of the Berserker,18,6,4,0,3,0,PASS
+dnd_2014,Elf,Path of the Berserker,19,6,4,0,3,0,PASS
+dnd_2014,Elf,Path of the Berserker,20,unlimited,4,0,3,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,1,2,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,2,2,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,3,3,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,4,3,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,5,3,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,6,4,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,7,4,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,8,4,2,0,0,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,9,4,3,0,1,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,10,4,3,0,1,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,11,4,3,0,1,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,12,5,3,0,1,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,13,5,3,0,2,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,14,5,3,0,2,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,15,5,3,0,2,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,16,5,4,0,2,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,17,6,4,0,3,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,18,6,4,0,3,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,19,6,4,0,3,0,PASS
+dnd_2014,Elf,Path of the Totem Warrior,20,unlimited,4,0,3,0,PASS
+dnd_2014,Halfling,Path of the Berserker,1,2,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Berserker,2,2,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Berserker,3,3,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Berserker,4,3,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Berserker,5,3,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Berserker,6,4,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Berserker,7,4,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Berserker,8,4,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Berserker,9,4,3,0,1,0,PASS
+dnd_2014,Halfling,Path of the Berserker,10,4,3,0,1,0,PASS
+dnd_2014,Halfling,Path of the Berserker,11,4,3,0,1,0,PASS
+dnd_2014,Halfling,Path of the Berserker,12,5,3,0,1,0,PASS
+dnd_2014,Halfling,Path of the Berserker,13,5,3,0,2,0,PASS
+dnd_2014,Halfling,Path of the Berserker,14,5,3,0,2,0,PASS
+dnd_2014,Halfling,Path of the Berserker,15,5,3,0,2,0,PASS
+dnd_2014,Halfling,Path of the Berserker,16,5,4,0,2,0,PASS
+dnd_2014,Halfling,Path of the Berserker,17,6,4,0,3,0,PASS
+dnd_2014,Halfling,Path of the Berserker,18,6,4,0,3,0,PASS
+dnd_2014,Halfling,Path of the Berserker,19,6,4,0,3,0,PASS
+dnd_2014,Halfling,Path of the Berserker,20,unlimited,4,0,3,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,1,2,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,2,2,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,3,3,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,4,3,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,5,3,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,6,4,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,7,4,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,8,4,2,0,0,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,9,4,3,0,1,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,10,4,3,0,1,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,11,4,3,0,1,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,12,5,3,0,1,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,13,5,3,0,2,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,14,5,3,0,2,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,15,5,3,0,2,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,16,5,4,0,2,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,17,6,4,0,3,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,18,6,4,0,3,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,19,6,4,0,3,0,PASS
+dnd_2014,Halfling,Path of the Totem Warrior,20,unlimited,4,0,3,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,1,2,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,2,2,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,3,3,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,4,3,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,5,3,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,6,4,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,7,4,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,8,4,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,9,4,3,0,1,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,10,4,3,0,1,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,11,4,3,0,1,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,12,5,3,0,1,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,13,5,3,0,2,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,14,5,3,0,2,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,15,5,3,0,2,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,16,5,4,0,2,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,17,6,4,0,3,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,18,6,4,0,3,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,19,6,4,0,3,0,PASS
+dnd_2014,Dragonborn,Path of the Berserker,20,unlimited,4,0,3,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,1,2,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,2,2,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,3,3,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,4,3,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,5,3,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,6,4,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,7,4,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,8,4,2,0,0,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,9,4,3,0,1,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,10,4,3,0,1,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,11,4,3,0,1,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,12,5,3,0,1,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,13,5,3,0,2,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,14,5,3,0,2,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,15,5,3,0,2,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,16,5,4,0,2,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,17,6,4,0,3,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,18,6,4,0,3,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,19,6,4,0,3,0,PASS
+dnd_2014,Dragonborn,Path of the Totem Warrior,20,unlimited,4,0,3,0,PASS
+dnd_2014,Gnome,Path of the Berserker,1,2,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Berserker,2,2,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Berserker,3,3,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Berserker,4,3,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Berserker,5,3,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Berserker,6,4,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Berserker,7,4,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Berserker,8,4,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Berserker,9,4,3,0,1,0,PASS
+dnd_2014,Gnome,Path of the Berserker,10,4,3,0,1,0,PASS
+dnd_2014,Gnome,Path of the Berserker,11,4,3,0,1,0,PASS
+dnd_2014,Gnome,Path of the Berserker,12,5,3,0,1,0,PASS
+dnd_2014,Gnome,Path of the Berserker,13,5,3,0,2,0,PASS
+dnd_2014,Gnome,Path of the Berserker,14,5,3,0,2,0,PASS
+dnd_2014,Gnome,Path of the Berserker,15,5,3,0,2,0,PASS
+dnd_2014,Gnome,Path of the Berserker,16,5,4,0,2,0,PASS
+dnd_2014,Gnome,Path of the Berserker,17,6,4,0,3,0,PASS
+dnd_2014,Gnome,Path of the Berserker,18,6,4,0,3,0,PASS
+dnd_2014,Gnome,Path of the Berserker,19,6,4,0,3,0,PASS
+dnd_2014,Gnome,Path of the Berserker,20,unlimited,4,0,3,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,1,2,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,2,2,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,3,3,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,4,3,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,5,3,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,6,4,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,7,4,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,8,4,2,0,0,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,9,4,3,0,1,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,10,4,3,0,1,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,11,4,3,0,1,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,12,5,3,0,1,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,13,5,3,0,2,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,14,5,3,0,2,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,15,5,3,0,2,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,16,5,4,0,2,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,17,6,4,0,3,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,18,6,4,0,3,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,19,6,4,0,3,0,PASS
+dnd_2014,Gnome,Path of the Totem Warrior,20,unlimited,4,0,3,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,1,2,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,2,2,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,3,3,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,4,3,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,5,3,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,6,4,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,7,4,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,8,4,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,9,4,3,0,1,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,10,4,3,0,1,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,11,4,3,0,1,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,12,5,3,0,1,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,13,5,3,0,2,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,14,5,3,0,2,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,15,5,3,0,2,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,16,5,4,0,2,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,17,6,4,0,3,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,18,6,4,0,3,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,19,6,4,0,3,0,PASS
+dnd_2014,Half-Elf,Path of the Berserker,20,unlimited,4,0,3,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,1,2,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,2,2,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,3,3,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,4,3,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,5,3,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,6,4,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,7,4,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,8,4,2,0,0,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,9,4,3,0,1,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,10,4,3,0,1,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,11,4,3,0,1,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,12,5,3,0,1,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,13,5,3,0,2,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,14,5,3,0,2,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,15,5,3,0,2,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,16,5,4,0,2,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,17,6,4,0,3,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,18,6,4,0,3,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,19,6,4,0,3,0,PASS
+dnd_2014,Half-Elf,Path of the Totem Warrior,20,unlimited,4,0,3,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,1,2,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,2,2,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,3,3,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,4,3,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,5,3,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,6,4,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,7,4,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,8,4,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,9,4,3,0,1,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,10,4,3,0,1,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,11,4,3,0,1,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,12,5,3,0,1,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,13,5,3,0,2,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,14,5,3,0,2,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,15,5,3,0,2,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,16,5,4,0,2,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,17,6,4,0,3,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,18,6,4,0,3,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,19,6,4,0,3,0,PASS
+dnd_2014,Half-Orc,Path of the Berserker,20,unlimited,4,0,3,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,1,2,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,2,2,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,3,3,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,4,3,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,5,3,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,6,4,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,7,4,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,8,4,2,0,0,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,9,4,3,0,1,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,10,4,3,0,1,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,11,4,3,0,1,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,12,5,3,0,1,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,13,5,3,0,2,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,14,5,3,0,2,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,15,5,3,0,2,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,16,5,4,0,2,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,17,6,4,0,3,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,18,6,4,0,3,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,19,6,4,0,3,0,PASS
+dnd_2014,Half-Orc,Path of the Totem Warrior,20,unlimited,4,0,3,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,1,2,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,2,2,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,3,3,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,4,3,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,5,3,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,6,4,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,7,4,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,8,4,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,9,4,3,0,1,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,10,4,3,0,1,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,11,4,3,0,1,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,12,5,3,0,1,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,13,5,3,0,2,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,14,5,3,0,2,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,15,5,3,0,2,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,16,5,4,0,2,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,17,6,4,0,3,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,18,6,4,0,3,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,19,6,4,0,3,0,PASS
+dnd_2014,Tiefling,Path of the Berserker,20,unlimited,4,0,3,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,1,2,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,2,2,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,3,3,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,4,3,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,5,3,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,6,4,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,7,4,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,8,4,2,0,0,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,9,4,3,0,1,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,10,4,3,0,1,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,11,4,3,0,1,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,12,5,3,0,1,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,13,5,3,0,2,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,14,5,3,0,2,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,15,5,3,0,2,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,16,5,4,0,2,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,17,6,4,0,3,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,18,6,4,0,3,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,19,6,4,0,3,0,PASS
+dnd_2014,Tiefling,Path of the Totem Warrior,20,unlimited,4,0,3,0,PASS
+dnd_2024,Aasimar,Path of the Berserker,1,2,2,2,0,0,PASS
+dnd_2024,Aasimar,Path of the Berserker,2,2,2,2,0,0,PASS
+dnd_2024,Aasimar,Path of the Berserker,3,3,2,2,0,0,PASS
+dnd_2024,Aasimar,Path of the Berserker,4,3,2,3,0,0,PASS
+dnd_2024,Aasimar,Path of the Berserker,5,3,2,3,0,0,PASS
+dnd_2024,Aasimar,Path of the Berserker,6,4,2,3,0,0,PASS
+dnd_2024,Aasimar,Path of the Berserker,7,4,2,3,0,0,PASS
+dnd_2024,Aasimar,Path of the Berserker,8,4,2,3,0,0,PASS
+dnd_2024,Aasimar,Path of the Berserker,9,4,3,3,0,1,PASS
+dnd_2024,Aasimar,Path of the Berserker,10,4,3,4,0,1,PASS
+dnd_2024,Aasimar,Path of the Berserker,11,4,3,4,0,1,PASS
+dnd_2024,Aasimar,Path of the Berserker,12,5,3,4,0,1,PASS
+dnd_2024,Aasimar,Path of the Berserker,13,5,3,4,0,1,PASS
+dnd_2024,Aasimar,Path of the Berserker,14,5,3,4,0,1,PASS
+dnd_2024,Aasimar,Path of the Berserker,15,5,3,4,0,1,PASS
+dnd_2024,Aasimar,Path of the Berserker,16,5,4,4,0,1,PASS
+dnd_2024,Aasimar,Path of the Berserker,17,6,4,4,0,2,PASS
+dnd_2024,Aasimar,Path of the Berserker,18,6,4,4,0,2,PASS
+dnd_2024,Aasimar,Path of the Berserker,19,6,4,4,0,2,PASS
+dnd_2024,Aasimar,Path of the Berserker,20,6,4,4,0,2,PASS
+dnd_2024,Aasimar,Path of the World Tree,1,2,2,2,0,0,PASS
+dnd_2024,Aasimar,Path of the World Tree,2,2,2,2,0,0,PASS
+dnd_2024,Aasimar,Path of the World Tree,3,3,2,2,0,0,PASS
+dnd_2024,Aasimar,Path of the World Tree,4,3,2,3,0,0,PASS
+dnd_2024,Aasimar,Path of the World Tree,5,3,2,3,0,0,PASS
+dnd_2024,Aasimar,Path of the World Tree,6,4,2,3,0,0,PASS
+dnd_2024,Aasimar,Path of the World Tree,7,4,2,3,0,0,PASS
+dnd_2024,Aasimar,Path of the World Tree,8,4,2,3,0,0,PASS
+dnd_2024,Aasimar,Path of the World Tree,9,4,3,3,0,1,PASS
+dnd_2024,Aasimar,Path of the World Tree,10,4,3,4,0,1,PASS
+dnd_2024,Aasimar,Path of the World Tree,11,4,3,4,0,1,PASS
+dnd_2024,Aasimar,Path of the World Tree,12,5,3,4,0,1,PASS
+dnd_2024,Aasimar,Path of the World Tree,13,5,3,4,0,1,PASS
+dnd_2024,Aasimar,Path of the World Tree,14,5,3,4,0,1,PASS
+dnd_2024,Aasimar,Path of the World Tree,15,5,3,4,0,1,PASS
+dnd_2024,Aasimar,Path of the World Tree,16,5,4,4,0,1,PASS
+dnd_2024,Aasimar,Path of the World Tree,17,6,4,4,0,2,PASS
+dnd_2024,Aasimar,Path of the World Tree,18,6,4,4,0,2,PASS
+dnd_2024,Aasimar,Path of the World Tree,19,6,4,4,0,2,PASS
+dnd_2024,Aasimar,Path of the World Tree,20,6,4,4,0,2,PASS
+dnd_2024,Dragonborn,Path of the Berserker,1,2,2,2,0,0,PASS
+dnd_2024,Dragonborn,Path of the Berserker,2,2,2,2,0,0,PASS
+dnd_2024,Dragonborn,Path of the Berserker,3,3,2,2,0,0,PASS
+dnd_2024,Dragonborn,Path of the Berserker,4,3,2,3,0,0,PASS
+dnd_2024,Dragonborn,Path of the Berserker,5,3,2,3,0,0,PASS
+dnd_2024,Dragonborn,Path of the Berserker,6,4,2,3,0,0,PASS
+dnd_2024,Dragonborn,Path of the Berserker,7,4,2,3,0,0,PASS
+dnd_2024,Dragonborn,Path of the Berserker,8,4,2,3,0,0,PASS
+dnd_2024,Dragonborn,Path of the Berserker,9,4,3,3,0,1,PASS
+dnd_2024,Dragonborn,Path of the Berserker,10,4,3,4,0,1,PASS
+dnd_2024,Dragonborn,Path of the Berserker,11,4,3,4,0,1,PASS
+dnd_2024,Dragonborn,Path of the Berserker,12,5,3,4,0,1,PASS
+dnd_2024,Dragonborn,Path of the Berserker,13,5,3,4,0,1,PASS
+dnd_2024,Dragonborn,Path of the Berserker,14,5,3,4,0,1,PASS
+dnd_2024,Dragonborn,Path of the Berserker,15,5,3,4,0,1,PASS
+dnd_2024,Dragonborn,Path of the Berserker,16,5,4,4,0,1,PASS
+dnd_2024,Dragonborn,Path of the Berserker,17,6,4,4,0,2,PASS
+dnd_2024,Dragonborn,Path of the Berserker,18,6,4,4,0,2,PASS
+dnd_2024,Dragonborn,Path of the Berserker,19,6,4,4,0,2,PASS
+dnd_2024,Dragonborn,Path of the Berserker,20,6,4,4,0,2,PASS
+dnd_2024,Dragonborn,Path of the World Tree,1,2,2,2,0,0,PASS
+dnd_2024,Dragonborn,Path of the World Tree,2,2,2,2,0,0,PASS
+dnd_2024,Dragonborn,Path of the World Tree,3,3,2,2,0,0,PASS
+dnd_2024,Dragonborn,Path of the World Tree,4,3,2,3,0,0,PASS
+dnd_2024,Dragonborn,Path of the World Tree,5,3,2,3,0,0,PASS
+dnd_2024,Dragonborn,Path of the World Tree,6,4,2,3,0,0,PASS
+dnd_2024,Dragonborn,Path of the World Tree,7,4,2,3,0,0,PASS
+dnd_2024,Dragonborn,Path of the World Tree,8,4,2,3,0,0,PASS
+dnd_2024,Dragonborn,Path of the World Tree,9,4,3,3,0,1,PASS
+dnd_2024,Dragonborn,Path of the World Tree,10,4,3,4,0,1,PASS
+dnd_2024,Dragonborn,Path of the World Tree,11,4,3,4,0,1,PASS
+dnd_2024,Dragonborn,Path of the World Tree,12,5,3,4,0,1,PASS
+dnd_2024,Dragonborn,Path of the World Tree,13,5,3,4,0,1,PASS
+dnd_2024,Dragonborn,Path of the World Tree,14,5,3,4,0,1,PASS
+dnd_2024,Dragonborn,Path of the World Tree,15,5,3,4,0,1,PASS
+dnd_2024,Dragonborn,Path of the World Tree,16,5,4,4,0,1,PASS
+dnd_2024,Dragonborn,Path of the World Tree,17,6,4,4,0,2,PASS
+dnd_2024,Dragonborn,Path of the World Tree,18,6,4,4,0,2,PASS
+dnd_2024,Dragonborn,Path of the World Tree,19,6,4,4,0,2,PASS
+dnd_2024,Dragonborn,Path of the World Tree,20,6,4,4,0,2,PASS
+dnd_2024,Dwarf,Path of the Berserker,1,2,2,2,0,0,PASS
+dnd_2024,Dwarf,Path of the Berserker,2,2,2,2,0,0,PASS
+dnd_2024,Dwarf,Path of the Berserker,3,3,2,2,0,0,PASS
+dnd_2024,Dwarf,Path of the Berserker,4,3,2,3,0,0,PASS
+dnd_2024,Dwarf,Path of the Berserker,5,3,2,3,0,0,PASS
+dnd_2024,Dwarf,Path of the Berserker,6,4,2,3,0,0,PASS
+dnd_2024,Dwarf,Path of the Berserker,7,4,2,3,0,0,PASS
+dnd_2024,Dwarf,Path of the Berserker,8,4,2,3,0,0,PASS
+dnd_2024,Dwarf,Path of the Berserker,9,4,3,3,0,1,PASS
+dnd_2024,Dwarf,Path of the Berserker,10,4,3,4,0,1,PASS
+dnd_2024,Dwarf,Path of the Berserker,11,4,3,4,0,1,PASS
+dnd_2024,Dwarf,Path of the Berserker,12,5,3,4,0,1,PASS
+dnd_2024,Dwarf,Path of the Berserker,13,5,3,4,0,1,PASS
+dnd_2024,Dwarf,Path of the Berserker,14,5,3,4,0,1,PASS
+dnd_2024,Dwarf,Path of the Berserker,15,5,3,4,0,1,PASS
+dnd_2024,Dwarf,Path of the Berserker,16,5,4,4,0,1,PASS
+dnd_2024,Dwarf,Path of the Berserker,17,6,4,4,0,2,PASS
+dnd_2024,Dwarf,Path of the Berserker,18,6,4,4,0,2,PASS
+dnd_2024,Dwarf,Path of the Berserker,19,6,4,4,0,2,PASS
+dnd_2024,Dwarf,Path of the Berserker,20,6,4,4,0,2,PASS
+dnd_2024,Dwarf,Path of the World Tree,1,2,2,2,0,0,PASS
+dnd_2024,Dwarf,Path of the World Tree,2,2,2,2,0,0,PASS
+dnd_2024,Dwarf,Path of the World Tree,3,3,2,2,0,0,PASS
+dnd_2024,Dwarf,Path of the World Tree,4,3,2,3,0,0,PASS
+dnd_2024,Dwarf,Path of the World Tree,5,3,2,3,0,0,PASS
+dnd_2024,Dwarf,Path of the World Tree,6,4,2,3,0,0,PASS
+dnd_2024,Dwarf,Path of the World Tree,7,4,2,3,0,0,PASS
+dnd_2024,Dwarf,Path of the World Tree,8,4,2,3,0,0,PASS
+dnd_2024,Dwarf,Path of the World Tree,9,4,3,3,0,1,PASS
+dnd_2024,Dwarf,Path of the World Tree,10,4,3,4,0,1,PASS
+dnd_2024,Dwarf,Path of the World Tree,11,4,3,4,0,1,PASS
+dnd_2024,Dwarf,Path of the World Tree,12,5,3,4,0,1,PASS
+dnd_2024,Dwarf,Path of the World Tree,13,5,3,4,0,1,PASS
+dnd_2024,Dwarf,Path of the World Tree,14,5,3,4,0,1,PASS
+dnd_2024,Dwarf,Path of the World Tree,15,5,3,4,0,1,PASS
+dnd_2024,Dwarf,Path of the World Tree,16,5,4,4,0,1,PASS
+dnd_2024,Dwarf,Path of the World Tree,17,6,4,4,0,2,PASS
+dnd_2024,Dwarf,Path of the World Tree,18,6,4,4,0,2,PASS
+dnd_2024,Dwarf,Path of the World Tree,19,6,4,4,0,2,PASS
+dnd_2024,Dwarf,Path of the World Tree,20,6,4,4,0,2,PASS
+dnd_2024,Elf,Path of the Berserker,1,2,2,2,0,0,PASS
+dnd_2024,Elf,Path of the Berserker,2,2,2,2,0,0,PASS
+dnd_2024,Elf,Path of the Berserker,3,3,2,2,0,0,PASS
+dnd_2024,Elf,Path of the Berserker,4,3,2,3,0,0,PASS
+dnd_2024,Elf,Path of the Berserker,5,3,2,3,0,0,PASS
+dnd_2024,Elf,Path of the Berserker,6,4,2,3,0,0,PASS
+dnd_2024,Elf,Path of the Berserker,7,4,2,3,0,0,PASS
+dnd_2024,Elf,Path of the Berserker,8,4,2,3,0,0,PASS
+dnd_2024,Elf,Path of the Berserker,9,4,3,3,0,1,PASS
+dnd_2024,Elf,Path of the Berserker,10,4,3,4,0,1,PASS
+dnd_2024,Elf,Path of the Berserker,11,4,3,4,0,1,PASS
+dnd_2024,Elf,Path of the Berserker,12,5,3,4,0,1,PASS
+dnd_2024,Elf,Path of the Berserker,13,5,3,4,0,1,PASS
+dnd_2024,Elf,Path of the Berserker,14,5,3,4,0,1,PASS
+dnd_2024,Elf,Path of the Berserker,15,5,3,4,0,1,PASS
+dnd_2024,Elf,Path of the Berserker,16,5,4,4,0,1,PASS
+dnd_2024,Elf,Path of the Berserker,17,6,4,4,0,2,PASS
+dnd_2024,Elf,Path of the Berserker,18,6,4,4,0,2,PASS
+dnd_2024,Elf,Path of the Berserker,19,6,4,4,0,2,PASS
+dnd_2024,Elf,Path of the Berserker,20,6,4,4,0,2,PASS
+dnd_2024,Elf,Path of the World Tree,1,2,2,2,0,0,PASS
+dnd_2024,Elf,Path of the World Tree,2,2,2,2,0,0,PASS
+dnd_2024,Elf,Path of the World Tree,3,3,2,2,0,0,PASS
+dnd_2024,Elf,Path of the World Tree,4,3,2,3,0,0,PASS
+dnd_2024,Elf,Path of the World Tree,5,3,2,3,0,0,PASS
+dnd_2024,Elf,Path of the World Tree,6,4,2,3,0,0,PASS
+dnd_2024,Elf,Path of the World Tree,7,4,2,3,0,0,PASS
+dnd_2024,Elf,Path of the World Tree,8,4,2,3,0,0,PASS
+dnd_2024,Elf,Path of the World Tree,9,4,3,3,0,1,PASS
+dnd_2024,Elf,Path of the World Tree,10,4,3,4,0,1,PASS
+dnd_2024,Elf,Path of the World Tree,11,4,3,4,0,1,PASS
+dnd_2024,Elf,Path of the World Tree,12,5,3,4,0,1,PASS
+dnd_2024,Elf,Path of the World Tree,13,5,3,4,0,1,PASS
+dnd_2024,Elf,Path of the World Tree,14,5,3,4,0,1,PASS
+dnd_2024,Elf,Path of the World Tree,15,5,3,4,0,1,PASS
+dnd_2024,Elf,Path of the World Tree,16,5,4,4,0,1,PASS
+dnd_2024,Elf,Path of the World Tree,17,6,4,4,0,2,PASS
+dnd_2024,Elf,Path of the World Tree,18,6,4,4,0,2,PASS
+dnd_2024,Elf,Path of the World Tree,19,6,4,4,0,2,PASS
+dnd_2024,Elf,Path of the World Tree,20,6,4,4,0,2,PASS
+dnd_2024,Gnome,Path of the Berserker,1,2,2,2,0,0,PASS
+dnd_2024,Gnome,Path of the Berserker,2,2,2,2,0,0,PASS
+dnd_2024,Gnome,Path of the Berserker,3,3,2,2,0,0,PASS
+dnd_2024,Gnome,Path of the Berserker,4,3,2,3,0,0,PASS
+dnd_2024,Gnome,Path of the Berserker,5,3,2,3,0,0,PASS
+dnd_2024,Gnome,Path of the Berserker,6,4,2,3,0,0,PASS
+dnd_2024,Gnome,Path of the Berserker,7,4,2,3,0,0,PASS
+dnd_2024,Gnome,Path of the Berserker,8,4,2,3,0,0,PASS
+dnd_2024,Gnome,Path of the Berserker,9,4,3,3,0,1,PASS
+dnd_2024,Gnome,Path of the Berserker,10,4,3,4,0,1,PASS
+dnd_2024,Gnome,Path of the Berserker,11,4,3,4,0,1,PASS
+dnd_2024,Gnome,Path of the Berserker,12,5,3,4,0,1,PASS
+dnd_2024,Gnome,Path of the Berserker,13,5,3,4,0,1,PASS
+dnd_2024,Gnome,Path of the Berserker,14,5,3,4,0,1,PASS
+dnd_2024,Gnome,Path of the Berserker,15,5,3,4,0,1,PASS
+dnd_2024,Gnome,Path of the Berserker,16,5,4,4,0,1,PASS
+dnd_2024,Gnome,Path of the Berserker,17,6,4,4,0,2,PASS
+dnd_2024,Gnome,Path of the Berserker,18,6,4,4,0,2,PASS
+dnd_2024,Gnome,Path of the Berserker,19,6,4,4,0,2,PASS
+dnd_2024,Gnome,Path of the Berserker,20,6,4,4,0,2,PASS
+dnd_2024,Gnome,Path of the World Tree,1,2,2,2,0,0,PASS
+dnd_2024,Gnome,Path of the World Tree,2,2,2,2,0,0,PASS
+dnd_2024,Gnome,Path of the World Tree,3,3,2,2,0,0,PASS
+dnd_2024,Gnome,Path of the World Tree,4,3,2,3,0,0,PASS
+dnd_2024,Gnome,Path of the World Tree,5,3,2,3,0,0,PASS
+dnd_2024,Gnome,Path of the World Tree,6,4,2,3,0,0,PASS
+dnd_2024,Gnome,Path of the World Tree,7,4,2,3,0,0,PASS
+dnd_2024,Gnome,Path of the World Tree,8,4,2,3,0,0,PASS
+dnd_2024,Gnome,Path of the World Tree,9,4,3,3,0,1,PASS
+dnd_2024,Gnome,Path of the World Tree,10,4,3,4,0,1,PASS
+dnd_2024,Gnome,Path of the World Tree,11,4,3,4,0,1,PASS
+dnd_2024,Gnome,Path of the World Tree,12,5,3,4,0,1,PASS
+dnd_2024,Gnome,Path of the World Tree,13,5,3,4,0,1,PASS
+dnd_2024,Gnome,Path of the World Tree,14,5,3,4,0,1,PASS
+dnd_2024,Gnome,Path of the World Tree,15,5,3,4,0,1,PASS
+dnd_2024,Gnome,Path of the World Tree,16,5,4,4,0,1,PASS
+dnd_2024,Gnome,Path of the World Tree,17,6,4,4,0,2,PASS
+dnd_2024,Gnome,Path of the World Tree,18,6,4,4,0,2,PASS
+dnd_2024,Gnome,Path of the World Tree,19,6,4,4,0,2,PASS
+dnd_2024,Gnome,Path of the World Tree,20,6,4,4,0,2,PASS
+dnd_2024,Goliath,Path of the Berserker,1,2,2,2,0,0,PASS
+dnd_2024,Goliath,Path of the Berserker,2,2,2,2,0,0,PASS
+dnd_2024,Goliath,Path of the Berserker,3,3,2,2,0,0,PASS
+dnd_2024,Goliath,Path of the Berserker,4,3,2,3,0,0,PASS
+dnd_2024,Goliath,Path of the Berserker,5,3,2,3,0,0,PASS
+dnd_2024,Goliath,Path of the Berserker,6,4,2,3,0,0,PASS
+dnd_2024,Goliath,Path of the Berserker,7,4,2,3,0,0,PASS
+dnd_2024,Goliath,Path of the Berserker,8,4,2,3,0,0,PASS
+dnd_2024,Goliath,Path of the Berserker,9,4,3,3,0,1,PASS
+dnd_2024,Goliath,Path of the Berserker,10,4,3,4,0,1,PASS
+dnd_2024,Goliath,Path of the Berserker,11,4,3,4,0,1,PASS
+dnd_2024,Goliath,Path of the Berserker,12,5,3,4,0,1,PASS
+dnd_2024,Goliath,Path of the Berserker,13,5,3,4,0,1,PASS
+dnd_2024,Goliath,Path of the Berserker,14,5,3,4,0,1,PASS
+dnd_2024,Goliath,Path of the Berserker,15,5,3,4,0,1,PASS
+dnd_2024,Goliath,Path of the Berserker,16,5,4,4,0,1,PASS
+dnd_2024,Goliath,Path of the Berserker,17,6,4,4,0,2,PASS
+dnd_2024,Goliath,Path of the Berserker,18,6,4,4,0,2,PASS
+dnd_2024,Goliath,Path of the Berserker,19,6,4,4,0,2,PASS
+dnd_2024,Goliath,Path of the Berserker,20,6,4,4,0,2,PASS
+dnd_2024,Goliath,Path of the World Tree,1,2,2,2,0,0,PASS
+dnd_2024,Goliath,Path of the World Tree,2,2,2,2,0,0,PASS
+dnd_2024,Goliath,Path of the World Tree,3,3,2,2,0,0,PASS
+dnd_2024,Goliath,Path of the World Tree,4,3,2,3,0,0,PASS
+dnd_2024,Goliath,Path of the World Tree,5,3,2,3,0,0,PASS
+dnd_2024,Goliath,Path of the World Tree,6,4,2,3,0,0,PASS
+dnd_2024,Goliath,Path of the World Tree,7,4,2,3,0,0,PASS
+dnd_2024,Goliath,Path of the World Tree,8,4,2,3,0,0,PASS
+dnd_2024,Goliath,Path of the World Tree,9,4,3,3,0,1,PASS
+dnd_2024,Goliath,Path of the World Tree,10,4,3,4,0,1,PASS
+dnd_2024,Goliath,Path of the World Tree,11,4,3,4,0,1,PASS
+dnd_2024,Goliath,Path of the World Tree,12,5,3,4,0,1,PASS
+dnd_2024,Goliath,Path of the World Tree,13,5,3,4,0,1,PASS
+dnd_2024,Goliath,Path of the World Tree,14,5,3,4,0,1,PASS
+dnd_2024,Goliath,Path of the World Tree,15,5,3,4,0,1,PASS
+dnd_2024,Goliath,Path of the World Tree,16,5,4,4,0,1,PASS
+dnd_2024,Goliath,Path of the World Tree,17,6,4,4,0,2,PASS
+dnd_2024,Goliath,Path of the World Tree,18,6,4,4,0,2,PASS
+dnd_2024,Goliath,Path of the World Tree,19,6,4,4,0,2,PASS
+dnd_2024,Goliath,Path of the World Tree,20,6,4,4,0,2,PASS
+dnd_2024,Halfling,Path of the Berserker,1,2,2,2,0,0,PASS
+dnd_2024,Halfling,Path of the Berserker,2,2,2,2,0,0,PASS
+dnd_2024,Halfling,Path of the Berserker,3,3,2,2,0,0,PASS
+dnd_2024,Halfling,Path of the Berserker,4,3,2,3,0,0,PASS
+dnd_2024,Halfling,Path of the Berserker,5,3,2,3,0,0,PASS
+dnd_2024,Halfling,Path of the Berserker,6,4,2,3,0,0,PASS
+dnd_2024,Halfling,Path of the Berserker,7,4,2,3,0,0,PASS
+dnd_2024,Halfling,Path of the Berserker,8,4,2,3,0,0,PASS
+dnd_2024,Halfling,Path of the Berserker,9,4,3,3,0,1,PASS
+dnd_2024,Halfling,Path of the Berserker,10,4,3,4,0,1,PASS
+dnd_2024,Halfling,Path of the Berserker,11,4,3,4,0,1,PASS
+dnd_2024,Halfling,Path of the Berserker,12,5,3,4,0,1,PASS
+dnd_2024,Halfling,Path of the Berserker,13,5,3,4,0,1,PASS
+dnd_2024,Halfling,Path of the Berserker,14,5,3,4,0,1,PASS
+dnd_2024,Halfling,Path of the Berserker,15,5,3,4,0,1,PASS
+dnd_2024,Halfling,Path of the Berserker,16,5,4,4,0,1,PASS
+dnd_2024,Halfling,Path of the Berserker,17,6,4,4,0,2,PASS
+dnd_2024,Halfling,Path of the Berserker,18,6,4,4,0,2,PASS
+dnd_2024,Halfling,Path of the Berserker,19,6,4,4,0,2,PASS
+dnd_2024,Halfling,Path of the Berserker,20,6,4,4,0,2,PASS
+dnd_2024,Halfling,Path of the World Tree,1,2,2,2,0,0,PASS
+dnd_2024,Halfling,Path of the World Tree,2,2,2,2,0,0,PASS
+dnd_2024,Halfling,Path of the World Tree,3,3,2,2,0,0,PASS
+dnd_2024,Halfling,Path of the World Tree,4,3,2,3,0,0,PASS
+dnd_2024,Halfling,Path of the World Tree,5,3,2,3,0,0,PASS
+dnd_2024,Halfling,Path of the World Tree,6,4,2,3,0,0,PASS
+dnd_2024,Halfling,Path of the World Tree,7,4,2,3,0,0,PASS
+dnd_2024,Halfling,Path of the World Tree,8,4,2,3,0,0,PASS
+dnd_2024,Halfling,Path of the World Tree,9,4,3,3,0,1,PASS
+dnd_2024,Halfling,Path of the World Tree,10,4,3,4,0,1,PASS
+dnd_2024,Halfling,Path of the World Tree,11,4,3,4,0,1,PASS
+dnd_2024,Halfling,Path of the World Tree,12,5,3,4,0,1,PASS
+dnd_2024,Halfling,Path of the World Tree,13,5,3,4,0,1,PASS
+dnd_2024,Halfling,Path of the World Tree,14,5,3,4,0,1,PASS
+dnd_2024,Halfling,Path of the World Tree,15,5,3,4,0,1,PASS
+dnd_2024,Halfling,Path of the World Tree,16,5,4,4,0,1,PASS
+dnd_2024,Halfling,Path of the World Tree,17,6,4,4,0,2,PASS
+dnd_2024,Halfling,Path of the World Tree,18,6,4,4,0,2,PASS
+dnd_2024,Halfling,Path of the World Tree,19,6,4,4,0,2,PASS
+dnd_2024,Halfling,Path of the World Tree,20,6,4,4,0,2,PASS
+dnd_2024,Human,Path of the Berserker,1,2,2,2,0,0,PASS
+dnd_2024,Human,Path of the Berserker,2,2,2,2,0,0,PASS
+dnd_2024,Human,Path of the Berserker,3,3,2,2,0,0,PASS
+dnd_2024,Human,Path of the Berserker,4,3,2,3,0,0,PASS
+dnd_2024,Human,Path of the Berserker,5,3,2,3,0,0,PASS
+dnd_2024,Human,Path of the Berserker,6,4,2,3,0,0,PASS
+dnd_2024,Human,Path of the Berserker,7,4,2,3,0,0,PASS
+dnd_2024,Human,Path of the Berserker,8,4,2,3,0,0,PASS
+dnd_2024,Human,Path of the Berserker,9,4,3,3,0,1,PASS
+dnd_2024,Human,Path of the Berserker,10,4,3,4,0,1,PASS
+dnd_2024,Human,Path of the Berserker,11,4,3,4,0,1,PASS
+dnd_2024,Human,Path of the Berserker,12,5,3,4,0,1,PASS
+dnd_2024,Human,Path of the Berserker,13,5,3,4,0,1,PASS
+dnd_2024,Human,Path of the Berserker,14,5,3,4,0,1,PASS
+dnd_2024,Human,Path of the Berserker,15,5,3,4,0,1,PASS
+dnd_2024,Human,Path of the Berserker,16,5,4,4,0,1,PASS
+dnd_2024,Human,Path of the Berserker,17,6,4,4,0,2,PASS
+dnd_2024,Human,Path of the Berserker,18,6,4,4,0,2,PASS
+dnd_2024,Human,Path of the Berserker,19,6,4,4,0,2,PASS
+dnd_2024,Human,Path of the Berserker,20,6,4,4,0,2,PASS
+dnd_2024,Human,Path of the World Tree,1,2,2,2,0,0,PASS
+dnd_2024,Human,Path of the World Tree,2,2,2,2,0,0,PASS
+dnd_2024,Human,Path of the World Tree,3,3,2,2,0,0,PASS
+dnd_2024,Human,Path of the World Tree,4,3,2,3,0,0,PASS
+dnd_2024,Human,Path of the World Tree,5,3,2,3,0,0,PASS
+dnd_2024,Human,Path of the World Tree,6,4,2,3,0,0,PASS
+dnd_2024,Human,Path of the World Tree,7,4,2,3,0,0,PASS
+dnd_2024,Human,Path of the World Tree,8,4,2,3,0,0,PASS
+dnd_2024,Human,Path of the World Tree,9,4,3,3,0,1,PASS
+dnd_2024,Human,Path of the World Tree,10,4,3,4,0,1,PASS
+dnd_2024,Human,Path of the World Tree,11,4,3,4,0,1,PASS
+dnd_2024,Human,Path of the World Tree,12,5,3,4,0,1,PASS
+dnd_2024,Human,Path of the World Tree,13,5,3,4,0,1,PASS
+dnd_2024,Human,Path of the World Tree,14,5,3,4,0,1,PASS
+dnd_2024,Human,Path of the World Tree,15,5,3,4,0,1,PASS
+dnd_2024,Human,Path of the World Tree,16,5,4,4,0,1,PASS
+dnd_2024,Human,Path of the World Tree,17,6,4,4,0,2,PASS
+dnd_2024,Human,Path of the World Tree,18,6,4,4,0,2,PASS
+dnd_2024,Human,Path of the World Tree,19,6,4,4,0,2,PASS
+dnd_2024,Human,Path of the World Tree,20,6,4,4,0,2,PASS
+dnd_2024,Orc,Path of the Berserker,1,2,2,2,0,0,PASS
+dnd_2024,Orc,Path of the Berserker,2,2,2,2,0,0,PASS
+dnd_2024,Orc,Path of the Berserker,3,3,2,2,0,0,PASS
+dnd_2024,Orc,Path of the Berserker,4,3,2,3,0,0,PASS
+dnd_2024,Orc,Path of the Berserker,5,3,2,3,0,0,PASS
+dnd_2024,Orc,Path of the Berserker,6,4,2,3,0,0,PASS
+dnd_2024,Orc,Path of the Berserker,7,4,2,3,0,0,PASS
+dnd_2024,Orc,Path of the Berserker,8,4,2,3,0,0,PASS
+dnd_2024,Orc,Path of the Berserker,9,4,3,3,0,1,PASS
+dnd_2024,Orc,Path of the Berserker,10,4,3,4,0,1,PASS
+dnd_2024,Orc,Path of the Berserker,11,4,3,4,0,1,PASS
+dnd_2024,Orc,Path of the Berserker,12,5,3,4,0,1,PASS
+dnd_2024,Orc,Path of the Berserker,13,5,3,4,0,1,PASS
+dnd_2024,Orc,Path of the Berserker,14,5,3,4,0,1,PASS
+dnd_2024,Orc,Path of the Berserker,15,5,3,4,0,1,PASS
+dnd_2024,Orc,Path of the Berserker,16,5,4,4,0,1,PASS
+dnd_2024,Orc,Path of the Berserker,17,6,4,4,0,2,PASS
+dnd_2024,Orc,Path of the Berserker,18,6,4,4,0,2,PASS
+dnd_2024,Orc,Path of the Berserker,19,6,4,4,0,2,PASS
+dnd_2024,Orc,Path of the Berserker,20,6,4,4,0,2,PASS
+dnd_2024,Orc,Path of the World Tree,1,2,2,2,0,0,PASS
+dnd_2024,Orc,Path of the World Tree,2,2,2,2,0,0,PASS
+dnd_2024,Orc,Path of the World Tree,3,3,2,2,0,0,PASS
+dnd_2024,Orc,Path of the World Tree,4,3,2,3,0,0,PASS
+dnd_2024,Orc,Path of the World Tree,5,3,2,3,0,0,PASS
+dnd_2024,Orc,Path of the World Tree,6,4,2,3,0,0,PASS
+dnd_2024,Orc,Path of the World Tree,7,4,2,3,0,0,PASS
+dnd_2024,Orc,Path of the World Tree,8,4,2,3,0,0,PASS
+dnd_2024,Orc,Path of the World Tree,9,4,3,3,0,1,PASS
+dnd_2024,Orc,Path of the World Tree,10,4,3,4,0,1,PASS
+dnd_2024,Orc,Path of the World Tree,11,4,3,4,0,1,PASS
+dnd_2024,Orc,Path of the World Tree,12,5,3,4,0,1,PASS
+dnd_2024,Orc,Path of the World Tree,13,5,3,4,0,1,PASS
+dnd_2024,Orc,Path of the World Tree,14,5,3,4,0,1,PASS
+dnd_2024,Orc,Path of the World Tree,15,5,3,4,0,1,PASS
+dnd_2024,Orc,Path of the World Tree,16,5,4,4,0,1,PASS
+dnd_2024,Orc,Path of the World Tree,17,6,4,4,0,2,PASS
+dnd_2024,Orc,Path of the World Tree,18,6,4,4,0,2,PASS
+dnd_2024,Orc,Path of the World Tree,19,6,4,4,0,2,PASS
+dnd_2024,Orc,Path of the World Tree,20,6,4,4,0,2,PASS
+dnd_2024,Tiefling,Path of the Berserker,1,2,2,2,0,0,PASS
+dnd_2024,Tiefling,Path of the Berserker,2,2,2,2,0,0,PASS
+dnd_2024,Tiefling,Path of the Berserker,3,3,2,2,0,0,PASS
+dnd_2024,Tiefling,Path of the Berserker,4,3,2,3,0,0,PASS
+dnd_2024,Tiefling,Path of the Berserker,5,3,2,3,0,0,PASS
+dnd_2024,Tiefling,Path of the Berserker,6,4,2,3,0,0,PASS
+dnd_2024,Tiefling,Path of the Berserker,7,4,2,3,0,0,PASS
+dnd_2024,Tiefling,Path of the Berserker,8,4,2,3,0,0,PASS
+dnd_2024,Tiefling,Path of the Berserker,9,4,3,3,0,1,PASS
+dnd_2024,Tiefling,Path of the Berserker,10,4,3,4,0,1,PASS
+dnd_2024,Tiefling,Path of the Berserker,11,4,3,4,0,1,PASS
+dnd_2024,Tiefling,Path of the Berserker,12,5,3,4,0,1,PASS
+dnd_2024,Tiefling,Path of the Berserker,13,5,3,4,0,1,PASS
+dnd_2024,Tiefling,Path of the Berserker,14,5,3,4,0,1,PASS
+dnd_2024,Tiefling,Path of the Berserker,15,5,3,4,0,1,PASS
+dnd_2024,Tiefling,Path of the Berserker,16,5,4,4,0,1,PASS
+dnd_2024,Tiefling,Path of the Berserker,17,6,4,4,0,2,PASS
+dnd_2024,Tiefling,Path of the Berserker,18,6,4,4,0,2,PASS
+dnd_2024,Tiefling,Path of the Berserker,19,6,4,4,0,2,PASS
+dnd_2024,Tiefling,Path of the Berserker,20,6,4,4,0,2,PASS
+dnd_2024,Tiefling,Path of the World Tree,1,2,2,2,0,0,PASS
+dnd_2024,Tiefling,Path of the World Tree,2,2,2,2,0,0,PASS
+dnd_2024,Tiefling,Path of the World Tree,3,3,2,2,0,0,PASS
+dnd_2024,Tiefling,Path of the World Tree,4,3,2,3,0,0,PASS
+dnd_2024,Tiefling,Path of the World Tree,5,3,2,3,0,0,PASS
+dnd_2024,Tiefling,Path of the World Tree,6,4,2,3,0,0,PASS
+dnd_2024,Tiefling,Path of the World Tree,7,4,2,3,0,0,PASS
+dnd_2024,Tiefling,Path of the World Tree,8,4,2,3,0,0,PASS
+dnd_2024,Tiefling,Path of the World Tree,9,4,3,3,0,1,PASS
+dnd_2024,Tiefling,Path of the World Tree,10,4,3,4,0,1,PASS
+dnd_2024,Tiefling,Path of the World Tree,11,4,3,4,0,1,PASS
+dnd_2024,Tiefling,Path of the World Tree,12,5,3,4,0,1,PASS
+dnd_2024,Tiefling,Path of the World Tree,13,5,3,4,0,1,PASS
+dnd_2024,Tiefling,Path of the World Tree,14,5,3,4,0,1,PASS
+dnd_2024,Tiefling,Path of the World Tree,15,5,3,4,0,1,PASS
+dnd_2024,Tiefling,Path of the World Tree,16,5,4,4,0,1,PASS
+dnd_2024,Tiefling,Path of the World Tree,17,6,4,4,0,2,PASS
+dnd_2024,Tiefling,Path of the World Tree,18,6,4,4,0,2,PASS
+dnd_2024,Tiefling,Path of the World Tree,19,6,4,4,0,2,PASS
+dnd_2024,Tiefling,Path of the World Tree,20,6,4,4,0,2,PASS
