@@ -22,7 +22,7 @@ export function getDefaultRestOptions(kind: RestKind): RestOptions {
 export function applyRestToCharacter(character: Character, kind: RestKind, options: RestOptions) {
   const hpAfter = options.healToFull ? character.maxHp : Math.min(character.maxHp, character.currentHp + Math.max(0, Math.floor(options.shortRestHealing)));
   const spellSlots = kind === "long" ? character.spellSlots.map((slot) => ({ ...slot, used: 0 })) : character.spellSlots;
-  const pactMagicSlots = kind === "long" ? (character.pactMagicSlots??[]).map((slot) => ({ ...slot, used: 0 })) : character.pactMagicSlots;
+  const pactMagicSlots = (kind === "short" || kind === "long") ? (character.pactMagicSlots??[]).map((slot) => ({ ...slot, used: 0 })) : character.pactMagicSlots;
   const hitDice = kind === "long" ? character.hitDice.map((pool) => ({ ...pool, used: Math.max(0, pool.used - Math.max(1, Math.floor(pool.max / 2))) })) : character.hitDice;
   const resources = restoreResources(character.resources ?? [], kind);
   const next: Character = {

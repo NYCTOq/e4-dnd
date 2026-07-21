@@ -885,8 +885,9 @@
     "source": "SRD 5.2 starter",
     "target": "See description",
     "tags": [],
-    "effectType": "utility",
-    "attackType": "automatic"
+    "effectType": "defense",
+    "attackType": "automatic",
+    "reactionTrigger": "Hit by an attack roll or targeted by Magic Missile"
   },
   {
     "id": "sleep",
@@ -1045,7 +1046,7 @@
       "Warlock",
       "Wizard"
     ],
-    "description": "A creature becomes invisible until the spell ends, normally ending after it attacks or casts a spell.",
+    "description": "A creature you touch has the Invisible condition until the spell ends. The spell ends early immediately after the target makes an attack roll, deals damage, or casts a spell.",
     "higherLevels": "Targets one additional creature per slot level above 2nd.",
     "effectType": "defense",
     "attackType": "automatic",
@@ -1111,7 +1112,7 @@
     "source": "SRD 5.2 starter",
     "target": "See description",
     "tags": [],
-    "effectType": "utility",
+    "effectType": "defense",
     "attackType": "automatic"
   },
   {
@@ -1136,7 +1137,7 @@
     "source": "SRD 5.2 starter",
     "target": "See description",
     "tags": [],
-    "effectType": "utility",
+    "effectType": "movement",
     "attackType": "automatic"
   },
   {

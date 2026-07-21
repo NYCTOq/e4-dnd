@@ -1,5 +1,8 @@
-1. Bu klasörün içindeki package.json, package-lock.json ve src klasörünü proje köküne kopyalayın.
+1. Bu klasörün İÇERİĞİNİ E4 D&D proje köküne kopyalayın.
 2. Windows sorarsa "Hedefteki dosyaları değiştir" seçin.
-3. npm.cmd install
-4. npm.cmd test
-5. npm.cmd run build
+3. Proje klasöründe çalıştırın:
+   npm.cmd install
+   npm.cmd test
+   npm.cmd run build
+
+Beklenen: 174 test dosyası, 727 başarılı test, 0 başarısız test.

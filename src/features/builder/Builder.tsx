@@ -27,6 +27,7 @@ import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import type { CharacterDraft } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
+import { NumberStepper } from "../../shared/forms/NumberStepper";
 import { CharacterInventoryManager, CharacterSpellSelector, calculateEffectiveArmorClass, calculateSuggestedArmorClass, createCharacterFromDraft, emptyDraft, getCharacterInventoryItems, getInventoryWeight, normalizeCharacterDraft } from "../characters/characterShared";
 
 export function Builder({
@@ -769,7 +770,7 @@ export function Builder({
                       {STANDARD_ARRAY_VALUES.map((value) => <option key={value} value={value}>{value}</option>)}
                     </select> : null}
                     {abilityMethod === "point-buy" ? <div className="ability-stepper"><button type="button" onClick={() => adjustPointBuy(ability, -1)} disabled={base <= 8}>−</button><strong>{base}</strong><button type="button" onClick={() => adjustPointBuy(ability, 1)} disabled={base >= 15}>+</button></div> : null}
-                    {abilityMethod === "rolled" ? <input type="number" min={3} max={20} value={base} onChange={(event) => updateAbility(ability, Number(event.target.value))} /> : null}
+                    {abilityMethod === "rolled" ? <NumberStepper value={base} min={3} max={20} label={`${ability.toUpperCase()} ability score`} onChange={(value) => updateAbility(ability, value)} /> : null}
                     <small>Başlangıç {base} · Origin {origin >= 0 ? "+" : ""}{origin} · Level {asi >= 0 ? "+" : ""}{asi}</small>
                     <strong className="ability-final-score">{final} ({formatModifier(getAbilityModifier(final))})</strong>
                   </article>;

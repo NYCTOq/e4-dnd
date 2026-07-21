@@ -11,6 +11,7 @@ import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import type { Character, CharacterDraft } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellAttackBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
+import { NumberStepper } from "../../shared/forms/NumberStepper";
 import { CharacterInventoryManager, CharacterSpellSelector, calculateEffectiveArmorClass, createCharacterFromDraft, emptyDraft } from "./characterShared";
 import { buildEditedCharacter, characterToEditDraft } from "./characterEditorRules";
 
@@ -307,17 +308,12 @@ export function CharacterEditor({
               <label className="ability-input" key={ability}>
                 <span>{ability.toUpperCase()}</span>
 
-                <input
-                  type="number"
+                <NumberStepper
+                  value={score}
                   min={1}
                   max={20}
-                  value={score}
-                  onChange={(event) =>
-                    updateAbility(
-                      ability as keyof CharacterDraft["abilities"],
-                      Number(event.target.value),
-                    )
-                  }
+                  label={`${ability.toUpperCase()} ability score`}
+                  onChange={(value) => updateAbility(ability as keyof CharacterDraft["abilities"], value)}
                 />
 
                 <strong>{formatModifier(getAbilityModifier(score))}</strong>

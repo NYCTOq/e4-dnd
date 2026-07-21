@@ -56,6 +56,7 @@ import { canUseSubclassAction, getSubclassRuntime, spendSubclassActionResource, 
 import { getAdvancedFeatRuntime, getInspiringLeaderTempHp, type FeatAction } from "../../core/rulesets/advancedFeatRuntimeRules";
 import { getSpellBehavior } from "../../core/rulesets/spellBehaviorRules";
 import { getSpellMaterialReadiness } from "../../core/rulesets/spellMaterialRules";
+import { getActiveDefenseMovementModifiers, removeEffectsBrokenByAttack, removeEffectsBrokenBySpellCast } from "../../core/rulesets/spellDefenseMovementRules";
 import { getEncumbrance, getEquipmentLegality, getInventoryWeight, findAmmunitionId, consumeAmmunition } from "../../core/rulesets/equipmentRuntimeRules";
 import { getMulticlassAttacksPerAction, normalizeClassLevels } from "../../core/rulesets/multiclassRules";
 import { loadHomebrewPackages } from "../homebrew/homebrewStorage";
@@ -238,11 +239,12 @@ export function PlayMode({
   const paladinAuras=isPaladin(activeCharacter.className)?getPaladinAuraSummary(activeCharacter.level):null;
   const activeSpellEffects=activeCharacter.activeSpellEffects??[];
   const itemEffectRuntime=getItemEffectRuntime(activeSpellEffects);
+  const spellDefenseMovementRuntime=getActiveDefenseMovementModifiers(activeSpellEffects);
   const magicArmorRuntime=getMagicArmorRuntime(activeCharacter,rulesetData?.items);
   const selectedFeats=rulesetData?.feats.filter(feat=>activeCharacter.featIds.includes(feat.id))??[];
   const advancedFeatRuntime=getAdvancedFeatRuntime(selectedFeats,activeCharacter.level);
   const mediumArmorMasterBonus=equippedItems.armor?.armorType==="medium"&&getAbilityModifier(effectiveCharacter.abilities.dex)>=3&&advancedFeatRuntime.mediumArmorDexCap>=3?1:0;
-  const armorClass=Math.max(baseArmorClass+itemEffectRuntime.armorClassBonus+advancedFeatRuntime.armorClassBonus+mediumArmorMasterBonus,subclassRuntime.armorClassFloor);
+  const armorClass=Math.max(baseArmorClass+itemEffectRuntime.armorClassBonus+spellDefenseMovementRuntime.armorClassBonus+advancedFeatRuntime.armorClassBonus+mediumArmorMasterBonus,subclassRuntime.armorClassFloor);
   const conditionEffects=getConditionEffects(activeCharacter.conditions);
   const exhaustionEffects=getExhaustionEffects(activeCharacter.ruleset,activeCharacter.exhaustion);
   const selectedRace=rulesetData?.races.find(race=>race.name===activeCharacter.race);
@@ -382,7 +384,7 @@ export function PlayMode({
         ? [...activeCharacter.conditions, "Concentration" as const]
         : activeCharacter.conditions;
 
-    const formula=getSpellRollFormula(spell,activeCharacter.level,slotLevel);const rolledTotal=formula?rollFormula(formula):null;const lifeHealing=getLifeDomainHealing(activeCharacter.subclass,activeCharacter.level,slotLevel);const total=rolledTotal!==null&&spell.healingDice?rolledTotal+lifeHealing.healingBonus:rolledTotal;const createdEffect=createSpellEffect(spell,activeCharacter.ruleset,slotLevel);const effectsAfterAction=removeFragileItemEffects(activeSpellEffects);const nextEffects=createdEffect?addSpellEffect(effectsAfterAction,createdEffect):effectsAfterAction;
+    const formula=getSpellRollFormula(spell,activeCharacter.level,slotLevel);const rolledTotal=formula?rollFormula(formula):null;const lifeHealing=getLifeDomainHealing(activeCharacter.subclass,activeCharacter.level,slotLevel);const total=rolledTotal!==null&&spell.healingDice?rolledTotal+lifeHealing.healingBonus:rolledTotal;const createdEffect=createSpellEffect(spell,activeCharacter.ruleset,slotLevel);const effectsAfterAction=removeEffectsBrokenBySpellCast(removeFragileItemEffects(activeSpellEffects),Boolean(spell.damageDice));const nextEffects=createdEffect?addSpellEffect(effectsAfterAction,createdEffect):effectsAfterAction;
     commit({
       currentHp:spell.healingDice&&total!==null?Math.min(activeCharacter.maxHp,activeCharacter.currentHp+Math.max(0,total)):activeCharacter.currentHp,
       spellSlots:
@@ -480,7 +482,7 @@ export function PlayMode({
     const inventoryAfterAmmunition=consumeAmmunition(activeCharacter.inventory,ammunitionId);
     if(ammunitionId&&inventoryAfterAmmunition===null)return;
     const conditionMode = combineRollModes(conditionEffects.attackMode, exhaustionEffects.attackSaveMode);
-    const effectiveMode = combineRollModes(combineRollModes(combineRollModes(attackMode, conditionMode), itemEffectRuntime.attackMode),masteryVexReady?"advantage":"normal");
+    const effectiveMode = combineRollModes(combineRollModes(combineRollModes(combineRollModes(attackMode, conditionMode), itemEffectRuntime.attackMode), spellDefenseMovementRuntime.attackMode),masteryVexReady?"advantage":"normal");
     const potionAttackBonus = itemEffectRuntime.attackSaveBonusDice ? rollFormula(itemEffectRuntime.attackSaveBonusDice) : 0;
     const modifier = getWeaponAttackBonus(effectiveCharacter, weapon) - (legality.proficient?0:getProficiencyBonus(activeCharacter.level)) - exhaustionEffects.d20Penalty + potionAttackBonus - (powerAttack&&advancedFeatRuntime.powerAttack?5:0);
     const dice = rollDice({ count: effectiveMode === "normal" ? 1 : 2, sides: 20, modifier: 0 });
@@ -509,7 +511,7 @@ export function PlayMode({
     if(masteryOutcome.grazeDamage)results.push({id:crypto.randomUUID(),label:`${weapon.name} · Graze Damage`,notation:"Ability modifier",total:masteryOutcome.grazeDamage});
     if(masteryOutcome.note)results.push({id:crypto.randomUUID(),label:`Weapon Mastery · ${masteryOutcome.mastery}`,notation:masteryOutcome.note,total:0});
     setMasteryVexReady(masteryOutcome.grantsVex);
-    const effectsAfterAttack = removeFragileItemEffects(activeSpellEffects);
+    const effectsAfterAttack = removeEffectsBrokenByAttack(removeFragileItemEffects(activeSpellEffects));
     if (effectsAfterAttack.length !== activeSpellEffects.length||inventoryAfterAmmunition!==activeCharacter.inventory) commit({ activeSpellEffects: effectsAfterAttack,inventory:inventoryAfterAmmunition??activeCharacter.inventory });
     setTurnEconomy(current => spendAttack(current, attacksPerAction));
     setRollHistory(current => [...results, ...current].slice(0, 6));

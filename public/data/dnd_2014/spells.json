@@ -885,8 +885,9 @@
     "source": "SRD 5.1",
     "target": "See description",
     "tags": [],
-    "effectType": "utility",
-    "attackType": "automatic"
+    "effectType": "defense",
+    "attackType": "automatic",
+    "reactionTrigger": "Hit by an attack roll or targeted by Magic Missile"
   },
   {
     "id": "sleep",
@@ -1111,7 +1112,7 @@
     "source": "SRD 5.1",
     "target": "See description",
     "tags": [],
-    "effectType": "utility",
+    "effectType": "defense",
     "attackType": "automatic"
   },
   {
@@ -1136,7 +1137,7 @@
     "source": "SRD 5.1",
     "target": "See description",
     "tags": [],
-    "effectType": "utility",
+    "effectType": "movement",
     "attackType": "automatic"
   },
   {

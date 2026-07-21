@@ -2,6 +2,8 @@ import type { CharacterSpellEffect, CharacterSpellSlot, RulesetId } from "../cha
 import type { DndSpellData, SpellResolutionType } from "./ruleset.types";
 import { getSpellBehavior } from "./spellBehaviorRules";
 import { getControlSpellRuntime, type ControlSpellRuntime } from "./spellControlRules";
+import { getDefenseMovementSpellRuntime, type DefenseMovementSpellRuntime } from "./spellDefenseMovementRules";
+import { getSummonPersistentSpellRuntime, type SummonPersistentSpellRuntime } from "./spellSummonPersistentRules";
 import { addSpellEffect, createSpellEffect } from "./spellEffectRules";
 import { getCastableSlotLevels, getSpellRollFormula, rollFormula } from "./spellResolution";
 
@@ -27,6 +29,8 @@ export interface SpellRuntimePlan {
   tier: SpellRuntimeTier;
   guidance: string[];
   control: ControlSpellRuntime | null;
+  defenseMovement: DefenseMovementSpellRuntime | null;
+  summonPersistent: SummonPersistentSpellRuntime | null;
 }
 
 export interface SpellRuntimeOutcome {
@@ -66,18 +70,22 @@ export function getSpellRuntimePlan(spell: DndSpellData, characterLevel: number,
   const formula = getSpellRollFormula(spell, characterLevel, slotLevel);
   const resolution = spell.attackType ?? (spell.saveAbility ? "saving-throw" : "automatic");
   const control = getControlSpellRuntime(spell, ruleset, slotLevel);
+  const defenseMovement = getDefenseMovementSpellRuntime(spell, ruleset, slotLevel);
+  const summonPersistent = getSummonPersistentSpellRuntime(spell, ruleset, slotLevel);
   const guidance: string[] = [];
   if (behavior.repeatSave) guidance.push("Hedef uygun tur sonunda saving throw'u tekrarlar.");
   if (behavior.summoning) guidance.push("Summon/companion istatistikleri ve komut ekonomisi masa üzerinde doğrulanır.");
   if (behavior.movement) guidance.push("Varış noktası, görüş ve boş alan koşulları doğrulanır.");
   if (spell.conditionEffect) guidance.push(`${spell.conditionEffect} condition etkisini uygula ve süreyi takip et.`);
   if (control) guidance.push(...control.guidance);
+  if (defenseMovement) guidance.push(...defenseMovement.guidance);
+  if (summonPersistent) guidance.push(...summonPersistent.guidance);
   if (spell.id === "magic-missile") guidance.push("Her dart ayrı hedefe yönlendirilebilir; aynı hedefe giden dartların hasarını birlikte uygula.");
   if (spell.id === "guiding-bolt") guidance.push("Bir sonraki saldırı atışı, hedefe karşı süre dolmadan yapılırsa Advantage kazanır.");
   if (spell.id === "spirit-guardians") guidance.push(/ends its turn/i.test(spell.description) ? "2024: Emanation hedefe girdiğinde, hedef Emanation’a girdiğinde veya turunu orada bitirdiğinde, tur başına en fazla bir save." : "2014: Hedef alana ilk kez girdiğinde veya turuna alanda başladığında save yapar.");
   if (behavior.materialWarning) guidance.push(`Material: ${behavior.materialWarning}`);
   const automatic = Boolean(formula) && ["automatic", "spell-attack", "saving-throw"].includes(resolution);
-  const assisted = automatic || Boolean(spell.effectType || behavior.area || behavior.repeatSave || behavior.summoning || behavior.movement || spell.conditionEffect);
+  const assisted = automatic || Boolean(spell.effectType || behavior.area || behavior.repeatSave || behavior.summoning || behavior.movement || spell.conditionEffect || summonPersistent);
   return {
     spellId: spell.id,
     slotLevel,
@@ -97,6 +105,8 @@ export function getSpellRuntimePlan(spell: DndSpellData, characterLevel: number,
     tier: automatic ? "automatic" : assisted ? "assisted" : "manual",
     guidance,
     control,
+    defenseMovement,
+    summonPersistent,
   };
 }
 
