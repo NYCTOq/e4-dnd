@@ -478,6 +478,7 @@ export function CharacterSpellSelector({
   isRulesetLoading,
   rulesetError,
   className,
+  subclassName = "",
   characterLevel,
   abilities,
   knownSpellIds,
@@ -491,6 +492,7 @@ export function CharacterSpellSelector({
   isRulesetLoading: boolean;
   rulesetError: string | null;
   className: string;
+  subclassName?: string;
   characterLevel: number;
   abilities: Character["abilities"];
   knownSpellIds: string[];
@@ -506,8 +508,8 @@ export function CharacterSpellSelector({
 
   const normalizedClassName = className.trim().toLowerCase();
   const selectedClassData = rulesetData?.classes.find((item) => item.name.toLowerCase() === normalizedClassName);
-  const highestSpellLevel = getHighestSpellLevel(selectedClassData, characterLevel);
-  const spellcastingProfile = getSpellcastingProfile(selectedClassData ?? null, characterLevel, abilities, rulesetData?.id ?? "dnd_2014");
+  const spellcastingProfile = getSpellcastingProfile(selectedClassData ?? null, characterLevel, abilities, rulesetData?.id ?? "dnd_2014", subclassName);
+  const highestSpellLevel = spellcastingProfile.maxSpellLevel || getHighestSpellLevel(selectedClassData, characterLevel);
 
   const filteredSpells = useMemo(() => {
     if (!rulesetData) {
@@ -517,10 +519,11 @@ export function CharacterSpellSelector({
     const normalizedSearch = searchTerm.trim().toLowerCase();
 
     return rulesetData.spells.filter((spell) => {
+      const spellListClass = spellcastingProfile.spellListClass ?? normalizedClassName;
       const matchesClass =
-        normalizedClassName.length === 0 ||
+        spellListClass.length === 0 ||
         spell.classes.some(
-          (spellClass) => spellClass.toLowerCase() === normalizedClassName,
+          (spellClass) => spellClass.toLowerCase() === spellListClass,
         );
 
       const matchesLevel =
@@ -720,7 +723,7 @@ export function CharacterSpellSelector({
                             <span>{spell.range}</span>
                             {spell.concentration ? <span>Concentration</span> : null}
                             {spell.ritual ? <span>Ritual</span> : null}
-                            {canRitualCast(spell, spellcastingProfile, knownSpellIds) ? <span>Ritual Ready</span> : null}
+                            {canRitualCast(spell, spellcastingProfile, knownSpellIds, preparedSpellIds) ? <span>Ritual Ready</span> : null}
                           </div>
                         </div>
 

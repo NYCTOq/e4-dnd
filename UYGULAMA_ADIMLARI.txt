@@ -1,15 +1,5 @@
-Bu klasörün İÇİNDEKİ public ve src klasörlerini proje köküne kopyalayın.
-Windows sorunca "Hedefteki dosyaları değiştir" seçeneğini kullanın.
-
-Düzeltme:
-- 2024 Rogue Weapon Mastery tüm seviyelerde 2 olarak sabitlendi.
-- Rogue 2014/2024 sertifikasyon ve kural dosyaları güncellendi.
-
-Kontrol:
-npm.cmd test
-npm.cmd run build
-
-Doğrulanan sonuç:
-153 test dosyası geçti.
-625 test geçti.
-Production build başarılı.
+1. Bu klasörün içindeki package.json, package-lock.json ve src klasörünü proje köküne kopyalayın.
+2. Windows sorarsa "Hedefteki dosyaları değiştir" seçin.
+3. npm.cmd install
+4. npm.cmd test
+5. npm.cmd run build

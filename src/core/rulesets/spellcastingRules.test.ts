@@ -6,5 +6,5 @@ const cleric={name:"Cleric",spellProgression:"full",spellcastingAbility:"wis",le
 describe("spellcasting rules engine",()=>{
  it("calculates prepared limits from class level and ability",()=>expect(getSpellcastingProfile(cleric,5,abilities,"dnd_2014").preparedSpellLimit).toBe(9));
  it("reads standard and pact slots from class progression",()=>expect(getClassSpellSlots(cleric,5)).toEqual([{level:1,max:4,used:0},{level:2,max:3,used:0},{level:3,max:2,used:0}]));
- it("allows ritual casting only for known ritual spells",()=>{const profile=getSpellcastingProfile(cleric,5,abilities,"dnd_2014"); const spell={id:"detect-magic",ritual:true} as DndSpellData; expect(canRitualCast(spell,profile,[spell.id])).toBe(true); expect(canRitualCast(spell,profile,[])).toBe(false);});
+ it("allows ritual casting only for known ritual spells",()=>{const profile=getSpellcastingProfile(cleric,5,abilities,"dnd_2014"); const spell={id:"detect-magic",ritual:true} as DndSpellData; expect(canRitualCast(spell,profile,[spell.id],[spell.id])).toBe(true); expect(canRitualCast(spell,profile,[spell.id],[])).toBe(false);});
 });

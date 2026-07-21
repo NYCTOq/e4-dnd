@@ -1,7 +1,8 @@
 import type { AbilityScores, CharacterDraft } from "../character/character.types";
 import { getGeneralFeatSlotCount, isFeatEligible } from "./featRules";
 import { buildFinalSkillProficiencies, normalizeClassSkillChoices } from "./proficiencyRules";
-import { getHighestSpellLevel, isSpellAvailableToClass } from "./spellRules";
+import { isSpellAvailableToClass } from "./spellRules";
+import { getSpellcastingProfile } from "./spellcastingRules";
 import type { RulesetData } from "./ruleset.types";
 import { getFightingStyleChoiceCount, getFightingStyles } from "./fightingStyleRules";
 import { getWeaponMastery, getWeaponMasteryChoiceCount } from "./equipmentRules";
@@ -54,7 +55,7 @@ export function validateCharacterDraft(draft: CharacterDraft, rulesetData: Rules
   for (const featId of draft.featIds) {
     const feat = rulesetData?.feats.find((item) => item.id === featId);
     if (!feat) add(`feat-${featId}`, "error", "Feats", "Seçilen feat bu ruleset içinde bulunamadı.");
-    else if (!isFeatEligible(feat, { level: draft.level, className: draft.className, abilities: finalAbilities, canCastSpells: Boolean(classData?.spellcastingAbility) }).eligible) add(`feat-${featId}`, "error", "Feats", `${feat.name} prerequisite koşullarını karşılamıyor.`);
+    else if (!isFeatEligible(feat, { level: draft.level, className: draft.className, abilities: finalAbilities, canCastSpells: Boolean(getSpellcastingProfile(classData, draft.level, finalAbilities, draft.ruleset, draft.subclass).spellListClass), armorTraining: classData?.armorProficiencies, hasFightingStyleFeature: getFightingStyleChoiceCount(draft.className, draft.level, draft.subclass) > 0 }).eligible) add(`feat-${featId}`, "error", "Feats", `${feat.name} prerequisite koşullarını karşılamıyor.`);
   }
 
   const fightingStyleLimit = getFightingStyleChoiceCount(draft.className, draft.level, draft.subclass);
@@ -75,10 +76,13 @@ export function validateCharacterDraft(draft: CharacterDraft, rulesetData: Rules
   const companionLimit=getCompanionChoiceCount(draft.className,draft.subclass,draft.level);const validCompanionIds=new Set(getRangerCompanions(draft.ruleset).map(item=>item.id));if((companionLimit===1&&!draft.companionId)||(draft.companionId&&!validCompanionIds.has(draft.companionId)))add("companion","error","Feats",`${draft.subclass||draft.className} için geçerli bir companion seçilmeli.`);
   const arcanumLevels=getMysticArcanumLevels(draft.className,draft.level,draft.ruleset);const arcanumSpells=(draft.arcanumSpellIds??[]).map(id=>rulesetData?.spells.find(spell=>spell.id===id)).filter(Boolean);if(arcanumSpells.length!==arcanumLevels.length||arcanumLevels.some(level=>arcanumSpells.filter(spell=>spell?.level===level&&spell.classes.some(name=>name.toLowerCase()==="warlock")).length!==1))add("mystic-arcanum","error","Spells",`Warlock için açılan her Mystic Arcanum level'ından bir spell seçilmeli (${arcanumSpells.length}/${arcanumLevels.length}).`);
 
-  const highestSpellLevel = getHighestSpellLevel(classData ?? undefined, draft.level);
+  const spellcastingProfile = getSpellcastingProfile(classData, draft.level, finalAbilities, draft.ruleset, draft.subclass);
+  const spellListClass = spellcastingProfile.spellListClass;
   for (const spellId of draft.knownSpellIds) {
     const spell = rulesetData?.spells.find((item) => item.id === spellId);
-    if (!spell || !isSpellAvailableToClass(spell, draft.className) || (spell.level > 0 && spell.level > highestSpellLevel)) add(`spell-${spellId}`, "error", "Spells", "Seçilen büyülerden biri class veya level ile uyumlu değil.");
+    const availableToProfile = Boolean(spell && spellListClass && isSpellAvailableToClass(spell, spellListClass));
+    const withinSpellLevel = Boolean(spell && (spell.level === 0 || spell.level <= spellcastingProfile.maxSpellLevel));
+    if (!spell || !availableToProfile || !withinSpellLevel) add(`spell-${spellId}`, "error", "Spells", "Seçilen büyülerden biri class, subclass veya level ile uyumlu değil.");
   }
   if (draft.preparedSpellIds.some((id) => !draft.knownSpellIds.includes(id))) add("prepared", "error", "Spells", "Prepared büyüler known spell listesinde bulunmalı.");
 

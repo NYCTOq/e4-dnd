@@ -1,6 +1,7 @@
-import type { CharacterSpellEffect, CharacterSpellSlot } from "../character/character.types";
+import type { CharacterSpellEffect, CharacterSpellSlot, RulesetId } from "../character/character.types";
 import type { DndSpellData, SpellResolutionType } from "./ruleset.types";
 import { getSpellBehavior } from "./spellBehaviorRules";
+import { getControlSpellRuntime, type ControlSpellRuntime } from "./spellControlRules";
 import { addSpellEffect, createSpellEffect } from "./spellEffectRules";
 import { getCastableSlotLevels, getSpellRollFormula, rollFormula } from "./spellResolution";
 
@@ -25,6 +26,7 @@ export interface SpellRuntimePlan {
   materialWarning: string | null;
   tier: SpellRuntimeTier;
   guidance: string[];
+  control: ControlSpellRuntime | null;
 }
 
 export interface SpellRuntimeOutcome {
@@ -39,9 +41,9 @@ const hasText = (value: string | undefined, pattern: RegExp) => pattern.test(val
 
 export function getDefaultSpellSaveRule(spell: DndSpellData): SaveDamageRule {
   if (spell.attackType !== "saving-throw" && !spell.saveAbility) return "full";
+  if (spell.saveDamageRule) return spell.saveDamageRule;
   const text = `${spell.description} ${spell.higherLevels ?? ""}`;
-  if (hasText(text, /half as much|half damage|yarısı|yarı hasar/i)) return "half";
-  if (spell.damageDice && spell.level > 0 && !spell.conditionEffect) return "half";
+  if (hasText(text, /half as much|half damage|save for half|yarısı|yarı hasar/i)) return "half";
   return "none";
 }
 
@@ -59,15 +61,20 @@ export function resolveSpellHealing(currentHp: number, maxHp: number, healing: n
   return { currentHp: safeCurrent + applied, applied, overheal: Math.max(0, healing - applied) };
 }
 
-export function getSpellRuntimePlan(spell: DndSpellData, characterLevel: number, slotLevel = spell.level): SpellRuntimePlan {
+export function getSpellRuntimePlan(spell: DndSpellData, characterLevel: number, slotLevel = spell.level, ruleset: RulesetId = "dnd_2014"): SpellRuntimePlan {
   const behavior = getSpellBehavior(spell, slotLevel);
   const formula = getSpellRollFormula(spell, characterLevel, slotLevel);
   const resolution = spell.attackType ?? (spell.saveAbility ? "saving-throw" : "automatic");
+  const control = getControlSpellRuntime(spell, ruleset, slotLevel);
   const guidance: string[] = [];
   if (behavior.repeatSave) guidance.push("Hedef uygun tur sonunda saving throw'u tekrarlar.");
   if (behavior.summoning) guidance.push("Summon/companion istatistikleri ve komut ekonomisi masa üzerinde doğrulanır.");
   if (behavior.movement) guidance.push("Varış noktası, görüş ve boş alan koşulları doğrulanır.");
   if (spell.conditionEffect) guidance.push(`${spell.conditionEffect} condition etkisini uygula ve süreyi takip et.`);
+  if (control) guidance.push(...control.guidance);
+  if (spell.id === "magic-missile") guidance.push("Her dart ayrı hedefe yönlendirilebilir; aynı hedefe giden dartların hasarını birlikte uygula.");
+  if (spell.id === "guiding-bolt") guidance.push("Bir sonraki saldırı atışı, hedefe karşı süre dolmadan yapılırsa Advantage kazanır.");
+  if (spell.id === "spirit-guardians") guidance.push(/ends its turn/i.test(spell.description) ? "2024: Emanation hedefe girdiğinde, hedef Emanation’a girdiğinde veya turunu orada bitirdiğinde, tur başına en fazla bir save." : "2014: Hedef alana ilk kez girdiğinde veya turuna alanda başladığında save yapar.");
   if (behavior.materialWarning) guidance.push(`Material: ${behavior.materialWarning}`);
   const automatic = Boolean(formula) && ["automatic", "spell-attack", "saving-throw"].includes(resolution);
   const assisted = automatic || Boolean(spell.effectType || behavior.area || behavior.repeatSave || behavior.summoning || behavior.movement || spell.conditionEffect);
@@ -89,6 +96,7 @@ export function getSpellRuntimePlan(spell: DndSpellData, characterLevel: number,
     materialWarning: behavior.materialWarning,
     tier: automatic ? "automatic" : assisted ? "assisted" : "manual",
     guidance,
+    control,
   };
 }
 
@@ -100,14 +108,20 @@ export function resolveGlobalSpell(input: {
   saveSucceeded?: boolean;
   targetCount?: number;
   random?: () => number;
+  spellcastingAbilityModifier?: number;
+  ruleset?: RulesetId;
 }): SpellRuntimeOutcome {
   const slotLevel = input.slotLevel ?? input.spell.level;
-  const plan = getSpellRuntimePlan(input.spell, input.characterLevel, slotLevel);
-  const rolled = plan.formula ? rollFormula(plan.formula, input.random) : null;
-  const resolved = rolled === null ? null : resolveSpellSave(rolled, Boolean(input.saveSucceeded), plan.saveDamageRule);
+  const plan = getSpellRuntimePlan(input.spell, input.characterLevel, slotLevel, input.ruleset ?? "dnd_2014");
+  const isMagicMissile = input.spell.id === "magic-missile";
   const count = Math.max(1, input.targetCount ?? plan.targetCount);
-  const perTarget = resolved === null ? [] : Array.from({ length: count }, () => resolved);
-  const effect = createSpellEffect(input.spell);
+  const projectileRolls = isMagicMissile ? Array.from({ length: count }, () => rollFormula("1d4+1", input.random)) : [];
+  const baseRoll = isMagicMissile ? projectileRolls.reduce((sum, value) => sum + value, 0) : plan.formula ? rollFormula(plan.formula, input.random) : null;
+  const addsAbilityModifier = baseRoll !== null && /spellcasting ability modifier/i.test(`${input.spell.description} ${input.spell.higherLevels ?? ""}`);
+  const rolled = baseRoll === null ? null : baseRoll + (addsAbilityModifier ? (input.spellcastingAbilityModifier ?? 0) : 0);
+  const resolved = rolled === null ? null : resolveSpellSave(rolled, Boolean(input.saveSucceeded), plan.saveDamageRule);
+  const perTarget = isMagicMissile ? projectileRolls : resolved === null ? [] : Array.from({ length: count }, () => resolved);
+  const effect = createSpellEffect(input.spell, input.ruleset ?? "dnd_2014", slotLevel);
   const nextEffects = effect ? addSpellEffect(input.currentEffects ?? [], effect) : input.currentEffects ?? [];
   return { rolled, resolved, perTarget, effect, nextEffects };
 }

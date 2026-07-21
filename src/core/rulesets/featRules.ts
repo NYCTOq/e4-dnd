@@ -25,6 +25,8 @@ export function isFeatEligible(
     className: string;
     abilities: AbilityScores;
     canCastSpells: boolean;
+    armorTraining?: string[];
+    hasFightingStyleFeature?: boolean;
   },
 ) {
   const prerequisite = feat.prerequisite;
@@ -40,6 +42,22 @@ export function isFeatEligible(
   if (prerequisite.classNames?.length && !prerequisite.classNames.some((item) => item.toLowerCase() === context.className.toLowerCase())) {
     reasons.push(`${prerequisite.classNames.join(" / ")} class gerekli`);
   }
+  if (prerequisite.fightingStyleFeature && !context.hasFightingStyleFeature) {
+    reasons.push("Fighting Style özelliği gerekli");
+  }
+  if (prerequisite.armorTrainingAny?.length) {
+    const training = (context.armorTraining ?? []).map((item) => item.toLowerCase());
+    const matches = prerequisite.armorTrainingAny.some((required) => {
+      const key = required.toLowerCase();
+      if (key === "shield") return training.some((item) => item.includes("shield"));
+      return training.some((item) => item.includes(key));
+    });
+    if (!matches) reasons.push(`${prerequisite.armorTrainingAny.join(" / ")} armor training gerekli`);
+  }
+  const anyMinimums = Object.entries(prerequisite.abilityMinimumAny ?? {});
+  if (anyMinimums.length && !anyMinimums.some(([ability, minimum]) => (context.abilities[ability as keyof AbilityScores] ?? 0) >= (minimum ?? 0))) {
+    reasons.push(`${anyMinimums.map(([ability, minimum]) => `${ability.toUpperCase()} ${minimum}`).join(" veya ")} gerekli`);
+  }
   for (const [ability, minimum] of Object.entries(prerequisite.abilityMinimums ?? {})) {
     if ((context.abilities[ability as keyof AbilityScores] ?? 0) < (minimum ?? 0)) {
       reasons.push(`${ability.toUpperCase()} ${minimum} gerekli`);
@@ -51,4 +69,15 @@ export function isFeatEligible(
 
 export function getGrantedOriginFeatName(ruleset: string, originFeat?: string) {
   return ruleset === "dnd_2024" ? originFeat?.trim() ?? "" : "";
+}
+
+export function getFeatAbilityBonuses(feats: DndFeatData[], featChoices: Record<string, string[]> | undefined) {
+  const bonuses: Partial<Record<keyof AbilityScores, number>> = {};
+  for (const feat of feats) {
+    const choice = featChoices?.[feat.id]?.[0];
+    if (!choice || !(feat.abilityOptions ?? []).includes(choice as keyof AbilityScores)) continue;
+    const ability = choice as keyof AbilityScores;
+    bonuses[ability] = (bonuses[ability] ?? 0) + 1;
+  }
+  return bonuses;
 }

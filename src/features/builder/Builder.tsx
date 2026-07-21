@@ -6,10 +6,11 @@ import { getOriginAbilityBonuses } from "../../core/rulesets/originRules";
 import { ABILITY_KEYS, STANDARD_ARRAY_VALUES, applyAbilityLayers, getAsiBudget, getFeatSelectionAsiError, getHighLevelAbilityError, getPointBuyRemaining, getSpentAsi, updateAbilityIncrease } from "../../core/rulesets/highLevelAbilityBuilder";
 import { getRulesetDefinition } from "../../core/rulesets/rulesetRegistry";
 import { getAlwaysPreparedSpells, getSubclassesForClass, getUnlockedSubclassFeatures } from "../../core/rulesets/subclassRules";
-import { getGeneralFeatSlotCount, getGrantedOriginFeatName, isFeatEligible } from "../../core/rulesets/featRules";
+import { getFeatAbilityBonuses, getGeneralFeatSlotCount, getGrantedOriginFeatName, isFeatEligible } from "../../core/rulesets/featRules";
 import { buildFinalSkillProficiencies, getAvailableClassSkills, getExpertiseLimit, getGrantedSkills, normalizeClassSkillChoices, normalizeExpertise, uniqueStrings } from "../../core/rulesets/proficiencyRules";
 import { hasValidationErrors, validateCharacterDraft } from "../../core/rulesets/characterValidation";
 import { getBuilderStepId, getBuilderStepIssueCounts, getFirstErrorStepIndex } from "../../core/rulesets/builderProgress";
+import { normalizeDraftForProgression } from "../../core/rulesets/progressionDraftNormalization";
 import { getClassSpellSlots } from "../../core/rulesets/spellcastingRules";
 import { getHighestSpellLevel } from "../../core/rulesets/spellRules";
 import { getAbilityBudgetError, getStandardArrayAbilities, type AbilityGenerationMethod } from "../../core/rulesets/abilityGenerationRules";
@@ -121,11 +122,14 @@ export function Builder({
     draft.flexibleRaceAbilitySecondary,
   ), [draft.ruleset, draft.originAbilityPrimary, draft.originAbilitySecondary, draft.originAbilityTertiary, draft.originAbilityMode, draft.flexibleRaceAbilityPrimary, draft.flexibleRaceAbilitySecondary, selectedRace, selectedSubrace, selectedBackground]);
   const asiBudget = getAsiBudget(draft.level, draft.className, draft.ruleset, draft.featIds.length);
-  const finalAbilities = useMemo(() => applyAbilityLayers(draft.abilities, originBonuses, draft.abilityScoreIncreases), [draft.abilities, originBonuses, draft.abilityScoreIncreases]);
+  const preFeatAbilities = useMemo(() => applyAbilityLayers(draft.abilities, originBonuses, draft.abilityScoreIncreases), [draft.abilities, originBonuses, draft.abilityScoreIncreases]);
+  const selectedFeatData = useMemo(() => (activeRulesetData?.feats ?? []).filter((feat) => draft.featIds.includes(feat.id)), [activeRulesetData, draft.featIds]);
+  const featAbilityBonuses = useMemo(() => getFeatAbilityBonuses(selectedFeatData, draft.featChoices), [selectedFeatData, draft.featChoices]);
+  const finalAbilities = useMemo(() => applyAbilityLayers(preFeatAbilities, featAbilityBonuses, {}), [preFeatAbilities, featAbilityBonuses]);
   const generalFeatSlots = useMemo(() => getGeneralFeatSlotCount(draft.level, draft.className, draft.ruleset), [draft.level, draft.className, draft.ruleset]);
   const grantedOriginFeatName = getGrantedOriginFeatName(draft.ruleset, selectedBackground?.originFeat);
-  const selectableFeats = useMemo(() => (activeRulesetData?.feats ?? []).filter((feat) => feat.category !== "origin"), [activeRulesetData]);
-  const selectedFeats = useMemo(() => (activeRulesetData?.feats ?? []).filter((feat) => draft.featIds.includes(feat.id)), [activeRulesetData, draft.featIds]);
+  const selectableFeats = useMemo(() => (activeRulesetData?.feats ?? []).filter((feat) => feat.id !== "ability-score-improvement" && feat.category !== "fighting-style" && feat.name !== grantedOriginFeatName), [activeRulesetData, grantedOriginFeatName]);
+  const selectedFeats = selectedFeatData;
   const fightingStyles = useMemo(() => getFightingStyles(draft.ruleset), [draft.ruleset]);
   const fightingStyleLimit = getFightingStyleChoiceCount(draft.className, draft.level, draft.subclass);
   const selectedFightingStyleIds = draft.fightingStyleIds ?? [];
@@ -205,7 +209,8 @@ export function Builder({
     setFeatSelectionNotice("");
     setDraft((current) => {
       if (current.featIds.includes(featId)) {
-        return { ...current, featIds: current.featIds.filter((id) => id !== featId) };
+        const featChoices = { ...(current.featChoices ?? {}) }; delete featChoices[featId];
+        return { ...current, featIds: current.featIds.filter((id) => id !== featId), featChoices };
       }
       if (current.featIds.length >= generalFeatSlots) return current;
       return { ...current, featIds: [...current.featIds, featId] };
@@ -357,7 +362,7 @@ export function Builder({
     }
 
     const validFeatIds = draft.featIds
-      .filter((featId) => selectableFeats.some((feat) => feat.id === featId && isFeatEligible(feat, { level: draft.level, className: draft.className, abilities: finalAbilities, canCastSpells }).eligible))
+      .filter((featId) => selectableFeats.some((feat) => feat.id === featId && isFeatEligible(feat, { level: draft.level, className: draft.className, abilities: preFeatAbilities, canCastSpells, armorTraining: selectedClass?.armorProficiencies, hasFightingStyleFeature: fightingStyleLimit > 0 }).eligible))
       .slice(0, generalFeatSlots);
 
     onCreateCharacter({
@@ -501,9 +506,10 @@ export function Builder({
                     min={1}
                     max={20}
                     value={draft.level}
-                    onChange={(event) =>
-                      updateDraft("level", Number(event.target.value))
-                    }
+                    onChange={(event) => {
+                      const level = Number(event.target.value);
+                      setDraft((current) => normalizeDraftForProgression({ ...current, level }, activeRulesetData));
+                    }}
                   />
                 </label>
 
@@ -893,8 +899,10 @@ export function Builder({
                   const eligibility = isFeatEligible(feat, {
                     level: draft.level,
                     className: draft.className,
-                    abilities: finalAbilities,
+                    abilities: preFeatAbilities,
                     canCastSpells,
+                    armorTraining: selectedClass?.armorProficiencies,
+                    hasFightingStyleFeature: fightingStyleLimit > 0,
                   });
                   const selected = draft.featIds.includes(feat.id);
                   const slotFull = !selected && draft.featIds.length >= generalFeatSlots;
@@ -904,7 +912,7 @@ export function Builder({
                     <article className={`builder-choice-card ${selected ? "selected" : ""}`} key={feat.id}>
                       <div className="panel-heading-row">
                         <div>
-                          <span className="mini-label">{feat.category === "epic-boon" ? "Epic Boon" : "General Feat"}</span>
+                          <span className="mini-label">{feat.category === "epic-boon" ? "Epic Boon" : feat.category === "origin" ? "Origin Feat" : feat.category === "fighting-style" ? "Fighting Style" : "General Feat"}</span>
                           <h3>{feat.name}</h3>
                         </div>
                         <button type="button" disabled={disabled} onClick={() => toggleFeat(feat.id)}>
@@ -917,6 +925,7 @@ export function Builder({
                         {!eligibility.eligible ? <span>Kilitli: {eligibility.reasons.join(" · ")}</span> : null}
                         {slotFull ? <span>Feat kotası dolu</span> : null}
                       </div>
+                      {selected && feat.abilityOptions?.length ? <label className="level-up-manual-field">Ability artışı<select value={draft.featChoices?.[feat.id]?.[0] ?? ""} onChange={(event) => setDraft((current) => ({ ...current, featChoices: { ...(current.featChoices ?? {}), [feat.id]: event.target.value ? [event.target.value] : [] } }))}><option value="">Ability seç...</option>{feat.abilityOptions.map((ability) => <option key={ability} value={ability}>{ability.toUpperCase()}</option>)}</select></label> : null}
                     </article>
                   );
                 })}
@@ -1012,6 +1021,7 @@ export function Builder({
               isRulesetLoading={isRulesetLoading}
               rulesetError={rulesetError}
               className={draft.className}
+              subclassName={draft.subclass}
               characterLevel={draft.level}
               abilities={finalAbilities}
               knownSpellIds={draft.knownSpellIds}

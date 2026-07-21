@@ -675,7 +675,8 @@
         "level": 3,
         "proficiencyBonus": 2,
         "features": [
-          "Subclass"
+          "Subclass",
+          "Cleric Subclass"
         ],
         "spellSlots": [
           4,
@@ -685,7 +686,9 @@
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3
@@ -706,7 +709,9 @@
       {
         "level": 6,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -729,7 +734,9 @@
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -779,7 +786,9 @@
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -837,7 +846,9 @@
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -852,7 +863,9 @@
       {
         "level": 17,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -884,7 +897,9 @@
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Epic Boon"
+        ],
         "spellSlots": [
           4,
           3,
@@ -990,7 +1005,8 @@
         "level": 3,
         "proficiencyBonus": 2,
         "features": [
-          "Subclass"
+          "Subclass",
+          "Druid Subclass"
         ],
         "spellSlots": [
           4,
@@ -1000,7 +1016,9 @@
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3
@@ -1021,7 +1039,9 @@
       {
         "level": 6,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -1044,7 +1064,9 @@
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -1067,7 +1089,9 @@
       {
         "level": 10,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -1092,7 +1116,9 @@
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -1119,7 +1145,9 @@
       {
         "level": 14,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -1150,7 +1178,9 @@
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -1199,7 +1229,9 @@
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Epic Boon"
+        ],
         "spellSlots": [
           4,
           3,
@@ -1302,7 +1334,9 @@
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "weaponMasteryCount": 4
       },
       {
@@ -1317,19 +1351,25 @@
       {
         "level": 6,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "weaponMasteryCount": 4
       },
       {
         "level": 7,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "weaponMasteryCount": 4
       },
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "weaponMasteryCount": 4
       },
       {
@@ -1344,7 +1384,9 @@
       {
         "level": 10,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "weaponMasteryCount": 5
       },
       {
@@ -1358,7 +1400,9 @@
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "weaponMasteryCount": 5
       },
       {
@@ -1372,19 +1416,25 @@
       {
         "level": 14,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "weaponMasteryCount": 5
       },
       {
         "level": 15,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "weaponMasteryCount": 5
       },
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "weaponMasteryCount": 6
       },
       {
@@ -1399,13 +1449,17 @@
       {
         "level": 18,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "weaponMasteryCount": 6
       },
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Epic Boon"
+        ],
         "weaponMasteryCount": 6
       },
       {
@@ -1679,7 +1733,9 @@
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           3
         ],
@@ -1713,7 +1769,9 @@
       {
         "level": 7,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3
@@ -1723,7 +1781,9 @@
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3
@@ -1772,7 +1832,9 @@
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -1809,7 +1871,9 @@
       {
         "level": 15,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -1821,7 +1885,9 @@
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -1846,7 +1912,9 @@
       {
         "level": 18,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Aura Expansion"
+        ],
         "spellSlots": [
           4,
           3,
@@ -1972,7 +2040,9 @@
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           3
         ],
@@ -2011,7 +2081,9 @@
       {
         "level": 7,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3
@@ -2023,7 +2095,9 @@
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3
@@ -2065,7 +2139,9 @@
       {
         "level": 11,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2078,7 +2154,9 @@
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2123,7 +2201,9 @@
       {
         "level": 15,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2137,7 +2217,9 @@
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "spellSlots": [
           4,
           3,
@@ -2291,7 +2373,9 @@
       {
         "level": 4,
         "proficiencyBonus": 2,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "weaponMasteryCount": 2
       },
       {
@@ -2306,7 +2390,9 @@
       {
         "level": 6,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Expertise"
+        ],
         "weaponMasteryCount": 2
       },
       {
@@ -2321,19 +2407,25 @@
       {
         "level": 8,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "weaponMasteryCount": 2
       },
       {
         "level": 9,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "weaponMasteryCount": 2
       },
       {
         "level": 10,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "weaponMasteryCount": 2
       },
       {
@@ -2347,13 +2439,17 @@
       {
         "level": 12,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "weaponMasteryCount": 2
       },
       {
         "level": 13,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "weaponMasteryCount": 2
       },
       {
@@ -2375,13 +2471,17 @@
       {
         "level": 16,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Ability Score Improvement"
+        ],
         "weaponMasteryCount": 2
       },
       {
         "level": 17,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "weaponMasteryCount": 2
       },
       {
@@ -2395,7 +2495,9 @@
       {
         "level": 19,
         "proficiencyBonus": 6,
-        "features": [],
+        "features": [
+          "Epic Boon"
+        ],
         "weaponMasteryCount": 2
       },
       {
@@ -2814,7 +2916,9 @@
       {
         "level": 6,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "pactMagic": {
           "slotLevel": 3,
           "slots": 2
@@ -2854,7 +2958,9 @@
       {
         "level": 10,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "pactMagic": {
           "slotLevel": 5,
           "slots": 2
@@ -2896,7 +3002,9 @@
       {
         "level": 14,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "pactMagic": {
           "slotLevel": 5,
           "slots": 3
@@ -3059,7 +3167,9 @@
       {
         "level": 6,
         "proficiencyBonus": 3,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -3105,7 +3215,9 @@
       {
         "level": 10,
         "proficiencyBonus": 4,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,
@@ -3159,7 +3271,9 @@
       {
         "level": 14,
         "proficiencyBonus": 5,
-        "features": [],
+        "features": [
+          "Subclass Feature"
+        ],
         "spellSlots": [
           4,
           3,

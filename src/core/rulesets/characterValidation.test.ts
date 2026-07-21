@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { emptyDraft } from "../../features/characters/characterShared";
 import { hasValidationErrors, validateCharacterDraft } from "./characterValidation";
@@ -19,4 +20,32 @@ describe("character validation", () => {
     const abilities = { ...emptyDraft.abilities, wis: 21 };
     expect(validateCharacterDraft({ ...emptyDraft, abilities }, data, abilities).some((issue) => issue.id === "ability-wis")).toBe(true);
   });
+
+  it.each([
+    ["Rogue", "Arcane Trickster", 13],
+    ["Fighter", "Eldritch Knight", 7],
+  ] as const)("accepts 2014 %s subclass Wizard spells at valid levels", (className, subclass, level) => {
+    const classes = JSON.parse(readFileSync("public/data/dnd_2014/classes.json", "utf8")) as RulesetData["classes"];
+    const races = JSON.parse(readFileSync("public/data/dnd_2014/races.json", "utf8")) as RulesetData["races"];
+    const backgrounds = JSON.parse(readFileSync("public/data/dnd_2014/backgrounds.json", "utf8")) as RulesetData["backgrounds"];
+    const spells = JSON.parse(readFileSync("public/data/dnd_2014/spells.json", "utf8")) as RulesetData["spells"];
+    const classData = classes.find((item) => item.name === className)!;
+    const spell = spells.find((item) => item.id === "burning-hands")!;
+    const ruleset = { ...data, id: "dnd_2014", classes, races, backgrounds, spells } as RulesetData;
+    const draft = {
+      ...emptyDraft,
+      ruleset: "dnd_2014" as const,
+      name: "Validation Probe",
+      className,
+      subclass,
+      level,
+      race: races.find((item) => !item.subraces?.length)?.name ?? races[0].name,
+      background: backgrounds[0].name,
+      knownSpellIds: [spell.id],
+      skillProficiencies: classData.skillChoices.from.slice(0, classData.skillChoices.choose),
+    };
+    const spellIssues = validateCharacterDraft(draft, ruleset, draft.abilities).filter((issue) => issue.id === `spell-${spell.id}`);
+    expect(spellIssues).toEqual([]);
+  });
+
 });

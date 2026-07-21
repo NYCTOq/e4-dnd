@@ -7,7 +7,7 @@ const spell = (patch: Partial<DndSpellData> = {}): DndSpellData => ({ id: "spell
 
 describe("global spell runtime", () => {
   it("builds an automatic upcast save plan", () => {
-    const plan = getSpellRuntimePlan(spell({ damageDice: "3d6", attackType: "saving-throw", saveAbility: "dex", area: "15-foot cone", scaling: { mode: "slot", dicePerStep: "1d6" } }), 7, 3);
+    const plan = getSpellRuntimePlan(spell({ damageDice: "3d6", attackType: "saving-throw", saveAbility: "dex", area: "15-foot cone", description: "A successful save deals half as much damage.", scaling: { mode: "slot", dicePerStep: "1d6" } }), 7, 3);
     expect(plan).toMatchObject({ formula: "5d6", resolution: "saving-throw", area: "15-foot cone", tier: "automatic", saveDamageRule: "half" });
   });
 

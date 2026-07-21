@@ -89,13 +89,16 @@ export interface DndBackgroundData {
 }
 
 
-export type FeatCategory = "origin" | "general" | "epic-boon";
+export type FeatCategory = "origin" | "general" | "fighting-style" | "epic-boon";
 
 export interface DndFeatPrerequisite {
   minimumLevel?: number;
   abilityMinimums?: Partial<Record<AbilityKey, number>>;
+  abilityMinimumAny?: Partial<Record<AbilityKey, number>>;
   spellcasting?: boolean;
   classNames?: string[];
+  armorTrainingAny?: string[];
+  fightingStyleFeature?: boolean;
 }
 
 export interface DndFeatData {
@@ -144,6 +147,7 @@ export interface DndSpellData {
   damageType?: string;
   healingDice?: string;
   saveAbility?: AbilityKey;
+  saveDamageRule?: "full" | "half" | "none";
   conditionEffect?: string;
   target?: string;
   area?: string;
@@ -204,6 +208,7 @@ export interface DndItemData {
   resistanceDamageType?: string;
   preventsCriticalDamage?: boolean;
   abilityMinimums?: Partial<Record<AbilityKey, number>>;
+  abilityMinimumAny?: Partial<Record<AbilityKey, number>>;
   savingThrowBonus?: number;
   skillCheckBonus?: number;
   speedBonus?: number;

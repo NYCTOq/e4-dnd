@@ -31,9 +31,16 @@ const requiredFeatures: Record<BardEdition, Record<string, Array<[number,string]
   dnd_2014: {
     "college-of-lore": [[3,"Bonus Proficiencies"],[3,"Cutting Words"],[6,"Additional Magical Secrets"],[14,"Peerless Skill"]],
     "college-of-valor": [[3,"Combat Inspiration"],[3,"Bonus Proficiencies"],[6,"Extra Attack"],[14,"Battle Magic"]],
+    "college-of-glamour": [[3,"Mantle of Inspiration"],[3,"Enthralling Performance"],[6,"Mantle of Majesty"],[14,"Unbreakable Majesty"]],
+    "college-of-swords": [[3,"Blade Flourish"],[6,"Extra Attack"],[14,"Master's Flourish"]],
+    "college-of-whispers": [[3,"Psychic Blades"],[6,"Mantle of Whispers"],[14,"Shadow Lore"]],
+    "college-of-eloquence": [[3,"Silver Tongue"],[3,"Unsettling Words"],[6,"Unfailing Inspiration"],[14,"Infectious Inspiration"]],
+    "college-of-creation": [[3,"Mote of Potential"],[6,"Animating Performance"],[14,"Creative Crescendo"]],
+    "college-of-spirits": [[3,"Tales from Beyond"],[6,"Spirit Session"],[14,"Mystical Connection"]],
   },
   dnd_2024: {
     "college-of-lore-2024": [[3,"Bonus Proficiencies"],[3,"Cutting Words"],[6,"Magical Discoveries"],[14,"Peerless Skill"]],
+    "college-of-glamour-2024": [[3,"Beguiling Magic"],[3,"Mantle of Inspiration"],[6,"Mantle of Majesty"],[14,"Unbreakable Majesty"]],
     "valor-2024": [[3,"Combat Inspiration"],[3,"Martial Training"],[6,"Extra Attack"],[14,"Battle Magic"]],
   },
 };

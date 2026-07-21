@@ -1,0 +1,8 @@
+1. Bu klasörün İÇERİĞİNİ proje köküne kopyalayın.
+2. Windows sorarsa "Hedefteki dosyaları değiştir" seçeneğini kullanın.
+3. Proje kökünde çalıştırın:
+   npm.cmd install
+   npm.cmd test
+   npm.cmd run build
+
+Beklenen: 165 test dosyası, 676 başarılı test, 0 başarısız test.

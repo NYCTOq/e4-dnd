@@ -429,8 +429,10 @@
     "saveAbility": "dex",
     "scaling": {
       "mode": "character-level",
+      "dicePerStep": "1d8",
       "notes": "Damage increases at character levels 5, 11, and 17."
-    }
+    },
+    "saveDamageRule": "none"
   },
   {
     "id": "shillelagh",
@@ -651,7 +653,7 @@
     "id": "cure-wounds",
     "name": "Cure Wounds",
     "level": 1,
-    "school": "Evocation",
+    "school": "Abjuration",
     "castingTime": "1 action",
     "range": "Touch",
     "components": [
@@ -668,17 +670,17 @@
       "Paladin",
       "Ranger"
     ],
-    "description": "A creature you touch regains hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
-    "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st.",
-    "source": "SRD 5.2 starter",
+    "description": "A creature you touch regains Hit Points equal to 2d8 plus your spellcasting ability modifier.",
+    "higherLevels": "The healing increases by 2d8 for each spell slot level above 1.",
+    "source": "D&D Free Rules 2024",
     "target": "See description",
     "tags": [],
     "effectType": "healing",
     "attackType": "automatic",
-    "healingDice": "1d8",
+    "healingDice": "2d8",
     "scaling": {
       "mode": "slot",
-      "dicePerStep": "1d8"
+      "dicePerStep": "2d8"
     }
   },
   {
@@ -759,18 +761,22 @@
     "description": "Make a ranged spell attack against a creature within range. On a hit, the target takes 4d6 radiant damage, and the next attack roll made against it before the end of your next turn has advantage.",
     "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
     "source": "SRD 5.2 starter",
-    "target": "See description",
+    "target": "1 creature",
     "tags": [],
     "effectType": "damage",
     "attackType": "spell-attack",
     "damageDice": "4d6",
-    "damageType": "radiant"
+    "damageType": "radiant",
+    "scaling": {
+      "mode": "slot",
+      "dicePerStep": "1d6"
+    }
   },
   {
     "id": "healing-word",
     "name": "Healing Word",
     "level": 1,
-    "school": "Evocation",
+    "school": "Abjuration",
     "castingTime": "1 bonus action",
     "range": "60 feet",
     "components": [
@@ -784,17 +790,17 @@
       "Cleric",
       "Druid"
     ],
-    "description": "A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
-    "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st.",
-    "source": "SRD 5.2 starter",
+    "description": "A creature you can see within range regains Hit Points equal to 2d4 plus your spellcasting ability modifier.",
+    "higherLevels": "The healing increases by 2d4 for each spell slot level above 1.",
+    "source": "D&D Free Rules 2024",
     "target": "See description",
     "tags": [],
     "effectType": "healing",
     "attackType": "automatic",
-    "healingDice": "1d4",
+    "healingDice": "2d4",
     "scaling": {
       "mode": "slot",
-      "dicePerStep": "1d4"
+      "dicePerStep": "2d4"
     }
   },
   {
@@ -845,12 +851,17 @@
     "description": "You create three darts of magical force. Each dart hits a creature of your choice that you can see within range and deals 1d4 + 1 force damage.",
     "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st.",
     "source": "SRD 5.2 starter",
-    "target": "See description",
+    "target": "3 darts",
     "tags": [],
     "effectType": "damage",
     "attackType": "automatic",
     "damageDice": "3d4+3",
-    "damageType": "force"
+    "damageType": "force",
+    "scaling": {
+      "mode": "slot",
+      "additionalTargetsPerStep": 1,
+      "notes": "One additional dart per slot level above 1."
+    }
   },
   {
     "id": "shield",
@@ -999,13 +1010,19 @@
       "Warlock",
       "Wizard"
     ],
-    "description": "Choose a humanoid you can see. On a failed Wisdom save, it is paralyzed for the duration and can repeat the save later.",
-    "higherLevels": "A higher-level slot lets you target more humanoids.",
+    "description": "Choose a Humanoid you can see. On a failed Wisdom saving throw, it has the Paralyzed condition for the duration. At the end of each of its turns, it repeats the save, ending the spell on itself on a success.",
+    "higherLevels": "You can target one additional Humanoid for each spell slot level above 2.",
     "source": "SRD 5.2 starter",
-    "target": "See description",
+    "target": "One Humanoid",
     "tags": [],
-    "effectType": "utility",
-    "attackType": "automatic"
+    "effectType": "control",
+    "attackType": "saving-throw",
+    "saveAbility": "wis",
+    "conditionEffect": "Paralyzed",
+    "scaling": {
+      "mode": "slot",
+      "additionalTargetsPerStep": 1
+    }
   },
   {
     "id": "invisibility",
@@ -1191,15 +1208,19 @@
     "classes": [
       "Cleric"
     ],
-    "description": "You create a floating spectral weapon within range. When you cast the spell, you can make a melee spell attack against a creature within 5 feet of the weapon. On a hit, the target takes force damage equal to 1d8 + your spellcasting ability modifier.",
-    "higherLevels": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for every two slot levels above 2nd.",
-    "source": "SRD 5.2 starter",
+    "description": "You create a floating spectral force and can immediately make a melee spell attack. On a hit, it deals 1d8 Force damage plus your spellcasting ability modifier. On later turns, a Bonus Action moves it and repeats the attack.",
+    "higherLevels": "The damage increases by 1d8 for every spell slot level above 2.",
+    "source": "D&D Free Rules 2024",
     "target": "See description",
     "tags": [],
     "effectType": "damage",
     "attackType": "spell-attack",
     "damageDice": "1d8",
-    "damageType": "force"
+    "damageType": "force",
+    "scaling": {
+      "mode": "slot",
+      "dicePerStep": "1d8"
+    }
   },
   {
     "id": "web",
@@ -1273,13 +1294,14 @@
       "Warlock",
       "Wizard"
     ],
-    "description": "You attempt to interrupt a creature casting a spell. Lower-level spells can fail automatically; stronger spells may require an ability check.",
-    "higherLevels": "A higher-level slot automatically counters spells of that level or lower.",
-    "source": "SRD 5.2 starter",
+    "description": "The triggering creature makes a Constitution saving throw. On a failed save, its spell dissipates with no effect; if cast with a spell slot, that slot is not expended.",
+    "source": "D&D Free Rules 2024",
     "target": "See description",
     "tags": [],
     "effectType": "utility",
-    "attackType": "automatic"
+    "attackType": "saving-throw",
+    "saveAbility": "con",
+    "reactionTrigger": "A creature within 60 feet casts a spell with components"
   },
   {
     "id": "dispel-magic",
@@ -1345,7 +1367,8 @@
     "scaling": {
       "mode": "slot",
       "dicePerStep": "1d6"
-    }
+    },
+    "saveDamageRule": "half"
   },
   {
     "id": "fly",
@@ -1472,7 +1495,8 @@
       "mode": "slot",
       "dicePerStep": "1d6"
     },
-    "source": "SRD 5.2 starter"
+    "source": "SRD 5.2 starter",
+    "saveDamageRule": "half"
   },
   {
     "id": "revivify",
@@ -1518,7 +1542,7 @@
     "classes": [
       "Cleric"
     ],
-    "description": "You call forth spirits to protect you. They flit around you to a distance of 15 feet. Affected creatures have their speed halved in the area, and when a creature enters the area for the first time on a turn or starts its turn there, it must make a Wisdom saving throw or take 3d8 radiant or necrotic damage.",
+    "description": "Protective spirits flit around you in a 15-foot Emanation. Designated creatures are unaffected. Other creatures have their Speed halved there. Whenever the Emanation enters a creature’s space, and whenever a creature enters the Emanation or ends its turn there, it makes a Wisdom saving throw, taking 3d8 radiant or necrotic damage on a failed save or half as much on a success. A creature makes this save only once per turn.",
     "higherLevels": "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd.",
     "source": "SRD 5.2 starter",
     "target": "See description",
@@ -1532,7 +1556,8 @@
     "scaling": {
       "mode": "slot",
       "dicePerStep": "1d8"
-    }
+    },
+    "saveDamageRule": "half"
   },
   {
     "id": "dimension-door",

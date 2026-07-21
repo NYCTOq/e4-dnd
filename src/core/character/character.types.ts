@@ -43,7 +43,7 @@ export interface CharacterResource {
   shortRecoveryAmount?: number;
 }
 export interface CharacterClassLevel { className:string; level:number; subclass?:string }
-export interface CharacterSpellEffect{ id:string;spellId:string;name:string;remainingRounds:number|null;concentration:boolean;summary:string }
+export interface CharacterSpellEffect{ id:string;spellId:string;name:string;remainingRounds:number|null;concentration:boolean;summary:string;conditions?:CharacterCondition[];conditionChoice?:CharacterCondition[];repeatSave?:boolean;repeatSaveTiming?:"end-of-turn"|"start-of-turn"|"enter-or-start";endOnDamage?:boolean;endOnAllyAction?:boolean;attackRollBonusDice?:string|null;savingThrowBonusDice?:string|null;attackRollPenaltyDice?:string|null;savingThrowPenaltyDice?:string|null;armorClassBonus?:number;armorClassPenalty?:number;speedMultiplier?:number|null;speedBecomesZero?:boolean;dexteritySaveAdvantage?:boolean;extraLimitedAction?:boolean;difficultTerrain?:boolean;lethargyOnEnd?:boolean }
 
 export type CharacterCondition =
   | "Blessed"

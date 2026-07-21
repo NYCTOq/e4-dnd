@@ -1,5 +1,6 @@
 import type { AbilityKey } from "../character/character.types";
 import type { DndFeatData, FeatCategory } from "./ruleset.types";
+import { OFFICIAL_FEAT_CATALOG_2024 } from "./officialFeatCatalog2024";
 
 type Edition = "dnd_2014" | "dnd_2024";
 const feat = (id:string,name:string,ruleset:Edition,category:FeatCategory,summary:string,benefits:string[], options:Partial<DndFeatData>={}):DndFeatData => ({ id,name,ruleset,category,summary,benefits,...options });
@@ -23,8 +24,8 @@ export const FEAT_EXPANSION_2014:DndFeatData[] = [
   general2014("medium-armor-master","Medium Armor Master","Medium Armor ile hareket ve savunmayı iyileştirir.",["Dex AC sınırı desteği","Stealth kolaylığı"],{prerequisite:{abilityMinimums:{dex:13}}}),
   general2014("observant","Observant","Pasif algı ve dudak okuma becerisini geliştirir.",["WIS veya INT artışı","Passive Perception/Investigation desteği"],{abilityOptions:["int","wis"],choiceType:"ability",choiceCount:1}),
   general2014("polearm-master","Polearm Master","Polearm ile bonus saldırı ve yaklaşana reaction sağlar.",["Bonus Action saldırı","Opportunity Attack alanı"]),
-  general2014("resilient","Resilient","Seçilen ability ve saving throw alanını güçlendirir.",["Bir ability artışı","Saving throw proficiency"],{abilityOptions:["str","dex","con","int","wis","cha"],choiceType:"ability",choiceCount:1,repeatable:true}),
-  general2014("ritual-caster","Ritual Caster","Seçilen class listesinden ritual büyüler öğrenmeni sağlar.",["Ritual spellbook"],{prerequisite:{abilityMinimums:{int:13,wis:13}},choiceType:"spells",choiceCount:2}),
+  general2014("resilient","Resilient","Seçilen ability ve saving throw alanını güçlendirir.",["Bir ability artışı","Saving throw proficiency"],{abilityOptions:["str","dex","con","int","wis","cha"],choiceType:"ability",choiceCount:1}),
+  general2014("ritual-caster","Ritual Caster","Seçilen class listesinden ritual büyüler öğrenmeni sağlar.",["Ritual spellbook"],{prerequisite:{abilityMinimumAny:{int:13,wis:13}},choiceType:"spells",choiceCount:2}),
   general2014("sharpshooter","Sharpshooter","Uzak menzil ve cover cezalarını azaltıp güçlü atış seçeneği verir.",["Range ve cover desteği","Yüksek riskli hasar"]),
   general2014("shield-master","Shield Master","Shield ile itme ve Dexterity savunması sağlar.",["Bonus Action shove","DEX save savunması"]),
   general2014("skulker","Skulker","Gizlenmiş ranged saldırı ve loş ışık kullanımını geliştirir.",["Stealth saldırı desteği"],{prerequisite:{abilityMinimums:{dex:13}}}),
@@ -32,11 +33,11 @@ export const FEAT_EXPANSION_2014:DndFeatData[] = [
   general2014("weapon-master","Weapon Master","Seçilen silahlarda proficiency ve ability artışı sağlar.",["Dört weapon proficiency"],{abilityOptions:["str","dex"],choiceType:"ability",choiceCount:1}),
 ];
 
-export const FEAT_EXPANSION_2024:DndFeatData[] = [
+const LEGACY_FEAT_EXPANSION_2024:DndFeatData[] = [
   general2024("actor-2024","Actor","Taklit ve sosyal sızma yeteneğini geliştirir.",["CHA artışı","Deception/Performance desteği"],["cha"]),
   general2024("crossbow-expert-2024","Crossbow Expert","Crossbow saldırı akışını hızlandırır.",["Loading ve yakın mesafe desteği"],["dex"]),
   general2024("dual-wielder-2024","Dual Wielder","İki silahlı dövüş eylemlerini geliştirir.",["Dual wield saldırı ve savunma desteği"],["str","dex"]),
-  general2024("elemental-adept-2024","Elemental Adept","Bir elemental damage type seçerek dirençlere karşı güvenilirlik kazanırsın.",["Elemental hasar uzmanlığı"],["int","wis","cha"]),
+  feat("elemental-adept-2024","Elemental Adept","dnd_2024","general","Bir elemental damage type seçerek dirençlere karşı güvenilirlik kazanırsın.",["Elemental hasar uzmanlığı"],{prerequisite:{minimumLevel:4,spellcasting:true},abilityOptions:["int","wis","cha"],choiceType:"ability",choiceCount:1}),
   general2024("fey-touched-2024","Fey-Touched","Teleport ve enchantment/divination büyüsü kazandırır.",["Misty Step","Ek level 1 spell"],["int","wis","cha"]),
   general2024("inspiring-leader-2024","Inspiring Leader","Partiye dinlenme sonrası temporary HP sağlar.",["Parti savunma desteği"],["wis","cha"]),
   general2024("mage-slayer-2024","Mage Slayer","Concentration ve büyülü etkiler kullanan hedefleri cezalandırır.",["Caster baskısı","Mental save desteği"],["str","dex"]),
@@ -49,3 +50,5 @@ export const FEAT_EXPANSION_2024:DndFeatData[] = [
   general2024("slasher-2024","Slasher","Slashing saldırılarla hedef hareketini baskılar.",["Speed azaltma","Critical debuff"],["str","dex"]),
   general2024("telekinetic-2024","Telekinetic","Zihinsel itme ve görünmez Mage Hand yeteneği verir.",["Bonus Action shove","Mage Hand"],["int","wis","cha"]),
 ];
+
+export const FEAT_EXPANSION_2024: DndFeatData[] = [...LEGACY_FEAT_EXPANSION_2024, ...OFFICIAL_FEAT_CATALOG_2024];

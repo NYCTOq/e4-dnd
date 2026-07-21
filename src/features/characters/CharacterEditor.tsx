@@ -5,6 +5,7 @@ import { getRulesetDefinition } from "../../core/rulesets/rulesetRegistry";
 import { getAlwaysPreparedSpells } from "../../core/rulesets/subclassRules";
 import { getHighestSpellLevel } from "../../core/rulesets/spellRules";
 import { hasValidationErrors, validateCharacterDraft } from "../../core/rulesets/characterValidation";
+import { normalizeDraftForProgression } from "../../core/rulesets/progressionDraftNormalization";
 import { buildFinalSkillProficiencies, getAvailableClassSkills, getExpertiseLimit, getGrantedSkills, normalizeClassSkillChoices, normalizeExpertise } from "../../core/rulesets/proficiencyRules";
 import { useSelectedRuleset } from "../../core/rulesets/useSelectedRuleset";
 import type { Character, CharacterDraft } from "../../core/character/character.types";
@@ -178,7 +179,7 @@ export function CharacterEditor({
                 min={1}
                 max={20}
                 value={draft.level}
-                onChange={(event) => { const level = Number(event.target.value); setDraft((current) => ({ ...current, level, classLevels: current.classLevels?.length === 1 ? [{ ...current.classLevels[0], level }] : current.classLevels })); }}
+                onChange={(event) => { const level = Number(event.target.value); setDraft((current) => normalizeDraftForProgression({ ...current, level }, activeRulesetData)); }}
               />
             </label>
 
@@ -372,6 +373,7 @@ export function CharacterEditor({
           isRulesetLoading={activeRulesetLoading}
           rulesetError={activeRulesetError}
           className={draft.className}
+          subclassName={draft.subclass}
           characterLevel={draft.level}
           abilities={draft.abilities}
           knownSpellIds={draft.knownSpellIds}

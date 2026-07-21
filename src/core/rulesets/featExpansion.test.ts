@@ -12,6 +12,7 @@ describe("feat expansion", () => {
   });
   it("marks selectable ability feats with structured choices", () => {
     const resilient = FEAT_EXPANSION_2014.find((item) => item.id === "resilient");
-    expect(resilient).toMatchObject({ choiceType: "ability", choiceCount: 1, repeatable: true });
+    expect(resilient).toMatchObject({ choiceType: "ability", choiceCount: 1 });
+    expect(resilient?.repeatable).not.toBe(true);
   });
 });

@@ -6,7 +6,7 @@ const EMPTY_FEATS: RulesetData["feats"] = [];
 
 export function FeatCatalogPage({ rulesetData }: { rulesetData: RulesetData | null }) {
   const [query, setQuery] = useState("");
-  const [category, setCategory] = useState<"all" | "origin" | "general" | "epic-boon">("all");
+  const [category, setCategory] = useState<"all" | "origin" | "general" | "fighting-style" | "epic-boon">("all");
   const feats = rulesetData?.feats ?? EMPTY_FEATS;
   const filtered = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase("tr-TR");
@@ -24,7 +24,7 @@ export function FeatCatalogPage({ rulesetData }: { rulesetData: RulesetData | nu
     <PageShell
       eyebrow="Character Options"
       title="Feats"
-      description="Origin, general ve epic boon seçeneklerini ruleset bazında incele. Katalog var diye prerequisite'ler buharlaşmıyor, ne yazık ki kurallar hâlâ mevcut."
+      description="Origin, general, fighting style ve epic boon seçeneklerini ruleset bazında incele. Katalog var diye prerequisite'ler buharlaşmıyor, ne yazık ki kurallar hâlâ mevcut."
     >
       <section className="form-panel">
         <div className="form-grid">
@@ -38,6 +38,7 @@ export function FeatCatalogPage({ rulesetData }: { rulesetData: RulesetData | nu
               <option value="all">Tümü</option>
               <option value="origin">Origin</option>
               <option value="general">General</option>
+              <option value="fighting-style">Fighting Style</option>
               <option value="epic-boon">Epic Boon</option>
             </select>
           </label>

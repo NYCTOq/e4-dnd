@@ -1,0 +1,7 @@
+1. Bu klasörün içindeki package.json, package-lock.json ve src klasörünü proje köküne kopyalayın.
+2. Windows sorarsa "Hedefteki dosyaları değiştir" seçeneğini kullanın.
+3. Proje kökünde çalıştırın:
+   npm.cmd install
+   npm.cmd test
+   npm.cmd run build
+4. Beklenen sonuç: 164 test dosyası, 669 test, 0 başarısız test.

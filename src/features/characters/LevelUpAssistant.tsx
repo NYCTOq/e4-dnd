@@ -14,6 +14,7 @@ import { isFeatEligible } from "../../core/rulesets/featRules";
 import { getCharacterChoiceDebt } from "../../core/rulesets/choiceDebt";
 import { getClassLevel, getMulticlassEligibility, normalizeClassLevels } from "../../core/rulesets/multiclassRules";
 import { getFeatChoiceState } from "../../core/rulesets/levelUpChoiceCompletion";
+import { getFightingStyleChoiceCount } from "../../core/rulesets/fightingStyleRules";
 
 const ABILITY_LABELS: Record<AbilityKey, string> = {
   str: "STR",
@@ -62,7 +63,8 @@ export function LevelUpAssistant({
   const newClassFeatures = selectedClass?.levels.find((row) => row.level === nextClassLevel)?.features ?? [];
   const selectedSubclass = rulesetData?.subclasses.find((item) => item.className === targetClassName && item.name === (targetClassName===character.className?character.subclass:classLevels.find(level=>level.className===targetClassName)?.subclass));
   const newSubclassFeatures = selectedSubclass?.features.filter((feature) => feature.level === nextClassLevel) ?? [];
-  const eligibleFeats=(rulesetData?.feats??[]).filter(feat=>feat.category!=="origin"&&!character.featIds.includes(feat.id)&&isFeatEligible(feat,{level:nextLevel,className:character.className,abilities:character.abilities,canCastSpells:Boolean(selectedClass?.spellcastingAbility)}).eligible);
+  const grantedOriginFeat=rulesetData?.backgrounds.find(item=>item.name===character.background)?.originFeat;
+  const eligibleFeats=(rulesetData?.feats??[]).filter(feat=>feat.id!=="ability-score-improvement"&&feat.category!=="fighting-style"&&feat.name!==grantedOriginFeat&&!character.featIds.includes(feat.id)&&isFeatEligible(feat,{level:nextLevel,className:targetClassName,abilities:character.abilities,canCastSpells:Boolean(selectedClass?.spellcastingAbility),armorTraining:selectedClass?.armorProficiencies,hasFightingStyleFeature:getFightingStyleChoiceCount(targetClassName,nextLevel,character.subclass)>0}).eligible);
   const nextChoiceDebt=getCharacterChoiceDebt({...character,level:nextLevel},rulesetData);
   const selectedFeat=eligibleFeats.find((feat)=>feat.id===selectedFeatId);
   const selectedFeatChoiceState=getFeatChoiceState(selectedFeat,selectedFeatChoice?[selectedFeatChoice]:[]);

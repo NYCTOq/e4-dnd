@@ -27,8 +27,8 @@ describe("Barbarian full builder certification", () => {
 
   it("certifies every 2024 species × subclass × level combination", () => {
     const rows = createRows("2024");
-    expect(rows).toHaveLength(10 * 2 * 20);
-    expect(summarizeBarbarianCertification(rows)).toMatchObject({ ready: true, scenarioCount: 400, blockerCount: 0 });
+    expect(rows).toHaveLength(10 * 4 * 20);
+    expect(summarizeBarbarianCertification(rows)).toMatchObject({ ready: true, scenarioCount: 800, blockerCount: 0 });
   });
 
   it("matches official 2014 Rage and capstone breakpoints", () => {
@@ -58,7 +58,7 @@ describe("Barbarian full builder certification", () => {
   it("contains complete subclass feature checkpoints", () => {
     for (const edition of ["2014", "2024"] as const) {
       const barbarianSubclasses = mergedSubclasses(edition).filter((item) => item.className === "Barbarian");
-      expect(barbarianSubclasses).toHaveLength(2);
+      expect(barbarianSubclasses).toHaveLength(edition === "2024" ? 4 : 2);
       for (const subclass of barbarianSubclasses) expect([...new Set(subclass.features.map((item) => item.level))]).toEqual([3, 6, 10, 14]);
     }
   });

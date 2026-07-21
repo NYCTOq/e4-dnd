@@ -1,5 +1,6 @@
 import type { RollMode } from "./attackResolution";
 import { chooseD20 } from "./attackResolution";
+import type { DndSpellData } from "./ruleset.types";
 
 export type SaveDamageRule = "half" | "none";
 
@@ -14,6 +15,9 @@ export function resolveSaveDamage(damage: number, saveSucceeded: boolean, rule: 
   return rule === "half" ? Math.floor(Math.max(0, damage) / 2) : 0;
 }
 
-export function getDefaultSaveDamageRule(spellLevel: number, hasDamage: boolean): SaveDamageRule {
-  return hasDamage && spellLevel > 0 ? "half" : "none";
+export function getDefaultSaveDamageRule(spell: Pick<DndSpellData, "saveDamageRule" | "description" | "higherLevels">): SaveDamageRule {
+  if (spell.saveDamageRule === "half") return "half";
+  if (spell.saveDamageRule === "none" || spell.saveDamageRule === "full") return "none";
+  const text = `${spell.description} ${spell.higherLevels ?? ""}`;
+  return /half as much|half damage|save for half|yarısı|yarı hasar/i.test(text) ? "half" : "none";
 }

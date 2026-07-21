@@ -1,0 +1,6 @@
+edition,class,ancestries,subclasses,levels,scenario_count,status
+2014,Warlock,9,9,20,1620,PASS
+2024,Warlock,10,4,20,800,PASS
+2014,Wizard,9,13,20,2340,PASS
+2024,Wizard,10,4,20,800,PASS
+TOTAL,Warlock + Wizard,,,20,5560,PASS

@@ -283,9 +283,15 @@ const seeds: Seed[] = [
 
 function build(seed:Seed, ruleset:Edition):DndSpellData {
   const [name,level,school,effectType,classes,description,extra={}] = seed;
-  return { id:`${name.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")}${ruleset === "dnd_2024" ? "-2024" : ""}`, name, level, school,
+  const base: DndSpellData = { id:`${name.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")}${ruleset === "dnd_2024" ? "-2024" : ""}`, name, level, school,
     castingTime:"1 action", range:"60 feet", components:["V","S"], duration:"Instantaneous", concentration:false, ritual:false,
     classes, description, effectType, source: ruleset === "dnd_2024" ? "2024 expansion" : "2014 expansion", ...extra };
+  if (ruleset === "dnd_2024" && name === "Bane") return { ...base, classes:["Bard","Cleric","Warlock"], saveAbility:"cha", attackType:"saving-throw", target:"Up to three creatures", scaling:{mode:"slot",additionalTargetsPerStep:1}, source:"D&D Free Rules 2024" };
+  if (ruleset === "dnd_2024" && name === "Blindness/Deafness") return { ...base, school:"Transmutation", range:"120 feet", attackType:"saving-throw", saveAbility:"con", conditionEffect:"Blinded/Deafened", scaling:{mode:"slot",additionalTargetsPerStep:1}, source:"D&D Free Rules 2024" };
+  if (ruleset === "dnd_2024" && name === "Slow") return { ...base, classes:["Bard","Sorcerer","Wizard"], attackType:"saving-throw", saveAbility:"wis", target:"Up to six creatures", area:"40-foot cube", source:"D&D Free Rules 2024" };
+  if (ruleset === "dnd_2024" && name === "Barkskin") return { ...base, castingTime:"1 bonus action", range:"Touch", components:["V","S","M"], duration:"1 hour", concentration:false, description:"A willing creature you touch has Armor Class 17 if its AC is lower than 17 for the duration.", attackType:"automatic", source:"D&D Free Rules 2024" };
+  if (ruleset === "dnd_2024" && name === "True Strike") return { ...base, range:"Self", components:["S","M"], duration:"Instantaneous", concentration:false, description:"Make one attack with the weapon used as the Material component, using your spellcasting ability for the attack and damage rolls. The attack can deal Radiant damage and gains extra Radiant damage at levels 5, 11, and 17.", effectType:"damage", attackType:"automatic", damageDice:"0d6", damageType:"radiant", scaling:{mode:"character-level",dicePerStep:"1d6"}, source:"D&D Free Rules 2024" };
+  return base;
 }
 export const SPELL_EXPANSION_2014 = seeds.map((seed)=>build(seed,"dnd_2014"));
 export const SPELL_EXPANSION_2024 = seeds.map((seed)=>build(seed,"dnd_2024"));

@@ -4,6 +4,8 @@ import { getCharacterChoiceDebt } from "../rulesets/choiceDebt";
 import { getGeneralFeatSlotCount, isFeatEligible } from "../rulesets/featRules";
 import { normalizeClassLevels } from "../rulesets/multiclassRules";
 import { isSpellAvailableToClass } from "../rulesets/spellRules";
+import { getSpellcastingProfile } from "../rulesets/spellcastingRules";
+import { getFightingStyleChoiceCount } from "../rulesets/fightingStyleRules";
 
 export type IntegritySection = "identity" | "abilities" | "class" | "skills" | "spells" | "equipment" | "combat";
 export type CharacterIntegrityIssue = { id: string; severity: "error" | "warning"; section: IntegritySection; message: string };
@@ -42,13 +44,25 @@ export function auditCharacterIntegrity(character: Character, rulesetData: Rules
 
     const featLimit = getGeneralFeatSlotCount(character.level, character.className, character.ruleset);
     if (!unique(character.featIds) || character.featIds.length > featLimit) add("feat-count", "error", "class", `Feat seçimleri kotayı aşıyor veya tekrar içeriyor (${character.featIds.length}/${featLimit}).`);
+    const spellcastingProfiles = classLevels.map((entry) => {
+      const entryClass = classes.get(entry.className) ?? null;
+      const subclassName = entry.className === character.className ? character.subclass : "";
+      return getSpellcastingProfile(entryClass, entry.level, character.abilities, character.ruleset, subclassName);
+    });
+    const canCastSpells = spellcastingProfiles.some((profile) => Boolean(profile.spellListClass));
+    const grantedOriginFeat = rulesetData.backgrounds.find((item) => item.name === character.background)?.originFeat;
     for (const featId of character.featIds) {
       const feat = rulesetData.feats.find((item) => item.id === featId);
-      if (!feat || !isFeatEligible(feat, { level: character.level, className: character.className, abilities: character.abilities, canCastSpells: Boolean(primaryClass?.spellcastingAbility) }).eligible) add(`feat-${featId}`, "error", "class", "Seçilen feat bulunamadı veya prerequisite koşullarını karşılamıyor.");
+      if (!feat || feat.id === "ability-score-improvement" || feat.name === grantedOriginFeat || !isFeatEligible(feat, { level: character.level, className: character.className, abilities: character.abilities, canCastSpells, armorTraining: primaryClass?.armorProficiencies, hasFightingStyleFeature: getFightingStyleChoiceCount(character.className, character.level, character.subclass) > 0 }).eligible) add(`feat-${featId}`, "error", "class", "Seçilen feat bulunamadı veya prerequisite koşullarını karşılamıyor.");
     }
     for (const spellId of character.knownSpellIds) {
       const spell = rulesetData.spells.find((item) => item.id === spellId);
-      if (!spell || !classLevels.some((entry) => isSpellAvailableToClass(spell, entry.className))) add(`spell-${spellId}`, "error", "spells", "Bilinen büyülerden biri class listesinde veya aktif ruleset içinde değil.");
+      const available = Boolean(spell && spellcastingProfiles.some((profile) =>
+        profile.spellListClass &&
+        isSpellAvailableToClass(spell, profile.spellListClass) &&
+        (spell.level === 0 || spell.level <= profile.maxSpellLevel)
+      ));
+      if (!spell || !available) add(`spell-${spellId}`, "error", "spells", "Bilinen büyülerden biri class/subclass spell listesiyle veya karakter leveliyle uyumlu değil.");
     }
     if (character.inventory.some((entry) => !rulesetData.items.some((item) => item.id === entry.itemId))) add("inventory-reference", "error", "equipment", "Inventory içinde aktif ruleset'te bulunmayan eşya var.");
   }

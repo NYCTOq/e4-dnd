@@ -429,8 +429,10 @@
     "saveAbility": "dex",
     "scaling": {
       "mode": "character-level",
+      "dicePerStep": "1d8",
       "notes": "Damage increases at character levels 5, 11, and 17."
-    }
+    },
+    "saveDamageRule": "none"
   },
   {
     "id": "shillelagh",
@@ -759,12 +761,16 @@
     "description": "Make a ranged spell attack against a creature within range. On a hit, the target takes 4d6 radiant damage, and the next attack roll made against it before the end of your next turn has advantage.",
     "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
     "source": "SRD 5.1",
-    "target": "See description",
+    "target": "1 creature",
     "tags": [],
     "effectType": "damage",
     "attackType": "spell-attack",
     "damageDice": "4d6",
-    "damageType": "radiant"
+    "damageType": "radiant",
+    "scaling": {
+      "mode": "slot",
+      "dicePerStep": "1d6"
+    }
   },
   {
     "id": "healing-word",
@@ -845,12 +851,17 @@
     "description": "You create three darts of magical force. Each dart hits a creature of your choice that you can see within range and deals 1d4 + 1 force damage.",
     "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st.",
     "source": "SRD 5.1",
-    "target": "See description",
+    "target": "3 darts",
     "tags": [],
     "effectType": "damage",
     "attackType": "automatic",
     "damageDice": "3d4+3",
-    "damageType": "force"
+    "damageType": "force",
+    "scaling": {
+      "mode": "slot",
+      "additionalTargetsPerStep": 1,
+      "notes": "One additional dart per slot level above 1."
+    }
   },
   {
     "id": "shield",
@@ -999,13 +1010,19 @@
       "Warlock",
       "Wizard"
     ],
-    "description": "Choose a humanoid you can see. On a failed Wisdom save, it is paralyzed for the duration and can repeat the save later.",
-    "higherLevels": "A higher-level slot lets you target more humanoids.",
+    "description": "Choose a Humanoid you can see. On a failed Wisdom saving throw, it has the Paralyzed condition for the duration. At the end of each of its turns, it repeats the save, ending the spell on itself on a success.",
+    "higherLevels": "You can target one additional Humanoid for each spell slot level above 2.",
     "source": "SRD 5.1",
-    "target": "See description",
+    "target": "One Humanoid",
     "tags": [],
-    "effectType": "utility",
-    "attackType": "automatic"
+    "effectType": "control",
+    "attackType": "saving-throw",
+    "saveAbility": "wis",
+    "conditionEffect": "Paralyzed",
+    "scaling": {
+      "mode": "slot",
+      "additionalTargetsPerStep": 1
+    }
   },
   {
     "id": "invisibility",
@@ -1345,7 +1362,8 @@
     "scaling": {
       "mode": "slot",
       "dicePerStep": "1d6"
-    }
+    },
+    "saveDamageRule": "half"
   },
   {
     "id": "fly",
@@ -1472,7 +1490,8 @@
       "mode": "slot",
       "dicePerStep": "1d6"
     },
-    "source": "SRD 5.1"
+    "source": "SRD 5.1",
+    "saveDamageRule": "half"
   },
   {
     "id": "revivify",
@@ -1518,7 +1537,7 @@
     "classes": [
       "Cleric"
     ],
-    "description": "You call forth spirits to protect you. They flit around you to a distance of 15 feet. Affected creatures have their speed halved in the area, and when a creature enters the area for the first time on a turn or starts its turn there, it must make a Wisdom saving throw or take 3d8 radiant or necrotic damage.",
+    "description": "You call forth spirits in a 15-foot radius. Designated creatures are unaffected. Other creatures have their speed halved in the area. When an affected creature enters the area for the first time on a turn or starts its turn there, it makes a Wisdom saving throw, taking 3d8 radiant or necrotic damage on a failed save or half as much on a success.",
     "higherLevels": "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd.",
     "source": "SRD 5.1",
     "target": "See description",
@@ -1532,7 +1551,8 @@
     "scaling": {
       "mode": "slot",
       "dicePerStep": "1d8"
-    }
+    },
+    "saveDamageRule": "half"
   },
   {
     "id": "dimension-door",
