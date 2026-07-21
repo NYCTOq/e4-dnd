@@ -13,6 +13,14 @@ import { getBuilderStepId, getBuilderStepIssueCounts, getFirstErrorStepIndex } f
 import { getSingleClassBuilderUiStatus } from "../../core/rulesets/singleClassBuilderUiRules";
 import { getSingleClassPlayableReadiness } from "../../core/rulesets/singleClassPlayableReadiness";
 import { getLevelOneCombatReadiness } from "../../core/rulesets/levelOneCombatReadiness";
+import { getLevelOneSpellcastingReadiness } from "../../core/rulesets/levelOneSpellcastingReadiness";
+import { getLevelOneProficiencyReadiness } from "../../core/rulesets/levelOneProficiencyReadiness";
+import { getLevelOneFeatureChoiceReadiness } from "../../core/rulesets/levelOneFeatureChoiceReadiness";
+import { getLevelOneOriginReadiness } from "../../core/rulesets/levelOneOriginReadiness";
+import { getLevelOneAncestryReadiness } from "../../core/rulesets/levelOneAncestryReadiness";
+import { getLevelOneEquipmentReadiness } from "../../core/rulesets/levelOneEquipmentReadiness";
+import { getLevelOneDefenseReadiness } from "../../core/rulesets/levelOneDefenseReadiness";
+import { getLevelOneOffenseReadiness } from "../../core/rulesets/levelOneOffenseReadiness";
 import { normalizeDraftForProgression } from "../../core/rulesets/progressionDraftNormalization";
 import { getClassSpellSlots } from "../../core/rulesets/spellcastingRules";
 import { setClassSpellSelection } from "../../core/rulesets/classSpellSelectionRules";
@@ -174,6 +182,14 @@ export function Builder({
   const validationHasErrors = hasValidationErrors(validationIssues);
   const playableReadiness = useMemo(() => getSingleClassPlayableReadiness(draft, validationIssues), [draft, validationIssues]);
   const combatReadiness = useMemo(() => getLevelOneCombatReadiness(draft, activeRulesetData, alwaysPreparedSpells.map((spell) => spell.id)), [draft, activeRulesetData, alwaysPreparedSpells]);
+  const spellcastingReadiness = useMemo(() => getLevelOneSpellcastingReadiness(draft, activeRulesetData, alwaysPreparedSpells.map((spell) => spell.id)), [draft, activeRulesetData, alwaysPreparedSpells]);
+  const proficiencyReadiness = useMemo(() => getLevelOneProficiencyReadiness(draft, activeRulesetData), [draft, activeRulesetData]);
+  const featureChoiceReadiness = useMemo(() => getLevelOneFeatureChoiceReadiness(draft, activeRulesetData), [draft, activeRulesetData]);
+  const originReadiness = useMemo(() => getLevelOneOriginReadiness(draft, activeRulesetData), [draft, activeRulesetData]);
+  const ancestryReadiness = useMemo(() => getLevelOneAncestryReadiness(draft, activeRulesetData), [draft, activeRulesetData]);
+  const equipmentReadiness = useMemo(() => getLevelOneEquipmentReadiness(draft, activeRulesetData), [draft, activeRulesetData]);
+  const defenseReadiness = useMemo(() => getLevelOneDefenseReadiness(draft, activeRulesetData), [draft, activeRulesetData]);
+  const offenseReadiness = useMemo(() => getLevelOneOffenseReadiness(draft, activeRulesetData, alwaysPreparedSpells.map((spell) => spell.id)), [draft, activeRulesetData, alwaysPreparedSpells]);
   const builderProgress = Math.round((activeStepIndex / (builderSteps.length - 1)) * 100);
 
   function goToValidationIssue(stepName: string) {
@@ -1032,6 +1048,63 @@ export function Builder({
                 {combatReadiness.primaryOptions.length ? <p><strong>Hazır seçenekler:</strong> {combatReadiness.primaryOptions.join(", ")}</p> : null}
                 {combatReadiness.blockers.length ? <ul>{combatReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
                 {combatReadiness.notices.length ? <ul>{combatReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+              </div>
+
+              <div className={`ruleset-foundation-card ${spellcastingReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row"><div><span className="mini-label">Level 1 Spellcasting Readiness</span><strong>{!spellcastingReadiness.applicable ? "Spell seçimi gerekmiyor" : spellcastingReadiness.ready ? "Büyü seçimleri hazır" : "Büyü seçimleri tamamlanmalı"}</strong></div><span>{spellcastingReadiness.applicable ? `${spellcastingReadiness.completedChecks} / ${spellcastingReadiness.totalChecks} kontrol` : "Non-caster"}</span></div>
+                {spellcastingReadiness.summary.length ? <p><strong>Seçim özeti:</strong> {spellcastingReadiness.summary.join(" · ")}</p> : null}
+                {spellcastingReadiness.blockers.length ? <ul>{spellcastingReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+                {spellcastingReadiness.notices.length ? <ul>{spellcastingReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+              </div>
+
+              <div className={`ruleset-foundation-card ${proficiencyReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row"><div><span className="mini-label">Level 1 Proficiency Readiness</span><strong>{proficiencyReadiness.ready ? "Skill ve proficiency seçimleri hazır" : "Proficiency seçimleri tamamlanmalı"}</strong></div><span>{proficiencyReadiness.applicable ? `${proficiencyReadiness.completedChecks} / ${proficiencyReadiness.totalChecks} kontrol` : "Bekliyor"}</span></div>
+                {proficiencyReadiness.summary.length ? <p><strong>Seçim özeti:</strong> {proficiencyReadiness.summary.join(" · ")}</p> : null}
+                {proficiencyReadiness.blockers.length ? <ul>{proficiencyReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+                {proficiencyReadiness.notices.length ? <ul>{proficiencyReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+              </div>
+
+
+              <div className={`ruleset-foundation-card ${ancestryReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row"><div><span className="mini-label">Race/Species & Ancestry Readiness</span><strong>{ancestryReadiness.ready ? "Ancestry seçimleri hazır" : "Ancestry seçimleri tamamlanmalı"}</strong></div><span>{ancestryReadiness.applicable ? `${ancestryReadiness.completedChecks} / ${ancestryReadiness.totalChecks} kontrol` : "Bekliyor"}</span></div>
+                {ancestryReadiness.summary.length ? <p><strong>Seçim özeti:</strong> {ancestryReadiness.summary.join(" · ")}</p> : null}
+                {ancestryReadiness.blockers.length ? <ul>{ancestryReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+                {ancestryReadiness.notices.length ? <ul>{ancestryReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+              </div>
+
+              <div className={`ruleset-foundation-card ${originReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row"><div><span className="mini-label">Background & Origin Readiness</span><strong>{originReadiness.ready ? "Köken seçimleri hazır" : "Köken seçimleri tamamlanmalı"}</strong></div><span>{originReadiness.applicable ? `${originReadiness.completedChecks} / ${originReadiness.totalChecks} kontrol` : "Bekliyor"}</span></div>
+                {originReadiness.summary.length ? <p><strong>Seçim özeti:</strong> {originReadiness.summary.join(" · ")}</p> : null}
+                {originReadiness.blockers.length ? <ul>{originReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+                {originReadiness.notices.length ? <ul>{originReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+              </div>
+
+              <div className={`ruleset-foundation-card ${equipmentReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row"><div><span className="mini-label">Starting Equipment & Loadout Readiness</span><strong>{equipmentReadiness.ready ? "Başlangıç ekipmanı hazır" : "Ekipman hazırlığı tamamlanmalı"}</strong></div><span>{equipmentReadiness.applicable ? `${equipmentReadiness.completedChecks} / ${equipmentReadiness.totalChecks} kontrol` : "Bekliyor"}</span></div>
+                {equipmentReadiness.summary.length ? <p><strong>Loadout özeti:</strong> {equipmentReadiness.summary.join(" · ")}</p> : null}
+                {equipmentReadiness.blockers.length ? <ul>{equipmentReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+                {equipmentReadiness.notices.length ? <ul>{equipmentReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+              </div>
+
+              <div className={`ruleset-foundation-card ${defenseReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row"><div><span className="mini-label">Defense & Survival Readiness</span><strong>{defenseReadiness.ready ? "Savunma ve dayanıklılık hazır" : "Savunma hazırlığı tamamlanmalı"}</strong></div><span>{defenseReadiness.applicable ? `${defenseReadiness.completedChecks} / ${defenseReadiness.totalChecks} kontrol` : "Bekliyor"}</span></div>
+                {defenseReadiness.summary.length ? <p><strong>Savunma özeti:</strong> {defenseReadiness.summary.join(" · ")}</p> : null}
+                {defenseReadiness.blockers.length ? <ul>{defenseReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+                {defenseReadiness.notices.length ? <ul>{defenseReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+              </div>
+
+              <div className={`ruleset-foundation-card ${offenseReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row"><div><span className="mini-label">Attack & Offense Readiness</span><strong>{offenseReadiness.ready ? "Saldırı profili hazır" : "Saldırı hazırlığı tamamlanmalı"}</strong></div><span>{offenseReadiness.applicable ? `${offenseReadiness.completedChecks} / ${offenseReadiness.totalChecks} kontrol` : "Bekliyor"}</span></div>
+                {offenseReadiness.summary.length ? <p><strong>Saldırı özeti:</strong> {offenseReadiness.summary.join(" · ")}</p> : null}
+                {offenseReadiness.blockers.length ? <ul>{offenseReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+                {offenseReadiness.notices.length ? <ul>{offenseReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+              </div>
+
+              <div className={`ruleset-foundation-card ${featureChoiceReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row"><div><span className="mini-label">Class Feature Choice Readiness</span><strong>{featureChoiceReadiness.ready ? "Class feature seçimleri hazır" : "Class feature seçimleri tamamlanmalı"}</strong></div><span>{featureChoiceReadiness.applicable ? `${featureChoiceReadiness.completedChecks} / ${featureChoiceReadiness.totalChecks} kontrol` : "Bekliyor"}</span></div>
+                {featureChoiceReadiness.summary.length ? <p><strong>Seçim özeti:</strong> {featureChoiceReadiness.summary.join(" · ")}</p> : null}
+                {featureChoiceReadiness.blockers.length ? <ul>{featureChoiceReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+                {featureChoiceReadiness.notices.length ? <ul>{featureChoiceReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
               </div>
 
               <div className="builder-summary-grid">
