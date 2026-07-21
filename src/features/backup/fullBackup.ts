@@ -8,12 +8,13 @@ import type { Campaign } from "../campaigns/campaignTypes";
 import { DEFAULT_APP_SETTINGS, sanitizeAppSettings, type AppSettings } from "../../shared/settings/appSettings";
 import { hydrateCharacterRecord } from "../../core/storage/characterStorage";
 
-export const FULL_BACKUP_VERSION = 2;
+export const FULL_BACKUP_VERSION = 3;
 
 export type E4FullBackup = {
   format: "e4-dnd-full-backup";
   version: number;
   exportedAt: string;
+  appVersion?: string;
   data: {
     characters: Character[];
     campaigns: Campaign[];
@@ -73,6 +74,7 @@ export function createFullBackup(data: FullBackupData): E4FullBackup {
     format: "e4-dnd-full-backup",
     version: FULL_BACKUP_VERSION,
     exportedAt: new Date().toISOString(),
+    appVersion: typeof __APP_VERSION__ === "string" ? __APP_VERSION__ : undefined,
     data,
   };
 }
@@ -122,9 +124,13 @@ export function parseFullBackup(value: unknown): E4FullBackup {
     throw new Error("Bu dosya E4 D&D tam yedek formatında değil.");
   }
 
-  if (typeof value.version !== "number" || value.version > FULL_BACKUP_VERSION) {
+  if (!Number.isInteger(value.version) || (value.version as number) < 1) {
+    throw new Error("Yedek sürüm bilgisi geçersiz.");
+  }
+  if ((value.version as number) > FULL_BACKUP_VERSION) {
     throw new Error("Yedek sürümü bu uygulama sürümünden daha yeni.");
   }
+  const version = value.version as number;
 
   if (!isRecord(value.data)) {
     throw new Error("Yedek veri bölümü bulunamadı.");
@@ -140,7 +146,7 @@ export function parseFullBackup(value: unknown): E4FullBackup {
     ? data.favoriteMonsterIds
     : null;
   const appSettings =
-    value.version >= 2
+    version >= 2
       ? sanitizeAppSettings(data.appSettings)
       : DEFAULT_APP_SETTINGS;
 
@@ -157,6 +163,14 @@ export function parseFullBackup(value: unknown): E4FullBackup {
 
   if (!characters.every(isCharacterLike)) {
     throw new Error("Yedekte geçersiz karakter kaydı var.");
+  }
+
+  const characterIds = new Set<string>();
+  for (const character of characters as Character[]) {
+    if (characterIds.has(character.id)) {
+      throw new Error("Yedekte aynı ID ile birden fazla karakter var.");
+    }
+    characterIds.add(character.id);
   }
 
   if (!campaigns.every(isCampaignLike)) {
@@ -177,11 +191,12 @@ export function parseFullBackup(value: unknown): E4FullBackup {
 
   return {
     format: "e4-dnd-full-backup",
-    version: value.version,
+    version,
     exportedAt:
-      typeof value.exportedAt === "string"
+      typeof value.exportedAt === "string" && !Number.isNaN(Date.parse(value.exportedAt))
         ? value.exportedAt
         : new Date().toISOString(),
+    appVersion: typeof value.appVersion === "string" ? value.appVersion : undefined,
     data: {
       characters: (characters as Character[]).map(hydrateCharacterRecord),
       campaigns: campaigns as Campaign[],

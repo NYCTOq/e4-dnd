@@ -1,8 +1,13 @@
-1. Bu klasörün İÇERİĞİNİ E4 D&D proje köküne kopyalayın.
-2. Windows sorarsa "Hedefteki dosyaları değiştir" seçin.
-3. Proje klasöründe çalıştırın:
-   npm.cmd install
-   npm.cmd test
-   npm.cmd run build
+1. ZIP içindeki E4_DND_SAVE_IMPORT_MIGRATION_MEGA_v5.62 klasörünün içeriğini proje köküne kopyalayın.
+2. Hedef klasör: D:\Projects\e4_dnd
+3. Windows dosya değiştirme uyarısında "Hedefteki dosyaları değiştir" seçeneğini kullanın.
+4. Ardından şu komutları çalıştırın:
 
-Beklenen: 174 test dosyası, 727 başarılı test, 0 başarısız test.
+npm.cmd install
+npm.cmd test
+npm.cmd run build
+
+Beklenen sonuç:
+176 test dosyası geçti
+740 test geçti
+Production build başarılı

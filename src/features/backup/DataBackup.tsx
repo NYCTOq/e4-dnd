@@ -6,6 +6,7 @@ import type {
   DndSpellData,
 } from "../../core/rulesets/ruleset.types";
 import { exportCharacters } from "../../core/storage/characterStorage";
+import { parseCharacterBackup } from "./characterBackup";
 import { PageShell } from "../../shared/layout/PageShell";
 import type { Campaign } from "../campaigns/campaignTypes";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
@@ -162,35 +163,22 @@ export function DataBackup({
     if (!file) return;
 
     try {
-      const parsed = JSON.parse(await file.text());
-      if (!Array.isArray(parsed)) {
-        alert("Bu dosya karakter listesi değil.");
+      const result = parseCharacterBackup(JSON.parse(await file.text()));
+      const migrationNote = result.migrated
+        ? " Eski format güvenli biçimde güncel yapıya dönüştürülecek."
+        : "";
+      if (!confirm(`${result.characters.length} karakter mevcut listenin üstüne yazılacak.${migrationNote} Devam edilsin mi?`)) {
         return;
       }
 
-      const looksValid = parsed.every(
-        (item) =>
-          typeof item?.id === "string" &&
-          typeof item?.name === "string" &&
-          typeof item?.className === "string" &&
-          typeof item?.level === "number" &&
-          typeof item?.maxHp === "number" &&
-          typeof item?.armorClass === "number" &&
-          typeof item?.abilities === "object",
+      onImportCharacters(result.characters);
+      alert(
+        result.migrated
+          ? `${result.characters.length} karakter içe aktarıldı ve güncel formata taşındı.`
+          : `${result.characters.length} karakter içe aktarıldı.`,
       );
-
-      if (!looksValid) {
-        alert("Bu JSON bizim karakter formatımıza benzemiyor.");
-        return;
-      }
-
-      if (!confirm(`${parsed.length} karakter mevcut listenin üstüne yazılacak. Devam edilsin mi?`)) {
-        return;
-      }
-
-      onImportCharacters(parsed as Character[]);
-    } catch {
-      alert("JSON okunamadı. Dosya bozuk olabilir.");
+    } catch (error) {
+      alert(error instanceof Error ? error.message : "JSON okunamadı. Dosya bozuk olabilir.");
     } finally {
       event.target.value = "";
     }

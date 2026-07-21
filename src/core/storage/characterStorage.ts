@@ -251,18 +251,15 @@ export function saveCharacters(characters: Character[]): void {
 }
 
 export function exportCharacters(characters: Character[]): void {
-  const blob = new Blob(
-    [
-      JSON.stringify(
-        characters.map((character) => hydrateCharacterRecord(character)),
-        null,
-        2,
-      ),
-    ],
-    {
-      type: "application/json",
-    },
-  );
+  const payload = {
+    format: "e4-dnd-character-backup",
+    version: 2,
+    exportedAt: new Date().toISOString(),
+    characters: characters.map((character) => hydrateCharacterRecord(character)),
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], {
+    type: "application/json",
+  });
 
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
