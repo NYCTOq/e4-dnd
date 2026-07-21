@@ -1,7 +1,11 @@
-1. ZIP içindeki E4_DND_FINAL_RELEASE_INTEGRITY_v5.70 klasörünün İÇERİĞİNİ proje köküne kopyalayın.
-2. Hedefteki dosyaları değiştirin.
-3. npm.cmd install
-4. npm.cmd test
-5. npm.cmd run build
-6. Browser E2E için bir kez: npx playwright install chromium
-7. npm.cmd run release:verify
+E4 D&D v5.74 Uygulama Adımları
+
+1. Bu klasörün İÇERİĞİNİ proje köküne kopyalayın:
+   D:\Projects\e4_dnd
+2. Windows sorarsa hedefteki dosyaları değiştirin.
+3. Ardından çalıştırın:
+   npm.cmd install
+   npm.cmd test
+   npm.cmd run build
+
+Not: Paket node_modules, dist ve .git içermez.

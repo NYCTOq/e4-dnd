@@ -10,6 +10,9 @@ import { getFeatAbilityBonuses, getGeneralFeatSlotCount, getGrantedOriginFeatNam
 import { buildFinalSkillProficiencies, getAvailableClassSkills, getExpertiseLimit, getGrantedSkills, normalizeClassSkillChoices, normalizeExpertise, uniqueStrings } from "../../core/rulesets/proficiencyRules";
 import { hasValidationErrors, validateCharacterDraft } from "../../core/rulesets/characterValidation";
 import { getBuilderStepId, getBuilderStepIssueCounts, getFirstErrorStepIndex } from "../../core/rulesets/builderProgress";
+import { getSingleClassBuilderUiStatus } from "../../core/rulesets/singleClassBuilderUiRules";
+import { getSingleClassPlayableReadiness } from "../../core/rulesets/singleClassPlayableReadiness";
+import { getLevelOneCombatReadiness } from "../../core/rulesets/levelOneCombatReadiness";
 import { normalizeDraftForProgression } from "../../core/rulesets/progressionDraftNormalization";
 import { getClassSpellSlots } from "../../core/rulesets/spellcastingRules";
 import { setClassSpellSelection } from "../../core/rulesets/classSpellSelectionRules";
@@ -169,6 +172,8 @@ export function Builder({
     return issues;
   }, [draft, activeRulesetData, finalAbilities, abilityBudgetError]);
   const validationHasErrors = hasValidationErrors(validationIssues);
+  const playableReadiness = useMemo(() => getSingleClassPlayableReadiness(draft, validationIssues), [draft, validationIssues]);
+  const combatReadiness = useMemo(() => getLevelOneCombatReadiness(draft, activeRulesetData, alwaysPreparedSpells.map((spell) => spell.id)), [draft, activeRulesetData, alwaysPreparedSpells]);
   const builderProgress = Math.round((activeStepIndex / (builderSteps.length - 1)) * 100);
 
   function goToValidationIssue(stepName: string) {
@@ -388,6 +393,15 @@ export function Builder({
     () => createCharacterFromDraft({ ...draft, abilities: finalAbilities }),
     [draft, finalAbilities],
   );
+
+  const singleClassUiStatus = useMemo(() => getSingleClassBuilderUiStatus({
+    ruleset: draft.ruleset,
+    level: draft.level,
+    race: draft.race,
+    className: draft.className,
+    subclass: draft.subclass,
+    subclassLevel: selectedClass?.subclassLevel,
+  }), [draft.ruleset, draft.level, draft.race, draft.className, draft.subclass, selectedClass?.subclassLevel]);
 
   return (
     <PageShell
@@ -984,6 +998,42 @@ export function Builder({
                 </label>
               </div>
 
+              <div className={`ruleset-foundation-card ${singleClassUiStatus.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row">
+                  <div>
+                    <span className="mini-label">Official Single-Class Check</span>
+                    <strong>{singleClassUiStatus.ready ? "Tek-sınıf Builder akışı hazır" : "Tek-sınıf seçimleri tamamlanmadı"}</strong>
+                  </div>
+                  <span>{singleClassUiStatus.officialRuleset ? "2014/2024 resmî katalog" : "Homebrew / manuel kapsam"}</span>
+                </div>
+                {singleClassUiStatus.messages.length ? <ul>{singleClassUiStatus.messages.map((message) => <li key={message}>{message}</li>)}</ul> : <p>Race/Species, class ve açılmışsa subclass seçimi resmî tek-sınıf akışına uygun.</p>}
+              </div>
+
+              <div className={`ruleset-foundation-card ${playableReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row">
+                  <div>
+                    <span className="mini-label">Level 1 Playable Readiness</span>
+                    <strong>{playableReadiness.ready ? "Karakter masaya hazır" : "Oynanabilirlik için eksikler var"}</strong>
+                  </div>
+                  <span>{playableReadiness.completedChecks} / {playableReadiness.totalChecks} kontrol</span>
+                </div>
+                {playableReadiness.blockers.length ? <ul>{playableReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : <p>Kimlik, HP, ability skorları, zorunlu seçimler ve başlangıç kaynakları tamam.</p>}
+                {playableReadiness.notices.length ? <ul>{playableReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+              </div>
+
+              <div className={`ruleset-foundation-card ${combatReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row">
+                  <div>
+                    <span className="mini-label">Level 1 Combat Readiness</span>
+                    <strong>{combatReadiness.ready ? "Temel savaş loadout'u hazır" : "Savaş hazırlığı kontrol edilmeli"}</strong>
+                  </div>
+                  <span>{combatReadiness.completedChecks} / {combatReadiness.totalChecks} kontrol</span>
+                </div>
+                {combatReadiness.primaryOptions.length ? <p><strong>Hazır seçenekler:</strong> {combatReadiness.primaryOptions.join(", ")}</p> : null}
+                {combatReadiness.blockers.length ? <ul>{combatReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+                {combatReadiness.notices.length ? <ul>{combatReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+              </div>
+
               <div className="builder-summary-grid">
                 <div>
                   <span>Effective AC</span>
@@ -1099,6 +1149,17 @@ export function Builder({
                     <ul className="validation-issue-list">{validationIssues.map((issue) => <li key={issue.id}><button type="button" onClick={() => goToValidationIssue(issue.step)}><strong>{issue.severity === "error" ? "Hata" : "Uyarı"} · {issue.step}:</strong> {issue.message}<span>Düzelt →</span></button></li>)}</ul>
                   </>
                 ) : <p>Karakter kurallı biçimde kaydedilmeye hazır.</p>}
+              </div>
+
+              <div className={`ruleset-foundation-card ${singleClassUiStatus.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row">
+                  <div>
+                    <span className="mini-label">Official Single-Class Check</span>
+                    <strong>{singleClassUiStatus.ready ? "Tek-sınıf Builder akışı hazır" : "Tek-sınıf seçimleri tamamlanmadı"}</strong>
+                  </div>
+                  <span>{singleClassUiStatus.officialRuleset ? "2014/2024 resmî katalog" : "Homebrew / manuel kapsam"}</span>
+                </div>
+                {singleClassUiStatus.messages.length ? <ul>{singleClassUiStatus.messages.map((message) => <li key={message}>{message}</li>)}</ul> : <p>Race/Species, class ve açılmışsa subclass seçimi resmî tek-sınıf akışına uygun.</p>}
               </div>
 
               <div className="builder-summary-grid">
