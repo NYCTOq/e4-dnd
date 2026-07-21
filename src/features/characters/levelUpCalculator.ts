@@ -77,7 +77,7 @@ export function buildLeveledCharacter(
   const nextMaxHp = character.maxHp + hpGain;
   const asiAbilities = applyAbilityIncrease(character.abilities,nextTargetClassLevel,options.asiMode,options.primaryAbility,options.secondaryAbility,targetClassName);
   const nextAbilities = options.featId ? applyFeatAbilityChoice(asiAbilities, options.featData, options.featChoice) : asiAbilities;
-  const progressionSlots=nextClassLevels.length>1?getMulticlassSpellSlots(nextClassLevels,options.allClasses??[],character.spellSlots):getClassSpellSlots(options.classData??null,nextLevel);
+  const progressionSlots=nextClassLevels.length>1?getMulticlassSpellSlots(nextClassLevels,options.allClasses??[],character.spellSlots,character.ruleset):getClassSpellSlots(options.classData??null,nextLevel);
   const currentSlotMap=new Map(character.spellSlots.map(slot=>[slot.level,slot]));
   const nextSlots=progressionSlots.length ? progressionSlots.map(slot=>({...slot,used:Math.min(slot.max,currentSlotMap.get(slot.level)?.used??0)})) : normalizeSpellSlots(character.spellSlots,nextLevel,character.className);
 

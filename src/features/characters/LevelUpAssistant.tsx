@@ -12,7 +12,7 @@ import {
 import { getLatestLevelUp, removeLevelUpHistoryEntry, saveLevelUpSnapshot } from "./levelUpHistory";
 import { isFeatEligible } from "../../core/rulesets/featRules";
 import { getCharacterChoiceDebt } from "../../core/rulesets/choiceDebt";
-import { getClassLevel, getMulticlassEligibility, normalizeClassLevels } from "../../core/rulesets/multiclassRules";
+import { getClassLevel, getMulticlassConflictSummary, getMulticlassProficiencyGains, getMulticlassTransitionEligibility, normalizeClassLevels } from "../../core/rulesets/multiclassRules";
 import { getFeatChoiceState } from "../../core/rulesets/levelUpChoiceCompletion";
 import { getFightingStyleChoiceCount } from "../../core/rulesets/fightingStyleRules";
 
@@ -53,7 +53,9 @@ export function LevelUpAssistant({
   const classLevels=normalizeClassLevels(character.classLevels,character.className,character.level);
   const selectedClass = rulesetData?.classes.find((classItem) => classItem.name === targetClassName);
   const nextClassLevel=getClassLevel(classLevels,targetClassName)+1;
-  const multiclassEligibility=getMulticlassEligibility(targetClassName,character.abilities);
+  const multiclassEligibility=getMulticlassTransitionEligibility(classLevels,targetClassName,character.abilities);
+  const multiclassProficiencies=getClassLevel(classLevels,targetClassName)===0?getMulticlassProficiencyGains(targetClassName,character.ruleset):[];
+  const multiclassWarnings=getMulticlassConflictSummary(getClassLevel(classLevels,targetClassName)>0?classLevels:[...classLevels,{className:targetClassName,level:1}]);
   const hitDie = selectedClass?.hitDie ?? 8;
   const conModifier = getAbilityModifier(character.abilities.con);
   const averageHpGain = getAverageHpGain(hitDie, character.abilities.con);
@@ -164,7 +166,7 @@ export function LevelUpAssistant({
             </div>
           </div>
 
-          <section className="level-up-section"><div className="panel-heading-row"><div><span className="mini-label">Class Level</span><h3>Bu seviyeyi hangi class alacak?</h3><p>Toplam level {nextLevel}; seçilen class level {nextClassLevel} olur.</p></div></div><label className="level-up-manual-field">Class<select value={targetClassName} onChange={event=>{setTargetClassName(event.target.value);setAsiMode("none");setSelectedFeatId("");setSelectedFeatChoice("")}}>{rulesetData?.classes.map(item=><option key={item.id} value={item.name}>{item.name} · şu an {getClassLevel(classLevels,item.name)}</option>)}</select></label>{!multiclassEligibility.eligible&&getClassLevel(classLevels,targetClassName)===0?<p className="validation-message error">Multiclass prerequisite eksik: {multiclassEligibility.missing.join(", ")}</p>:null}<div className="condition-rule-summary">{classLevels.map(item=><small key={item.className}>{item.className} {item.level}</small>)}</div></section>
+          <section className="level-up-section"><div className="panel-heading-row"><div><span className="mini-label">Class Level</span><h3>Bu seviyeyi hangi class alacak?</h3><p>Toplam level {nextLevel}; seçilen class level {nextClassLevel} olur.</p></div></div><label className="level-up-manual-field">Class<select value={targetClassName} onChange={event=>{setTargetClassName(event.target.value);setAsiMode("none");setSelectedFeatId("");setSelectedFeatChoice("")}}>{rulesetData?.classes.map(item=><option key={item.id} value={item.name}>{item.name} · şu an {getClassLevel(classLevels,item.name)}</option>)}</select></label>{!multiclassEligibility.eligible&&getClassLevel(classLevels,targetClassName)===0?<p className="validation-message error">Multiclass prerequisite eksik: {multiclassEligibility.missing.join(", ")}</p>:null}<div className="condition-rule-summary">{classLevels.map(item=><small key={item.className}>{item.className} {item.level}</small>)}</div>{multiclassProficiencies.length?<p className="validation-message">Yeni class proficiency kazanımları: {multiclassProficiencies.join(", ")}</p>:null}{multiclassWarnings.map(warning=><p className="validation-message" key={warning}>{warning}</p>)}</section>
 
           <section className="level-up-section">
             <div className="panel-heading-row">

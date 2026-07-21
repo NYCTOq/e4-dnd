@@ -13,6 +13,8 @@ import { getCharacterFeatures, getPassiveScore, getSavingThrowBonus, getSkillBon
 import { getCharacterChoiceDebt } from "../../core/rulesets/choiceDebt";
 import { ChoiceDebtResolver } from "./ChoiceDebtResolver";
 import { getPlayReadiness } from "../../core/character/playReadiness";
+import { getCharacterSpellcastingClasses, getSpellcastingStatsForClass, getSpellcastingStatsForSpell } from "../../core/rulesets/multiclassSpellcastingSeparation";
+import { getCharacterSheetCertificationSnapshot } from "../../core/rulesets/characterSheetCertification";
 
 interface CharacterCastHistoryItem {
   id: string;
@@ -212,6 +214,10 @@ export function CharacterDetail({
   const classFeatureActions = getClassFeatureActions(activeCharacter.className, activeCharacter.level, activeCharacter.ruleset);
   const sheetFeatures = getCharacterFeatures(activeCharacter, rulesetData);
   const selectedRace = rulesetData?.races.find((item) => item.name === activeCharacter.race);
+  const spellcastingClasses=getCharacterSpellcastingClasses(activeCharacter,rulesetData);
+  const spellcastingClassStats=spellcastingClasses.map(entry=>getSpellcastingStatsForClass(activeCharacter,entry.className,rulesetData)).filter((entry): entry is NonNullable<typeof entry>=>Boolean(entry));
+  const sheetCertification=getCharacterSheetCertificationSnapshot(activeCharacter,rulesetData);
+  const completedSheetSections=Object.values(sheetCertification.sectionCoverage).filter(Boolean).length;
 
   function adjustResource(resourceId: string, amount: number) {
     onUpdateCharacter({
@@ -679,6 +685,8 @@ export function CharacterDetail({
             </div>
           </details>
 
+          <section className="character-sheet-command-center" aria-label="Karakter kağıdı hızlı özeti"><div className="character-sheet-command-heading"><div><span className="mini-label">Table Ready Snapshot</span><h2>Masada Hızlı Özet</h2><p>{sheetCertification.classSummary}</p></div><strong>{completedSheetSections}/7 bölüm</strong></div><div className="character-sheet-command-grid"><article><span>HP</span><strong>{activeCharacter.currentHp}/{activeCharacter.maxHp}</strong><small>{activeCharacter.tempHp?`+${activeCharacter.tempHp} geçici`:"Geçici HP yok"}</small></article><article><span>Savunma</span><strong>AC {effectiveArmorClass}</strong><small>Initiative {formatModifier(getInitiative(activeCharacter))}</small></article><article><span>Kaynaklar</span><strong>{sheetCertification.usableResourceCount} hazır</strong><small>{sheetCertification.exhaustedResourceCount} tükenmiş</small></article><article><span>Büyüler</span><strong>{sheetCertification.preparedSpellCount}/{sheetCertification.knownSpellCount}</strong><small>{sheetCertification.spellcastingClassCount} casting class</small></article><article><span>Ekipman</span><strong>{sheetCertification.equippedItemCount} kuşanılmış</strong><small>{sheetCertification.attunedItemCount}/3 attuned</small></article><article><span>Aktif Durum</span><strong>{sheetCertification.activeConditionCount+sheetCertification.activeEffectCount}</strong><small>{sheetCertification.activeConditionCount} condition · {sheetCertification.activeEffectCount} effect</small></article></div></section>
+
           <div className="ability-detail-grid">
             {Object.entries(activeCharacter.abilities).map(
               ([ability, score]) => (
@@ -713,17 +721,10 @@ export function CharacterDetail({
               <strong>{getPassivePerception(activeCharacter)}</strong>
             </div>
 
-            <div>
-              <span>Spell Save DC</span>
-              <strong>{getSpellSaveDc(activeCharacter)}</strong>
-            </div>
-
-            <div>
-              <span>Spell Attack</span>
-              <strong>
-                {formatModifier(getSpellAttackBonus(activeCharacter))}
-              </strong>
-            </div>
+            {spellcastingClassStats.length ? spellcastingClassStats.map((entry)=><div key={`spellcasting-${entry.className}`}><span>{entry.className} Spellcasting</span><strong>DC {entry.saveDc}</strong><em>{entry.ability.toUpperCase()} · Atk {formatModifier(entry.attackBonus)}</em></div>) : <>
+            <div><span>Spell Save DC</span><strong>{getSpellSaveDc(activeCharacter)}</strong></div>
+            <div><span>Spell Attack</span><strong>{formatModifier(getSpellAttackBonus(activeCharacter))}</strong></div>
+            </>}
           </div>
 
           <details className="character-sheet-section" open>
@@ -910,7 +911,7 @@ export function CharacterDetail({
                             <div className="library-item-top">
                               <div>
                                 <span className="mini-label">{spell.school}</span>
-                                <h3>{spell.name}</h3>
+                                <h3>{spell.name}{(()=>{const stats=getSpellcastingStatsForSpell(activeCharacter,spell,rulesetData);return stats?` · ${stats.className} (${stats.spellcastingAbility.toUpperCase()})`:""})()}</h3>
                               </div>
 
                               <span>{getSpellLevelLabel(spell)}</span>

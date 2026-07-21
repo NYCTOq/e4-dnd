@@ -5,9 +5,15 @@ import { formatModifier, getAbilityModifier, getProficiencyBonus } from "../../c
 import { calculateJourneyArmorClass } from "../../core/character/playerJourneyConsistency";
 import { getHighestSpellLevel, getSpellMechanicSummary } from "../../core/rulesets/spellRules";
 import { getItemSearchText, getWeaponMastery } from "../../core/rulesets/equipmentRules";
+import { getEquipmentLegality } from "../../core/rulesets/equipmentRuntimeRules";
+import { getAttunedItemCount, MAX_ATTUNED_ITEMS, toggleItemAttunement } from "../../core/rulesets/magicItemRules";
+import { getWeaponPropertyRuntime } from "../../core/rulesets/equipmentClosureRuntime";
 import { getClassResources, mergeClassResources } from "../../core/rulesets/classFeatureEngine";
 import { canPrepareSpell, canRitualCast, canSelectKnownSpell, getSpellcastingProfile } from "../../core/rulesets/spellcastingRules";
 import { getCompanionStats, getRangerCompanions } from "../../core/rulesets/companionRules";
+import { getCharacterSpellcastingClasses, getSpellcastingStatsForClass } from "../../core/rulesets/multiclassSpellcastingSeparation";
+import { getClassSpellSelection, hydrateClassSpellSelections, setClassSpellSelection } from "../../core/rulesets/classSpellSelectionRules";
+import { getAlwaysPreparedSpells } from "../../core/rulesets/subclassRules";
 
 export const emptyDraft: CharacterDraft = {
   name: "",
@@ -55,6 +61,9 @@ export const emptyDraft: CharacterDraft = {
   armorClassMode: "manual",
   knownSpellIds: [],
   preparedSpellIds: [],
+  spellSources: {},
+  classKnownSpellIds: {},
+  classPreparedSpellIds: {},
   spellSlots: [],
   inventory: [],
   equippedArmorId: null,
@@ -85,6 +94,9 @@ export function normalizeCharacterDraft(value: unknown, fallback: CharacterDraft
     abilityScoreIncreases: { ...(fallback.abilityScoreIncreases ?? {}), ...(candidate.abilityScoreIncreases ?? {}) },
     deathSaves: { ...fallback.deathSaves, ...(candidate.deathSaves ?? {}) },
     conditionDurations: { ...fallback.conditionDurations, ...(candidate.conditionDurations ?? {}) },
+    spellSources: { ...(fallback.spellSources ?? {}), ...(candidate.spellSources ?? {}) },
+    classKnownSpellIds: { ...(fallback.classKnownSpellIds ?? {}), ...(candidate.classKnownSpellIds ?? {}) },
+    classPreparedSpellIds: { ...(fallback.classPreparedSpellIds ?? {}), ...(candidate.classPreparedSpellIds ?? {}) },
   };
 
   for (const key of draftArrayKeys) {
@@ -343,23 +355,26 @@ export function getWeaponAbilityModifier(character: Character, weapon: DndItemDa
   return strengthModifier;
 }
 
-export function getWeaponAttackBonus(character: Character, weapon: DndItemData) {
+export function getWeaponAttackBonus(character: Character, weapon: DndItemData, proficient = true) {
   const properties = weapon.properties?.map((property) => property.toLowerCase()) ?? [];
   const isRangedWeapon = properties.includes("ammunition") || weapon.id.includes("bow") || weapon.id.includes("crossbow");
   const styleBonus = isRangedWeapon && character.fightingStyleIds?.includes("archery") ? 2 : 0;
-  return getWeaponAbilityModifier(character, weapon) + getProficiencyBonus(character.level) + styleBonus + (weapon.attackBonus ?? 0);
+  const proficiencyBonus = proficient ? getProficiencyBonus(character.level) : 0;
+  return getWeaponAbilityModifier(character, weapon) + proficiencyBonus + styleBonus + (weapon.attackBonus ?? 0);
 }
 
-export function getWeaponDamageSummary(character: Character, weapon: DndItemData) {
+export function getWeaponDamageSummary(character: Character, weapon: DndItemData, useVersatile = false) {
   const abilityModifier = getWeaponAbilityModifier(character, weapon);
   const properties = weapon.properties?.map((property) => property.toLowerCase()) ?? [];
-  const isTwoHanded = properties.some((property) => property.includes("two-handed"));
+  const runtime = getWeaponPropertyRuntime(weapon);
+  const isTwoHanded = runtime.twoHanded || useVersatile;
+  const damageDice = useVersatile && runtime.versatile ? runtime.versatile : (weapon.damage ?? "1");
   const duelingBonus = character.fightingStyleIds?.includes("dueling") && !weapon.range && !isTwoHanded && character.equippedWeaponIds.length === 1 ? 2 : 0;
   const thrownBonus = character.fightingStyleIds?.includes("thrown-weapon-fighting") && properties.includes("thrown") ? 2 : 0;
   const totalModifier = abilityModifier + duelingBonus + thrownBonus + (weapon.damageBonus ?? 0);
   const modifierText = totalModifier === 0 ? "" : ` ${formatModifier(totalModifier)}`;
 
-  return `${weapon.damage ?? "1"}${modifierText} ${weapon.damageType ?? "damage"}`;
+  return `${damageDice}${modifierText} ${weapon.damageType ?? "damage"}`;
 }
 
 export function getItemCategoryLabel(category: DndItemData["category"]) {
@@ -774,6 +789,86 @@ export function CharacterSpellSelector({
 }
 
 
+
+export function ClassBasedSpellSelector({
+  draft,
+  rulesetData,
+  isRulesetLoading,
+  rulesetError,
+  onChange,
+}: {
+  draft: CharacterDraft;
+  rulesetData: RulesetData | null;
+  isRulesetLoading: boolean;
+  rulesetError: string | null;
+  onChange: (next: CharacterDraft) => void;
+}) {
+  const castingClasses = useMemo(
+    () => getCharacterSpellcastingClasses(draft, rulesetData),
+    [draft.classLevels, draft.className, draft.level, draft.subclass, rulesetData],
+  );
+  const [activeClass, setActiveClass] = useState("");
+
+  useEffect(() => {
+    const names = castingClasses.map((entry) => entry.className);
+    if (!activeClass || !names.some((name) => name.toLowerCase() === activeClass.toLowerCase())) {
+      setActiveClass(names[0] ?? "");
+    }
+    const hydrated = hydrateClassSpellSelections(draft, names);
+    if (hydrated !== draft) onChange(hydrated);
+  }, [castingClasses, activeClass, draft, onChange]);
+
+  if (!castingClasses.length) {
+    return <section className="form-panel"><h2>Spellcasting</h2><p>Bu karakterde spellcasting class'ı bulunmuyor.</p></section>;
+  }
+
+  const source = castingClasses.find((entry) => entry.className.toLowerCase() === activeClass.toLowerCase()) ?? castingClasses[0];
+  const levelEntry = (draft.classLevels?.length ? draft.classLevels : [{ className: draft.className, level: draft.level, subclass: draft.subclass }])
+    .find((entry) => entry.className.toLowerCase() === source.className.toLowerCase());
+  const classLevel = levelEntry?.level ?? draft.level;
+  const subclassName = levelEntry?.subclass ?? (source.className.toLowerCase() === draft.className.toLowerCase() ? draft.subclass : "");
+  const classData = rulesetData?.classes.find((entry) => entry.name.toLowerCase() === source.className.toLowerCase()) ?? null;
+  const subclassData = rulesetData?.subclasses.find((entry) => entry.className.toLowerCase() === source.className.toLowerCase() && entry.name === subclassName) ?? null;
+  const alwaysPrepared = getAlwaysPreparedSpells(subclassData, getHighestSpellLevel(classData ?? undefined, classLevel), rulesetData?.spells ?? []);
+  const selection = getClassSpellSelection(draft, source.className);
+  const stats = getSpellcastingStatsForClass(draft as Character, source.className, rulesetData);
+
+  return (
+    <section className="class-spell-workspace">
+      <div className="class-spell-tabs" role="tablist" aria-label="Spellcasting class seçimi">
+        {castingClasses.map((entry) => {
+          const currentStats = getSpellcastingStatsForClass(draft as Character, entry.className, rulesetData);
+          const selected = entry.className.toLowerCase() === source.className.toLowerCase();
+          return <button key={entry.className} type="button" role="tab" aria-selected={selected} className={selected ? "active" : ""} onClick={() => setActiveClass(entry.className)}>
+            <strong>{entry.className}</strong>
+            <span>{entry.spellcastingAbility.toUpperCase()} · DC {currentStats?.saveDc ?? "-"} · +{currentStats?.attackBonus ?? 0}</span>
+          </button>;
+        })}
+      </div>
+      <div className="class-spell-summary">
+        <strong>{source.className} Level {classLevel}</strong>
+        <span>{source.spellListClass === "wizard" && source.className.toLowerCase() !== "wizard" ? `Wizard listesi · ${source.className} kaynağı` : `${source.spellListClass} listesi`}</span>
+        {stats ? <span>Spell DC {stats.saveDc} · Attack +{stats.attackBonus}</span> : null}
+      </div>
+      <CharacterSpellSelector
+        title={`${source.className} Spells`}
+        description="Known ve prepared seçimleri yalnız bu class kotasını kullanır; ortak slot havuzu ayrı kalır."
+        rulesetData={rulesetData}
+        isRulesetLoading={isRulesetLoading}
+        rulesetError={rulesetError}
+        className={source.className}
+        subclassName={subclassName}
+        characterLevel={classLevel}
+        abilities={draft.abilities}
+        knownSpellIds={selection.knownSpellIds}
+        preparedSpellIds={selection.preparedSpellIds}
+        alwaysPreparedSpellIds={alwaysPrepared.map((spell) => spell.id)}
+        onChange={(next) => onChange(setClassSpellSelection(draft, source.className, next))}
+      />
+    </section>
+  );
+}
+
 export function CharacterInventoryManager({
   title,
   description,
@@ -788,6 +883,8 @@ export function CharacterInventoryManager({
   abilities,
   armorClass,
   armorClassMode,
+  className,
+  classLevels,
   onChange,
 }: {
   title: string;
@@ -803,6 +900,8 @@ export function CharacterInventoryManager({
   abilities: Character["abilities"];
   armorClass: number;
   armorClassMode: Character["armorClassMode"];
+  className: string;
+  classLevels?: Character["classLevels"];
   onChange: (next: {
     inventory: Character["inventory"];
     equippedArmorId: string | null;
@@ -836,6 +935,11 @@ export function CharacterInventoryManager({
   );
 
   const effectiveAc = armorClassMode === "auto" ? suggestedAc : armorClass;
+  const attunedCount = getAttunedItemCount(inventory);
+  const classProfiles = useMemo(() => {
+    const classNames = new Set([className, ...(classLevels ?? []).map((entry) => entry.className)].filter(Boolean));
+    return (rulesetData?.classes ?? []).filter((entry) => classNames.has(entry.name));
+  }, [className, classLevels, rulesetData]);
 
   const filteredItems = useMemo(() => {
     const normalizedSearch = searchTerm.trim().toLowerCase();
@@ -911,6 +1015,11 @@ export function CharacterInventoryManager({
           : [...equippedWeaponIds, item.id].slice(-2),
       });
     }
+  }
+
+  function toggleAttunement(item: DndItemData) {
+    const nextInventory = toggleItemAttunement(inventory, item);
+    if (nextInventory !== inventory) emit({ inventory: nextInventory });
   }
 
   function isEquipped(item: DndItemData) {
@@ -1065,6 +1174,10 @@ export function CharacterInventoryManager({
               {filteredItems.map((item) => {
                 const quantity = getInventoryQuantity(inventory, item.id);
                 const equipped = isEquipped(item);
+                const inventoryEntry = inventory.find((entry) => entry.itemId === item.id);
+                const legality = getEquipmentLegality(item, classProfiles, abilities);
+                const attuned = Boolean(inventoryEntry?.attuned);
+                const attunementBlocked = Boolean(item.requiresAttunement && !attuned && attunedCount >= MAX_ATTUNED_ITEMS);
 
                 return (
                   <article
@@ -1083,6 +1196,9 @@ export function CharacterInventoryManager({
                         <span>{item.weight} lb</span>
                         {item.stealthDisadvantage ? <span>Stealth Disadv.</span> : null}
                         {item.strengthRequirement ? <span>STR {item.strengthRequirement}</span> : null}
+                        {item.magical ? <span>{item.rarity ?? "Magic"}</span> : null}
+                        {item.requiresAttunement ? <span>{attuned ? "Attuned" : "Attunement required"}</span> : null}
+                        {quantity > 0 && legality.issues.map((issue) => <span className="warning-pill" key={issue}>{issue}</span>)}
                       </div>
                     </div>
 
@@ -1092,6 +1208,18 @@ export function CharacterInventoryManager({
                         <strong>{quantity}</strong>
                         <button type="button" onClick={() => updateItemQuantity(item.id, quantity + 1)}>+</button>
                       </div>
+
+                      {item.requiresAttunement && quantity > 0 ? (
+                        <button
+                          type="button"
+                          className={attuned ? "active" : ""}
+                          disabled={attunementBlocked}
+                          title={attunementBlocked ? `Attunement sınırı ${MAX_ATTUNED_ITEMS}` : undefined}
+                          onClick={() => toggleAttunement(item)}
+                        >
+                          {attuned ? "Attuned" : attunementBlocked ? "Limit dolu" : "Attune"}
+                        </button>
+                      ) : null}
 
                       {["weapon", "armor", "shield"].includes(item.category) ? (
                         <button

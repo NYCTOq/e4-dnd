@@ -2,8 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import { getRulesetDefinition } from "../../core/rulesets/rulesetRegistry";
-import { getAlwaysPreparedSpells } from "../../core/rulesets/subclassRules";
-import { getHighestSpellLevel } from "../../core/rulesets/spellRules";
 import { hasValidationErrors, validateCharacterDraft } from "../../core/rulesets/characterValidation";
 import { normalizeDraftForProgression } from "../../core/rulesets/progressionDraftNormalization";
 import { buildFinalSkillProficiencies, getAvailableClassSkills, getExpertiseLimit, getGrantedSkills, normalizeClassSkillChoices, normalizeExpertise } from "../../core/rulesets/proficiencyRules";
@@ -12,7 +10,7 @@ import type { Character, CharacterDraft } from "../../core/character/character.t
 import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellAttackBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
 import { NumberStepper } from "../../shared/forms/NumberStepper";
-import { CharacterInventoryManager, CharacterSpellSelector, calculateEffectiveArmorClass, createCharacterFromDraft, emptyDraft } from "./characterShared";
+import { CharacterInventoryManager, ClassBasedSpellSelector, calculateEffectiveArmorClass, createCharacterFromDraft, emptyDraft } from "./characterShared";
 import { buildEditedCharacter, characterToEditDraft } from "./characterEditorRules";
 
 export function CharacterEditor({
@@ -59,9 +57,7 @@ export function CharacterEditor({
       ) ?? null
     );
   }, [activeRulesetData, draft.className]);
-  const selectedSubclass = useMemo(() => activeRulesetData?.subclasses.find((item) => item.name === draft.subclass && item.className === draft.className) ?? null, [activeRulesetData, draft.subclass, draft.className]);
   const selectedBackground = useMemo(() => activeRulesetData?.backgrounds.find((item) => item.name === draft.background) ?? null, [activeRulesetData, draft.background]);
-  const alwaysPreparedSpells = useMemo(() => getAlwaysPreparedSpells(selectedSubclass, getHighestSpellLevel(selectedClass ?? undefined, draft.level), activeRulesetData?.spells ?? []), [selectedSubclass, selectedClass, draft.level, activeRulesetData]);
   const validationIssues = useMemo(() => validateCharacterDraft(draft, activeRulesetData, draft.abilities), [draft, activeRulesetData]);
   const classSkillChoices = useMemo(() => normalizeClassSkillChoices(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
   const finalSkills = useMemo(() => buildFinalSkillProficiencies(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
@@ -362,26 +358,12 @@ export function CharacterEditor({
           </label>
         </section>
 
-        <CharacterSpellSelector
-          title="Karakter Spellbook"
-          description="Bu karakterin spell listesini güncelle. Oyuncular zaten her seviye atlayınca kimlik krizi geçiriyor."
+        <ClassBasedSpellSelector
+          draft={draft}
           rulesetData={activeRulesetData}
           isRulesetLoading={activeRulesetLoading}
           rulesetError={activeRulesetError}
-          className={draft.className}
-          subclassName={draft.subclass}
-          characterLevel={draft.level}
-          abilities={draft.abilities}
-          knownSpellIds={draft.knownSpellIds}
-          preparedSpellIds={draft.preparedSpellIds}
-          alwaysPreparedSpellIds={alwaysPreparedSpells.map((spell) => spell.id)}
-          onChange={(next) =>
-            setDraft((current) => ({
-              ...current,
-              knownSpellIds: next.knownSpellIds,
-              preparedSpellIds: next.preparedSpellIds,
-            }))
-          }
+          onChange={setDraft}
         />
 
         <CharacterInventoryManager
@@ -398,6 +380,8 @@ export function CharacterEditor({
           abilities={draft.abilities}
           armorClass={draft.armorClass}
           armorClassMode={draft.armorClassMode}
+          className={draft.className}
+          classLevels={draft.classLevels}
           onChange={(next) =>
             setDraft((current) => ({
               ...current,

@@ -12,6 +12,7 @@ import { hasValidationErrors, validateCharacterDraft } from "../../core/rulesets
 import { getBuilderStepId, getBuilderStepIssueCounts, getFirstErrorStepIndex } from "../../core/rulesets/builderProgress";
 import { normalizeDraftForProgression } from "../../core/rulesets/progressionDraftNormalization";
 import { getClassSpellSlots } from "../../core/rulesets/spellcastingRules";
+import { setClassSpellSelection } from "../../core/rulesets/classSpellSelectionRules";
 import { getHighestSpellLevel } from "../../core/rulesets/spellRules";
 import { getAbilityBudgetError, getStandardArrayAbilities, type AbilityGenerationMethod } from "../../core/rulesets/abilityGenerationRules";
 import { getFightingStyleChoiceCount, getFightingStyles } from "../../core/rulesets/fightingStyleRules";
@@ -1029,11 +1030,7 @@ export function Builder({
               preparedSpellIds={draft.preparedSpellIds}
               alwaysPreparedSpellIds={alwaysPreparedSpells.map((spell) => spell.id)}
               onChange={(next) =>
-                setDraft((current) => ({
-                  ...current,
-                  knownSpellIds: next.knownSpellIds,
-                  preparedSpellIds: next.preparedSpellIds,
-                }))
+                setDraft((current) => setClassSpellSelection(current, current.className, next))
               }
             />
             {arcanumLevels.length?<section className="form-panel"><div className="panel-heading-row"><div><span className="mini-label">Warlock High Magic</span><h2>Mystic Arcanum</h2></div><span>{(draft.arcanumSpellIds??[]).length} / {arcanumLevels.length}</span></div>{arcanumLevels.map(level=><div className="ruleset-foundation-card" key={level}><h3>Level {level} Arcanum</h3><div className="builder-choice-grid">{arcanumOptions.filter(spell=>spell.level===level).map(spell=>{const selected=draft.arcanumSpellIds?.includes(spell.id);return <article className={`builder-choice-card ${selected?"selected":""}`} key={spell.id}><div className="panel-heading-row"><h3>{spell.name}</h3><button type="button" onClick={()=>selectArcanum(spell.id,level)}>{selected?"Kaldır":"Seç"}</button></div><p>{spell.description}</p></article>})}</div></div>)}</section>:null}</>
@@ -1054,6 +1051,8 @@ export function Builder({
               abilities={draft.abilities}
               armorClass={draft.armorClass}
               armorClassMode={draft.armorClassMode}
+              className={draft.className}
+              classLevels={draft.classLevels}
               onChange={(next) =>
                 setDraft((current) => ({
                   ...current,

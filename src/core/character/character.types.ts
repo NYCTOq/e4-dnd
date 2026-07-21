@@ -116,6 +116,9 @@ export interface Character {
 
   knownSpellIds: string[];
   preparedSpellIds: string[];
+  spellSources?: Record<string, string>;
+  classKnownSpellIds?: Record<string, string[]>;
+  classPreparedSpellIds?: Record<string, string[]>;
   spellSlots: CharacterSpellSlot[];
   pactMagicSlots?: CharacterSpellSlot[];
 
@@ -183,6 +186,9 @@ export interface CharacterDraft {
 
   knownSpellIds: string[];
   preparedSpellIds: string[];
+  spellSources?: Record<string, string>;
+  classKnownSpellIds?: Record<string, string[]>;
+  classPreparedSpellIds?: Record<string, string[]>;
   spellSlots: CharacterSpellSlot[];
   pactMagicSlots?: CharacterSpellSlot[];
 
