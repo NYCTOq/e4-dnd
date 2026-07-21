@@ -60,7 +60,7 @@ describe("stable player release", () => {
 
   it("formats a compact release summary", () => {
     const summary = formatStablePlayerReleaseSummary(buildStablePlayerReleaseManifest(passingInput));
-    expect(summary).toContain("E4 D&D v5.0.0 [STABLE]");
+    expect(summary).toContain("E4 D&D v5.70.0 [STABLE]");
     expect(summary).toContain("score 100/100");
   });
 });

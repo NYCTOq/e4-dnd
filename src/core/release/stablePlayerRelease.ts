@@ -5,7 +5,7 @@ import {
   type StableReleaseHardeningReport,
 } from "./stableReleaseHardening";
 
-export const STABLE_PLAYER_RELEASE_VERSION = "5.0.0" as const;
+export const STABLE_PLAYER_RELEASE_VERSION = "5.70.0" as const;
 export const STABLE_PLAYER_RELEASE_CHANNEL = "stable" as const;
 
 export type StablePlayerReleaseInput = Omit<ReleaseGateInput, "appVersion"> & {

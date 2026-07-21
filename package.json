@@ -1,7 +1,7 @@
 {
   "name": "e4_dnd",
   "private": true,
-  "version": "5.67.0",
+  "version": "5.70.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,10 +11,12 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "check": "npm run lint && npm test && npm run build",
-    "test:e2e": "playwright test",
+    "test:e2e": "node scripts/playwright-preflight.mjs && npm run test:e2e:raw",
     "test:e2e:headed": "playwright test --headed",
     "test:e2e:mobile": "playwright test --project=mobile-chromium",
-    "check:full": "npm run check && npm run test:e2e"
+    "check:full": "npm run check && npm run test:e2e",
+    "test:e2e:raw": "playwright test",
+    "release:verify": "npm run check && npm run test:e2e"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",
