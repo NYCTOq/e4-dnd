@@ -14,6 +14,7 @@ import {
 import { PageShell } from "../../shared/layout/PageShell";
 import { getPlayReadiness } from "../../core/character/playReadiness";
 import { getCharacterSpellcastingAbility } from "../../core/character/playerJourneyConsistency";
+import { getPlayerJourneyIntegrationSnapshot } from "../../core/rulesets/playerJourneyIntegration";
 import { useI18n } from "../../shared/i18n/useI18n";
 import { getMetamagicOptions } from "../../core/rulesets/metamagicRules";
 import { getEldritchInvocations } from "../../core/rulesets/invocationRules";
@@ -187,6 +188,7 @@ export function PlayMode({
 
   const activeCharacter = character;
   const deathSaveStatus=getDeathSaveStatus(activeCharacter.currentHp,activeCharacter.deathSaves);
+  const journeySnapshot=getPlayerJourneyIntegrationSnapshot(activeCharacter);
   const homebrewRuntime = getHomebrewCharacterRuntime(activeCharacter, homebrewPackages);
   const homebrewContentRuntime = getHomebrewContentRuntime(activeCharacter, homebrewPackages, rulesetData);
   const classAbilities=getClassAbilityRuntime(activeCharacter.abilities,activeCharacter.className,activeCharacter.level);
@@ -631,6 +633,8 @@ export function PlayMode({
             {isFocusMode ? "Normal Görünüm" : "Odak Modu"}
           </button>
         </header>
+
+        <section className="player-journey-integration play-journey-integration" aria-label="Play Mode dinlenme özeti"><div><span className="mini-label">Live Journey State</span><strong>{journeySnapshot.restRecommendation==="none"?"Kaynaklar hazır":journeySnapshot.restRecommendation==="short"?"Short Rest öneriliyor":"Long Rest öneriliyor"}</strong><p>{journeySnapshot.restReason}</p></div><div className="player-journey-actions"><NavLink to={`/characters/${activeCharacter.id}`}>Character Sheet</NavLink><NavLink to="/rest">Rest Center</NavLink></div></section>
 
         <section className={`play-readiness-card ${readiness.status}`}>
           <div>

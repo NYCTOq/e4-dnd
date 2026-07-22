@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { AutosaveStatus } from "../../shared/forms/AutosaveStatus";
 import { useAutosavedDraft } from "../../shared/state/useAutosavedDraft";
 import type { RulesetData, DndSpellData } from "../../core/rulesets/ruleset.types";
@@ -21,6 +21,12 @@ import { getLevelOneAncestryReadiness } from "../../core/rulesets/levelOneAncest
 import { getLevelOneEquipmentReadiness } from "../../core/rulesets/levelOneEquipmentReadiness";
 import { getLevelOneDefenseReadiness } from "../../core/rulesets/levelOneDefenseReadiness";
 import { getLevelOneOffenseReadiness } from "../../core/rulesets/levelOneOffenseReadiness";
+import { getLevelOneUtilityReadiness } from "../../core/rulesets/levelOneUtilityReadiness";
+import { getLevelOneSocialReadiness } from "../../core/rulesets/levelOneSocialReadiness";
+import { getLevelOneSupportReadiness } from "../../core/rulesets/levelOneSupportReadiness";
+import { getLevelOneActionEconomyReadiness } from "../../core/rulesets/levelOneActionEconomyReadiness";
+import { getLevelOneRestReadiness } from "../../core/rulesets/levelOneRestReadiness";
+import { getLevelOneFinalReadiness } from "../../core/rulesets/levelOneFinalReadiness";
 import { normalizeDraftForProgression } from "../../core/rulesets/progressionDraftNormalization";
 import { getClassSpellSlots } from "../../core/rulesets/spellcastingRules";
 import { setClassSpellSelection } from "../../core/rulesets/classSpellSelectionRules";
@@ -79,6 +85,8 @@ export function Builder({
     },
   );
   const [activeStepIndex, setActiveStepIndex] = useState(0);
+  const [stepAnnouncement, setStepAnnouncement] = useState("");
+  const stepHeadingRef = useRef<HTMLHeadingElement>(null);
   const [abilityMethod, setAbilityMethod] = useState<AbilityGenerationMethod>("standard-array");
   const [featSelectionNotice, setFeatSelectionNotice] = useState("");
   const selectedRuleset = useSelectedRuleset(draft.ruleset, rulesetData);
@@ -102,6 +110,14 @@ export function Builder({
   const activeStep = builderSteps[activeStepIndex];
   const isFirstStep = activeStepIndex === 0;
   const isLastStep = activeStepIndex === builderSteps.length - 1;
+
+  useEffect(() => {
+    setStepAnnouncement(`Adım ${activeStepIndex + 1}/${builderSteps.length}: ${activeStep.title}`);
+    const frame = requestAnimationFrame(() => {
+      stepHeadingRef.current?.focus({ preventScroll: true });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [activeStep.title, activeStepIndex, builderSteps.length]);
 
   const selectedRace = useMemo(() => {
     return activeRulesetData?.races.find((race) => race.name === draft.race) ?? null;
@@ -190,6 +206,28 @@ export function Builder({
   const equipmentReadiness = useMemo(() => getLevelOneEquipmentReadiness(draft, activeRulesetData), [draft, activeRulesetData]);
   const defenseReadiness = useMemo(() => getLevelOneDefenseReadiness(draft, activeRulesetData), [draft, activeRulesetData]);
   const offenseReadiness = useMemo(() => getLevelOneOffenseReadiness(draft, activeRulesetData, alwaysPreparedSpells.map((spell) => spell.id)), [draft, activeRulesetData, alwaysPreparedSpells]);
+  const utilityReadiness = useMemo(() => getLevelOneUtilityReadiness(draft, activeRulesetData, alwaysPreparedSpells.map((spell) => spell.id)), [draft, activeRulesetData, alwaysPreparedSpells]);
+  const socialReadiness = useMemo(() => getLevelOneSocialReadiness(draft, activeRulesetData, alwaysPreparedSpells.map((spell) => spell.id)), [draft, activeRulesetData, alwaysPreparedSpells]);
+  const supportReadiness = useMemo(() => getLevelOneSupportReadiness(draft, activeRulesetData, alwaysPreparedSpells.map((spell) => spell.id)), [draft, activeRulesetData, alwaysPreparedSpells]);
+  const actionEconomyReadiness = useMemo(() => getLevelOneActionEconomyReadiness(draft, activeRulesetData, alwaysPreparedSpells.map((spell) => spell.id)), [draft, activeRulesetData, alwaysPreparedSpells]);
+  const restReadiness = useMemo(() => getLevelOneRestReadiness(draft, activeRulesetData), [draft, activeRulesetData]);
+  const finalReadiness = useMemo(() => getLevelOneFinalReadiness([
+    { id: "playable", label: "Temel oynanabilirlik", status: playableReadiness },
+    { id: "combat", label: "Savaş loadout'u", status: combatReadiness },
+    { id: "spellcasting", label: "Spellcasting", status: spellcastingReadiness },
+    { id: "proficiency", label: "Proficiency", status: proficiencyReadiness },
+    { id: "ancestry", label: "Ancestry", status: ancestryReadiness },
+    { id: "origin", label: "Background & Origin", status: originReadiness },
+    { id: "equipment", label: "Ekipman", status: equipmentReadiness },
+    { id: "defense", label: "Savunma", status: defenseReadiness },
+    { id: "offense", label: "Saldırı", status: offenseReadiness },
+    { id: "utility", label: "Keşif & Utility", status: utilityReadiness },
+    { id: "social", label: "Sosyal profil", status: socialReadiness },
+    { id: "support", label: "Destek & Recovery", status: supportReadiness },
+    { id: "economy", label: "Action economy", status: actionEconomyReadiness },
+    { id: "rest", label: "Rest & Hit Dice", status: restReadiness },
+    { id: "features", label: "Class feature seçimleri", status: featureChoiceReadiness },
+  ]), [playableReadiness, combatReadiness, spellcastingReadiness, proficiencyReadiness, ancestryReadiness, originReadiness, equipmentReadiness, defenseReadiness, offenseReadiness, utilityReadiness, socialReadiness, supportReadiness, actionEconomyReadiness, restReadiness, featureChoiceReadiness]);
   const builderProgress = Math.round((activeStepIndex / (builderSteps.length - 1)) * 100);
 
   function goToValidationIssue(stepName: string) {
@@ -425,8 +463,9 @@ export function Builder({
       title="Yeni Karakter"
       description="Builder artık adım adım ilerliyor. Tek sayfada karakter, spell, inventory ve varoluş krizi taşımıyoruz."
     >
+      <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">{stepAnnouncement}</p>
       <div className="builder-v2-layout">
-        <aside className="builder-stepper">
+        <aside className="builder-stepper" aria-label="Karakter oluşturma adımları">
           {builderSteps.map((step, index) => {
             const counts = getBuilderStepIssueCounts(step.id, validationIssues);
             const statusClass = counts.errors ? "has-error" : counts.warnings ? "has-warning" : index < activeStepIndex ? "is-complete" : "";
@@ -437,6 +476,9 @@ export function Builder({
               type="button"
               className={`${index === activeStepIndex ? "active" : ""} ${statusClass}`.trim()}
               onClick={() => goToStep(index)}
+              aria-current={index === activeStepIndex ? "step" : undefined}
+              aria-controls="builder-step-panel"
+              data-builder-step={step.id}
             >
               <strong>{index + 1}. {step.title}</strong>
               <span>{step.description}</span>
@@ -446,10 +488,29 @@ export function Builder({
           })}
         </aside>
 
-        <form className="builder-form builder-v2-form" onSubmit={handleSubmit}>
+        <form id="builder-step-panel" className="builder-form builder-v2-form" onSubmit={handleSubmit} aria-labelledby="builder-active-step-title">
+          <div className="builder-mobile-toolbar" aria-label="Mobil Builder kontrolleri">
+            <label>
+              <span>Aktif adım</span>
+              <select
+                value={activeStep.id}
+                onChange={(event) => {
+                  const targetIndex = builderSteps.findIndex((step) => step.id === event.target.value);
+                  if (targetIndex >= 0) goToStep(targetIndex);
+                }}
+              >
+                {builderSteps.map((step, index) => {
+                  const counts = getBuilderStepIssueCounts(step.id, validationIssues);
+                  const suffix = counts.errors ? ` · ${counts.errors} hata` : counts.warnings ? ` · ${counts.warnings} uyarı` : "";
+                  return <option key={step.id} value={step.id}>{index + 1}. {step.title}{suffix}</option>;
+                })}
+              </select>
+            </label>
+            {validationHasErrors ? <button type="button" onClick={goToFirstError}>İlk hataya git</button> : null}
+          </div>
           <div className="builder-step-head">
             <span className="mini-label">Step {activeStepIndex + 1} / {builderSteps.length}</span>
-            <h2>{activeStep.title}</h2>
+            <h2 id="builder-active-step-title" ref={stepHeadingRef} tabIndex={-1}>{activeStep.title}</h2>
             <p>{activeStep.description}</p>
             <div className="builder-progress-strip" aria-label={`Karakter oluşturma ilerlemesi yüzde ${builderProgress}`}>
               <span style={{ width: `${builderProgress}%` }} />
@@ -1025,6 +1086,16 @@ export function Builder({
                 {singleClassUiStatus.messages.length ? <ul>{singleClassUiStatus.messages.map((message) => <li key={message}>{message}</li>)}</ul> : <p>Race/Species, class ve açılmışsa subclass seçimi resmî tek-sınıf akışına uygun.</p>}
               </div>
 
+              <div className={`ruleset-foundation-card ${finalReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row">
+                  <div><span className="mini-label">Level 1 Final Readiness Gate</span><strong>{finalReadiness.ready ? "Tek-class karakter oyuna hazır" : "Final hazırlıkta eksikler var"}</strong></div>
+                  <span>{finalReadiness.score}% · {finalReadiness.readySections}/{finalReadiness.applicableSections} bölüm</span>
+                </div>
+                <p><strong>Toplam:</strong> {finalReadiness.completedChecks}/{finalReadiness.totalChecks} kontrol · {finalReadiness.blockerCount} engel · {finalReadiness.noticeCount} bildirim</p>
+                {finalReadiness.blockingSections.length ? <p><strong>Eksik bölümler:</strong> {finalReadiness.blockingSections.join(", ")}</p> : <p>Bütün uygulanabilir Level 1 hazırlık bölümleri temiz.</p>}
+                {finalReadiness.noticeSections.length ? <p><strong>Bildirimi olan bölümler:</strong> {finalReadiness.noticeSections.join(", ")}</p> : null}
+              </div>
+
               <div className={`ruleset-foundation-card ${playableReadiness.ready ? "validation-success" : "validation-error"}`}>
                 <div className="panel-heading-row">
                   <div>
@@ -1098,6 +1169,41 @@ export function Builder({
                 {offenseReadiness.summary.length ? <p><strong>Saldırı özeti:</strong> {offenseReadiness.summary.join(" · ")}</p> : null}
                 {offenseReadiness.blockers.length ? <ul>{offenseReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
                 {offenseReadiness.notices.length ? <ul>{offenseReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+              </div>
+
+              <div className={`ruleset-foundation-card ${utilityReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row"><div><span className="mini-label">Mobility, Exploration & Utility Readiness</span><strong>{utilityReadiness.ready ? "Keşif ve utility profili hazır" : "Keşif hazırlığı tamamlanmalı"}</strong></div><span>{utilityReadiness.applicable ? `${utilityReadiness.completedChecks} / ${utilityReadiness.totalChecks} kontrol` : "Bekliyor"}</span></div>
+                {utilityReadiness.summary.length ? <p><strong>Keşif özeti:</strong> {utilityReadiness.summary.join(" · ")}</p> : null}
+                {utilityReadiness.blockers.length ? <ul>{utilityReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+                {utilityReadiness.notices.length ? <ul>{utilityReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+              </div>
+
+              <div className={`ruleset-foundation-card ${socialReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row"><div><span className="mini-label">Identity, Social & Roleplay Readiness</span><strong>{socialReadiness.ready ? "Kimlik ve sosyal profil hazır" : "Kimlik profili tamamlanmalı"}</strong></div><span>{socialReadiness.applicable ? `${socialReadiness.completedChecks} / ${socialReadiness.totalChecks} kontrol` : "Bekliyor"}</span></div>
+                {socialReadiness.summary.length ? <p><strong>Kimlik özeti:</strong> {socialReadiness.summary.join(" · ")}</p> : null}
+                {socialReadiness.blockers.length ? <ul>{socialReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+                {socialReadiness.notices.length ? <ul>{socialReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+              </div>
+
+              <div className={`ruleset-foundation-card ${supportReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row"><div><span className="mini-label">Healing, Support & Recovery Readiness</span><strong>{supportReadiness.ready ? "İyileştirme ve destek profili hazır" : "Destek hazırlığı tamamlanmalı"}</strong></div><span>{supportReadiness.applicable ? `${supportReadiness.completedChecks} / ${supportReadiness.totalChecks} kontrol` : "Bekliyor"}</span></div>
+                {supportReadiness.summary.length ? <p><strong>Destek özeti:</strong> {supportReadiness.summary.join(" · ")}</p> : null}
+                {supportReadiness.blockers.length ? <ul>{supportReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+                {supportReadiness.notices.length ? <ul>{supportReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+              </div>
+
+              <div className={`ruleset-foundation-card ${actionEconomyReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row"><div><span className="mini-label">Action Economy & Resource Readiness</span><strong>{actionEconomyReadiness.ready ? "Tur ekonomisi ve kaynaklar hazır" : "Action economy hazırlığı tamamlanmalı"}</strong></div><span>{actionEconomyReadiness.applicable ? `${actionEconomyReadiness.completedChecks} / ${actionEconomyReadiness.totalChecks} kontrol` : "Bekliyor"}</span></div>
+                {actionEconomyReadiness.summary.length ? <p><strong>Tur özeti:</strong> {actionEconomyReadiness.summary.join(" · ")}</p> : null}
+                {actionEconomyReadiness.blockers.length ? <ul>{actionEconomyReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+                {actionEconomyReadiness.notices.length ? <ul>{actionEconomyReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+              </div>
+
+              <div className={`ruleset-foundation-card ${restReadiness.ready ? "validation-success" : "validation-error"}`}>
+                <div className="panel-heading-row"><div><span className="mini-label">Rest, Recovery & Hit Dice Readiness</span><strong>{restReadiness.ready ? "Dinlenme ve recovery profili hazır" : "Rest hazırlığı tamamlanmalı"}</strong></div><span>{restReadiness.applicable ? `${restReadiness.completedChecks} / ${restReadiness.totalChecks} kontrol` : "Bekliyor"}</span></div>
+                {restReadiness.summary.length ? <p><strong>Recovery özeti:</strong> {restReadiness.summary.join(" · ")}</p> : null}
+                {restReadiness.blockers.length ? <ul>{restReadiness.blockers.map((message) => <li key={message}>{message}</li>)}</ul> : null}
+                {restReadiness.notices.length ? <ul>{restReadiness.notices.map((message) => <li key={message}>{message}</li>)}</ul> : null}
               </div>
 
               <div className={`ruleset-foundation-card ${featureChoiceReadiness.ready ? "validation-success" : "validation-error"}`}>
@@ -1305,7 +1411,7 @@ export function Builder({
           ) : null}
 
           <div className="builder-navigation-bar">
-            <button type="button" onClick={goPrevious} disabled={isFirstStep}>
+            <button type="button" onClick={goPrevious} disabled={isFirstStep} aria-label="Önceki Builder adımı">
               Geri
             </button>
 
@@ -1319,7 +1425,7 @@ export function Builder({
                 Karakteri Kaydet
               </button>
             ) : (
-              <button className="primary-action" type="button" onClick={goNext}>
+              <button className="primary-action" type="button" onClick={goNext} aria-label="Sonraki Builder adımı">
                 İleri
               </button>
             )}

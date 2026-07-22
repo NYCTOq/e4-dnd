@@ -1,7 +1,7 @@
 {
   "name": "e4_dnd",
   "private": true,
-  "version": "5.82.0",
+  "version": "5.92.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,7 +14,13 @@
     "test:e2e": "playwright test",
     "test:e2e:headed": "playwright test --headed",
     "test:e2e:mobile": "playwright test --project=mobile-chromium",
-    "check:full": "npm run check && npm run test:e2e"
+    "check:full": "npm run check && npm run test:e2e",
+    "test:e2e:builder": "playwright test e2e/builder-ui-mega.spec.ts",
+    "verify:builder": "npm run test -- builderUiNavigation && npm run build && npm run test:e2e:builder",
+    "test:e2e:journey": "playwright test e2e/player-journey-integration.spec.ts",
+    "verify:journey": "npm run test -- playerJourneyIntegration && npm run build && npm run test:e2e:journey",
+    "test:e2e:content": "playwright test e2e/content-integrity-audit.spec.ts",
+    "verify:content": "npm run test -- contentIntegrityAudit && npm run build && npm run test:e2e:content"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",

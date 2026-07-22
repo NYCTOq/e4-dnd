@@ -3,6 +3,7 @@ import type { Character, CharacterResource, ResourceRecovery } from "../../core/
 import { PageShell } from "../../shared/layout/PageShell";
 import { addCombatLog, createCombatLogEntry, loadCombatEncounters, saveCombatEncounters } from "../combat-tracker/combatTrackerStorage";
 import { applyRestToCharacters, getDefaultRestOptions, loadRestHistory, restoreRestSnapshot, saveRestHistory, type RestHistoryEntry, type RestKind } from "./restAutomation";
+import { getPlayerJourneyIntegrationSnapshot } from "../../core/rulesets/playerJourneyIntegration";
 
 type Props = { characters: Character[]; onReplaceCharacters: (characters: Character[]) => void };
 const RECOVERY_LABELS: Record<ResourceRecovery, string> = { short: "Short Rest", long: "Long Rest", manual: "Manuel" };
@@ -70,9 +71,10 @@ export function RestCenterPage({ characters, onReplaceCharacters }: Props) {
     <section className="rest-grid">
       {characters.map((character) => {
         const draft = resourceDrafts[character.id] ?? { name: "", max: 1, recovery: "short" as ResourceRecovery };
+        const journeySnapshot = getPlayerJourneyIntegrationSnapshot(character);
         return <article className={`rest-card panel ${selectedIds.includes(character.id) ? "selected" : ""}`} key={character.id}>
           <header><label><input type="checkbox" checked={selectedIds.includes(character.id)} onChange={() => toggleCharacter(character.id)}/><strong>{character.name}</strong></label><span>{character.className} L{character.level}</span></header>
-          <div className="rest-stats"><span>HP {character.currentHp}/{character.maxHp}</span><span>Temp {character.tempHp}</span><span>Exhaustion {character.exhaustion}</span><span>Used slots {character.spellSlots.reduce((sum, slot) => sum + slot.used, 0)}</span></div>
+          <div className="rest-stats"><span>HP {character.currentHp}/{character.maxHp}</span><span>Temp {character.tempHp}</span><span>Exhaustion {character.exhaustion}</span><span>Used slots {character.spellSlots.reduce((sum, slot) => sum + slot.used, 0)}</span></div><div className="rest-journey-summary"><strong>{journeySnapshot.restRecommendation==="long"?"Long Rest":journeySnapshot.restRecommendation==="short"?"Short Rest":"Dinlenme gerekmiyor"}</strong><small>{journeySnapshot.restReason}</small></div>
           <div className="resource-list">{character.resources.length ? character.resources.map((resource) => <div className="resource-row" key={resource.id}><span><strong>{resource.name}</strong><small>{RECOVERY_LABELS[resource.recovery]}</small></span><label>Kullanılan <input type="number" min="0" max={resource.max} value={resource.used} onChange={(event) => updateResources(character, character.resources.map((item) => item.id === resource.id ? { ...item, used: Math.min(item.max, Math.max(0, Number(event.target.value))) } : item))}/></label><span>/{resource.max}</span><button aria-label={`${resource.name} sil`} onClick={() => updateResources(character, character.resources.filter((item) => item.id !== resource.id))}>×</button></div>) : <p className="muted">Henüz özel kaynak yok.</p>}</div>
           <div className="resource-add"><input placeholder="Kaynak adı" value={draft.name} onChange={(event) => setResourceDrafts((current) => ({ ...current, [character.id]: { ...draft, name: event.target.value } }))}/><input type="number" min="1" value={draft.max} onChange={(event) => setResourceDrafts((current) => ({ ...current, [character.id]: { ...draft, max: Number(event.target.value) } }))}/><select value={draft.recovery} onChange={(event) => setResourceDrafts((current) => ({ ...current, [character.id]: { ...draft, recovery: event.target.value as ResourceRecovery } }))}><option value="short">Short Rest</option><option value="long">Long Rest</option><option value="manual">Manuel</option></select><button onClick={() => addResource(character)}>Ekle</button></div>
         </article>;

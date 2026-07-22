@@ -6,6 +6,7 @@ import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import { getRulesetCoverage } from "../../core/rulesets/rulesetCoverage";
 import { getLevel20Certification } from "../../core/rulesets/level20Certification";
 import { getRuntimeCoverageCertification } from "../../core/rulesets/runtimeCoverageCertification";
+import { getContentIntegrityAudit } from "../../core/rulesets/contentIntegrityAudit";
 
 const statusLabels = {
   ready: "Temel veri hazır",
@@ -18,6 +19,7 @@ export function RulesetCenterPage({ rulesetData }: { rulesetData: RulesetData | 
   const coverage = getRulesetCoverage(rulesetData);
   const certification=getLevel20Certification(rulesetData);
   const runtimeCertification=getRuntimeCoverageCertification(rulesetData);
+  const contentAudit = getContentIntegrityAudit(rulesetData);
 
   return (
     <PageShell
@@ -69,6 +71,31 @@ export function RulesetCenterPage({ rulesetData }: { rulesetData: RulesetData | 
         <div className="ruleset-roadmap-grid">
           {coverage.rows.map((row) => <span key={row.id}><strong>{row.status === "complete" ? "✓" : row.status === "partial" ? "◐" : "○"} {row.label} · {row.count}</strong><small>{row.detail}</small></span>)}
         </div>
+      </section>
+
+      <section className="ruleset-roadmap-panel" data-testid="content-integrity-audit">
+        <span className="mini-label">Full Content Integrity · %{contentAudit.score}</span>
+        <h2>{contentAudit.status === "certified" ? "Katalog bütünlüğü sertifikalı" : contentAudit.status === "review" ? "Katalog incelemesi gerekiyor" : "Katalog blocker'ları bulundu"}</h2>
+        <p>{contentAudit.totalEntities} içerik kaydı · {contentAudit.blockerCount} blocker · {contentAudit.warningCount} uyarı</p>
+        <div className="ruleset-roadmap-grid">
+          {contentAudit.catalogs.map((catalog) => (
+            <span key={catalog.id}>
+              <strong>{catalog.status === "pass" ? "✓" : catalog.status === "warning" ? "◐" : "✕"} {catalog.label} · {catalog.count}</strong>
+              <small>{catalog.blockers} blocker · {catalog.warnings} uyarı</small>
+            </span>
+          ))}
+        </div>
+        {contentAudit.missingCatalogs.length ? <p><strong>Boş kataloglar:</strong> {contentAudit.missingCatalogs.join(", ")}</p> : null}
+        {contentAudit.issues.length ? (
+          <details>
+            <summary>İçerik ve referans raporu · {contentAudit.issues.length}</summary>
+            <ul className="ruleset-note-list">
+              {contentAudit.issues.map((entry) => (
+                <li key={entry.id}><strong>{entry.severity.toUpperCase()}</strong> · {entry.entity ? `${entry.entity}: ` : ""}{entry.message}</li>
+              ))}
+            </ul>
+          </details>
+        ) : null}
       </section>
 
       <section className="ruleset-roadmap-panel">

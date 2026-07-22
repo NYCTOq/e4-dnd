@@ -271,3 +271,37 @@
 .ability-asi-row { padding: .65rem; border: 1px solid var(--border-color, rgba(255,255,255,.12)); border-radius: 12px; }
 @media (max-width: 700px) { .ability-asi-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 420px) { .ability-asi-grid { grid-template-columns: 1fr; } }
+
+/* v5.90 Builder UI E2E + mobile navigation */
+.builder-mobile-toolbar { display: none; }
+.builder-step-head h2:focus { outline: 2px solid rgba(141,124,255,.9); outline-offset: 5px; border-radius: 8px; }
+.builder-stepper button { min-height: 72px; touch-action: manipulation; }
+.builder-navigation-bar button { min-height: 46px; touch-action: manipulation; }
+@media (max-width: 700px) {
+  .builder-mobile-toolbar {
+    position: sticky;
+    top: 8px;
+    z-index: 7;
+    display: grid;
+    grid-template-columns: minmax(0,1fr) auto;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 16px;
+    background: rgba(8,12,26,.94);
+    backdrop-filter: blur(18px);
+  }
+  .builder-mobile-toolbar label { display: grid; gap: 4px; min-width: 0; font-size: .72rem; font-weight: 800; }
+  .builder-mobile-toolbar select, .builder-mobile-toolbar button { min-height: 48px; }
+  .builder-mobile-toolbar select { width: 100%; min-width: 0; }
+  .builder-stepper { display: none; }
+  .builder-v2-layout { gap: 10px; }
+  .builder-step-head { padding: 14px; }
+  .builder-navigation-bar { bottom: max(8px, env(safe-area-inset-bottom)); padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+}
+@media (max-width: 420px) {
+  .builder-mobile-toolbar { grid-template-columns: 1fr; }
+  .builder-mobile-toolbar button { width: 100%; }
+}
+
+.player-journey-integration{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,2fr) auto;gap:16px;align-items:center;margin:16px 0;padding:18px}.player-journey-integration h2{margin:4px 0}.player-journey-integration p{margin:0;color:var(--text-muted)}.player-journey-integration-grid{display:grid;grid-template-columns:repeat(2,minmax(120px,1fr));gap:8px}.player-journey-integration-grid span{display:flex;justify-content:space-between;gap:10px;padding:10px;border-radius:12px;background:var(--surface-soft)}.player-journey-actions{display:flex;gap:8px;flex-wrap:wrap}.player-journey-actions a,.player-journey-actions button{min-height:44px}.rest-journey-summary{display:flex;flex-direction:column;gap:4px;padding:10px 12px;border-radius:12px;background:var(--surface-soft);margin-bottom:12px}.play-journey-integration{background:var(--surface-raised)}@media(max-width:760px){.player-journey-integration{grid-template-columns:1fr}.player-journey-integration-grid{grid-template-columns:1fr 1fr}.player-journey-actions>*{flex:1}}

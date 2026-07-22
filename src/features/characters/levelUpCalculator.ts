@@ -22,6 +22,7 @@ export type LevelUpOptions = {
   featId?: string;
   featData?: DndFeatData | null;
   featChoice?: string;
+  targetSubclassName?: string;
 };
 
 export function isAsiMilestone(level: number, className = ""): boolean {
@@ -71,7 +72,7 @@ export function buildLeveledCharacter(
   const currentClassLevels=normalizeClassLevels(character.classLevels,character.className,character.level);
   const targetClass=options.targetClassData??options.classData;
   const targetClassName=targetClass?.name??character.className;
-  const nextClassLevels=addClassLevel(currentClassLevels,targetClassName);
+  const nextClassLevels=addClassLevel(currentClassLevels,targetClassName,options.targetSubclassName);
   const nextTargetClassLevel=getClassLevel(nextClassLevels,targetClassName);
   const hpGain = Math.max(1, Math.floor(options.hpGain || 1));
   const nextMaxHp = character.maxHp + hpGain;
@@ -85,6 +86,7 @@ export function buildLeveledCharacter(
     ...character,
     level: nextLevel,
     classLevels: nextClassLevels,
+    subclass: targetClassName === character.className && options.targetSubclassName ? options.targetSubclassName : character.subclass,
     featIds: options.featId&&!character.featIds.includes(options.featId)?[...character.featIds,options.featId]:character.featIds,
     featChoices: options.featId && options.featChoice
       ? { ...(character.featChoices ?? {}), [options.featId]: [options.featChoice] }

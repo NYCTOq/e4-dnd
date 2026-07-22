@@ -15,6 +15,7 @@ import { getCharacterChoiceDebt } from "../../core/rulesets/choiceDebt";
 import { getClassLevel, getMulticlassConflictSummary, getMulticlassProficiencyGains, getMulticlassTransitionEligibility, normalizeClassLevels } from "../../core/rulesets/multiclassRules";
 import { getFeatChoiceState } from "../../core/rulesets/levelUpChoiceCompletion";
 import { getFightingStyleChoiceCount } from "../../core/rulesets/fightingStyleRules";
+import { getLevelUpAdvancementReadiness } from "../../core/rulesets/levelUpAdvancementReadiness";
 
 const ABILITY_LABELS: Record<AbilityKey, string> = {
   str: "STR",
@@ -47,6 +48,7 @@ export function LevelUpAssistant({
   const [selectedFeatId,setSelectedFeatId]=useState("");
   const [selectedFeatChoice,setSelectedFeatChoice]=useState("");
   const [targetClassName,setTargetClassName]=useState(character.className);
+  const [selectedSubclassName,setSelectedSubclassName]=useState("");
   const [latestHistory, setLatestHistory] = useState(() => getLatestLevelUp(character.id));
 
   const nextLevel = Math.min(20, character.level + 1);
@@ -63,7 +65,9 @@ export function LevelUpAssistant({
   const nextProficiency = getProficiencyBonus(nextLevel);
   const asiAvailable = isAsiMilestone(nextClassLevel, targetClassName);
   const newClassFeatures = selectedClass?.levels.find((row) => row.level === nextClassLevel)?.features ?? [];
-  const selectedSubclass = rulesetData?.subclasses.find((item) => item.className === targetClassName && item.name === (targetClassName===character.className?character.subclass:classLevels.find(level=>level.className===targetClassName)?.subclass));
+  const existingTargetSubclass = targetClassName===character.className?character.subclass:classLevels.find(level=>level.className===targetClassName)?.subclass;
+  const availableSubclasses=(rulesetData?.subclasses??[]).filter(item=>item.className===targetClassName);
+  const selectedSubclass = rulesetData?.subclasses.find((item) => item.className === targetClassName && item.name === (selectedSubclassName||existingTargetSubclass));
   const newSubclassFeatures = selectedSubclass?.features.filter((feature) => feature.level === nextClassLevel) ?? [];
   const grantedOriginFeat=rulesetData?.backgrounds.find(item=>item.name===character.background)?.originFeat;
   const eligibleFeats=(rulesetData?.feats??[]).filter(feat=>feat.id!=="ability-score-improvement"&&feat.category!=="fighting-style"&&feat.name!==grantedOriginFeat&&!character.featIds.includes(feat.id)&&isFeatEligible(feat,{level:nextLevel,className:targetClassName,abilities:character.abilities,canCastSpells:Boolean(selectedClass?.spellcastingAbility),armorTraining:selectedClass?.armorProficiencies,hasFightingStyleFeature:getFightingStyleChoiceCount(targetClassName,nextLevel,character.subclass)>0}).eligible);
@@ -71,6 +75,7 @@ export function LevelUpAssistant({
   const selectedFeat=eligibleFeats.find((feat)=>feat.id===selectedFeatId);
   const selectedFeatChoiceState=getFeatChoiceState(selectedFeat,selectedFeatChoice?[selectedFeatChoice]:[]);
   const milestoneChoiceMissing=asiAvailable&&asiMode==="none"&&(!selectedFeatId||Boolean(selectedFeatChoiceState&&!selectedFeatChoiceState.complete));
+  const advancementReadiness=getLevelUpAdvancementReadiness({character,rulesetData,targetClassName,selectedSubclassName:selectedSubclassName||existingTargetSubclass,milestoneChoiceComplete:!milestoneChoiceMissing});
 
   const hpGain = useMemo(() => {
     if (hpMode === "manual") {
@@ -107,6 +112,7 @@ export function LevelUpAssistant({
       featId:asiMode==="none"?selectedFeatId:undefined,
       featData:asiMode==="none"?selectedFeat:null,
       featChoice:asiMode==="none"?selectedFeatChoice:undefined,
+      targetSubclassName:selectedSubclassName||existingTargetSubclass||undefined,
     });
 
     onUpdateCharacter(nextCharacter);
@@ -116,6 +122,7 @@ export function LevelUpAssistant({
     setAsiMode("none");
     setSelectedFeatId("");
     setSelectedFeatChoice("");
+    setSelectedSubclassName("");
   }
 
   function undoLatestLevelUp(){if(!latestHistory)return; onUpdateCharacter(latestHistory.before); removeLevelUpHistoryEntry(latestHistory.id); setLatestHistory(getLatestLevelUp(character.id));}
@@ -166,7 +173,19 @@ export function LevelUpAssistant({
             </div>
           </div>
 
-          <section className="level-up-section"><div className="panel-heading-row"><div><span className="mini-label">Class Level</span><h3>Bu seviyeyi hangi class alacak?</h3><p>Toplam level {nextLevel}; seçilen class level {nextClassLevel} olur.</p></div></div><label className="level-up-manual-field">Class<select value={targetClassName} onChange={event=>{setTargetClassName(event.target.value);setAsiMode("none");setSelectedFeatId("");setSelectedFeatChoice("")}}>{rulesetData?.classes.map(item=><option key={item.id} value={item.name}>{item.name} · şu an {getClassLevel(classLevels,item.name)}</option>)}</select></label>{!multiclassEligibility.eligible&&getClassLevel(classLevels,targetClassName)===0?<p className="validation-message error">Multiclass prerequisite eksik: {multiclassEligibility.missing.join(", ")}</p>:null}<div className="condition-rule-summary">{classLevels.map(item=><small key={item.className}>{item.className} {item.level}</small>)}</div>{multiclassProficiencies.length?<p className="validation-message">Yeni class proficiency kazanımları: {multiclassProficiencies.join(", ")}</p>:null}{multiclassWarnings.map(warning=><p className="validation-message" key={warning}>{warning}</p>)}</section>
+          <section className="level-up-section"><div className="panel-heading-row"><div><span className="mini-label">Class Level</span><h3>Bu seviyeyi hangi class alacak?</h3><p>Toplam level {nextLevel}; seçilen class level {nextClassLevel} olur.</p></div></div><label className="level-up-manual-field">Class<select value={targetClassName} onChange={event=>{setTargetClassName(event.target.value);setAsiMode("none");setSelectedFeatId("");setSelectedFeatChoice("");setSelectedSubclassName("")}}>{rulesetData?.classes.map(item=><option key={item.id} value={item.name}>{item.name} · şu an {getClassLevel(classLevels,item.name)}</option>)}</select></label>{!multiclassEligibility.eligible&&getClassLevel(classLevels,targetClassName)===0?<p className="validation-message error">Multiclass prerequisite eksik: {multiclassEligibility.missing.join(", ")}</p>:null}<div className="condition-rule-summary">{classLevels.map(item=><small key={item.className}>{item.className} {item.level}</small>)}</div>{multiclassProficiencies.length?<p className="validation-message">Yeni class proficiency kazanımları: {multiclassProficiencies.join(", ")}</p>:null}{multiclassWarnings.map(warning=><p className="validation-message" key={warning}>{warning}</p>)}</section>
+
+          {advancementReadiness.subclassRequired ? (
+            <section className="level-up-section">
+              <div className="panel-heading-row"><div><span className="mini-label">Subclass</span><h3>{targetClassName} uzmanlığını seç</h3><p>Class level {nextClassLevel} için zorunlu seçim.</p></div></div>
+              <label className="level-up-manual-field">Subclass
+                <select value={selectedSubclassName} onChange={event=>setSelectedSubclassName(event.target.value)}>
+                  <option value="">Seçim yap...</option>
+                  {availableSubclasses.map(item=><option key={item.id} value={item.name}>{item.name}</option>)}
+                </select>
+              </label>
+            </section>
+          ) : null}
 
           <section className="level-up-section">
             <div className="panel-heading-row">
@@ -267,6 +286,14 @@ export function LevelUpAssistant({
           ) : null}
 
           <section className="level-up-section level-up-checklist">
+            <span className="mini-label">Advancement Readiness</span>
+            <h3>{advancementReadiness.ready ? "Level-up hazır" : "Level-up eksikleri var"}</h3>
+            <p>{advancementReadiness.completedChecks}/{advancementReadiness.totalChecks} kontrol tamamlandı.</p>
+            {advancementReadiness.blockers.map(item=><p className="validation-message error" key={item}>{item}</p>)}
+            {advancementReadiness.notices.map(item=><p className="validation-message" key={item}>{item}</p>)}
+          </section>
+
+          <section className="level-up-section level-up-checklist">
             <span className="mini-label">Kontrol Listesi</span>
             <ul>
               {newClassFeatures.length ? newClassFeatures.map((feature)=><li key={feature}>Yeni class feature: <strong>{feature}</strong></li>) : <li>Bu seviyede yeni class feature görünmüyor.</li>}
@@ -285,7 +312,7 @@ export function LevelUpAssistant({
               <strong>Level {nextLevel}</strong>
               <span>Maksimum HP +{hpGain}</span>
             </div>
-            <button type="button" className="primary-action" disabled={milestoneChoiceMissing||(!multiclassEligibility.eligible&&getClassLevel(classLevels,targetClassName)===0)} onClick={confirmLevelUp}>{milestoneChoiceMissing?(selectedFeatChoiceState&&!selectedFeatChoiceState.complete?"Feat Alt Seçimini Tamamla":"ASI veya Feat Seç"):!multiclassEligibility.eligible&&getClassLevel(classLevels,targetClassName)===0?"Prerequisite Eksik":"Level Up Uygula"}</button>
+            <button type="button" className="primary-action" disabled={!advancementReadiness.ready} onClick={confirmLevelUp}>{advancementReadiness.ready?"Level Up Uygula":"Eksikleri Tamamla"}</button>
           </div>
         </div>
       ) : null}

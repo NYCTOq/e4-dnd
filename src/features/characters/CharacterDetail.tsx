@@ -15,6 +15,7 @@ import { ChoiceDebtResolver } from "./ChoiceDebtResolver";
 import { getPlayReadiness } from "../../core/character/playReadiness";
 import { getCharacterSpellcastingClasses, getSpellcastingStatsForClass, getSpellcastingStatsForSpell } from "../../core/rulesets/multiclassSpellcastingSeparation";
 import { getCharacterSheetCertificationSnapshot } from "../../core/rulesets/characterSheetCertification";
+import { getPlayerJourneyIntegrationSnapshot } from "../../core/rulesets/playerJourneyIntegration";
 
 interface CharacterCastHistoryItem {
   id: string;
@@ -218,6 +219,7 @@ export function CharacterDetail({
   const spellcastingClassStats=spellcastingClasses.map(entry=>getSpellcastingStatsForClass(activeCharacter,entry.className,rulesetData)).filter((entry): entry is NonNullable<typeof entry>=>Boolean(entry));
   const sheetCertification=getCharacterSheetCertificationSnapshot(activeCharacter,rulesetData);
   const completedSheetSections=Object.values(sheetCertification.sectionCoverage).filter(Boolean).length;
+  const journeySnapshot=getPlayerJourneyIntegrationSnapshot(activeCharacter);
 
   function adjustResource(resourceId: string, amount: number) {
     onUpdateCharacter({
@@ -685,6 +687,7 @@ export function CharacterDetail({
             </div>
           </details>
 
+          <section className="player-journey-integration panel" aria-label="Sheet Play Mode Rest entegrasyonu"><div><span className="mini-label">Player Journey Integration</span><h2>Sheet → Play → Rest</h2><p>{journeySnapshot.restReason}</p></div><div className="player-journey-integration-grid"><span>HP eksik <strong>{journeySnapshot.hpMissing}</strong></span><span>Slot harcandı <strong>{journeySnapshot.spentSpellSlots+journeySnapshot.spentPactSlots}</strong></span><span>Kaynak harcandı <strong>{journeySnapshot.spentResources}</strong></span><span>Öneri <strong>{journeySnapshot.restRecommendation==="long"?"Long Rest":journeySnapshot.restRecommendation==="short"?"Short Rest":"Hazır"}</strong></span></div><div className="player-journey-actions"><button type="button" onClick={()=>navigate(`/play-mode?character=${activeCharacter.id}`)}>Play Mode</button><button type="button" onClick={()=>navigate("/rest")}>Rest Center</button></div></section>
           <section className="character-sheet-command-center" aria-label="Karakter kağıdı hızlı özeti"><div className="character-sheet-command-heading"><div><span className="mini-label">Table Ready Snapshot</span><h2>Masada Hızlı Özet</h2><p>{sheetCertification.classSummary}</p></div><strong>{completedSheetSections}/7 bölüm</strong></div><div className="character-sheet-command-grid"><article><span>HP</span><strong>{activeCharacter.currentHp}/{activeCharacter.maxHp}</strong><small>{activeCharacter.tempHp?`+${activeCharacter.tempHp} geçici`:"Geçici HP yok"}</small></article><article><span>Savunma</span><strong>AC {effectiveArmorClass}</strong><small>Initiative {formatModifier(getInitiative(activeCharacter))}</small></article><article><span>Kaynaklar</span><strong>{sheetCertification.usableResourceCount} hazır</strong><small>{sheetCertification.exhaustedResourceCount} tükenmiş</small></article><article><span>Büyüler</span><strong>{sheetCertification.preparedSpellCount}/{sheetCertification.knownSpellCount}</strong><small>{sheetCertification.spellcastingClassCount} casting class</small></article><article><span>Ekipman</span><strong>{sheetCertification.equippedItemCount} kuşanılmış</strong><small>{sheetCertification.attunedItemCount}/3 attuned</small></article><article><span>Aktif Durum</span><strong>{sheetCertification.activeConditionCount+sheetCertification.activeEffectCount}</strong><small>{sheetCertification.activeConditionCount} condition · {sheetCertification.activeEffectCount} effect</small></article></div></section>
 
           <div className="ability-detail-grid">
