@@ -196,3 +196,17 @@
     width: 100%;
   }
 }
+
+.backup-safety-banner {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid color-mix(in srgb, var(--success, #2f8f5b) 45%, transparent);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--success, #2f8f5b) 10%, var(--surface, #fff));
+}
+
+.backup-safety-banner > span { font-size: 0.85rem; opacity: 0.78; }
+.backup-safety-banner ul { margin: 0; padding-left: 1.2rem; }
+.backup-safety-banner li[data-severity="warning"] { font-weight: 700; }

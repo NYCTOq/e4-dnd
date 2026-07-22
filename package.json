@@ -1,7 +1,7 @@
 {
   "name": "e4_dnd",
   "private": true,
-  "version": "5.98.0",
+  "version": "5.99.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -31,7 +31,9 @@
     "test:e2e:combat-runtime": "playwright test e2e/combat-runtime-automation.spec.ts",
     "verify:combat-runtime": "npm run test -- combatAutomationRuntime combatTurnRules combatStatusRules && npm run build && npm run test:e2e:combat-runtime",
     "test:e2e:inventory": "playwright test e2e/inventory-economy-runtime.spec.ts",
-    "verify:inventory": "npm run test -- inventoryEconomyRuntime itemUseRules equipmentClosureRuntime && npm run build && npm run test:e2e:inventory"
+    "verify:inventory": "npm run test -- inventoryEconomyRuntime itemUseRules equipmentClosureRuntime && npm run build && npm run test:e2e:inventory",
+    "test:e2e:data-safety": "playwright test e2e/save-migration-data-safety.spec.ts",
+    "verify:data-safety": "npm run test -- backupSafetyRuntime fullBackup backupImport characterBackup safeStorage characterHydration && npm run build && npm run test:e2e:data-safety"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",

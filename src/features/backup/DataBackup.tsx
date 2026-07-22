@@ -7,6 +7,7 @@ import type {
 } from "../../core/rulesets/ruleset.types";
 import { exportCharacters } from "../../core/storage/characterStorage";
 import { parseCharacterBackup } from "./characterBackup";
+import { inspectAndRepairFullBackup, type BackupSafetyReport } from "./backupSafetyRuntime";
 import { PageShell } from "../../shared/layout/PageShell";
 import type { Campaign } from "../campaigns/campaignTypes";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
@@ -37,6 +38,7 @@ type DataBackupProps = {
 type PendingBackup = {
   fileName: string;
   backup: E4FullBackup;
+  safety: BackupSafetyReport;
 };
 
 const SECTION_LABELS: Array<{
@@ -104,8 +106,14 @@ export function DataBackup({
     if (!file) return;
 
     try {
-      const backup = parseFullBackup(JSON.parse(await file.text()));
-      setPendingBackup({ fileName: file.name, backup });
+      const raw = JSON.parse(await file.text());
+      const safety = inspectAndRepairFullBackup(raw);
+      if (!safety.safeToImport) {
+        const blockers = safety.issues.filter((issue) => issue.severity === "blocker").map((issue) => issue.message).join("\n");
+        throw new Error(blockers || "Yedek güvenlik kontrolünden geçemedi.");
+      }
+      const backup = parseFullBackup(safety.repairedValue);
+      setPendingBackup({ fileName: file.name, backup, safety });
       setImportMode("merge");
       setImportSections({ ...DEFAULT_BACKUP_IMPORT_SECTIONS });
     } catch (error) {
@@ -239,6 +247,16 @@ export function DataBackup({
 
         {pendingBackup && preview && (
           <section className="backup-card backup-wide backup-import-preview" aria-labelledby="backup-preview-title">
+            <div className="backup-safety-banner" data-testid="backup-safety-report">
+              <strong>{pendingBackup.safety.repaired ? "Güvenli onarım uygulandı" : "Yedek güvenlik kontrolünü geçti"}</strong>
+              <span>Kaynak sürüm: {pendingBackup.safety.sourceVersion ?? "bilinmiyor"}</span>
+              <ul>
+                {pendingBackup.safety.issues.map((issue) => (
+                  <li key={issue.code} data-severity={issue.severity}>{issue.message}</li>
+                ))}
+              </ul>
+            </div>
+
             <div className="backup-preview-head">
               <div>
                 <span className="mini-label">Import Preview</span>
