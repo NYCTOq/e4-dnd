@@ -543,6 +543,7 @@ export function Builder({
                 <label>
                   Karakter Adı
                   <input
+                    data-testid="builder-character-name"
                     value={draft.name}
                     onChange={(event) => updateDraft("name", event.target.value)}
                     placeholder="Sora, Tengiz, Akai..."
@@ -1299,7 +1300,7 @@ export function Builder({
           ) : null}
 
           {activeStep.id === "review" ? (
-            <section className="form-panel preview-panel builder-review-panel">
+            <section className="form-panel preview-panel builder-review-panel" data-testid="builder-review">
               <h2>Review & Save</h2>
               <p>Kaydetmeden önce son kontrol. Sonra “Ben bunu böyle mi yapmışım?” demek yine mümkün ama en azından app uyarmış olur.</p>
 
@@ -1421,7 +1422,7 @@ export function Builder({
             </div>
 
             {isLastStep ? (
-              <button className="primary-action" type="submit" disabled={validationHasErrors} title={validationHasErrors ? "Review hatalarını düzelt" : "Karakteri kaydet"}>
+              <button data-testid="builder-save" className="primary-action" type="submit" disabled={validationHasErrors} title={validationHasErrors ? "Review hatalarını düzelt" : "Karakteri kaydet"}>
                 Karakteri Kaydet
               </button>
             ) : (
