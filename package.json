@@ -1,7 +1,7 @@
 {
   "name": "e4_dnd",
   "private": true,
-  "version": "5.92.0",
+  "version": "5.93.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -20,7 +20,8 @@
     "test:e2e:journey": "playwright test e2e/player-journey-integration.spec.ts",
     "verify:journey": "npm run test -- playerJourneyIntegration && npm run build && npm run test:e2e:journey",
     "test:e2e:content": "playwright test e2e/content-integrity-audit.spec.ts",
-    "verify:content": "npm run test -- contentIntegrityAudit && npm run build && npm run test:e2e:content"
+    "verify:content": "npm run test -- contentIntegrityAudit && npm run build && npm run test:e2e:content",
+    "verify:catalog": "npm run test -- contentIntegrityAudit contentCompletionPolicy && npm run build && npm run test:e2e:content"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",

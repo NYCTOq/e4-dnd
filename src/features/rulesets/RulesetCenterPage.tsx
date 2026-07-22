@@ -7,6 +7,7 @@ import { getRulesetCoverage } from "../../core/rulesets/rulesetCoverage";
 import { getLevel20Certification } from "../../core/rulesets/level20Certification";
 import { getRuntimeCoverageCertification } from "../../core/rulesets/runtimeCoverageCertification";
 import { getContentIntegrityAudit } from "../../core/rulesets/contentIntegrityAudit";
+import { getContentCompletionPlan } from "../../core/rulesets/contentCompletionPolicy";
 
 const statusLabels = {
   ready: "Temel veri hazır",
@@ -20,6 +21,7 @@ export function RulesetCenterPage({ rulesetData }: { rulesetData: RulesetData | 
   const certification=getLevel20Certification(rulesetData);
   const runtimeCertification=getRuntimeCoverageCertification(rulesetData);
   const contentAudit = getContentIntegrityAudit(rulesetData);
+  const completionPlan = getContentCompletionPlan(rulesetData, contentAudit);
 
   return (
     <PageShell
@@ -71,6 +73,17 @@ export function RulesetCenterPage({ rulesetData }: { rulesetData: RulesetData | 
         <div className="ruleset-roadmap-grid">
           {coverage.rows.map((row) => <span key={row.id}><strong>{row.status === "complete" ? "✓" : row.status === "partial" ? "◐" : "○"} {row.label} · {row.count}</strong><small>{row.detail}</small></span>)}
         </div>
+      </section>
+
+      <section className="ruleset-roadmap-panel" data-testid="content-completion-plan">
+        <span className="mini-label">Catalog Completion · %{completionPlan.score}</span>
+        <h2>{completionPlan.state === "complete" ? "Katalog hedefleri tamamlandı" : completionPlan.state === "usable" ? "Katalog kullanılabilir, inceleme gerekiyor" : "Katalog tamamlama blocker'ları var"}</h2>
+        <div className="ruleset-roadmap-grid">
+          {completionPlan.targets.map((target) => <span key={target.id}><strong>{target.state === "complete" ? "✓" : target.state === "usable" ? "◐" : "✕"} {target.label} · {target.current}/{target.minimum}</strong><small>{target.detail}</small></span>)}
+        </div>
+        {completionPlan.compatibilityEntities.length ? <p><strong>Compatibility stat block:</strong> {completionPlan.compatibilityEntities.join(", ")}</p> : null}
+        {completionPlan.blockers.length ? <details open><summary>Blocker · {completionPlan.blockers.length}</summary><ul className="ruleset-note-list">{completionPlan.blockers.map((entry) => <li key={entry}>{entry}</li>)}</ul></details> : null}
+        {completionPlan.reviewItems.length ? <details><summary>İnceleme listesi · {completionPlan.reviewItems.length}</summary><ul className="ruleset-note-list">{completionPlan.reviewItems.map((entry) => <li key={entry}>{entry}</li>)}</ul></details> : null}
       </section>
 
       <section className="ruleset-roadmap-panel" data-testid="content-integrity-audit">
