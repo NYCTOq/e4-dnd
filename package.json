@@ -1,7 +1,7 @@
 {
   "name": "e4_dnd",
   "private": true,
-  "version": "5.101.0",
+  "version": "5.102.0-rc.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -38,7 +38,10 @@
     "verify:mobile-quality": "npm run test -- mobileAccessibilityPerformance NumberStepper builderUiNavigation && npm run build && npm run test:e2e:mobile-quality",
     "audit:technical-debt": "node scripts/technical-debt-audit.mjs",
     "test:e2e:stability": "playwright test e2e/combat-runtime-automation.spec.ts e2e/inventory-economy-runtime.spec.ts e2e/save-migration-data-safety.spec.ts e2e/mobile-accessibility-performance.spec.ts",
-    "verify:technical-debt": "npm run audit:technical-debt && npm run lint && npm run test -- inventoryEconomyRuntime backupSafetyRuntime combatAutomationRuntime mobileAccessibilityPerformance && npm run build && npm run test:e2e:stability"
+    "verify:technical-debt": "npm run audit:technical-debt && npm run lint && npm run test -- inventoryEconomyRuntime backupSafetyRuntime combatAutomationRuntime mobileAccessibilityPerformance && npm run build && npm run test:e2e:stability",
+    "audit:rc": "node scripts/release-candidate-audit.mjs",
+    "test:e2e:rc1": "playwright test e2e/rc1-critical-smoke.spec.ts",
+    "verify:rc1": "npm run audit:rc && npm run audit:technical-debt && npm run lint && npm run test -- inventoryEconomyRuntime backupSafetyRuntime combatAutomationRuntime mobileAccessibilityPerformance && npm run build && npm run test:e2e:rc1"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",
