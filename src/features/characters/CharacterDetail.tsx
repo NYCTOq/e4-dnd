@@ -16,6 +16,7 @@ import { getPlayReadiness } from "../../core/character/playReadiness";
 import { getCharacterSpellcastingClasses, getSpellcastingStatsForClass, getSpellcastingStatsForSpell } from "../../core/rulesets/multiclassSpellcastingSeparation";
 import { getCharacterSheetCertificationSnapshot } from "../../core/rulesets/characterSheetCertification";
 import { getPlayerJourneyIntegrationSnapshot } from "../../core/rulesets/playerJourneyIntegration";
+import { InventoryEconomyPanel } from "./InventoryEconomyPanel";
 
 interface CharacterCastHistoryItem {
   id: string;
@@ -1427,6 +1428,8 @@ export function CharacterDetail({
           </div>
             </div>
           </details>
+
+          <InventoryEconomyPanel character={activeCharacter} items={rulesetData?.items ?? []} />
 
           <div className="character-actions character-sheet-rest-actions">
             <button onClick={longRest}>Long Rest</button>

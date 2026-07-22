@@ -1,7 +1,7 @@
 {
   "name": "e4_dnd",
   "private": true,
-  "version": "5.97.0",
+  "version": "5.98.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -29,7 +29,9 @@
     "test:e2e:advancement": "playwright test e2e/level-one-to-twenty-advancement.spec.ts",
     "verify:advancement": "npm run test -- levelOneToTwentyJourney levelUpAdvancementReadiness && npm run build && npm run test:e2e:advancement",
     "test:e2e:combat-runtime": "playwright test e2e/combat-runtime-automation.spec.ts",
-    "verify:combat-runtime": "npm run test -- combatAutomationRuntime combatTurnRules combatStatusRules && npm run build && npm run test:e2e:combat-runtime"
+    "verify:combat-runtime": "npm run test -- combatAutomationRuntime combatTurnRules combatStatusRules && npm run build && npm run test:e2e:combat-runtime",
+    "test:e2e:inventory": "playwright test e2e/inventory-economy-runtime.spec.ts",
+    "verify:inventory": "npm run test -- inventoryEconomyRuntime itemUseRules equipmentClosureRuntime && npm run build && npm run test:e2e:inventory"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",
