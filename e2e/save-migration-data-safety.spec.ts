@@ -1,9 +1,8 @@
 import { expect, test } from "@playwright/test";
+import { installKnownAppState } from "./support/appState";
 
 test.beforeEach(async ({ page }) => {
-  await page.addInitScript(() => {
-    localStorage.setItem("e4_dnd_first_run_guide_v1", JSON.stringify(true));
-  });
+  await installKnownAppState(page);
 });
 
 test("backup and recovery page exposes the final safety workflow", async ({ page }) => {

@@ -1,7 +1,7 @@
 {
   "name": "e4_dnd",
   "private": true,
-  "version": "5.100.0",
+  "version": "5.101.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -35,7 +35,10 @@
     "test:e2e:data-safety": "playwright test e2e/save-migration-data-safety.spec.ts",
     "verify:data-safety": "npm run test -- backupSafetyRuntime fullBackup backupImport characterBackup safeStorage characterHydration && npm run build && npm run test:e2e:data-safety",
     "test:e2e:mobile-quality": "playwright test e2e/mobile-accessibility-performance.spec.ts",
-    "verify:mobile-quality": "npm run test -- mobileAccessibilityPerformance NumberStepper builderUiNavigation && npm run build && npm run test:e2e:mobile-quality"
+    "verify:mobile-quality": "npm run test -- mobileAccessibilityPerformance NumberStepper builderUiNavigation && npm run build && npm run test:e2e:mobile-quality",
+    "audit:technical-debt": "node scripts/technical-debt-audit.mjs",
+    "test:e2e:stability": "playwright test e2e/combat-runtime-automation.spec.ts e2e/inventory-economy-runtime.spec.ts e2e/save-migration-data-safety.spec.ts e2e/mobile-accessibility-performance.spec.ts",
+    "verify:technical-debt": "npm run audit:technical-debt && npm run lint && npm run test -- inventoryEconomyRuntime backupSafetyRuntime combatAutomationRuntime mobileAccessibilityPerformance && npm run build && npm run test:e2e:stability"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",
