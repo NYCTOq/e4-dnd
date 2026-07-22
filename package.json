@@ -1,7 +1,7 @@
 {
   "name": "e4_dnd",
   "private": true,
-  "version": "5.99.0",
+  "version": "5.100.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -33,7 +33,9 @@
     "test:e2e:inventory": "playwright test e2e/inventory-economy-runtime.spec.ts",
     "verify:inventory": "npm run test -- inventoryEconomyRuntime itemUseRules equipmentClosureRuntime && npm run build && npm run test:e2e:inventory",
     "test:e2e:data-safety": "playwright test e2e/save-migration-data-safety.spec.ts",
-    "verify:data-safety": "npm run test -- backupSafetyRuntime fullBackup backupImport characterBackup safeStorage characterHydration && npm run build && npm run test:e2e:data-safety"
+    "verify:data-safety": "npm run test -- backupSafetyRuntime fullBackup backupImport characterBackup safeStorage characterHydration && npm run build && npm run test:e2e:data-safety",
+    "test:e2e:mobile-quality": "playwright test e2e/mobile-accessibility-performance.spec.ts",
+    "verify:mobile-quality": "npm run test -- mobileAccessibilityPerformance NumberStepper builderUiNavigation && npm run build && npm run test:e2e:mobile-quality"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",

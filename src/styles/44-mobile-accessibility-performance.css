@@ -1,0 +1,122 @@
+/* v5.100 Mobile UI, Accessibility & Performance */
+
+:where(button, [role="button"], a, input, select, textarea, summary) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(button, [role="button"], a, input, select, textarea, summary):focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+:where(button, [role="button"], summary, .nav-item, .bottom-item) {
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+.page-shell,
+.content,
+.settings-layout,
+.builder-shell,
+.character-sheet,
+.play-mode-shell {
+  min-width: 0;
+  max-width: 100%;
+}
+
+img,
+svg,
+canvas,
+video {
+  max-width: 100%;
+}
+
+.accessibility-performance-panel {
+  content-visibility: auto;
+  contain-intrinsic-size: 460px;
+}
+
+.accessibility-performance-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.accessibility-performance-grid article {
+  min-width: 0;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .05);
+}
+
+.accessibility-performance-grid strong,
+.accessibility-performance-grid span {
+  display: block;
+}
+
+.accessibility-performance-grid strong {
+  font-size: 1.15rem;
+}
+
+.accessibility-performance-grid span {
+  margin-top: 4px;
+  opacity: .72;
+  font-size: .82rem;
+}
+
+.accessibility-performance-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 20px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@media (max-width: 700px) {
+  html,
+  body,
+  #root {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .content {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+    padding-bottom: calc(92px + env(safe-area-inset-bottom));
+  }
+
+  :where(button, [role="button"], summary, .nav-item, .bottom-item, input, select) {
+    min-height: 48px;
+  }
+
+  .accessibility-performance-grid,
+  .accessibility-performance-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .table-wrap,
+  .class-level-table-wrap {
+    overscroll-behavior-x: contain;
+    scrollbar-gutter: stable;
+  }
+}
+
+@media (max-width: 460px) {
+  .accessibility-performance-grid,
+  .accessibility-performance-list {
+    grid-template-columns: 1fr;
+  }
+}

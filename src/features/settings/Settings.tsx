@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { PageShell } from "../../shared/layout/PageShell";
+import { AccessibilityPerformancePanel } from "./AccessibilityPerformancePanel";
 import { RULESET_DEFINITIONS } from "../../core/rulesets/rulesetRegistry";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
 import {
@@ -73,6 +74,7 @@ export function Settings() {
       description="E4 D&D'nin görünümünü ve varsayılan davranışlarını masanın çalışma biçimine göre düzenle. Her şeyi açmak zorunda değilsin; yazılımın da sınır öğrenmesi sağlıklı."
     >
       <div className="settings-layout">
+        <AccessibilityPerformancePanel />
         <section className="settings-card settings-card-wide">
           <div className="settings-card-head"><div><span className="mini-label">Dil · Language</span><h2>Arayüz dili · Interface language</h2></div><span className="settings-live-pill">Canlı · Live</span></div>
           <p>Dil seçimi anında uygulanır ve karakter/ruleset verilerini değiştirmez. Language changes immediately and does not modify character or ruleset data.</p>
