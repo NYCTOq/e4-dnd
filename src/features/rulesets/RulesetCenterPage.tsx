@@ -8,6 +8,7 @@ import { getLevel20Certification } from "../../core/rulesets/level20Certificatio
 import { getRuntimeCoverageCertification } from "../../core/rulesets/runtimeCoverageCertification";
 import { getContentIntegrityAudit } from "../../core/rulesets/contentIntegrityAudit";
 import { getContentCompletionPlan } from "../../core/rulesets/contentCompletionPolicy";
+import { getClassSpecificRuntimePolicyReport } from "../../core/rulesets/classSpecificRuntimePolicy";
 
 const statusLabels = {
   ready: "Temel veri hazır",
@@ -22,6 +23,7 @@ export function RulesetCenterPage({ rulesetData }: { rulesetData: RulesetData | 
   const runtimeCertification=getRuntimeCoverageCertification(rulesetData);
   const contentAudit = getContentIntegrityAudit(rulesetData);
   const completionPlan = getContentCompletionPlan(rulesetData, contentAudit);
+  const classRuntimePolicy = getClassSpecificRuntimePolicyReport(rulesetData);
 
   return (
     <PageShell
@@ -84,6 +86,22 @@ export function RulesetCenterPage({ rulesetData }: { rulesetData: RulesetData | 
         {completionPlan.compatibilityEntities.length ? <p><strong>Compatibility stat block:</strong> {completionPlan.compatibilityEntities.join(", ")}</p> : null}
         {completionPlan.blockers.length ? <details open><summary>Blocker · {completionPlan.blockers.length}</summary><ul className="ruleset-note-list">{completionPlan.blockers.map((entry) => <li key={entry}>{entry}</li>)}</ul></details> : null}
         {completionPlan.reviewItems.length ? <details><summary>İnceleme listesi · {completionPlan.reviewItems.length}</summary><ul className="ruleset-note-list">{completionPlan.reviewItems.map((entry) => <li key={entry}>{entry}</li>)}</ul></details> : null}
+      </section>
+
+      <section className="ruleset-roadmap-panel" data-testid="class-runtime-policy">
+        <span className="mini-label">Class Choice & Runtime Map · %{classRuntimePolicy.score}</span>
+        <h2>{classRuntimePolicy.state === "complete" ? "12 class zinciri tamamlandı" : classRuntimePolicy.state === "partial" ? "Class runtime incelemesi gerekiyor" : "Class runtime bağlantılarında blocker var"}</h2>
+        <p>{classRuntimePolicy.complete} complete · {classRuntimePolicy.partial} partial · {classRuntimePolicy.missing} missing</p>
+        <div className="ruleset-roadmap-grid">
+          {classRuntimePolicy.classes.map((entry) => (
+            <span key={entry.classId}>
+              <strong>{entry.state === "complete" ? "✓" : entry.state === "partial" ? "◐" : "✕"} {entry.className} · %{entry.score}</strong>
+              <small>{entry.areas.map((area) => `${area.area}:${area.state}`).join(" · ")}</small>
+            </span>
+          ))}
+        </div>
+        {classRuntimePolicy.blockers.length ? <details><summary>Blocker · {classRuntimePolicy.blockers.length}</summary><ul className="ruleset-note-list">{classRuntimePolicy.blockers.map((entry) => <li key={entry}>{entry}</li>)}</ul></details> : null}
+        {classRuntimePolicy.notices.length ? <details><summary>İnceleme · {classRuntimePolicy.notices.length}</summary><ul className="ruleset-note-list">{classRuntimePolicy.notices.map((entry) => <li key={entry}>{entry}</li>)}</ul></details> : null}
       </section>
 
       <section className="ruleset-roadmap-panel" data-testid="content-integrity-audit">
