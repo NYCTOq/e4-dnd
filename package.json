@@ -1,7 +1,7 @@
 {
   "name": "e4_dnd",
   "private": true,
-  "version": "5.95.0",
+  "version": "5.97.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -25,7 +25,11 @@
     "test:e2e:class-runtime": "playwright test e2e/class-runtime-policy.spec.ts",
     "verify:class-runtime": "npm run test -- classSpecificRuntimePolicy && npm run build && npm run test:e2e:class-runtime",
     "test:e2e:character-creation": "playwright test e2e/full-character-creation.spec.ts",
-    "verify:character-creation": "npm run test -- fullCharacterCreationJourney && npm run build && npm run test:e2e:character-creation"
+    "verify:character-creation": "npm run test -- fullCharacterCreationJourney && npm run build && npm run test:e2e:character-creation",
+    "test:e2e:advancement": "playwright test e2e/level-one-to-twenty-advancement.spec.ts",
+    "verify:advancement": "npm run test -- levelOneToTwentyJourney levelUpAdvancementReadiness && npm run build && npm run test:e2e:advancement",
+    "test:e2e:combat-runtime": "playwright test e2e/combat-runtime-automation.spec.ts",
+    "verify:combat-runtime": "npm run test -- combatAutomationRuntime combatTurnRules combatStatusRules && npm run build && npm run test:e2e:combat-runtime"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",

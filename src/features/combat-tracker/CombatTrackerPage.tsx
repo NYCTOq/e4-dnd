@@ -4,6 +4,16 @@ import type { DndMonsterData } from "../../core/rulesets/ruleset.types";
 import type { Campaign } from "../campaigns/campaignTypes";
 import { loadNpcRecords } from "../npc-manager/npcManagerStorage";
 import { PageShell } from "../../shared/layout/PageShell";
+import { CombatTurnAutomationPanel } from "./CombatTurnAutomationPanel";
+import {
+  beginAutomatedTurn,
+  createCombatAutomationState,
+  registerConcentrationDamage,
+  resetDeathSaves,
+  resolveDeathSave,
+  spendAutomatedMovement,
+  spendAutomatedResource,
+} from "../../core/rulesets/combatAutomationRuntime";
 import {
   addCombatLog,
   advanceTurn,
@@ -66,6 +76,7 @@ export function CombatTrackerPage({ campaigns, characters, monsters }: CombatTra
   const [campaignEncounterKey, setCampaignEncounterKey] = useState("");
   const [zoneName, setZoneName] = useState("");
   const [zoneKind, setZoneKind] = useState<BattlefieldZoneKind>("Spell Area");
+  const [automation, setAutomation] = useState(() => createCombatAutomationState());
   const npcs = useMemo(() => loadNpcRecords(), []);
   const selected = encounters.find((item) => item.id === selectedId) ?? null;
   const active = selected?.combatants.find((item) => item.id === selected.activeCombatantId) ?? null;
@@ -73,6 +84,10 @@ export function CombatTrackerPage({ campaigns, characters, monsters }: CombatTra
 
   useEffect(() => { saveCombatEncounters(encounters); }, [encounters]);
   useEffect(() => { saveCombatTemplates(templates); }, [templates]);
+  useEffect(() => {
+    if (!selected?.activeCombatantId) return;
+    setAutomation((current) => beginAutomatedTurn(current, selected.activeCombatantId, selected.round));
+  }, [selected?.activeCombatantId, selected?.round]);
 
   function updateSelected(updater: (encounter: CombatEncounter) => CombatEncounter) {
     setEncounters((current) => sortEncounters(current.map((item) => item.id === selectedId ? { ...updater(item), updatedAt: new Date().toISOString() } : item)));
@@ -191,6 +206,8 @@ export function CombatTrackerPage({ campaigns, characters, monsters }: CombatTra
     updateSelected((encounter) => {
       const combatants = sortCombatants(encounter.combatants.map((item) => item.id === combatant.id ? applyDamage(item, damageAmount) : item));
       const next = { ...encounter, combatants };
+      const concentrating = getActiveConditions(combatant).includes("Concentration");
+      setAutomation((current) => registerConcentrationDamage(current, combatant.id, damageAmount, concentrating));
       return addCombatLog(next, createCombatLogEntry("Hasar", encounter.round, `${combatant.name} ${damageAmount} hasar aldı.`, combatant, damageAmount));
     });
   }
@@ -231,6 +248,15 @@ export function CombatTrackerPage({ campaigns, characters, monsters }: CombatTra
       <article><strong>{summary?.defeated ?? 0}</strong><span>yenilen savaşçı</span></article>
       <article><strong>{summary?.events ?? 0}</strong><span>kayıtlı olay</span></article>
     </section>
+
+    <CombatTurnAutomationPanel
+      active={active}
+      state={automation}
+      onSpend={(resource) => active && setAutomation((current) => spendAutomatedResource(current, active.id, resource))}
+      onMove={(feet) => active && setAutomation((current) => spendAutomatedMovement(current, active.id, feet))}
+      onDeathSave={(roll) => active && setAutomation((current) => resolveDeathSave(current, active.id, roll))}
+      onResetDeathSaves={() => active && setAutomation((current) => resetDeathSaves(current, active.id))}
+    />
 
     <section className="combat-bridge-card">
       <div>
