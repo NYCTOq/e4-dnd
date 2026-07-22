@@ -1,15 +1,19 @@
 {
   "name": "E4 D&D",
-  "version": "5.102.0-rc.1",
+  "version": "5.103.0-rc.2",
   "channel": "release-candidate",
-  "candidate": "RC1",
+  "candidate": "RC2",
   "releaseDate": "2026-07-22",
   "qualityGates": [
+    "release-metadata-audit",
     "technical-debt-audit",
     "lint",
-    "unit-critical",
+    "critical-unit-suite",
     "production-build",
-    "e2e-critical-routes",
+    "build-checksums",
+    "cross-feature-regression",
+    "critical-route-smoke",
+    "browser-error-scan",
     "package-integrity"
   ],
   "criticalRoutes": [
@@ -30,5 +34,13 @@
     "v5.99 save migration safety",
     "v5.100 mobile accessibility performance",
     "v5.101 technical debt cleanup"
+  ],
+  "regressionFlows": [
+    "character-list-to-builder",
+    "builder-to-character-sheet",
+    "character-sheet-to-inventory",
+    "combat-open-and-start",
+    "backup-page-safety-shell",
+    "settings-accessibility-panel"
   ]
 }

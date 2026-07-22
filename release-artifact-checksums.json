@@ -1,0 +1,438 @@
+{
+  "algorithm": "sha256",
+  "generatedAt": "2026-07-22T11:46:02.496Z",
+  "artifactCount": 86,
+  "totalBytes": 2173601,
+  "artifacts": [
+    {
+      "path": "dist/assets/Builder-B02CygFZ.js",
+      "bytes": 101685,
+      "sha256": "db794a41a2ccf45cf477b13c135df5376ecfb2fada1596c57f69fbf0dd9b5fe4"
+    },
+    {
+      "path": "dist/assets/CampaignCalendarPage-BNHJH9ho.js",
+      "bytes": 9576,
+      "sha256": "e85b3d59b52e5c56489f2f4a269ed707bcac6fb944a0e7023313cd527d5dcaa1"
+    },
+    {
+      "path": "dist/assets/Campaigns-Co-mpvey.js",
+      "bytes": 49266,
+      "sha256": "f6b90497277888c81f9983e573bdec9a4e53d538186ce9659c182149c1c7d597"
+    },
+    {
+      "path": "dist/assets/CharacterCompare-C4vb3ceL.js",
+      "bytes": 5940,
+      "sha256": "e4b9e3cc03311f805e7d6a22e59df2015245c0e126ff92046fff7e1b942dfc02"
+    },
+    {
+      "path": "dist/assets/CharacterDetail-ClbNbvvy.js",
+      "bytes": 56695,
+      "sha256": "0e62bc84049d10661123995d7de8c19d8d2640c6b22d3af06a1a8b4fa1e48dad"
+    },
+    {
+      "path": "dist/assets/CharacterEditor-Cq1lNVLf.js",
+      "bytes": 14702,
+      "sha256": "5dd1657264503722b5793ad08270cd00199996d2ac8db248b3338bbcaabd0bd2"
+    },
+    {
+      "path": "dist/assets/Characters-CWK1wwiP.js",
+      "bytes": 8042,
+      "sha256": "24930e1f716b9ecccb980e6b93aa77caaa99ac2de4c096a99d5cea09b44a1433"
+    },
+    {
+      "path": "dist/assets/ClassCatalogPage-Bunpv_uQ.js",
+      "bytes": 3640,
+      "sha256": "5441ee95f89836a4b05703d09ce2741070363f46567e8cfecc697aa92e19a73e"
+    },
+    {
+      "path": "dist/assets/CollectionsPage-5Kwgc7-N.js",
+      "bytes": 3672,
+      "sha256": "91255fb180f915918ebc1625581a0025e62dfb297ff1c0032ab57df3f89a7ec7"
+    },
+    {
+      "path": "dist/assets/CombatTrackerPage-BXLBaXAw.js",
+      "bytes": 22127,
+      "sha256": "dd31bab28a1433ed0125bf8752e88a476a3301fab0ad7dc26de0eae8ead02e73"
+    },
+    {
+      "path": "dist/assets/Dashboard-Bdri9frP.js",
+      "bytes": 10256,
+      "sha256": "3d61148982396d7c86f4345de36ee42e51e3025ca3c2a9eb18f84bca37f2f878"
+    },
+    {
+      "path": "dist/assets/DataBackup-D9Rl-erZ.js",
+      "bytes": 17466,
+      "sha256": "e24dea7f53ebbc95b4586fa18f3198f234a03852de87072df9464ab4fcadcf00"
+    },
+    {
+      "path": "dist/assets/Dice-Bk_Ta1a1.js",
+      "bytes": 2683,
+      "sha256": "4b7e6d4f48d5644e1a508ad489f2748b0ff8c2a88abd54afa9092981d0c4c2c0"
+    },
+    {
+      "path": "dist/assets/FactionsPage-tyJBWY73.js",
+      "bytes": 7826,
+      "sha256": "df25f228d7dbe9a88794cca66f851888e42745d9a08e8a71b9f6766e538809aa"
+    },
+    {
+      "path": "dist/assets/FeatCatalogPage-BaB0VrwS.js",
+      "bytes": 2672,
+      "sha256": "57336afb4f0a2c0788f5faa29106a83e6522928bf7d90f8571927acc89df19d7"
+    },
+    {
+      "path": "dist/assets/GlobalSearchPage-D553d_3j.js",
+      "bytes": 4952,
+      "sha256": "194d6f0096ea1362c05e87184b3178a9bfbace1c141801efdce2accb85efd7a6"
+    },
+    {
+      "path": "dist/assets/HelpCenter-CkzAH9lF.js",
+      "bytes": 9501,
+      "sha256": "d98a947e2a57fcbc2ab255d2d735618339b8396279628bb0e40989af1ae94788"
+    },
+    {
+      "path": "dist/assets/HomebrewLab-goU2keEV.js",
+      "bytes": 65067,
+      "sha256": "304cc6c657f8b6b004aca88084af4c7d6d93594e04a41ede8787f2971cfb6171"
+    },
+    {
+      "path": "dist/assets/Inventory-BV7JaL9f.js",
+      "bytes": 4545,
+      "sha256": "71134ee73ff2eabf4eab71b289317f21bd253ba6ec8c0d0431d5ab99b15c61f9"
+    },
+    {
+      "path": "dist/assets/Library-Dy7cI4ku.js",
+      "bytes": 6060,
+      "sha256": "8103d65307eb1ce2cde7d0c5cf198a28fd97f6fcaab2c7f6a614c6747c55e7c1"
+    },
+    {
+      "path": "dist/assets/LootTrackerPage-DzZ99tpZ.js",
+      "bytes": 7251,
+      "sha256": "773c53c5386f48bf56ce1939ef1c3a33d6afa26f11d9019dd646ea0b240f39f4"
+    },
+    {
+      "path": "dist/assets/MonsterLibrary-CksWK-6h.js",
+      "bytes": 17228,
+      "sha256": "c77b1e60393ccd2d269977452271a12a367118ec599def1f68278822e349e624"
+    },
+    {
+      "path": "dist/assets/NpcManagerPage-lFRIzYF-.js",
+      "bytes": 6209,
+      "sha256": "93b9c5cd2aaa6a0bb3a5780b5742240a060dc0ff064b9e2e6c214e19dde69310"
+    },
+    {
+      "path": "dist/assets/NumberStepper-CJm838OL.js",
+      "bytes": 12615,
+      "sha256": "bc83cdb876bbe29be201af72f4c00b18105364e7b5d67547fa7a42a0eb5829fe"
+    },
+    {
+      "path": "dist/assets/OriginCatalogPage-a1CJxuyw.js",
+      "bytes": 3395,
+      "sha256": "873750d7ad45b19b931a080fa25dcab03c831a3dddf460959dba92bc53d22f01"
+    },
+    {
+      "path": "dist/assets/PageShell-Wu41Ann4.js",
+      "bytes": 121215,
+      "sha256": "6262c34bd081045d3f12bbce842819b2f55a3bcec77871fca8bf30691736971d"
+    },
+    {
+      "path": "dist/assets/PlayMode-JPRV6EqI.js",
+      "bytes": 126053,
+      "sha256": "29f8addc3980cebaff6662fe9bc590e04dad5af028f0697298634a7bd091cb4e"
+    },
+    {
+      "path": "dist/assets/PlayerTestCenter-bC70wPtC.js",
+      "bytes": 12179,
+      "sha256": "4077110597f3c9d7f48478d51214a88fde76343dfa7fc2bd384bda740a74623d"
+    },
+    {
+      "path": "dist/assets/QuestJournalPage-CSPM1_4r.js",
+      "bytes": 7698,
+      "sha256": "31a3ea8835f17232c3c16e0cc5348c1fd54d5952fb84b069932597da8f846567"
+    },
+    {
+      "path": "dist/assets/ReleaseHistory-Dc7dvfbf.js",
+      "bytes": 2878,
+      "sha256": "6399020d28b7f5ec56b7665621c8800f59f4f87a8da1d5c7646d18c100460d6b"
+    },
+    {
+      "path": "dist/assets/RestCenterPage-KNQQJ4UM.js",
+      "bytes": 9197,
+      "sha256": "94e1f61c553b3bdbbc978c62e52af151a4ccaa7b77bf54482ea63276ea2ff436"
+    },
+    {
+      "path": "dist/assets/RulesetCenterPage-CkAI_H8C.js",
+      "bytes": 25063,
+      "sha256": "a538dcb54fd3bc0a4021357739507035b3ba121bba27047483bd852f0d7e75d7"
+    },
+    {
+      "path": "dist/assets/SessionPlannerPage-C4lWmHOl.js",
+      "bytes": 7768,
+      "sha256": "ce397ad96e604396fd719b988d9c719b537ed3befe0299b330f8c0b75693c8a6"
+    },
+    {
+      "path": "dist/assets/Settings-iGDAyowv.js",
+      "bytes": 10383,
+      "sha256": "5a8b61959ebe8291a98bc8913c53b093f1efa6b08a4db03915cfa373517a6ce1"
+    },
+    {
+      "path": "dist/assets/Spellbook-ClbSrMWp.js",
+      "bytes": 6626,
+      "sha256": "04851b674a7f7f0ae1e0bede3313a2fc00543703fbded8e8cd84109f0b38eeb4"
+    },
+    {
+      "path": "dist/assets/SubclassCatalogPage-Z-YYGKUc.js",
+      "bytes": 1920,
+      "sha256": "80179b9c1bcd28cd7ef9638e616cc36ad52225f353c6a2cb9755461b560e0c17"
+    },
+    {
+      "path": "dist/assets/WorldAtlasPage-Do0jYcsu.js",
+      "bytes": 5964,
+      "sha256": "e6568390aa09ad7c3728b0754a919d06ad4ced299614e28c0045eae38478aeba"
+    },
+    {
+      "path": "dist/assets/ancestryRuntimeRules-CnyXXlJU.js",
+      "bytes": 1239,
+      "sha256": "a3d262392a8a2eb251874b28a1195a3a30f7e9ff2320f60832d9e43bf56888f6"
+    },
+    {
+      "path": "dist/assets/characterIntegrity-CRsHWg_0.js",
+      "bytes": 9772,
+      "sha256": "bc80176bcddab2e240451b6ac2ebbd027c16574f7047b8302bfd3e2b89c0fee6"
+    },
+    {
+      "path": "dist/assets/combatTrackerStorage-BOT7lFns.js",
+      "bytes": 8445,
+      "sha256": "273a3e28c449ef9cb883da4029f050cd7a05183e8da05396993eb07c93edecbc"
+    },
+    {
+      "path": "dist/assets/combatTurnRules-B603T4gm.js",
+      "bytes": 320,
+      "sha256": "b870f92adcbf4811d45b750b80d02f32754266504ee4889cb60d30a0262aca65"
+    },
+    {
+      "path": "dist/assets/diceRoller-DcAm8P5R.js",
+      "bytes": 551,
+      "sha256": "01744253c85b4e338637f7bbbfdffb7f7df81bf061a1824a8723bc6ca37923b9"
+    },
+    {
+      "path": "dist/assets/factionStorage-BVFIkCjs.js",
+      "bytes": 2039,
+      "sha256": "6a4538569f63101c168046f94afc0864ca1013856ac2e2809ce949986c640290"
+    },
+    {
+      "path": "dist/assets/featExpansion-BemQXDT-.js",
+      "bytes": 15131,
+      "sha256": "8510ed2c15187f4593cf4ab6ab0af6e335857b4c52083cfea5adeaebb988116f"
+    },
+    {
+      "path": "dist/assets/fightingStyleRules-BUl2SHIn.js",
+      "bytes": 3705,
+      "sha256": "525903a47a09cb60337e2a4603ba50478637bc1772fcd136557f2711e201bac2"
+    },
+    {
+      "path": "dist/assets/globalSearchEngine-Ds70NgnJ.js",
+      "bytes": 4957,
+      "sha256": "0a976ac8d1c95d77505cf431015b073c7cd46698f0a08713d6468ce6de2ba4f1"
+    },
+    {
+      "path": "dist/assets/index-C4NmFcVx.js",
+      "bytes": 476701,
+      "sha256": "8fef2a460946e5bfd3ea3b8e98946bc77d08bfb6aaf161f1047e0479658b5e39"
+    },
+    {
+      "path": "dist/assets/index-DAx1wKhu.css",
+      "bytes": 173678,
+      "sha256": "fdde76d3535bed3e08492433d932aa42783503129836953bd155a0204cf5617d"
+    },
+    {
+      "path": "dist/assets/itemExpansion-HHbKcQSM.js",
+      "bytes": 31507,
+      "sha256": "f7cf46235ebd1cf18fc314930e8d539e3ef117817978f5d43c8a13846ac521f7"
+    },
+    {
+      "path": "dist/assets/jsx-runtime-D8nDyRPw.js",
+      "bytes": 8720,
+      "sha256": "355c659debab70f9dd3572669cc5533df3222430cba61b1a0db12f789619abd7"
+    },
+    {
+      "path": "dist/assets/locationAtlasStorage-BGwyv8IA.js",
+      "bytes": 1675,
+      "sha256": "5d82c2f0edcb3fd964a3d124b07052c72717b999ffb38d5a45819a426abc55fe"
+    },
+    {
+      "path": "dist/assets/multiclassRules-Bk38u3LE.js",
+      "bytes": 8990,
+      "sha256": "1228ee1e005424da5f4610d4614d96092bdbb9d3f6b959d0c7f48b004e0de2e3"
+    },
+    {
+      "path": "dist/assets/npcManagerStorage-CrK5temf.js",
+      "bytes": 1807,
+      "sha256": "0b181900d80c5ec681b31e3dd28243a59bed0346289f7fd14be2709b89d57f58"
+    },
+    {
+      "path": "dist/assets/playReadiness-CSepKFMy.js",
+      "bytes": 146,
+      "sha256": "fc41ec0c07f3e3099d8f953e3e5df34ec3f0fdc01daaa4b2314c704bdd290a85"
+    },
+    {
+      "path": "dist/assets/playerJourneyIntegration-bQzUAAbq.js",
+      "bytes": 1379,
+      "sha256": "407307aaec0f9b5c9c71ec6b4e987813e49f54ea3bcb4430a27f3ffb052acc63"
+    },
+    {
+      "path": "dist/assets/questJournalStorage-5ULQyF8B.js",
+      "bytes": 1970,
+      "sha256": "11f9d248890f9f7013a11e99569b55234db44dc400cf1801a5a6809894bd6d87"
+    },
+    {
+      "path": "dist/assets/runtimeCoverageCertification-teo0Peg6.js",
+      "bytes": 7457,
+      "sha256": "3cd683297aca5ab436fea64d122a6233199355cd18f7c7284f4c8b3a2d87605b"
+    },
+    {
+      "path": "dist/assets/safeStorage-ObnZnaIS.js",
+      "bytes": 1779,
+      "sha256": "720fee9b8f1939a6324333fa2ba445f77e0d6b31a93c4f4848e49fc17214917f"
+    },
+    {
+      "path": "dist/assets/spellExpansion-DkmYWdIP.js",
+      "bytes": 65026,
+      "sha256": "90fcaf02da0467efa8fbaa4ff7af7301b0f6bfa3e1e8f52a06df3785f46ed244"
+    },
+    {
+      "path": "dist/assets/subclassExpansion-K8Mhb4Xs.js",
+      "bytes": 46065,
+      "sha256": "049c6489d2d4e4f90e8438f5b5fa8f15355d8dd284579edafecb13eb6eb2d32e"
+    },
+    {
+      "path": "dist/assets/useAutosavedDraft-ciRZywub.js",
+      "bytes": 1562,
+      "sha256": "8f82782dcbf2550233418de1d36e367873d1851418d6913d4cd87b8a62d8f7e6"
+    },
+    {
+      "path": "dist/assets/workbox-window.prod.es5-Bd17z0YL.js",
+      "bytes": 5653,
+      "sha256": "17bcc17d60dc78f927834b880c39649b03af46fd1f5cdbb8c42c5ae2b515dce9"
+    },
+    {
+      "path": "dist/data/dnd_2014/backgrounds.json",
+      "bytes": 4400,
+      "sha256": "a6e57a535b2d50f1e62a322cf5eef0129e70c6c254c460356a7f039f796c06ac"
+    },
+    {
+      "path": "dist/data/dnd_2014/classes.json",
+      "bytes": 57375,
+      "sha256": "8c33fb4b5a9ade7d300b2abe1ce50626dd6c00a223161401ff7ffd2afc7467a9"
+    },
+    {
+      "path": "dist/data/dnd_2014/feats.json",
+      "bytes": 3392,
+      "sha256": "985fdb14bdb36117de7f7482479a2cd7cb5e7421a0d8c6c3ebf14d1b44911a9c"
+    },
+    {
+      "path": "dist/data/dnd_2014/items.json",
+      "bytes": 9718,
+      "sha256": "374697e4450a441ed032e6ad05d0da42914b0aee3cadf20af6ef1cdf8c9b02bd"
+    },
+    {
+      "path": "dist/data/dnd_2014/monsters.json",
+      "bytes": 8841,
+      "sha256": "a01605395720ec6393cd78ad54b3940d40fbfb09dace5b7bb5cebfce239366ea"
+    },
+    {
+      "path": "dist/data/dnd_2014/races.json",
+      "bytes": 6183,
+      "sha256": "907de46a083fc75a181e6dfe9e5f44a0ce08d1b174f68ae8f3a6df247c141f8d"
+    },
+    {
+      "path": "dist/data/dnd_2014/spells.json",
+      "bytes": 44382,
+      "sha256": "1dfce72bd6c3b3970707eb281531888e702556466148d605a6424dbcef8cae07"
+    },
+    {
+      "path": "dist/data/dnd_2014/subclasses.json",
+      "bytes": 12154,
+      "sha256": "10e4e11cab5dcd01ae9552f3a8a78ece194b36ba5119f590f3e94119f3cc5064"
+    },
+    {
+      "path": "dist/data/dnd_2024/backgrounds.json",
+      "bytes": 6223,
+      "sha256": "c717796723f1b27ebb3c91becbeec08263e8d5b6dda5ce30a5f6bec0e35bd2ee"
+    },
+    {
+      "path": "dist/data/dnd_2024/classes.json",
+      "bytes": 62829,
+      "sha256": "5c7ddae4e296becb7374b567e560e95ccd6e1e9df97a3fbb44fbce5a66eb7f5b"
+    },
+    {
+      "path": "dist/data/dnd_2024/feats.json",
+      "bytes": 6167,
+      "sha256": "bec2607b898a79799d19847880b8551378af8ce14d5ebfd48a6fc1596180f35a"
+    },
+    {
+      "path": "dist/data/dnd_2024/items.json",
+      "bytes": 10380,
+      "sha256": "2a35f253ee2731a4790cd269b5ace4b1374066d04b4184f851db804dc5ab5780"
+    },
+    {
+      "path": "dist/data/dnd_2024/monsters.json",
+      "bytes": 9397,
+      "sha256": "9fb91d789ca0289c0774573d247ae361cfdff3ebb33250eae0393f17a8436587"
+    },
+    {
+      "path": "dist/data/dnd_2024/races.json",
+      "bytes": 3298,
+      "sha256": "ed7a14bb089212772f3e3ec3a301dbd065c8ca70bde330b87467add68fc2a6e6"
+    },
+    {
+      "path": "dist/data/dnd_2024/spells.json",
+      "bytes": 44814,
+      "sha256": "573a06a78928c6079f77fdcd4c1219b2c2423c88674ea0f2615ba6e979aedd61"
+    },
+    {
+      "path": "dist/data/dnd_2024/subclasses.json",
+      "bytes": 12218,
+      "sha256": "ce14c6e57f651f6cedb419a743cdad36003b8aebbbdcf1be141481c989d5134c"
+    },
+    {
+      "path": "dist/favicon.svg",
+      "bytes": 9522,
+      "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66"
+    },
+    {
+      "path": "dist/icons.svg",
+      "bytes": 5031,
+      "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a"
+    },
+    {
+      "path": "dist/icons/icon-192.png",
+      "bytes": 82028,
+      "sha256": "182ad1a8f5243a0781b13c989dad681965e2e19dd51e505380a57f207e6b469f"
+    },
+    {
+      "path": "dist/icons/icon-512.png",
+      "bytes": 82028,
+      "sha256": "182ad1a8f5243a0781b13c989dad681965e2e19dd51e505380a57f207e6b469f"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 1115,
+      "sha256": "84b2d96a1df0e03de00fd6fb14a1d0543b7308042a1018bc41456eb5f0772f87"
+    },
+    {
+      "path": "dist/manifest.webmanifest",
+      "bytes": 466,
+      "sha256": "2ab2e38b98a13df055dae7c2edee5130d03de0e6653f8a42383e597be616cc63"
+    },
+    {
+      "path": "dist/sw.js",
+      "bytes": 6239,
+      "sha256": "50cc0524f78c2e0f3b431c941d7afbb2818dcea948cdcc73ae1e44d6d824f404"
+    },
+    {
+      "path": "dist/workbox-9c191d2f.js",
+      "bytes": 15112,
+      "sha256": "04b086f1b2f4215ee4b659a7bc9c76162894abdb43fa876247bc7c0bd6fd1c37"
+    }
+  ]
+}

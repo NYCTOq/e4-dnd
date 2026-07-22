@@ -1,7 +1,7 @@
 {
   "name": "e4_dnd",
   "private": true,
-  "version": "5.102.0-rc.1",
+  "version": "5.103.0-rc.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -41,7 +41,11 @@
     "verify:technical-debt": "npm run audit:technical-debt && npm run lint && npm run test -- inventoryEconomyRuntime backupSafetyRuntime combatAutomationRuntime mobileAccessibilityPerformance && npm run build && npm run test:e2e:stability",
     "audit:rc": "node scripts/release-candidate-audit.mjs",
     "test:e2e:rc1": "playwright test e2e/rc1-critical-smoke.spec.ts",
-    "verify:rc1": "npm run audit:rc && npm run audit:technical-debt && npm run lint && npm run test -- inventoryEconomyRuntime backupSafetyRuntime combatAutomationRuntime mobileAccessibilityPerformance && npm run build && npm run test:e2e:rc1"
+    "verify:rc1": "npm run audit:rc && npm run audit:technical-debt && npm run lint && npm run test -- inventoryEconomyRuntime backupSafetyRuntime combatAutomationRuntime mobileAccessibilityPerformance && npm run build && npm run test:e2e:rc1",
+    "audit:rc2": "node scripts/release-candidate-rc2-audit.mjs",
+    "release:hash": "node scripts/release-artifact-hash.mjs",
+    "test:e2e:rc2": "playwright test e2e/rc1-critical-smoke.spec.ts e2e/rc2-regression-matrix.spec.ts",
+    "verify:rc2": "npm run audit:rc2 && npm run audit:technical-debt && npm run lint && npm run test -- inventoryEconomyRuntime backupSafetyRuntime combatAutomationRuntime mobileAccessibilityPerformance && npm run build && npm run release:hash && npm run test:e2e:rc2"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",
