@@ -1,0 +1,2591 @@
+{
+  "package": "v5.114A",
+  "domain": "level-up-progression",
+  "generatedAt": "2026-07-27T09:32:30.577Z",
+  "scannedFiles": 574,
+  "matchedFiles": 573,
+  "candidates": {
+    "levelUpRuntime": [
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "score": 13,
+        "signals": [
+          "levelUp",
+          "level up",
+          "classLevels",
+          "proficiencyBonus",
+          "asi",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "cantrip",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterDetail"
+        ],
+        "lineCount": 1443
+      },
+      {
+        "file": "src/features/characters/characterShared.tsx",
+        "score": 12,
+        "signals": [
+          "characterLevel",
+          "classLevels",
+          "proficiencyBonus",
+          "asi",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "cantrip",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterInventoryManager",
+          "CharacterSpellSelector",
+          "ClassBasedSpellSelector",
+          "FULL_CASTER_CLASSES",
+          "FULL_CASTER_SLOT_TABLE",
+          "calculateEffectiveArmorClass",
+          "calculateSuggestedArmorClass",
+          "createCharacterFromDraft",
+          "emptyDraft",
+          "getCharacterInventoryItems",
+          "getDefaultSpellSlots",
+          "getEquippedItems",
+          "getHitDieForClass",
+          "getInventoryQuantity",
+          "getInventoryWeight",
+          "getItemCategoryLabel",
+          "getItemRulesSummary",
+          "getSpellGroupTitle",
+          "getSpellLevelGroups",
+          "getSpellLevelLabel",
+          "getWeaponAbilityModifier",
+          "getWeaponAttackBonus",
+          "getWeaponDamageSummary",
+          "isSpellReadyToCast",
+          "normalizeCharacterDraft",
+          "normalizeHitDice",
+          "normalizeSpellSlots",
+          "resetDeathSaves",
+          "resetHitDice",
+          "resetSpellSlots",
+          "setInventoryItemQuantity",
+          "sortSpellsByLevelAndName"
+        ],
+        "lineCount": 1244
+      },
+      {
+        "file": "src/certification/oracle/levelUpProgressionOracle.test.ts",
+        "score": 11,
+        "signals": [
+          "levelUp",
+          "characterLevel",
+          "proficiencyBonus",
+          "abilityScoreImprovement",
+          "asi",
+          "subclass",
+          "hitPoints",
+          "cantrip",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 129
+      },
+      {
+        "file": "src/features/characters/LevelUpAssistant.tsx",
+        "score": 11,
+        "signals": [
+          "levelUp",
+          "level up",
+          "classLevels",
+          "proficiencyBonus",
+          "asi",
+          "feat",
+          "subclass",
+          "cantrip",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "LevelUpAssistant"
+        ],
+        "lineCount": 322
+      },
+      {
+        "file": "src/certification/reference/levelUpProgression.reference.ts",
+        "score": 10,
+        "signals": [
+          "levelUp",
+          "characterLevel",
+          "classLevels",
+          "proficiencyBonus",
+          "abilityScoreImprovement",
+          "subclass",
+          "hitPoints",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "ProgressionRuleset",
+          "abilityScoreModifier",
+          "canLevelUp",
+          "canTakeAbilityScoreImprovement",
+          "cantripScalingTier",
+          "clampCharacterLevel",
+          "gainsSubclassAtLevel",
+          "hitPointsGainedOnLevelUp",
+          "nextCharacterLevel",
+          "progressionProficiencyBonus",
+          "spellSlotProgressionTier",
+          "subclassUnlockLevel",
+          "totalCharacterLevel"
+        ],
+        "lineCount": 114
+      },
+      {
+        "file": "src/core/character/characterLifecycle.integration.test.ts",
+        "score": 10,
+        "signals": [
+          "levelUp",
+          "classLevels",
+          "asi",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 82
+      },
+      {
+        "file": "src/features/characters/levelUpCalculator.ts",
+        "score": 10,
+        "signals": [
+          "levelUp",
+          "classLevels",
+          "asi",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "LevelUpAsiMode",
+          "LevelUpOptions",
+          "applyAbilityIncrease",
+          "buildLeveledCharacter",
+          "getAverageHpGain",
+          "isAsiMilestone"
+        ],
+        "lineCount": 104
+      },
+      {
+        "file": "src/core/rulesets/levelUpAdvancementReadiness.test.ts",
+        "score": 9,
+        "signals": [
+          "levelUp",
+          "classLevels",
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 38
+      },
+      {
+        "file": "src/certification/golden/classSubclassGoldenCharacters.test.ts",
+        "score": 8,
+        "signals": [
+          "characterLevel",
+          "classLevels",
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 312
+      },
+      {
+        "file": "src/core/character/characterIntegrity.ts",
+        "score": 8,
+        "signals": [
+          "classLevels",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterIntegrityIssue",
+          "CharacterIntegrityReport",
+          "IntegritySection",
+          "auditCharacterIntegrity"
+        ],
+        "lineCount": 79
+      },
+      {
+        "file": "src/core/rulesets/levelOneSpellcastingReadiness.test.ts",
+        "score": 8,
+        "signals": [
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 35
+      },
+      {
+        "file": "src/core/rulesets/levelUpAdvancementReadiness.ts",
+        "score": 8,
+        "signals": [
+          "levelUp",
+          "classLevels",
+          "asi",
+          "feat",
+          "subclass",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "AdvancementReadiness",
+          "getLevelUpAdvancementReadiness"
+        ],
+        "lineCount": 98
+      },
+      {
+        "file": "src/core/rulesets/progressionDraftNormalization.ts",
+        "score": 8,
+        "signals": [
+          "classLevels",
+          "asi",
+          "feat",
+          "subclass",
+          "spellSlots",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "normalizeDraftForProgression"
+        ],
+        "lineCount": 217
+      },
+      {
+        "file": "src/features/characters/CharacterEditor.tsx",
+        "score": 8,
+        "signals": [
+          "classLevels",
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterEditor"
+        ],
+        "lineCount": 434
+      },
+      {
+        "file": "src/features/characters/characterEditorRules.ts",
+        "score": 8,
+        "signals": [
+          "classLevels",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "buildEditedCharacter",
+          "characterToEditDraft"
+        ],
+        "lineCount": 54
+      },
+      {
+        "file": "src/core/character/character.types.ts",
+        "score": 7,
+        "signals": [
+          "classLevels",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "AbilityKey",
+          "AbilityScores",
+          "ArmorClassMode",
+          "Character",
+          "CharacterClassLevel",
+          "CharacterCondition",
+          "CharacterConditionDurations",
+          "CharacterDeathSaves",
+          "CharacterDraft",
+          "CharacterHitDiePool",
+          "CharacterInventoryItem",
+          "CharacterResource",
+          "CharacterSpellEffect",
+          "CharacterSpellSlot",
+          "ResourceRecovery",
+          "RulesetId"
+        ],
+        "lineCount": 223
+      },
+      {
+        "file": "src/core/rulesets/characterSheetCertification.test.ts",
+        "score": 7,
+        "signals": [
+          "classLevels",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 4
+      },
+      {
+        "file": "src/core/rulesets/characterSheetRules.ts",
+        "score": 7,
+        "signals": [
+          "proficiencyBonus",
+          "asi",
+          "feat",
+          "subclass",
+          "maxHp",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "SKILL_ABILITIES",
+          "getCharacterFeatures",
+          "getPassiveScore",
+          "getSavingThrowBonus",
+          "getSkillBonus"
+        ],
+        "lineCount": 44
+      },
+      {
+        "file": "src/core/rulesets/classSubclassCharacterAdapter.ts",
+        "score": 7,
+        "signals": [
+          "characterLevel",
+          "classLevels",
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterClassEntry",
+          "ClassCompatibleCharacter",
+          "ClassRuntimeSnapshot",
+          "applyClassFeatureRest",
+          "buildClassRuntimeSnapshot",
+          "characterClassEntries",
+          "characterClassLevels",
+          "deserializeClassCompatibleCharacter",
+          "resolveClassRuleset",
+          "serializeClassCompatibleCharacter",
+          "subclassUnlockState"
+        ],
+        "lineCount": 182
+      },
+      {
+        "file": "src/core/rulesets/fullCharacterCertification.test.ts",
+        "score": 7,
+        "signals": [
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 27
+      },
+      {
+        "file": "src/core/rulesets/levelOneAncestryReadiness.test.ts",
+        "score": 7,
+        "signals": [
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 50
+      },
+      {
+        "file": "src/core/rulesets/levelOneFeatureChoiceReadiness.test.ts",
+        "score": 7,
+        "signals": [
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 52
+      },
+      {
+        "file": "src/core/rulesets/levelUpChoiceCompletion.test.ts",
+        "score": 7,
+        "signals": [
+          "levelUp",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 21
+      },
+      {
+        "file": "src/core/rulesets/progressionDraftNormalization.test.ts",
+        "score": 7,
+        "signals": [
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 53
+      },
+      {
+        "file": "src/core/storage/characterStorage.ts",
+        "score": 7,
+        "signals": [
+          "classLevels",
+          "feat",
+          "subclass",
+          "spellSlots",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "exportCharacters",
+          "hydrateCharacterRecord",
+          "loadCharacters",
+          "saveCharacters"
+        ],
+        "lineCount": 275
+      },
+      {
+        "file": "src/core/character/playerJourneyConsistency.ts",
+        "score": 6,
+        "signals": [
+          "classLevels",
+          "proficiencyBonus",
+          "feat",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "JourneyCharacter",
+          "JourneyDraft",
+          "calculateJourneyArmorClass",
+          "compareJourneySnapshots",
+          "getCharacterJourneySnapshot",
+          "getCharacterSpellcastingAbility"
+        ],
+        "lineCount": 69
+      },
+      {
+        "file": "src/core/character/sheetPlayModeConsistency.ts",
+        "score": 6,
+        "signals": [
+          "proficiencyBonus",
+          "hitPoints",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "WeaponConsistencyRow",
+          "compareSheetAndPlayMode",
+          "getSheetPlayModeConsistencySnapshot",
+          "getWeaponConsistencyRows"
+        ],
+        "lineCount": 82
+      },
+      {
+        "file": "src/core/rulesets/characterSheetCertification.ts",
+        "score": 6,
+        "signals": [
+          "classLevels",
+          "feat",
+          "maxHp",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterSheetCertificationSnapshot",
+          "getCharacterSheetCertificationSnapshot"
+        ],
+        "lineCount": 11
+      },
+      {
+        "file": "src/core/rulesets/characterValidation.ts",
+        "score": 6,
+        "signals": [
+          "asi",
+          "feat",
+          "subclass",
+          "maxHp",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterValidationIssue",
+          "ValidationSeverity",
+          "hasValidationErrors",
+          "validateCharacterDraft"
+        ],
+        "lineCount": 102
+      },
+      {
+        "file": "src/core/rulesets/classProgression.test.ts",
+        "score": 6,
+        "signals": [
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 17
+      },
+      {
+        "file": "src/core/rulesets/classProgressionAudit.test.ts",
+        "score": 6,
+        "signals": [
+          "proficiencyBonus",
+          "asi",
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 12
+      },
+      {
+        "file": "src/core/rulesets/classProgressionAudit.ts",
+        "score": 6,
+        "signals": [
+          "asi",
+          "feat",
+          "subclass",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "ProgressionAudit",
+          "auditClassProgression",
+          "enrichClassProgression",
+          "getClassAsiLevels"
+        ],
+        "lineCount": 40
+      },
+      {
+        "file": "src/core/rulesets/fullCharacterCertification.ts",
+        "score": 6,
+        "signals": [
+          "level up",
+          "feat",
+          "subclass",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterCertificationCheck",
+          "ClassEditionCertification",
+          "FullCharacterCertification",
+          "MatrixStatus",
+          "certifyCharacterLifecycle",
+          "certifyCharacterRecord",
+          "certifyClassEdition",
+          "getFullCharacterCertification"
+        ],
+        "lineCount": 115
+      },
+      {
+        "file": "src/core/rulesets/levelOneOriginReadiness.test.ts",
+        "score": 6,
+        "signals": [
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 46
+      },
+      {
+        "file": "src/core/rulesets/levelOneProficiencyReadiness.test.ts",
+        "score": 6,
+        "signals": [
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 45
+      },
+      {
+        "file": "src/core/rulesets/spellCharacterCombatAdapter.ts",
+        "score": 6,
+        "signals": [
+          "characterLevel",
+          "maxHp",
+          "spellSlots",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterSpellEntry",
+          "SpellAbilityKey",
+          "SpellCompatibleCharacter",
+          "SpellRuntimeSnapshot",
+          "SpellSlotState",
+          "applyConcentrationDamage",
+          "applyDamageToSpellTarget",
+          "applyHealingToSpellTarget",
+          "buildSpellRuntimeSnapshot",
+          "canCharacterCastSpell",
+          "deserializeSpellCompatibleCharacter",
+          "normalizeSpellSlots",
+          "resolveSpellAbilityScore",
+          "resolveSpellcastingAbility",
+          "restoreCharacterSpellSlot",
+          "serializeSpellCompatibleCharacter",
+          "setCharacterConcentration",
+          "spendCharacterSpellSlot"
+        ],
+        "lineCount": 315
+      },
+      {
+        "file": "src/features/characters/CharacterCompare.tsx",
+        "score": 6,
+        "signals": [
+          "proficiencyBonus",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterCompare"
+        ],
+        "lineCount": 217
+      },
+      {
+        "file": "src/features/characters/levelUpCalculator.test.ts",
+        "score": 6,
+        "signals": [
+          "levelUp",
+          "asi",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 36
+      },
+      {
+        "file": "src/certification/matrix/spellCharacterCombatPersistenceMatrix.test.ts",
+        "score": 5,
+        "signals": [
+          "characterLevel",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 137
+      },
+      {
+        "file": "src/certification/oracle/progressionOracle.ts",
+        "score": 5,
+        "signals": [
+          "characterLevel",
+          "proficiencyBonus",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "expectedHpAtLevel",
+          "expectedProficiencyBonus",
+          "expectedSubclassAvailable"
+        ],
+        "lineCount": 39
+      }
+    ],
+    "classProgression": [
+      {
+        "file": "src/certification/golden/classSubclassGoldenCharacters.test.ts",
+        "score": 8,
+        "signals": [
+          "characterLevel",
+          "classLevels",
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 312
+      },
+      {
+        "file": "src/core/rulesets/multiclassSpellcastingSeparation.test.ts",
+        "score": 8,
+        "signals": [
+          "classLevels",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 32
+      },
+      {
+        "file": "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+        "score": 7,
+        "signals": [
+          "characterLevel",
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 217
+      },
+      {
+        "file": "src/certification/oracle/classSubclassRuntimeOracle.test.ts",
+        "score": 7,
+        "signals": [
+          "characterLevel",
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 208
+      },
+      {
+        "file": "src/certification/reference/classSubclassRuntime.reference.ts",
+        "score": 7,
+        "signals": [
+          "characterLevel",
+          "classLevels",
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "ClassFeatureReference",
+          "ClassRulesetId",
+          "FeatureActivation",
+          "LimitedUseFormula",
+          "RecoveryType",
+          "abilityModifier",
+          "classLevel",
+          "isFeatureUnlocked",
+          "normalizeActivation",
+          "proficiencyBonus",
+          "recoverFeatureUses",
+          "resolveLimitedUses",
+          "subclassFeatureLevels",
+          "totalCharacterLevel",
+          "unlockedFeatures"
+        ],
+        "lineCount": 162
+      },
+      {
+        "file": "src/components/classFeatures/ClassFeaturePanel.tsx",
+        "score": 7,
+        "signals": [
+          "characterLevel",
+          "proficiencyBonus",
+          "asi",
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "ClassFeaturePanel",
+          "ClassFeaturePanelProps"
+        ],
+        "lineCount": 150
+      },
+      {
+        "file": "src/core/rulesets/classSubclassCharacterAdapter.ts",
+        "score": 7,
+        "signals": [
+          "characterLevel",
+          "classLevels",
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterClassEntry",
+          "ClassCompatibleCharacter",
+          "ClassRuntimeSnapshot",
+          "applyClassFeatureRest",
+          "buildClassRuntimeSnapshot",
+          "characterClassEntries",
+          "characterClassLevels",
+          "deserializeClassCompatibleCharacter",
+          "resolveClassRuleset",
+          "serializeClassCompatibleCharacter",
+          "subclassUnlockState"
+        ],
+        "lineCount": 182
+      },
+      {
+        "file": "src/core/rulesets/classSubclassRuntimeRules.ts",
+        "score": 7,
+        "signals": [
+          "characterLevel",
+          "classLevels",
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "ClassRuntimeRulesetId",
+          "FeatureActivation",
+          "FeatureRecovery",
+          "LimitedUseRule",
+          "RuntimeFeature",
+          "normalizeRuntimeFeature",
+          "runtimeAbilityModifier",
+          "runtimeClassLevel",
+          "runtimeFeatureUnlocked",
+          "runtimeNormalizeActivation",
+          "runtimeProficiencyBonus",
+          "runtimeRecoverFeature",
+          "runtimeRecoverUses",
+          "runtimeResolveLimitedUses",
+          "runtimeSubclassFeatureLevels",
+          "runtimeTotalCharacterLevel",
+          "runtimeUnlockedFeatures"
+        ],
+        "lineCount": 255
+      },
+      {
+        "file": "src/core/rulesets/multiclassPactMagic.test.ts",
+        "score": 7,
+        "signals": [
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "spellSlots",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 5
+      },
+      {
+        "file": "src/features/classes/ClassCatalogPage.tsx",
+        "score": 7,
+        "signals": [
+          "proficiencyBonus",
+          "asi",
+          "feat",
+          "subclass",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "ClassCatalogPage"
+        ],
+        "lineCount": 31
+      },
+      {
+        "file": "src/certification/matrix/classSubclassPersistenceMatrix.test.ts",
+        "score": 6,
+        "signals": [
+          "characterLevel",
+          "classLevels",
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 121
+      },
+      {
+        "file": "src/certification/matrix/classSubclassRuntimeScenarioMatrix.test.ts",
+        "score": 6,
+        "signals": [
+          "characterLevel",
+          "feat",
+          "subclass",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 143
+      },
+      {
+        "file": "src/core/rulesets/classFeatureRuntime.test.ts",
+        "score": 6,
+        "signals": [
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 61
+      },
+      {
+        "file": "src/core/rulesets/classProgression.test.ts",
+        "score": 6,
+        "signals": [
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 17
+      },
+      {
+        "file": "src/core/rulesets/classProgressionAudit.test.ts",
+        "score": 6,
+        "signals": [
+          "proficiencyBonus",
+          "asi",
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 12
+      },
+      {
+        "file": "src/core/rulesets/classProgressionAudit.ts",
+        "score": 6,
+        "signals": [
+          "asi",
+          "feat",
+          "subclass",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "ProgressionAudit",
+          "auditClassProgression",
+          "enrichClassProgression",
+          "getClassAsiLevels"
+        ],
+        "lineCount": 40
+      },
+      {
+        "file": "src/core/rulesets/multiclassRules.ts",
+        "score": 6,
+        "signals": [
+          "classLevels",
+          "subclass",
+          "spellSlots",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "addClassLevel",
+          "getClassLevel",
+          "getCombinedCasterLevel",
+          "getMulticlassAttacksPerAction",
+          "getMulticlassConflictSummary",
+          "getMulticlassEligibility",
+          "getMulticlassHitDice",
+          "getMulticlassPactMagicSlots",
+          "getMulticlassProficiencyGains",
+          "getMulticlassSpellSlots",
+          "getMulticlassTransitionEligibility",
+          "normalizeClassLevels"
+        ],
+        "lineCount": 238
+      },
+      {
+        "file": "src/core/rulesets/subclassExpansion.ts",
+        "score": 6,
+        "signals": [
+          "asi",
+          "feat",
+          "subclass",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "SUBCLASS_EXPANSION_2014",
+          "SUBCLASS_EXPANSION_2024"
+        ],
+        "lineCount": 137
+      },
+      {
+        "file": "src/core/rulesets/classFeatureRuntime.ts",
+        "score": 5,
+        "signals": [
+          "feat",
+          "subclass",
+          "maxHp",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "ClassFeatureRuntimePlan",
+          "applyClassFeatureUse",
+          "canUseClassFeature",
+          "endClassFeatureCondition",
+          "getClassFeatureRuntimePlan",
+          "getRemainingClassResource"
+        ],
+        "lineCount": 218
+      },
+      {
+        "file": "src/core/rulesets/classSpecificRuntimePolicy.test.ts",
+        "score": 5,
+        "signals": [
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 50
+      },
+      {
+        "file": "src/core/rulesets/classSubclassRuntimeClosure.test.ts",
+        "score": 5,
+        "signals": [
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 15
+      },
+      {
+        "file": "src/core/rulesets/classSubclassRuntimeClosure.ts",
+        "score": 5,
+        "signals": [
+          "asi",
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "ClassSubclassRuntimeClosureReport",
+          "EntityClosureReport",
+          "FeatureClosureEntry",
+          "FeatureClosureStatus",
+          "FeatureMechanic",
+          "buildClassSubclassRuntimeClosureReport",
+          "certifyClassRuntime",
+          "certifySubclassRuntime",
+          "formatClassSubclassRuntimeClosureSummary"
+        ],
+        "lineCount": 49
+      },
+      {
+        "file": "src/core/rulesets/multiclassOfficialCertification.test.ts",
+        "score": 5,
+        "signals": [
+          "subclass",
+          "spellSlots",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 83
+      },
+      {
+        "file": "src/core/rulesets/multiclassRules.test.ts",
+        "score": 5,
+        "signals": [
+          "subclass",
+          "spellSlots",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 2
+      },
+      {
+        "file": "src/core/rulesets/multiclassSpellcastingSeparation.ts",
+        "score": 5,
+        "signals": [
+          "classLevels",
+          "subclass",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterSpellSource",
+          "getCharacterSpellcastingClasses",
+          "getClassSpellIds",
+          "getClassSpellcastingAbility",
+          "getSpellSource",
+          "getSpellcastingStatsForClass",
+          "getSpellcastingStatsForSpell"
+        ],
+        "lineCount": 124
+      },
+      {
+        "file": "src/core/rulesets/subclassOfficialProgressionFixes.test.ts",
+        "score": 5,
+        "signals": [
+          "asi",
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 36
+      },
+      {
+        "file": "src/components/classFeatures/ClassFeatureRuntimeIntegrationMount.tsx",
+        "score": 4,
+        "signals": [
+          "asi",
+          "feat",
+          "subclass",
+          "xp"
+        ],
+        "exports": [
+          "ClassFeatureRuntimeIntegrationMount"
+        ],
+        "lineCount": 141
+      },
+      {
+        "file": "src/core/rulesets/arcaneClassRuntime.test.ts",
+        "score": 4,
+        "signals": [
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 71
+      },
+      {
+        "file": "src/core/rulesets/classFeatureEngine.test.ts",
+        "score": 4,
+        "signals": [
+          "asi",
+          "feat",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 19
+      },
+      {
+        "file": "src/core/rulesets/classFeatureEngine.ts",
+        "score": 4,
+        "signals": [
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "ClassFeatureAction",
+          "getClassFeatureActions",
+          "getClassResources",
+          "mergeClassResources"
+        ],
+        "lineCount": 63
+      },
+      {
+        "file": "src/core/rulesets/classProgression.ts",
+        "score": 4,
+        "signals": [
+          "feat",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "formatSpellSlots",
+          "getClassLevel",
+          "getFeaturesThroughLevel",
+          "getNewFeaturesAtLevel"
+        ],
+        "lineCount": 23
+      },
+      {
+        "file": "src/core/rulesets/classSpecificRuntimePolicy.ts",
+        "score": 4,
+        "signals": [
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CLASS_RUNTIME_EXPECTATIONS",
+          "ClassRuntimeArea",
+          "ClassRuntimeAreaReport",
+          "ClassRuntimeExpectation",
+          "ClassRuntimeState",
+          "ClassSpecificRuntimePolicyReport",
+          "ClassSpecificRuntimeReport",
+          "getClassSpecificRuntimePolicyReport"
+        ],
+        "lineCount": 131
+      },
+      {
+        "file": "src/core/rulesets/martialClassRuntime.test.ts",
+        "score": 4,
+        "signals": [
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 3
+      },
+      {
+        "file": "src/core/rulesets/singleClassBuilderFinalCertification.integration.test.ts",
+        "score": 4,
+        "signals": [
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 98
+      },
+      {
+        "file": "src/core/rulesets/subclassRules.test.ts",
+        "score": 4,
+        "signals": [
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 17
+      },
+      {
+        "file": "src/core/rulesets/subclassRules.ts",
+        "score": 4,
+        "signals": [
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "getAlwaysPreparedSpells",
+          "getSubclassesForClass",
+          "getUnlockedSubclassFeatures",
+          "isSubclassAvailable"
+        ],
+        "lineCount": 21
+      },
+      {
+        "file": "src/core/rulesets/subclassRuntimeRules.test.ts",
+        "score": 4,
+        "signals": [
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 4
+      },
+      {
+        "file": "src/core/rulesets/subclassRuntimeRules.ts",
+        "score": 4,
+        "signals": [
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "SubclassActionType",
+          "SubclassRuntime",
+          "SubclassRuntimeAction",
+          "canUseSubclassAction",
+          "getSubclassRuntime",
+          "spendSubclassActionResource"
+        ],
+        "lineCount": 54
+      },
+      {
+        "file": "src/features/subclasses/SubclassCatalogPage.tsx",
+        "score": 4,
+        "signals": [
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "SubclassCatalogPage"
+        ],
+        "lineCount": 13
+      },
+      {
+        "file": "src/certification/integration/classFeaturePersistenceBridge.test.ts",
+        "score": 3,
+        "signals": [
+          "feat",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 140
+      }
+    ],
+    "spellProgression": [
+      {
+        "file": "src/core/rulesets/levelOneSpellcastingReadiness.test.ts",
+        "score": 8,
+        "signals": [
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 35
+      },
+      {
+        "file": "src/core/rulesets/multiclassSpellcastingSeparation.test.ts",
+        "score": 8,
+        "signals": [
+          "classLevels",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 32
+      },
+      {
+        "file": "src/certification/golden/spellRuntimeGoldenCasters.test.ts",
+        "score": 6,
+        "signals": [
+          "characterLevel",
+          "maxHp",
+          "spellSlots",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 232
+      },
+      {
+        "file": "src/certification/reference/spellRuntimeCombat.reference.ts",
+        "score": 6,
+        "signals": [
+          "characterLevel",
+          "proficiencyBonus",
+          "maxHp",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "DamageRelation",
+          "SpellAbility",
+          "SpellRulesetId",
+          "applyDamageRelation",
+          "applyHealing",
+          "applySavingThrowDamage",
+          "canCastWithSlot",
+          "cantripScalingDice",
+          "concentrationAfterDamage",
+          "consumeSpellSlot",
+          "resolveTargetCount",
+          "restoreSpellSlot",
+          "spellAbilityModifier",
+          "spellAttackBonus",
+          "spellProficiencyBonus",
+          "spellSaveDc",
+          "upcastDiceCount"
+        ],
+        "lineCount": 169
+      },
+      {
+        "file": "src/core/rulesets/spellCharacterCombatAdapter.ts",
+        "score": 6,
+        "signals": [
+          "characterLevel",
+          "maxHp",
+          "spellSlots",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterSpellEntry",
+          "SpellAbilityKey",
+          "SpellCompatibleCharacter",
+          "SpellRuntimeSnapshot",
+          "SpellSlotState",
+          "applyConcentrationDamage",
+          "applyDamageToSpellTarget",
+          "applyHealingToSpellTarget",
+          "buildSpellRuntimeSnapshot",
+          "canCharacterCastSpell",
+          "deserializeSpellCompatibleCharacter",
+          "normalizeSpellSlots",
+          "resolveSpellAbilityScore",
+          "resolveSpellcastingAbility",
+          "restoreCharacterSpellSlot",
+          "serializeSpellCompatibleCharacter",
+          "setCharacterConcentration",
+          "spendCharacterSpellSlot"
+        ],
+        "lineCount": 315
+      },
+      {
+        "file": "src/core/rulesets/spellRules.test.ts",
+        "score": 6,
+        "signals": [
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 11
+      },
+      {
+        "file": "src/core/rulesets/spellRuntimeCombatRules.ts",
+        "score": 6,
+        "signals": [
+          "characterLevel",
+          "proficiencyBonus",
+          "maxHp",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "SpellDamageRelation",
+          "resolveSpellDamagePipeline",
+          "runtimeApplyDamageRelation",
+          "runtimeApplyHealing",
+          "runtimeApplySavingThrowDamage",
+          "runtimeCanCastWithSlot",
+          "runtimeCantripScalingDice",
+          "runtimeConcentrationAfterDamage",
+          "runtimeConsumeSpellSlot",
+          "runtimeResolveTargetCount",
+          "runtimeRestoreSpellSlot",
+          "runtimeSpellAbilityModifier",
+          "runtimeSpellAttackBonus",
+          "runtimeSpellProficiencyBonus",
+          "runtimeSpellSaveDc",
+          "runtimeUpcastDiceCount"
+        ],
+        "lineCount": 190
+      },
+      {
+        "file": "src/certification/matrix/spellCharacterCombatPersistenceMatrix.test.ts",
+        "score": 5,
+        "signals": [
+          "characterLevel",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 137
+      },
+      {
+        "file": "src/core/rulesets/multiclassSpellcastingSeparation.ts",
+        "score": 5,
+        "signals": [
+          "classLevels",
+          "subclass",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterSpellSource",
+          "getCharacterSpellcastingClasses",
+          "getClassSpellIds",
+          "getClassSpellcastingAbility",
+          "getSpellSource",
+          "getSpellcastingStatsForClass",
+          "getSpellcastingStatsForSpell"
+        ],
+        "lineCount": 124
+      },
+      {
+        "file": "src/core/rulesets/spellcastingRules.test.ts",
+        "score": 5,
+        "signals": [
+          "proficiencyBonus",
+          "feat",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 11
+      },
+      {
+        "file": "src/core/rulesets/spellcastingRules.ts",
+        "score": 5,
+        "signals": [
+          "subclass",
+          "spellSlots",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "RitualCastingMode",
+          "SpellcastingProfile",
+          "canPrepareSpell",
+          "canRitualCast",
+          "canSelectKnownSpell",
+          "getClassSpellSlots",
+          "getSpellcastingProfile"
+        ],
+        "lineCount": 99
+      },
+      {
+        "file": "src/certification/differential/spellRuntimeCombatDifferential.test.ts",
+        "score": 4,
+        "signals": [
+          "proficiencyBonus",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 218
+      },
+      {
+        "file": "src/certification/integration/spellCastingPersistenceBridge.test.ts",
+        "score": 4,
+        "signals": [
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 58
+      },
+      {
+        "file": "src/certification/matrix/spellCastingUiPersistenceMatrix.test.ts",
+        "score": 4,
+        "signals": [
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 51
+      },
+      {
+        "file": "src/certification/matrix/spellRuntimeCombatScenarioMatrix.test.ts",
+        "score": 4,
+        "signals": [
+          "maxHp",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 132
+      },
+      {
+        "file": "src/certification/oracle/spellRuntimeCombatOracle.test.ts",
+        "score": 4,
+        "signals": [
+          "proficiencyBonus",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 151
+      },
+      {
+        "file": "src/components/spells/SpellCastingRuntimePanel.tsx",
+        "score": 4,
+        "signals": [
+          "spellSlots",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "SpellCastingRuntimePanel",
+          "SpellCastingRuntimePanelProps"
+        ],
+        "lineCount": 77
+      },
+      {
+        "file": "src/core/rulesets/builderSpellIntegration.test.ts",
+        "score": 4,
+        "signals": [
+          "subclass",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 32
+      },
+      {
+        "file": "src/core/rulesets/globalSpellRuntime.ts",
+        "score": 4,
+        "signals": [
+          "characterLevel",
+          "maxHp",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "SaveDamageRule",
+          "SpellRuntimeOutcome",
+          "SpellRuntimePlan",
+          "SpellRuntimeTier",
+          "dispelSpellEffects",
+          "endConcentration",
+          "getDefaultSpellSaveRule",
+          "getGlobalCastableSlotLevels",
+          "getSpellRuntimePlan",
+          "resolveGlobalSpell",
+          "resolveSpellHealing",
+          "resolveSpellSave"
+        ],
+        "lineCount": 156
+      },
+      {
+        "file": "src/core/rulesets/halfCasterOfficialProgression.test.ts",
+        "score": 4,
+        "signals": [
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 81
+      },
+      {
+        "file": "src/core/rulesets/levelOneSpellcastingReadiness.ts",
+        "score": 4,
+        "signals": [
+          "subclass",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "LevelOneSpellcastingReadiness",
+          "getLevelOneSpellcastingReadiness"
+        ],
+        "lineCount": 62
+      },
+      {
+        "file": "src/core/rulesets/spellResolution.ts",
+        "score": 4,
+        "signals": [
+          "characterLevel",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "getCantripScaleSteps",
+          "getCastableSlotLevels",
+          "getSpellRollFormula",
+          "rollFormula"
+        ],
+        "lineCount": 8
+      },
+      {
+        "file": "src/core/rulesets/spellRules.ts",
+        "score": 4,
+        "signals": [
+          "characterLevel",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "getHighestSpellLevel",
+          "getSpellMechanicSummary",
+          "isSpellAvailableToClass"
+        ],
+        "lineCount": 27
+      },
+      {
+        "file": "src/certification/matrix/spellcastingScenarioMatrix.ts",
+        "score": 3,
+        "signals": [
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "generateSpellcastingScenarios"
+        ],
+        "lineCount": 28
+      },
+      {
+        "file": "src/certification/oracle/spellcastingOracle.test.ts",
+        "score": 3,
+        "signals": [
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 42
+      },
+      {
+        "file": "src/certification/oracle/spellcastingOracle.ts",
+        "score": 3,
+        "signals": [
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "highestSpellLevel",
+          "mod",
+          "pb",
+          "preparedLimit",
+          "spellAttack",
+          "spellSaveDc",
+          "spellSlots"
+        ],
+        "lineCount": 41
+      },
+      {
+        "file": "src/components/spells/SpellRuntimeIntegrationMount.tsx",
+        "score": 3,
+        "signals": [
+          "asi",
+          "maxHp",
+          "xp"
+        ],
+        "exports": [
+          "SpellRuntimeIntegrationMount"
+        ],
+        "lineCount": 306
+      },
+      {
+        "file": "src/core/rulesets/damageSaveSpellOfficial.test.ts",
+        "score": 3,
+        "signals": [
+          "characterLevel",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 62
+      },
+      {
+        "file": "src/core/rulesets/globalSpellRuntime.test.ts",
+        "score": 3,
+        "signals": [
+          "characterLevel",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 49
+      },
+      {
+        "file": "src/core/rulesets/spellBuilderOfficial.test.ts",
+        "score": 3,
+        "signals": [
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [],
+        "lineCount": 82
+      }
+    ],
+    "ui": [
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "score": 13,
+        "signals": [
+          "levelUp",
+          "level up",
+          "classLevels",
+          "proficiencyBonus",
+          "asi",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "cantrip",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterDetail"
+        ],
+        "lineCount": 1443
+      },
+      {
+        "file": "src/features/builder/Builder.tsx",
+        "score": 12,
+        "signals": [
+          "characterLevel",
+          "classLevels",
+          "proficiencyBonus",
+          "asi",
+          "feat",
+          "subclass",
+          "hitPoints",
+          "maxHp",
+          "spellSlots",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "Builder"
+        ],
+        "lineCount": 1474
+      },
+      {
+        "file": "src/features/characters/characterShared.tsx",
+        "score": 12,
+        "signals": [
+          "characterLevel",
+          "classLevels",
+          "proficiencyBonus",
+          "asi",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "cantrip",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterInventoryManager",
+          "CharacterSpellSelector",
+          "ClassBasedSpellSelector",
+          "FULL_CASTER_CLASSES",
+          "FULL_CASTER_SLOT_TABLE",
+          "calculateEffectiveArmorClass",
+          "calculateSuggestedArmorClass",
+          "createCharacterFromDraft",
+          "emptyDraft",
+          "getCharacterInventoryItems",
+          "getDefaultSpellSlots",
+          "getEquippedItems",
+          "getHitDieForClass",
+          "getInventoryQuantity",
+          "getInventoryWeight",
+          "getItemCategoryLabel",
+          "getItemRulesSummary",
+          "getSpellGroupTitle",
+          "getSpellLevelGroups",
+          "getSpellLevelLabel",
+          "getWeaponAbilityModifier",
+          "getWeaponAttackBonus",
+          "getWeaponDamageSummary",
+          "isSpellReadyToCast",
+          "normalizeCharacterDraft",
+          "normalizeHitDice",
+          "normalizeSpellSlots",
+          "resetDeathSaves",
+          "resetHitDice",
+          "resetSpellSlots",
+          "setInventoryItemQuantity",
+          "sortSpellsByLevelAndName"
+        ],
+        "lineCount": 1244
+      },
+      {
+        "file": "src/features/play-mode/PlayMode.tsx",
+        "score": 12,
+        "signals": [
+          "classLevels",
+          "proficiencyBonus",
+          "asi",
+          "feat",
+          "subclass",
+          "hitPoints",
+          "maxHp",
+          "spellSlots",
+          "cantrip",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "PlayMode"
+        ],
+        "lineCount": 937
+      },
+      {
+        "file": "src/features/characters/LevelUpAssistant.tsx",
+        "score": 11,
+        "signals": [
+          "levelUp",
+          "level up",
+          "classLevels",
+          "proficiencyBonus",
+          "asi",
+          "feat",
+          "subclass",
+          "cantrip",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "LevelUpAssistant"
+        ],
+        "lineCount": 322
+      },
+      {
+        "file": "src/features/characters/CharacterEditor.tsx",
+        "score": 8,
+        "signals": [
+          "classLevels",
+          "proficiencyBonus",
+          "feat",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterEditor"
+        ],
+        "lineCount": 434
+      },
+      {
+        "file": "src/components/classFeatures/ClassFeaturePanel.tsx",
+        "score": 7,
+        "signals": [
+          "characterLevel",
+          "proficiencyBonus",
+          "asi",
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "ClassFeaturePanel",
+          "ClassFeaturePanelProps"
+        ],
+        "lineCount": 150
+      },
+      {
+        "file": "src/features/classes/ClassCatalogPage.tsx",
+        "score": 7,
+        "signals": [
+          "proficiencyBonus",
+          "asi",
+          "feat",
+          "subclass",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "ClassCatalogPage"
+        ],
+        "lineCount": 31
+      },
+      {
+        "file": "src/features/campaigns/Campaigns.tsx",
+        "score": 6,
+        "signals": [
+          "proficiencyBonus",
+          "asi",
+          "hitPoints",
+          "maxHp",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "Campaigns"
+        ],
+        "lineCount": 1433
+      },
+      {
+        "file": "src/features/characters/CharacterCompare.tsx",
+        "score": 6,
+        "signals": [
+          "proficiencyBonus",
+          "subclass",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CharacterCompare"
+        ],
+        "lineCount": 217
+      },
+      {
+        "file": "src/features/player-test/PlayerTestCenter.tsx",
+        "score": 6,
+        "signals": [
+          "level up",
+          "asi",
+          "feat",
+          "multiclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "PlayerTestCenter"
+        ],
+        "lineCount": 48
+      },
+      {
+        "file": "src/features/characters/Characters.tsx",
+        "score": 5,
+        "signals": [
+          "proficiencyBonus",
+          "subclass",
+          "maxHp",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "Characters"
+        ],
+        "lineCount": 329
+      },
+      {
+        "file": "src/features/homebrew/HomebrewLab.tsx",
+        "score": 5,
+        "signals": [
+          "proficiencyBonus",
+          "hitPoints",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "HomebrewLab"
+        ],
+        "lineCount": 1733
+      },
+      {
+        "file": "src/features/monsters/MonsterLibrary.tsx",
+        "score": 5,
+        "signals": [
+          "proficiencyBonus",
+          "asi",
+          "hitPoints",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "MonsterDetail",
+          "MonsterLibrary"
+        ],
+        "lineCount": 1023
+      },
+      {
+        "file": "src/features/rest/RestCenterPage.tsx",
+        "score": 5,
+        "signals": [
+          "feat",
+          "maxHp",
+          "spellSlots",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "RestCenterPage"
+        ],
+        "lineCount": 86
+      },
+      {
+        "file": "src/shared/commands/CommandPalette.tsx",
+        "score": 5,
+        "signals": [
+          "feat",
+          "subclass",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "CommandPalette"
+        ],
+        "lineCount": 336
+      },
+      {
+        "file": "src/components/classFeatures/ClassFeatureRuntimeIntegrationMount.tsx",
+        "score": 4,
+        "signals": [
+          "asi",
+          "feat",
+          "subclass",
+          "xp"
+        ],
+        "exports": [
+          "ClassFeatureRuntimeIntegrationMount"
+        ],
+        "lineCount": 141
+      },
+      {
+        "file": "src/components/spells/SpellCastingRuntimePanel.tsx",
+        "score": 4,
+        "signals": [
+          "spellSlots",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "SpellCastingRuntimePanel",
+          "SpellCastingRuntimePanelProps"
+        ],
+        "lineCount": 77
+      },
+      {
+        "file": "src/features/builder/AncestryChoicePanel.tsx",
+        "score": 4,
+        "signals": [
+          "feat",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "AncestryChoicePanel"
+        ],
+        "lineCount": 181
+      },
+      {
+        "file": "src/features/combat-tracker/CombatTrackerPage.tsx",
+        "score": 4,
+        "signals": [
+          "feat",
+          "hitPoints",
+          "maxHp",
+          "xp"
+        ],
+        "exports": [
+          "CombatTrackerPage"
+        ],
+        "lineCount": 379
+      },
+      {
+        "file": "src/features/homebrew/HomebrewPackageCreator.tsx",
+        "score": 4,
+        "signals": [
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "HomebrewPackageCreator"
+        ],
+        "lineCount": 369
+      },
+      {
+        "file": "src/features/library/Library.tsx",
+        "score": 4,
+        "signals": [
+          "hitPoints",
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "Library"
+        ],
+        "lineCount": 241
+      },
+      {
+        "file": "src/features/subclasses/SubclassCatalogPage.tsx",
+        "score": 4,
+        "signals": [
+          "feat",
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "SubclassCatalogPage"
+        ],
+        "lineCount": 13
+      },
+      {
+        "file": "src/components/spells/SpellRuntimeIntegrationMount.tsx",
+        "score": 3,
+        "signals": [
+          "asi",
+          "maxHp",
+          "xp"
+        ],
+        "exports": [
+          "SpellRuntimeIntegrationMount"
+        ],
+        "lineCount": 306
+      },
+      {
+        "file": "src/features/campaigns/EncounterCombatRolls.tsx",
+        "score": 3,
+        "signals": [
+          "proficiencyBonus",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "EncounterCombatRolls"
+        ],
+        "lineCount": 285
+      },
+      {
+        "file": "src/features/dashboard/Dashboard.tsx",
+        "score": 3,
+        "signals": [
+          "maxHp",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "Dashboard"
+        ],
+        "lineCount": 296
+      },
+      {
+        "file": "src/features/feats/FeatCatalogPage.tsx",
+        "score": 3,
+        "signals": [
+          "feat",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "FeatCatalogPage"
+        ],
+        "lineCount": 71
+      },
+      {
+        "file": "src/features/help/HelpCenter.tsx",
+        "score": 3,
+        "signals": [
+          "asi",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "HelpCenter"
+        ],
+        "lineCount": 324
+      },
+      {
+        "file": "src/features/legacy/AppRoutes.tsx",
+        "score": 3,
+        "signals": [
+          "feat",
+          "subclass",
+          "xp"
+        ],
+        "exports": [
+          "AppRoutes"
+        ],
+        "lineCount": 472
+      },
+      {
+        "file": "src/features/rulesets/RulesetCenterPage.tsx",
+        "score": 3,
+        "signals": [
+          "subclass",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "RulesetCenterPage"
+        ],
+        "lineCount": 143
+      },
+      {
+        "file": "src/features/spellbook/Spellbook.tsx",
+        "score": 3,
+        "signals": [
+          "cantrip",
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "Spellbook"
+        ],
+        "lineCount": 262
+      },
+      {
+        "file": "src/shared/layout/AppFrame.tsx",
+        "score": 3,
+        "signals": [
+          "asi",
+          "feat",
+          "xp"
+        ],
+        "exports": [
+          "AppFrame"
+        ],
+        "lineCount": 218
+      },
+      {
+        "file": "src/App.tsx",
+        "score": 2,
+        "signals": [
+          "feat",
+          "xp"
+        ],
+        "exports": [],
+        "lineCount": 4
+      },
+      {
+        "file": "src/components/rest/RestActionsPanel.tsx",
+        "score": 2,
+        "signals": [
+          "spellSlots",
+          "xp"
+        ],
+        "exports": [
+          "RestActionsPanel",
+          "RestActionsPanelProps"
+        ],
+        "lineCount": 111
+      },
+      {
+        "file": "src/components/rest/RestRuntimeIntegrationMount.tsx",
+        "score": 2,
+        "signals": [
+          "asi",
+          "xp"
+        ],
+        "exports": [
+          "RestRuntimeIntegrationMount"
+        ],
+        "lineCount": 139
+      },
+      {
+        "file": "src/features/backup/DataBackup.tsx",
+        "score": 2,
+        "signals": [
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "DataBackup"
+        ],
+        "lineCount": 375
+      },
+      {
+        "file": "src/features/campaigns/CampaignDashboard.tsx",
+        "score": 2,
+        "signals": [
+          "maxHp",
+          "xp"
+        ],
+        "exports": [
+          "CampaignDashboard"
+        ],
+        "lineCount": 189
+      },
+      {
+        "file": "src/features/campaigns/EncounterDifficultyPanel.tsx",
+        "score": 2,
+        "signals": [
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "EncounterDifficultyPanel"
+        ],
+        "lineCount": 112
+      },
+      {
+        "file": "src/features/characters/ChoiceDebtResolver.tsx",
+        "score": 2,
+        "signals": [
+          "xp",
+          "level"
+        ],
+        "exports": [
+          "ChoiceDebtResolver"
+        ],
+        "lineCount": 14
+      },
+      {
+        "file": "src/features/characters/InventoryEconomyPanel.tsx",
+        "score": 2,
+        "signals": [
+          "asi",
+          "xp"
+        ],
+        "exports": [
+          "InventoryEconomyPanel"
+        ],
+        "lineCount": 13
+      }
+    ]
+  },
+  "status": "READY"
+}

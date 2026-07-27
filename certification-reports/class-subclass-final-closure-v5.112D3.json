@@ -1,0 +1,27 @@
+{
+  "package": "v5.112D3",
+  "domain": "class-subclass-runtime-ui",
+  "status": "GREEN",
+  "generatedAt": "2026-07-25T13:32:51.420Z",
+  "certified": {
+    "core": 1242,
+    "e2e": 2,
+    "total": 1244
+  },
+  "requiredFiles": [
+    "src/core/rulesets/classSubclassRuntimeRules.ts",
+    "src/core/rulesets/classSubclassCharacterAdapter.ts",
+    "src/core/rulesets/classFeaturePersistenceBridge.ts",
+    "src/components/classFeatures/ClassFeaturePanel.tsx",
+    "src/components/classFeatures/ClassFeatureRuntimeIntegrationMount.tsx",
+    "e2e/class-feature-ui-v5.112D3.spec.ts",
+    "dist/index.html",
+    "dist/manifest.webmanifest",
+    "dist/sw.js",
+    "certification-reports/class-subclass-runtime-v5.112B.json",
+    "certification-reports/class-subclass-golden-character-adapter-v5.112C.json",
+    "certification-reports/class-subclass-ui-contract-v5.112D1.json",
+    "certification-reports/class-feature-panel-persistence-v5.112D2.json"
+  ],
+  "missingFiles": []
+}

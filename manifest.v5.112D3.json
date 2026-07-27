@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Class Feature UI Wiring E2E Final Closure Mega",
+  "version": "5.112D3",
+  "requires": [
+    "v5.112D2.1"
+  ],
+  "runtime_changes": true,
+  "expected_certified_total": 1244
+}

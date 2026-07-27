@@ -1,0 +1,2559 @@
+{
+  "package": "v5.111A",
+  "domain": "rest-recovery-resource",
+  "generatedAt": "2026-07-25T11:54:10.755Z",
+  "scannedSourceFiles": 532,
+  "matchedFiles": 176,
+  "capabilityHints": {
+    "shortRest": [
+      "src/shared/release/releaseNotes.ts",
+      "src/features/characters/CharacterDetail.tsx",
+      "src/features/play-mode/PlayMode.tsx",
+      "src/certification/oracle/restRecoveryOracle.test.ts",
+      "src/core/rulesets/levelOneRestReadiness.ts",
+      "src/features/rest/RestCenterPage.tsx",
+      "src/core/rulesets/playerJourneyIntegration.test.ts",
+      "src/features/rest/restSheetPlayIntegration.test.ts",
+      "src/features/rest/restAutomation.test.ts",
+      "src/core/rulesets/classFeatureRuntime.ts",
+      "src/features/homebrew/HomebrewPackageCreator.tsx",
+      "src/core/rulesets/classFeatureEngine.ts",
+      "src/core/rulesets/classSpecificRuntimePolicy.ts",
+      "src/core/rulesets/classSubclassRuntimeClosure.ts",
+      "src/core/rulesets/levelOneSupportReadiness.ts",
+      "src/core/rulesets/martialClassRuntime.ts"
+    ],
+    "longRest": [
+      "src/shared/release/releaseNotes.ts",
+      "src/features/characters/CharacterDetail.tsx",
+      "src/features/play-mode/PlayMode.tsx",
+      "src/certification/oracle/restRecoveryOracle.test.ts",
+      "src/core/rulesets/levelOneRestReadiness.ts",
+      "src/features/rest/RestCenterPage.tsx",
+      "src/core/rulesets/playerJourneyIntegration.test.ts",
+      "src/features/rest/restSheetPlayIntegration.test.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/features/rest/restAutomation.test.ts",
+      "src/features/homebrew/HomebrewPackageCreator.tsx",
+      "src/core/rulesets/advancedFeatRuntimeRules.ts",
+      "src/core/rulesets/classSpecificRuntimePolicy.ts",
+      "src/core/rulesets/classSubclassRuntimeClosure.ts",
+      "src/features/player-test/PlayerTestCenter.tsx",
+      "src/core/rulesets/ancestryChoiceRules.ts"
+    ],
+    "hitDice": [
+      "src/shared/release/releaseNotes.ts",
+      "src/features/characters/CharacterDetail.tsx",
+      "src/certification/oracle/restRecoveryOracle.test.ts",
+      "src/core/rulesets/levelOneRestReadiness.ts",
+      "src/features/rest/RestCenterPage.tsx",
+      "src/core/rulesets/playerJourneyIntegration.test.ts",
+      "src/features/rest/restAutomation.test.ts",
+      "src/core/rulesets/levelOneSupportReadiness.test.ts",
+      "src/features/homebrew/HomebrewPackageCreator.tsx",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/levelOneDefenseReadiness.ts",
+      "src/core/rulesets/levelOneSupportReadiness.ts",
+      "src/core/rulesets/officialFeatCatalog2024.ts",
+      "src/core/rulesets/playerJourneyIntegration.ts",
+      "src/core/rulesets/spellSummonPersistentRules.ts",
+      "src/features/builder/Builder.tsx",
+      "src/features/characters/LevelUpAssistant.tsx",
+      "src/features/player-test/PlayerTestCenter.tsx",
+      "src/core/rulesets/levelOneRestReadiness.test.ts",
+      "src/core/rulesets/paladinBuilderCertification.ts",
+      "src/core/rulesets/rangerBuilderCertification.ts",
+      "src/core/rulesets/wizardBuilderCertification.ts",
+      "src/features/classes/ClassCatalogPage.tsx",
+      "src/features/homebrew/HomebrewLab.tsx",
+      "src/certification/oracle/classBackgroundOracle.test.ts",
+      "src/certification/oracle/progressionOracle.test.ts",
+      "src/core/rulesets/barbarianBuilderCertification.ts",
+      "src/core/rulesets/bardBuilderCertification.ts",
+      "src/core/rulesets/clericBuilderCertification.ts",
+      "src/core/rulesets/contentIntegrityAudit.ts",
+      "src/core/rulesets/druidBuilderCertification.ts",
+      "src/core/rulesets/fighterBuilderCertification.ts",
+      "src/core/rulesets/levelOneDefenseReadiness.test.ts",
+      "src/core/rulesets/monkBuilderCertification.ts",
+      "src/core/rulesets/multiclassRules.test.ts",
+      "src/core/rulesets/rogueBuilderCertification.ts",
+      "src/core/rulesets/sorcererBuilderCertification.ts",
+      "src/core/rulesets/warlockBuilderCertification.ts",
+      "src/features/characters/CharacterEditor.tsx",
+      "src/features/characters/characterEditorRules.test.ts",
+      "src/features/characters/levelUpCalculator.test.ts"
+    ],
+    "spellSlots": [
+      "src/shared/release/releaseNotes.ts",
+      "src/features/characters/CharacterDetail.tsx",
+      "src/features/play-mode/PlayMode.tsx",
+      "src/certification/oracle/restRecoveryOracle.test.ts",
+      "src/core/rulesets/levelOneRestReadiness.ts",
+      "src/features/rest/RestCenterPage.tsx",
+      "src/core/rulesets/playerJourneyIntegration.test.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/core/rulesets/classFeatureRuntime.ts",
+      "src/core/character/characterIntegrity.ts",
+      "src/core/rulesets/classFeatureEngine.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/officialFeatCatalog2024.ts",
+      "src/core/rulesets/spellExpansion.ts",
+      "src/core/rulesets/spellSummonPersistentRules.ts",
+      "src/features/characters/CharacterCompare.tsx",
+      "src/features/characters/LevelUpAssistant.tsx",
+      "src/core/rulesets/fullCharacterCertification.ts",
+      "src/core/rulesets/paladinBuilderCertification.ts",
+      "src/core/rulesets/rangerBuilderCertification.ts",
+      "src/core/rulesets/spellSummonPersistentOfficial.test.ts",
+      "src/core/rulesets/wizardBuilderCertification.ts",
+      "src/features/classes/ClassCatalogPage.tsx",
+      "src/features/help/HelpCenter.tsx",
+      "src/features/search/globalSearchEngine.ts",
+      "src/core/rulesets/classProgression.test.ts",
+      "src/core/rulesets/classProgressionAudit.ts",
+      "src/core/rulesets/invocationRules.ts",
+      "src/core/rulesets/levelUpAdvancementReadiness.ts"
+    ],
+    "resources": [
+      "src/shared/release/releaseNotes.ts",
+      "src/features/characters/CharacterDetail.tsx",
+      "src/features/play-mode/PlayMode.tsx",
+      "src/certification/oracle/restRecoveryOracle.test.ts",
+      "src/core/rulesets/levelOneRestReadiness.ts",
+      "src/features/rest/RestCenterPage.tsx",
+      "src/core/rulesets/playerJourneyIntegration.test.ts",
+      "src/features/rest/restSheetPlayIntegration.test.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/features/rest/restAutomation.test.ts",
+      "src/core/rulesets/classFeatureRuntime.ts",
+      "src/core/rulesets/levelOneSupportReadiness.test.ts",
+      "src/features/homebrew/HomebrewPackageCreator.tsx",
+      "src/core/character/character.types.ts",
+      "src/core/homebrew/homebrewContentRuntimeIntegration.test.ts",
+      "src/core/rulesets/characterSheetCertification.test.ts",
+      "src/core/rulesets/classFeatureEngine.ts",
+      "src/core/rulesets/classFeatureRuntime.test.ts",
+      "src/core/rulesets/classSpecificRuntimePolicy.ts",
+      "src/core/rulesets/classSubclassRuntimeClosure.ts",
+      "src/core/rulesets/combatAutomationRuntime.test.ts",
+      "src/core/rulesets/fullCharacterCertification.test.ts",
+      "src/core/rulesets/levelOneDefenseReadiness.ts",
+      "src/core/rulesets/levelOneSupportReadiness.ts",
+      "src/core/rulesets/multiclassSpellcastingSeparation.test.ts",
+      "src/core/rulesets/playerJourneyIntegration.ts",
+      "src/core/rulesets/ruleset.types.ts",
+      "src/core/storage/characterStorage.ts",
+      "src/features/builder/Builder.tsx",
+      "src/features/characters/characterShared.tsx",
+      "src/features/combat-tracker/CombatTurnAutomationPanel.tsx",
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/reference/restRecovery.reference.ts",
+      "src/core/character/sheetPlayModeConsistency.test.ts",
+      "src/core/homebrew/homebrewCreator.ts",
+      "src/core/homebrew/homebrewRuntimeIntegration.test.ts",
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/combatAutomationRuntime.ts",
+      "src/core/rulesets/combatTurnRules.test.ts",
+      "src/core/rulesets/contentIntegrityAudit.test.ts",
+      "src/core/rulesets/fullCharacterCertification.ts",
+      "src/core/rulesets/levelOneActionEconomyReadiness.test.ts",
+      "src/core/rulesets/levelOneAncestryReadiness.test.ts",
+      "src/core/rulesets/levelOneFeatureChoiceReadiness.test.ts",
+      "src/core/rulesets/levelOneOriginReadiness.test.ts",
+      "src/core/rulesets/levelOneProficiencyReadiness.test.ts",
+      "src/core/rulesets/levelOneRestReadiness.test.ts",
+      "src/core/rulesets/levelUpAdvancementReadiness.test.ts",
+      "src/core/rulesets/levelUpChoiceCompletion.test.ts",
+      "src/core/rulesets/martialClassRuntime.ts",
+      "src/core/rulesets/subclassRuntimeRules.ts",
+      "src/features/combat-tracker/CombatTrackerPage.tsx",
+      "src/features/rest/restAutomation.ts",
+      "src/test/fixtures.ts",
+      "src/core/character/characterLifecycleAudit.ts",
+      "src/core/character/playerJourneyConsistency.test.ts",
+      "src/core/character/playerJourneyConsistency.ts",
+      "src/core/homebrew/homebrewCreator.test.ts",
+      "src/core/homebrew/homebrewFoundation.test.ts",
+      "src/core/homebrew/homebrewFoundation.ts",
+      "src/core/homebrew/homebrewPackageSharing.ts",
+      "src/core/homebrew/homebrewRuntimeIntegration.ts",
+      "src/core/rulesets/actionEconomyRules.test.ts",
+      "src/core/rulesets/actionEconomyRules.ts",
+      "src/core/rulesets/characterSheetCertification.ts",
+      "src/core/rulesets/classFeatureEngine.test.ts",
+      "src/core/rulesets/classSubclassRuntimeClosure.test.ts",
+      "src/core/rulesets/divineClassRuntime.test.ts",
+      "src/core/rulesets/fighterRules.test.ts",
+      "src/core/rulesets/levelOneActionEconomyReadiness.ts",
+      "src/core/rulesets/levelOneCombatReadiness.ts",
+      "src/core/rulesets/levelOneToTwentyJourney.ts",
+      "src/core/rulesets/martialClassRuntime.test.ts",
+      "src/core/rulesets/monkBuilderCertification.test.ts",
+      "src/core/rulesets/monkRules.ts",
+      "src/core/rulesets/runtimeGapClosure.test.ts",
+      "src/core/rulesets/singleClassPlayableReadiness.test.ts",
+      "src/core/rulesets/singleClassPlayableReadiness.ts",
+      "src/core/rulesets/subclassRuntimeRules.test.ts",
+      "src/features/backup/characterBackup.test.ts",
+      "src/features/characters/levelUpCalculator.ts",
+      "src/features/subclasses/SubclassCatalogPage.tsx"
+    ],
+    "exhaustion": [
+      "src/shared/release/releaseNotes.ts",
+      "src/features/characters/CharacterDetail.tsx",
+      "src/features/play-mode/PlayMode.tsx",
+      "src/certification/oracle/restRecoveryOracle.test.ts",
+      "src/core/rulesets/levelOneRestReadiness.ts",
+      "src/features/rest/RestCenterPage.tsx",
+      "src/core/rulesets/playerJourneyIntegration.test.ts",
+      "src/features/rest/restSheetPlayIntegration.test.ts",
+      "src/features/rest/restAutomation.test.ts",
+      "src/core/character/character.types.ts",
+      "src/core/character/characterIntegrity.ts",
+      "src/core/homebrew/homebrewContentRuntimeIntegration.test.ts",
+      "src/core/rulesets/characterSheetCertification.test.ts",
+      "src/core/rulesets/classFeatureRuntime.test.ts",
+      "src/core/rulesets/fullCharacterCertification.test.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/multiclassSpellcastingSeparation.test.ts",
+      "src/core/rulesets/playerJourneyIntegration.ts",
+      "src/core/rulesets/ruleset.types.ts",
+      "src/core/storage/characterStorage.ts",
+      "src/features/characters/CharacterCompare.tsx",
+      "src/features/characters/characterShared.tsx",
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/reference/restRecovery.reference.ts",
+      "src/core/character/sheetPlayModeConsistency.ts",
+      "src/core/homebrew/homebrewRuntimeIntegration.test.ts",
+      "src/core/rulesets/itemUseRules.test.ts",
+      "src/core/rulesets/itemUseRules.ts",
+      "src/core/rulesets/levelOneAncestryReadiness.test.ts",
+      "src/core/rulesets/levelOneFeatureChoiceReadiness.test.ts",
+      "src/core/rulesets/levelOneOriginReadiness.test.ts",
+      "src/core/rulesets/levelOneProficiencyReadiness.test.ts",
+      "src/core/rulesets/levelUpAdvancementReadiness.test.ts",
+      "src/core/rulesets/levelUpChoiceCompletion.test.ts",
+      "src/core/rulesets/runtimeCoverageCertification.ts",
+      "src/core/rulesets/subclassRuntimeRules.ts",
+      "src/features/rest/restAutomation.ts",
+      "src/test/fixtures.ts",
+      "src/core/character/characterIntegrity.test.ts",
+      "src/core/rulesets/equipmentMagicItemFinalCoverage.ts",
+      "src/core/rulesets/exhaustionRules.test.ts",
+      "src/core/rulesets/exhaustionRules.ts",
+      "src/core/rulesets/levelOneSpellcastingReadiness.test.ts",
+      "src/core/rulesets/progressionDraftNormalization.test.ts",
+      "src/core/storage/characterHydration.test.ts",
+      "src/features/characters/characterEditorRules.ts"
+    ],
+    "deathSaves": [
+      "src/shared/release/releaseNotes.ts",
+      "src/features/characters/CharacterDetail.tsx",
+      "src/features/play-mode/PlayMode.tsx",
+      "src/features/rest/RestCenterPage.tsx",
+      "src/core/character/characterIntegrity.ts",
+      "src/core/rulesets/combatAutomationRuntime.test.ts",
+      "src/core/rulesets/officialFeatCatalog2024.ts",
+      "src/features/combat-tracker/CombatTurnAutomationPanel.tsx",
+      "src/core/rulesets/combatStatusRules.test.ts"
+    ],
+    "concentration": [
+      "src/shared/release/releaseNotes.ts",
+      "src/features/characters/CharacterDetail.tsx",
+      "src/features/play-mode/PlayMode.tsx",
+      "src/features/rest/restSheetPlayIntegration.test.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/core/rulesets/classFeatureRuntime.ts",
+      "src/core/rulesets/levelOneSupportReadiness.test.ts",
+      "src/core/character/character.types.ts",
+      "src/core/homebrew/homebrewContentRuntimeIntegration.test.ts",
+      "src/core/rulesets/advancedFeatRuntimeRules.ts",
+      "src/core/rulesets/characterSheetCertification.test.ts",
+      "src/core/rulesets/classFeatureRuntime.test.ts",
+      "src/core/rulesets/combatAutomationRuntime.test.ts",
+      "src/core/rulesets/fullCharacterCertification.test.ts",
+      "src/core/rulesets/multiclassSpellcastingSeparation.test.ts",
+      "src/core/rulesets/ruleset.types.ts",
+      "src/core/rulesets/spellExpansion.ts",
+      "src/core/rulesets/spellSummonPersistentRules.ts",
+      "src/core/storage/characterStorage.ts",
+      "src/features/characters/characterShared.tsx",
+      "src/features/combat-tracker/CombatTurnAutomationPanel.tsx",
+      "src/features/player-test/PlayerTestCenter.tsx",
+      "src/core/character/sheetPlayModeConsistency.test.ts",
+      "src/core/character/sheetPlayModeConsistency.ts",
+      "src/core/character/survivalRules.test.ts",
+      "src/core/homebrew/homebrewCreator.ts",
+      "src/core/rulesets/combatAutomationRuntime.ts",
+      "src/core/rulesets/combatStatusRules.test.ts",
+      "src/core/rulesets/combatTurnRules.test.ts",
+      "src/core/rulesets/contentIntegrityAudit.test.ts",
+      "src/core/rulesets/featExpansion.ts",
+      "src/core/rulesets/itemUseRules.test.ts",
+      "src/core/rulesets/itemUseRules.ts",
+      "src/core/rulesets/levelOneActionEconomyReadiness.test.ts",
+      "src/core/rulesets/runtimeCoverageCertification.ts",
+      "src/core/rulesets/spellSummonPersistentOfficial.test.ts",
+      "src/features/combat-tracker/CombatTrackerPage.tsx",
+      "src/features/help/HelpCenter.tsx",
+      "src/features/homebrew/HomebrewLab.tsx",
+      "src/features/search/globalSearchEngine.ts",
+      "src/core/character/characterLifecycle.integration.test.ts",
+      "src/core/character/survivalRules.ts",
+      "src/core/homebrew/homebrewContentRuntimeIntegration.ts",
+      "src/core/release/postReleaseQa.ts",
+      "src/core/rulesets/combatStatusRules.ts",
+      "src/core/rulesets/combatTurnRules.ts",
+      "src/core/rulesets/damageSaveSpellOfficial.test.ts",
+      "src/core/rulesets/featOfficialCertification.test.ts",
+      "src/core/rulesets/featRules.test.ts",
+      "src/core/rulesets/globalSpellRuntime.test.ts",
+      "src/core/rulesets/globalSpellRuntime.ts",
+      "src/core/rulesets/itemEffectRuntimeRules.test.ts",
+      "src/core/rulesets/levelOneCombatReadiness.test.ts",
+      "src/core/rulesets/levelOneOffenseReadiness.test.ts",
+      "src/core/rulesets/levelOneSocialReadiness.test.ts",
+      "src/core/rulesets/levelOneUtilityReadiness.test.ts",
+      "src/core/rulesets/metamagicRules.ts",
+      "src/core/rulesets/runtimeCoverageCertification.test.ts",
+      "src/core/rulesets/runtimeCoverageClosure.test.ts",
+      "src/core/rulesets/spellBehaviorRules.test.ts",
+      "src/core/rulesets/spellBuilderOfficial.test.ts",
+      "src/core/rulesets/spellCertificationExpansion.test.ts",
+      "src/core/rulesets/spellCertificationExpansion.ts",
+      "src/core/rulesets/spellControlOfficial.test.ts",
+      "src/core/rulesets/spellControlRules.ts",
+      "src/core/rulesets/spellDefenseMovementOfficial.test.ts",
+      "src/core/rulesets/spellDefenseMovementRules.ts",
+      "src/core/rulesets/spellEffectRules.test.ts",
+      "src/core/rulesets/spellEffectRules.ts",
+      "src/core/rulesets/spellMaterialRules.test.ts",
+      "src/core/rulesets/spellResolution.test.ts",
+      "src/core/rulesets/spellRules.test.ts",
+      "src/core/rulesets/spellRuntimeOfficial2024.test.ts",
+      "src/features/combat-tracker/combatTrackerStorage.ts",
+      "src/features/library/Library.tsx",
+      "src/features/search/globalSearch.test.ts",
+      "src/features/spellbook/Spellbook.tsx",
+      "src/shared/i18n/uiTextCatalog.ts"
+    ]
+  },
+  "matches": [
+    {
+      "file": "src/shared/release/releaseNotes.ts",
+      "keywords": [
+        "short rest",
+        "long rest",
+        "hit dice",
+        "hit die",
+        "spell slot",
+        "resource",
+        "exhaustion",
+        "death save",
+        "concentration",
+        "active spell effect",
+        "temporary hp",
+        "temp hp"
+      ],
+      "exportedSymbols": [
+        "getCurrentRelease"
+      ],
+      "lineCount": 1057
+    },
+    {
+      "file": "src/features/characters/CharacterDetail.tsx",
+      "keywords": [
+        "short rest",
+        "long rest",
+        "hit die",
+        "spell slot",
+        "resource",
+        "exhaustion",
+        "death save",
+        "concentration",
+        "temp hp"
+      ],
+      "exportedSymbols": [
+        "CharacterDetail",
+        "adjustResource",
+        "advanceConditionRound",
+        "canCastSpell",
+        "castSpell",
+        "clearDeathSaves",
+        "deleteCurrentCharacter",
+        "getBasicSpellRoll",
+        "getResolutionLabel",
+        "getSpellEffectValue",
+        "longRest",
+        "parseDiceNotation",
+        "quickCharacterRoll",
+        "spendHitDie",
+        "toggleCondition",
+        "togglePreparedSpell",
+        "updateConditionDuration",
+        "updateDeathSave",
+        "updateExhaustion",
+        "updateHp",
+        "updateTempHp"
+      ],
+      "lineCount": 1443
+    },
+    {
+      "file": "src/features/play-mode/PlayMode.tsx",
+      "keywords": [
+        "short rest",
+        "long rest",
+        "spell slot",
+        "resource",
+        "exhaustion",
+        "death save",
+        "concentration",
+        "temp hp"
+      ],
+      "exportedSymbols": [
+        "PlayMode",
+        "activateChannelDivinity",
+        "advanceEffectRound",
+        "applyArcaneRecovery",
+        "castArcanum",
+        "castSpell",
+        "commit",
+        "concentrationSave",
+        "consumeItem",
+        "convertSlotToSorceryPoints",
+        "createSorcerySlot",
+        "divineSmite",
+        "endSpellEffect",
+        "executeClassAction",
+        "executeHomebrewAction",
+        "grantBardicInspiration",
+        "handleDefensiveFightingStyle",
+        "handleFeatAction",
+        "handleSubclassAction",
+        "healDamage",
+        "longRest",
+        "monkAction",
+        "quickRoll",
+        "resolvedCheck",
+        "rollDeathSave",
+        "shortRest",
+        "spendMagicItemCharge",
+        "spendSlot",
+        "spendSorceryPoints",
+        "syncHomebrewResources",
+        "takeDamage",
+        "toggleAttunement",
+        "toggleCondition",
+        "unarmedStyleAttack",
+        "updateCompanionHp",
+        "updateHp",
+        "useActionSurge",
+        "useFavoredEnemy",
+        "useIndomitable",
+        "useSuperiorityDie",
+        "useWildShape",
+        "weaponAttack"
+      ],
+      "lineCount": 937
+    },
+    {
+      "file": "src/certification/oracle/restRecoveryOracle.test.ts",
+      "keywords": [
+        "short rest",
+        "long rest",
+        "hit dice",
+        "hit die",
+        "spell slot",
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 178
+    },
+    {
+      "file": "src/core/rulesets/levelOneRestReadiness.ts",
+      "keywords": [
+        "short rest",
+        "long rest",
+        "hit dice",
+        "hit die",
+        "spell slot",
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [
+        "getLevelOneRestReadiness",
+        "validHitDie",
+        "validResource",
+        "validSlot"
+      ],
+      "lineCount": 143
+    },
+    {
+      "file": "src/features/rest/RestCenterPage.tsx",
+      "keywords": [
+        "short rest",
+        "long rest",
+        "hit dice",
+        "spell slot",
+        "resource",
+        "exhaustion",
+        "death save"
+      ],
+      "exportedSymbols": [
+        "RestCenterPage",
+        "addResource",
+        "applyRest",
+        "changeKind",
+        "toggleCharacter",
+        "undoLast",
+        "updateResources"
+      ],
+      "lineCount": 86
+    },
+    {
+      "file": "src/core/rulesets/playerJourneyIntegration.test.ts",
+      "keywords": [
+        "short rest",
+        "long rest",
+        "hit dice",
+        "spell slot",
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 34
+    },
+    {
+      "file": "src/features/rest/restSheetPlayIntegration.test.ts",
+      "keywords": [
+        "short rest",
+        "long rest",
+        "resource",
+        "exhaustion",
+        "concentration",
+        "active spell effect"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 36
+    },
+    {
+      "file": "src/core/rulesets/subclassExpansion.ts",
+      "keywords": [
+        "long rest",
+        "spell slot",
+        "resource",
+        "concentration",
+        "temporary hp"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 137
+    },
+    {
+      "file": "src/features/rest/restAutomation.test.ts",
+      "keywords": [
+        "short rest",
+        "long rest",
+        "hit dice",
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 29
+    },
+    {
+      "file": "src/core/rulesets/classFeatureRuntime.ts",
+      "keywords": [
+        "short rest",
+        "spell slot",
+        "resource",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "applyClassFeatureUse",
+        "canUseClassFeature",
+        "endClassFeatureCondition",
+        "getClassFeatureRuntimePlan",
+        "getRemainingClassResource"
+      ],
+      "lineCount": 218
+    },
+    {
+      "file": "src/core/rulesets/levelOneSupportReadiness.test.ts",
+      "keywords": [
+        "hit dice",
+        "hit die",
+        "resource",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "draft"
+      ],
+      "lineCount": 60
+    },
+    {
+      "file": "src/features/homebrew/HomebrewPackageCreator.tsx",
+      "keywords": [
+        "short rest",
+        "long rest",
+        "hit die",
+        "resource"
+      ],
+      "exportedSymbols": [
+        "HomebrewPackageCreator",
+        "addMarketplaceSource",
+        "applyMarketplaceUpdate",
+        "downloadJson",
+        "importPackage",
+        "importRevocations",
+        "restoreQuarantine",
+        "rollbackSnapshot",
+        "runAutomaticSync",
+        "runSecurityScan",
+        "savePackage",
+        "stageEntity",
+        "syncMarketplaceSource",
+        "toggleMarketplaceSource",
+        "update"
+      ],
+      "lineCount": 369
+    },
+    {
+      "file": "src/core/character/character.types.ts",
+      "keywords": [
+        "resource",
+        "exhaustion",
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 223
+    },
+    {
+      "file": "src/core/character/characterIntegrity.ts",
+      "keywords": [
+        "spell slot",
+        "exhaustion",
+        "death save"
+      ],
+      "exportedSymbols": [
+        "auditCharacterIntegrity"
+      ],
+      "lineCount": 79
+    },
+    {
+      "file": "src/core/homebrew/homebrewContentRuntimeIntegration.test.ts",
+      "keywords": [
+        "resource",
+        "exhaustion",
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 27
+    },
+    {
+      "file": "src/core/rulesets/advancedFeatRuntimeRules.ts",
+      "keywords": [
+        "long rest",
+        "concentration",
+        "temporary hp"
+      ],
+      "exportedSymbols": [
+        "getAdvancedFeatRuntime",
+        "getInspiringLeaderTempHp"
+      ],
+      "lineCount": 71
+    },
+    {
+      "file": "src/core/rulesets/characterSheetCertification.test.ts",
+      "keywords": [
+        "resource",
+        "exhaustion",
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 4
+    },
+    {
+      "file": "src/core/rulesets/classFeatureEngine.ts",
+      "keywords": [
+        "short rest",
+        "spell slot",
+        "resource"
+      ],
+      "exportedSymbols": [
+        "getClassFeatureActions",
+        "getClassResources",
+        "mergeClassResources"
+      ],
+      "lineCount": 63
+    },
+    {
+      "file": "src/core/rulesets/classFeatureRuntime.test.ts",
+      "keywords": [
+        "resource",
+        "exhaustion",
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 61
+    },
+    {
+      "file": "src/core/rulesets/classSpecificRuntimePolicy.ts",
+      "keywords": [
+        "short rest",
+        "long rest",
+        "resource"
+      ],
+      "exportedSymbols": [
+        "area",
+        "getClassSpecificRuntimePolicyReport",
+        "scoreFor"
+      ],
+      "lineCount": 131
+    },
+    {
+      "file": "src/core/rulesets/classSubclassRuntimeClosure.ts",
+      "keywords": [
+        "short rest",
+        "long rest",
+        "resource"
+      ],
+      "exportedSymbols": [
+        "buildClassSubclassRuntimeClosureReport",
+        "certifyClassRuntime",
+        "certifySubclassRuntime",
+        "formatClassSubclassRuntimeClosureSummary"
+      ],
+      "lineCount": 49
+    },
+    {
+      "file": "src/core/rulesets/combatAutomationRuntime.test.ts",
+      "keywords": [
+        "resource",
+        "death save",
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 54
+    },
+    {
+      "file": "src/core/rulesets/fullCharacterCertification.test.ts",
+      "keywords": [
+        "resource",
+        "exhaustion",
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 27
+    },
+    {
+      "file": "src/core/rulesets/itemExpansion.ts",
+      "keywords": [
+        "hit dice",
+        "spell slot",
+        "exhaustion"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 153
+    },
+    {
+      "file": "src/core/rulesets/levelOneDefenseReadiness.ts",
+      "keywords": [
+        "hit dice",
+        "hit die",
+        "resource"
+      ],
+      "exportedSymbols": [
+        "getLevelOneDefenseReadiness",
+        "unique"
+      ],
+      "lineCount": 109
+    },
+    {
+      "file": "src/core/rulesets/levelOneSupportReadiness.ts",
+      "keywords": [
+        "short rest",
+        "hit dice",
+        "resource"
+      ],
+      "exportedSymbols": [
+        "getLevelOneSupportReadiness",
+        "isDefensiveSupportSpell",
+        "isHealingSpell",
+        "isRecoveryResource",
+        "normalize"
+      ],
+      "lineCount": 99
+    },
+    {
+      "file": "src/core/rulesets/multiclassSpellcastingSeparation.test.ts",
+      "keywords": [
+        "resource",
+        "exhaustion",
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 32
+    },
+    {
+      "file": "src/core/rulesets/officialFeatCatalog2024.ts",
+      "keywords": [
+        "hit dice",
+        "spell slot",
+        "death save"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 102
+    },
+    {
+      "file": "src/core/rulesets/playerJourneyIntegration.ts",
+      "keywords": [
+        "hit die",
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [
+        "getPlayerJourneyIntegrationSnapshot"
+      ],
+      "lineCount": 46
+    },
+    {
+      "file": "src/core/rulesets/ruleset.types.ts",
+      "keywords": [
+        "resource",
+        "exhaustion",
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 260
+    },
+    {
+      "file": "src/core/rulesets/spellExpansion.ts",
+      "keywords": [
+        "spell slot",
+        "concentration",
+        "temporary hp"
+      ],
+      "exportedSymbols": [
+        "SPELL_EXPANSION_2014",
+        "SPELL_EXPANSION_2024",
+        "build"
+      ],
+      "lineCount": 304
+    },
+    {
+      "file": "src/core/rulesets/spellSummonPersistentRules.ts",
+      "keywords": [
+        "hit dice",
+        "spell slot",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "getSummonPersistentSpellRuntime"
+      ],
+      "lineCount": 237
+    },
+    {
+      "file": "src/core/storage/characterStorage.ts",
+      "keywords": [
+        "resource",
+        "exhaustion",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "clampNumber",
+        "exportCharacters",
+        "getDefaultSpellSlots",
+        "hydrateCharacterRecord",
+        "hydrateConditionDurations",
+        "hydrateHitDice",
+        "hydrateInventory",
+        "hydrateResources",
+        "hydrateSpellSlots",
+        "inferHitDie",
+        "loadCharacters",
+        "saveCharacters"
+      ],
+      "lineCount": 275
+    },
+    {
+      "file": "src/features/builder/Builder.tsx",
+      "keywords": [
+        "hit dice",
+        "hit die",
+        "resource"
+      ],
+      "exportedSymbols": [
+        "Builder",
+        "adjustAsi",
+        "adjustPointBuy",
+        "applyStandardArray",
+        "assignStandardArray",
+        "goNext",
+        "goPrevious",
+        "goToFirstError",
+        "goToStep",
+        "goToValidationIssue",
+        "handleSubmit",
+        "selectArcanum",
+        "selectCompanion",
+        "toggleExpertise",
+        "toggleFeat",
+        "toggleFightingStyle",
+        "toggleInvocation",
+        "toggleManeuver",
+        "toggleMetamagic",
+        "toggleSkill",
+        "toggleWeaponMastery",
+        "toggleWildShapeForm",
+        "updateAbility",
+        "updateDraft"
+      ],
+      "lineCount": 1474
+    },
+    {
+      "file": "src/features/characters/CharacterCompare.tsx",
+      "keywords": [
+        "spell slot",
+        "exhaustion",
+        "temp hp"
+      ],
+      "exportedSymbols": [
+        "CharacterCompare",
+        "DifferenceValue",
+        "getTotalInventoryQuantity",
+        "updateSelection"
+      ],
+      "lineCount": 217
+    },
+    {
+      "file": "src/features/characters/characterShared.tsx",
+      "keywords": [
+        "resource",
+        "exhaustion",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "CharacterInventoryManager",
+        "CharacterSpellSelector",
+        "ClassBasedSpellSelector",
+        "FULL_CASTER_CLASSES",
+        "calculateEffectiveArmorClass",
+        "calculateSuggestedArmorClass",
+        "createCharacterFromDraft",
+        "emit",
+        "getCharacterInventoryItems",
+        "getDefaultSpellSlots",
+        "getEquippedItems",
+        "getHitDieForClass",
+        "getInventoryQuantity",
+        "getInventoryWeight",
+        "getItemCategoryLabel",
+        "getItemRulesSummary",
+        "getSpellGroupTitle",
+        "getSpellLevelGroups",
+        "getSpellLevelLabel",
+        "getWeaponAbilityModifier",
+        "getWeaponAttackBonus",
+        "getWeaponDamageSummary",
+        "isEquipped",
+        "isSpellReadyToCast",
+        "normalizeCharacterDraft",
+        "normalizeHitDice",
+        "normalizeSpellSlots",
+        "resetDeathSaves",
+        "resetHitDice",
+        "resetSpellSlots",
+        "setInventoryItemQuantity",
+        "sortSpellsByLevelAndName",
+        "toggleAttunement",
+        "toggleEquip",
+        "toggleKnownSpell",
+        "togglePreparedSpell",
+        "updateItemQuantity"
+      ],
+      "lineCount": 1244
+    },
+    {
+      "file": "src/features/characters/LevelUpAssistant.tsx",
+      "keywords": [
+        "hit dice",
+        "hit die",
+        "spell slot"
+      ],
+      "exportedSymbols": [
+        "LevelUpAssistant",
+        "confirmLevelUp",
+        "rollLevelHp",
+        "undoLatestLevelUp"
+      ],
+      "lineCount": 322
+    },
+    {
+      "file": "src/features/combat-tracker/CombatTurnAutomationPanel.tsx",
+      "keywords": [
+        "resource",
+        "death save",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "CombatTurnAutomationPanel"
+      ],
+      "lineCount": 43
+    },
+    {
+      "file": "src/features/player-test/PlayerTestCenter.tsx",
+      "keywords": [
+        "long rest",
+        "hit dice",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "PlayerTestCenter"
+      ],
+      "lineCount": 48
+    },
+    {
+      "file": "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "keywords": [
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [
+        "actualItem",
+        "actualItemFrom",
+        "base",
+        "character",
+        "refItem"
+      ],
+      "lineCount": 104
+    },
+    {
+      "file": "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "keywords": [
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [
+        "itemById",
+        "toActualItem",
+        "toCharacter"
+      ],
+      "lineCount": 546
+    },
+    {
+      "file": "src/certification/reference/restRecovery.reference.ts",
+      "keywords": [
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [
+        "abilityModifier",
+        "applyLongRest",
+        "applyShortRest",
+        "proficiencyBonus",
+        "recoverHitDice",
+        "recoverResources",
+        "recoverSpellSlots",
+        "spendHitDie",
+        "spendResource",
+        "spendSpellSlot"
+      ],
+      "lineCount": 192
+    },
+    {
+      "file": "src/core/character/sheetPlayModeConsistency.test.ts",
+      "keywords": [
+        "resource",
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 14
+    },
+    {
+      "file": "src/core/character/sheetPlayModeConsistency.ts",
+      "keywords": [
+        "exhaustion",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "compareSheetAndPlayMode",
+        "getSheetPlayModeConsistencySnapshot",
+        "getWeaponAbility",
+        "getWeaponConsistencyRows"
+      ],
+      "lineCount": 82
+    },
+    {
+      "file": "src/core/character/survivalRules.test.ts",
+      "keywords": [
+        "concentration",
+        "temporary hp"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 25
+    },
+    {
+      "file": "src/core/homebrew/homebrewCreator.ts",
+      "keywords": [
+        "resource",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "buildPayload",
+        "createEntityFromDraft",
+        "createPackageFromDraft",
+        "slugifyHomebrewId"
+      ],
+      "lineCount": 160
+    },
+    {
+      "file": "src/core/homebrew/homebrewRuntimeIntegration.test.ts",
+      "keywords": [
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 19
+    },
+    {
+      "file": "src/core/rulesets/ancestryChoiceRules.ts",
+      "keywords": [
+        "long rest",
+        "resource"
+      ],
+      "exportedSymbols": [
+        "getAncestryAbilityOptions",
+        "getAncestryBuilderContract",
+        "getAncestryGrantedSpells",
+        "getAncestryValidationErrors",
+        "getSelectedAncestryOption",
+        "mergeAncestrySkills"
+      ],
+      "lineCount": 252
+    },
+    {
+      "file": "src/core/rulesets/combatAutomationRuntime.ts",
+      "keywords": [
+        "resource",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "beginAutomatedTurn",
+        "createCombatAutomationState",
+        "createDeathSaveState",
+        "ensureCombatantAutomation",
+        "registerConcentrationDamage",
+        "resetDeathSaves",
+        "resolveDeathSave",
+        "spendAutomatedMovement",
+        "spendAutomatedResource"
+      ],
+      "lineCount": 157
+    },
+    {
+      "file": "src/core/rulesets/combatStatusRules.test.ts",
+      "keywords": [
+        "death save",
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 25
+    },
+    {
+      "file": "src/core/rulesets/combatTurnRules.test.ts",
+      "keywords": [
+        "resource",
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 30
+    },
+    {
+      "file": "src/core/rulesets/contentIntegrityAudit.test.ts",
+      "keywords": [
+        "resource",
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 82
+    },
+    {
+      "file": "src/core/rulesets/featExpansion.ts",
+      "keywords": [
+        "concentration",
+        "temporary hp"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 55
+    },
+    {
+      "file": "src/core/rulesets/fullCharacterCertification.ts",
+      "keywords": [
+        "spell slot",
+        "resource"
+      ],
+      "exportedSymbols": [
+        "certifyCharacterLifecycle",
+        "certifyCharacterRecord",
+        "certifyClassEdition",
+        "getFullCharacterCertification"
+      ],
+      "lineCount": 115
+    },
+    {
+      "file": "src/core/rulesets/itemUseRules.test.ts",
+      "keywords": [
+        "exhaustion",
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 3
+    },
+    {
+      "file": "src/core/rulesets/itemUseRules.ts",
+      "keywords": [
+        "exhaustion",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "consumeInventoryItem",
+        "createItemEffect",
+        "getItemDamageProfile",
+        "getItemHealingFormula",
+        "getItemRestoration",
+        "isConsumableItem"
+      ],
+      "lineCount": 8
+    },
+    {
+      "file": "src/core/rulesets/levelOneActionEconomyReadiness.test.ts",
+      "keywords": [
+        "resource",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "fighter"
+      ],
+      "lineCount": 49
+    },
+    {
+      "file": "src/core/rulesets/levelOneAncestryReadiness.test.ts",
+      "keywords": [
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 50
+    },
+    {
+      "file": "src/core/rulesets/levelOneFeatureChoiceReadiness.test.ts",
+      "keywords": [
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 52
+    },
+    {
+      "file": "src/core/rulesets/levelOneOriginReadiness.test.ts",
+      "keywords": [
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 46
+    },
+    {
+      "file": "src/core/rulesets/levelOneProficiencyReadiness.test.ts",
+      "keywords": [
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 45
+    },
+    {
+      "file": "src/core/rulesets/levelOneRestReadiness.test.ts",
+      "keywords": [
+        "hit dice",
+        "resource"
+      ],
+      "exportedSymbols": [
+        "fighter"
+      ],
+      "lineCount": 49
+    },
+    {
+      "file": "src/core/rulesets/levelUpAdvancementReadiness.test.ts",
+      "keywords": [
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 38
+    },
+    {
+      "file": "src/core/rulesets/levelUpChoiceCompletion.test.ts",
+      "keywords": [
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 21
+    },
+    {
+      "file": "src/core/rulesets/martialClassRuntime.ts",
+      "keywords": [
+        "short rest",
+        "resource"
+      ],
+      "exportedSymbols": [
+        "getMartialClassRuntime"
+      ],
+      "lineCount": 20
+    },
+    {
+      "file": "src/core/rulesets/paladinBuilderCertification.ts",
+      "keywords": [
+        "hit die",
+        "spell slot"
+      ],
+      "exportedSymbols": [
+        "certifyPaladinBuilder",
+        "summarizePaladinCertification"
+      ],
+      "lineCount": 7
+    },
+    {
+      "file": "src/core/rulesets/rangerBuilderCertification.ts",
+      "keywords": [
+        "hit die",
+        "spell slot"
+      ],
+      "exportedSymbols": [
+        "certifyRangerBuilder",
+        "summarizeRangerCertification"
+      ],
+      "lineCount": 8
+    },
+    {
+      "file": "src/core/rulesets/runtimeCoverageCertification.ts",
+      "keywords": [
+        "exhaustion",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "classifyFeat",
+        "classifyItem",
+        "classifySpell",
+        "classifySubclass",
+        "getRuntimeCoverageCertification"
+      ],
+      "lineCount": 16
+    },
+    {
+      "file": "src/core/rulesets/spellSummonPersistentOfficial.test.ts",
+      "keywords": [
+        "spell slot",
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 64
+    },
+    {
+      "file": "src/core/rulesets/subclassRuntimeRules.ts",
+      "keywords": [
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [
+        "canUseSubclassAction",
+        "getSubclassRuntime",
+        "spendSubclassActionResource"
+      ],
+      "lineCount": 54
+    },
+    {
+      "file": "src/core/rulesets/wizardBuilderCertification.ts",
+      "keywords": [
+        "hit die",
+        "spell slot"
+      ],
+      "exportedSymbols": [
+        "certifyWizardBuilder",
+        "summarizeWizardCertification"
+      ],
+      "lineCount": 57
+    },
+    {
+      "file": "src/features/classes/ClassCatalogPage.tsx",
+      "keywords": [
+        "hit die",
+        "spell slot"
+      ],
+      "exportedSymbols": [
+        "ClassCatalogPage"
+      ],
+      "lineCount": 31
+    },
+    {
+      "file": "src/features/combat-tracker/CombatTrackerPage.tsx",
+      "keywords": [
+        "resource",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "CombatTrackerPage",
+        "addCombatant",
+        "addEncounter",
+        "addManualLog",
+        "addTimedEffect",
+        "addZone",
+        "createFromSelectedTemplate",
+        "deleteEncounter",
+        "deleteSelectedTemplate",
+        "getDexModifier",
+        "handleAdvanceTurn",
+        "handleDamage",
+        "handleHealing",
+        "importCampaignEncounter",
+        "removeCombatant",
+        "removeZone",
+        "saveSelectedAsTemplate",
+        "sortEncounters",
+        "updateCombatant",
+        "updateSelected",
+        "updateZone"
+      ],
+      "lineCount": 379
+    },
+    {
+      "file": "src/features/help/HelpCenter.tsx",
+      "keywords": [
+        "spell slot",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "HelpCenter",
+        "loadChecklist",
+        "toggleChecklist"
+      ],
+      "lineCount": 324
+    },
+    {
+      "file": "src/features/homebrew/HomebrewLab.tsx",
+      "keywords": [
+        "hit dice",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "HomebrewLab",
+        "addMonsterActionFromBuilder",
+        "addMonsterTraitFromBuilder",
+        "appendMonsterTextBlock",
+        "buildMonsterActionLine",
+        "buildSpellDescription",
+        "getMonsterActionAttackBonus",
+        "getMonsterActionAttackLabel",
+        "getMonsterProficiencyBonusByCr",
+        "getSpellEffectSummary",
+        "handleCreateItem",
+        "handleCreateMonster",
+        "handleCreateSpell",
+        "parseTextList",
+        "toggleItemProperty",
+        "toggleSpellClass",
+        "updateItemForm",
+        "updateMonsterAbility",
+        "updateMonsterForm",
+        "updateSpellForm"
+      ],
+      "lineCount": 1733
+    },
+    {
+      "file": "src/features/rest/restAutomation.ts",
+      "keywords": [
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [
+        "applyRestToCharacter",
+        "applyRestToCharacters",
+        "getDefaultRestOptions",
+        "loadRestHistory",
+        "restoreResources",
+        "restoreRestSnapshot",
+        "saveRestHistory"
+      ],
+      "lineCount": 70
+    },
+    {
+      "file": "src/features/search/globalSearchEngine.ts",
+      "keywords": [
+        "spell slot",
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "buildGlobalSearchEntries",
+        "normalizeSearchText",
+        "searchGlobalEntries"
+      ],
+      "lineCount": 283
+    },
+    {
+      "file": "src/test/fixtures.ts",
+      "keywords": [
+        "resource",
+        "exhaustion"
+      ],
+      "exportedSymbols": [
+        "makeCharacter",
+        "makeEncounter",
+        "makeMonster"
+      ],
+      "lineCount": 88
+    },
+    {
+      "file": "src/certification/oracle/classBackgroundOracle.test.ts",
+      "keywords": [
+        "hit die"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 64
+    },
+    {
+      "file": "src/certification/oracle/progressionOracle.test.ts",
+      "keywords": [
+        "hit die"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 42
+    },
+    {
+      "file": "src/core/character/characterIntegrity.test.ts",
+      "keywords": [
+        "exhaustion"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 22
+    },
+    {
+      "file": "src/core/character/characterLifecycle.integration.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 82
+    },
+    {
+      "file": "src/core/character/characterLifecycleAudit.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "auditCharacterLifecycle"
+      ],
+      "lineCount": 4
+    },
+    {
+      "file": "src/core/character/playerJourneyConsistency.test.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 14
+    },
+    {
+      "file": "src/core/character/playerJourneyConsistency.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "calculateJourneyArmorClass",
+        "compareJourneySnapshots",
+        "getCharacterJourneySnapshot",
+        "getCharacterSpellcastingAbility"
+      ],
+      "lineCount": 69
+    },
+    {
+      "file": "src/core/character/survivalRules.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "applyDamage",
+        "applyHealing",
+        "getConcentrationDc",
+        "resolveDeathSave"
+      ],
+      "lineCount": 68
+    },
+    {
+      "file": "src/core/homebrew/homebrewContentRuntimeIntegration.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "applyHomebrewFeatAbilityBonus",
+        "applyHomebrewSpellSelfEffect",
+        "getHomebrewContentRuntime",
+        "getSpellFormula",
+        "homebrewEntities",
+        "itemEffectSummary",
+        "spellWarnings",
+        "spendHomebrewItemCharge"
+      ],
+      "lineCount": 164
+    },
+    {
+      "file": "src/core/homebrew/homebrewCreator.test.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 27
+    },
+    {
+      "file": "src/core/homebrew/homebrewFoundation.test.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 43
+    },
+    {
+      "file": "src/core/homebrew/homebrewFoundation.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "createHomebrewPackage",
+        "exportHomebrewPackage",
+        "getHomebrewResourceMaximum",
+        "importHomebrewPackage",
+        "recoverHomebrewResource",
+        "validateHomebrewEntity",
+        "validateHomebrewPackage"
+      ],
+      "lineCount": 181
+    },
+    {
+      "file": "src/core/homebrew/homebrewPackageSharing.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "compareHomebrewVersions",
+        "createHomebrewShareManifest",
+        "exportHomebrewShareManifest",
+        "importHomebrewShareManifest",
+        "mergeSharedHomebrewPackages",
+        "migrateHomebrewPackage",
+        "normalizeEntity",
+        "parseVersion",
+        "resolveInstallOrder",
+        "satisfiesHomebrewVersion",
+        "validateHomebrewShareManifest"
+      ],
+      "lineCount": 235
+    },
+    {
+      "file": "src/core/homebrew/homebrewRuntimeIntegration.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "executeHomebrewRuntimeAction",
+        "getHomebrewCharacterEntities",
+        "getHomebrewCharacterRuntime",
+        "mapRecovery",
+        "normalize",
+        "recoverHomebrewCharacterResources",
+        "runtimeResourceId",
+        "synchronizeHomebrewResources"
+      ],
+      "lineCount": 151
+    },
+    {
+      "file": "src/core/release/postReleaseQa.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "REQUIRED_PLAYER_QA_SCENARIOS",
+        "buildPostReleaseQaReport",
+        "mergeQaScenarioResults",
+        "severity"
+      ],
+      "lineCount": 83
+    },
+    {
+      "file": "src/core/rulesets/actionEconomyRules.test.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 23
+    },
+    {
+      "file": "src/core/rulesets/actionEconomyRules.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "createTurnEconomy",
+        "getAttacksPerAction",
+        "spendAttack",
+        "spendMovement",
+        "spendTurnResource"
+      ],
+      "lineCount": 36
+    },
+    {
+      "file": "src/core/rulesets/advancedFeatRuntimeRules.test.ts",
+      "keywords": [
+        "temp hp"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 2
+    },
+    {
+      "file": "src/core/rulesets/barbarianBuilderCertification.ts",
+      "keywords": [
+        "hit die"
+      ],
+      "exportedSymbols": [
+        "certifyBarbarianBuilder",
+        "summarizeBarbarianCertification"
+      ],
+      "lineCount": 89
+    },
+    {
+      "file": "src/core/rulesets/bardBuilderCertification.ts",
+      "keywords": [
+        "hit die"
+      ],
+      "exportedSymbols": [
+        "certifyBardBuilder",
+        "summarizeBardCertification"
+      ],
+      "lineCount": 93
+    },
+    {
+      "file": "src/core/rulesets/characterSheetCertification.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "getCharacterSheetCertificationSnapshot"
+      ],
+      "lineCount": 11
+    },
+    {
+      "file": "src/core/rulesets/classFeatureEngine.test.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 19
+    },
+    {
+      "file": "src/core/rulesets/classProgression.test.ts",
+      "keywords": [
+        "spell slot"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 17
+    },
+    {
+      "file": "src/core/rulesets/classProgressionAudit.ts",
+      "keywords": [
+        "spell slot"
+      ],
+      "exportedSymbols": [
+        "auditClassProgression",
+        "enrichClassProgression",
+        "getClassAsiLevels"
+      ],
+      "lineCount": 40
+    },
+    {
+      "file": "src/core/rulesets/classSubclassRuntimeClosure.test.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 15
+    },
+    {
+      "file": "src/core/rulesets/clericBuilderCertification.ts",
+      "keywords": [
+        "hit die"
+      ],
+      "exportedSymbols": [
+        "certifyClericBuilder",
+        "summarizeClericCertification"
+      ],
+      "lineCount": 16
+    },
+    {
+      "file": "src/core/rulesets/combatStatusRules.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "advanceConditionDurations",
+        "getCombatStatusLabel",
+        "getDeathSaveStatus",
+        "shouldRequestConcentrationSave"
+      ],
+      "lineCount": 53
+    },
+    {
+      "file": "src/core/rulesets/combatTurnRules.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "beginCombatTurn",
+        "canTakeOpportunityAttack",
+        "createCombatTurnState",
+        "endCombatTurn",
+        "getConcentrationSaveDc"
+      ],
+      "lineCount": 37
+    },
+    {
+      "file": "src/core/rulesets/contentIntegrityAudit.ts",
+      "keywords": [
+        "hit die"
+      ],
+      "exportedSymbols": [
+        "auditBackgrounds",
+        "auditClasses",
+        "auditFeats",
+        "auditItems",
+        "auditMonsters",
+        "auditRaces",
+        "auditSpells",
+        "auditSubclasses",
+        "auditUniqueIds",
+        "getContentIntegrityAudit",
+        "issue",
+        "normalized"
+      ],
+      "lineCount": 288
+    },
+    {
+      "file": "src/core/rulesets/damageSaveSpellOfficial.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "load"
+      ],
+      "lineCount": 62
+    },
+    {
+      "file": "src/core/rulesets/divineClassRuntime.test.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 9
+    },
+    {
+      "file": "src/core/rulesets/druidBuilderCertification.ts",
+      "keywords": [
+        "hit die"
+      ],
+      "exportedSymbols": [
+        "certifyDruidBuilder",
+        "summarizeDruidCertification"
+      ],
+      "lineCount": 7
+    },
+    {
+      "file": "src/core/rulesets/equipmentMagicItemFinalCoverage.ts",
+      "keywords": [
+        "exhaustion"
+      ],
+      "exportedSymbols": [
+        "buildEquipmentMagicItemCoverageReport",
+        "certifyEquipmentItem",
+        "familyFor",
+        "formatEquipmentMagicItemCoverageSummary",
+        "previewItemRuntime"
+      ],
+      "lineCount": 89
+    },
+    {
+      "file": "src/core/rulesets/exhaustionRules.test.ts",
+      "keywords": [
+        "exhaustion"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 22
+    },
+    {
+      "file": "src/core/rulesets/exhaustionRules.ts",
+      "keywords": [
+        "exhaustion"
+      ],
+      "exportedSymbols": [
+        "getEffectiveMaxHp",
+        "getEffectiveSpeed",
+        "getExhaustionEffects"
+      ],
+      "lineCount": 39
+    },
+    {
+      "file": "src/core/rulesets/featOfficialCertification.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 62
+    },
+    {
+      "file": "src/core/rulesets/featRules.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 33
+    },
+    {
+      "file": "src/core/rulesets/fighterBuilderCertification.ts",
+      "keywords": [
+        "hit die"
+      ],
+      "exportedSymbols": [
+        "certifyFighterBuilder",
+        "summarizeFighterCertification"
+      ],
+      "lineCount": 7
+    },
+    {
+      "file": "src/core/rulesets/fighterRules.test.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 3
+    },
+    {
+      "file": "src/core/rulesets/globalSpellRuntime.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 49
+    },
+    {
+      "file": "src/core/rulesets/globalSpellRuntime.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "dispelSpellEffects",
+        "endConcentration",
+        "getDefaultSpellSaveRule",
+        "getGlobalCastableSlotLevels",
+        "getSpellRuntimePlan",
+        "resolveGlobalSpell",
+        "resolveSpellHealing",
+        "resolveSpellSave"
+      ],
+      "lineCount": 156
+    },
+    {
+      "file": "src/core/rulesets/invocationRules.ts",
+      "keywords": [
+        "spell slot"
+      ],
+      "exportedSymbols": [
+        "getEldritchInvocations",
+        "getInvocationChoiceCount",
+        "isInvocationEligible"
+      ],
+      "lineCount": 63
+    },
+    {
+      "file": "src/core/rulesets/itemEffectRuntimeRules.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 4
+    },
+    {
+      "file": "src/core/rulesets/levelOneActionEconomyReadiness.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "getLevelOneActionEconomyReadiness",
+        "validCastingTime",
+        "validResource"
+      ],
+      "lineCount": 120
+    },
+    {
+      "file": "src/core/rulesets/levelOneCombatReadiness.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "baseDraft"
+      ],
+      "lineCount": 50
+    },
+    {
+      "file": "src/core/rulesets/levelOneCombatReadiness.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "getLevelOneCombatReadiness",
+        "isOffensiveSpellId"
+      ],
+      "lineCount": 98
+    },
+    {
+      "file": "src/core/rulesets/levelOneDefenseReadiness.test.ts",
+      "keywords": [
+        "hit die"
+      ],
+      "exportedSymbols": [
+        "draft"
+      ],
+      "lineCount": 57
+    },
+    {
+      "file": "src/core/rulesets/levelOneOffenseReadiness.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 40
+    },
+    {
+      "file": "src/core/rulesets/levelOneSocialReadiness.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "draft"
+      ],
+      "lineCount": 65
+    },
+    {
+      "file": "src/core/rulesets/levelOneSpellcastingReadiness.test.ts",
+      "keywords": [
+        "exhaustion"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 35
+    },
+    {
+      "file": "src/core/rulesets/levelOneToTwentyJourney.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "getLevelOneToTwentyJourneyCoverage",
+        "getRequiredMilestonesAtLevel",
+        "scenario"
+      ],
+      "lineCount": 126
+    },
+    {
+      "file": "src/core/rulesets/levelOneUtilityReadiness.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "draft"
+      ],
+      "lineCount": 54
+    },
+    {
+      "file": "src/core/rulesets/levelUpAdvancementReadiness.ts",
+      "keywords": [
+        "spell slot"
+      ],
+      "exportedSymbols": [
+        "getLevelUpAdvancementReadiness"
+      ],
+      "lineCount": 98
+    },
+    {
+      "file": "src/core/rulesets/martialClassRuntime.test.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 3
+    },
+    {
+      "file": "src/core/rulesets/metamagicRules.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "getMetamagicChoiceCount",
+        "getMetamagicOptions"
+      ],
+      "lineCount": 26
+    },
+    {
+      "file": "src/core/rulesets/monkBuilderCertification.test.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "rows"
+      ],
+      "lineCount": 4
+    },
+    {
+      "file": "src/core/rulesets/monkBuilderCertification.ts",
+      "keywords": [
+        "hit die"
+      ],
+      "exportedSymbols": [
+        "certifyMonkBuilder",
+        "summarizeMonkCertification"
+      ],
+      "lineCount": 7
+    },
+    {
+      "file": "src/core/rulesets/monkRules.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "getFlurryStrikeCount",
+        "getMartialArtsDie",
+        "getMonkCombatFeatures",
+        "getMonkFocusPoints",
+        "getMonkSubclassFeatureLevels",
+        "getMonkSubclassLevel",
+        "getOpenHandFeatures",
+        "getShadowFeatures",
+        "getUnarmoredMovementBonus"
+      ],
+      "lineCount": 35
+    },
+    {
+      "file": "src/core/rulesets/multiclassRules.test.ts",
+      "keywords": [
+        "hit dice"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 2
+    },
+    {
+      "file": "src/core/rulesets/progressionDraftNormalization.test.ts",
+      "keywords": [
+        "exhaustion"
+      ],
+      "exportedSymbols": [
+        "classData"
+      ],
+      "lineCount": 53
+    },
+    {
+      "file": "src/core/rulesets/rogueBuilderCertification.ts",
+      "keywords": [
+        "hit die"
+      ],
+      "exportedSymbols": [
+        "certifyRogueBuilder",
+        "summarizeRogueCertification"
+      ],
+      "lineCount": 8
+    },
+    {
+      "file": "src/core/rulesets/runtimeCoverageCertification.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 4
+    },
+    {
+      "file": "src/core/rulesets/runtimeCoverageClosure.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 24
+    },
+    {
+      "file": "src/core/rulesets/runtimeGapClosure.test.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 2
+    },
+    {
+      "file": "src/core/rulesets/singleClassPlayableReadiness.test.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "playableDraft"
+      ],
+      "lineCount": 47
+    },
+    {
+      "file": "src/core/rulesets/singleClassPlayableReadiness.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "getSingleClassPlayableReadiness"
+      ],
+      "lineCount": 40
+    },
+    {
+      "file": "src/core/rulesets/sorcererBuilderCertification.ts",
+      "keywords": [
+        "hit die"
+      ],
+      "exportedSymbols": [
+        "certifySorcererBuilder",
+        "summarizeSorcererCertification"
+      ],
+      "lineCount": 128
+    },
+    {
+      "file": "src/core/rulesets/spellBehaviorRules.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 2
+    },
+    {
+      "file": "src/core/rulesets/spellBuilderOfficial.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 82
+    },
+    {
+      "file": "src/core/rulesets/spellCertificationExpansion.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 61
+    },
+    {
+      "file": "src/core/rulesets/spellCertificationExpansion.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "buildSpellCertificationExpansionReport",
+        "certifySpell",
+        "dispositionFor",
+        "formatSpellCertificationExpansionSummary",
+        "getSpellCertificationFamilies",
+        "validateSpell"
+      ],
+      "lineCount": 188
+    },
+    {
+      "file": "src/core/rulesets/spellControlOfficial.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "load"
+      ],
+      "lineCount": 84
+    },
+    {
+      "file": "src/core/rulesets/spellControlRules.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "combineActiveControlEffects",
+        "getControlSpellRuntime",
+        "hasOfficialControlRuntime"
+      ],
+      "lineCount": 189
+    },
+    {
+      "file": "src/core/rulesets/spellDefenseMovementOfficial.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 78
+    },
+    {
+      "file": "src/core/rulesets/spellDefenseMovementRules.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "getActiveDefenseMovementModifiers",
+        "getDefenseMovementSpellRuntime",
+        "removeEffectsBrokenByAttack",
+        "removeEffectsBrokenBySpellCast"
+      ],
+      "lineCount": 185
+    },
+    {
+      "file": "src/core/rulesets/spellEffectRules.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 4
+    },
+    {
+      "file": "src/core/rulesets/spellEffectRules.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "addSpellEffect",
+        "advanceSpellEffects",
+        "createSpellEffect",
+        "getSpellDurationRounds",
+        "removeEffectsBrokenByDamage"
+      ],
+      "lineCount": 47
+    },
+    {
+      "file": "src/core/rulesets/spellMaterialRules.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 2
+    },
+    {
+      "file": "src/core/rulesets/spellResolution.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 4
+    },
+    {
+      "file": "src/core/rulesets/spellRules.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 11
+    },
+    {
+      "file": "src/core/rulesets/spellRuntimeOfficial2024.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 40
+    },
+    {
+      "file": "src/core/rulesets/subclassRuntimeRules.test.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 4
+    },
+    {
+      "file": "src/core/rulesets/warlockBuilderCertification.ts",
+      "keywords": [
+        "hit die"
+      ],
+      "exportedSymbols": [
+        "certifyWarlockBuilder",
+        "summarizeWarlockCertification"
+      ],
+      "lineCount": 71
+    },
+    {
+      "file": "src/core/storage/characterHydration.test.ts",
+      "keywords": [
+        "exhaustion"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 2
+    },
+    {
+      "file": "src/features/backup/characterBackup.test.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 48
+    },
+    {
+      "file": "src/features/characters/CharacterEditor.tsx",
+      "keywords": [
+        "hit die"
+      ],
+      "exportedSymbols": [
+        "CharacterEditor",
+        "handleSubmit",
+        "updateAbility",
+        "updateDraft"
+      ],
+      "lineCount": 434
+    },
+    {
+      "file": "src/features/characters/characterEditorRules.test.ts",
+      "keywords": [
+        "hit die"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 21
+    },
+    {
+      "file": "src/features/characters/characterEditorRules.ts",
+      "keywords": [
+        "exhaustion"
+      ],
+      "exportedSymbols": [
+        "buildEditedCharacter",
+        "characterToEditDraft"
+      ],
+      "lineCount": 54
+    },
+    {
+      "file": "src/features/characters/levelUpCalculator.test.ts",
+      "keywords": [
+        "hit dice"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 36
+    },
+    {
+      "file": "src/features/characters/levelUpCalculator.ts",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "applyAbilityIncrease",
+        "buildLeveledCharacter",
+        "getAverageHpGain",
+        "isAsiMilestone"
+      ],
+      "lineCount": 104
+    },
+    {
+      "file": "src/features/combat-tracker/combatTrackerStorage.test.ts",
+      "keywords": [
+        "temporary hp"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 39
+    },
+    {
+      "file": "src/features/combat-tracker/combatTrackerStorage.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "addCombatLog",
+        "advanceTurn",
+        "applyDamage",
+        "applyHealing",
+        "createBattlefieldZone",
+        "createCombatEffect",
+        "createCombatEncounter",
+        "createCombatLogEntry",
+        "createCombatTemplate",
+        "createCombatant",
+        "createEncounterFromCampaignEncounter",
+        "createEncounterFromTemplate",
+        "finiteNumber",
+        "getActiveConditions",
+        "getCombatSummary",
+        "isRecord",
+        "loadCombatEncounters",
+        "loadCombatTemplates",
+        "sanitizeBattlefieldZone",
+        "sanitizeCombatEncounter",
+        "sanitizeCombatTemplate",
+        "sanitizeCombatant",
+        "sanitizeEffect",
+        "sanitizeLogEntry",
+        "saveCombatEncounters",
+        "saveCombatTemplates",
+        "sortCombatants",
+        "tickBattlefieldZones",
+        "tickCombatEffects"
+      ],
+      "lineCount": 366
+    },
+    {
+      "file": "src/features/library/Library.tsx",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "Library"
+      ],
+      "lineCount": 241
+    },
+    {
+      "file": "src/features/search/globalSearch.test.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [],
+      "lineCount": 60
+    },
+    {
+      "file": "src/features/spellbook/Spellbook.tsx",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "Spellbook",
+        "resetFilters"
+      ],
+      "lineCount": 262
+    },
+    {
+      "file": "src/features/subclasses/SubclassCatalogPage.tsx",
+      "keywords": [
+        "resource"
+      ],
+      "exportedSymbols": [
+        "SubclassCatalogPage"
+      ],
+      "lineCount": 13
+    },
+    {
+      "file": "src/shared/i18n/uiTextCatalog.ts",
+      "keywords": [
+        "concentration"
+      ],
+      "exportedSymbols": [
+        "getUiCatalogCoverage",
+        "translateUiText"
+      ],
+      "lineCount": 35
+    }
+  ]
+}

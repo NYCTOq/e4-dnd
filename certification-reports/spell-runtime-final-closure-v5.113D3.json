@@ -1,0 +1,27 @@
+{
+  "package": "v5.113D3",
+  "domain": "spell-runtime-combat-ui",
+  "generatedAt": "2026-07-27T09:22:59.249Z",
+  "status": "GREEN",
+  "certified": {
+    "core": 2313,
+    "logicalE2E": 3,
+    "total": 2316
+  },
+  "requiredFiles": [
+    "src/core/rulesets/spellRuntimeCombatRules.ts",
+    "src/core/rulesets/spellCharacterCombatAdapter.ts",
+    "src/core/rulesets/spellCastingPersistenceBridge.ts",
+    "src/components/spells/SpellCastingRuntimePanel.tsx",
+    "src/components/spells/SpellRuntimeIntegrationMount.tsx",
+    "e2e/spell-runtime-ui-v5.113D3.spec.ts",
+    "dist/index.html",
+    "dist/manifest.webmanifest",
+    "dist/sw.js",
+    "certification-reports/spell-runtime-combat-v5.113B.json",
+    "certification-reports/spell-character-adapter-v5.113C.json",
+    "certification-reports/spell-ui-contract-v5.113D1.json",
+    "certification-reports/spell-casting-panel-persistence-v5.113D2.json"
+  ],
+  "missingFiles": []
+}

@@ -1,0 +1,17 @@
+{
+  "package": "v5.110A",
+  "domain": "equipment-combat-reference-oracle",
+  "generatedAt": "2026-07-25T11:36:35.258Z",
+  "coverage": [
+    "inventory",
+    "weight",
+    "weapon ability",
+    "attack bonus",
+    "damage",
+    "fighting styles",
+    "armor class",
+    "mastery",
+    "combat readiness",
+    "scenario matrix"
+  ]
+}

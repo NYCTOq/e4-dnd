@@ -1,0 +1,23 @@
+{
+  "package": "v5.111C",
+  "domain": "rest-recovery-character-integration",
+  "generatedAt": "2026-07-25T12:19:57.096Z",
+  "adapter": "src/core/rulesets/restRecoveryCharacterAdapter.ts",
+  "goldenClasses": [
+    "fighter",
+    "wizard",
+    "warlock",
+    "monk",
+    "cleric"
+  ],
+  "coverage": [
+    "legacy migration",
+    "character-to-runtime adapter",
+    "runtime-to-character adapter",
+    "short rest persistence",
+    "long rest persistence",
+    "JSON import/export round trip",
+    "unknown field preservation",
+    "2014/2024 ruleset preservation"
+  ]
+}

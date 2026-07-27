@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Class Subclass UI Integration Discovery Contract Gate",
+  "version": "5.112D1",
+  "requires": [
+    "v5.112C"
+  ],
+  "runtime_changes": false,
+  "domain": "class-subclass-ui-integration"
+}

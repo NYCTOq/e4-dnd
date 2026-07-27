@@ -1,0 +1,13 @@
+import { readFile, writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+
+const path = resolve(process.cwd(), "package.json");
+const pkg = JSON.parse(await readFile(path, "utf8"));
+
+pkg.version = "5.109.2";
+pkg.scripts ??= {};
+pkg.scripts["certify:spellcasting:e2e"] =
+  "playwright test e2e/certification-spellcasting-smoke.spec.ts --workers=2";
+
+await writeFile(path, JSON.stringify(pkg, null, 2) + "\n", "utf8");
+console.log("v5.109.2 spellcasting render stability hotfix installed.");

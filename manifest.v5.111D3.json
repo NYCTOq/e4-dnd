@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Rest UI Wiring E2E Final Closure Mega",
+  "version": "5.111D3",
+  "requires": [
+    "v5.111D2"
+  ],
+  "runtime_changes": true,
+  "expected_certified_total": 615
+}

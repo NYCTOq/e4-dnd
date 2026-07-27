@@ -1,0 +1,2 @@
+import {readFile,writeFile} from "node:fs/promises";import{resolve}from"node:path";
+const path=resolve(process.cwd(),"package.json");const pkg=JSON.parse(await readFile(path,"utf8"));pkg.version="5.105.0-a";pkg.scripts??={};pkg.scripts["test:oracle"]="vitest run src/certification/oracle";pkg.scripts["verify:oracle"]="npm run test:oracle && npm run build";await writeFile(path,JSON.stringify(pkg,null,2)+"\n","utf8");console.log("v5.105A reference oracle scripts installed.");

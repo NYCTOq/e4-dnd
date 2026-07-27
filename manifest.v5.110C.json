@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Golden Loadout & Combat Readiness Certification",
+  "version": "5.110C",
+  "requires": [
+    "v5.110A",
+    "v5.110B"
+  ],
+  "runtime_changes": false
+}

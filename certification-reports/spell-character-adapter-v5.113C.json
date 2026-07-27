@@ -1,0 +1,27 @@
+{
+  "package": "v5.113C",
+  "generatedAt": "2026-07-25T14:07:24.870Z",
+  "adapter": "src/core/rulesets/spellCharacterCombatAdapter.ts",
+  "goldenCasters": [
+    "wizard",
+    "cleric",
+    "warlock",
+    "sorcerer",
+    "druid",
+    "paladin"
+  ],
+  "coverage": [
+    "casting ability resolution",
+    "spell save DC",
+    "spell attack bonus",
+    "normal spell slots",
+    "pact spell slots",
+    "cantrip casting",
+    "concentration persistence",
+    "damage target persistence",
+    "healing target persistence",
+    "legacy migration",
+    "homebrew spell preservation",
+    "JSON round trip"
+  ]
+}

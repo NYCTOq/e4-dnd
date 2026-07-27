@@ -1,0 +1,68 @@
+.class-feature-panel {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  border-radius: 14px;
+  background: color-mix(in srgb, Canvas 94%, currentColor 6%);
+}
+
+.class-feature-panel__header,
+.class-feature-panel__group,
+.class-feature-panel__list {
+  display: grid;
+  gap: 10px;
+}
+
+.class-feature-panel__header h2,
+.class-feature-panel__header p,
+.class-feature-panel__group h3 {
+  margin: 0;
+}
+
+.class-feature-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px;
+  border: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+  border-radius: 10px;
+}
+
+.class-feature-card > div:first-child {
+  display: grid;
+  gap: 4px;
+}
+
+.class-feature-card small {
+  opacity: 0.72;
+}
+
+.class-feature-card__uses {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.class-feature-card button {
+  min-height: 40px;
+  padding: 8px 12px;
+}
+
+.class-feature-panel.is-compact {
+  padding: 12px;
+}
+
+@media (max-width: 640px) {
+  .class-feature-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .class-feature-card__uses {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+  }
+}

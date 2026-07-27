@@ -1,0 +1,2275 @@
+{
+  "package": "v5.113A",
+  "domain": "spell-runtime-combat",
+  "generatedAt": "2026-07-25T13:39:55.937Z",
+  "scannedFiles": 560,
+  "matchedFiles": 302,
+  "highSignalFiles": [
+    {
+      "file": "src/features/characters/CharacterDetail.tsx",
+      "score": 11,
+      "signals": [
+        "spellSlots",
+        "pactSlots",
+        "spellAttack",
+        "spellSave",
+        "concentration",
+        "damage",
+        "healing",
+        "cantrip",
+        "saving throw",
+        "castSpell",
+        "target"
+      ],
+      "exports": [
+        "CharacterDetail"
+      ],
+      "lineCount": 1443
+    },
+    {
+      "file": "src/features/play-mode/PlayMode.tsx",
+      "score": 11,
+      "signals": [
+        "spellSlots",
+        "spellAttack",
+        "spellSave",
+        "concentration",
+        "damage",
+        "healing",
+        "resistance",
+        "cantrip",
+        "saving throw",
+        "castSpell",
+        "target"
+      ],
+      "exports": [
+        "PlayMode"
+      ],
+      "lineCount": 937
+    },
+    {
+      "file": "src/features/builder/Builder.tsx",
+      "score": 9,
+      "signals": [
+        "spellSlots",
+        "spellSave",
+        "damage",
+        "healing",
+        "cantrip",
+        "castSpell",
+        "preparedSpells",
+        "knownSpells",
+        "target"
+      ],
+      "exports": [
+        "Builder"
+      ],
+      "lineCount": 1474
+    },
+    {
+      "file": "src/shared/release/releaseNotes.ts",
+      "score": 9,
+      "signals": [
+        "concentration",
+        "damage",
+        "healing",
+        "resistance",
+        "cantrip",
+        "upcast",
+        "saving throw",
+        "combat tracker",
+        "target"
+      ],
+      "exports": [
+        "RELEASE_CATEGORIES",
+        "RELEASE_NOTES",
+        "ReleaseCategory",
+        "ReleaseChange",
+        "ReleaseEntry",
+        "getCurrentRelease"
+      ],
+      "lineCount": 1057
+    },
+    {
+      "file": "src/certification/oracle/spellRuntimeCombatOracle.test.ts",
+      "score": 8,
+      "signals": [
+        "spellAttack",
+        "spellSave",
+        "concentration",
+        "damage",
+        "healing",
+        "cantrip",
+        "upcast",
+        "target"
+      ],
+      "exports": [],
+      "lineCount": 151
+    },
+    {
+      "file": "src/certification/reference/spellRuntimeCombat.reference.ts",
+      "score": 8,
+      "signals": [
+        "spellAttack",
+        "spellSave",
+        "concentration",
+        "damage",
+        "healing",
+        "cantrip",
+        "upcast",
+        "target"
+      ],
+      "exports": [
+        "DamageRelation",
+        "SpellAbility",
+        "SpellRulesetId",
+        "applyDamageRelation",
+        "applyHealing",
+        "applySavingThrowDamage",
+        "canCastWithSlot",
+        "cantripScalingDice",
+        "concentrationAfterDamage",
+        "consumeSpellSlot",
+        "resolveTargetCount",
+        "restoreSpellSlot",
+        "spellAbilityModifier",
+        "spellAttackBonus",
+        "spellProficiencyBonus",
+        "spellSaveDc",
+        "upcastDiceCount"
+      ],
+      "lineCount": 169
+    },
+    {
+      "file": "src/core/rulesets/globalSpellRuntime.test.ts",
+      "score": 7,
+      "signals": [
+        "spellSave",
+        "concentration",
+        "damage",
+        "healing",
+        "upcast",
+        "saving throw",
+        "target"
+      ],
+      "exports": [],
+      "lineCount": 49
+    },
+    {
+      "file": "src/core/rulesets/globalSpellRuntime.ts",
+      "score": 7,
+      "signals": [
+        "pactSlots",
+        "spellSave",
+        "concentration",
+        "damage",
+        "healing",
+        "saving throw",
+        "target"
+      ],
+      "exports": [
+        "SaveDamageRule",
+        "SpellRuntimeOutcome",
+        "SpellRuntimePlan",
+        "SpellRuntimeTier",
+        "dispelSpellEffects",
+        "endConcentration",
+        "getDefaultSpellSaveRule",
+        "getGlobalCastableSlotLevels",
+        "getSpellRuntimePlan",
+        "resolveGlobalSpell",
+        "resolveSpellHealing",
+        "resolveSpellSave"
+      ],
+      "lineCount": 156
+    },
+    {
+      "file": "src/core/rulesets/spellExpansion.ts",
+      "score": 7,
+      "signals": [
+        "concentration",
+        "damage",
+        "healing",
+        "resistance",
+        "vulnerability",
+        "saving throw",
+        "target"
+      ],
+      "exports": [
+        "SPELL_EXPANSION_2014",
+        "SPELL_EXPANSION_2024"
+      ],
+      "lineCount": 304
+    },
+    {
+      "file": "src/core/rulesets/subclassExpansion.ts",
+      "score": 7,
+      "signals": [
+        "concentration",
+        "damage",
+        "healing",
+        "resistance",
+        "cantrip",
+        "saving throw",
+        "target"
+      ],
+      "exports": [
+        "SUBCLASS_EXPANSION_2014",
+        "SUBCLASS_EXPANSION_2024"
+      ],
+      "lineCount": 137
+    },
+    {
+      "file": "src/features/characters/characterShared.tsx",
+      "score": 7,
+      "signals": [
+        "spellSlots",
+        "concentration",
+        "damage",
+        "healing",
+        "cantrip",
+        "preparedSpells",
+        "target"
+      ],
+      "exports": [
+        "CharacterInventoryManager",
+        "CharacterSpellSelector",
+        "ClassBasedSpellSelector",
+        "FULL_CASTER_CLASSES",
+        "FULL_CASTER_SLOT_TABLE",
+        "calculateEffectiveArmorClass",
+        "calculateSuggestedArmorClass",
+        "createCharacterFromDraft",
+        "emptyDraft",
+        "getCharacterInventoryItems",
+        "getDefaultSpellSlots",
+        "getEquippedItems",
+        "getHitDieForClass",
+        "getInventoryQuantity",
+        "getInventoryWeight",
+        "getItemCategoryLabel",
+        "getItemRulesSummary",
+        "getSpellGroupTitle",
+        "getSpellLevelGroups",
+        "getSpellLevelLabel",
+        "getWeaponAbilityModifier",
+        "getWeaponAttackBonus",
+        "getWeaponDamageSummary",
+        "isSpellReadyToCast",
+        "normalizeCharacterDraft",
+        "normalizeHitDice",
+        "normalizeSpellSlots",
+        "resetDeathSaves",
+        "resetHitDice",
+        "resetSpellSlots",
+        "setInventoryItemQuantity",
+        "sortSpellsByLevelAndName"
+      ],
+      "lineCount": 1244
+    },
+    {
+      "file": "src/core/character/character.types.ts",
+      "score": 6,
+      "signals": [
+        "spellSlots",
+        "spellAttack",
+        "concentration",
+        "damage",
+        "immunity",
+        "castSpell"
+      ],
+      "exports": [
+        "AbilityKey",
+        "AbilityScores",
+        "ArmorClassMode",
+        "Character",
+        "CharacterClassLevel",
+        "CharacterCondition",
+        "CharacterConditionDurations",
+        "CharacterDeathSaves",
+        "CharacterDraft",
+        "CharacterHitDiePool",
+        "CharacterInventoryItem",
+        "CharacterResource",
+        "CharacterSpellEffect",
+        "CharacterSpellSlot",
+        "ResourceRecovery",
+        "RulesetId"
+      ],
+      "lineCount": 223
+    },
+    {
+      "file": "src/core/rulesets/ruleset.types.ts",
+      "score": 6,
+      "signals": [
+        "spellSlots",
+        "concentration",
+        "damage",
+        "healing",
+        "resistance",
+        "target"
+      ],
+      "exports": [
+        "ClassLevelData",
+        "DndArmorType",
+        "DndBackgroundData",
+        "DndClassData",
+        "DndFeatData",
+        "DndFeatPrerequisite",
+        "DndItemCategory",
+        "DndItemData",
+        "DndMonsterData",
+        "DndRaceData",
+        "DndSpellData",
+        "DndSubclassData",
+        "DndSubraceData",
+        "FeatCategory",
+        "RulesetData",
+        "SkillChoices",
+        "SpellEffectType",
+        "SpellProgression",
+        "SpellResolutionType",
+        "SpellScalingData",
+        "SubclassFeatureData",
+        "WeaponCategory",
+        "WeaponMastery"
+      ],
+      "lineCount": 260
+    },
+    {
+      "file": "src/core/rulesets/runtimeCoverageCertification.ts",
+      "score": 6,
+      "signals": [
+        "concentration",
+        "damage",
+        "healing",
+        "resistance",
+        "upcast",
+        "target"
+      ],
+      "exports": [
+        "RuntimeCategory",
+        "RuntimeCoverageCertification",
+        "RuntimeEntity",
+        "RuntimeTier",
+        "classifyFeat",
+        "classifyItem",
+        "classifySpell",
+        "classifySubclass",
+        "getRuntimeCoverageCertification"
+      ],
+      "lineCount": 16
+    },
+    {
+      "file": "src/features/homebrew/HomebrewLab.tsx",
+      "score": 6,
+      "signals": [
+        "concentration",
+        "damage",
+        "healing",
+        "cantrip",
+        "saving throw",
+        "target"
+      ],
+      "exports": [
+        "HomebrewLab"
+      ],
+      "lineCount": 1733
+    },
+    {
+      "file": "src/core/character/sheetPlayModeConsistency.ts",
+      "score": 5,
+      "signals": [
+        "spellSlots",
+        "concentration",
+        "activeEffects",
+        "damage",
+        "resistance"
+      ],
+      "exports": [
+        "WeaponConsistencyRow",
+        "compareSheetAndPlayMode",
+        "getSheetPlayModeConsistencySnapshot",
+        "getWeaponConsistencyRows"
+      ],
+      "lineCount": 82
+    },
+    {
+      "file": "src/core/homebrew/homebrewContentRuntimeIntegration.ts",
+      "score": 5,
+      "signals": [
+        "concentration",
+        "damage",
+        "healing",
+        "resistance",
+        "saving throw"
+      ],
+      "exports": [
+        "HomebrewContentRuntime",
+        "HomebrewFeatRuntime",
+        "HomebrewItemRuntime",
+        "HomebrewSpellRuntime",
+        "applyHomebrewFeatAbilityBonus",
+        "applyHomebrewSpellSelfEffect",
+        "getHomebrewContentRuntime",
+        "spendHomebrewItemCharge"
+      ],
+      "lineCount": 164
+    },
+    {
+      "file": "src/core/rulesets/equipmentMagicItemFinalCoverage.ts",
+      "score": 5,
+      "signals": [
+        "spellAttack",
+        "spellSave",
+        "damage",
+        "healing",
+        "target"
+      ],
+      "exports": [
+        "EquipmentCoverageDisposition",
+        "EquipmentCoverageEntry",
+        "EquipmentCoverageFamily",
+        "EquipmentMagicItemCoverageReport",
+        "buildEquipmentMagicItemCoverageReport",
+        "certifyEquipmentItem",
+        "formatEquipmentMagicItemCoverageSummary",
+        "previewItemRuntime"
+      ],
+      "lineCount": 89
+    },
+    {
+      "file": "src/core/rulesets/itemExpansion.ts",
+      "score": 5,
+      "signals": [
+        "damage",
+        "healing",
+        "resistance",
+        "saving throw",
+        "target"
+      ],
+      "exports": [
+        "ITEM_EXPANSION_2014",
+        "ITEM_EXPANSION_2024"
+      ],
+      "lineCount": 153
+    },
+    {
+      "file": "src/core/rulesets/rangerBuilderCertification.ts",
+      "score": 5,
+      "signals": [
+        "spellSlots",
+        "damage",
+        "saving throw",
+        "preparedSpells",
+        "knownSpells"
+      ],
+      "exports": [
+        "RangerCertificationRow",
+        "certifyRangerBuilder",
+        "summarizeRangerCertification"
+      ],
+      "lineCount": 8
+    },
+    {
+      "file": "src/core/rulesets/spellDefenseMovementOfficial.test.ts",
+      "score": 5,
+      "signals": [
+        "concentration",
+        "damage",
+        "immunity",
+        "castSpell",
+        "target"
+      ],
+      "exports": [],
+      "lineCount": 78
+    },
+    {
+      "file": "src/core/rulesets/spellDefenseMovementRules.ts",
+      "score": 5,
+      "signals": [
+        "concentration",
+        "damage",
+        "immunity",
+        "castSpell",
+        "target"
+      ],
+      "exports": [
+        "ActiveDefenseMovementModifiers",
+        "DefenseMovementSpellRuntime",
+        "getActiveDefenseMovementModifiers",
+        "getDefenseMovementSpellRuntime",
+        "removeEffectsBrokenByAttack",
+        "removeEffectsBrokenBySpellCast"
+      ],
+      "lineCount": 185
+    },
+    {
+      "file": "src/core/rulesets/spellEffectRules.ts",
+      "score": 5,
+      "signals": [
+        "spellAttack",
+        "concentration",
+        "damage",
+        "immunity",
+        "castSpell"
+      ],
+      "exports": [
+        "addSpellEffect",
+        "advanceSpellEffects",
+        "createSpellEffect",
+        "getSpellDurationRounds",
+        "removeEffectsBrokenByDamage"
+      ],
+      "lineCount": 47
+    },
+    {
+      "file": "src/core/rulesets/warlockBuilderCertification.ts",
+      "score": 5,
+      "signals": [
+        "pactSlots",
+        "cantrip",
+        "saving throw",
+        "preparedSpells",
+        "knownSpells"
+      ],
+      "exports": [
+        "WarlockCertificationRow",
+        "certifyWarlockBuilder",
+        "summarizeWarlockCertification"
+      ],
+      "lineCount": 71
+    },
+    {
+      "file": "src/features/combat-tracker/CombatTrackerPage.tsx",
+      "score": 5,
+      "signals": [
+        "concentration",
+        "damage",
+        "healing",
+        "combat tracker",
+        "target"
+      ],
+      "exports": [
+        "CombatTrackerPage"
+      ],
+      "lineCount": 379
+    },
+    {
+      "file": "src/features/spellbook/Spellbook.tsx",
+      "score": 5,
+      "signals": [
+        "concentration",
+        "damage",
+        "healing",
+        "cantrip",
+        "target"
+      ],
+      "exports": [
+        "Spellbook"
+      ],
+      "lineCount": 262
+    },
+    {
+      "file": "src/certification/oracle/restRecoveryOracle.test.ts",
+      "score": 4,
+      "signals": [
+        "spellSlots",
+        "activeEffects",
+        "healing",
+        "target"
+      ],
+      "exports": [],
+      "lineCount": 178
+    },
+    {
+      "file": "src/core/character/sheetPlayModeConsistency.test.ts",
+      "score": 4,
+      "signals": [
+        "spellSlots",
+        "concentration",
+        "damage",
+        "resistance"
+      ],
+      "exports": [],
+      "lineCount": 14
+    },
+    {
+      "file": "src/core/rulesets/advancedFeatRuntimeRules.ts",
+      "score": 4,
+      "signals": [
+        "concentration",
+        "damage",
+        "resistance",
+        "saving throw"
+      ],
+      "exports": [
+        "AdvancedFeatRuntime",
+        "FeatAction",
+        "getAdvancedFeatRuntime",
+        "getInspiringLeaderTempHp"
+      ],
+      "lineCount": 71
+    },
+    {
+      "file": "src/core/rulesets/damageSaveSpellOfficial.test.ts",
+      "score": 4,
+      "signals": [
+        "concentration",
+        "damage",
+        "saving throw",
+        "target"
+      ],
+      "exports": [],
+      "lineCount": 62
+    },
+    {
+      "file": "src/core/rulesets/featExpansion.ts",
+      "score": 4,
+      "signals": [
+        "concentration",
+        "damage",
+        "cantrip",
+        "saving throw"
+      ],
+      "exports": [
+        "FEAT_EXPANSION_2014",
+        "FEAT_EXPANSION_2024"
+      ],
+      "lineCount": 55
+    },
+    {
+      "file": "src/core/rulesets/itemUseRules.test.ts",
+      "score": 4,
+      "signals": [
+        "concentration",
+        "damage",
+        "healing",
+        "target"
+      ],
+      "exports": [],
+      "lineCount": 3
+    },
+    {
+      "file": "src/core/rulesets/itemUseRules.ts",
+      "score": 4,
+      "signals": [
+        "concentration",
+        "damage",
+        "healing",
+        "target"
+      ],
+      "exports": [
+        "consumeInventoryItem",
+        "createItemEffect",
+        "getItemDamageProfile",
+        "getItemHealingFormula",
+        "getItemRestoration",
+        "isConsumableItem"
+      ],
+      "lineCount": 8
+    },
+    {
+      "file": "src/core/rulesets/levelOneSupportReadiness.test.ts",
+      "score": 4,
+      "signals": [
+        "concentration",
+        "healing",
+        "saving throw",
+        "target"
+      ],
+      "exports": [],
+      "lineCount": 60
+    },
+    {
+      "file": "src/core/rulesets/sorcererBuilderCertification.ts",
+      "score": 4,
+      "signals": [
+        "cantrip",
+        "saving throw",
+        "preparedSpells",
+        "knownSpells"
+      ],
+      "exports": [
+        "SorcererCertificationRow",
+        "certifySorcererBuilder",
+        "summarizeSorcererCertification"
+      ],
+      "lineCount": 128
+    },
+    {
+      "file": "src/core/rulesets/spellControlOfficial.test.ts",
+      "score": 4,
+      "signals": [
+        "concentration",
+        "damage",
+        "upcast",
+        "target"
+      ],
+      "exports": [],
+      "lineCount": 84
+    },
+    {
+      "file": "src/core/rulesets/spellControlRules.ts",
+      "score": 4,
+      "signals": [
+        "concentration",
+        "damage",
+        "saving throw",
+        "target"
+      ],
+      "exports": [
+        "ActiveControlModifiers",
+        "ControlSpellRuntime",
+        "RepeatSaveTiming",
+        "combineActiveControlEffects",
+        "getControlSpellRuntime",
+        "hasOfficialControlRuntime"
+      ],
+      "lineCount": 189
+    },
+    {
+      "file": "src/core/rulesets/spellSummonPersistentRules.ts",
+      "score": 4,
+      "signals": [
+        "spellAttack",
+        "concentration",
+        "damage",
+        "target"
+      ],
+      "exports": [
+        "PersistentSpellKind",
+        "PersistentTrigger",
+        "SummonPersistentSpellRuntime",
+        "getSummonPersistentSpellRuntime"
+      ],
+      "lineCount": 237
+    },
+    {
+      "file": "src/core/rulesets/warlockRules.ts",
+      "score": 4,
+      "signals": [
+        "pactSlots",
+        "cantrip",
+        "preparedSpells",
+        "knownSpells"
+      ],
+      "exports": [
+        "WarlockEdition",
+        "getMagicalCunningRecovery",
+        "getMysticArcanumSpellLevels",
+        "getWarlockCantripCount",
+        "getWarlockCombatFeatures",
+        "getWarlockKnownSpellLimit",
+        "getWarlockPactMagicProgression",
+        "getWarlockPreparedSpellLimit",
+        "getWarlockSubclassFeatureLevels",
+        "getWarlockSubclassLevel"
+      ],
+      "lineCount": 58
+    },
+    {
+      "file": "src/core/rulesets/wizardBuilderCertification.ts",
+      "score": 4,
+      "signals": [
+        "spellSlots",
+        "cantrip",
+        "saving throw",
+        "preparedSpells"
+      ],
+      "exports": [
+        "WizardCertificationRow",
+        "certifyWizardBuilder",
+        "summarizeWizardCertification"
+      ],
+      "lineCount": 57
+    },
+    {
+      "file": "src/features/characters/CharacterCompare.tsx",
+      "score": 4,
+      "signals": [
+        "spellSlots",
+        "spellAttack",
+        "spellSave",
+        "target"
+      ],
+      "exports": [
+        "CharacterCompare"
+      ],
+      "lineCount": 217
+    },
+    {
+      "file": "src/features/characters/CharacterEditor.tsx",
+      "score": 4,
+      "signals": [
+        "spellSlots",
+        "spellAttack",
+        "spellSave",
+        "target"
+      ],
+      "exports": [
+        "CharacterEditor"
+      ],
+      "lineCount": 434
+    },
+    {
+      "file": "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+      "score": 3,
+      "signals": [
+        "spellSlots",
+        "concentration",
+        "activeEffects"
+      ],
+      "exports": [],
+      "lineCount": 254
+    },
+    {
+      "file": "src/certification/matrix/spellcastingScenarioMatrix.ts",
+      "score": 3,
+      "signals": [
+        "spellSlots",
+        "spellAttack",
+        "spellSave"
+      ],
+      "exports": [
+        "generateSpellcastingScenarios"
+      ],
+      "lineCount": 28
+    },
+    {
+      "file": "src/certification/oracle/spellcastingOracle.test.ts",
+      "score": 3,
+      "signals": [
+        "spellSlots",
+        "spellAttack",
+        "spellSave"
+      ],
+      "exports": [],
+      "lineCount": 42
+    },
+    {
+      "file": "src/certification/oracle/spellcastingOracle.ts",
+      "score": 3,
+      "signals": [
+        "spellSlots",
+        "spellAttack",
+        "spellSave"
+      ],
+      "exports": [
+        "highestSpellLevel",
+        "mod",
+        "pb",
+        "preparedLimit",
+        "spellAttack",
+        "spellSaveDc",
+        "spellSlots"
+      ],
+      "lineCount": 41
+    },
+    {
+      "file": "src/certification/reference/restRecovery.reference.ts",
+      "score": 3,
+      "signals": [
+        "spellSlots",
+        "activeEffects",
+        "healing"
+      ],
+      "exports": [
+        "HitDiePool",
+        "ResourcePool",
+        "RestState",
+        "RulesetId",
+        "SpellSlotPool",
+        "abilityModifier",
+        "applyLongRest",
+        "applyShortRest",
+        "proficiencyBonus",
+        "recoverHitDice",
+        "recoverResources",
+        "recoverSpellSlots",
+        "spendHitDie",
+        "spendResource",
+        "spendSpellSlot"
+      ],
+      "lineCount": 192
+    },
+    {
+      "file": "src/core/character/characterLifecycle.integration.test.ts",
+      "score": 3,
+      "signals": [
+        "spellSlots",
+        "concentration",
+        "target"
+      ],
+      "exports": [],
+      "lineCount": 82
+    },
+    {
+      "file": "src/core/character/survivalRules.test.ts",
+      "score": 3,
+      "signals": [
+        "concentration",
+        "damage",
+        "healing"
+      ],
+      "exports": [],
+      "lineCount": 25
+    },
+    {
+      "file": "src/core/character/survivalRules.ts",
+      "score": 3,
+      "signals": [
+        "concentration",
+        "damage",
+        "healing"
+      ],
+      "exports": [
+        "DamageResult",
+        "SurvivalState",
+        "applyDamage",
+        "applyHealing",
+        "getConcentrationDc",
+        "resolveDeathSave"
+      ],
+      "lineCount": 68
+    }
+  ],
+  "groups": {
+    "spellRuntime": [
+      {
+        "file": "src/certification/oracle/spellRuntimeCombatOracle.test.ts",
+        "score": 8,
+        "signals": [
+          "spellAttack",
+          "spellSave",
+          "concentration",
+          "damage",
+          "healing",
+          "cantrip",
+          "upcast",
+          "target"
+        ],
+        "exports": [],
+        "lineCount": 151
+      },
+      {
+        "file": "src/certification/reference/spellRuntimeCombat.reference.ts",
+        "score": 8,
+        "signals": [
+          "spellAttack",
+          "spellSave",
+          "concentration",
+          "damage",
+          "healing",
+          "cantrip",
+          "upcast",
+          "target"
+        ],
+        "exports": [
+          "DamageRelation",
+          "SpellAbility",
+          "SpellRulesetId",
+          "applyDamageRelation",
+          "applyHealing",
+          "applySavingThrowDamage",
+          "canCastWithSlot",
+          "cantripScalingDice",
+          "concentrationAfterDamage",
+          "consumeSpellSlot",
+          "resolveTargetCount",
+          "restoreSpellSlot",
+          "spellAbilityModifier",
+          "spellAttackBonus",
+          "spellProficiencyBonus",
+          "spellSaveDc",
+          "upcastDiceCount"
+        ],
+        "lineCount": 169
+      },
+      {
+        "file": "src/core/rulesets/globalSpellRuntime.test.ts",
+        "score": 7,
+        "signals": [
+          "spellSave",
+          "concentration",
+          "damage",
+          "healing",
+          "upcast",
+          "saving throw",
+          "target"
+        ],
+        "exports": [],
+        "lineCount": 49
+      },
+      {
+        "file": "src/core/rulesets/globalSpellRuntime.ts",
+        "score": 7,
+        "signals": [
+          "pactSlots",
+          "spellSave",
+          "concentration",
+          "damage",
+          "healing",
+          "saving throw",
+          "target"
+        ],
+        "exports": [
+          "SaveDamageRule",
+          "SpellRuntimeOutcome",
+          "SpellRuntimePlan",
+          "SpellRuntimeTier",
+          "dispelSpellEffects",
+          "endConcentration",
+          "getDefaultSpellSaveRule",
+          "getGlobalCastableSlotLevels",
+          "getSpellRuntimePlan",
+          "resolveGlobalSpell",
+          "resolveSpellHealing",
+          "resolveSpellSave"
+        ],
+        "lineCount": 156
+      },
+      {
+        "file": "src/core/rulesets/spellExpansion.ts",
+        "score": 7,
+        "signals": [
+          "concentration",
+          "damage",
+          "healing",
+          "resistance",
+          "vulnerability",
+          "saving throw",
+          "target"
+        ],
+        "exports": [
+          "SPELL_EXPANSION_2014",
+          "SPELL_EXPANSION_2024"
+        ],
+        "lineCount": 304
+      },
+      {
+        "file": "src/core/rulesets/spellDefenseMovementOfficial.test.ts",
+        "score": 5,
+        "signals": [
+          "concentration",
+          "damage",
+          "immunity",
+          "castSpell",
+          "target"
+        ],
+        "exports": [],
+        "lineCount": 78
+      },
+      {
+        "file": "src/core/rulesets/spellDefenseMovementRules.ts",
+        "score": 5,
+        "signals": [
+          "concentration",
+          "damage",
+          "immunity",
+          "castSpell",
+          "target"
+        ],
+        "exports": [
+          "ActiveDefenseMovementModifiers",
+          "DefenseMovementSpellRuntime",
+          "getActiveDefenseMovementModifiers",
+          "getDefenseMovementSpellRuntime",
+          "removeEffectsBrokenByAttack",
+          "removeEffectsBrokenBySpellCast"
+        ],
+        "lineCount": 185
+      },
+      {
+        "file": "src/core/rulesets/spellEffectRules.ts",
+        "score": 5,
+        "signals": [
+          "spellAttack",
+          "concentration",
+          "damage",
+          "immunity",
+          "castSpell"
+        ],
+        "exports": [
+          "addSpellEffect",
+          "advanceSpellEffects",
+          "createSpellEffect",
+          "getSpellDurationRounds",
+          "removeEffectsBrokenByDamage"
+        ],
+        "lineCount": 47
+      },
+      {
+        "file": "src/features/spellbook/Spellbook.tsx",
+        "score": 5,
+        "signals": [
+          "concentration",
+          "damage",
+          "healing",
+          "cantrip",
+          "target"
+        ],
+        "exports": [
+          "Spellbook"
+        ],
+        "lineCount": 262
+      },
+      {
+        "file": "src/core/rulesets/damageSaveSpellOfficial.test.ts",
+        "score": 4,
+        "signals": [
+          "concentration",
+          "damage",
+          "saving throw",
+          "target"
+        ],
+        "exports": [],
+        "lineCount": 62
+      },
+      {
+        "file": "src/core/rulesets/spellControlOfficial.test.ts",
+        "score": 4,
+        "signals": [
+          "concentration",
+          "damage",
+          "upcast",
+          "target"
+        ],
+        "exports": [],
+        "lineCount": 84
+      },
+      {
+        "file": "src/core/rulesets/spellControlRules.ts",
+        "score": 4,
+        "signals": [
+          "concentration",
+          "damage",
+          "saving throw",
+          "target"
+        ],
+        "exports": [
+          "ActiveControlModifiers",
+          "ControlSpellRuntime",
+          "RepeatSaveTiming",
+          "combineActiveControlEffects",
+          "getControlSpellRuntime",
+          "hasOfficialControlRuntime"
+        ],
+        "lineCount": 189
+      },
+      {
+        "file": "src/core/rulesets/spellSummonPersistentRules.ts",
+        "score": 4,
+        "signals": [
+          "spellAttack",
+          "concentration",
+          "damage",
+          "target"
+        ],
+        "exports": [
+          "PersistentSpellKind",
+          "PersistentTrigger",
+          "SummonPersistentSpellRuntime",
+          "getSummonPersistentSpellRuntime"
+        ],
+        "lineCount": 237
+      },
+      {
+        "file": "src/certification/matrix/spellcastingScenarioMatrix.ts",
+        "score": 3,
+        "signals": [
+          "spellSlots",
+          "spellAttack",
+          "spellSave"
+        ],
+        "exports": [
+          "generateSpellcastingScenarios"
+        ],
+        "lineCount": 28
+      },
+      {
+        "file": "src/certification/oracle/spellcastingOracle.test.ts",
+        "score": 3,
+        "signals": [
+          "spellSlots",
+          "spellAttack",
+          "spellSave"
+        ],
+        "exports": [],
+        "lineCount": 42
+      },
+      {
+        "file": "src/certification/oracle/spellcastingOracle.ts",
+        "score": 3,
+        "signals": [
+          "spellSlots",
+          "spellAttack",
+          "spellSave"
+        ],
+        "exports": [
+          "highestSpellLevel",
+          "mod",
+          "pb",
+          "preparedLimit",
+          "spellAttack",
+          "spellSaveDc",
+          "spellSlots"
+        ],
+        "lineCount": 41
+      },
+      {
+        "file": "src/core/rulesets/spellBehaviorRules.test.ts",
+        "score": 3,
+        "signals": [
+          "concentration",
+          "saving throw",
+          "target"
+        ],
+        "exports": [],
+        "lineCount": 2
+      },
+      {
+        "file": "src/core/rulesets/spellBehaviorRules.ts",
+        "score": 3,
+        "signals": [
+          "upcast",
+          "saving throw",
+          "target"
+        ],
+        "exports": [
+          "SpellBehavior",
+          "getSpellBehavior"
+        ],
+        "lineCount": 4
+      },
+      {
+        "file": "src/core/rulesets/spellCertificationExpansion.test.ts",
+        "score": 3,
+        "signals": [
+          "concentration",
+          "damage",
+          "healing"
+        ],
+        "exports": [],
+        "lineCount": 61
+      },
+      {
+        "file": "src/core/rulesets/spellCertificationExpansion.ts",
+        "score": 3,
+        "signals": [
+          "concentration",
+          "damage",
+          "healing"
+        ],
+        "exports": [
+          "SpellCertificationDisposition",
+          "SpellCertificationEntry",
+          "SpellCertificationExpansionReport",
+          "SpellCertificationFamily",
+          "SpellFamilyCertification",
+          "buildSpellCertificationExpansionReport",
+          "certifySpell",
+          "formatSpellCertificationExpansionSummary",
+          "getSpellCertificationFamilies"
+        ],
+        "lineCount": 188
+      },
+      {
+        "file": "src/core/rulesets/spellExpansion.test.ts",
+        "score": 3,
+        "signals": [
+          "damage",
+          "healing",
+          "cantrip"
+        ],
+        "exports": [],
+        "lineCount": 76
+      },
+      {
+        "file": "src/core/rulesets/spellResolution.test.ts",
+        "score": 3,
+        "signals": [
+          "concentration",
+          "damage",
+          "cantrip"
+        ],
+        "exports": [],
+        "lineCount": 4
+      },
+      {
+        "file": "src/core/rulesets/spellResolution.ts",
+        "score": 3,
+        "signals": [
+          "damage",
+          "healing",
+          "cantrip"
+        ],
+        "exports": [
+          "getCantripScaleSteps",
+          "getCastableSlotLevels",
+          "getSpellRollFormula",
+          "rollFormula"
+        ],
+        "lineCount": 8
+      },
+      {
+        "file": "src/core/rulesets/spellRules.test.ts",
+        "score": 3,
+        "signals": [
+          "spellSlots",
+          "concentration",
+          "damage"
+        ],
+        "exports": [],
+        "lineCount": 11
+      },
+      {
+        "file": "src/core/rulesets/spellRules.ts",
+        "score": 3,
+        "signals": [
+          "spellSlots",
+          "damage",
+          "healing"
+        ],
+        "exports": [
+          "getHighestSpellLevel",
+          "getSpellMechanicSummary",
+          "isSpellAvailableToClass"
+        ],
+        "lineCount": 27
+      },
+      {
+        "file": "src/core/rulesets/spellRuntimeOfficial2024.test.ts",
+        "score": 3,
+        "signals": [
+          "concentration",
+          "healing",
+          "upcast"
+        ],
+        "exports": [],
+        "lineCount": 40
+      },
+      {
+        "file": "src/core/rulesets/spellSummonPersistentOfficial.test.ts",
+        "score": 3,
+        "signals": [
+          "concentration",
+          "damage",
+          "upcast"
+        ],
+        "exports": [],
+        "lineCount": 64
+      },
+      {
+        "file": "src/core/rulesets/levelOneSpellcastingReadiness.test.ts",
+        "score": 2,
+        "signals": [
+          "spellSlots",
+          "cantrip"
+        ],
+        "exports": [],
+        "lineCount": 35
+      },
+      {
+        "file": "src/core/rulesets/multiclassSpellcastingSeparation.test.ts",
+        "score": 2,
+        "signals": [
+          "spellSlots",
+          "concentration"
+        ],
+        "exports": [],
+        "lineCount": 32
+      },
+      {
+        "file": "src/core/rulesets/multiclassSpellcastingSeparation.ts",
+        "score": 2,
+        "signals": [
+          "spellAttack",
+          "spellSave"
+        ],
+        "exports": [
+          "CharacterSpellSource",
+          "getCharacterSpellcastingClasses",
+          "getClassSpellIds",
+          "getClassSpellcastingAbility",
+          "getSpellSource",
+          "getSpellcastingStatsForClass",
+          "getSpellcastingStatsForSpell"
+        ],
+        "lineCount": 124
+      }
+    ],
+    "combat": [
+      {
+        "file": "src/certification/oracle/spellRuntimeCombatOracle.test.ts",
+        "score": 8,
+        "signals": [
+          "spellAttack",
+          "spellSave",
+          "concentration",
+          "damage",
+          "healing",
+          "cantrip",
+          "upcast",
+          "target"
+        ],
+        "exports": [],
+        "lineCount": 151
+      },
+      {
+        "file": "src/certification/reference/spellRuntimeCombat.reference.ts",
+        "score": 8,
+        "signals": [
+          "spellAttack",
+          "spellSave",
+          "concentration",
+          "damage",
+          "healing",
+          "cantrip",
+          "upcast",
+          "target"
+        ],
+        "exports": [
+          "DamageRelation",
+          "SpellAbility",
+          "SpellRulesetId",
+          "applyDamageRelation",
+          "applyHealing",
+          "applySavingThrowDamage",
+          "canCastWithSlot",
+          "cantripScalingDice",
+          "concentrationAfterDamage",
+          "consumeSpellSlot",
+          "resolveTargetCount",
+          "restoreSpellSlot",
+          "spellAbilityModifier",
+          "spellAttackBonus",
+          "spellProficiencyBonus",
+          "spellSaveDc",
+          "upcastDiceCount"
+        ],
+        "lineCount": 169
+      },
+      {
+        "file": "src/core/rulesets/spellEffectRules.ts",
+        "score": 5,
+        "signals": [
+          "spellAttack",
+          "concentration",
+          "damage",
+          "immunity",
+          "castSpell"
+        ],
+        "exports": [
+          "addSpellEffect",
+          "advanceSpellEffects",
+          "createSpellEffect",
+          "getSpellDurationRounds",
+          "removeEffectsBrokenByDamage"
+        ],
+        "lineCount": 47
+      },
+      {
+        "file": "src/features/combat-tracker/CombatTrackerPage.tsx",
+        "score": 5,
+        "signals": [
+          "concentration",
+          "damage",
+          "healing",
+          "combat tracker",
+          "target"
+        ],
+        "exports": [
+          "CombatTrackerPage"
+        ],
+        "lineCount": 379
+      },
+      {
+        "file": "src/core/rulesets/damageSaveSpellOfficial.test.ts",
+        "score": 4,
+        "signals": [
+          "concentration",
+          "damage",
+          "saving throw",
+          "target"
+        ],
+        "exports": [],
+        "lineCount": 62
+      },
+      {
+        "file": "src/core/rulesets/itemEffectRuntimeRules.test.ts",
+        "score": 3,
+        "signals": [
+          "concentration",
+          "damage",
+          "resistance"
+        ],
+        "exports": [],
+        "lineCount": 4
+      },
+      {
+        "file": "src/features/combat-tracker/combatTrackerStorage.test.ts",
+        "score": 3,
+        "signals": [
+          "damage",
+          "healing",
+          "combat tracker"
+        ],
+        "exports": [],
+        "lineCount": 39
+      },
+      {
+        "file": "src/features/combat-tracker/combatTrackerStorage.ts",
+        "score": 3,
+        "signals": [
+          "concentration",
+          "damage",
+          "healing"
+        ],
+        "exports": [
+          "BATTLEFIELD_ZONE_KINDS",
+          "BATTLEFIELD_ZONE_SHAPES",
+          "BattlefieldZone",
+          "BattlefieldZoneKind",
+          "BattlefieldZoneShape",
+          "COMBAT_CONDITIONS",
+          "CombatCondition",
+          "CombatEffect",
+          "CombatEncounter",
+          "CombatLogEntry",
+          "CombatLogKind",
+          "CombatTemplate",
+          "CombatTemplateCombatant",
+          "Combatant",
+          "CombatantKind",
+          "addCombatLog",
+          "advanceTurn",
+          "applyDamage",
+          "applyHealing",
+          "createBattlefieldZone",
+          "createCombatEffect",
+          "createCombatEncounter",
+          "createCombatLogEntry",
+          "createCombatTemplate",
+          "createCombatant",
+          "createEncounterFromCampaignEncounter",
+          "createEncounterFromTemplate",
+          "getActiveConditions",
+          "getCombatSummary",
+          "loadCombatEncounters",
+          "loadCombatTemplates",
+          "sanitizeCombatEncounter",
+          "sanitizeCombatant",
+          "saveCombatEncounters",
+          "saveCombatTemplates",
+          "sortCombatants",
+          "tickBattlefieldZones",
+          "tickCombatEffects"
+        ],
+        "lineCount": 366
+      },
+      {
+        "file": "src/certification/differential/equipmentCombatDifferential.test.ts",
+        "score": 2,
+        "signals": [
+          "spellSlots",
+          "damage"
+        ],
+        "exports": [],
+        "lineCount": 104
+      },
+      {
+        "file": "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+        "score": 2,
+        "signals": [
+          "spellSlots",
+          "damage"
+        ],
+        "exports": [],
+        "lineCount": 546
+      },
+      {
+        "file": "src/core/rulesets/combatAutomationRuntime.test.ts",
+        "score": 2,
+        "signals": [
+          "concentration",
+          "damage"
+        ],
+        "exports": [],
+        "lineCount": 54
+      },
+      {
+        "file": "src/core/rulesets/combatAutomationRuntime.ts",
+        "score": 2,
+        "signals": [
+          "concentration",
+          "damage"
+        ],
+        "exports": [
+          "CombatAutomationState",
+          "DeathSaveState",
+          "beginAutomatedTurn",
+          "createCombatAutomationState",
+          "createDeathSaveState",
+          "ensureCombatantAutomation",
+          "registerConcentrationDamage",
+          "resetDeathSaves",
+          "resolveDeathSave",
+          "spendAutomatedMovement",
+          "spendAutomatedResource"
+        ],
+        "lineCount": 157
+      },
+      {
+        "file": "src/core/rulesets/combatStatusRules.test.ts",
+        "score": 2,
+        "signals": [
+          "concentration",
+          "damage"
+        ],
+        "exports": [],
+        "lineCount": 25
+      },
+      {
+        "file": "src/core/rulesets/combatStatusRules.ts",
+        "score": 2,
+        "signals": [
+          "concentration",
+          "damage"
+        ],
+        "exports": [
+          "DeathSaveStatus",
+          "advanceConditionDurations",
+          "getCombatStatusLabel",
+          "getDeathSaveStatus",
+          "shouldRequestConcentrationSave"
+        ],
+        "lineCount": 53
+      },
+      {
+        "file": "src/core/rulesets/combatTurnRules.test.ts",
+        "score": 2,
+        "signals": [
+          "concentration",
+          "damage"
+        ],
+        "exports": [],
+        "lineCount": 30
+      },
+      {
+        "file": "src/core/rulesets/combatTurnRules.ts",
+        "score": 2,
+        "signals": [
+          "concentration",
+          "damage"
+        ],
+        "exports": [
+          "CombatTurnState",
+          "beginCombatTurn",
+          "canTakeOpportunityAttack",
+          "createCombatTurnState",
+          "endCombatTurn",
+          "getConcentrationSaveDc"
+        ],
+        "lineCount": 37
+      },
+      {
+        "file": "src/core/rulesets/itemEffectRuntimeRules.ts",
+        "score": 2,
+        "signals": [
+          "damage",
+          "resistance"
+        ],
+        "exports": [
+          "ItemEffectRuntime",
+          "getItemEffectRuntime",
+          "getItemTempHp",
+          "removeFragileItemEffects"
+        ],
+        "lineCount": 6
+      },
+      {
+        "file": "src/core/rulesets/levelOneCombatReadiness.test.ts",
+        "score": 2,
+        "signals": [
+          "concentration",
+          "damage"
+        ],
+        "exports": [],
+        "lineCount": 50
+      },
+      {
+        "file": "src/features/combat-tracker/combatLogStorage.test.ts",
+        "score": 2,
+        "signals": [
+          "damage",
+          "healing"
+        ],
+        "exports": [],
+        "lineCount": 33
+      },
+      {
+        "file": "src/certification/matrix/equipmentCombatScenarioMatrix.ts",
+        "score": 1,
+        "signals": [
+          "damage"
+        ],
+        "exports": [
+          "EQUIPMENT_COMBAT_SCENARIOS"
+        ],
+        "lineCount": 10
+      },
+      {
+        "file": "src/certification/oracle/equipmentCombatOracle.test.ts",
+        "score": 1,
+        "signals": [
+          "damage"
+        ],
+        "exports": [],
+        "lineCount": 29
+      },
+      {
+        "file": "src/certification/oracle/equipmentCombatOracle.ts",
+        "score": 1,
+        "signals": [
+          "damage"
+        ],
+        "exports": [
+          "abilityModifier",
+          "automaticArmorClass",
+          "combatReadiness",
+          "effectiveArmorClass",
+          "inventoryWeight",
+          "proficiencyBonus",
+          "setInventoryQuantity",
+          "weaponAbilityModifier",
+          "weaponAttackBonus",
+          "weaponDamageSummary",
+          "weaponMastery"
+        ],
+        "lineCount": 14
+      },
+      {
+        "file": "src/certification/reference/equipmentCombat.reference.ts",
+        "score": 1,
+        "signals": [
+          "damage"
+        ],
+        "exports": [
+          "AbilityKey",
+          "REFERENCE_ITEMS",
+          "REFERENCE_SPELLS",
+          "ReferenceAbilities",
+          "ReferenceCombatant",
+          "ReferenceInventoryEntry",
+          "ReferenceItem",
+          "ReferenceSpell"
+        ],
+        "lineCount": 24
+      },
+      {
+        "file": "src/core/rulesets/levelOneCombatReadiness.ts",
+        "score": 1,
+        "signals": [
+          "damage"
+        ],
+        "exports": [
+          "LevelOneCombatReadiness",
+          "getLevelOneCombatReadiness"
+        ],
+        "lineCount": 98
+      },
+      {
+        "file": "src/core/rulesets/spellEffectRules.test.ts",
+        "score": 1,
+        "signals": [
+          "concentration"
+        ],
+        "exports": [],
+        "lineCount": 4
+      },
+      {
+        "file": "src/features/campaigns/EncounterCombatRolls.tsx",
+        "score": 1,
+        "signals": [
+          "damage"
+        ],
+        "exports": [
+          "EncounterCombatRolls"
+        ],
+        "lineCount": 285
+      },
+      {
+        "file": "src/features/campaigns/EncounterConditionTracker.tsx",
+        "score": 1,
+        "signals": [
+          "target"
+        ],
+        "exports": [
+          "EncounterConditionTracker"
+        ],
+        "lineCount": 79
+      },
+      {
+        "file": "src/features/characters/fightingStyleCombat.test.ts",
+        "score": 1,
+        "signals": [
+          "damage"
+        ],
+        "exports": [],
+        "lineCount": 17
+      },
+      {
+        "file": "src/features/combat-tracker/battlefieldZones.test.ts",
+        "score": 1,
+        "signals": [
+          "target"
+        ],
+        "exports": [],
+        "lineCount": 33
+      },
+      {
+        "file": "src/features/combat-tracker/combatEncounterBridge.test.ts",
+        "score": 1,
+        "signals": [
+          "damage"
+        ],
+        "exports": [],
+        "lineCount": 56
+      }
+    ],
+    "ui": [
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "score": 11,
+        "signals": [
+          "spellSlots",
+          "pactSlots",
+          "spellAttack",
+          "spellSave",
+          "concentration",
+          "damage",
+          "healing",
+          "cantrip",
+          "saving throw",
+          "castSpell",
+          "target"
+        ],
+        "exports": [
+          "CharacterDetail"
+        ],
+        "lineCount": 1443
+      },
+      {
+        "file": "src/features/play-mode/PlayMode.tsx",
+        "score": 11,
+        "signals": [
+          "spellSlots",
+          "spellAttack",
+          "spellSave",
+          "concentration",
+          "damage",
+          "healing",
+          "resistance",
+          "cantrip",
+          "saving throw",
+          "castSpell",
+          "target"
+        ],
+        "exports": [
+          "PlayMode"
+        ],
+        "lineCount": 937
+      },
+      {
+        "file": "src/features/builder/Builder.tsx",
+        "score": 9,
+        "signals": [
+          "spellSlots",
+          "spellSave",
+          "damage",
+          "healing",
+          "cantrip",
+          "castSpell",
+          "preparedSpells",
+          "knownSpells",
+          "target"
+        ],
+        "exports": [
+          "Builder"
+        ],
+        "lineCount": 1474
+      },
+      {
+        "file": "src/features/characters/characterShared.tsx",
+        "score": 7,
+        "signals": [
+          "spellSlots",
+          "concentration",
+          "damage",
+          "healing",
+          "cantrip",
+          "preparedSpells",
+          "target"
+        ],
+        "exports": [
+          "CharacterInventoryManager",
+          "CharacterSpellSelector",
+          "ClassBasedSpellSelector",
+          "FULL_CASTER_CLASSES",
+          "FULL_CASTER_SLOT_TABLE",
+          "calculateEffectiveArmorClass",
+          "calculateSuggestedArmorClass",
+          "createCharacterFromDraft",
+          "emptyDraft",
+          "getCharacterInventoryItems",
+          "getDefaultSpellSlots",
+          "getEquippedItems",
+          "getHitDieForClass",
+          "getInventoryQuantity",
+          "getInventoryWeight",
+          "getItemCategoryLabel",
+          "getItemRulesSummary",
+          "getSpellGroupTitle",
+          "getSpellLevelGroups",
+          "getSpellLevelLabel",
+          "getWeaponAbilityModifier",
+          "getWeaponAttackBonus",
+          "getWeaponDamageSummary",
+          "isSpellReadyToCast",
+          "normalizeCharacterDraft",
+          "normalizeHitDice",
+          "normalizeSpellSlots",
+          "resetDeathSaves",
+          "resetHitDice",
+          "resetSpellSlots",
+          "setInventoryItemQuantity",
+          "sortSpellsByLevelAndName"
+        ],
+        "lineCount": 1244
+      },
+      {
+        "file": "src/features/homebrew/HomebrewLab.tsx",
+        "score": 6,
+        "signals": [
+          "concentration",
+          "damage",
+          "healing",
+          "cantrip",
+          "saving throw",
+          "target"
+        ],
+        "exports": [
+          "HomebrewLab"
+        ],
+        "lineCount": 1733
+      },
+      {
+        "file": "src/features/combat-tracker/CombatTrackerPage.tsx",
+        "score": 5,
+        "signals": [
+          "concentration",
+          "damage",
+          "healing",
+          "combat tracker",
+          "target"
+        ],
+        "exports": [
+          "CombatTrackerPage"
+        ],
+        "lineCount": 379
+      },
+      {
+        "file": "src/features/spellbook/Spellbook.tsx",
+        "score": 5,
+        "signals": [
+          "concentration",
+          "damage",
+          "healing",
+          "cantrip",
+          "target"
+        ],
+        "exports": [
+          "Spellbook"
+        ],
+        "lineCount": 262
+      },
+      {
+        "file": "src/features/characters/CharacterCompare.tsx",
+        "score": 4,
+        "signals": [
+          "spellSlots",
+          "spellAttack",
+          "spellSave",
+          "target"
+        ],
+        "exports": [
+          "CharacterCompare"
+        ],
+        "lineCount": 217
+      },
+      {
+        "file": "src/features/characters/CharacterEditor.tsx",
+        "score": 4,
+        "signals": [
+          "spellSlots",
+          "spellAttack",
+          "spellSave",
+          "target"
+        ],
+        "exports": [
+          "CharacterEditor"
+        ],
+        "lineCount": 434
+      },
+      {
+        "file": "src/features/builder/AncestryChoicePanel.tsx",
+        "score": 3,
+        "signals": [
+          "resistance",
+          "cantrip",
+          "target"
+        ],
+        "exports": [
+          "AncestryChoicePanel"
+        ],
+        "lineCount": 181
+      },
+      {
+        "file": "src/features/characters/LevelUpAssistant.tsx",
+        "score": 3,
+        "signals": [
+          "cantrip",
+          "castSpell",
+          "target"
+        ],
+        "exports": [
+          "LevelUpAssistant"
+        ],
+        "lineCount": 322
+      },
+      {
+        "file": "src/features/rest/RestCenterPage.tsx",
+        "score": 3,
+        "signals": [
+          "spellSlots",
+          "healing",
+          "target"
+        ],
+        "exports": [
+          "RestCenterPage"
+        ],
+        "lineCount": 86
+      },
+      {
+        "file": "src/features/characters/Characters.tsx",
+        "score": 2,
+        "signals": [
+          "spellSave",
+          "target"
+        ],
+        "exports": [
+          "Characters"
+        ],
+        "lineCount": 329
+      },
+      {
+        "file": "src/features/classes/ClassCatalogPage.tsx",
+        "score": 2,
+        "signals": [
+          "spellSlots",
+          "target"
+        ],
+        "exports": [
+          "ClassCatalogPage"
+        ],
+        "lineCount": 31
+      },
+      {
+        "file": "src/features/help/HelpCenter.tsx",
+        "score": 2,
+        "signals": [
+          "concentration",
+          "target"
+        ],
+        "exports": [
+          "HelpCenter"
+        ],
+        "lineCount": 324
+      },
+      {
+        "file": "src/features/inventory/Inventory.tsx",
+        "score": 2,
+        "signals": [
+          "damage",
+          "target"
+        ],
+        "exports": [
+          "Inventory"
+        ],
+        "lineCount": 101
+      },
+      {
+        "file": "src/features/library/Library.tsx",
+        "score": 2,
+        "signals": [
+          "concentration",
+          "cantrip"
+        ],
+        "exports": [
+          "Library"
+        ],
+        "lineCount": 241
+      },
+      {
+        "file": "src/features/monsters/MonsterLibrary.tsx",
+        "score": 2,
+        "signals": [
+          "damage",
+          "target"
+        ],
+        "exports": [
+          "MonsterDetail",
+          "MonsterLibrary"
+        ],
+        "lineCount": 1023
+      },
+      {
+        "file": "src/features/player-test/PlayerTestCenter.tsx",
+        "score": 2,
+        "signals": [
+          "concentration",
+          "target"
+        ],
+        "exports": [
+          "PlayerTestCenter"
+        ],
+        "lineCount": 48
+      },
+      {
+        "file": "src/shared/commands/CommandPalette.tsx",
+        "score": 2,
+        "signals": [
+          "cantrip",
+          "target"
+        ],
+        "exports": [
+          "CommandPalette"
+        ],
+        "lineCount": 336
+      },
+      {
+        "file": "src/components/rest/RestActionsPanel.tsx",
+        "score": 1,
+        "signals": [
+          "spellSlots"
+        ],
+        "exports": [
+          "RestActionsPanel",
+          "RestActionsPanelProps"
+        ],
+        "lineCount": 111
+      },
+      {
+        "file": "src/features/backup/DataBackup.tsx",
+        "score": 1,
+        "signals": [
+          "target"
+        ],
+        "exports": [
+          "DataBackup"
+        ],
+        "lineCount": 375
+      },
+      {
+        "file": "src/features/campaigns/Campaigns.tsx",
+        "score": 1,
+        "signals": [
+          "target"
+        ],
+        "exports": [
+          "Campaigns"
+        ],
+        "lineCount": 1433
+      },
+      {
+        "file": "src/features/campaigns/EncounterCombatRolls.tsx",
+        "score": 1,
+        "signals": [
+          "damage"
+        ],
+        "exports": [
+          "EncounterCombatRolls"
+        ],
+        "lineCount": 285
+      },
+      {
+        "file": "src/features/campaigns/EncounterConditionTracker.tsx",
+        "score": 1,
+        "signals": [
+          "target"
+        ],
+        "exports": [
+          "EncounterConditionTracker"
+        ],
+        "lineCount": 79
+      },
+      {
+        "file": "src/features/campaigns/EncounterLootGenerator.tsx",
+        "score": 1,
+        "signals": [
+          "target"
+        ],
+        "exports": [
+          "EncounterLootGenerator"
+        ],
+        "lineCount": 264
+      },
+      {
+        "file": "src/features/campaigns/SessionTimeline.tsx",
+        "score": 1,
+        "signals": [
+          "target"
+        ],
+        "exports": [
+          "SessionTimeline"
+        ],
+        "lineCount": 192
+      },
+      {
+        "file": "src/features/characters/ChoiceDebtResolver.tsx",
+        "score": 1,
+        "signals": [
+          "target"
+        ],
+        "exports": [
+          "ChoiceDebtResolver"
+        ],
+        "lineCount": 14
+      },
+      {
+        "file": "src/features/combat-tracker/CombatTurnAutomationPanel.tsx",
+        "score": 1,
+        "signals": [
+          "concentration"
+        ],
+        "exports": [
+          "CombatTurnAutomationPanel"
+        ],
+        "lineCount": 43
+      },
+      {
+        "file": "src/features/dice/Dice.tsx",
+        "score": 1,
+        "signals": [
+          "target"
+        ],
+        "exports": [
+          "Dice"
+        ],
+        "lineCount": 162
+      }
+    ]
+  },
+  "status": "READY"
+}

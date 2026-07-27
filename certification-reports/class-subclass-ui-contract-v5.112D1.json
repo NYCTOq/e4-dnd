@@ -1,0 +1,3815 @@
+{
+  "package": "v5.112D1",
+  "domain": "class-subclass-ui-integration",
+  "generatedAt": "2026-07-25T13:16:13.838Z",
+  "scannedFiles": 575,
+  "matchedFiles": 300,
+  "requiredRuntimeFiles": [
+    "src/core/rulesets/classSubclassRuntimeRules.ts",
+    "src/core/rulesets/classSubclassCharacterAdapter.ts"
+  ],
+  "missingRequired": [],
+  "candidates": {
+    "characterDetail": [
+      {
+        "file": "src/features/play-mode/PlayMode.tsx",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 80
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 1
+            },
+            {
+              "signal": "play mode",
+              "count": 4
+            },
+            {
+              "signal": "actions",
+              "count": 35
+            },
+            {
+              "signal": "reactions",
+              "count": 2
+            },
+            {
+              "signal": "resources",
+              "count": 60
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "count": 4
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/rest"
+        ],
+        "exports": [
+          "PlayMode"
+        ],
+        "lineCount": 937
+      },
+      {
+        "file": "src/certification/golden/classSubclassGoldenCharacters.test.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "classFeatures",
+              "count": 9
+            },
+            {
+              "signal": "subclassId",
+              "count": 13
+            },
+            {
+              "signal": "features",
+              "count": 15
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "resources",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 312
+      },
+      {
+        "file": "src/core/rulesets/classSpecificRuntimePolicy.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "classFeatures",
+              "count": 4
+            },
+            {
+              "signal": "features",
+              "count": 25
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "resources",
+              "count": 14
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CLASS_RUNTIME_EXPECTATIONS",
+          "ClassRuntimeArea",
+          "ClassRuntimeAreaReport",
+          "ClassRuntimeExpectation",
+          "ClassRuntimeState",
+          "ClassSpecificRuntimePolicyReport",
+          "ClassSpecificRuntimeReport",
+          "getClassSpecificRuntimePolicyReport"
+        ],
+        "lineCount": 131
+      },
+      {
+        "file": "src/core/rulesets/classSubclassCharacterAdapter.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "classFeatures",
+              "count": 7
+            },
+            {
+              "signal": "subclassId",
+              "count": 8
+            },
+            {
+              "signal": "features",
+              "count": 13
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CharacterClassEntry",
+          "ClassCompatibleCharacter",
+          "ClassRuntimeSnapshot",
+          "applyClassFeatureRest",
+          "buildClassRuntimeSnapshot",
+          "characterClassEntries",
+          "characterClassLevels",
+          "deserializeClassCompatibleCharacter",
+          "resolveClassRuleset",
+          "serializeClassCompatibleCharacter",
+          "subclassUnlockState"
+        ],
+        "lineCount": 182
+      },
+      {
+        "file": "src/core/rulesets/characterSheetRules.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "classFeatures",
+              "count": 4
+            },
+            {
+              "signal": "features",
+              "count": 23
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "SKILL_ABILITIES",
+          "getCharacterFeatures",
+          "getPassiveScore",
+          "getSavingThrowBonus",
+          "getSkillBonus"
+        ],
+        "lineCount": 44
+      },
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "CharacterDetail",
+              "count": 1
+            },
+            {
+              "signal": "character detail",
+              "count": 2
+            },
+            {
+              "signal": "features",
+              "count": 7
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "play mode",
+              "count": 5
+            },
+            {
+              "signal": "actions",
+              "count": 12
+            },
+            {
+              "signal": "reactions",
+              "count": 4
+            },
+            {
+              "signal": "resources",
+              "count": 6
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "count": 20
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 11
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters",
+          "/rest"
+        ],
+        "exports": [
+          "CharacterDetail"
+        ],
+        "lineCount": 1443
+      },
+      {
+        "file": "src/core/rulesets/arcaneClassRuntime.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 19
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "ArcaneClassRuntime",
+          "ArcaneRecoveryType",
+          "getArcaneClassRuntime"
+        ],
+        "lineCount": 110
+      },
+      {
+        "file": "src/core/rulesets/fighterBuilderCertification.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "subclassId",
+              "count": 2
+            },
+            {
+              "signal": "features",
+              "count": 16
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "actions",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "FighterCertificationRow",
+          "certifyFighterBuilder",
+          "summarizeFighterCertification"
+        ],
+        "lineCount": 7
+      },
+      {
+        "file": "src/core/rulesets/wizardBuilderCertification.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "classFeatures",
+              "count": 2
+            },
+            {
+              "signal": "subclassId",
+              "count": 2
+            },
+            {
+              "signal": "features",
+              "count": 14
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "WizardCertificationRow",
+          "certifyWizardBuilder",
+          "summarizeWizardCertification"
+        ],
+        "lineCount": 57
+      },
+      {
+        "file": "src/core/rulesets/warlockBuilderCertification.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "classFeatures",
+              "count": 2
+            },
+            {
+              "signal": "subclassId",
+              "count": 2
+            },
+            {
+              "signal": "features",
+              "count": 13
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "WarlockCertificationRow",
+          "certifyWarlockBuilder",
+          "summarizeWarlockCertification"
+        ],
+        "lineCount": 71
+      },
+      {
+        "file": "src/core/rulesets/sorcererBuilderCertification.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "classFeatures",
+              "count": 2
+            },
+            {
+              "signal": "subclassId",
+              "count": 2
+            },
+            {
+              "signal": "features",
+              "count": 12
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "SorcererCertificationRow",
+          "certifySorcererBuilder",
+          "summarizeSorcererCertification"
+        ],
+        "lineCount": 128
+      },
+      {
+        "file": "src/core/rulesets/druidBuilderCertification.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "subclassId",
+              "count": 2
+            },
+            {
+              "signal": "features",
+              "count": 12
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "DruidCertificationRow",
+          "certifyDruidBuilder",
+          "summarizeDruidCertification"
+        ],
+        "lineCount": 7
+      },
+      {
+        "file": "src/core/rulesets/warlockWizardOfficialProgression.test.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 13
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "classExpansion",
+              "count": 1
+            },
+            {
+              "signal": "subclassExpansion",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "path:",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 113
+      },
+      {
+        "file": "src/core/rulesets/bardBuilderCertification.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "subclassId",
+              "count": 2
+            },
+            {
+              "signal": "features",
+              "count": 10
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "BardCertificationRow",
+          "certifyBardBuilder",
+          "summarizeBardCertification"
+        ],
+        "lineCount": 93
+      },
+      {
+        "file": "src/features/characters/LevelUpAssistant.tsx",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "classFeatures",
+              "count": 5
+            },
+            {
+              "signal": "features",
+              "count": 7
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "LevelUpAssistant"
+        ],
+        "lineCount": 322
+      }
+    ],
+    "playMode": [
+      {
+        "file": "src/features/play-mode/PlayMode.tsx",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 80
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 1
+            },
+            {
+              "signal": "play mode",
+              "count": 4
+            },
+            {
+              "signal": "actions",
+              "count": 35
+            },
+            {
+              "signal": "reactions",
+              "count": 2
+            },
+            {
+              "signal": "resources",
+              "count": 60
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "count": 4
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/rest"
+        ],
+        "exports": [
+          "PlayMode"
+        ],
+        "lineCount": 937
+      },
+      {
+        "file": "src/shared/release/releaseNotes.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "character detail",
+              "count": 1
+            },
+            {
+              "signal": "features",
+              "count": 1
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "play mode",
+              "count": 47
+            },
+            {
+              "signal": "actions",
+              "count": 4
+            },
+            {
+              "signal": "resources",
+              "count": 3
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 3
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 6
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "RELEASE_CATEGORIES",
+          "RELEASE_NOTES",
+          "ReleaseCategory",
+          "ReleaseChange",
+          "ReleaseEntry",
+          "getCurrentRelease"
+        ],
+        "lineCount": 1057
+      },
+      {
+        "file": "src/core/rulesets/levelOneActionEconomyReadiness.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "actions",
+              "count": 17
+            },
+            {
+              "signal": "reactions",
+              "count": 5
+            },
+            {
+              "signal": "resources",
+              "count": 27
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "LevelOneActionEconomyReadiness",
+          "getLevelOneActionEconomyReadiness"
+        ],
+        "lineCount": 120
+      },
+      {
+        "file": "src/core/rulesets/subclassRuntimeRules.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "classFeatures",
+              "count": 2
+            },
+            {
+              "signal": "features",
+              "count": 6
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "actions",
+              "count": 30
+            },
+            {
+              "signal": "resources",
+              "count": 5
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "SubclassActionType",
+          "SubclassRuntime",
+          "SubclassRuntimeAction",
+          "canUseSubclassAction",
+          "getSubclassRuntime",
+          "spendSubclassActionResource"
+        ],
+        "lineCount": 54
+      },
+      {
+        "file": "src/core/homebrew/homebrewRuntimeIntegration.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 7
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "actions",
+              "count": 8
+            },
+            {
+              "signal": "resources",
+              "count": 24
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "HomebrewCharacterRuntime",
+          "HomebrewRuntimeActionState",
+          "HomebrewRuntimeResource",
+          "executeHomebrewRuntimeAction",
+          "getHomebrewCharacterEntities",
+          "getHomebrewCharacterRuntime",
+          "recoverHomebrewCharacterResources",
+          "synchronizeHomebrewResources"
+        ],
+        "lineCount": 151
+      },
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "CharacterDetail",
+              "count": 1
+            },
+            {
+              "signal": "character detail",
+              "count": 2
+            },
+            {
+              "signal": "features",
+              "count": 7
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "play mode",
+              "count": 5
+            },
+            {
+              "signal": "actions",
+              "count": 12
+            },
+            {
+              "signal": "reactions",
+              "count": 4
+            },
+            {
+              "signal": "resources",
+              "count": 6
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "count": 20
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 11
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters",
+          "/rest"
+        ],
+        "exports": [
+          "CharacterDetail"
+        ],
+        "lineCount": 1443
+      },
+      {
+        "file": "src/core/rulesets/levelOneRestReadiness.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "resources",
+              "count": 21
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "LevelOneRestReadiness",
+          "getLevelOneRestReadiness"
+        ],
+        "lineCount": 143
+      },
+      {
+        "file": "src/core/character/sheetPlayModeConsistency.test.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 8
+            },
+            {
+              "signal": "play mode",
+              "count": 1
+            },
+            {
+              "signal": "resources",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 14
+      },
+      {
+        "file": "src/core/rulesets/classFeatureEngine.test.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "actions",
+              "count": 4
+            },
+            {
+              "signal": "reactions",
+              "count": 3
+            },
+            {
+              "signal": "resources",
+              "count": 10
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 19
+      },
+      {
+        "file": "src/core/character/sheetPlayModeConsistency.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 5
+            },
+            {
+              "signal": "play mode",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "WeaponConsistencyRow",
+          "compareSheetAndPlayMode",
+          "getSheetPlayModeConsistencySnapshot",
+          "getWeaponConsistencyRows"
+        ],
+        "lineCount": 82
+      },
+      {
+        "file": "src/core/homebrew/homebrewRuntimeIntegration.test.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "actions",
+              "count": 1
+            },
+            {
+              "signal": "resources",
+              "count": 14
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 19
+      },
+      {
+        "file": "src/certification/oracle/restRecoveryOracle.test.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "resources",
+              "count": 14
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 178
+      },
+      {
+        "file": "src/core/rulesets/classSpecificRuntimePolicy.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "classFeatures",
+              "count": 4
+            },
+            {
+              "signal": "features",
+              "count": 25
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "resources",
+              "count": 14
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CLASS_RUNTIME_EXPECTATIONS",
+          "ClassRuntimeArea",
+          "ClassRuntimeAreaReport",
+          "ClassRuntimeExpectation",
+          "ClassRuntimeState",
+          "ClassSpecificRuntimePolicyReport",
+          "ClassSpecificRuntimeReport",
+          "getClassSpecificRuntimePolicyReport"
+        ],
+        "lineCount": 131
+      },
+      {
+        "file": "src/core/rulesets/levelOneSupportReadiness.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "resources",
+              "count": 13
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "LevelOneSupportReadiness",
+          "getLevelOneSupportReadiness"
+        ],
+        "lineCount": 99
+      },
+      {
+        "file": "src/features/factions/FactionsPage.tsx",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "actions",
+              "count": 13
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "FactionsPage"
+        ],
+        "lineCount": 112
+      }
+    ],
+    "classCatalog": [
+      {
+        "file": "src/features/legacy/AppRoutes.tsx",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "CharacterDetail",
+              "count": 4
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 4
+            },
+            {
+              "signal": "actions",
+              "count": 6
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "ClassCatalog",
+              "count": 8
+            },
+            {
+              "signal": "SubclassCatalog",
+              "count": 4
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "count": 8
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 46
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/",
+          "/backup",
+          "/builder",
+          "/calendar",
+          "/campaigns",
+          "/characters",
+          "/characters/:characterId",
+          "/characters/:characterId/edit",
+          "/characters/compare",
+          "/classes",
+          "/collections",
+          "/combat",
+          "/dice",
+          "/factions",
+          "/feats",
+          "/help",
+          "/homebrew-lab",
+          "/inventory",
+          "/library",
+          "/locations",
+          "/loot",
+          "/monsters",
+          "/monsters/:monsterId",
+          "/npcs",
+          "/origins",
+          "/play-mode",
+          "/player-test",
+          "/quests",
+          "/rest",
+          "/rulesets",
+          "/search",
+          "/session-planner",
+          "/settings",
+          "/spellbook",
+          "/subclasses",
+          "/updates"
+        ],
+        "exports": [
+          "AppRoutes"
+        ],
+        "lineCount": 472
+      },
+      {
+        "file": "src/core/rulesets/singleClassBuilderFinalCertification.integration.test.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 1
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "classExpansion",
+              "count": 1
+            },
+            {
+              "signal": "subclassExpansion",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "path:",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 98
+      },
+      {
+        "file": "src/core/rulesets/subclassExpansion.test.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 2
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "classExpansion",
+              "count": 1
+            },
+            {
+              "signal": "subclassExpansion",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 31
+      },
+      {
+        "file": "src/core/rulesets/subclassOfficialProgressionFixes.test.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 4
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "classExpansion",
+              "count": 1
+            },
+            {
+              "signal": "subclassExpansion",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 36
+      },
+      {
+        "file": "src/features/subclasses/SubclassCatalogPage.tsx",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 2
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "ClassCatalog",
+              "count": 1
+            },
+            {
+              "signal": "SubclassCatalog",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "SubclassCatalogPage"
+        ],
+        "lineCount": 13
+      },
+      {
+        "file": "src/features/classes/ClassCatalogPage.tsx",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 2
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "ClassCatalog",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "ClassCatalogPage"
+        ],
+        "lineCount": 31
+      },
+      {
+        "file": "src/core/qa/randomScenarioAudit.test.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "classFeatures",
+              "count": 2
+            },
+            {
+              "signal": "features",
+              "count": 4
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "classExpansion",
+              "count": 1
+            },
+            {
+              "signal": "subclassExpansion",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 79
+      },
+      {
+        "file": "src/core/qa/randomScenarioAudit2.test.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "classFeatures",
+              "count": 2
+            },
+            {
+              "signal": "features",
+              "count": 4
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "classExpansion",
+              "count": 1
+            },
+            {
+              "signal": "subclassExpansion",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 79
+      },
+      {
+        "file": "src/core/qa/randomScenarioAudit3.test.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 1
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "classExpansion",
+              "count": 1
+            },
+            {
+              "signal": "subclassExpansion",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 58
+      },
+      {
+        "file": "src/core/rulesets/barbarianBuilderCertification.test.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 1
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "classExpansion",
+              "count": 1
+            },
+            {
+              "signal": "subclassExpansion",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "path:",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 66
+      },
+      {
+        "file": "src/core/rulesets/bardBuilderCertification.test.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 7
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "classExpansion",
+              "count": 1
+            },
+            {
+              "signal": "subclassExpansion",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "path:",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 20
+      },
+      {
+        "file": "src/core/rulesets/bardSorcererOfficialProgression.test.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 6
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "classExpansion",
+              "count": 1
+            },
+            {
+              "signal": "subclassExpansion",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "path:",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 140
+      },
+      {
+        "file": "src/core/rulesets/builderSpellIntegration.test.ts",
+        "matches": {
+          "classCatalog": [
+            {
+              "signal": "classExpansion",
+              "count": 1
+            },
+            {
+              "signal": "subclassExpansion",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 32
+      },
+      {
+        "file": "src/core/rulesets/clericBuilderCertification.test.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 5
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "classExpansion",
+              "count": 1
+            },
+            {
+              "signal": "subclassExpansion",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "path:",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 11
+      },
+      {
+        "file": "src/core/rulesets/clericDruidOfficialProgression.test.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 8
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "classExpansion",
+              "count": 1
+            },
+            {
+              "signal": "subclassExpansion",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "path:",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 84
+      }
+    ],
+    "storage": [
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "CharacterDetail",
+              "count": 1
+            },
+            {
+              "signal": "character detail",
+              "count": 2
+            },
+            {
+              "signal": "features",
+              "count": 7
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "play mode",
+              "count": 5
+            },
+            {
+              "signal": "actions",
+              "count": 12
+            },
+            {
+              "signal": "reactions",
+              "count": 4
+            },
+            {
+              "signal": "resources",
+              "count": 6
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "count": 20
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 11
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters",
+          "/rest"
+        ],
+        "exports": [
+          "CharacterDetail"
+        ],
+        "lineCount": 1443
+      },
+      {
+        "file": "src/core/storage/safeStorage.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 9
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "RecoveryRecord",
+          "STORAGE_RECOVERY_EVENT",
+          "clearRecoveryRecords",
+          "downloadEmergencyStorageSnapshot",
+          "downloadRecoveryRecord",
+          "loadRecoveryRecords",
+          "quarantineStorageValue",
+          "readJsonSafely",
+          "removeRecoveryRecord",
+          "writeJsonSafely"
+        ],
+        "lineCount": 151
+      },
+      {
+        "file": "src/features/legacy/LegacyApp.tsx",
+        "matches": {
+          "storage": [
+            {
+              "signal": "saveCharacter",
+              "count": 2
+            },
+            {
+              "signal": "updateCharacter",
+              "count": 3
+            },
+            {
+              "signal": "setCharacters",
+              "count": 10
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 418
+      },
+      {
+        "file": "src/features/combat-tracker/combatTrackerStorage.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 6
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "BATTLEFIELD_ZONE_KINDS",
+          "BATTLEFIELD_ZONE_SHAPES",
+          "BattlefieldZone",
+          "BattlefieldZoneKind",
+          "BattlefieldZoneShape",
+          "COMBAT_CONDITIONS",
+          "CombatCondition",
+          "CombatEffect",
+          "CombatEncounter",
+          "CombatLogEntry",
+          "CombatLogKind",
+          "CombatTemplate",
+          "CombatTemplateCombatant",
+          "Combatant",
+          "CombatantKind",
+          "addCombatLog",
+          "advanceTurn",
+          "applyDamage",
+          "applyHealing",
+          "createBattlefieldZone",
+          "createCombatEffect",
+          "createCombatEncounter",
+          "createCombatLogEntry",
+          "createCombatTemplate",
+          "createCombatant",
+          "createEncounterFromCampaignEncounter",
+          "createEncounterFromTemplate",
+          "getActiveConditions",
+          "getCombatSummary",
+          "loadCombatEncounters",
+          "loadCombatTemplates",
+          "sanitizeCombatEncounter",
+          "sanitizeCombatant",
+          "saveCombatEncounters",
+          "saveCombatTemplates",
+          "sortCombatants",
+          "tickBattlefieldZones",
+          "tickCombatEffects"
+        ],
+        "lineCount": 366
+      },
+      {
+        "file": "src/core/storage/characterStorage.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "resources",
+              "count": 9
+            }
+          ],
+          "storage": [
+            {
+              "signal": "saveCharacter",
+              "count": 1
+            },
+            {
+              "signal": "safeStorage",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "exportCharacters",
+          "hydrateCharacterRecord",
+          "loadCharacters",
+          "saveCharacters"
+        ],
+        "lineCount": 275
+      },
+      {
+        "file": "src/features/campaigns/campaignStorage.test.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 33
+      },
+      {
+        "file": "src/features/downtime/campaignCalendarStorage.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CalendarEventType",
+          "CampaignCalendar",
+          "CampaignCalendarEvent",
+          "DowntimeActivity",
+          "DowntimeStatus",
+          "advanceCampaignDays",
+          "createCampaignCalendar",
+          "getDowntimeProgress",
+          "getUpcomingEvents",
+          "loadCampaignCalendars",
+          "sanitizeCampaignCalendar",
+          "saveCampaignCalendars"
+        ],
+        "lineCount": 149
+      },
+      {
+        "file": "src/features/factions/factionStorage.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "actions",
+              "count": 6
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "FactionKind",
+          "FactionRecord",
+          "FactionRelation",
+          "FactionStanding",
+          "createFactionRecord",
+          "loadFactionRecords",
+          "removeFactionAndRelations",
+          "sanitizeFactionRecord",
+          "saveFactionRecords"
+        ],
+        "lineCount": 100
+      },
+      {
+        "file": "src/features/legacy/AppRoutes.tsx",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "CharacterDetail",
+              "count": 4
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 4
+            },
+            {
+              "signal": "actions",
+              "count": 6
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "ClassCatalog",
+              "count": 8
+            },
+            {
+              "signal": "SubclassCatalog",
+              "count": 4
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "count": 8
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 46
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/",
+          "/backup",
+          "/builder",
+          "/calendar",
+          "/campaigns",
+          "/characters",
+          "/characters/:characterId",
+          "/characters/:characterId/edit",
+          "/characters/compare",
+          "/classes",
+          "/collections",
+          "/combat",
+          "/dice",
+          "/factions",
+          "/feats",
+          "/help",
+          "/homebrew-lab",
+          "/inventory",
+          "/library",
+          "/locations",
+          "/loot",
+          "/monsters",
+          "/monsters/:monsterId",
+          "/npcs",
+          "/origins",
+          "/play-mode",
+          "/player-test",
+          "/quests",
+          "/rest",
+          "/rulesets",
+          "/search",
+          "/session-planner",
+          "/settings",
+          "/spellbook",
+          "/subclasses",
+          "/updates"
+        ],
+        "exports": [
+          "AppRoutes"
+        ],
+        "lineCount": 472
+      },
+      {
+        "file": "src/features/locations/locationAtlasStorage.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "LocationKind",
+          "WorldLocation",
+          "createWorldLocation",
+          "getLocationDepth",
+          "loadWorldLocations",
+          "removeLocationAndDetach",
+          "sanitizeWorldLocation",
+          "saveWorldLocations"
+        ],
+        "lineCount": 88
+      },
+      {
+        "file": "src/features/loot/lootTrackerStorage.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "LootKind",
+          "LootRecord",
+          "LootStatus",
+          "calculateLootTotal",
+          "createLootRecord",
+          "loadLootRecords",
+          "sanitizeLootRecord",
+          "saveLootRecords"
+        ],
+        "lineCount": 51
+      },
+      {
+        "file": "src/features/npc-manager/npcManagerStorage.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "NpcDisposition",
+          "NpcRecord",
+          "NpcRelationship",
+          "createNpcRecord",
+          "getNpcRelationshipCount",
+          "loadNpcRecords",
+          "sanitizeNpcRecord",
+          "saveNpcRecords"
+        ],
+        "lineCount": 89
+      },
+      {
+        "file": "src/features/quests/questJournalStorage.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "QuestObjective",
+          "QuestPriority",
+          "QuestRecord",
+          "QuestStatus",
+          "calculateQuestProgress",
+          "createQuestRecord",
+          "loadQuestRecords",
+          "sanitizeQuestRecord",
+          "saveQuestRecords"
+        ],
+        "lineCount": 44
+      },
+      {
+        "file": "src/features/session-planner/sessionPlannerStorage.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "SessionPlan",
+          "SessionScene",
+          "SessionTask",
+          "createSessionPlan",
+          "getSessionProgress",
+          "loadSessionPlans",
+          "sanitizeSessionPlan",
+          "saveSessionPlans"
+        ],
+        "lineCount": 113
+      },
+      {
+        "file": "src/shared/collections/tagCollectionStorage.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "ItemTagMap",
+          "addTagToItem",
+          "deleteTag",
+          "getAllTags",
+          "loadItemTags",
+          "removeTagFromItem",
+          "renameTag",
+          "saveItemTags"
+        ],
+        "lineCount": 70
+      }
+    ],
+    "routing": [
+      {
+        "file": "src/features/legacy/AppRoutes.tsx",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "CharacterDetail",
+              "count": 4
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 4
+            },
+            {
+              "signal": "actions",
+              "count": 6
+            }
+          ],
+          "classCatalog": [
+            {
+              "signal": "ClassCatalog",
+              "count": 8
+            },
+            {
+              "signal": "SubclassCatalog",
+              "count": 4
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "count": 8
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 46
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/",
+          "/backup",
+          "/builder",
+          "/calendar",
+          "/campaigns",
+          "/characters",
+          "/characters/:characterId",
+          "/characters/:characterId/edit",
+          "/characters/compare",
+          "/classes",
+          "/collections",
+          "/combat",
+          "/dice",
+          "/factions",
+          "/feats",
+          "/help",
+          "/homebrew-lab",
+          "/inventory",
+          "/library",
+          "/locations",
+          "/loot",
+          "/monsters",
+          "/monsters/:monsterId",
+          "/npcs",
+          "/origins",
+          "/play-mode",
+          "/player-test",
+          "/quests",
+          "/rest",
+          "/rulesets",
+          "/search",
+          "/session-planner",
+          "/settings",
+          "/spellbook",
+          "/subclasses",
+          "/updates"
+        ],
+        "exports": [
+          "AppRoutes"
+        ],
+        "lineCount": 472
+      },
+      {
+        "file": "src/core/rulesets/fullCharacterCreationJourney.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 18
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CharacterCreationJourneyScenario",
+          "FULL_CHARACTER_CREATION_SCENARIOS",
+          "getCharacterCreationJourneyCoverage"
+        ],
+        "lineCount": 39
+      },
+      {
+        "file": "src/shared/layout/AppFrame.tsx",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 12
+            },
+            {
+              "signal": "navigate(",
+              "count": 2
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/"
+        ],
+        "exports": [
+          "AppFrame"
+        ],
+        "lineCount": 218
+      },
+      {
+        "file": "e2e/rc1-critical-smoke.spec.ts",
+        "matches": {
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 10
+            },
+            {
+              "signal": "path:",
+              "count": 6
+            }
+          ],
+          "testing": [
+            {
+              "signal": "page.goto",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/",
+          "/backup",
+          "/builder",
+          "/characters",
+          "/combat",
+          "/settings"
+        ],
+        "exports": [],
+        "lineCount": 37
+      },
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "CharacterDetail",
+              "count": 1
+            },
+            {
+              "signal": "character detail",
+              "count": 2
+            },
+            {
+              "signal": "features",
+              "count": 7
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "play mode",
+              "count": 5
+            },
+            {
+              "signal": "actions",
+              "count": 12
+            },
+            {
+              "signal": "reactions",
+              "count": 4
+            },
+            {
+              "signal": "resources",
+              "count": 6
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "count": 20
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 11
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters",
+          "/rest"
+        ],
+        "exports": [
+          "CharacterDetail"
+        ],
+        "lineCount": 1443
+      },
+      {
+        "file": "src/features/settings/Settings.tsx",
+        "matches": {
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 8
+            },
+            {
+              "signal": "navigate(",
+              "count": 2
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "Settings"
+        ],
+        "lineCount": 291
+      },
+      {
+        "file": "src/shared/settings/appSettings.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "play mode",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 11
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "APP_SETTINGS_STORAGE_KEY",
+          "AccentTheme",
+          "AppLocale",
+          "AppSettings",
+          "CampaignToolProfile",
+          "DEFAULT_APP_SETTINGS",
+          "FontScale",
+          "MotionPreference",
+          "START_ROUTE_OPTIONS",
+          "UiDensity",
+          "sanitizeAppSettings"
+        ],
+        "lineCount": 82
+      },
+      {
+        "file": "src/features/monsters/MonsterLibrary.tsx",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "actions",
+              "count": 12
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 5
+            },
+            {
+              "signal": "useNavigate",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/monsters"
+        ],
+        "exports": [
+          "MonsterDetail",
+          "MonsterLibrary"
+        ],
+        "lineCount": 1023
+      },
+      {
+        "file": "src/features/characters/Characters.tsx",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "actions",
+              "count": 2
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 5
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "Characters"
+        ],
+        "lineCount": 329
+      },
+      {
+        "file": "src/features/characters/CharacterEditor.tsx",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "actions",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "count": 3
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 4
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters"
+        ],
+        "exports": [
+          "CharacterEditor"
+        ],
+        "lineCount": 434
+      },
+      {
+        "file": "e2e/rc2-regression-matrix.spec.ts",
+        "matches": {
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 7
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 1
+            },
+            {
+              "signal": "page.goto",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 61
+      },
+      {
+        "file": "src/features/characters/CharacterCompare.tsx",
+        "matches": {
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 3
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters"
+        ],
+        "exports": [
+          "CharacterCompare"
+        ],
+        "lineCount": 217
+      },
+      {
+        "file": "src/shared/release/releaseNotes.ts",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "character detail",
+              "count": 1
+            },
+            {
+              "signal": "features",
+              "count": 1
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "play mode",
+              "count": 47
+            },
+            {
+              "signal": "actions",
+              "count": 4
+            },
+            {
+              "signal": "resources",
+              "count": 3
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 3
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 6
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "RELEASE_CATEGORIES",
+          "RELEASE_NOTES",
+          "ReleaseCategory",
+          "ReleaseChange",
+          "ReleaseEntry",
+          "getCurrentRelease"
+        ],
+        "lineCount": 1057
+      },
+      {
+        "file": "src/components/rest/RestRuntimeIntegrationMount.tsx",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "actions",
+              "count": 3
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 3
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 5
+            }
+          ],
+          "testing": [
+            {
+              "signal": "data-testid",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [
+          "rest-runtime-integration"
+        ],
+        "routes": [],
+        "exports": [
+          "RestRuntimeIntegrationMount"
+        ],
+        "lineCount": 139
+      },
+      {
+        "file": "src/shared/commands/CommandPalette.tsx",
+        "matches": {
+          "characterDetail": [
+            {
+              "signal": "features",
+              "count": 1
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "play mode",
+              "count": 2
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 2
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CommandPalette"
+        ],
+        "lineCount": 336
+      }
+    ],
+    "testing": [
+      {
+        "file": "e2e/mobile-and-storage.spec.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 2
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 7
+            },
+            {
+              "signal": "page.goto",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 45
+      },
+      {
+        "file": "e2e/rest-recovery-ui-v5.111D3.spec.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "resources",
+              "count": 4
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 5
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 3
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 7
+            },
+            {
+              "signal": "page.goto",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [
+          "rest-long-button",
+          "rest-result",
+          "rest-runtime-integration",
+          "rest-short-button"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 107
+      },
+      {
+        "file": "e2e/full-character-creation.spec.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "play mode",
+              "count": 1
+            },
+            {
+              "signal": "resources",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 2
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 3
+            },
+            {
+              "signal": "page.goto",
+              "count": 5
+            }
+          ]
+        },
+        "testIds": [
+          "builder-character-name",
+          "builder-review"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 45
+      },
+      {
+        "file": "e2e/app-shell.spec.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "play mode",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 5
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 4
+            },
+            {
+              "signal": "page.goto",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 7
+      },
+      {
+        "file": "e2e/certification-golden-builders.spec.ts",
+        "matches": {
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 3
+            },
+            {
+              "signal": "getByRole",
+              "count": 2
+            },
+            {
+              "signal": "page.goto",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [
+          "ancestry-choice-panel"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 88
+      },
+      {
+        "file": "e2e/equipment-combat-certification.spec.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "resources",
+              "count": 2
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 1
+            },
+            {
+              "signal": "getByRole",
+              "count": 2
+            },
+            {
+              "signal": "page.goto",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [
+          "inventory-economy-panel"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 154
+      },
+      {
+        "file": "e2e/builder-ui-mega.spec.ts",
+        "matches": {
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 3
+            },
+            {
+              "signal": "page.goto",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 39
+      },
+      {
+        "file": "e2e/level-one-to-twenty-advancement.spec.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "resources",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 3
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 2
+            },
+            {
+              "signal": "page.goto",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 41
+      },
+      {
+        "file": "e2e/rc2-regression-matrix.spec.ts",
+        "matches": {
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 7
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 1
+            },
+            {
+              "signal": "page.goto",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 61
+      },
+      {
+        "file": "e2e/certification-all-classes-backgrounds.spec.ts",
+        "matches": {
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 3
+            },
+            {
+              "signal": "page.goto",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 195
+      },
+      {
+        "file": "e2e/inventory-economy-runtime.spec.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "resources",
+              "count": 1
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 1
+            },
+            {
+              "signal": "page.goto",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [
+          "inventory-economy-panel"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 57
+      },
+      {
+        "file": "e2e/combat-runtime-automation.spec.ts",
+        "matches": {
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 2
+            },
+            {
+              "signal": "page.goto",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 16
+      },
+      {
+        "file": "e2e/mobile-accessibility-performance.spec.ts",
+        "matches": {
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 1
+            },
+            {
+              "signal": "page.goto",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 23
+      },
+      {
+        "file": "e2e/class-runtime-policy.spec.ts",
+        "matches": {
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 1
+            },
+            {
+              "signal": "page.goto",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [
+          "class-runtime-policy"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 11
+      },
+      {
+        "file": "e2e/content-integrity-audit.spec.ts",
+        "matches": {
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 1
+            },
+            {
+              "signal": "page.goto",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [
+          "content-integrity-audit"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 11
+      }
+    ]
+  },
+  "consolidated": {
+    "testIds": [
+      "ancestry-choice-panel",
+      "backup-safety-report",
+      "builder-character-name",
+      "builder-review",
+      "builder-save",
+      "class-runtime-policy",
+      "combat-turn-automation",
+      "content-completion-plan",
+      "content-integrity-audit",
+      "inventory-economy-panel",
+      "rest-actions-panel",
+      "rest-long-button",
+      "rest-result",
+      "rest-runtime-integration",
+      "rest-short-button"
+    ],
+    "routes": [
+      "/",
+      "/backup",
+      "/builder",
+      "/calendar",
+      "/campaigns",
+      "/characters",
+      "/characters/:characterId",
+      "/characters/:characterId/edit",
+      "/characters/compare",
+      "/classes",
+      "/collections",
+      "/combat",
+      "/dice",
+      "/factions",
+      "/feats",
+      "/help",
+      "/homebrew-lab",
+      "/inventory",
+      "/library",
+      "/locations",
+      "/loot",
+      "/monsters",
+      "/monsters/:monsterId",
+      "/npcs",
+      "/origins",
+      "/play-mode",
+      "/player-test",
+      "/quests",
+      "/rest",
+      "/rulesets",
+      "/search",
+      "/session-planner",
+      "/settings",
+      "/spellbook",
+      "/subclasses",
+      "/updates"
+    ],
+    "exports": [
+      "APP_SETTINGS_STORAGE_KEY",
+      "AbilityKey",
+      "AbilityScores",
+      "AccentTheme",
+      "ActiveEffect",
+      "AdvancedFeatRuntime",
+      "AdvancementReadiness",
+      "AncestryChoicePanel",
+      "AncestryRuntime",
+      "AppErrorBoundary",
+      "AppFrame",
+      "AppLocale",
+      "AppRoutes",
+      "AppSettings",
+      "AppSettingsProvider",
+      "ArcaneClassRuntime",
+      "ArcaneRecoveryType",
+      "ArmorClassMode",
+      "AuditCheck",
+      "AuditStatus",
+      "BATTLEFIELD_ZONE_KINDS",
+      "BATTLEFIELD_ZONE_SHAPES",
+      "BarbarianCertificationRow",
+      "BarbarianEdition",
+      "BardCertificationRow",
+      "BardEdition",
+      "BattlefieldZone",
+      "BattlefieldZoneKind",
+      "BattlefieldZoneShape",
+      "BuildGlobalSearchEntriesInput",
+      "Builder",
+      "CLASS_RUNTIME_EXPECTATIONS",
+      "COMBAT_CONDITIONS",
+      "CalendarEventType",
+      "CampaignCalendar",
+      "CampaignCalendarEvent",
+      "CampaignCalendarPage",
+      "CampaignToolProfile",
+      "Character",
+      "CharacterCertificationCheck",
+      "CharacterClassEntry",
+      "CharacterClassLevel",
+      "CharacterCollectionShape",
+      "CharacterCompare",
+      "CharacterCondition",
+      "CharacterConditionDurations",
+      "CharacterCreationJourneyScenario",
+      "CharacterDeathSaves",
+      "CharacterDetail",
+      "CharacterDraft",
+      "CharacterEditor",
+      "CharacterHitDiePool",
+      "CharacterInventoryItem",
+      "CharacterInventoryManager",
+      "CharacterResource",
+      "CharacterRestResult",
+      "CharacterSheetCertificationSnapshot",
+      "CharacterSpellEffect",
+      "CharacterSpellSelector",
+      "CharacterSpellSlot",
+      "Characters",
+      "ChoiceDebtResolver",
+      "ClassBasedSpellSelector",
+      "ClassCatalogPage",
+      "ClassCompatibleCharacter",
+      "ClassEditionCertification",
+      "ClassFeatureAction",
+      "ClassFeatureReference",
+      "ClassFeatureRuntimePlan",
+      "ClassLevelData",
+      "ClassRulesetId",
+      "ClassRuntimeArea",
+      "ClassRuntimeAreaReport",
+      "ClassRuntimeExpectation",
+      "ClassRuntimeRulesetId",
+      "ClassRuntimeSnapshot",
+      "ClassRuntimeState",
+      "ClassSpecificRuntimePolicyReport",
+      "ClassSpecificRuntimeReport",
+      "ClassSubclassRuntimeClosureReport",
+      "ClericCertificationRow",
+      "ClericEdition",
+      "CollectionsPage",
+      "CombatCondition",
+      "CombatEffect",
+      "CombatEncounter",
+      "CombatLogEntry",
+      "CombatLogKind",
+      "CombatTemplate",
+      "CombatTemplateCombatant",
+      "CombatTurnAutomationPanel",
+      "Combatant",
+      "CombatantKind",
+      "CommandPalette",
+      "ConditionEffectSummary",
+      "ContentAuditIssue",
+      "ContentAuditSeverity",
+      "ContentCatalogAudit",
+      "ContentCatalogId",
+      "ContentIntegrityAudit",
+      "DEFAULT_APP_SETTINGS",
+      "DEFAULT_HOMEBREW_CREATOR_DRAFT",
+      "Dashboard",
+      "DataBackup",
+      "DndArmorType",
+      "DndBackgroundData",
+      "DndClassData",
+      "DndFeatData",
+      "DndFeatPrerequisite",
+      "DndItemCategory",
+      "DndItemData",
+      "DndMonsterData",
+      "DndRaceData",
+      "DndSpellData",
+      "DndSubclassData",
+      "DndSubraceData",
+      "DowntimeActivity",
+      "DowntimeStatus",
+      "DruidCertificationRow",
+      "DruidEdition",
+      "ENGLISH_TRANSLATIONS",
+      "EncounterCombatRolls",
+      "EncounterLootGenerator",
+      "EncounterToolSettings",
+      "EntityClosureReport",
+      "EquipmentCoverageDisposition",
+      "EquipmentCoverageEntry",
+      "EquipmentCoverageFamily",
+      "EquipmentMagicItemCoverageReport",
+      "FULL_CASTER_CLASSES",
+      "FULL_CASTER_SLOT_TABLE",
+      "FULL_CHARACTER_CREATION_SCENARIOS",
+      "FactionKind",
+      "FactionRecord",
+      "FactionRelation",
+      "FactionStanding",
+      "FactionsPage",
+      "FavoriteItem",
+      "FeatAction",
+      "FeatCategory",
+      "FeatureActivation",
+      "FeatureClosureEntry",
+      "FeatureClosureStatus",
+      "FeatureMechanic",
+      "FeatureRecovery",
+      "FighterCertificationRow",
+      "FighterEdition",
+      "FontScale",
+      "FullCharacterCertification",
+      "GlobalSearch",
+      "GlobalSearchCategory",
+      "GlobalSearchEntry",
+      "HOMEBREW_LIBRARY_PREFERENCES_STORAGE_KEY",
+      "HOMEBREW_MARKETPLACE_REVOCATIONS_STORAGE_KEY",
+      "HOMEBREW_MARKETPLACE_SECURITY_EVENTS_STORAGE_KEY",
+      "HOMEBREW_MARKETPLACE_SOURCES_STORAGE_KEY",
+      "HOMEBREW_PACKAGES_CHANGED_EVENT",
+      "HOMEBREW_PACKAGES_STORAGE_KEY",
+      "HOMEBREW_PACKAGE_SNAPSHOTS_STORAGE_KEY",
+      "HOMEBREW_QUARANTINE_STORAGE_KEY",
+      "HOMEBREW_SOURCE_HEALTH_STORAGE_KEY",
+      "HardeningCheck",
+      "HardeningStatus",
+      "HelpCenter",
+      "HitDiePool",
+      "HomebrewCharacterRuntime",
+      "HomebrewCreatorDraft",
+      "HomebrewEntity",
+      "HomebrewEntityPayload",
+      "HomebrewEntityType",
+      "HomebrewLab",
+      "HomebrewMigrationResult",
+      "HomebrewPackage",
+      "HomebrewPackageCreator",
+      "HomebrewPackageDependency",
+      "HomebrewRecovery",
+      "HomebrewResourceDefinition",
+      "HomebrewRuntimeAction",
+      "HomebrewRuntimeActionState",
+      "HomebrewRuntimeResource",
+      "HomebrewShareManifest",
+      "HomebrewShareValidation",
+      "HomebrewValidationReport",
+      "InventoryEconomyPanel",
+      "ItemEffectRuntime",
+      "ItemTagMap",
+      "JourneyCharacter",
+      "JourneyDraft",
+      "LevelOneActionEconomyReadiness",
+      "LevelOneAncestryReadiness",
+      "LevelOneCombatReadiness",
+      "LevelOneDefenseReadiness",
+      "LevelOneRestReadiness",
+      "LevelOneSupportReadiness",
+      "LevelUpAsiMode",
+      "LevelUpAssistant",
+      "LevelUpHistoryEntry",
+      "LevelUpOptions",
+      "LifecycleAudit",
+      "LifecycleCheckpoint",
+      "LifecycleSnapshot",
+      "LimitedUseFormula",
+      "LimitedUseRule",
+      "LocationKind",
+      "LootKind",
+      "LootRecord",
+      "LootStatus",
+      "MartialClassRuntime",
+      "MatrixStatus",
+      "MonkCertificationRow",
+      "MonkEdition",
+      "MonsterCombatState",
+      "MonsterDetail",
+      "MonsterLibrary",
+      "MotionPreference",
+      "NavGroup",
+      "NavItem",
+      "NpcDisposition",
+      "NpcManagerPage",
+      "NpcRecord",
+      "NpcRelationship",
+      "OPEN_RULES_LICENSE",
+      "PLAYER_JOURNEY_QA_SCENARIOS",
+      "PaladinCertificationRow",
+      "PaladinEdition",
+      "PersistentSpellKind",
+      "PersistentTrigger",
+      "PlayMode",
+      "PlayerJourneyIntegrationSnapshot",
+      "PlayerJourneyQaScenario",
+      "PlayerJourneyQaScenarioId",
+      "PlayerTestCenter",
+      "ProgressionAudit",
+      "PwaInstallGuide",
+      "PwaUpdateManager",
+      "QuestJournalPage",
+      "QuestObjective",
+      "QuestPriority",
+      "QuestRecord",
+      "QuestStatus",
+      "RELEASE_CATEGORIES",
+      "RELEASE_NOTES",
+      "RangerCertificationRow",
+      "RangerEdition",
+      "RecentItem",
+      "RecoveryRecord",
+      "RecoveryType",
+      "ReleaseCategory",
+      "ReleaseChange",
+      "ReleaseEntry",
+      "ReleaseGateInput",
+      "ReleaseNotesDialog",
+      "ResourcePool",
+      "ResourceRecovery",
+      "RestActionsPanel",
+      "RestActionsPanelProps",
+      "RestCenterPage",
+      "RestCompatibleCharacter",
+      "RestHistoryEntry",
+      "RestKind",
+      "RestOptions",
+      "RestPersistenceResult",
+      "RestRecoveryState",
+      "RestRulesetId",
+      "RestRuntimeIntegrationMount",
+      "RestState",
+      "RestSummary",
+      "RogueCertificationRow",
+      "RogueEdition",
+      "RouteAccessibility",
+      "RulesetCenterPage",
+      "RulesetData",
+      "RulesetId",
+      "RuntimeCategory",
+      "RuntimeClosureDisposition",
+      "RuntimeClosureEntry",
+      "RuntimeCoverageCertification",
+      "RuntimeCoverageClosureReport",
+      "RuntimeEntity",
+      "RuntimeFeature",
+      "RuntimeTier",
+      "SKILL_ABILITIES",
+      "START_ROUTE_OPTIONS",
+      "STORAGE_RECOVERY_EVENT",
+      "SUBCLASS_EXPANSION_2014",
+      "SUBCLASS_EXPANSION_2024",
+      "SessionPlan",
+      "SessionScene",
+      "SessionTask",
+      "SessionTimeline",
+      "Settings",
+      "SharedHomebrewPackage",
+      "SingleClassPlayableReadiness",
+      "SkillChoices",
+      "SorcererCertificationRow",
+      "SorcererEdition",
+      "SpellEffectType",
+      "SpellProgression",
+      "SpellResolutionType",
+      "SpellScalingData",
+      "SpellSlotPool",
+      "StableReleaseHardeningReport",
+      "StorageRecoveryCenter",
+      "SubclassActionType",
+      "SubclassCatalogPage",
+      "SubclassFeatureData",
+      "SubclassRuntime",
+      "SubclassRuntimeAction",
+      "SummonPersistentSpellRuntime",
+      "UiDensity",
+      "WarlockCertificationRow",
+      "WarlockEdition",
+      "WeaponCategory",
+      "WeaponConsistencyRow",
+      "WeaponMastery",
+      "WizardCertificationRow",
+      "WizardEdition",
+      "WorldAtlasPage",
+      "WorldLocation",
+      "abilityModifier",
+      "addCombatLog",
+      "addRecentItem",
+      "addTagToItem",
+      "advanceCampaignDays",
+      "advanceTurn",
+      "applyAbilityIncrease",
+      "applyClassFeatureRest",
+      "applyClassFeatureUse",
+      "applyDamage",
+      "applyHealing",
+      "applyLongRest",
+      "applyRest",
+      "applyRestInStorage",
+      "applyRestToCharacter",
+      "applyRestToCharacterCollection",
+      "applyRestToCharacters",
+      "applyShortRest",
+      "auditCharacterLifecycle",
+      "auditClassProgression",
+      "auditLicensing",
+      "auditNavigationAccessibility",
+      "auditNavigationLocalization",
+      "buildClassRuntimeSnapshot",
+      "buildClassSubclassRuntimeClosureReport",
+      "buildEquipmentMagicItemCoverageReport",
+      "buildGlobalSearchEntries",
+      "buildLeveledCharacter",
+      "buildReleaseReadinessAudit",
+      "buildRuntimeCoverageClosureReport",
+      "buildStableReleaseHardeningReport",
+      "calculateEffectiveArmorClass",
+      "calculateJourneyArmorClass",
+      "calculateLootTotal",
+      "calculateQuestProgress",
+      "calculateSuggestedArmorClass",
+      "canCreateSorcerySlot",
+      "canRecoverWizardSlot",
+      "canUseClassFeature",
+      "canUseSneakAttack",
+      "canUseSubclassAction",
+      "canWildShapeFly",
+      "canWildShapeSwim",
+      "certifyBarbarianBuilder",
+      "certifyBardBuilder",
+      "certifyCharacterLifecycle",
+      "certifyCharacterRecord",
+      "certifyClassEdition",
+      "certifyClassRuntime",
+      "certifyClericBuilder",
+      "certifyDruidBuilder",
+      "certifyEquipmentItem",
+      "certifyFighterBuilder",
+      "certifyMonkBuilder",
+      "certifyPaladinBuilder",
+      "certifyRangerBuilder",
+      "certifyRogueBuilder",
+      "certifySorcererBuilder",
+      "certifySubclassRuntime",
+      "certifyWarlockBuilder",
+      "certifyWizardBuilder",
+      "characterClassEntries",
+      "characterClassLevels",
+      "characterToRestState",
+      "classLevel",
+      "classifyFeat",
+      "classifyItem",
+      "classifySpell",
+      "classifySubclass",
+      "clearRecoveryRecords",
+      "combineRollModes",
+      "compareHomebrewVersions",
+      "compareJourneySnapshots",
+      "compareSheetAndPlayMode",
+      "createBattlefieldZone",
+      "createCampaignCalendar",
+      "createCharacterFromDraft",
+      "createCombatEffect",
+      "createCombatEncounter",
+      "createCombatLogEntry",
+      "createCombatTemplate",
+      "createCombatant",
+      "createEncounterFromCampaignEncounter",
+      "createEncounterFromTemplate",
+      "createEntityFromDraft",
+      "createFactionRecord",
+      "createHomebrewPackage",
+      "createHomebrewShareManifest",
+      "createLootRecord",
+      "createNpcRecord",
+      "createPackageFromDraft",
+      "createQuestRecord",
+      "createRollbackBackup",
+      "createSessionPlan",
+      "createWorldLocation",
+      "deleteTag",
+      "deserializeClassCompatibleCharacter",
+      "deserializeRestCompatibleCharacter",
+      "discoverCharacterStorageKey",
+      "downloadEmergencyStorageSnapshot",
+      "downloadRecoveryRecord",
+      "emptyDraft",
+      "endClassFeatureCondition",
+      "enrichClassProgression",
+      "executeHomebrewRuntimeAction",
+      "exportCharacters",
+      "exportHomebrewPackage",
+      "exportHomebrewShareManifest",
+      "formatClassSubclassRuntimeClosureSummary",
+      "formatEquipmentMagicItemCoverageSummary",
+      "formatMonsterModifier",
+      "formatRuntimeCoverageClosureSummary",
+      "formatSpellSlots",
+      "getActionSurgeUses",
+      "getActiveConditions",
+      "getAdvancedFeatRuntime",
+      "getAllTags",
+      "getAlwaysPreparedSpells",
+      "getAncestryRuntime",
+      "getAncestrySaveMode",
+      "getArcaneClassRuntime",
+      "getArcaneRecoveryBudget",
+      "getAssassinProgression",
+      "getAverageHpGain",
+      "getBarbarianCombatFeatures",
+      "getBardCantripCount",
+      "getBardCombatFeatures",
+      "getBardExpertiseCount",
+      "getBardSpellLimit",
+      "getBardicInspirationDie",
+      "getBardicInspirationInitiativeRecovery",
+      "getBattleMasterProgression",
+      "getBeastMasterProgression",
+      "getBrutalCriticalExtraDice",
+      "getBrutalStrike",
+      "getChampionFeatures",
+      "getChannelDivinityUses",
+      "getCharacterCreationJourneyCoverage",
+      "getCharacterFeatures",
+      "getCharacterInventoryItems",
+      "getCharacterJourneySnapshot",
+      "getCharacterSheetCertificationSnapshot",
+      "getCharacterSpellcastingAbility",
+      "getClassAsiLevels",
+      "getClassFeatureActions",
+      "getClassFeatureRuntimePlan",
+      "getClassLevel",
+      "getClassResources",
+      "getClassSpecificRuntimePolicyReport",
+      "getClericCantripCount",
+      "getClericCombatFeatures",
+      "getClericPreparedSpellLimit",
+      "getClericSubclassFeatureLevels",
+      "getClericSubclassLevel",
+      "getCombatSummary",
+      "getConditionEffects",
+      "getContentIntegrityAudit",
+      "getCunningStrikeOptions",
+      "getCunningStrikeSaveDc",
+      "getCurrentRelease",
+      "getDefaultRestOptions",
+      "getDefaultSpellSlots",
+      "getDestroyUndeadCr",
+      "getDivineSmiteDice",
+      "getDivineSparkDice",
+      "getDowntimeProgress",
+      "getDraconicSorcererProgression",
+      "getDruidCantripCount",
+      "getDruidCombatFeatures",
+      "getDruidPreparedSpellLimit",
+      "getDruidSubclassFeatureLevels",
+      "getDruidSubclassLevel",
+      "getEnglishTranslationCoverage",
+      "getEquippedItems",
+      "getFavoredEnemyUses",
+      "getFeaturesThroughLevel",
+      "getFighterCombatFeatures",
+      "getFighterExtraAttacks",
+      "getFighterFightingStyleCount",
+      "getFighterSubclassFeatureLevels",
+      "getFighterSubclassLevel",
+      "getFighterWeaponMasteryCount",
+      "getFlurryStrikeCount",
+      "getFullCharacterCertification",
+      "getHitDieForClass",
+      "getHomebrewCharacterEntities",
+      "getHomebrewCharacterRuntime",
+      "getHomebrewResourceMaximum",
+      "getHunterProgression",
+      "getHuntersMarkDamage",
+      "getIndomitableBonus",
+      "getIndomitableUses",
+      "getInnateSorceryUses",
+      "getInspirationRecovery",
+      "getInspiringLeaderTempHp",
+      "getIntlLocale",
+      "getInventoryQuantity",
+      "getInventoryWeight",
+      "getItemCategoryLabel",
+      "getItemEffectRuntime",
+      "getItemRulesSummary",
+      "getItemTempHp",
+      "getLatestLevelUp",
+      "getLayOnHandsActionType",
+      "getLayOnHandsPool",
+      "getLevelOneActionEconomyReadiness",
+      "getLevelOneAncestryReadiness",
+      "getLevelOneCombatReadiness",
+      "getLevelOneDefenseReadiness",
+      "getLevelOneRestReadiness",
+      "getLevelOneSupportReadiness",
+      "getLevelUpAdvancementReadiness",
+      "getLocationDepth",
+      "getMagicalCunningRecovery",
+      "getMagicalSecretsCount",
+      "getMartialArtsDie",
+      "getMartialClassRuntime",
+      "getMetamagicChoiceCountForSorcerer",
+      "getMobileQuickItems",
+      "getMonkCombatFeatures",
+      "getMonkFocusPoints",
+      "getMonkSubclassFeatureLevels",
+      "getMonkSubclassLevel",
+      "getMonsterAbilityModifier",
+      "getMonsterMainAttackModifier",
+      "getMysticArcanumSpellLevels",
+      "getNaturalRecoveryBudget",
+      "getNavGroupForPath",
+      "getNewFeaturesAtLevel",
+      "getNpcRelationshipCount",
+      "getOpenHandFeatures",
+      "getPaladinAuraSummary",
+      "getPaladinChannelDivinityUses",
+      "getPaladinCoreFeatures",
+      "getPaladinPreparedSpellLimit",
+      "getPaladinSubclassFeatureLevels",
+      "getPaladinSubclassLevel",
+      "getPaladinWeaponMasteryCount",
+      "getPassiveScore",
+      "getPlayerJourneyIntegrationSnapshot",
+      "getPointsFromSlot",
+      "getPrimalChampion",
+      "getQaScenario",
+      "getRageDamageBonus",
+      "getRageUses",
+      "getRangerCombatFeatures",
+      "getRangerExpertiseCount",
+      "getRangerKnownSpellLimit",
+      "getRangerPreparedSpellLimit",
+      "getRangerSubclassFeatureLevels",
+      "getRangerSubclassLevel",
+      "getRangerWeaponMasteryCount",
+      "getRelentlessRageRecoveryHp",
+      "getRemainingClassResource",
+      "getRogueCombatFeatures",
+      "getRogueExpertiseCount",
+      "getRogueSubclassFeatureLevels",
+      "getRogueSubclassLevel",
+      "getRogueWeaponMasteryCount",
+      "getRuntimeClosureEntry",
+      "getRuntimeCoverageCertification",
+      "getSavingThrowBonus",
+      "getSecondWindUses",
+      "getSessionProgress",
+      "getShadowFeatures",
+      "getSheetPlayModeConsistencySnapshot",
+      "getSingleClassPlayableReadiness",
+      "getSkillBonus",
+      "getSneakAttackDice",
+      "getSongOfRestDie",
+      "getSorcererCantripCount",
+      "getSorcererCombatFeatures",
+      "getSorcererKnownSpellLimit",
+      "getSorcererPreparedSpellLimit",
+      "getSorcererSubclassFeatureLevels",
+      "getSorcererSubclassLevel",
+      "getSorcerousRestorationAmount",
+      "getSorceryPointMaximum",
+      "getSorcerySlotCost",
+      "getSorcerySlotMinimumLevel",
+      "getSpellGroupTitle",
+      "getSpellLevelGroups",
+      "getSpellLevelLabel",
+      "getSubclassRuntime",
+      "getSubclassesForClass",
+      "getSummonPersistentSpellRuntime",
+      "getThiefProgression",
+      "getUiCatalogCoverage",
+      "getUnarmoredMovementBonus",
+      "getUnlockedSubclassFeatures",
+      "getUpcomingEvents",
+      "getWarlockCantripCount",
+      "getWarlockCombatFeatures",
+      "getWarlockKnownSpellLimit",
+      "getWarlockPactMagicProgression",
+      "getWarlockPreparedSpellLimit",
+      "getWarlockSubclassFeatureLevels",
+      "getWarlockSubclassLevel",
+      "getWeaponAbilityModifier",
+      "getWeaponAttackBonus",
+      "getWeaponConsistencyRows",
+      "getWeaponDamageSummary",
+      "getWeaponMasteryCount",
+      "getWildMagicSorcererProgression",
+      "getWildShapeKnownForms",
+      "getWildShapeMaxCr",
+      "getWildShapeUses",
+      "getWizardCantripCount",
+      "getWizardCombatFeatures",
+      "getWizardMaxSpellLevel",
+      "getWizardPreparedSpellLimit",
+      "getWizardSpellbookMinimum",
+      "getWizardSubclassFeatureLevels",
+      "getWizardSubclassLevel",
+      "hasEnglishTranslation",
+      "hydrateCharacterRecord",
+      "importHomebrewPackage",
+      "importHomebrewShareManifest",
+      "inspectBackupCandidate",
+      "installHomebrewShareManifest",
+      "isAsiMilestone",
+      "isFeatureUnlocked",
+      "isPaladin",
+      "isRageDamageWeapon",
+      "isSneakAttackWeapon",
+      "isSpellReadyToCast",
+      "isSubclassAvailable",
+      "loadCampaignCalendars",
+      "loadCampaigns",
+      "loadCharacters",
+      "loadCombatEncounters",
+      "loadCombatTemplates",
+      "loadDnd2014Ruleset",
+      "loadDnd2024Ruleset",
+      "loadFactionRecords",
+      "loadFavoriteMonsterIds",
+      "loadFavorites",
+      "loadHomebrewItems",
+      "loadHomebrewLibraryPreferences",
+      "loadHomebrewMarketplaceRevocations",
+      "loadHomebrewMarketplaceSecurityEvents",
+      "loadHomebrewMarketplaceSources",
+      "loadHomebrewMonsters",
+      "loadHomebrewPackageSnapshots",
+      "loadHomebrewPackages",
+      "loadHomebrewQuarantines",
+      "loadHomebrewSourceHealth",
+      "loadHomebrewSpells",
+      "loadItemTags",
+      "loadLevelUpHistory",
+      "loadLootRecords",
+      "loadNpcRecords",
+      "loadQuestRecords",
+      "loadRecentItems",
+      "loadRecoveryRecords",
+      "loadRestHistory",
+      "loadSessionPlans",
+      "loadWorldLocations",
+      "makeCharacter",
+      "makeEncounter",
+      "makeMonster",
+      "mergeClassResources",
+      "mergeImportedHomebrewPackage",
+      "mergeImportedHomebrewShareManifest",
+      "mergeSharedHomebrewPackages",
+      "migrateHomebrewPackage",
+      "navGroups",
+      "navItems",
+      "normalizeActivation",
+      "normalizeCharacterDraft",
+      "normalizeHitDice",
+      "normalizeRestState",
+      "normalizeRuntimeFeature",
+      "normalizeSearchText",
+      "normalizeSpellSlots",
+      "parseCharacterCollection",
+      "parseFirstDiceExpression",
+      "performCharacterLongRest",
+      "performCharacterShortRest",
+      "previewItemRuntime",
+      "proficiencyBonus",
+      "quarantineStorageValue",
+      "readJsonSafely",
+      "recoverFeatureUses",
+      "recoverHitDice",
+      "recoverHomebrewCharacterResources",
+      "recoverHomebrewResource",
+      "recoverResources",
+      "recoverSpellSlots",
+      "reduceAncestryDamage",
+      "reduceRageDamage",
+      "removeFactionAndRelations",
+      "removeFragileItemEffects",
+      "removeLevelUpHistoryEntry",
+      "removeLocationAndDetach",
+      "removeRecoveryRecord",
+      "removeTagFromItem",
+      "renameTag",
+      "resetDeathSaves",
+      "resetHitDice",
+      "resetSpellSlots",
+      "resolveCharacterRuleset",
+      "resolveClassRuleset",
+      "resolveLimitedUses",
+      "restStateToCharacter",
+      "restoreRestSnapshot",
+      "runtimeAbilityModifier",
+      "runtimeClassLevel",
+      "runtimeFeatureUnlocked",
+      "runtimeNormalizeActivation",
+      "runtimeProficiencyBonus",
+      "runtimeRecoverFeature",
+      "runtimeRecoverUses",
+      "runtimeResolveLimitedUses",
+      "runtimeSubclassFeatureLevels",
+      "runtimeTotalCharacterLevel",
+      "runtimeUnlockedFeatures",
+      "sanitizeAppSettings",
+      "sanitizeCampaignCalendar",
+      "sanitizeCombatEncounter",
+      "sanitizeCombatant",
+      "sanitizeFactionRecord",
+      "sanitizeLootRecord",
+      "sanitizeNpcRecord",
+      "sanitizeQuestRecord",
+      "sanitizeSessionPlan",
+      "sanitizeWorldLocation",
+      "satisfiesHomebrewVersion",
+      "saveCampaignCalendars",
+      "saveCampaigns",
+      "saveCharacters",
+      "saveCombatEncounters",
+      "saveCombatTemplates",
+      "saveFactionRecords",
+      "saveFavoriteMonsterIds",
+      "saveFavorites",
+      "saveHomebrewItems",
+      "saveHomebrewLibraryPreferences",
+      "saveHomebrewMarketplaceRevocations",
+      "saveHomebrewMarketplaceSecurityEvents",
+      "saveHomebrewMarketplaceSources",
+      "saveHomebrewMonsters",
+      "saveHomebrewPackageSnapshots",
+      "saveHomebrewPackages",
+      "saveHomebrewQuarantines",
+      "saveHomebrewSourceHealth",
+      "saveHomebrewSpells",
+      "saveItemTags",
+      "saveLevelUpSnapshot",
+      "saveLootRecords",
+      "saveNpcRecords",
+      "saveQuestRecords",
+      "saveRecentItems",
+      "saveRestHistory",
+      "saveSessionPlans",
+      "saveWorldLocations",
+      "searchGlobalEntries",
+      "serializeCharacterCollection",
+      "serializeClassCompatibleCharacter",
+      "serializeRestCompatibleCharacter",
+      "setInventoryItemQuantity",
+      "slugifyHomebrewId",
+      "sortCombatants",
+      "sortSpellsByLevelAndName",
+      "spendHitDie",
+      "spendResource",
+      "spendSpellSlot",
+      "spendSubclassActionResource",
+      "subclassFeatureLevels",
+      "subclassUnlockState",
+      "summarizeBarbarianCertification",
+      "summarizeBardCertification",
+      "summarizeClericCertification",
+      "summarizeDruidCertification",
+      "summarizeFighterCertification",
+      "summarizeMonkCertification",
+      "summarizePaladinCertification",
+      "summarizeQaCoverage",
+      "summarizeRangerCertification",
+      "summarizeRogueCertification",
+      "summarizeSorcererCertification",
+      "summarizeWarlockCertification",
+      "summarizeWizardCertification",
+      "synchronizeHomebrewResources",
+      "tickBattlefieldZones",
+      "tickCombatEffects",
+      "toggleFavoriteItem",
+      "totalCharacterLevel",
+      "translate",
+      "translateUiText",
+      "unlockedFeatures",
+      "useAppSettings",
+      "useAutosavedDraft",
+      "usePersistentState",
+      "usedHitDice",
+      "usedSpellSlots",
+      "validateHomebrewEntity",
+      "validateHomebrewPackage",
+      "validateHomebrewShareManifest",
+      "writeJsonSafely"
+    ]
+  },
+  "status": "READY"
+}

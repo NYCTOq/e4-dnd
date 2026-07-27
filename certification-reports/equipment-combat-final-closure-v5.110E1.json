@@ -1,0 +1,49 @@
+{
+  "package": "v5.110E1",
+  "domain": "equipment-combat",
+  "auditedAt": "2026-07-25T11:38:48.287Z",
+  "version": "5.110.13",
+  "expectedUnitTests": 569,
+  "expectedE2ETests": 4,
+  "expectedTotalTests": 573,
+  "requiredScripts": [
+    "certify:equipment-combat:oracle",
+    "certify:equipment-combat:matrix",
+    "certify:equipment-combat:differential",
+    "certify:equipment-combat:golden",
+    "certify:equipment-combat:e2e",
+    "certify:equipment-combat:report",
+    "certify:equipment-combat:differential:report",
+    "certify:equipment-combat:golden:report",
+    "certify:equipment-combat:e2e:report",
+    "certify:equipment-combat:complete",
+    "certify:equipment-combat:release"
+  ],
+  "requiredStaticFiles": [
+    "src/certification/oracle/equipmentCombatOracle.test.ts",
+    "src/certification/matrix/equipmentCombatScenarioMatrix.test.ts",
+    "src/certification/differential/equipmentCombatDifferential.test.ts",
+    "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+    "e2e/equipment-combat-certification.spec.ts",
+    "certification-reports/golden-loadout-combat-readiness-v5.110C.json",
+    "certification-reports/equipment-combat-e2e-v5.110D.json",
+    "dist/index.html",
+    "dist/manifest.webmanifest",
+    "dist/sw.js"
+  ],
+  "discoveredReports": {
+    "base-certification-report": "equipment-combat-v5.110A.json",
+    "differential-report": "equipment-combat-differential-v5.110B.json"
+  },
+  "availableReportFiles": [
+    "equipment-combat-differential-v5.110B.json",
+    "equipment-combat-e2e-v5.110D.json",
+    "equipment-combat-final-closure-v5.110E.json",
+    "equipment-combat-final-closure-v5.110E.md",
+    "equipment-combat-v5.110A.json",
+    "golden-loadout-combat-readiness-v5.110C.json"
+  ],
+  "missingScripts": [],
+  "missingFiles": [],
+  "status": "GREEN"
+}

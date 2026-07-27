@@ -1,0 +1,28 @@
+import {describe,it,expect} from "vitest";
+import {REFERENCE_ITEMS,REFERENCE_SPELLS,type ReferenceCombatant} from "../reference/equipmentCombat.reference";
+import {abilityModifier,proficiencyBonus,setInventoryQuantity,inventoryWeight,weaponAbilityModifier,weaponAttackBonus,weaponDamageSummary,automaticArmorClass,effectiveArmorClass,weaponMastery,combatReadiness} from "./equipmentCombatOracle";
+const item=(id:string)=>{const x=REFERENCE_ITEMS.find(i=>i.id===id);if(!x)throw new Error(id);return x};
+const c=(o:Partial<ReferenceCombatant>={}):ReferenceCombatant=>({level:1,abilities:{str:16,dex:14,con:14,int:10,wis:10,cha:10},fightingStyleIds:[],equippedWeaponIds:[],armorClass:10,armorClassMode:"auto",equippedArmorId:null,equippedShieldId:null,inventory:[],maxHp:10,className:"Fighter",gold:0,knownSpellIds:[],preparedSpellIds:[],...o});
+describe("equipment combat reference oracle",()=>{
+it.each([[1,2],[4,2],[5,3],[8,3],[9,4],[13,5],[17,6],[20,6]])("PB %i",(l,e)=>expect(proficiencyBonus(l)).toBe(e));
+it.each([[8,-1],[10,0],[12,1],[14,2],[16,3],[18,4],[20,5]])("mod %i",(s,e)=>expect(abilityModifier(s)).toBe(e));
+it("inventory mutations",()=>{let x=setInventoryQuantity([],"rope",2);expect(x).toEqual([{itemId:"rope",quantity:2}]);x=setInventoryQuantity(x,"rope",4.8);expect(x[0].quantity).toBe(4);expect(setInventoryQuantity(x,"rope",0)).toEqual([])});
+it("weight",()=>expect(inventoryWeight([{itemId:"rope",quantity:2},{itemId:"longsword",quantity:1},{itemId:"missing",quantity:99}],REFERENCE_ITEMS)).toBe(23));
+it("finesse",()=>expect(weaponAbilityModifier(c({abilities:{str:12,dex:18,con:10,int:10,wis:10,cha:10}}),item("rapier"))).toBe(4));
+it("ranged",()=>expect(weaponAbilityModifier(c(),item("longbow"))).toBe(2));
+it("melee",()=>expect(weaponAbilityModifier(c(),item("longsword"))).toBe(3));
+it("archery",()=>expect(weaponAttackBonus(c({level:5,fightingStyleIds:["archery"]}),item("longbow"))).toBe(7));
+it("no proficiency",()=>expect(weaponAttackBonus(c(),item("longsword"),false)).toBe(3));
+it("dueling",()=>expect(weaponDamageSummary(c({fightingStyleIds:["dueling"],equippedWeaponIds:["longsword"]}),item("longsword"))).toBe("1d8 +5 slashing"));
+it("versatile",()=>expect(weaponDamageSummary(c({fightingStyleIds:["dueling"],equippedWeaponIds:["longsword"]}),item("longsword"),true)).toBe("1d10 +3 slashing"));
+it("thrown",()=>expect(weaponDamageSummary(c({fightingStyleIds:["thrown-weapon-fighting"],equippedWeaponIds:["dagger"]}),item("dagger"))).toBe("1d4 +5 piercing"));
+it.each([["none",c(),12],["light",c({inventory:[{itemId:"leather",quantity:1}],equippedArmorId:"leather"}),13],["medium",c({abilities:{str:10,dex:18,con:10,int:10,wis:10,cha:10},inventory:[{itemId:"scale-mail",quantity:1}],equippedArmorId:"scale-mail"}),16],["heavy",c({inventory:[{itemId:"chain-mail",quantity:1}],equippedArmorId:"chain-mail"}),16],["shield",c({inventory:[{itemId:"chain-mail",quantity:1},{itemId:"shield",quantity:1}],equippedArmorId:"chain-mail",equippedShieldId:"shield"}),18],["defense",c({fightingStyleIds:["defense"],inventory:[{itemId:"chain-mail",quantity:1}],equippedArmorId:"chain-mail"}),17]])("AC %s",(_n,ch,e)=>expect(automaticArmorClass(ch,REFERENCE_ITEMS)).toBe(e));
+it("manual AC",()=>expect(effectiveArmorClass(c({armorClassMode:"manual",armorClass:21}),REFERENCE_ITEMS)).toBe(21));
+it("mastery ruleset",()=>{expect(weaponMastery(item("longsword"),"dnd_2014")).toBeNull();expect(weaponMastery(item("longsword"),"dnd_2024")).toBe("Sap");expect(weaponMastery(item("rope"),"dnd_2024")).toBeNull()});
+it("weapon readiness",()=>{const r=combatReadiness(c({armorClass:16,inventory:[{itemId:"longsword",quantity:1}],equippedWeaponIds:["longsword"]}),REFERENCE_ITEMS,REFERENCE_SPELLS);expect(r.ready).toBe(true);expect(r.primaryOptions).toContain("Longsword")});
+it("spell readiness",()=>expect(combatReadiness(c({className:"Wizard",armorClass:12,knownSpellIds:["fire-bolt"]}),REFERENCE_ITEMS,REFERENCE_SPELLS).ready).toBe(true));
+it("monk readiness",()=>expect(combatReadiness(c({className:"Monk",armorClass:15}),REFERENCE_ITEMS,REFERENCE_SPELLS).primaryOptions).toContain("Martial Arts / Unarmed Strike"));
+it("missing equip blocker",()=>expect(combatReadiness(c({armorClass:16,equippedWeaponIds:["longsword"]}),REFERENCE_ITEMS,REFERENCE_SPELLS).blockers).toContain("Kuşanılmış 1 eşya envanterde bulunmuyor."));
+it("invalid defense",()=>{const r=combatReadiness(c({armorClass:9,maxHp:0}),REFERENCE_ITEMS,REFERENCE_SPELLS);expect(r.ready).toBe(false);expect(r.blockers).toHaveLength(2)});
+it("missing option notices",()=>expect(combatReadiness(c({armorClass:12}),REFERENCE_ITEMS,REFERENCE_SPELLS).notices).toHaveLength(2));
+});

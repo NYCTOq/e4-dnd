@@ -1,0 +1,8 @@
+.spell-casting-runtime-panel{display:grid;gap:16px;width:100%;padding:16px;border:1px solid color-mix(in srgb,currentColor 18%,transparent);border-radius:14px;background:color-mix(in srgb,Canvas 94%,currentColor 6%)}
+.spell-casting-runtime-panel__header,.spell-casting-runtime-panel__slot-group,.spell-casting-runtime-panel__concentration{display:grid;gap:10px}
+.spell-casting-runtime-panel__header h2,.spell-casting-runtime-panel__slot-group h3,.spell-casting-runtime-panel__concentration h3,.spell-casting-runtime-panel__concentration p{margin:0}
+.spell-casting-runtime-panel__header>div,.spell-casting-runtime-panel__concentration>div{display:flex;flex-wrap:wrap;gap:8px}
+.spell-casting-runtime-panel__header span{padding:6px 10px;border-radius:999px;background:color-mix(in srgb,currentColor 10%,transparent)}
+.spell-casting-runtime-panel__slot-list{display:grid;gap:8px}.spell-slot-runtime-card{display:grid;grid-template-columns:minmax(100px,1fr) auto auto auto;align-items:center;gap:8px;padding:10px;border:1px solid color-mix(in srgb,currentColor 14%,transparent);border-radius:10px}
+.spell-slot-runtime-card button,.spell-casting-runtime-panel__concentration button,.spell-casting-runtime-panel__concentration input{min-height:40px;padding:8px 12px}.spell-casting-runtime-panel.is-compact{padding:12px}
+@media(max-width:640px){.spell-slot-runtime-card{grid-template-columns:1fr auto}.spell-slot-runtime-card button{width:100%}.spell-casting-runtime-panel__concentration>div{display:grid}}

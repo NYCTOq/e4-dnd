@@ -1,0 +1,52 @@
+.level-up-runtime-panel {
+  display: grid;
+  gap: 14px;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+  border-radius: 14px;
+}
+
+.level-up-runtime-panel header,
+.level-up-runtime-panel__summary,
+.level-up-runtime-panel__choice {
+  display: grid;
+  gap: 8px;
+}
+
+.level-up-runtime-panel h2,
+.level-up-runtime-panel p {
+  margin: 0;
+}
+
+.level-up-runtime-panel label {
+  display: grid;
+  gap: 6px;
+}
+
+.level-up-runtime-panel select,
+.level-up-runtime-panel button {
+  min-height: 42px;
+  padding: 8px 12px;
+}
+
+.level-up-runtime-panel__summary {
+  padding: 12px;
+  border-radius: 10px;
+  background: color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.level-up-runtime-panel__choice > div {
+  display: flex;
+  gap: 8px;
+}
+
+.level-up-runtime-panel__warning {
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .level-up-runtime-panel__choice > div {
+    display: grid;
+  }
+}

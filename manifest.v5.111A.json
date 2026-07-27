@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Rest Recovery Resource Oracle Discovery Mega",
+  "version": "5.111A",
+  "requires": [
+    "v5.110E1"
+  ],
+  "runtime_changes": false,
+  "package_model": "large-domain-foundation"
+}

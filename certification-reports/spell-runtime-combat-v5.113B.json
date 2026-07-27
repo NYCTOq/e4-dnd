@@ -1,0 +1,20 @@
+{
+  "package": "v5.113B",
+  "domain": "spell-runtime-combat",
+  "generatedAt": "2026-07-25T14:07:24.442Z",
+  "runtime": "src/core/rulesets/spellRuntimeCombatRules.ts",
+  "coverage": [
+    "spell save DC",
+    "spell attack bonus",
+    "cantrip scaling",
+    "upcast",
+    "slot consume/restore",
+    "damage relations",
+    "saving throw damage",
+    "healing",
+    "concentration",
+    "slot availability",
+    "target limits",
+    "damage pipeline"
+  ]
+}

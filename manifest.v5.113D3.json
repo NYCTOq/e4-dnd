@@ -1,0 +1,11 @@
+{
+  "name": "E4 D&D Spell UI Wiring E2E Final Closure Mega",
+  "version": "5.113D3",
+  "requires": [
+    "v5.113D2.2"
+  ],
+  "runtime_changes": true,
+  "expected_core_tests": 2313,
+  "expected_logical_e2e": 3,
+  "expected_total": 2316
+}

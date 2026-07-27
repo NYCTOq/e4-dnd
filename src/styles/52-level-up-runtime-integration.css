@@ -1,0 +1,12 @@
+.level-up-runtime-integration-mount {
+  width: min(100%, 960px);
+  margin: 16px auto;
+  padding-inline: 12px;
+}
+
+@media (max-width: 640px) {
+  .level-up-runtime-integration-mount {
+    margin-block: 10px;
+    padding-inline: 8px;
+  }
+}

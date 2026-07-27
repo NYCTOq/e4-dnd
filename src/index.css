@@ -1,3 +1,13 @@
+@import "./styles/52-level-up-runtime-integration.css";
+@import "./styles/51-level-up-runtime-panel.css";
+@import "./styles/50-spell-runtime-integration.css";
+@import "./styles/49-spell-casting-runtime-panel.css";
+@import "./styles/48-class-feature-runtime-integration.css";
+@import "./styles/47-class-feature-panel.css";
+@import "./styles/45-rest-actions-panel.css";
+@import "./styles/44-mobile-accessibility-performance.css";
+@import "./styles/46-rest-runtime-integration.css";
+
 :root {
   color-scheme: dark;
   font-family:

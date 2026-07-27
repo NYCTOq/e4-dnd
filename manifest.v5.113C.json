@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Spell Character Adapter Golden Combat Persistence Mega",
+  "version": "5.113C",
+  "requires": [
+    "v5.113B"
+  ],
+  "runtime_changes": true,
+  "adapter": "src/core/rulesets/spellCharacterCombatAdapter.ts"
+}

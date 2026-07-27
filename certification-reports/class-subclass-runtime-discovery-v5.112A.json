@@ -1,0 +1,2488 @@
+{
+  "package": "v5.112A",
+  "domain": "class-subclass-runtime",
+  "generatedAt": "2026-07-25T12:53:40.622Z",
+  "scannedFiles": 546,
+  "matchedFiles": 410,
+  "highSignalFiles": [
+    {
+      "file": "src/features/play-mode/PlayMode.tsx",
+      "score": 16,
+      "signals": [
+        "classLevel",
+        "subclass",
+        "proficiencyBonus",
+        "shortRest",
+        "longRest",
+        "resourceId",
+        "bonus-action",
+        "reaction",
+        "channel divinity",
+        "rage",
+        "ki",
+        "action surge",
+        "second wind",
+        "sneak attack",
+        "wild shape",
+        "bardic inspiration"
+      ],
+      "exports": [
+        "PlayMode"
+      ],
+      "lineCount": 937
+    },
+    {
+      "file": "src/core/rulesets/classFeatureEngine.ts",
+      "score": 13,
+      "signals": [
+        "subclass",
+        "resourceId",
+        "reaction",
+        "channel divinity",
+        "rage",
+        "ki",
+        "focus points",
+        "action surge",
+        "second wind",
+        "wild shape",
+        "bardic inspiration",
+        "sorcery points",
+        "lay on hands"
+      ],
+      "exports": [
+        "ClassFeatureAction",
+        "getClassFeatureActions",
+        "getClassResources",
+        "mergeClassResources"
+      ],
+      "lineCount": 63
+    },
+    {
+      "file": "src/core/rulesets/classSpecificRuntimePolicy.ts",
+      "score": 13,
+      "signals": [
+        "classId",
+        "subclass",
+        "channel divinity",
+        "rage",
+        "ki",
+        "focus points",
+        "action surge",
+        "second wind",
+        "sneak attack",
+        "wild shape",
+        "bardic inspiration",
+        "sorcery points",
+        "lay on hands"
+      ],
+      "exports": [
+        "CLASS_RUNTIME_EXPECTATIONS",
+        "ClassRuntimeArea",
+        "ClassRuntimeAreaReport",
+        "ClassRuntimeExpectation",
+        "ClassRuntimeState",
+        "ClassSpecificRuntimePolicyReport",
+        "ClassSpecificRuntimeReport",
+        "getClassSpecificRuntimePolicyReport"
+      ],
+      "lineCount": 131
+    },
+    {
+      "file": "src/core/rulesets/classSubclassRuntimeClosure.ts",
+      "score": 13,
+      "signals": [
+        "subclass",
+        "resourceId",
+        "bonus-action",
+        "reaction",
+        "channel divinity",
+        "rage",
+        "ki",
+        "action surge",
+        "second wind",
+        "sneak attack",
+        "wild shape",
+        "bardic inspiration",
+        "lay on hands"
+      ],
+      "exports": [
+        "ClassSubclassRuntimeClosureReport",
+        "EntityClosureReport",
+        "FeatureClosureEntry",
+        "FeatureClosureStatus",
+        "FeatureMechanic",
+        "buildClassSubclassRuntimeClosureReport",
+        "certifyClassRuntime",
+        "certifySubclassRuntime",
+        "formatClassSubclassRuntimeClosureSummary"
+      ],
+      "lineCount": 49
+    },
+    {
+      "file": "src/shared/release/releaseNotes.ts",
+      "score": 13,
+      "signals": [
+        "classLevel",
+        "subclass",
+        "reaction",
+        "channel divinity",
+        "rage",
+        "ki",
+        "action surge",
+        "second wind",
+        "sneak attack",
+        "wild shape",
+        "bardic inspiration",
+        "sorcery points",
+        "lay on hands"
+      ],
+      "exports": [
+        "RELEASE_CATEGORIES",
+        "RELEASE_NOTES",
+        "ReleaseCategory",
+        "ReleaseChange",
+        "ReleaseEntry",
+        "getCurrentRelease"
+      ],
+      "lineCount": 1057
+    },
+    {
+      "file": "src/core/rulesets/classFeatureRuntime.ts",
+      "score": 11,
+      "signals": [
+        "subclass",
+        "resourceId",
+        "reaction",
+        "channel divinity",
+        "rage",
+        "ki",
+        "action surge",
+        "second wind",
+        "wild shape",
+        "bardic inspiration",
+        "lay on hands"
+      ],
+      "exports": [
+        "ClassFeatureRuntimePlan",
+        "applyClassFeatureUse",
+        "canUseClassFeature",
+        "endClassFeatureCondition",
+        "getClassFeatureRuntimePlan",
+        "getRemainingClassResource"
+      ],
+      "lineCount": 218
+    },
+    {
+      "file": "src/core/rulesets/subclassExpansion.ts",
+      "score": 11,
+      "signals": [
+        "subclass",
+        "reaction",
+        "channel divinity",
+        "rage",
+        "ki",
+        "focus points",
+        "action surge",
+        "sneak attack",
+        "wild shape",
+        "bardic inspiration",
+        "sorcery points"
+      ],
+      "exports": [
+        "SUBCLASS_EXPANSION_2014",
+        "SUBCLASS_EXPANSION_2024"
+      ],
+      "lineCount": 137
+    },
+    {
+      "file": "src/certification/reference/classSubclassRuntime.reference.ts",
+      "score": 9,
+      "signals": [
+        "classId",
+        "subclassId",
+        "classLevel",
+        "subclass",
+        "featureLevel",
+        "proficiencyBonus",
+        "activation",
+        "bonus-action",
+        "reaction"
+      ],
+      "exports": [
+        "ClassFeatureReference",
+        "ClassRulesetId",
+        "FeatureActivation",
+        "LimitedUseFormula",
+        "RecoveryType",
+        "abilityModifier",
+        "classLevel",
+        "isFeatureUnlocked",
+        "normalizeActivation",
+        "proficiencyBonus",
+        "recoverFeatureUses",
+        "resolveLimitedUses",
+        "subclassFeatureLevels",
+        "totalCharacterLevel",
+        "unlockedFeatures"
+      ],
+      "lineCount": 162
+    },
+    {
+      "file": "src/core/rulesets/subclassRuntimeRules.ts",
+      "score": 9,
+      "signals": [
+        "subclass",
+        "resourceId",
+        "bonus-action",
+        "reaction",
+        "channel divinity",
+        "rage",
+        "ki",
+        "wild shape",
+        "bardic inspiration"
+      ],
+      "exports": [
+        "SubclassActionType",
+        "SubclassRuntime",
+        "SubclassRuntimeAction",
+        "canUseSubclassAction",
+        "getSubclassRuntime",
+        "spendSubclassActionResource"
+      ],
+      "lineCount": 54
+    },
+    {
+      "file": "src/certification/oracle/classSubclassRuntimeOracle.test.ts",
+      "score": 8,
+      "signals": [
+        "classId",
+        "classLevel",
+        "subclass",
+        "featureLevel",
+        "proficiencyBonus",
+        "activation",
+        "bonus-action",
+        "reaction"
+      ],
+      "exports": [],
+      "lineCount": 208
+    },
+    {
+      "file": "src/features/characters/CharacterDetail.tsx",
+      "score": 8,
+      "signals": [
+        "classLevel",
+        "subclass",
+        "proficiencyBonus",
+        "longRest",
+        "resourceId",
+        "reaction",
+        "rage",
+        "ki"
+      ],
+      "exports": [
+        "CharacterDetail"
+      ],
+      "lineCount": 1443
+    },
+    {
+      "file": "src/core/rulesets/classSpecificRuntimePolicy.test.ts",
+      "score": 7,
+      "signals": [
+        "classId",
+        "classLevel",
+        "subclass",
+        "proficiencyBonus",
+        "ki",
+        "action surge",
+        "second wind"
+      ],
+      "exports": [],
+      "lineCount": 50
+    },
+    {
+      "file": "src/core/rulesets/barbarianBuilderCertification.ts",
+      "score": 6,
+      "signals": [
+        "classId",
+        "subclassId",
+        "classLevel",
+        "subclass",
+        "rage",
+        "ki"
+      ],
+      "exports": [
+        "BarbarianCertificationRow",
+        "certifyBarbarianBuilder",
+        "summarizeBarbarianCertification"
+      ],
+      "lineCount": 89
+    },
+    {
+      "file": "src/core/rulesets/bardBuilderCertification.ts",
+      "score": 6,
+      "signals": [
+        "classId",
+        "subclassId",
+        "classLevel",
+        "subclass",
+        "reaction",
+        "ki"
+      ],
+      "exports": [
+        "BardCertificationRow",
+        "certifyBardBuilder",
+        "summarizeBardCertification"
+      ],
+      "lineCount": 93
+    },
+    {
+      "file": "src/core/rulesets/classProgression.test.ts",
+      "score": 6,
+      "signals": [
+        "classLevel",
+        "subclass",
+        "proficiencyBonus",
+        "ki",
+        "action surge",
+        "second wind"
+      ],
+      "exports": [],
+      "lineCount": 17
+    },
+    {
+      "file": "src/core/rulesets/clericBuilderCertification.ts",
+      "score": 6,
+      "signals": [
+        "classId",
+        "subclassId",
+        "classLevel",
+        "subclass",
+        "featureLevel",
+        "ki"
+      ],
+      "exports": [
+        "ClericCertificationRow",
+        "certifyClericBuilder",
+        "summarizeClericCertification"
+      ],
+      "lineCount": 16
+    },
+    {
+      "file": "src/core/rulesets/druidBuilderCertification.ts",
+      "score": 6,
+      "signals": [
+        "classId",
+        "subclassId",
+        "classLevel",
+        "subclass",
+        "featureLevel",
+        "ki"
+      ],
+      "exports": [
+        "DruidCertificationRow",
+        "certifyDruidBuilder",
+        "summarizeDruidCertification"
+      ],
+      "lineCount": 7
+    },
+    {
+      "file": "src/core/rulesets/fighterBuilderCertification.ts",
+      "score": 6,
+      "signals": [
+        "classId",
+        "subclassId",
+        "classLevel",
+        "subclass",
+        "featureLevel",
+        "ki"
+      ],
+      "exports": [
+        "FighterCertificationRow",
+        "certifyFighterBuilder",
+        "summarizeFighterCertification"
+      ],
+      "lineCount": 7
+    },
+    {
+      "file": "src/core/rulesets/monkBuilderCertification.ts",
+      "score": 6,
+      "signals": [
+        "classId",
+        "subclassId",
+        "classLevel",
+        "subclass",
+        "featureLevel",
+        "ki"
+      ],
+      "exports": [
+        "MonkCertificationRow",
+        "certifyMonkBuilder",
+        "summarizeMonkCertification"
+      ],
+      "lineCount": 7
+    },
+    {
+      "file": "src/core/rulesets/monkRules.ts",
+      "score": 6,
+      "signals": [
+        "classLevel",
+        "subclass",
+        "featureLevel",
+        "bonus-action",
+        "ki",
+        "focus points"
+      ],
+      "exports": [
+        "MonkEdition",
+        "getFlurryStrikeCount",
+        "getMartialArtsDie",
+        "getMonkCombatFeatures",
+        "getMonkFocusPoints",
+        "getMonkSubclassFeatureLevels",
+        "getMonkSubclassLevel",
+        "getOpenHandFeatures",
+        "getShadowFeatures",
+        "getUnarmoredMovementBonus"
+      ],
+      "lineCount": 35
+    },
+    {
+      "file": "src/core/rulesets/paladinBuilderCertification.ts",
+      "score": 6,
+      "signals": [
+        "classId",
+        "subclassId",
+        "classLevel",
+        "subclass",
+        "featureLevel",
+        "ki"
+      ],
+      "exports": [
+        "PaladinCertificationRow",
+        "certifyPaladinBuilder",
+        "summarizePaladinCertification"
+      ],
+      "lineCount": 7
+    },
+    {
+      "file": "src/core/rulesets/paladinRules.ts",
+      "score": 6,
+      "signals": [
+        "classLevel",
+        "subclass",
+        "featureLevel",
+        "bonus-action",
+        "rage",
+        "ki"
+      ],
+      "exports": [
+        "PaladinEdition",
+        "getDivineSmiteDice",
+        "getLayOnHandsActionType",
+        "getLayOnHandsPool",
+        "getPaladinAuraSummary",
+        "getPaladinChannelDivinityUses",
+        "getPaladinCoreFeatures",
+        "getPaladinPreparedSpellLimit",
+        "getPaladinSubclassFeatureLevels",
+        "getPaladinSubclassLevel",
+        "getPaladinWeaponMasteryCount",
+        "isPaladin"
+      ],
+      "lineCount": 15
+    },
+    {
+      "file": "src/core/rulesets/rangerBuilderCertification.ts",
+      "score": 6,
+      "signals": [
+        "classId",
+        "subclassId",
+        "classLevel",
+        "subclass",
+        "featureLevel",
+        "ki"
+      ],
+      "exports": [
+        "RangerCertificationRow",
+        "certifyRangerBuilder",
+        "summarizeRangerCertification"
+      ],
+      "lineCount": 8
+    },
+    {
+      "file": "src/core/rulesets/rogueBuilderCertification.ts",
+      "score": 6,
+      "signals": [
+        "classId",
+        "subclassId",
+        "classLevel",
+        "subclass",
+        "featureLevel",
+        "ki"
+      ],
+      "exports": [
+        "RogueCertificationRow",
+        "certifyRogueBuilder",
+        "summarizeRogueCertification"
+      ],
+      "lineCount": 8
+    },
+    {
+      "file": "src/core/rulesets/sorcererBuilderCertification.ts",
+      "score": 6,
+      "signals": [
+        "classId",
+        "subclassId",
+        "classLevel",
+        "subclass",
+        "featureLevel",
+        "ki"
+      ],
+      "exports": [
+        "SorcererCertificationRow",
+        "certifySorcererBuilder",
+        "summarizeSorcererCertification"
+      ],
+      "lineCount": 128
+    },
+    {
+      "file": "src/core/rulesets/warlockBuilderCertification.ts",
+      "score": 6,
+      "signals": [
+        "classId",
+        "subclassId",
+        "classLevel",
+        "subclass",
+        "featureLevel",
+        "ki"
+      ],
+      "exports": [
+        "WarlockCertificationRow",
+        "certifyWarlockBuilder",
+        "summarizeWarlockCertification"
+      ],
+      "lineCount": 71
+    },
+    {
+      "file": "src/core/rulesets/wizardBuilderCertification.ts",
+      "score": 6,
+      "signals": [
+        "classId",
+        "subclassId",
+        "classLevel",
+        "subclass",
+        "featureLevel",
+        "ki"
+      ],
+      "exports": [
+        "WizardCertificationRow",
+        "certifyWizardBuilder",
+        "summarizeWizardCertification"
+      ],
+      "lineCount": 57
+    },
+    {
+      "file": "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+      "score": 5,
+      "signals": [
+        "classId",
+        "shortRest",
+        "longRest",
+        "rage",
+        "focus points"
+      ],
+      "exports": [],
+      "lineCount": 254
+    },
+    {
+      "file": "src/core/character/character.types.ts",
+      "score": 5,
+      "signals": [
+        "classLevel",
+        "subclass",
+        "bonus-action",
+        "rage",
+        "ki"
+      ],
+      "exports": [
+        "AbilityKey",
+        "AbilityScores",
+        "ArmorClassMode",
+        "Character",
+        "CharacterClassLevel",
+        "CharacterCondition",
+        "CharacterConditionDurations",
+        "CharacterDeathSaves",
+        "CharacterDraft",
+        "CharacterHitDiePool",
+        "CharacterInventoryItem",
+        "CharacterResource",
+        "CharacterSpellEffect",
+        "CharacterSpellSlot",
+        "ResourceRecovery",
+        "RulesetId"
+      ],
+      "lineCount": 223
+    },
+    {
+      "file": "src/core/homebrew/homebrewCreator.ts",
+      "score": 5,
+      "signals": [
+        "classLevel",
+        "subclass",
+        "proficiencyBonus",
+        "resourceId",
+        "ki"
+      ],
+      "exports": [
+        "DEFAULT_HOMEBREW_CREATOR_DRAFT",
+        "HomebrewCreatorDraft",
+        "createEntityFromDraft",
+        "createPackageFromDraft",
+        "slugifyHomebrewId"
+      ],
+      "lineCount": 160
+    },
+    {
+      "file": "src/core/homebrew/homebrewRuntimeIntegration.test.ts",
+      "score": 5,
+      "signals": [
+        "classLevel",
+        "subclass",
+        "proficiencyBonus",
+        "resourceId",
+        "ki"
+      ],
+      "exports": [],
+      "lineCount": 19
+    },
+    {
+      "file": "src/core/rulesets/characterSheetRules.ts",
+      "score": 5,
+      "signals": [
+        "subclass",
+        "proficiencyBonus",
+        "rage",
+        "ki",
+        "wild shape"
+      ],
+      "exports": [
+        "SKILL_ABILITIES",
+        "getCharacterFeatures",
+        "getPassiveScore",
+        "getSavingThrowBonus",
+        "getSkillBonus"
+      ],
+      "lineCount": 44
+    },
+    {
+      "file": "src/core/rulesets/classSubclassRuntimeClosure.test.ts",
+      "score": 5,
+      "signals": [
+        "classLevel",
+        "subclass",
+        "proficiencyBonus",
+        "ki",
+        "second wind"
+      ],
+      "exports": [],
+      "lineCount": 15
+    },
+    {
+      "file": "src/core/rulesets/halfCasterOfficialProgression.test.ts",
+      "score": 5,
+      "signals": [
+        "classId",
+        "subclass",
+        "channel divinity",
+        "rage",
+        "lay on hands"
+      ],
+      "exports": [],
+      "lineCount": 81
+    },
+    {
+      "file": "src/core/rulesets/levelOneActionEconomyReadiness.test.ts",
+      "score": 5,
+      "signals": [
+        "classLevel",
+        "subclass",
+        "reaction",
+        "ki",
+        "second wind"
+      ],
+      "exports": [],
+      "lineCount": 49
+    },
+    {
+      "file": "src/core/rulesets/levelOneSupportReadiness.test.ts",
+      "score": 5,
+      "signals": [
+        "classLevel",
+        "subclass",
+        "channel divinity",
+        "ki",
+        "lay on hands"
+      ],
+      "exports": [],
+      "lineCount": 60
+    },
+    {
+      "file": "src/core/rulesets/martialOfficialProgression.test.ts",
+      "score": 5,
+      "signals": [
+        "classId",
+        "subclass",
+        "action surge",
+        "second wind",
+        "sneak attack"
+      ],
+      "exports": [],
+      "lineCount": 93
+    },
+    {
+      "file": "src/core/rulesets/rogueRules.ts",
+      "score": 5,
+      "signals": [
+        "classLevel",
+        "subclass",
+        "featureLevel",
+        "proficiencyBonus",
+        "sneak attack"
+      ],
+      "exports": [
+        "RogueEdition",
+        "canUseSneakAttack",
+        "getAssassinProgression",
+        "getCunningStrikeOptions",
+        "getCunningStrikeSaveDc",
+        "getRogueCombatFeatures",
+        "getRogueExpertiseCount",
+        "getRogueSubclassFeatureLevels",
+        "getRogueSubclassLevel",
+        "getRogueWeaponMasteryCount",
+        "getSneakAttackDice",
+        "getThiefProgression",
+        "isSneakAttackWeapon"
+      ],
+      "lineCount": 17
+    },
+    {
+      "file": "src/core/rulesets/ruleset.types.ts",
+      "score": 5,
+      "signals": [
+        "classLevel",
+        "subclass",
+        "proficiencyBonus",
+        "reaction",
+        "ki"
+      ],
+      "exports": [
+        "ClassLevelData",
+        "DndArmorType",
+        "DndBackgroundData",
+        "DndClassData",
+        "DndFeatData",
+        "DndFeatPrerequisite",
+        "DndItemCategory",
+        "DndItemData",
+        "DndMonsterData",
+        "DndRaceData",
+        "DndSpellData",
+        "DndSubclassData",
+        "DndSubraceData",
+        "FeatCategory",
+        "RulesetData",
+        "SkillChoices",
+        "SpellEffectType",
+        "SpellProgression",
+        "SpellResolutionType",
+        "SpellScalingData",
+        "SubclassFeatureData",
+        "WeaponCategory",
+        "WeaponMastery"
+      ],
+      "lineCount": 260
+    },
+    {
+      "file": "src/core/rulesets/runtimeCoverageCertification.ts",
+      "score": 5,
+      "signals": [
+        "subclass",
+        "reaction",
+        "rage",
+        "ki",
+        "wild shape"
+      ],
+      "exports": [
+        "RuntimeCategory",
+        "RuntimeCoverageCertification",
+        "RuntimeEntity",
+        "RuntimeTier",
+        "classifyFeat",
+        "classifyItem",
+        "classifySpell",
+        "classifySubclass",
+        "getRuntimeCoverageCertification"
+      ],
+      "lineCount": 16
+    }
+  ],
+  "groups": {
+    "runtimeRules": [
+      {
+        "file": "src/core/rulesets/classFeatureEngine.ts",
+        "score": 13,
+        "signals": [
+          "subclass",
+          "resourceId",
+          "reaction",
+          "channel divinity",
+          "rage",
+          "ki",
+          "focus points",
+          "action surge",
+          "second wind",
+          "wild shape",
+          "bardic inspiration",
+          "sorcery points",
+          "lay on hands"
+        ],
+        "exports": [
+          "ClassFeatureAction",
+          "getClassFeatureActions",
+          "getClassResources",
+          "mergeClassResources"
+        ],
+        "lineCount": 63
+      },
+      {
+        "file": "src/core/rulesets/classSpecificRuntimePolicy.ts",
+        "score": 13,
+        "signals": [
+          "classId",
+          "subclass",
+          "channel divinity",
+          "rage",
+          "ki",
+          "focus points",
+          "action surge",
+          "second wind",
+          "sneak attack",
+          "wild shape",
+          "bardic inspiration",
+          "sorcery points",
+          "lay on hands"
+        ],
+        "exports": [
+          "CLASS_RUNTIME_EXPECTATIONS",
+          "ClassRuntimeArea",
+          "ClassRuntimeAreaReport",
+          "ClassRuntimeExpectation",
+          "ClassRuntimeState",
+          "ClassSpecificRuntimePolicyReport",
+          "ClassSpecificRuntimeReport",
+          "getClassSpecificRuntimePolicyReport"
+        ],
+        "lineCount": 131
+      },
+      {
+        "file": "src/core/rulesets/classSubclassRuntimeClosure.ts",
+        "score": 13,
+        "signals": [
+          "subclass",
+          "resourceId",
+          "bonus-action",
+          "reaction",
+          "channel divinity",
+          "rage",
+          "ki",
+          "action surge",
+          "second wind",
+          "sneak attack",
+          "wild shape",
+          "bardic inspiration",
+          "lay on hands"
+        ],
+        "exports": [
+          "ClassSubclassRuntimeClosureReport",
+          "EntityClosureReport",
+          "FeatureClosureEntry",
+          "FeatureClosureStatus",
+          "FeatureMechanic",
+          "buildClassSubclassRuntimeClosureReport",
+          "certifyClassRuntime",
+          "certifySubclassRuntime",
+          "formatClassSubclassRuntimeClosureSummary"
+        ],
+        "lineCount": 49
+      },
+      {
+        "file": "src/core/rulesets/classFeatureRuntime.ts",
+        "score": 11,
+        "signals": [
+          "subclass",
+          "resourceId",
+          "reaction",
+          "channel divinity",
+          "rage",
+          "ki",
+          "action surge",
+          "second wind",
+          "wild shape",
+          "bardic inspiration",
+          "lay on hands"
+        ],
+        "exports": [
+          "ClassFeatureRuntimePlan",
+          "applyClassFeatureUse",
+          "canUseClassFeature",
+          "endClassFeatureCondition",
+          "getClassFeatureRuntimePlan",
+          "getRemainingClassResource"
+        ],
+        "lineCount": 218
+      },
+      {
+        "file": "src/core/rulesets/subclassExpansion.ts",
+        "score": 11,
+        "signals": [
+          "subclass",
+          "reaction",
+          "channel divinity",
+          "rage",
+          "ki",
+          "focus points",
+          "action surge",
+          "sneak attack",
+          "wild shape",
+          "bardic inspiration",
+          "sorcery points"
+        ],
+        "exports": [
+          "SUBCLASS_EXPANSION_2014",
+          "SUBCLASS_EXPANSION_2024"
+        ],
+        "lineCount": 137
+      },
+      {
+        "file": "src/certification/reference/classSubclassRuntime.reference.ts",
+        "score": 9,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "proficiencyBonus",
+          "activation",
+          "bonus-action",
+          "reaction"
+        ],
+        "exports": [
+          "ClassFeatureReference",
+          "ClassRulesetId",
+          "FeatureActivation",
+          "LimitedUseFormula",
+          "RecoveryType",
+          "abilityModifier",
+          "classLevel",
+          "isFeatureUnlocked",
+          "normalizeActivation",
+          "proficiencyBonus",
+          "recoverFeatureUses",
+          "resolveLimitedUses",
+          "subclassFeatureLevels",
+          "totalCharacterLevel",
+          "unlockedFeatures"
+        ],
+        "lineCount": 162
+      },
+      {
+        "file": "src/core/rulesets/subclassRuntimeRules.ts",
+        "score": 9,
+        "signals": [
+          "subclass",
+          "resourceId",
+          "bonus-action",
+          "reaction",
+          "channel divinity",
+          "rage",
+          "ki",
+          "wild shape",
+          "bardic inspiration"
+        ],
+        "exports": [
+          "SubclassActionType",
+          "SubclassRuntime",
+          "SubclassRuntimeAction",
+          "canUseSubclassAction",
+          "getSubclassRuntime",
+          "spendSubclassActionResource"
+        ],
+        "lineCount": 54
+      },
+      {
+        "file": "src/certification/oracle/classSubclassRuntimeOracle.test.ts",
+        "score": 8,
+        "signals": [
+          "classId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "proficiencyBonus",
+          "activation",
+          "bonus-action",
+          "reaction"
+        ],
+        "exports": [],
+        "lineCount": 208
+      },
+      {
+        "file": "src/core/rulesets/classSpecificRuntimePolicy.test.ts",
+        "score": 7,
+        "signals": [
+          "classId",
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "ki",
+          "action surge",
+          "second wind"
+        ],
+        "exports": [],
+        "lineCount": 50
+      },
+      {
+        "file": "src/core/rulesets/barbarianBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "BarbarianCertificationRow",
+          "certifyBarbarianBuilder",
+          "summarizeBarbarianCertification"
+        ],
+        "lineCount": 89
+      },
+      {
+        "file": "src/core/rulesets/bardBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "reaction",
+          "ki"
+        ],
+        "exports": [
+          "BardCertificationRow",
+          "certifyBardBuilder",
+          "summarizeBardCertification"
+        ],
+        "lineCount": 93
+      },
+      {
+        "file": "src/core/rulesets/classProgression.test.ts",
+        "score": 6,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "ki",
+          "action surge",
+          "second wind"
+        ],
+        "exports": [],
+        "lineCount": 17
+      },
+      {
+        "file": "src/core/rulesets/clericBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "ClericCertificationRow",
+          "certifyClericBuilder",
+          "summarizeClericCertification"
+        ],
+        "lineCount": 16
+      },
+      {
+        "file": "src/core/rulesets/druidBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "DruidCertificationRow",
+          "certifyDruidBuilder",
+          "summarizeDruidCertification"
+        ],
+        "lineCount": 7
+      },
+      {
+        "file": "src/core/rulesets/fighterBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "FighterCertificationRow",
+          "certifyFighterBuilder",
+          "summarizeFighterCertification"
+        ],
+        "lineCount": 7
+      },
+      {
+        "file": "src/core/rulesets/monkBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "MonkCertificationRow",
+          "certifyMonkBuilder",
+          "summarizeMonkCertification"
+        ],
+        "lineCount": 7
+      },
+      {
+        "file": "src/core/rulesets/monkRules.ts",
+        "score": 6,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "bonus-action",
+          "ki",
+          "focus points"
+        ],
+        "exports": [
+          "MonkEdition",
+          "getFlurryStrikeCount",
+          "getMartialArtsDie",
+          "getMonkCombatFeatures",
+          "getMonkFocusPoints",
+          "getMonkSubclassFeatureLevels",
+          "getMonkSubclassLevel",
+          "getOpenHandFeatures",
+          "getShadowFeatures",
+          "getUnarmoredMovementBonus"
+        ],
+        "lineCount": 35
+      },
+      {
+        "file": "src/core/rulesets/paladinBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "PaladinCertificationRow",
+          "certifyPaladinBuilder",
+          "summarizePaladinCertification"
+        ],
+        "lineCount": 7
+      },
+      {
+        "file": "src/core/rulesets/paladinRules.ts",
+        "score": 6,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "bonus-action",
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "PaladinEdition",
+          "getDivineSmiteDice",
+          "getLayOnHandsActionType",
+          "getLayOnHandsPool",
+          "getPaladinAuraSummary",
+          "getPaladinChannelDivinityUses",
+          "getPaladinCoreFeatures",
+          "getPaladinPreparedSpellLimit",
+          "getPaladinSubclassFeatureLevels",
+          "getPaladinSubclassLevel",
+          "getPaladinWeaponMasteryCount",
+          "isPaladin"
+        ],
+        "lineCount": 15
+      },
+      {
+        "file": "src/core/rulesets/rangerBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "RangerCertificationRow",
+          "certifyRangerBuilder",
+          "summarizeRangerCertification"
+        ],
+        "lineCount": 8
+      },
+      {
+        "file": "src/core/rulesets/rogueBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "RogueCertificationRow",
+          "certifyRogueBuilder",
+          "summarizeRogueCertification"
+        ],
+        "lineCount": 8
+      },
+      {
+        "file": "src/core/rulesets/sorcererBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "SorcererCertificationRow",
+          "certifySorcererBuilder",
+          "summarizeSorcererCertification"
+        ],
+        "lineCount": 128
+      },
+      {
+        "file": "src/core/rulesets/warlockBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "WarlockCertificationRow",
+          "certifyWarlockBuilder",
+          "summarizeWarlockCertification"
+        ],
+        "lineCount": 71
+      },
+      {
+        "file": "src/core/rulesets/wizardBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "WizardCertificationRow",
+          "certifyWizardBuilder",
+          "summarizeWizardCertification"
+        ],
+        "lineCount": 57
+      },
+      {
+        "file": "src/core/homebrew/homebrewRuntimeIntegration.test.ts",
+        "score": 5,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "resourceId",
+          "ki"
+        ],
+        "exports": [],
+        "lineCount": 19
+      },
+      {
+        "file": "src/core/rulesets/characterSheetRules.ts",
+        "score": 5,
+        "signals": [
+          "subclass",
+          "proficiencyBonus",
+          "rage",
+          "ki",
+          "wild shape"
+        ],
+        "exports": [
+          "SKILL_ABILITIES",
+          "getCharacterFeatures",
+          "getPassiveScore",
+          "getSavingThrowBonus",
+          "getSkillBonus"
+        ],
+        "lineCount": 44
+      },
+      {
+        "file": "src/core/rulesets/classSubclassRuntimeClosure.test.ts",
+        "score": 5,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "ki",
+          "second wind"
+        ],
+        "exports": [],
+        "lineCount": 15
+      },
+      {
+        "file": "src/core/rulesets/halfCasterOfficialProgression.test.ts",
+        "score": 5,
+        "signals": [
+          "classId",
+          "subclass",
+          "channel divinity",
+          "rage",
+          "lay on hands"
+        ],
+        "exports": [],
+        "lineCount": 81
+      },
+      {
+        "file": "src/core/rulesets/levelOneActionEconomyReadiness.test.ts",
+        "score": 5,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "reaction",
+          "ki",
+          "second wind"
+        ],
+        "exports": [],
+        "lineCount": 49
+      },
+      {
+        "file": "src/core/rulesets/levelOneSupportReadiness.test.ts",
+        "score": 5,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "channel divinity",
+          "ki",
+          "lay on hands"
+        ],
+        "exports": [],
+        "lineCount": 60
+      }
+    ],
+    "resources": [
+      {
+        "file": "src/features/play-mode/PlayMode.tsx",
+        "score": 16,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "shortRest",
+          "longRest",
+          "resourceId",
+          "bonus-action",
+          "reaction",
+          "channel divinity",
+          "rage",
+          "ki",
+          "action surge",
+          "second wind",
+          "sneak attack",
+          "wild shape",
+          "bardic inspiration"
+        ],
+        "exports": [
+          "PlayMode"
+        ],
+        "lineCount": 937
+      },
+      {
+        "file": "src/core/rulesets/classFeatureEngine.ts",
+        "score": 13,
+        "signals": [
+          "subclass",
+          "resourceId",
+          "reaction",
+          "channel divinity",
+          "rage",
+          "ki",
+          "focus points",
+          "action surge",
+          "second wind",
+          "wild shape",
+          "bardic inspiration",
+          "sorcery points",
+          "lay on hands"
+        ],
+        "exports": [
+          "ClassFeatureAction",
+          "getClassFeatureActions",
+          "getClassResources",
+          "mergeClassResources"
+        ],
+        "lineCount": 63
+      },
+      {
+        "file": "src/core/rulesets/classSpecificRuntimePolicy.ts",
+        "score": 13,
+        "signals": [
+          "classId",
+          "subclass",
+          "channel divinity",
+          "rage",
+          "ki",
+          "focus points",
+          "action surge",
+          "second wind",
+          "sneak attack",
+          "wild shape",
+          "bardic inspiration",
+          "sorcery points",
+          "lay on hands"
+        ],
+        "exports": [
+          "CLASS_RUNTIME_EXPECTATIONS",
+          "ClassRuntimeArea",
+          "ClassRuntimeAreaReport",
+          "ClassRuntimeExpectation",
+          "ClassRuntimeState",
+          "ClassSpecificRuntimePolicyReport",
+          "ClassSpecificRuntimeReport",
+          "getClassSpecificRuntimePolicyReport"
+        ],
+        "lineCount": 131
+      },
+      {
+        "file": "src/core/rulesets/classSubclassRuntimeClosure.ts",
+        "score": 13,
+        "signals": [
+          "subclass",
+          "resourceId",
+          "bonus-action",
+          "reaction",
+          "channel divinity",
+          "rage",
+          "ki",
+          "action surge",
+          "second wind",
+          "sneak attack",
+          "wild shape",
+          "bardic inspiration",
+          "lay on hands"
+        ],
+        "exports": [
+          "ClassSubclassRuntimeClosureReport",
+          "EntityClosureReport",
+          "FeatureClosureEntry",
+          "FeatureClosureStatus",
+          "FeatureMechanic",
+          "buildClassSubclassRuntimeClosureReport",
+          "certifyClassRuntime",
+          "certifySubclassRuntime",
+          "formatClassSubclassRuntimeClosureSummary"
+        ],
+        "lineCount": 49
+      },
+      {
+        "file": "src/shared/release/releaseNotes.ts",
+        "score": 13,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "reaction",
+          "channel divinity",
+          "rage",
+          "ki",
+          "action surge",
+          "second wind",
+          "sneak attack",
+          "wild shape",
+          "bardic inspiration",
+          "sorcery points",
+          "lay on hands"
+        ],
+        "exports": [
+          "RELEASE_CATEGORIES",
+          "RELEASE_NOTES",
+          "ReleaseCategory",
+          "ReleaseChange",
+          "ReleaseEntry",
+          "getCurrentRelease"
+        ],
+        "lineCount": 1057
+      },
+      {
+        "file": "src/core/rulesets/classFeatureRuntime.ts",
+        "score": 11,
+        "signals": [
+          "subclass",
+          "resourceId",
+          "reaction",
+          "channel divinity",
+          "rage",
+          "ki",
+          "action surge",
+          "second wind",
+          "wild shape",
+          "bardic inspiration",
+          "lay on hands"
+        ],
+        "exports": [
+          "ClassFeatureRuntimePlan",
+          "applyClassFeatureUse",
+          "canUseClassFeature",
+          "endClassFeatureCondition",
+          "getClassFeatureRuntimePlan",
+          "getRemainingClassResource"
+        ],
+        "lineCount": 218
+      },
+      {
+        "file": "src/core/rulesets/subclassExpansion.ts",
+        "score": 11,
+        "signals": [
+          "subclass",
+          "reaction",
+          "channel divinity",
+          "rage",
+          "ki",
+          "focus points",
+          "action surge",
+          "sneak attack",
+          "wild shape",
+          "bardic inspiration",
+          "sorcery points"
+        ],
+        "exports": [
+          "SUBCLASS_EXPANSION_2014",
+          "SUBCLASS_EXPANSION_2024"
+        ],
+        "lineCount": 137
+      },
+      {
+        "file": "src/core/rulesets/subclassRuntimeRules.ts",
+        "score": 9,
+        "signals": [
+          "subclass",
+          "resourceId",
+          "bonus-action",
+          "reaction",
+          "channel divinity",
+          "rage",
+          "ki",
+          "wild shape",
+          "bardic inspiration"
+        ],
+        "exports": [
+          "SubclassActionType",
+          "SubclassRuntime",
+          "SubclassRuntimeAction",
+          "canUseSubclassAction",
+          "getSubclassRuntime",
+          "spendSubclassActionResource"
+        ],
+        "lineCount": 54
+      },
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "score": 8,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "longRest",
+          "resourceId",
+          "reaction",
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "CharacterDetail"
+        ],
+        "lineCount": 1443
+      },
+      {
+        "file": "src/core/rulesets/classSpecificRuntimePolicy.test.ts",
+        "score": 7,
+        "signals": [
+          "classId",
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "ki",
+          "action surge",
+          "second wind"
+        ],
+        "exports": [],
+        "lineCount": 50
+      },
+      {
+        "file": "src/core/rulesets/barbarianBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "BarbarianCertificationRow",
+          "certifyBarbarianBuilder",
+          "summarizeBarbarianCertification"
+        ],
+        "lineCount": 89
+      },
+      {
+        "file": "src/core/rulesets/bardBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "reaction",
+          "ki"
+        ],
+        "exports": [
+          "BardCertificationRow",
+          "certifyBardBuilder",
+          "summarizeBardCertification"
+        ],
+        "lineCount": 93
+      },
+      {
+        "file": "src/core/rulesets/classProgression.test.ts",
+        "score": 6,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "ki",
+          "action surge",
+          "second wind"
+        ],
+        "exports": [],
+        "lineCount": 17
+      },
+      {
+        "file": "src/core/rulesets/clericBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "ClericCertificationRow",
+          "certifyClericBuilder",
+          "summarizeClericCertification"
+        ],
+        "lineCount": 16
+      },
+      {
+        "file": "src/core/rulesets/druidBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "DruidCertificationRow",
+          "certifyDruidBuilder",
+          "summarizeDruidCertification"
+        ],
+        "lineCount": 7
+      },
+      {
+        "file": "src/core/rulesets/fighterBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "FighterCertificationRow",
+          "certifyFighterBuilder",
+          "summarizeFighterCertification"
+        ],
+        "lineCount": 7
+      },
+      {
+        "file": "src/core/rulesets/monkBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "MonkCertificationRow",
+          "certifyMonkBuilder",
+          "summarizeMonkCertification"
+        ],
+        "lineCount": 7
+      },
+      {
+        "file": "src/core/rulesets/monkRules.ts",
+        "score": 6,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "bonus-action",
+          "ki",
+          "focus points"
+        ],
+        "exports": [
+          "MonkEdition",
+          "getFlurryStrikeCount",
+          "getMartialArtsDie",
+          "getMonkCombatFeatures",
+          "getMonkFocusPoints",
+          "getMonkSubclassFeatureLevels",
+          "getMonkSubclassLevel",
+          "getOpenHandFeatures",
+          "getShadowFeatures",
+          "getUnarmoredMovementBonus"
+        ],
+        "lineCount": 35
+      },
+      {
+        "file": "src/core/rulesets/paladinBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "PaladinCertificationRow",
+          "certifyPaladinBuilder",
+          "summarizePaladinCertification"
+        ],
+        "lineCount": 7
+      },
+      {
+        "file": "src/core/rulesets/paladinRules.ts",
+        "score": 6,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "bonus-action",
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "PaladinEdition",
+          "getDivineSmiteDice",
+          "getLayOnHandsActionType",
+          "getLayOnHandsPool",
+          "getPaladinAuraSummary",
+          "getPaladinChannelDivinityUses",
+          "getPaladinCoreFeatures",
+          "getPaladinPreparedSpellLimit",
+          "getPaladinSubclassFeatureLevels",
+          "getPaladinSubclassLevel",
+          "getPaladinWeaponMasteryCount",
+          "isPaladin"
+        ],
+        "lineCount": 15
+      },
+      {
+        "file": "src/core/rulesets/rangerBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "RangerCertificationRow",
+          "certifyRangerBuilder",
+          "summarizeRangerCertification"
+        ],
+        "lineCount": 8
+      },
+      {
+        "file": "src/core/rulesets/rogueBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "RogueCertificationRow",
+          "certifyRogueBuilder",
+          "summarizeRogueCertification"
+        ],
+        "lineCount": 8
+      },
+      {
+        "file": "src/core/rulesets/sorcererBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "SorcererCertificationRow",
+          "certifySorcererBuilder",
+          "summarizeSorcererCertification"
+        ],
+        "lineCount": 128
+      },
+      {
+        "file": "src/core/rulesets/warlockBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "WarlockCertificationRow",
+          "certifyWarlockBuilder",
+          "summarizeWarlockCertification"
+        ],
+        "lineCount": 71
+      },
+      {
+        "file": "src/core/rulesets/wizardBuilderCertification.ts",
+        "score": 6,
+        "signals": [
+          "classId",
+          "subclassId",
+          "classLevel",
+          "subclass",
+          "featureLevel",
+          "ki"
+        ],
+        "exports": [
+          "WizardCertificationRow",
+          "certifyWizardBuilder",
+          "summarizeWizardCertification"
+        ],
+        "lineCount": 57
+      },
+      {
+        "file": "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+        "score": 5,
+        "signals": [
+          "classId",
+          "shortRest",
+          "longRest",
+          "rage",
+          "focus points"
+        ],
+        "exports": [],
+        "lineCount": 254
+      },
+      {
+        "file": "src/core/character/character.types.ts",
+        "score": 5,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "bonus-action",
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "AbilityKey",
+          "AbilityScores",
+          "ArmorClassMode",
+          "Character",
+          "CharacterClassLevel",
+          "CharacterCondition",
+          "CharacterConditionDurations",
+          "CharacterDeathSaves",
+          "CharacterDraft",
+          "CharacterHitDiePool",
+          "CharacterInventoryItem",
+          "CharacterResource",
+          "CharacterSpellEffect",
+          "CharacterSpellSlot",
+          "ResourceRecovery",
+          "RulesetId"
+        ],
+        "lineCount": 223
+      },
+      {
+        "file": "src/core/homebrew/homebrewCreator.ts",
+        "score": 5,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "resourceId",
+          "ki"
+        ],
+        "exports": [
+          "DEFAULT_HOMEBREW_CREATOR_DRAFT",
+          "HomebrewCreatorDraft",
+          "createEntityFromDraft",
+          "createPackageFromDraft",
+          "slugifyHomebrewId"
+        ],
+        "lineCount": 160
+      },
+      {
+        "file": "src/core/homebrew/homebrewRuntimeIntegration.test.ts",
+        "score": 5,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "resourceId",
+          "ki"
+        ],
+        "exports": [],
+        "lineCount": 19
+      },
+      {
+        "file": "src/core/rulesets/characterSheetRules.ts",
+        "score": 5,
+        "signals": [
+          "subclass",
+          "proficiencyBonus",
+          "rage",
+          "ki",
+          "wild shape"
+        ],
+        "exports": [
+          "SKILL_ABILITIES",
+          "getCharacterFeatures",
+          "getPassiveScore",
+          "getSavingThrowBonus",
+          "getSkillBonus"
+        ],
+        "lineCount": 44
+      }
+    ],
+    "ui": [
+      {
+        "file": "src/features/play-mode/PlayMode.tsx",
+        "score": 16,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "shortRest",
+          "longRest",
+          "resourceId",
+          "bonus-action",
+          "reaction",
+          "channel divinity",
+          "rage",
+          "ki",
+          "action surge",
+          "second wind",
+          "sneak attack",
+          "wild shape",
+          "bardic inspiration"
+        ],
+        "exports": [
+          "PlayMode"
+        ],
+        "lineCount": 937
+      },
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "score": 8,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "longRest",
+          "resourceId",
+          "reaction",
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "CharacterDetail"
+        ],
+        "lineCount": 1443
+      },
+      {
+        "file": "src/features/builder/Builder.tsx",
+        "score": 5,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "ki",
+          "wild shape"
+        ],
+        "exports": [
+          "Builder"
+        ],
+        "lineCount": 1474
+      },
+      {
+        "file": "src/features/characters/LevelUpAssistant.tsx",
+        "score": 5,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "LevelUpAssistant"
+        ],
+        "lineCount": 322
+      },
+      {
+        "file": "src/features/homebrew/HomebrewPackageCreator.tsx",
+        "score": 5,
+        "signals": [
+          "subclass",
+          "bonus-action",
+          "reaction",
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "HomebrewPackageCreator"
+        ],
+        "lineCount": 369
+      },
+      {
+        "file": "src/features/rulesets/RulesetCenterPage.tsx",
+        "score": 5,
+        "signals": [
+          "classId",
+          "classLevel",
+          "subclass",
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "RulesetCenterPage"
+        ],
+        "lineCount": 143
+      },
+      {
+        "file": "src/features/characters/CharacterEditor.tsx",
+        "score": 4,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "ki"
+        ],
+        "exports": [
+          "CharacterEditor"
+        ],
+        "lineCount": 434
+      },
+      {
+        "file": "src/features/characters/characterShared.tsx",
+        "score": 4,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "ki"
+        ],
+        "exports": [
+          "CharacterInventoryManager",
+          "CharacterSpellSelector",
+          "ClassBasedSpellSelector",
+          "FULL_CASTER_CLASSES",
+          "FULL_CASTER_SLOT_TABLE",
+          "calculateEffectiveArmorClass",
+          "calculateSuggestedArmorClass",
+          "createCharacterFromDraft",
+          "emptyDraft",
+          "getCharacterInventoryItems",
+          "getDefaultSpellSlots",
+          "getEquippedItems",
+          "getHitDieForClass",
+          "getInventoryQuantity",
+          "getInventoryWeight",
+          "getItemCategoryLabel",
+          "getItemRulesSummary",
+          "getSpellGroupTitle",
+          "getSpellLevelGroups",
+          "getSpellLevelLabel",
+          "getWeaponAbilityModifier",
+          "getWeaponAttackBonus",
+          "getWeaponDamageSummary",
+          "isSpellReadyToCast",
+          "normalizeCharacterDraft",
+          "normalizeHitDice",
+          "normalizeSpellSlots",
+          "resetDeathSaves",
+          "resetHitDice",
+          "resetSpellSlots",
+          "setInventoryItemQuantity",
+          "sortSpellsByLevelAndName"
+        ],
+        "lineCount": 1244
+      },
+      {
+        "file": "src/features/classes/ClassCatalogPage.tsx",
+        "score": 4,
+        "signals": [
+          "classLevel",
+          "subclass",
+          "proficiencyBonus",
+          "ki"
+        ],
+        "exports": [
+          "ClassCatalogPage"
+        ],
+        "lineCount": 31
+      },
+      {
+        "file": "src/components/rest/RestActionsPanel.tsx",
+        "score": 3,
+        "signals": [
+          "shortRest",
+          "longRest",
+          "ki"
+        ],
+        "exports": [
+          "RestActionsPanel",
+          "RestActionsPanelProps"
+        ],
+        "lineCount": 111
+      },
+      {
+        "file": "src/features/campaigns/Campaigns.tsx",
+        "score": 3,
+        "signals": [
+          "proficiencyBonus",
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "Campaigns"
+        ],
+        "lineCount": 1433
+      },
+      {
+        "file": "src/features/characters/CharacterCompare.tsx",
+        "score": 3,
+        "signals": [
+          "subclass",
+          "proficiencyBonus",
+          "ki"
+        ],
+        "exports": [
+          "CharacterCompare"
+        ],
+        "lineCount": 217
+      },
+      {
+        "file": "src/features/characters/Characters.tsx",
+        "score": 3,
+        "signals": [
+          "subclass",
+          "proficiencyBonus",
+          "ki"
+        ],
+        "exports": [
+          "Characters"
+        ],
+        "lineCount": 329
+      },
+      {
+        "file": "src/features/combat-tracker/CombatTurnAutomationPanel.tsx",
+        "score": 3,
+        "signals": [
+          "bonus-action",
+          "reaction",
+          "rage"
+        ],
+        "exports": [
+          "CombatTurnAutomationPanel"
+        ],
+        "lineCount": 43
+      },
+      {
+        "file": "src/features/homebrew/HomebrewLab.tsx",
+        "score": 3,
+        "signals": [
+          "proficiencyBonus",
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "HomebrewLab"
+        ],
+        "lineCount": 1733
+      },
+      {
+        "file": "src/features/rest/RestCenterPage.tsx",
+        "score": 3,
+        "signals": [
+          "shortRest",
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "RestCenterPage"
+        ],
+        "lineCount": 86
+      },
+      {
+        "file": "src/features/backup/DataBackup.tsx",
+        "score": 2,
+        "signals": [
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "DataBackup"
+        ],
+        "lineCount": 375
+      },
+      {
+        "file": "src/features/combat-tracker/CombatTrackerPage.tsx",
+        "score": 2,
+        "signals": [
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "CombatTrackerPage"
+        ],
+        "lineCount": 379
+      },
+      {
+        "file": "src/features/dashboard/Dashboard.tsx",
+        "score": 2,
+        "signals": [
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "Dashboard"
+        ],
+        "lineCount": 296
+      },
+      {
+        "file": "src/features/downtime/CampaignCalendarPage.tsx",
+        "score": 2,
+        "signals": [
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "CampaignCalendarPage"
+        ],
+        "lineCount": 171
+      },
+      {
+        "file": "src/features/factions/FactionsPage.tsx",
+        "score": 2,
+        "signals": [
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "FactionsPage"
+        ],
+        "lineCount": 112
+      },
+      {
+        "file": "src/features/help/HelpCenter.tsx",
+        "score": 2,
+        "signals": [
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "HelpCenter"
+        ],
+        "lineCount": 324
+      },
+      {
+        "file": "src/features/legacy/LegacyApp.tsx",
+        "score": 2,
+        "signals": [
+          "rage",
+          "ki"
+        ],
+        "exports": [],
+        "lineCount": 418
+      },
+      {
+        "file": "src/features/locations/WorldAtlasPage.tsx",
+        "score": 2,
+        "signals": [
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "WorldAtlasPage"
+        ],
+        "lineCount": 88
+      },
+      {
+        "file": "src/features/loot/LootTrackerPage.tsx",
+        "score": 2,
+        "signals": [
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "LootTrackerPage"
+        ],
+        "lineCount": 37
+      },
+      {
+        "file": "src/features/monsters/MonsterLibrary.tsx",
+        "score": 2,
+        "signals": [
+          "proficiencyBonus",
+          "ki"
+        ],
+        "exports": [
+          "MonsterDetail",
+          "MonsterLibrary"
+        ],
+        "lineCount": 1023
+      },
+      {
+        "file": "src/features/npc-manager/NpcManagerPage.tsx",
+        "score": 2,
+        "signals": [
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "NpcManagerPage"
+        ],
+        "lineCount": 76
+      },
+      {
+        "file": "src/features/player-test/PlayerTestCenter.tsx",
+        "score": 2,
+        "signals": [
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "PlayerTestCenter"
+        ],
+        "lineCount": 48
+      },
+      {
+        "file": "src/features/quests/QuestJournalPage.tsx",
+        "score": 2,
+        "signals": [
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "QuestJournalPage"
+        ],
+        "lineCount": 71
+      },
+      {
+        "file": "src/features/session-planner/SessionPlannerPage.tsx",
+        "score": 2,
+        "signals": [
+          "rage",
+          "ki"
+        ],
+        "exports": [
+          "SessionPlannerPage"
+        ],
+        "lineCount": 160
+      }
+    ]
+  },
+  "status": "READY"
+}

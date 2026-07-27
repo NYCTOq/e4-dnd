@@ -1,0 +1,27 @@
+{
+  "package": "v5.111D3",
+  "domain": "rest-recovery-resource",
+  "status": "GREEN",
+  "generatedAt": "2026-07-25T12:48:37.882Z",
+  "certified": {
+    "core": 613,
+    "e2e": 2,
+    "total": 615
+  },
+  "requiredFiles": [
+    "src/core/rulesets/restRecoveryRules.ts",
+    "src/core/rulesets/restRecoveryCharacterAdapter.ts",
+    "src/core/rulesets/restRecoveryPersistenceBridge.ts",
+    "src/components/rest/RestActionsPanel.tsx",
+    "src/components/rest/RestRuntimeIntegrationMount.tsx",
+    "e2e/rest-recovery-ui-v5.111D3.spec.ts",
+    "dist/index.html",
+    "dist/manifest.webmanifest",
+    "dist/sw.js",
+    "certification-reports/rest-recovery-runtime-v5.111B.json",
+    "certification-reports/rest-recovery-golden-character-integration-v5.111C.json",
+    "certification-reports/rest-ui-integration-contract-v5.111D1.json",
+    "certification-reports/rest-ui-component-persistence-v5.111D2.json"
+  ],
+  "missingFiles": []
+}

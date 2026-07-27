@@ -1,0 +1,6947 @@
+{
+  "package": "v5.113D1",
+  "domain": "spell-ui-integration",
+  "generatedAt": "2026-07-27T09:22:17.727Z",
+  "scannedFiles": 596,
+  "matchedFiles": 401,
+  "requiredRuntimeFiles": [
+    "src/core/rulesets/spellRuntimeCombatRules.ts",
+    "src/core/rulesets/spellCharacterCombatAdapter.ts"
+  ],
+  "missingRequired": [],
+  "candidates": {
+    "spellbook": [
+      {
+        "file": "src/features/play-mode/PlayMode.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 1
+            },
+            {
+              "signal": "spellSlots",
+              "count": 45
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 1
+            },
+            {
+              "signal": "castSpell",
+              "count": 5
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 7
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 4
+            },
+            {
+              "signal": "concentration",
+              "count": 46
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 45
+            },
+            {
+              "signal": "maxHp",
+              "count": 28
+            },
+            {
+              "signal": "damage",
+              "count": 157
+            },
+            {
+              "signal": "healing",
+              "count": 25
+            },
+            {
+              "signal": "target",
+              "count": 84
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 13
+            },
+            {
+              "signal": "updateCharacter",
+              "count": 4
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/rest"
+        ],
+        "exports": [
+          "PlayMode"
+        ],
+        "lineCount": 937
+      },
+      {
+        "file": "src/features/builder/Builder.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 1
+            },
+            {
+              "signal": "preparedSpells",
+              "count": 22
+            },
+            {
+              "signal": "knownSpells",
+              "count": 4
+            },
+            {
+              "signal": "spellSlots",
+              "count": 4
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "castSpell",
+              "count": 3
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 2
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 1
+            },
+            {
+              "signal": "maxHp",
+              "count": 4
+            },
+            {
+              "signal": "damage",
+              "count": 3
+            },
+            {
+              "signal": "healing",
+              "count": 1
+            },
+            {
+              "signal": "target",
+              "count": 37
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 4
+            }
+          ],
+          "testing": [
+            {
+              "signal": "data-testid",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [
+          "builder-character-name",
+          "builder-review",
+          "builder-save"
+        ],
+        "routes": [],
+        "exports": [
+          "Builder"
+        ],
+        "lineCount": 1474
+      },
+      {
+        "file": "src/core/rulesets/spellCharacterCombatAdapter.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 21
+            },
+            {
+              "signal": "pactSlots",
+              "count": 7
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "castSpell",
+              "count": 1
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 7
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 7
+            },
+            {
+              "signal": "concentration",
+              "count": 8
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 9
+            },
+            {
+              "signal": "maxHp",
+              "count": 8
+            },
+            {
+              "signal": "damage",
+              "count": 9
+            },
+            {
+              "signal": "healing",
+              "count": 6
+            },
+            {
+              "signal": "target",
+              "count": 6
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CharacterSpellEntry",
+          "SpellAbilityKey",
+          "SpellCompatibleCharacter",
+          "SpellRuntimeSnapshot",
+          "SpellSlotState",
+          "applyConcentrationDamage",
+          "applyDamageToSpellTarget",
+          "applyHealingToSpellTarget",
+          "buildSpellRuntimeSnapshot",
+          "canCharacterCastSpell",
+          "deserializeSpellCompatibleCharacter",
+          "normalizeSpellSlots",
+          "resolveSpellAbilityScore",
+          "resolveSpellcastingAbility",
+          "restoreCharacterSpellSlot",
+          "serializeSpellCompatibleCharacter",
+          "setCharacterConcentration",
+          "spendCharacterSpellSlot"
+        ],
+        "lineCount": 315
+      },
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 2
+            },
+            {
+              "signal": "spellSlots",
+              "count": 20
+            },
+            {
+              "signal": "pactSlots",
+              "count": 1
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "castSpell",
+              "count": 6
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 3
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 4
+            },
+            {
+              "signal": "concentration",
+              "count": 8
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 8
+            },
+            {
+              "signal": "maxHp",
+              "count": 6
+            },
+            {
+              "signal": "damage",
+              "count": 84
+            },
+            {
+              "signal": "healing",
+              "count": 31
+            },
+            {
+              "signal": "target",
+              "count": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 27
+            },
+            {
+              "signal": "updateCharacter",
+              "count": 20
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 11
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters",
+          "/rest"
+        ],
+        "exports": [
+          "CharacterDetail"
+        ],
+        "lineCount": 1443
+      },
+      {
+        "file": "src/core/rulesets/levelOneRestReadiness.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 7
+            },
+            {
+              "signal": "pactSlots",
+              "count": 13
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "LevelOneRestReadiness",
+          "getLevelOneRestReadiness"
+        ],
+        "lineCount": 143
+      },
+      {
+        "file": "src/features/characters/characterShared.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "preparedSpells",
+              "count": 2
+            },
+            {
+              "signal": "spellSlots",
+              "count": 16
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 2
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 3
+            },
+            {
+              "signal": "maxHp",
+              "count": 5
+            },
+            {
+              "signal": "damage",
+              "count": 9
+            },
+            {
+              "signal": "healing",
+              "count": 1
+            },
+            {
+              "signal": "target",
+              "count": 7
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CharacterInventoryManager",
+          "CharacterSpellSelector",
+          "ClassBasedSpellSelector",
+          "FULL_CASTER_CLASSES",
+          "FULL_CASTER_SLOT_TABLE",
+          "calculateEffectiveArmorClass",
+          "calculateSuggestedArmorClass",
+          "createCharacterFromDraft",
+          "emptyDraft",
+          "getCharacterInventoryItems",
+          "getDefaultSpellSlots",
+          "getEquippedItems",
+          "getHitDieForClass",
+          "getInventoryQuantity",
+          "getInventoryWeight",
+          "getItemCategoryLabel",
+          "getItemRulesSummary",
+          "getSpellGroupTitle",
+          "getSpellLevelGroups",
+          "getSpellLevelLabel",
+          "getWeaponAbilityModifier",
+          "getWeaponAttackBonus",
+          "getWeaponDamageSummary",
+          "isSpellReadyToCast",
+          "normalizeCharacterDraft",
+          "normalizeHitDice",
+          "normalizeSpellSlots",
+          "resetDeathSaves",
+          "resetHitDice",
+          "resetSpellSlots",
+          "setInventoryItemQuantity",
+          "sortSpellsByLevelAndName"
+        ],
+        "lineCount": 1244
+      },
+      {
+        "file": "src/core/rulesets/restRecoveryRules.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 14
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "activeEffects",
+              "count": 6
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 12
+            },
+            {
+              "signal": "maxHp",
+              "count": 7
+            },
+            {
+              "signal": "healing",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "ActiveEffect",
+          "HitDiePool",
+          "ResourcePool",
+          "RestKind",
+          "RestRecoveryState",
+          "RestRulesetId",
+          "RestState",
+          "SpellSlotPool",
+          "applyLongRest",
+          "applyRest",
+          "applyShortRest",
+          "normalizeRestState",
+          "recoverHitDice",
+          "recoverResources",
+          "recoverSpellSlots",
+          "spendHitDie",
+          "spendResource",
+          "spendSpellSlot",
+          "usedHitDice",
+          "usedSpellSlots"
+        ],
+        "lineCount": 47
+      },
+      {
+        "file": "src/features/spellbook/Spellbook.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 14
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 2
+            },
+            {
+              "signal": "healing",
+              "count": 1
+            },
+            {
+              "signal": "target",
+              "count": 7
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "Spellbook"
+        ],
+        "lineCount": 262
+      },
+      {
+        "file": "src/certification/golden/spellRuntimeGoldenCasters.test.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 8
+            },
+            {
+              "signal": "pactSlots",
+              "count": 3
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "castSpell",
+              "count": 5
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 1
+            },
+            {
+              "signal": "concentration",
+              "count": 16
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 8
+            },
+            {
+              "signal": "maxHp",
+              "count": 6
+            },
+            {
+              "signal": "damage",
+              "count": 8
+            },
+            {
+              "signal": "healing",
+              "count": 4
+            },
+            {
+              "signal": "target",
+              "count": 6
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 7
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 232
+      },
+      {
+        "file": "src/core/rulesets/playerJourneyIntegration.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 7
+            },
+            {
+              "signal": "pactSlots",
+              "count": 4
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 2
+            },
+            {
+              "signal": "maxHp",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "PlayerJourneyIntegrationSnapshot",
+          "getPlayerJourneyIntegrationSnapshot"
+        ],
+        "lineCount": 46
+      },
+      {
+        "file": "src/features/characters/levelUpCalculator.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 10
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 2
+            },
+            {
+              "signal": "maxHp",
+              "count": 5
+            },
+            {
+              "signal": "target",
+              "count": 18
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "LevelUpAsiMode",
+          "LevelUpOptions",
+          "applyAbilityIncrease",
+          "buildLeveledCharacter",
+          "getAverageHpGain",
+          "isAsiMilestone"
+        ],
+        "lineCount": 104
+      },
+      {
+        "file": "src/features/characters/characterEditorRules.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "preparedSpells",
+              "count": 2
+            },
+            {
+              "signal": "spellSlots",
+              "count": 7
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 4
+            },
+            {
+              "signal": "maxHp",
+              "count": 3
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "buildEditedCharacter",
+          "characterToEditDraft"
+        ],
+        "lineCount": 54
+      },
+      {
+        "file": "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 8
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 2
+            },
+            {
+              "signal": "activeEffects",
+              "count": 5
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 10
+            },
+            {
+              "signal": "maxHp",
+              "count": 8
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 16
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 254
+      },
+      {
+        "file": "src/certification/oracle/restRecoveryOracle.test.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 8
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "activeEffects",
+              "count": 3
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 7
+            },
+            {
+              "signal": "maxHp",
+              "count": 1
+            },
+            {
+              "signal": "healing",
+              "count": 2
+            },
+            {
+              "signal": "target",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 178
+      },
+      {
+        "file": "src/certification/reference/restRecovery.reference.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 8
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "activeEffects",
+              "count": 5
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 4
+            },
+            {
+              "signal": "maxHp",
+              "count": 3
+            },
+            {
+              "signal": "healing",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "HitDiePool",
+          "ResourcePool",
+          "RestState",
+          "RulesetId",
+          "SpellSlotPool",
+          "abilityModifier",
+          "applyLongRest",
+          "applyShortRest",
+          "proficiencyBonus",
+          "recoverHitDice",
+          "recoverResources",
+          "recoverSpellSlots",
+          "spendHitDie",
+          "spendResource",
+          "spendSpellSlot"
+        ],
+        "lineCount": 192
+      },
+      {
+        "file": "src/core/rulesets/subclassExpansion.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 8
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 2
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 3
+            },
+            {
+              "signal": "healing",
+              "count": 12
+            },
+            {
+              "signal": "target",
+              "count": 1
+            },
+            {
+              "signal": "combatant",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "SUBCLASS_EXPANSION_2014",
+          "SUBCLASS_EXPANSION_2024"
+        ],
+        "lineCount": 137
+      },
+      {
+        "file": "src/features/rest/restAutomation.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 8
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 4
+            },
+            {
+              "signal": "maxHp",
+              "count": 2
+            },
+            {
+              "signal": "healing",
+              "count": 3
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 2
+            },
+            {
+              "signal": "characters",
+              "count": 6
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "RestHistoryEntry",
+          "RestKind",
+          "RestOptions",
+          "RestSummary",
+          "applyRestToCharacter",
+          "applyRestToCharacters",
+          "getDefaultRestOptions",
+          "loadRestHistory",
+          "restoreRestSnapshot",
+          "saveRestHistory"
+        ],
+        "lineCount": 70
+      },
+      {
+        "file": "src/certification/oracle/spellcastingOracle.test.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 7
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "spellSaveDc",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 42
+      },
+      {
+        "file": "src/core/rulesets/wizardBuilderCertification.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 4
+            },
+            {
+              "signal": "preparedSpells",
+              "count": 2
+            },
+            {
+              "signal": "spellSlots",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "WizardCertificationRow",
+          "certifyWizardBuilder",
+          "summarizeWizardCertification"
+        ],
+        "lineCount": 57
+      },
+      {
+        "file": "src/core/storage/characterStorage.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 7
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 2
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 3
+            }
+          ],
+          "storage": [
+            {
+              "signal": "safeStorage",
+              "count": 1
+            },
+            {
+              "signal": "characters",
+              "count": 13
+            },
+            {
+              "signal": "saveCharacter",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "exportCharacters",
+          "hydrateCharacterRecord",
+          "loadCharacters",
+          "saveCharacters"
+        ],
+        "lineCount": 275
+      }
+    ],
+    "playMode": [
+      {
+        "file": "src/core/rulesets/spellExpansion.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 137
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 190
+            },
+            {
+              "signal": "healing",
+              "count": 22
+            },
+            {
+              "signal": "target",
+              "count": 27
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "SPELL_EXPANSION_2014",
+          "SPELL_EXPANSION_2024"
+        ],
+        "lineCount": 304
+      },
+      {
+        "file": "src/features/play-mode/PlayMode.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 1
+            },
+            {
+              "signal": "spellSlots",
+              "count": 45
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 1
+            },
+            {
+              "signal": "castSpell",
+              "count": 5
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 7
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 4
+            },
+            {
+              "signal": "concentration",
+              "count": 46
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 45
+            },
+            {
+              "signal": "maxHp",
+              "count": 28
+            },
+            {
+              "signal": "damage",
+              "count": 157
+            },
+            {
+              "signal": "healing",
+              "count": 25
+            },
+            {
+              "signal": "target",
+              "count": 84
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 13
+            },
+            {
+              "signal": "updateCharacter",
+              "count": 4
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/rest"
+        ],
+        "exports": [
+          "PlayMode"
+        ],
+        "lineCount": 937
+      },
+      {
+        "file": "src/core/character/sheetPlayModeConsistency.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 5
+            },
+            {
+              "signal": "concentration",
+              "count": 10
+            },
+            {
+              "signal": "activeEffects",
+              "count": 4
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 1
+            },
+            {
+              "signal": "maxHp",
+              "count": 1
+            },
+            {
+              "signal": "damage",
+              "count": 14
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "WeaponConsistencyRow",
+          "compareSheetAndPlayMode",
+          "getSheetPlayModeConsistencySnapshot",
+          "getWeaponConsistencyRows"
+        ],
+        "lineCount": 82
+      },
+      {
+        "file": "src/core/character/sheetPlayModeConsistency.test.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 8
+            },
+            {
+              "signal": "concentration",
+              "count": 5
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 8
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 14
+      },
+      {
+        "file": "src/core/rulesets/spellCharacterCombatAdapter.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 21
+            },
+            {
+              "signal": "pactSlots",
+              "count": 7
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "castSpell",
+              "count": 1
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 7
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 7
+            },
+            {
+              "signal": "concentration",
+              "count": 8
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 9
+            },
+            {
+              "signal": "maxHp",
+              "count": 8
+            },
+            {
+              "signal": "damage",
+              "count": 9
+            },
+            {
+              "signal": "healing",
+              "count": 6
+            },
+            {
+              "signal": "target",
+              "count": 6
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CharacterSpellEntry",
+          "SpellAbilityKey",
+          "SpellCompatibleCharacter",
+          "SpellRuntimeSnapshot",
+          "SpellSlotState",
+          "applyConcentrationDamage",
+          "applyDamageToSpellTarget",
+          "applyHealingToSpellTarget",
+          "buildSpellRuntimeSnapshot",
+          "canCharacterCastSpell",
+          "deserializeSpellCompatibleCharacter",
+          "normalizeSpellSlots",
+          "resolveSpellAbilityScore",
+          "resolveSpellcastingAbility",
+          "restoreCharacterSpellSlot",
+          "serializeSpellCompatibleCharacter",
+          "setCharacterConcentration",
+          "spendCharacterSpellSlot"
+        ],
+        "lineCount": 315
+      },
+      {
+        "file": "src/certification/golden/spellRuntimeGoldenCasters.test.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 8
+            },
+            {
+              "signal": "pactSlots",
+              "count": 3
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "castSpell",
+              "count": 5
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 1
+            },
+            {
+              "signal": "concentration",
+              "count": 16
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 8
+            },
+            {
+              "signal": "maxHp",
+              "count": 6
+            },
+            {
+              "signal": "damage",
+              "count": 8
+            },
+            {
+              "signal": "healing",
+              "count": 4
+            },
+            {
+              "signal": "target",
+              "count": 6
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 7
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 232
+      },
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 2
+            },
+            {
+              "signal": "spellSlots",
+              "count": 20
+            },
+            {
+              "signal": "pactSlots",
+              "count": 1
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "castSpell",
+              "count": 6
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 3
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 4
+            },
+            {
+              "signal": "concentration",
+              "count": 8
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 8
+            },
+            {
+              "signal": "maxHp",
+              "count": 6
+            },
+            {
+              "signal": "damage",
+              "count": 84
+            },
+            {
+              "signal": "healing",
+              "count": 31
+            },
+            {
+              "signal": "target",
+              "count": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 27
+            },
+            {
+              "signal": "updateCharacter",
+              "count": 20
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 11
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters",
+          "/rest"
+        ],
+        "exports": [
+          "CharacterDetail"
+        ],
+        "lineCount": 1443
+      },
+      {
+        "file": "src/components/spells/SpellCastingRuntimePanel.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 2
+            },
+            {
+              "signal": "pactSlots",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "spellSaveDc",
+              "count": 1
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 2
+            },
+            {
+              "signal": "concentration",
+              "count": 16
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "target",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 4
+            }
+          ],
+          "testing": [
+            {
+              "signal": "data-testid",
+              "count": 12
+            }
+          ]
+        },
+        "testIds": [
+          "spell-casting-runtime-panel",
+          "spell-concentration-input",
+          "spell-concentration-start",
+          "spell-concentration-stop",
+          "spell-runtime-attack-bonus",
+          "spell-runtime-cantrip-dice",
+          "spell-runtime-concentration-state",
+          "spell-runtime-save-dc"
+        ],
+        "routes": [],
+        "exports": [
+          "SpellCastingRuntimePanel",
+          "SpellCastingRuntimePanelProps"
+        ],
+        "lineCount": 77
+      },
+      {
+        "file": "src/features/spellbook/Spellbook.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 14
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 2
+            },
+            {
+              "signal": "healing",
+              "count": 1
+            },
+            {
+              "signal": "target",
+              "count": 7
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "Spellbook"
+        ],
+        "lineCount": 262
+      },
+      {
+        "file": "src/shared/release/releaseNotes.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 14
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 41
+            },
+            {
+              "signal": "healing",
+              "count": 13
+            },
+            {
+              "signal": "target",
+              "count": 6
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 3
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 6
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "RELEASE_CATEGORIES",
+          "RELEASE_NOTES",
+          "ReleaseCategory",
+          "ReleaseChange",
+          "ReleaseEntry",
+          "getCurrentRelease"
+        ],
+        "lineCount": 1057
+      },
+      {
+        "file": "src/certification/differential/spellRuntimeCombatDifferential.test.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "spellSaveDc",
+              "count": 4
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 4
+            },
+            {
+              "signal": "concentration",
+              "count": 5
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 24
+            },
+            {
+              "signal": "healing",
+              "count": 8
+            },
+            {
+              "signal": "target",
+              "count": 5
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 218
+      },
+      {
+        "file": "src/core/rulesets/globalSpellRuntime.test.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 10
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 1
+            },
+            {
+              "signal": "damage",
+              "count": 4
+            },
+            {
+              "signal": "healing",
+              "count": 3
+            },
+            {
+              "signal": "target",
+              "count": 7
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 49
+      },
+      {
+        "file": "src/core/rulesets/combatAutomationRuntime.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 9
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 4
+            },
+            {
+              "signal": "combatant",
+              "count": 84
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CombatAutomationState",
+          "DeathSaveState",
+          "beginAutomatedTurn",
+          "createCombatAutomationState",
+          "createDeathSaveState",
+          "ensureCombatantAutomation",
+          "registerConcentrationDamage",
+          "resetDeathSaves",
+          "resolveDeathSave",
+          "spendAutomatedMovement",
+          "spendAutomatedResource"
+        ],
+        "lineCount": 157
+      },
+      {
+        "file": "src/core/rulesets/restRecoveryCharacterAdapter.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 5
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 4
+            },
+            {
+              "signal": "activeEffects",
+              "count": 5
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 5
+            },
+            {
+              "signal": "maxHp",
+              "count": 7
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CharacterRestResult",
+          "RestCompatibleCharacter",
+          "characterToRestState",
+          "deserializeRestCompatibleCharacter",
+          "performCharacterLongRest",
+          "performCharacterShortRest",
+          "resolveCharacterRuleset",
+          "restStateToCharacter",
+          "serializeRestCompatibleCharacter"
+        ],
+        "lineCount": 153
+      },
+      {
+        "file": "src/features/homebrew/HomebrewLab.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 9
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 64
+            },
+            {
+              "signal": "healing",
+              "count": 16
+            },
+            {
+              "signal": "target",
+              "count": 54
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "HomebrewLab"
+        ],
+        "lineCount": 1733
+      },
+      {
+        "file": "src/core/rulesets/spellDefenseMovementOfficial.test.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "castSpell",
+              "count": 5
+            },
+            {
+              "signal": "concentration",
+              "count": 3
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 4
+            },
+            {
+              "signal": "target",
+              "count": 3
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 78
+      },
+      {
+        "file": "src/core/rulesets/spellEffectRules.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "castSpell",
+              "count": 2
+            },
+            {
+              "signal": "concentration",
+              "count": 6
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 10
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 6
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "addSpellEffect",
+          "advanceSpellEffects",
+          "createSpellEffect",
+          "getSpellDurationRounds",
+          "removeEffectsBrokenByDamage"
+        ],
+        "lineCount": 47
+      },
+      {
+        "file": "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 8
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 2
+            },
+            {
+              "signal": "activeEffects",
+              "count": 5
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 10
+            },
+            {
+              "signal": "maxHp",
+              "count": 8
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 16
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 254
+      },
+      {
+        "file": "src/certification/matrix/spellRuntimeCombatScenarioMatrix.test.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "spellSaveDc",
+              "count": 2
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 2
+            },
+            {
+              "signal": "concentration",
+              "count": 3
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 3
+            },
+            {
+              "signal": "maxHp",
+              "count": 4
+            },
+            {
+              "signal": "damage",
+              "count": 11
+            },
+            {
+              "signal": "healing",
+              "count": 6
+            },
+            {
+              "signal": "target",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 132
+      },
+      {
+        "file": "src/certification/oracle/spellRuntimeCombatOracle.test.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "spellSaveDc",
+              "count": 2
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 2
+            },
+            {
+              "signal": "concentration",
+              "count": 3
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 16
+            },
+            {
+              "signal": "healing",
+              "count": 5
+            },
+            {
+              "signal": "target",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 151
+      }
+    ],
+    "combatTracker": [
+      {
+        "file": "src/features/play-mode/PlayMode.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 1
+            },
+            {
+              "signal": "spellSlots",
+              "count": 45
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 1
+            },
+            {
+              "signal": "castSpell",
+              "count": 5
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 7
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 4
+            },
+            {
+              "signal": "concentration",
+              "count": 46
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 45
+            },
+            {
+              "signal": "maxHp",
+              "count": 28
+            },
+            {
+              "signal": "damage",
+              "count": 157
+            },
+            {
+              "signal": "healing",
+              "count": 25
+            },
+            {
+              "signal": "target",
+              "count": 84
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 13
+            },
+            {
+              "signal": "updateCharacter",
+              "count": 4
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/rest"
+        ],
+        "exports": [
+          "PlayMode"
+        ],
+        "lineCount": 937
+      },
+      {
+        "file": "src/core/rulesets/spellExpansion.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 137
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 190
+            },
+            {
+              "signal": "healing",
+              "count": 22
+            },
+            {
+              "signal": "target",
+              "count": 27
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "SPELL_EXPANSION_2014",
+          "SPELL_EXPANSION_2024"
+        ],
+        "lineCount": 304
+      },
+      {
+        "file": "src/features/combat-tracker/CombatTrackerPage.tsx",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 3
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "CombatTracker",
+              "count": 4
+            },
+            {
+              "signal": "currentHp",
+              "count": 7
+            },
+            {
+              "signal": "maxHp",
+              "count": 7
+            },
+            {
+              "signal": "damage",
+              "count": 21
+            },
+            {
+              "signal": "healing",
+              "count": 5
+            },
+            {
+              "signal": "target",
+              "count": 36
+            },
+            {
+              "signal": "combatant",
+              "count": 138
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 5
+            },
+            {
+              "signal": "combatTrackerStorage",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CombatTrackerPage"
+        ],
+        "lineCount": 379
+      },
+      {
+        "file": "src/features/combat-tracker/combatTrackerStorage.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 1
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 17
+            },
+            {
+              "signal": "maxHp",
+              "count": 20
+            },
+            {
+              "signal": "damage",
+              "count": 8
+            },
+            {
+              "signal": "healing",
+              "count": 3
+            },
+            {
+              "signal": "combatant",
+              "count": 121
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 6
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "BATTLEFIELD_ZONE_KINDS",
+          "BATTLEFIELD_ZONE_SHAPES",
+          "BattlefieldZone",
+          "BattlefieldZoneKind",
+          "BattlefieldZoneShape",
+          "COMBAT_CONDITIONS",
+          "CombatCondition",
+          "CombatEffect",
+          "CombatEncounter",
+          "CombatLogEntry",
+          "CombatLogKind",
+          "CombatTemplate",
+          "CombatTemplateCombatant",
+          "Combatant",
+          "CombatantKind",
+          "addCombatLog",
+          "advanceTurn",
+          "applyDamage",
+          "applyHealing",
+          "createBattlefieldZone",
+          "createCombatEffect",
+          "createCombatEncounter",
+          "createCombatLogEntry",
+          "createCombatTemplate",
+          "createCombatant",
+          "createEncounterFromCampaignEncounter",
+          "createEncounterFromTemplate",
+          "getActiveConditions",
+          "getCombatSummary",
+          "loadCombatEncounters",
+          "loadCombatTemplates",
+          "sanitizeCombatEncounter",
+          "sanitizeCombatant",
+          "saveCombatEncounters",
+          "saveCombatTemplates",
+          "sortCombatants",
+          "tickBattlefieldZones",
+          "tickCombatEffects"
+        ],
+        "lineCount": 366
+      },
+      {
+        "file": "src/features/homebrew/HomebrewLab.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 9
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 64
+            },
+            {
+              "signal": "healing",
+              "count": 16
+            },
+            {
+              "signal": "target",
+              "count": 54
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "HomebrewLab"
+        ],
+        "lineCount": 1733
+      },
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 2
+            },
+            {
+              "signal": "spellSlots",
+              "count": 20
+            },
+            {
+              "signal": "pactSlots",
+              "count": 1
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "castSpell",
+              "count": 6
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 3
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 4
+            },
+            {
+              "signal": "concentration",
+              "count": 8
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 8
+            },
+            {
+              "signal": "maxHp",
+              "count": 6
+            },
+            {
+              "signal": "damage",
+              "count": 84
+            },
+            {
+              "signal": "healing",
+              "count": 31
+            },
+            {
+              "signal": "target",
+              "count": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 27
+            },
+            {
+              "signal": "updateCharacter",
+              "count": 20
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 11
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters",
+          "/rest"
+        ],
+        "exports": [
+          "CharacterDetail"
+        ],
+        "lineCount": 1443
+      },
+      {
+        "file": "src/core/rulesets/itemExpansion.ts",
+        "matches": {
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 108
+            },
+            {
+              "signal": "healing",
+              "count": 10
+            },
+            {
+              "signal": "target",
+              "count": 5
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "ITEM_EXPANSION_2014",
+          "ITEM_EXPANSION_2024"
+        ],
+        "lineCount": 153
+      },
+      {
+        "file": "src/core/rulesets/combatAutomationRuntime.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 9
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 4
+            },
+            {
+              "signal": "combatant",
+              "count": 84
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CombatAutomationState",
+          "DeathSaveState",
+          "beginAutomatedTurn",
+          "createCombatAutomationState",
+          "createDeathSaveState",
+          "ensureCombatantAutomation",
+          "registerConcentrationDamage",
+          "resetDeathSaves",
+          "resolveDeathSave",
+          "spendAutomatedMovement",
+          "spendAutomatedResource"
+        ],
+        "lineCount": 157
+      },
+      {
+        "file": "src/components/spells/SpellRuntimeIntegrationMount.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 1
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 1
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "CombatTracker",
+              "count": 1
+            },
+            {
+              "signal": "currentHp",
+              "count": 1
+            },
+            {
+              "signal": "maxHp",
+              "count": 1
+            },
+            {
+              "signal": "damage",
+              "count": 3
+            },
+            {
+              "signal": "healing",
+              "count": 3
+            },
+            {
+              "signal": "target",
+              "count": 51
+            },
+            {
+              "signal": "combatant",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 6
+            },
+            {
+              "signal": "characters",
+              "count": 4
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 7
+            }
+          ],
+          "testing": [
+            {
+              "signal": "data-testid",
+              "count": 6
+            }
+          ]
+        },
+        "testIds": [
+          "spell-runtime-apply-damage",
+          "spell-runtime-apply-healing",
+          "spell-runtime-integration",
+          "spell-runtime-target-amount",
+          "spell-runtime-target-controls",
+          "spell-runtime-target-select"
+        ],
+        "routes": [],
+        "exports": [
+          "SpellRuntimeIntegrationMount"
+        ],
+        "lineCount": 306
+      },
+      {
+        "file": "src/shared/release/releaseNotes.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 14
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 41
+            },
+            {
+              "signal": "healing",
+              "count": 13
+            },
+            {
+              "signal": "target",
+              "count": 6
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 3
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 6
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "RELEASE_CATEGORIES",
+          "RELEASE_NOTES",
+          "ReleaseCategory",
+          "ReleaseChange",
+          "ReleaseEntry",
+          "getCurrentRelease"
+        ],
+        "lineCount": 1057
+      },
+      {
+        "file": "src/features/builder/Builder.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 1
+            },
+            {
+              "signal": "preparedSpells",
+              "count": 22
+            },
+            {
+              "signal": "knownSpells",
+              "count": 4
+            },
+            {
+              "signal": "spellSlots",
+              "count": 4
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "castSpell",
+              "count": 3
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 2
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 1
+            },
+            {
+              "signal": "maxHp",
+              "count": 4
+            },
+            {
+              "signal": "damage",
+              "count": 3
+            },
+            {
+              "signal": "healing",
+              "count": 1
+            },
+            {
+              "signal": "target",
+              "count": 37
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 4
+            }
+          ],
+          "testing": [
+            {
+              "signal": "data-testid",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [
+          "builder-character-name",
+          "builder-review",
+          "builder-save"
+        ],
+        "routes": [],
+        "exports": [
+          "Builder"
+        ],
+        "lineCount": 1474
+      },
+      {
+        "file": "src/core/rulesets/spellCastingPersistenceBridge.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 5
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "CombatTracker",
+              "count": 1
+            },
+            {
+              "signal": "damage",
+              "count": 5
+            },
+            {
+              "signal": "healing",
+              "count": 4
+            },
+            {
+              "signal": "target",
+              "count": 26
+            },
+            {
+              "signal": "combatant",
+              "count": 10
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 15
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CombatTargetCollection",
+          "SpellCharacterCollection",
+          "discoverCombatStorageKey",
+          "discoverSpellStorageKey",
+          "mutateCasterInCollection",
+          "mutateTargetInCollection",
+          "parseCombatTargetCollection",
+          "parseSpellCharacterCollection",
+          "persistCasterMutation",
+          "persistTargetMutation",
+          "serializeSpellCollection"
+        ],
+        "lineCount": 126
+      },
+      {
+        "file": "src/features/campaigns/EncounterCombatRolls.tsx",
+        "matches": {
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 42
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "EncounterCombatRolls"
+        ],
+        "lineCount": 285
+      },
+      {
+        "file": "src/core/character/survivalRules.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 4
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 11
+            },
+            {
+              "signal": "maxHp",
+              "count": 3
+            },
+            {
+              "signal": "damage",
+              "count": 22
+            },
+            {
+              "signal": "healing",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "DamageResult",
+          "SurvivalState",
+          "applyDamage",
+          "applyHealing",
+          "getConcentrationDc",
+          "resolveDeathSave"
+        ],
+        "lineCount": 68
+      },
+      {
+        "file": "src/features/combat-tracker/combatTrackerStorage.test.ts",
+        "matches": {
+          "combatTracker": [
+            {
+              "signal": "CombatTracker",
+              "count": 1
+            },
+            {
+              "signal": "currentHp",
+              "count": 3
+            },
+            {
+              "signal": "maxHp",
+              "count": 1
+            },
+            {
+              "signal": "damage",
+              "count": 2
+            },
+            {
+              "signal": "healing",
+              "count": 2
+            },
+            {
+              "signal": "combatant",
+              "count": 18
+            }
+          ],
+          "storage": [
+            {
+              "signal": "combatTrackerStorage",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 39
+      },
+      {
+        "file": "src/core/rulesets/spellCharacterCombatAdapter.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 21
+            },
+            {
+              "signal": "pactSlots",
+              "count": 7
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "castSpell",
+              "count": 1
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 7
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 7
+            },
+            {
+              "signal": "concentration",
+              "count": 8
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 9
+            },
+            {
+              "signal": "maxHp",
+              "count": 8
+            },
+            {
+              "signal": "damage",
+              "count": 9
+            },
+            {
+              "signal": "healing",
+              "count": 6
+            },
+            {
+              "signal": "target",
+              "count": 6
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CharacterSpellEntry",
+          "SpellAbilityKey",
+          "SpellCompatibleCharacter",
+          "SpellRuntimeSnapshot",
+          "SpellSlotState",
+          "applyConcentrationDamage",
+          "applyDamageToSpellTarget",
+          "applyHealingToSpellTarget",
+          "buildSpellRuntimeSnapshot",
+          "canCharacterCastSpell",
+          "deserializeSpellCompatibleCharacter",
+          "normalizeSpellSlots",
+          "resolveSpellAbilityScore",
+          "resolveSpellcastingAbility",
+          "restoreCharacterSpellSlot",
+          "serializeSpellCompatibleCharacter",
+          "setCharacterConcentration",
+          "spendCharacterSpellSlot"
+        ],
+        "lineCount": 315
+      },
+      {
+        "file": "src/certification/differential/spellRuntimeCombatDifferential.test.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "spellSaveDc",
+              "count": 4
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 4
+            },
+            {
+              "signal": "concentration",
+              "count": 5
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 24
+            },
+            {
+              "signal": "healing",
+              "count": 8
+            },
+            {
+              "signal": "target",
+              "count": 5
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 218
+      },
+      {
+        "file": "src/features/monsters/MonsterLibrary.tsx",
+        "matches": {
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 14
+            },
+            {
+              "signal": "damage",
+              "count": 16
+            },
+            {
+              "signal": "target",
+              "count": 5
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 5
+            },
+            {
+              "signal": "useNavigate",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/monsters"
+        ],
+        "exports": [
+          "MonsterDetail",
+          "MonsterLibrary"
+        ],
+        "lineCount": 1023
+      },
+      {
+        "file": "src/features/campaigns/Campaigns.tsx",
+        "matches": {
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 10
+            },
+            {
+              "signal": "maxHp",
+              "count": 13
+            },
+            {
+              "signal": "target",
+              "count": 11
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 22
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "Campaigns"
+        ],
+        "lineCount": 1433
+      },
+      {
+        "file": "src/features/characters/LevelUpAssistant.tsx",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "castSpell",
+              "count": 1
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "target",
+              "count": 34
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "LevelUpAssistant"
+        ],
+        "lineCount": 322
+      }
+    ],
+    "storage": [
+      {
+        "file": "src/features/legacy/AppRoutes.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 6
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 4
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "CombatTracker",
+              "count": 4
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 60
+            },
+            {
+              "signal": "updateCharacter",
+              "count": 8
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 46
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/",
+          "/backup",
+          "/builder",
+          "/calendar",
+          "/campaigns",
+          "/characters",
+          "/characters/:characterId",
+          "/characters/:characterId/edit",
+          "/characters/compare",
+          "/classes",
+          "/collections",
+          "/combat",
+          "/dice",
+          "/factions",
+          "/feats",
+          "/help",
+          "/homebrew-lab",
+          "/inventory",
+          "/library",
+          "/locations",
+          "/loot",
+          "/monsters",
+          "/monsters/:monsterId",
+          "/npcs",
+          "/origins",
+          "/play-mode",
+          "/player-test",
+          "/quests",
+          "/rest",
+          "/rulesets",
+          "/search",
+          "/session-planner",
+          "/settings",
+          "/spellbook",
+          "/subclasses",
+          "/updates"
+        ],
+        "exports": [
+          "AppRoutes"
+        ],
+        "lineCount": 472
+      },
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 2
+            },
+            {
+              "signal": "spellSlots",
+              "count": 20
+            },
+            {
+              "signal": "pactSlots",
+              "count": 1
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "castSpell",
+              "count": 6
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 3
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 4
+            },
+            {
+              "signal": "concentration",
+              "count": 8
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 8
+            },
+            {
+              "signal": "maxHp",
+              "count": 6
+            },
+            {
+              "signal": "damage",
+              "count": 84
+            },
+            {
+              "signal": "healing",
+              "count": 31
+            },
+            {
+              "signal": "target",
+              "count": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 27
+            },
+            {
+              "signal": "updateCharacter",
+              "count": 20
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 11
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters",
+          "/rest"
+        ],
+        "exports": [
+          "CharacterDetail"
+        ],
+        "lineCount": 1443
+      },
+      {
+        "file": "src/features/legacy/LegacyApp.tsx",
+        "matches": {
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 41
+            },
+            {
+              "signal": "saveCharacter",
+              "count": 2
+            },
+            {
+              "signal": "updateCharacter",
+              "count": 3
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 418
+      },
+      {
+        "file": "src/features/characters/Characters.tsx",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "spellSaveDc",
+              "count": 2
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 1
+            },
+            {
+              "signal": "maxHp",
+              "count": 1
+            },
+            {
+              "signal": "target",
+              "count": 6
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 30
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 5
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "Characters"
+        ],
+        "lineCount": 329
+      },
+      {
+        "file": "src/features/backup/DataBackup.tsx",
+        "matches": {
+          "combatTracker": [
+            {
+              "signal": "target",
+              "count": 4
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 29
+            }
+          ],
+          "testing": [
+            {
+              "signal": "data-testid",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [
+          "backup-safety-report"
+        ],
+        "routes": [],
+        "exports": [
+          "DataBackup"
+        ],
+        "lineCount": 375
+      },
+      {
+        "file": "src/core/rulesets/restRecoveryPersistenceBridge.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 25
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CharacterCollectionShape",
+          "RestPersistenceResult",
+          "applyRestInStorage",
+          "applyRestToCharacterCollection",
+          "discoverCharacterStorageKey",
+          "parseCharacterCollection",
+          "serializeCharacterCollection"
+        ],
+        "lineCount": 154
+      },
+      {
+        "file": "src/features/campaigns/Campaigns.tsx",
+        "matches": {
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 10
+            },
+            {
+              "signal": "maxHp",
+              "count": 13
+            },
+            {
+              "signal": "target",
+              "count": 11
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 22
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "Campaigns"
+        ],
+        "lineCount": 1433
+      },
+      {
+        "file": "src/features/rest/RestCenterPage.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 1
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "CombatTracker",
+              "count": 1
+            },
+            {
+              "signal": "currentHp",
+              "count": 4
+            },
+            {
+              "signal": "maxHp",
+              "count": 1
+            },
+            {
+              "signal": "healing",
+              "count": 2
+            },
+            {
+              "signal": "target",
+              "count": 10
+            },
+            {
+              "signal": "combatant",
+              "count": 10
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 21
+            },
+            {
+              "signal": "combatTrackerStorage",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "RestCenterPage"
+        ],
+        "lineCount": 86
+      },
+      {
+        "file": "src/core/rulesets/classFeaturePersistenceBridge.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 21
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CharacterCollection",
+          "FeatureMutationResult",
+          "discoverClassCharacterStorageKey",
+          "mutateCharacterFeature",
+          "mutateFeatureInCollection",
+          "mutateFeatureInStorage",
+          "parseClassCharacterCollection",
+          "serializeClassCharacterCollection"
+        ],
+        "lineCount": 188
+      },
+      {
+        "file": "src/core/storage/characterStorage.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 7
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 2
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 3
+            }
+          ],
+          "storage": [
+            {
+              "signal": "safeStorage",
+              "count": 1
+            },
+            {
+              "signal": "characters",
+              "count": 13
+            },
+            {
+              "signal": "saveCharacter",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "exportCharacters",
+          "hydrateCharacterRecord",
+          "loadCharacters",
+          "saveCharacters"
+        ],
+        "lineCount": 275
+      },
+      {
+        "file": "src/features/play-mode/PlayMode.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 1
+            },
+            {
+              "signal": "spellSlots",
+              "count": 45
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 1
+            },
+            {
+              "signal": "castSpell",
+              "count": 5
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 7
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 4
+            },
+            {
+              "signal": "concentration",
+              "count": 46
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 45
+            },
+            {
+              "signal": "maxHp",
+              "count": 28
+            },
+            {
+              "signal": "damage",
+              "count": 157
+            },
+            {
+              "signal": "healing",
+              "count": 25
+            },
+            {
+              "signal": "target",
+              "count": 84
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 13
+            },
+            {
+              "signal": "updateCharacter",
+              "count": 4
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/rest"
+        ],
+        "exports": [
+          "PlayMode"
+        ],
+        "lineCount": 937
+      },
+      {
+        "file": "src/components/classFeatures/ClassFeatureRuntimeIntegrationMount.tsx",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 3
+            },
+            {
+              "signal": "characters",
+              "count": 13
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 5
+            }
+          ],
+          "testing": [
+            {
+              "signal": "data-testid",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [
+          "class-feature-runtime-integration"
+        ],
+        "routes": [],
+        "exports": [
+          "ClassFeatureRuntimeIntegrationMount"
+        ],
+        "lineCount": 141
+      },
+      {
+        "file": "src/components/rest/RestRuntimeIntegrationMount.tsx",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 3
+            },
+            {
+              "signal": "characters",
+              "count": 13
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 5
+            }
+          ],
+          "testing": [
+            {
+              "signal": "data-testid",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [
+          "rest-runtime-integration"
+        ],
+        "routes": [],
+        "exports": [
+          "RestRuntimeIntegrationMount"
+        ],
+        "lineCount": 139
+      },
+      {
+        "file": "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 8
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 2
+            },
+            {
+              "signal": "activeEffects",
+              "count": 5
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 10
+            },
+            {
+              "signal": "maxHp",
+              "count": 8
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 16
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 254
+      },
+      {
+        "file": "src/core/rulesets/spellCastingPersistenceBridge.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 5
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "CombatTracker",
+              "count": 1
+            },
+            {
+              "signal": "damage",
+              "count": 5
+            },
+            {
+              "signal": "healing",
+              "count": 4
+            },
+            {
+              "signal": "target",
+              "count": 26
+            },
+            {
+              "signal": "combatant",
+              "count": 10
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 15
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CombatTargetCollection",
+          "SpellCharacterCollection",
+          "discoverCombatStorageKey",
+          "discoverSpellStorageKey",
+          "mutateCasterInCollection",
+          "mutateTargetInCollection",
+          "parseCombatTargetCollection",
+          "parseSpellCharacterCollection",
+          "persistCasterMutation",
+          "persistTargetMutation",
+          "serializeSpellCollection"
+        ],
+        "lineCount": 126
+      },
+      {
+        "file": "src/core/storage/safeStorage.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 9
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "RecoveryRecord",
+          "STORAGE_RECOVERY_EVENT",
+          "clearRecoveryRecords",
+          "downloadEmergencyStorageSnapshot",
+          "downloadRecoveryRecord",
+          "loadRecoveryRecords",
+          "quarantineStorageValue",
+          "readJsonSafely",
+          "removeRecoveryRecord",
+          "writeJsonSafely"
+        ],
+        "lineCount": 151
+      },
+      {
+        "file": "src/features/characters/CharacterCompare.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "spellSaveDc",
+              "count": 3
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 3
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 2
+            },
+            {
+              "signal": "maxHp",
+              "count": 2
+            },
+            {
+              "signal": "target",
+              "count": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 13
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 3
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters"
+        ],
+        "exports": [
+          "CharacterCompare"
+        ],
+        "lineCount": 217
+      },
+      {
+        "file": "src/core/release/releaseReadiness.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 12
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "ReleaseCheck",
+          "ReleaseCheckStatus",
+          "ReleaseReadiness",
+          "getReleaseReadiness"
+        ],
+        "lineCount": 31
+      },
+      {
+        "file": "src/features/backup/fullBackup.ts",
+        "matches": {
+          "combatTracker": [
+            {
+              "signal": "maxHp",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 12
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "BackupImportMode",
+          "BackupImportOptions",
+          "BackupImportSections",
+          "DEFAULT_BACKUP_IMPORT_SECTIONS",
+          "E4FullBackup",
+          "FULL_BACKUP_VERSION",
+          "FullBackupData",
+          "createFullBackup",
+          "exportFullBackup",
+          "parseFullBackup"
+        ],
+        "lineCount": 211
+      },
+      {
+        "file": "src/features/combat-tracker/combatTrackerStorage.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 1
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 17
+            },
+            {
+              "signal": "maxHp",
+              "count": 20
+            },
+            {
+              "signal": "damage",
+              "count": 8
+            },
+            {
+              "signal": "healing",
+              "count": 3
+            },
+            {
+              "signal": "combatant",
+              "count": 121
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 6
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "BATTLEFIELD_ZONE_KINDS",
+          "BATTLEFIELD_ZONE_SHAPES",
+          "BattlefieldZone",
+          "BattlefieldZoneKind",
+          "BattlefieldZoneShape",
+          "COMBAT_CONDITIONS",
+          "CombatCondition",
+          "CombatEffect",
+          "CombatEncounter",
+          "CombatLogEntry",
+          "CombatLogKind",
+          "CombatTemplate",
+          "CombatTemplateCombatant",
+          "Combatant",
+          "CombatantKind",
+          "addCombatLog",
+          "advanceTurn",
+          "applyDamage",
+          "applyHealing",
+          "createBattlefieldZone",
+          "createCombatEffect",
+          "createCombatEncounter",
+          "createCombatLogEntry",
+          "createCombatTemplate",
+          "createCombatant",
+          "createEncounterFromCampaignEncounter",
+          "createEncounterFromTemplate",
+          "getActiveConditions",
+          "getCombatSummary",
+          "loadCombatEncounters",
+          "loadCombatTemplates",
+          "sanitizeCombatEncounter",
+          "sanitizeCombatant",
+          "saveCombatEncounters",
+          "saveCombatTemplates",
+          "sortCombatants",
+          "tickBattlefieldZones",
+          "tickCombatEffects"
+        ],
+        "lineCount": 366
+      }
+    ],
+    "routing": [
+      {
+        "file": "src/features/legacy/AppRoutes.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 6
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 4
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "CombatTracker",
+              "count": 4
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 60
+            },
+            {
+              "signal": "updateCharacter",
+              "count": 8
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 46
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/",
+          "/backup",
+          "/builder",
+          "/calendar",
+          "/campaigns",
+          "/characters",
+          "/characters/:characterId",
+          "/characters/:characterId/edit",
+          "/characters/compare",
+          "/classes",
+          "/collections",
+          "/combat",
+          "/dice",
+          "/factions",
+          "/feats",
+          "/help",
+          "/homebrew-lab",
+          "/inventory",
+          "/library",
+          "/locations",
+          "/loot",
+          "/monsters",
+          "/monsters/:monsterId",
+          "/npcs",
+          "/origins",
+          "/play-mode",
+          "/player-test",
+          "/quests",
+          "/rest",
+          "/rulesets",
+          "/search",
+          "/session-planner",
+          "/settings",
+          "/spellbook",
+          "/subclasses",
+          "/updates"
+        ],
+        "exports": [
+          "AppRoutes"
+        ],
+        "lineCount": 472
+      },
+      {
+        "file": "src/core/rulesets/fullCharacterCreationJourney.ts",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 10
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 18
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CharacterCreationJourneyScenario",
+          "FULL_CHARACTER_CREATION_SCENARIOS",
+          "getCharacterCreationJourneyCoverage"
+        ],
+        "lineCount": 39
+      },
+      {
+        "file": "src/shared/layout/AppFrame.tsx",
+        "matches": {
+          "combatTracker": [
+            {
+              "signal": "target",
+              "count": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 4
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 12
+            },
+            {
+              "signal": "navigate(",
+              "count": 2
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/"
+        ],
+        "exports": [
+          "AppFrame"
+        ],
+        "lineCount": 218
+      },
+      {
+        "file": "e2e/rc1-critical-smoke.spec.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 10
+            },
+            {
+              "signal": "path:",
+              "count": 6
+            }
+          ],
+          "testing": [
+            {
+              "signal": "page.goto",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/",
+          "/backup",
+          "/builder",
+          "/characters",
+          "/combat",
+          "/settings"
+        ],
+        "exports": [],
+        "lineCount": 37
+      },
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 2
+            },
+            {
+              "signal": "spellSlots",
+              "count": 20
+            },
+            {
+              "signal": "pactSlots",
+              "count": 1
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "castSpell",
+              "count": 6
+            },
+            {
+              "signal": "spellSaveDc",
+              "count": 3
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 4
+            },
+            {
+              "signal": "concentration",
+              "count": 8
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 8
+            },
+            {
+              "signal": "maxHp",
+              "count": 6
+            },
+            {
+              "signal": "damage",
+              "count": 84
+            },
+            {
+              "signal": "healing",
+              "count": 31
+            },
+            {
+              "signal": "target",
+              "count": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 27
+            },
+            {
+              "signal": "updateCharacter",
+              "count": 20
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 11
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters",
+          "/rest"
+        ],
+        "exports": [
+          "CharacterDetail"
+        ],
+        "lineCount": 1443
+      },
+      {
+        "file": "src/features/settings/Settings.tsx",
+        "matches": {
+          "combatTracker": [
+            {
+              "signal": "target",
+              "count": 3
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 8
+            },
+            {
+              "signal": "navigate(",
+              "count": 2
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "Settings"
+        ],
+        "lineCount": 291
+      },
+      {
+        "file": "src/shared/settings/appSettings.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 11
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "APP_SETTINGS_STORAGE_KEY",
+          "AccentTheme",
+          "AppLocale",
+          "AppSettings",
+          "CampaignToolProfile",
+          "DEFAULT_APP_SETTINGS",
+          "FontScale",
+          "MotionPreference",
+          "START_ROUTE_OPTIONS",
+          "UiDensity",
+          "sanitizeAppSettings"
+        ],
+        "lineCount": 82
+      },
+      {
+        "file": "src/features/monsters/MonsterLibrary.tsx",
+        "matches": {
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 14
+            },
+            {
+              "signal": "damage",
+              "count": 16
+            },
+            {
+              "signal": "target",
+              "count": 5
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 5
+            },
+            {
+              "signal": "useNavigate",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/monsters"
+        ],
+        "exports": [
+          "MonsterDetail",
+          "MonsterLibrary"
+        ],
+        "lineCount": 1023
+      },
+      {
+        "file": "src/components/spells/SpellRuntimeIntegrationMount.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 1
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 1
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "CombatTracker",
+              "count": 1
+            },
+            {
+              "signal": "currentHp",
+              "count": 1
+            },
+            {
+              "signal": "maxHp",
+              "count": 1
+            },
+            {
+              "signal": "damage",
+              "count": 3
+            },
+            {
+              "signal": "healing",
+              "count": 3
+            },
+            {
+              "signal": "target",
+              "count": 51
+            },
+            {
+              "signal": "combatant",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 6
+            },
+            {
+              "signal": "characters",
+              "count": 4
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 7
+            }
+          ],
+          "testing": [
+            {
+              "signal": "data-testid",
+              "count": 6
+            }
+          ]
+        },
+        "testIds": [
+          "spell-runtime-apply-damage",
+          "spell-runtime-apply-healing",
+          "spell-runtime-integration",
+          "spell-runtime-target-amount",
+          "spell-runtime-target-controls",
+          "spell-runtime-target-select"
+        ],
+        "routes": [],
+        "exports": [
+          "SpellRuntimeIntegrationMount"
+        ],
+        "lineCount": 306
+      },
+      {
+        "file": "src/features/characters/Characters.tsx",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "spellSaveDc",
+              "count": 2
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 1
+            },
+            {
+              "signal": "maxHp",
+              "count": 1
+            },
+            {
+              "signal": "target",
+              "count": 6
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 30
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 5
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "Characters"
+        ],
+        "lineCount": 329
+      },
+      {
+        "file": "src/features/characters/CharacterEditor.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "spellSaveDc",
+              "count": 2
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 2
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "maxHp",
+              "count": 3
+            },
+            {
+              "signal": "target",
+              "count": 20
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 7
+            },
+            {
+              "signal": "updateCharacter",
+              "count": 3
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 4
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters"
+        ],
+        "exports": [
+          "CharacterEditor"
+        ],
+        "lineCount": 434
+      },
+      {
+        "file": "e2e/rc2-regression-matrix.spec.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 2
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 7
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 1
+            },
+            {
+              "signal": "page.goto",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 61
+      },
+      {
+        "file": "src/features/characters/CharacterCompare.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "spellSaveDc",
+              "count": 3
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 3
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 2
+            },
+            {
+              "signal": "maxHp",
+              "count": 2
+            },
+            {
+              "signal": "target",
+              "count": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 13
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 3
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters"
+        ],
+        "exports": [
+          "CharacterCompare"
+        ],
+        "lineCount": 217
+      },
+      {
+        "file": "src/shared/release/releaseNotes.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 14
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "damage",
+              "count": 41
+            },
+            {
+              "signal": "healing",
+              "count": 13
+            },
+            {
+              "signal": "target",
+              "count": 6
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 3
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 6
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "RELEASE_CATEGORIES",
+          "RELEASE_NOTES",
+          "ReleaseCategory",
+          "ReleaseChange",
+          "ReleaseEntry",
+          "getCurrentRelease"
+        ],
+        "lineCount": 1057
+      },
+      {
+        "file": "e2e/spell-runtime-ui-v5.113D3.spec.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 1
+            },
+            {
+              "signal": "spellSlots",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 5
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "CombatTracker",
+              "count": 3
+            },
+            {
+              "signal": "currentHp",
+              "count": 3
+            },
+            {
+              "signal": "maxHp",
+              "count": 1
+            },
+            {
+              "signal": "damage",
+              "count": 2
+            },
+            {
+              "signal": "healing",
+              "count": 2
+            },
+            {
+              "signal": "target",
+              "count": 8
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 6
+            },
+            {
+              "signal": "characters",
+              "count": 3
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 4
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 9
+            },
+            {
+              "signal": "page.goto",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [
+          "spell-concentration-input",
+          "spell-concentration-start",
+          "spell-runtime-apply-damage",
+          "spell-runtime-apply-healing",
+          "spell-runtime-attack-bonus",
+          "spell-runtime-integration",
+          "spell-runtime-save-dc",
+          "spell-runtime-target-amount",
+          "spell-slot-spend-normal-3"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 125
+      },
+      {
+        "file": "src/components/classFeatures/ClassFeatureRuntimeIntegrationMount.tsx",
+        "matches": {
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 3
+            },
+            {
+              "signal": "characters",
+              "count": 13
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 5
+            }
+          ],
+          "testing": [
+            {
+              "signal": "data-testid",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [
+          "class-feature-runtime-integration"
+        ],
+        "routes": [],
+        "exports": [
+          "ClassFeatureRuntimeIntegrationMount"
+        ],
+        "lineCount": 141
+      },
+      {
+        "file": "src/components/rest/RestRuntimeIntegrationMount.tsx",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 3
+            },
+            {
+              "signal": "characters",
+              "count": 13
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 5
+            }
+          ],
+          "testing": [
+            {
+              "signal": "data-testid",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [
+          "rest-runtime-integration"
+        ],
+        "routes": [],
+        "exports": [
+          "RestRuntimeIntegrationMount"
+        ],
+        "lineCount": 139
+      },
+      {
+        "file": "src/shared/commands/CommandPalette.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 1
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "target",
+              "count": 3
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 5
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 1
+            },
+            {
+              "signal": "navigate(",
+              "count": 2
+            },
+            {
+              "signal": "useNavigate",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "CommandPalette"
+        ],
+        "lineCount": 336
+      },
+      {
+        "file": "e2e/app-shell.spec.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 1
+            },
+            {
+              "signal": "characters",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 5
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 4
+            },
+            {
+              "signal": "page.goto",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 7
+      },
+      {
+        "file": "src/core/quality/releaseReadinessAudit.ts",
+        "matches": {
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [
+          "AuditCheck",
+          "AuditStatus",
+          "OPEN_RULES_LICENSE",
+          "auditLicensing",
+          "auditNavigationAccessibility",
+          "auditNavigationLocalization",
+          "buildReleaseReadinessAudit"
+        ],
+        "lineCount": 84
+      }
+    ],
+    "testing": [
+      {
+        "file": "e2e/spell-runtime-ui-v5.113D3.spec.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 1
+            },
+            {
+              "signal": "spellSlots",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "concentration",
+              "count": 5
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "CombatTracker",
+              "count": 3
+            },
+            {
+              "signal": "currentHp",
+              "count": 3
+            },
+            {
+              "signal": "maxHp",
+              "count": 1
+            },
+            {
+              "signal": "damage",
+              "count": 2
+            },
+            {
+              "signal": "healing",
+              "count": 2
+            },
+            {
+              "signal": "target",
+              "count": 8
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 6
+            },
+            {
+              "signal": "characters",
+              "count": 3
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 4
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 9
+            },
+            {
+              "signal": "page.goto",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [
+          "spell-concentration-input",
+          "spell-concentration-start",
+          "spell-runtime-apply-damage",
+          "spell-runtime-apply-healing",
+          "spell-runtime-attack-bonus",
+          "spell-runtime-integration",
+          "spell-runtime-save-dc",
+          "spell-runtime-target-amount",
+          "spell-slot-spend-normal-3"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 125
+      },
+      {
+        "file": "e2e/mobile-and-storage.spec.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 2
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 7
+            },
+            {
+              "signal": "page.goto",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 45
+      },
+      {
+        "file": "e2e/rest-recovery-ui-v5.111D3.spec.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 3
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "activeEffects",
+              "count": 1
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 7
+            },
+            {
+              "signal": "maxHp",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 5
+            },
+            {
+              "signal": "characters",
+              "count": 5
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 3
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 7
+            },
+            {
+              "signal": "page.goto",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [
+          "rest-long-button",
+          "rest-result",
+          "rest-runtime-integration",
+          "rest-short-button"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 107
+      },
+      {
+        "file": "src/components/spells/SpellCastingRuntimePanel.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 2
+            },
+            {
+              "signal": "pactSlots",
+              "count": 2
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "spellSaveDc",
+              "count": 1
+            },
+            {
+              "signal": "spellAttackBonus",
+              "count": 2
+            },
+            {
+              "signal": "concentration",
+              "count": 16
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "target",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 4
+            }
+          ],
+          "testing": [
+            {
+              "signal": "data-testid",
+              "count": 12
+            }
+          ]
+        },
+        "testIds": [
+          "spell-casting-runtime-panel",
+          "spell-concentration-input",
+          "spell-concentration-start",
+          "spell-concentration-stop",
+          "spell-runtime-attack-bonus",
+          "spell-runtime-cantrip-dice",
+          "spell-runtime-concentration-state",
+          "spell-runtime-save-dc"
+        ],
+        "routes": [],
+        "exports": [
+          "SpellCastingRuntimePanel",
+          "SpellCastingRuntimePanelProps"
+        ],
+        "lineCount": 77
+      },
+      {
+        "file": "e2e/full-character-creation.spec.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 1
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 1
+            },
+            {
+              "signal": "maxHp",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 1
+            },
+            {
+              "signal": "characters",
+              "count": 3
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 2
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 3
+            },
+            {
+              "signal": "page.goto",
+              "count": 5
+            }
+          ]
+        },
+        "testIds": [
+          "builder-character-name",
+          "builder-review"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 45
+      },
+      {
+        "file": "e2e/class-feature-ui-v5.112D3.spec.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 3
+            },
+            {
+              "signal": "characters",
+              "count": 4
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 3
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 5
+            },
+            {
+              "signal": "page.goto",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [
+          "class-feature-action-surge",
+          "class-feature-extra-attack",
+          "class-feature-restore-action-surge",
+          "class-feature-runtime-integration",
+          "class-feature-spend-action-surge"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 81
+      },
+      {
+        "file": "e2e/app-shell.spec.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 1
+            },
+            {
+              "signal": "characters",
+              "count": 1
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 5
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 4
+            },
+            {
+              "signal": "page.goto",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 7
+      },
+      {
+        "file": "e2e/certification-golden-builders.spec.ts",
+        "matches": {
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 3
+            },
+            {
+              "signal": "getByRole",
+              "count": 2
+            },
+            {
+              "signal": "page.goto",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [
+          "ancestry-choice-panel"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 88
+      },
+      {
+        "file": "e2e/equipment-combat-certification.spec.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 2
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 2
+            },
+            {
+              "signal": "maxHp",
+              "count": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 6
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 1
+            },
+            {
+              "signal": "getByRole",
+              "count": 2
+            },
+            {
+              "signal": "page.goto",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [
+          "inventory-economy-panel"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 154
+      },
+      {
+        "file": "e2e/builder-ui-mega.spec.ts",
+        "matches": {
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 3
+            },
+            {
+              "signal": "page.goto",
+              "count": 3
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 39
+      },
+      {
+        "file": "e2e/level-one-to-twenty-advancement.spec.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 1
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 1
+            },
+            {
+              "signal": "maxHp",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 3
+            },
+            {
+              "signal": "characters",
+              "count": 4
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 2
+            },
+            {
+              "signal": "page.goto",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 41
+      },
+      {
+        "file": "e2e/rc2-regression-matrix.spec.ts",
+        "matches": {
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 2
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 7
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 1
+            },
+            {
+              "signal": "page.goto",
+              "count": 4
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 61
+      },
+      {
+        "file": "e2e/certification-all-classes-backgrounds.spec.ts",
+        "matches": {
+          "combatTracker": [
+            {
+              "signal": "target",
+              "count": 6
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 3
+            },
+            {
+              "signal": "page.goto",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 195
+      },
+      {
+        "file": "e2e/inventory-economy-runtime.spec.ts",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "spellSlots",
+              "count": 1
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "currentHp",
+              "count": 1
+            },
+            {
+              "signal": "maxHp",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "characters",
+              "count": 3
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 1
+            },
+            {
+              "signal": "page.goto",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [
+          "inventory-economy-panel"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 57
+      },
+      {
+        "file": "e2e/combat-runtime-automation.spec.ts",
+        "matches": {
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 2
+            },
+            {
+              "signal": "page.goto",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 16
+      },
+      {
+        "file": "e2e/mobile-accessibility-performance.spec.ts",
+        "matches": {
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 1
+            },
+            {
+              "signal": "page.goto",
+              "count": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 23
+      },
+      {
+        "file": "src/components/spells/SpellRuntimeIntegrationMount.tsx",
+        "matches": {
+          "spellbook": [
+            {
+              "signal": "Spellbook",
+              "count": 1
+            }
+          ],
+          "playMode": [
+            {
+              "signal": "PlayMode",
+              "count": 1
+            }
+          ],
+          "combatTracker": [
+            {
+              "signal": "CombatTracker",
+              "count": 1
+            },
+            {
+              "signal": "currentHp",
+              "count": 1
+            },
+            {
+              "signal": "maxHp",
+              "count": 1
+            },
+            {
+              "signal": "damage",
+              "count": 3
+            },
+            {
+              "signal": "healing",
+              "count": 3
+            },
+            {
+              "signal": "target",
+              "count": 51
+            },
+            {
+              "signal": "combatant",
+              "count": 1
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "count": 6
+            },
+            {
+              "signal": "characters",
+              "count": 4
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "count": 7
+            }
+          ],
+          "testing": [
+            {
+              "signal": "data-testid",
+              "count": 6
+            }
+          ]
+        },
+        "testIds": [
+          "spell-runtime-apply-damage",
+          "spell-runtime-apply-healing",
+          "spell-runtime-integration",
+          "spell-runtime-target-amount",
+          "spell-runtime-target-controls",
+          "spell-runtime-target-select"
+        ],
+        "routes": [],
+        "exports": [
+          "SpellRuntimeIntegrationMount"
+        ],
+        "lineCount": 306
+      },
+      {
+        "file": "e2e/class-runtime-policy.spec.ts",
+        "matches": {
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 1
+            },
+            {
+              "signal": "page.goto",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [
+          "class-runtime-policy"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 11
+      },
+      {
+        "file": "e2e/content-integrity-audit.spec.ts",
+        "matches": {
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "count": 1
+            },
+            {
+              "signal": "page.goto",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [
+          "content-integrity-audit"
+        ],
+        "routes": [],
+        "exports": [],
+        "lineCount": 11
+      },
+      {
+        "file": "e2e/certification-all-ancestries.spec.ts",
+        "matches": {
+          "testing": [
+            {
+              "signal": "getByRole",
+              "count": 1
+            },
+            {
+              "signal": "page.goto",
+              "count": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exports": [],
+        "lineCount": 49
+      }
+    ]
+  },
+  "consolidated": {
+    "testIds": [
+      "ancestry-choice-panel",
+      "backup-safety-report",
+      "builder-character-name",
+      "builder-review",
+      "builder-save",
+      "class-feature-action-surge",
+      "class-feature-empty",
+      "class-feature-extra-attack",
+      "class-feature-panel",
+      "class-feature-restore-action-surge",
+      "class-feature-runtime-integration",
+      "class-feature-spend-action-surge",
+      "class-runtime-policy",
+      "combat-turn-automation",
+      "content-completion-plan",
+      "content-integrity-audit",
+      "inventory-economy-panel",
+      "rest-actions-panel",
+      "rest-long-button",
+      "rest-result",
+      "rest-runtime-integration",
+      "rest-short-button",
+      "spell-casting-runtime-panel",
+      "spell-concentration-input",
+      "spell-concentration-start",
+      "spell-concentration-stop",
+      "spell-runtime-apply-damage",
+      "spell-runtime-apply-healing",
+      "spell-runtime-attack-bonus",
+      "spell-runtime-cantrip-dice",
+      "spell-runtime-concentration-state",
+      "spell-runtime-integration",
+      "spell-runtime-save-dc",
+      "spell-runtime-target-amount",
+      "spell-runtime-target-controls",
+      "spell-runtime-target-select",
+      "spell-slot-spend-normal-3"
+    ],
+    "routes": [
+      "/",
+      "/backup",
+      "/builder",
+      "/calendar",
+      "/campaigns",
+      "/characters",
+      "/characters/:characterId",
+      "/characters/:characterId/edit",
+      "/characters/compare",
+      "/classes",
+      "/collections",
+      "/combat",
+      "/dice",
+      "/factions",
+      "/feats",
+      "/help",
+      "/homebrew-lab",
+      "/inventory",
+      "/library",
+      "/locations",
+      "/loot",
+      "/monsters",
+      "/monsters/:monsterId",
+      "/npcs",
+      "/origins",
+      "/play-mode",
+      "/player-test",
+      "/quests",
+      "/rest",
+      "/rulesets",
+      "/search",
+      "/session-planner",
+      "/settings",
+      "/spellbook",
+      "/subclasses",
+      "/updates"
+    ],
+    "exports": [
+      "APP_SETTINGS_STORAGE_KEY",
+      "AbilityKey",
+      "AbilityRecord",
+      "AbilityScores",
+      "AccentTheme",
+      "AccessibilityPerformanceInput",
+      "AccessibilityPerformancePanel",
+      "AccessibilityPerformanceReport",
+      "ActiveControlModifiers",
+      "ActiveDefenseMovementModifiers",
+      "ActiveEffect",
+      "AdvancedFeatRuntime",
+      "AdvancementReadiness",
+      "AncestryBuilderContract",
+      "AncestryChoiceOption",
+      "AncestryChoicePanel",
+      "AncestryRuntime",
+      "AppErrorBoundary",
+      "AppFrame",
+      "AppLocale",
+      "AppRoutes",
+      "AppSettings",
+      "AppSettingsProvider",
+      "ArmorClassMode",
+      "AttackResolution",
+      "AuditCheck",
+      "AuditStatus",
+      "BATTLEFIELD_ZONE_KINDS",
+      "BATTLEFIELD_ZONE_SHAPES",
+      "BackupImportMode",
+      "BackupImportOptions",
+      "BackupImportSections",
+      "BackupSafetyIssue",
+      "BackupSafetyReport",
+      "BarbarianCertificationRow",
+      "BarbarianEdition",
+      "BattlefieldZone",
+      "BattlefieldZoneKind",
+      "BattlefieldZoneShape",
+      "BuildGlobalSearchEntriesInput",
+      "Builder",
+      "CHARACTER_BACKUP_VERSION",
+      "CHARACTER_TRANSFER_VERSION",
+      "CLASS_RUNTIME_EXPECTATIONS",
+      "COMBAT_CONDITIONS",
+      "CalendarEventType",
+      "Campaign",
+      "CampaignCalendar",
+      "CampaignCalendarEvent",
+      "CampaignCalendarPage",
+      "CampaignDashboard",
+      "CampaignEncounter",
+      "CampaignEncounterCondition",
+      "CampaignEncounterParticipant",
+      "CampaignEncounterReward",
+      "CampaignEncounterToolPreferences",
+      "CampaignNote",
+      "CampaignNpc",
+      "CampaignQuest",
+      "CampaignTimelineEntry",
+      "CampaignToolProfile",
+      "Campaigns",
+      "Character",
+      "CharacterCertificationCheck",
+      "CharacterClassLevel",
+      "CharacterCollection",
+      "CharacterCollectionShape",
+      "CharacterCompare",
+      "CharacterCondition",
+      "CharacterConditionDurations",
+      "CharacterCreationJourneyScenario",
+      "CharacterDeathSaves",
+      "CharacterDetail",
+      "CharacterDraft",
+      "CharacterEditor",
+      "CharacterHitDiePool",
+      "CharacterImportResult",
+      "CharacterIntegrityIssue",
+      "CharacterIntegrityReport",
+      "CharacterInventoryItem",
+      "CharacterInventoryManager",
+      "CharacterResource",
+      "CharacterRestResult",
+      "CharacterSheetCertificationSnapshot",
+      "CharacterSpellEffect",
+      "CharacterSpellEntry",
+      "CharacterSpellSelector",
+      "CharacterSpellSlot",
+      "CharacterSpellSource",
+      "CharacterTransferFile",
+      "CharacterValidationIssue",
+      "Characters",
+      "ChoiceDebtResolver",
+      "ClassBasedSpellSelector",
+      "ClassCatalogPage",
+      "ClassEditionCertification",
+      "ClassFeaturePanel",
+      "ClassFeaturePanelProps",
+      "ClassFeatureRuntimeIntegrationMount",
+      "ClassFeatureRuntimePlan",
+      "ClassLevelData",
+      "ClassRuntimeArea",
+      "ClassRuntimeAreaReport",
+      "ClassRuntimeExpectation",
+      "ClassRuntimeState",
+      "ClassSpecificRuntimePolicyReport",
+      "ClassSpecificRuntimeReport",
+      "ClassSubclassRuntimeClosureReport",
+      "CollectionsPage",
+      "CombatAutomationState",
+      "CombatCondition",
+      "CombatEffect",
+      "CombatEncounter",
+      "CombatLogEntry",
+      "CombatLogKind",
+      "CombatTargetCollection",
+      "CombatTemplate",
+      "CombatTemplateCombatant",
+      "CombatTrackerPage",
+      "CombatTurnAutomationPanel",
+      "CombatTurnState",
+      "Combatant",
+      "CombatantKind",
+      "CommandPalette",
+      "CompletionState",
+      "ContentAuditIssue",
+      "ContentAuditSeverity",
+      "ContentCatalogAudit",
+      "ContentCatalogId",
+      "ContentCompletionPlan",
+      "ContentCompletionTarget",
+      "ContentIntegrityAudit",
+      "ControlSpellRuntime",
+      "DEFAULT_APP_SETTINGS",
+      "DEFAULT_BACKUP_IMPORT_SECTIONS",
+      "DEFAULT_HOMEBREW_CREATOR_DRAFT",
+      "DEFAULT_UI_POLISH_EVIDENCE",
+      "DamageRelation",
+      "DamageResult",
+      "Dashboard",
+      "DataBackup",
+      "DeathSaveState",
+      "DeathSaveStatus",
+      "DefenseMovementSpellRuntime",
+      "DerivedScenario",
+      "Dice",
+      "DivineClassRuntime",
+      "DndArmorType",
+      "DndBackgroundData",
+      "DndClassData",
+      "DndFeatData",
+      "DndFeatPrerequisite",
+      "DndItemCategory",
+      "DndItemData",
+      "DndMonsterData",
+      "DndRaceData",
+      "DndSpellData",
+      "DndSubclassData",
+      "DndSubraceData",
+      "DowntimeActivity",
+      "DowntimeStatus",
+      "E4CharacterBackup",
+      "E4FullBackup",
+      "ENGLISH_TRANSLATIONS",
+      "EQUIPMENT_COMBAT_SCENARIOS",
+      "EncounterCombatRolls",
+      "EncounterConditionTracker",
+      "EncounterLootGenerator",
+      "EntityClosureReport",
+      "EquipmentCoverageDisposition",
+      "EquipmentCoverageEntry",
+      "EquipmentCoverageFamily",
+      "EquipmentMagicItemCoverageReport",
+      "ExhaustionEffects",
+      "FEAT_EXPANSION_2014",
+      "FEAT_EXPANSION_2024",
+      "FULL_BACKUP_VERSION",
+      "FULL_CASTER_CLASSES",
+      "FULL_CASTER_SLOT_TABLE",
+      "FULL_CHARACTER_CREATION_SCENARIOS",
+      "FactionKind",
+      "FactionRecord",
+      "FactionRelation",
+      "FactionStanding",
+      "FactionsPage",
+      "FavoriteItem",
+      "FeatAction",
+      "FeatCatalogPage",
+      "FeatCategory",
+      "FeatureClosureEntry",
+      "FeatureClosureStatus",
+      "FeatureMechanic",
+      "FeatureMutationResult",
+      "FightingStyleData",
+      "FontScale",
+      "FullBackupData",
+      "FullCharacterCertification",
+      "GOLDEN_CHARACTERS",
+      "GlobalSearch",
+      "GlobalSearchCategory",
+      "GlobalSearchEntry",
+      "HOMEBREW_LIBRARY_PREFERENCES_STORAGE_KEY",
+      "HOMEBREW_MARKETPLACE_REVOCATIONS_STORAGE_KEY",
+      "HOMEBREW_MARKETPLACE_SECURITY_EVENTS_STORAGE_KEY",
+      "HOMEBREW_MARKETPLACE_SOURCES_STORAGE_KEY",
+      "HOMEBREW_PACKAGES_CHANGED_EVENT",
+      "HOMEBREW_PACKAGES_STORAGE_KEY",
+      "HOMEBREW_PACKAGE_SNAPSHOTS_STORAGE_KEY",
+      "HOMEBREW_QUARANTINE_STORAGE_KEY",
+      "HOMEBREW_SOURCE_HEALTH_STORAGE_KEY",
+      "HardeningCheck",
+      "HardeningStatus",
+      "HelpCenter",
+      "HitDiePool",
+      "HomebrewContentRuntime",
+      "HomebrewCreatorDraft",
+      "HomebrewEntityConflict",
+      "HomebrewFeatRuntime",
+      "HomebrewItemRuntime",
+      "HomebrewLab",
+      "HomebrewLibraryPreference",
+      "HomebrewMarketplaceCatalogItem",
+      "HomebrewMarketplaceEntry",
+      "HomebrewMarketplaceResolution",
+      "HomebrewPackageCreator",
+      "HomebrewSpellRuntime",
+      "ITEM_EXPANSION_2014",
+      "ITEM_EXPANSION_2024",
+      "IntegritySection",
+      "InterfaceTranslationBridge",
+      "Inventory",
+      "InventoryEconomyPanel",
+      "ItemEffectRuntime",
+      "ItemTagMap",
+      "JourneyCharacter",
+      "JourneyDraft",
+      "LevelOneAncestryReadiness",
+      "LevelOneCombatReadiness",
+      "LevelOneDefenseReadiness",
+      "LevelOneOffenseReadiness",
+      "LevelOneRestReadiness",
+      "LevelOneSupportReadiness",
+      "LevelUpAsiMode",
+      "LevelUpAssistant",
+      "LevelUpHistoryEntry",
+      "LevelUpOptions",
+      "Library",
+      "LifeDomainHealing",
+      "LifecycleAudit",
+      "LifecycleCheckpoint",
+      "LifecycleSnapshot",
+      "LocationKind",
+      "LootKind",
+      "LootRecord",
+      "LootStatus",
+      "LootTrackerPage",
+      "MAX_ATTUNED_ITEMS",
+      "MagicArmorRuntime",
+      "MagicWeaponExtraDamage",
+      "MagicWeaponTarget",
+      "MartialClassRuntime",
+      "MatrixStatus",
+      "MegaScenario",
+      "MetamagicOption",
+      "MonkEdition",
+      "MonsterCombatState",
+      "MonsterDetail",
+      "MonsterLibrary",
+      "MotionPreference",
+      "NavGroup",
+      "NavItem",
+      "NpcDisposition",
+      "NpcManagerPage",
+      "NpcRecord",
+      "NpcRelationship",
+      "OFFICIAL_FEAT_CATALOG_2024",
+      "OPEN_RULES_LICENSE",
+      "OriginCatalogPage",
+      "PLAYER_JOURNEY_QA_SCENARIOS",
+      "PaladinCertificationRow",
+      "PaladinEdition",
+      "PersistentSpellKind",
+      "PersistentTrigger",
+      "PlayMode",
+      "PlayerFeedback",
+      "PlayerJourneyIntegrationSnapshot",
+      "PlayerJourneyQaScenario",
+      "PlayerJourneyQaScenarioId",
+      "PlayerQaScenario",
+      "PlayerTestCenter",
+      "PostReleaseQaReport",
+      "ProgressionAudit",
+      "PwaInstallGuide",
+      "PwaUpdateManager",
+      "QaScenarioStatus",
+      "QuestJournalPage",
+      "QuestObjective",
+      "QuestPriority",
+      "QuestRecord",
+      "QuestStatus",
+      "REFERENCE_ITEMS",
+      "REFERENCE_SPELLS",
+      "RELEASE_CATEGORIES",
+      "RELEASE_NOTES",
+      "REQUIRED_DIALOGS",
+      "REQUIRED_PLAYER_QA_SCENARIOS",
+      "RangerCertificationRow",
+      "RangerCompanion",
+      "RangerEdition",
+      "RecentItem",
+      "RecoveryRecord",
+      "ReferenceAbilities",
+      "ReferenceCombatant",
+      "ReferenceInventoryEntry",
+      "ReferenceItem",
+      "ReferenceSpell",
+      "ReleaseCategory",
+      "ReleaseChange",
+      "ReleaseCheck",
+      "ReleaseCheckStatus",
+      "ReleaseEntry",
+      "ReleaseGateInput",
+      "ReleaseHistory",
+      "ReleaseNotesDialog",
+      "ReleaseReadiness",
+      "RepeatSaveTiming",
+      "ResourcePool",
+      "ResourceRecovery",
+      "RestActionsPanel",
+      "RestActionsPanelProps",
+      "RestCenterPage",
+      "RestCompatibleCharacter",
+      "RestHistoryEntry",
+      "RestKind",
+      "RestOptions",
+      "RestPersistenceResult",
+      "RestRecoveryState",
+      "RestRulesetId",
+      "RestRuntimeIntegrationMount",
+      "RestState",
+      "RestSummary",
+      "RitualCastingMode",
+      "RogueEdition",
+      "RollMode",
+      "RouteAccessibility",
+      "RulesetCenterPage",
+      "RulesetData",
+      "RulesetId",
+      "RuntimeCategory",
+      "RuntimeCoverageCertification",
+      "RuntimeEntity",
+      "RuntimeTier",
+      "SKILL_ABILITIES",
+      "SPELL_EXPANSION_2014",
+      "SPELL_EXPANSION_2024",
+      "START_ROUTE_OPTIONS",
+      "STORAGE_RECOVERY_EVENT",
+      "SUBCLASS_EXPANSION_2014",
+      "SUBCLASS_EXPANSION_2024",
+      "SaveDamageRule",
+      "SessionPlan",
+      "SessionPlannerPage",
+      "SessionScene",
+      "SessionTask",
+      "SessionTimeline",
+      "Settings",
+      "SingleClassPlayableReadiness",
+      "SkillChoices",
+      "SorcererCertificationRow",
+      "SorcererEdition",
+      "SpellAbility",
+      "SpellAbilityKey",
+      "SpellBehavior",
+      "SpellCastingRuntimePanel",
+      "SpellCastingRuntimePanelProps",
+      "SpellCertificationDisposition",
+      "SpellCertificationEntry",
+      "SpellCertificationExpansionReport",
+      "SpellCertificationFamily",
+      "SpellCharacterCollection",
+      "SpellCompatibleCharacter",
+      "SpellDamageRelation",
+      "SpellEffectType",
+      "SpellFamilyCertification",
+      "SpellProgression",
+      "SpellResolutionType",
+      "SpellRulesetId",
+      "SpellRuntimeIntegrationMount",
+      "SpellRuntimeOutcome",
+      "SpellRuntimePlan",
+      "SpellRuntimeSnapshot",
+      "SpellRuntimeTier",
+      "SpellScalingData",
+      "SpellSlotPool",
+      "SpellSlotState",
+      "Spellbook",
+      "SpellcastingProfile",
+      "StableReleaseHardeningReport",
+      "StorageRecoveryCenter",
+      "SubclassActionType",
+      "SubclassCatalogPage",
+      "SubclassFeatureData",
+      "SubclassRuntime",
+      "SubclassRuntimeAction",
+      "SummonPersistentSpellRuntime",
+      "SurvivalState",
+      "UiDensity",
+      "UiPolishCheck",
+      "UiPolishEvidence",
+      "UiPolishStatus",
+      "ValidationSeverity",
+      "WarlockCertificationRow",
+      "WarlockEdition",
+      "WeaponCategory",
+      "WeaponConsistencyRow",
+      "WeaponMastery",
+      "WeaponMasteryOutcome",
+      "WeaponPropertyRuntime",
+      "WizardCertificationRow",
+      "WizardEdition",
+      "WorldAtlasPage",
+      "WorldLocation",
+      "abilityModifier",
+      "addClassLevel",
+      "addCombatLog",
+      "addInventoryEntries",
+      "addRecentItem",
+      "addSpellEffect",
+      "addTagToItem",
+      "advanceCampaignDays",
+      "advanceConditionDurations",
+      "advanceSpellEffects",
+      "advanceTurn",
+      "applyAbilityIncrease",
+      "applyClassFeatureUse",
+      "applyConcentrationDamage",
+      "applyDamage",
+      "applyDamageRelation",
+      "applyDamageToSpellTarget",
+      "applyHealing",
+      "applyHealingToSpellTarget",
+      "applyHomebrewFeatAbilityBonus",
+      "applyHomebrewSpellSelfEffect",
+      "applyLongRest",
+      "applyRest",
+      "applyRestInStorage",
+      "applyRestToCharacter",
+      "applyRestToCharacterCollection",
+      "applyRestToCharacters",
+      "applySavingThrowDamage",
+      "applyShortRest",
+      "auditCharacterIntegrity",
+      "auditCharacterLifecycle",
+      "auditClassProgression",
+      "auditLicensing",
+      "auditNavigationAccessibility",
+      "auditNavigationLocalization",
+      "automaticArmorClass",
+      "beginAutomatedTurn",
+      "beginCombatTurn",
+      "buildClassSubclassRuntimeClosureReport",
+      "buildEditedCharacter",
+      "buildEquipmentMagicItemCoverageReport",
+      "buildGlobalSearchEntries",
+      "buildLeveledCharacter",
+      "buildPostReleaseQaReport",
+      "buildReleaseReadinessAudit",
+      "buildSpellCertificationExpansionReport",
+      "buildSpellRuntimeSnapshot",
+      "buildStableReleaseHardeningReport",
+      "buildUiMobileAccessibilityAudit",
+      "calculateEffectiveArmorClass",
+      "calculateJourneyArmorClass",
+      "calculateLootTotal",
+      "calculateQuestProgress",
+      "calculateSuggestedArmorClass",
+      "canCastWithSlot",
+      "canCharacterCastSpell",
+      "canCreateSorcerySlot",
+      "canEquipItem",
+      "canPrepareSpell",
+      "canRecoverWizardSlot",
+      "canRitualCast",
+      "canSelectKnownSpell",
+      "canTakeOpportunityAttack",
+      "canUseClassFeature",
+      "canUseSneakAttack",
+      "canUseSubclassAction",
+      "cantripScalingDice",
+      "certifiedAbilityModifier",
+      "certifiedInitiative",
+      "certifiedPassivePerception",
+      "certifiedPointBuyRemaining",
+      "certifiedPointBuySpent",
+      "certifiedProficiencyBonus",
+      "certifiedSavingThrow",
+      "certifiedSkillBonus",
+      "certifiedSpellSaveDc",
+      "certifiedUnarmoredAc",
+      "certifyBarbarianBuilder",
+      "certifyCharacterLifecycle",
+      "certifyCharacterRecord",
+      "certifyClassEdition",
+      "certifyClassRuntime",
+      "certifyEquipmentItem",
+      "certifyPaladinBuilder",
+      "certifyRangerBuilder",
+      "certifySorcererBuilder",
+      "certifySpell",
+      "certifySubclassRuntime",
+      "certifyWarlockBuilder",
+      "certifyWizardBuilder",
+      "characterToEditDraft",
+      "characterToRestState",
+      "chooseD20",
+      "classifyFeat",
+      "classifyItem",
+      "classifySpell",
+      "classifySubclass",
+      "clearRecoveryRecords",
+      "combatReadiness",
+      "combineActiveControlEffects",
+      "compareJourneySnapshots",
+      "compareSheetAndPlayMode",
+      "concentrationAfterDamage",
+      "consumeInventoryItem",
+      "consumeSpellSlot",
+      "createBattlefieldZone",
+      "createCampaignCalendar",
+      "createCharacterBackup",
+      "createCharacterFromDraft",
+      "createCharacterTransfer",
+      "createCombatAutomationState",
+      "createCombatEffect",
+      "createCombatEncounter",
+      "createCombatLogEntry",
+      "createCombatTemplate",
+      "createCombatTurnState",
+      "createCombatant",
+      "createDeathSaveState",
+      "createEncounterFromCampaignEncounter",
+      "createEncounterFromTemplate",
+      "createEntityFromDraft",
+      "createFactionRecord",
+      "createFullBackup",
+      "createItemEffect",
+      "createLootRecord",
+      "createNpcRecord",
+      "createPackageFromDraft",
+      "createPlayerTestReport",
+      "createQuestRecord",
+      "createRollbackBackup",
+      "createSessionPlan",
+      "createSpellEffect",
+      "createWorldLocation",
+      "deleteTag",
+      "deserializeRestCompatibleCharacter",
+      "deserializeSpellCompatibleCharacter",
+      "discoverCharacterStorageKey",
+      "discoverClassCharacterStorageKey",
+      "discoverCombatStorageKey",
+      "discoverSpellStorageKey",
+      "dispelSpellEffects",
+      "downloadCharacterTransfer",
+      "downloadEmergencyStorageSnapshot",
+      "downloadPlayerTestReport",
+      "downloadRecoveryRecord",
+      "effectiveArmorClass",
+      "emptyDraft",
+      "endClassFeatureCondition",
+      "endCombatTurn",
+      "endConcentration",
+      "enrichClassProgression",
+      "ensureCombatantAutomation",
+      "expandPackIntoInventory",
+      "exportCharacters",
+      "exportFullBackup",
+      "formatClassSubclassRuntimeClosureSummary",
+      "formatEquipmentMagicItemCoverageSummary",
+      "formatModifier",
+      "formatMonsterModifier",
+      "formatSpellCertificationExpansionSummary",
+      "formatSpellSlots",
+      "generateDerivedStatsScenarios",
+      "generateMegaScenarios",
+      "generateSpellcastingScenarios",
+      "getAbilityModifier",
+      "getAccessibilityPerformanceReport",
+      "getActiveConditions",
+      "getActiveDefenseMovementModifiers",
+      "getAdvancedFeatRuntime",
+      "getAllTags",
+      "getAlwaysPreparedSpells",
+      "getAncestryAbilityOptions",
+      "getAncestryBuilderContract",
+      "getAncestryGrantedSpells",
+      "getAncestryRuntime",
+      "getAncestrySaveMode",
+      "getAncestryValidationErrors",
+      "getArcaneRecoveryBudget",
+      "getAssassinProgression",
+      "getAttunedItemCount",
+      "getAttunedMagicItemBonuses",
+      "getAttunementEligibility",
+      "getAverageHpGain",
+      "getBarbarianCombatFeatures",
+      "getBeastMasterProgression",
+      "getBrutalCriticalExtraDice",
+      "getBrutalStrike",
+      "getCantripScaleSteps",
+      "getCastableSlotLevels",
+      "getCatalogRenderBudget",
+      "getCharacterCreationJourneyCoverage",
+      "getCharacterFeatures",
+      "getCharacterInventoryItems",
+      "getCharacterJourneySnapshot",
+      "getCharacterSheetCertificationSnapshot",
+      "getCharacterSpellcastingAbility",
+      "getCharacterSpellcastingClasses",
+      "getCharacterValidationError",
+      "getChargeRecoveryAmount",
+      "getClassAsiLevels",
+      "getClassFeatureRuntimePlan",
+      "getClassLevel",
+      "getClassSpecificRuntimePolicyReport",
+      "getClassSpellIds",
+      "getClassSpellSlots",
+      "getClassSpellcastingAbility",
+      "getCombatStatusLabel",
+      "getCombatSummary",
+      "getCombinedCasterLevel",
+      "getCompanionChoiceCount",
+      "getCompanionStats",
+      "getConcentrationDc",
+      "getConcentrationSaveDc",
+      "getContentCompletionPlan",
+      "getContentIntegrityAudit",
+      "getControlSpellRuntime",
+      "getCriticalDamageFormula",
+      "getCunningStrikeOptions",
+      "getCunningStrikeSaveDc",
+      "getCurrentRelease",
+      "getDeathSaveStatus",
+      "getDefaultRestOptions",
+      "getDefaultSaveDamageRule",
+      "getDefaultSpellSaveRule",
+      "getDefaultSpellSlots",
+      "getDefenseMovementSpellRuntime",
+      "getDivineClassRuntime",
+      "getDivineSmiteDice",
+      "getDowntimeProgress",
+      "getDraconicSorcererProgression",
+      "getEffectiveMaxHp",
+      "getEffectiveSpeed",
+      "getEnglishTranslationCoverage",
+      "getEquipmentLoadSummary",
+      "getEquippedItems",
+      "getExhaustionEffects",
+      "getFavoredEnemyUses",
+      "getFeatAbilityBonuses",
+      "getFeaturesThroughLevel",
+      "getFightingStyleChoiceCount",
+      "getFightingStyles",
+      "getFlurryStrikeCount",
+      "getFullCharacterCertification",
+      "getGeneralFeatSlotCount",
+      "getGlobalCastableSlotLevels",
+      "getGrantedOriginFeatName",
+      "getHighestSpellLevel",
+      "getHitDieForClass",
+      "getHomebrewConflictWinner",
+      "getHomebrewContentRuntime",
+      "getHunterProgression",
+      "getHuntersMarkDamage",
+      "getInitiative",
+      "getInnateSorceryUses",
+      "getInspiringLeaderTempHp",
+      "getInterceptionReduction",
+      "getIntlLocale",
+      "getInventoryQuantity",
+      "getInventoryWeight",
+      "getItemCategoryLabel",
+      "getItemChargeState",
+      "getItemDamageProfile",
+      "getItemEffectRuntime",
+      "getItemHealingFormula",
+      "getItemRestoration",
+      "getItemRulesSummary",
+      "getItemSearchText",
+      "getItemSpellCastingPlan",
+      "getItemTempHp",
+      "getLatestLevelUp",
+      "getLayOnHandsActionType",
+      "getLayOnHandsPool",
+      "getLevelOneAncestryReadiness",
+      "getLevelOneCombatReadiness",
+      "getLevelOneDefenseReadiness",
+      "getLevelOneOffenseReadiness",
+      "getLevelOneRestReadiness",
+      "getLevelOneSupportReadiness",
+      "getLevelUpAdvancementReadiness",
+      "getLifeDomainHealing",
+      "getLocationDepth",
+      "getMagicArmorRuntime",
+      "getMagicWeaponExtraDamage",
+      "getMagicalCunningRecovery",
+      "getMartialArtsDie",
+      "getMartialClassRuntime",
+      "getMetamagicChoiceCount",
+      "getMetamagicChoiceCountForSorcerer",
+      "getMetamagicOptions",
+      "getMobileQuickItems",
+      "getMonkCombatFeatures",
+      "getMonkFocusPoints",
+      "getMonkSubclassFeatureLevels",
+      "getMonkSubclassLevel",
+      "getMonsterAbilityModifier",
+      "getMonsterMainAttackModifier",
+      "getMulticlassAttacksPerAction",
+      "getMulticlassConflictSummary",
+      "getMulticlassEligibility",
+      "getMulticlassHitDice",
+      "getMulticlassPactMagicSlots",
+      "getMulticlassProficiencyGains",
+      "getMulticlassSpellSlots",
+      "getMulticlassTransitionEligibility",
+      "getMysticArcanumSpellLevels",
+      "getNavGroupForPath",
+      "getNewFeaturesAtLevel",
+      "getNpcRelationshipCount",
+      "getOffhandDamageModifier",
+      "getOpenHandFeatures",
+      "getPaladinAuraSummary",
+      "getPaladinChannelDivinityUses",
+      "getPaladinCoreFeatures",
+      "getPaladinPreparedSpellLimit",
+      "getPaladinSubclassFeatureLevels",
+      "getPaladinSubclassLevel",
+      "getPaladinWeaponMasteryCount",
+      "getPassivePerception",
+      "getPassiveScore",
+      "getPlayerJourneyIntegrationSnapshot",
+      "getPointsFromSlot",
+      "getPreserveLifeHealing",
+      "getPrimalChampion",
+      "getProficiencyBonus",
+      "getQaScenario",
+      "getRageDamageBonus",
+      "getRageUses",
+      "getRangerCombatFeatures",
+      "getRangerCompanions",
+      "getRangerExpertiseCount",
+      "getRangerKnownSpellLimit",
+      "getRangerPreparedSpellLimit",
+      "getRangerSubclassFeatureLevels",
+      "getRangerSubclassLevel",
+      "getRangerWeaponMasteryCount",
+      "getReleaseReadiness",
+      "getRelentlessRageRecoveryHp",
+      "getRemainingClassResource",
+      "getRogueCombatFeatures",
+      "getRogueExpertiseCount",
+      "getRogueSubclassFeatureLevels",
+      "getRogueSubclassLevel",
+      "getRogueWeaponMasteryCount",
+      "getRuntimeCoverageCertification",
+      "getSavingThrowBonus",
+      "getSelectedAncestryOption",
+      "getSessionProgress",
+      "getShadowFeatures",
+      "getSheetPlayModeConsistencySnapshot",
+      "getSingleClassPlayableReadiness",
+      "getSkillBonus",
+      "getSneakAttackDice",
+      "getSorcererCantripCount",
+      "getSorcererCombatFeatures",
+      "getSorcererKnownSpellLimit",
+      "getSorcererPreparedSpellLimit",
+      "getSorcererSubclassFeatureLevels",
+      "getSorcererSubclassLevel",
+      "getSorcerousRestorationAmount",
+      "getSorceryPointMaximum",
+      "getSorcerySlotCost",
+      "getSorcerySlotMinimumLevel",
+      "getSpellAttackBonus",
+      "getSpellBehavior",
+      "getSpellCertificationFamilies",
+      "getSpellDurationRounds",
+      "getSpellGroupTitle",
+      "getSpellLevelGroups",
+      "getSpellLevelLabel",
+      "getSpellMechanicSummary",
+      "getSpellRollFormula",
+      "getSpellRuntimePlan",
+      "getSpellSaveDc",
+      "getSpellSource",
+      "getSpellcastingProfile",
+      "getSpellcastingStatsForClass",
+      "getSpellcastingStatsForSpell",
+      "getSubclassRuntime",
+      "getSubclassesForClass",
+      "getSummonPersistentSpellRuntime",
+      "getThiefProgression",
+      "getUiCatalogCoverage",
+      "getUnarmoredMovementBonus",
+      "getUnlockedSubclassFeatures",
+      "getUpcomingEvents",
+      "getWarlockCantripCount",
+      "getWarlockCombatFeatures",
+      "getWarlockKnownSpellLimit",
+      "getWarlockPactMagicProgression",
+      "getWarlockPreparedSpellLimit",
+      "getWarlockSubclassFeatureLevels",
+      "getWarlockSubclassLevel",
+      "getWeaponAbilityModifier",
+      "getWeaponAttackBonus",
+      "getWeaponConsistencyRows",
+      "getWeaponDamageSummary",
+      "getWeaponMastery",
+      "getWeaponMasteryChoiceCount",
+      "getWeaponMasteryCount",
+      "getWeaponPropertyRuntime",
+      "getWildMagicSorcererProgression",
+      "getWizardCantripCount",
+      "getWizardCombatFeatures",
+      "getWizardMaxSpellLevel",
+      "getWizardPreparedSpellLimit",
+      "getWizardSpellbookMinimum",
+      "getWizardSubclassFeatureLevels",
+      "getWizardSubclassLevel",
+      "hasEnglishTranslation",
+      "hasOfficialControlRuntime",
+      "hasValidationErrors",
+      "highestSpellLevel",
+      "hydrateCharacterRecord",
+      "inspectAndRepairFullBackup",
+      "inspectBackupCandidate",
+      "installHomebrewShareManifest",
+      "inventoryWeight",
+      "isAsiMilestone",
+      "isBeastMaster",
+      "isConsumableItem",
+      "isFeatEligible",
+      "isPaladin",
+      "isRageDamageWeapon",
+      "isSneakAttackWeapon",
+      "isSpellAvailableToClass",
+      "isSpellReadyToCast",
+      "isSubclassAvailable",
+      "loadCampaignCalendars",
+      "loadCampaigns",
+      "loadCharacters",
+      "loadCombatEncounters",
+      "loadCombatTemplates",
+      "loadDnd2014Ruleset",
+      "loadDnd2024Ruleset",
+      "loadFactionRecords",
+      "loadFavoriteMonsterIds",
+      "loadFavorites",
+      "loadHomebrewItems",
+      "loadHomebrewLibraryPreferences",
+      "loadHomebrewMarketplaceRevocations",
+      "loadHomebrewMarketplaceSecurityEvents",
+      "loadHomebrewMarketplaceSources",
+      "loadHomebrewMonsters",
+      "loadHomebrewPackageSnapshots",
+      "loadHomebrewPackages",
+      "loadHomebrewQuarantines",
+      "loadHomebrewSourceHealth",
+      "loadHomebrewSpells",
+      "loadItemTags",
+      "loadLevelUpHistory",
+      "loadLootRecords",
+      "loadNpcRecords",
+      "loadQuestRecords",
+      "loadRecentItems",
+      "loadRecoveryRecords",
+      "loadRestHistory",
+      "loadSessionPlans",
+      "loadWorldLocations",
+      "makeCharacter",
+      "makeEncounter",
+      "makeMonster",
+      "mergeAncestrySkills",
+      "mergeImportedHomebrewPackage",
+      "mergeImportedHomebrewShareManifest",
+      "mergeQaScenarioResults",
+      "mod",
+      "moveHomebrewPackagePriority",
+      "mutateCasterInCollection",
+      "mutateCharacterFeature",
+      "mutateFeatureInCollection",
+      "mutateFeatureInStorage",
+      "mutateTargetInCollection",
+      "navGroups",
+      "navItems",
+      "normalizeCharacterDraft",
+      "normalizeClassLevels",
+      "normalizeDraftForProgression",
+      "normalizeHitDice",
+      "normalizeHomebrewLibraryPreferences",
+      "normalizeRestState",
+      "normalizeSearchText",
+      "normalizeSpellSlots",
+      "parseCharacterBackup",
+      "parseCharacterCollection",
+      "parseCharacterTransfer",
+      "parseClassCharacterCollection",
+      "parseCombatTargetCollection",
+      "parseDamageFormula",
+      "parseFirstDiceExpression",
+      "parseFullBackup",
+      "parseSpellCharacterCollection",
+      "pb",
+      "performCharacterLongRest",
+      "performCharacterShortRest",
+      "persistCasterMutation",
+      "persistTargetMutation",
+      "preparedLimit",
+      "previewItemRuntime",
+      "proficiencyBonus",
+      "quarantineStorageValue",
+      "readJsonSafely",
+      "recoverHighestSpentSpellSlot",
+      "recoverHitDice",
+      "recoverItemCharges",
+      "recoverResources",
+      "recoverSpellSlots",
+      "reduceAncestryDamage",
+      "reduceRageDamage",
+      "registerConcentrationDamage",
+      "removeEffectsBrokenByAttack",
+      "removeEffectsBrokenByDamage",
+      "removeEffectsBrokenBySpellCast",
+      "removeFactionAndRelations",
+      "removeFragileItemEffects",
+      "removeLevelUpHistoryEntry",
+      "removeLocationAndDetach",
+      "removeRecoveryRecord",
+      "removeTagFromItem",
+      "renameTag",
+      "resetDeathSaves",
+      "resetHitDice",
+      "resetSpellSlots",
+      "resolveAttack",
+      "resolveCharacterRuleset",
+      "resolveDeathSave",
+      "resolveGlobalSpell",
+      "resolveHomebrewMarketplaceLibrary",
+      "resolveImportedCharacter",
+      "resolveSaveDamage",
+      "resolveSpellAbilityScore",
+      "resolveSpellDamagePipeline",
+      "resolveSpellHealing",
+      "resolveSpellSave",
+      "resolveSpellcastingAbility",
+      "resolveTargetCount",
+      "resolveTargetSave",
+      "resolveWeaponMastery",
+      "restStateToCharacter",
+      "restoreCharacterSpellSlot",
+      "restoreRestSnapshot",
+      "restoreSpellSlot",
+      "rollFormula",
+      "rollStyledWeaponDamage",
+      "runtimeApplyDamageRelation",
+      "runtimeApplyHealing",
+      "runtimeApplySavingThrowDamage",
+      "runtimeCanCastWithSlot",
+      "runtimeCantripScalingDice",
+      "runtimeConcentrationAfterDamage",
+      "runtimeConsumeSpellSlot",
+      "runtimeResolveTargetCount",
+      "runtimeRestoreSpellSlot",
+      "runtimeSpellAbilityModifier",
+      "runtimeSpellAttackBonus",
+      "runtimeSpellProficiencyBonus",
+      "runtimeSpellSaveDc",
+      "runtimeUpcastDiceCount",
+      "sanitizeAppSettings",
+      "sanitizeCampaignCalendar",
+      "sanitizeCombatEncounter",
+      "sanitizeCombatant",
+      "sanitizeFactionRecord",
+      "sanitizeLootRecord",
+      "sanitizeNpcRecord",
+      "sanitizeQuestRecord",
+      "sanitizeSessionPlan",
+      "sanitizeWorldLocation",
+      "saveCampaignCalendars",
+      "saveCampaigns",
+      "saveCharacters",
+      "saveCombatEncounters",
+      "saveCombatTemplates",
+      "saveFactionRecords",
+      "saveFavoriteMonsterIds",
+      "saveFavorites",
+      "saveHomebrewItems",
+      "saveHomebrewLibraryPreferences",
+      "saveHomebrewMarketplaceRevocations",
+      "saveHomebrewMarketplaceSecurityEvents",
+      "saveHomebrewMarketplaceSources",
+      "saveHomebrewMonsters",
+      "saveHomebrewPackageSnapshots",
+      "saveHomebrewPackages",
+      "saveHomebrewQuarantines",
+      "saveHomebrewSourceHealth",
+      "saveHomebrewSpells",
+      "saveItemTags",
+      "saveLevelUpSnapshot",
+      "saveLootRecords",
+      "saveNpcRecords",
+      "saveQuestRecords",
+      "saveRecentItems",
+      "saveRestHistory",
+      "saveSessionPlans",
+      "saveWorldLocations",
+      "searchGlobalEntries",
+      "serializeCharacterCollection",
+      "serializeClassCharacterCollection",
+      "serializeRestCompatibleCharacter",
+      "serializeSpellCollection",
+      "serializeSpellCompatibleCharacter",
+      "setCharacterConcentration",
+      "setInventoryItemQuantity",
+      "setInventoryQuantity",
+      "shouldRequestConcentrationSave",
+      "slugifyHomebrewId",
+      "sortCombatants",
+      "sortSpellsByLevelAndName",
+      "spellAbilityModifier",
+      "spellAttack",
+      "spellAttackBonus",
+      "spellProficiencyBonus",
+      "spellSaveDc",
+      "spellSlots",
+      "spendAutomatedMovement",
+      "spendAutomatedResource",
+      "spendCharacterSpellSlot",
+      "spendHitDie",
+      "spendHomebrewItemCharge",
+      "spendItemCharge",
+      "spendResource",
+      "spendSpellSlot",
+      "spendSubclassActionResource",
+      "summarizeBarbarianCertification",
+      "summarizePaladinCertification",
+      "summarizeQaCoverage",
+      "summarizeRangerCertification",
+      "summarizeSorcererCertification",
+      "summarizeWarlockCertification",
+      "summarizeWizardCertification",
+      "tickBattlefieldZones",
+      "tickCombatEffects",
+      "toggleFavoriteItem",
+      "toggleHomebrewPackage",
+      "toggleItemAttunement",
+      "translate",
+      "translateUiText",
+      "upcastDiceCount",
+      "useAppSettings",
+      "useAutosavedDraft",
+      "usePersistentState",
+      "usedHitDice",
+      "usedSpellSlots",
+      "validateCharacterDraft",
+      "weaponAbilityModifier",
+      "weaponAttackBonus",
+      "weaponDamageSummary",
+      "weaponMastery",
+      "writeJsonSafely"
+    ]
+  },
+  "status": "READY"
+}

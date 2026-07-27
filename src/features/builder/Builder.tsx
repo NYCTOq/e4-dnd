@@ -46,6 +46,8 @@ import type { CharacterDraft } from "../../core/character/character.types";
 import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
 import { NumberStepper } from "../../shared/forms/NumberStepper";
+import { AncestryChoicePanel } from "./AncestryChoicePanel";
+import { getAncestryBuilderContract, mergeAncestrySkills } from "../../core/rulesets/ancestryChoiceRules";
 import { CharacterInventoryManager, CharacterSpellSelector, calculateEffectiveArmorClass, calculateSuggestedArmorClass, createCharacterFromDraft, emptyDraft, getCharacterInventoryItems, getInventoryWeight, normalizeCharacterDraft } from "../characters/characterShared";
 
 export function Builder({
@@ -138,6 +140,10 @@ export function Builder({
 
   const selectedSubrace = useMemo(() => selectedRace?.subraces?.find((item) => item.name === draft.subrace) ?? null, [selectedRace, draft.subrace]);
   const selectedBackground = useMemo(() => activeRulesetData?.backgrounds.find((item) => item.name === draft.background) ?? null, [activeRulesetData, draft.background]);
+  const ancestryContract = useMemo(
+    () => getAncestryBuilderContract(draft.ruleset, selectedRace, draft.subrace, draft.level),
+    [draft.ruleset, draft.subrace, draft.level, selectedRace],
+  );
   const originBonuses = useMemo(() => getOriginAbilityBonuses(
     draft.ruleset,
     selectedRace,
@@ -152,7 +158,7 @@ export function Builder({
   ), [draft.ruleset, draft.originAbilityPrimary, draft.originAbilitySecondary, draft.originAbilityTertiary, draft.originAbilityMode, draft.flexibleRaceAbilityPrimary, draft.flexibleRaceAbilitySecondary, selectedRace, selectedSubrace, selectedBackground]);
   const asiBudget = getAsiBudget(draft.level, draft.className, draft.ruleset, draft.featIds.length);
   const preFeatAbilities = useMemo(() => applyAbilityLayers(draft.abilities, originBonuses, draft.abilityScoreIncreases), [draft.abilities, originBonuses, draft.abilityScoreIncreases]);
-  const selectedFeatData = useMemo(() => (activeRulesetData?.feats ?? []).filter((feat) => draft.featIds.includes(feat.id)), [activeRulesetData, draft.featIds]);
+  const selectedFeatData = useMemo(() => (activeRulesetData?.feats ?? []).filter((feat) => draft.featIds.includes(feat.id) || feat.id === draft.ancestryOriginFeatId), [activeRulesetData, draft.featIds, draft.ancestryOriginFeatId]);
   const featAbilityBonuses = useMemo(() => getFeatAbilityBonuses(selectedFeatData, draft.featChoices), [selectedFeatData, draft.featChoices]);
   const finalAbilities = useMemo(() => applyAbilityLayers(preFeatAbilities, featAbilityBonuses, {}), [preFeatAbilities, featAbilityBonuses]);
   const generalFeatSlots = useMemo(() => getGeneralFeatSlotCount(draft.level, draft.className, draft.ruleset), [draft.level, draft.className, draft.ruleset]);
@@ -185,7 +191,7 @@ export function Builder({
   const grantedSkills = useMemo(() => getGrantedSkills(selectedBackground), [selectedBackground]);
   const availableClassSkills = useMemo(() => getAvailableClassSkills(selectedClass, selectedBackground), [selectedClass, selectedBackground]);
   const normalizedClassSkills = useMemo(() => normalizeClassSkillChoices(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
-  const finalSkillProficiencies = useMemo(() => buildFinalSkillProficiencies(draft.skillProficiencies, selectedClass, selectedBackground), [draft.skillProficiencies, selectedClass, selectedBackground]);
+  const finalSkillProficiencies = useMemo(() => mergeAncestrySkills(buildFinalSkillProficiencies(draft.skillProficiencies, selectedClass, selectedBackground), ancestryContract, draft.ancestrySkillProficiencies), [draft.skillProficiencies, selectedClass, selectedBackground, ancestryContract, draft.ancestrySkillProficiencies]);
   const expertiseLimit = getExpertiseLimit(draft.className, draft.level, draft.ruleset);
   const baseAbilityBudgetError = getAbilityBudgetError(abilityMethod, draft.abilities, 0);
   const highLevelAbilityError = getHighLevelAbilityError(draft, asiBudget);
@@ -568,7 +574,19 @@ export function Builder({
                       setDraft((current) => ({
                         ...current,
                         ruleset: nextRuleset,
-                        race: "", subrace: "", className: "", subclass: "", background: "", originAbilityPrimary: undefined, originAbilitySecondary: undefined,
+                        race: "",
+                        subrace: "",
+                        className: "",
+                        subclass: "",
+                        background: "",
+                        ancestryChoiceId: undefined,
+                        ancestrySkillProficiencies: [],
+                        ancestryOriginFeatId: undefined,
+                        ancestryLanguageChoices: [],
+                        ancestrySize: undefined,
+                        ancestrySpellIds: [],
+                        originAbilityPrimary: undefined,
+                        originAbilitySecondary: undefined,
                         knownSpellIds: [], preparedSpellIds: [], spellSlots: [], featIds: [], skillProficiencies: [], expertiseSkills: [], toolProficiencies: [], languages: [],
                         inventory: [], equippedArmorId: null, equippedShieldId: null, equippedWeaponIds: [],
                       }));
@@ -613,7 +631,16 @@ export function Builder({
                     <select
                       value={draft.race}
                       disabled={activeRulesetLoading || !!activeRulesetError || !activeRulesetData}
-                      onChange={(event) => setDraft((current) => ({ ...current, race: event.target.value, subrace: "", flexibleRaceAbilityPrimary: undefined, flexibleRaceAbilitySecondary: undefined }))}
+                      onChange={(event) => setDraft((current) => ({ ...current, race: event.target.value,
+                          subrace: "",
+                          ancestryChoiceId: undefined,
+                          ancestrySkillProficiencies: [],
+                          ancestryOriginFeatId: undefined,
+                          ancestryLanguageChoices: [],
+                          ancestrySize: undefined,
+                          ancestrySpellIds: [],
+                          flexibleRaceAbilityPrimary: undefined,
+                          flexibleRaceAbilitySecondary: undefined }))}
                     >
                       <option value="">
                         {activeRulesetLoading ? `${rulesetDefinition.raceTerm} data yükleniyor...` : `${rulesetDefinition.raceTerm} seç`}
@@ -742,6 +769,14 @@ export function Builder({
                   </label>
                 </> : null}
               </div>
+
+              <AncestryChoicePanel
+                draft={draft}
+                race={selectedRace}
+                feats={activeRulesetData?.feats ?? []}
+                spells={activeRulesetData?.spells ?? []}
+                onChange={setDraft}
+              />
 
               {activeRulesetError ? (
                 <div className="empty-panel">

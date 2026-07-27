@@ -1,4 +1,3 @@
-/* E4 D&D style entrypoint. Keep imports in this order to preserve cascade behavior. */
 @import "./styles/00-base.css";
 @import "./styles/01-spellbook.css";
 @import "./styles/02-inventory.css";
@@ -17,56 +16,55 @@
 @import "./styles/15-play-mode.css";
 @import "./styles/16-route-loading.css";
 @import "./styles/17-pwa-update.css";
-
 @import "./styles/18-pwa-install-guide.css";
-
 @import "./styles/19-dashboard-navigation.css";
 @import "./styles/20-settings.css";
-
 @import "./styles/21-accessibility.css";
-
 @import "./styles/22-autosave.css";
-
 @import "./styles/23-character-compare.css";
-
 @import "./styles/24-command-palette.css";
-
 @import "./styles/25-performance.css";
-
 @import "./styles/26-release-notes.css";
-
 @import "./styles/27-help-center.css";
-
 @import "./styles/28-global-search.css";
-
 @import "./styles/29-favorites-recents.css";
-
-
 @import "./styles/30-tags-collections.css";
-
 @import "./styles/31-session-planner.css";
-
-
 @import "./styles/32-npc-manager.css";
-
 @import "./styles/33-world-atlas.css";
-
 @import "./styles/34-factions.css";
-
 @import "./styles/35-quest-journal.css";
-
 @import "./styles/36-loot-tracker.css";
-
 @import "./styles/37-combat-tracker.css";
-
 @import "./styles/38-rest-automation.css";
-
 @import "./styles/39-campaign-calendar.css";
 @import "./styles/40-player-test.css";
 @import "./styles/41-character-editor.css";
 @import "./styles/42-character-management.css";
-
 @import "./styles/43-ui-mobile-polish.css";
+@import "./styles/44-mobile-accessibility-performance.css";
+
+/* E4 D&D style entrypoint. Keep imports in this order to preserve cascade behavior. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Ruleset Foundation V1 */
@@ -91,5 +89,3 @@
 
 /* Accessible button-only number controls */
 .number-stepper{display:grid;grid-template-columns:44px minmax(52px,1fr) 44px;align-items:center;gap:8px;width:100%;max-width:190px}.number-stepper-button{min-width:44px;min-height:44px;border-radius:12px;font-size:1.35rem;font-weight:900;line-height:1;touch-action:manipulation}.number-stepper-value{display:grid;place-items:center;min-height:44px;padding:0 10px;border:1px solid var(--border-color);border-radius:12px;background:rgba(255,255,255,.05);font-weight:900;font-variant-numeric:tabular-nums}.number-stepper-button:disabled{opacity:.42;cursor:not-allowed}@media(max-width:700px){.number-stepper{grid-template-columns:48px minmax(54px,1fr) 48px;max-width:none}.number-stepper-button,.number-stepper-value{min-height:48px}.ability-input{align-items:stretch}.ability-input .number-stepper{width:100%}}
-
-@import "./styles/44-mobile-accessibility-performance.css";

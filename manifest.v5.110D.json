@@ -1,0 +1,10 @@
+{
+  "name": "E4 D&D Equipment & Combat Desktop Mobile E2E Certification",
+  "version": "5.110D",
+  "requires": [
+    "v5.110A",
+    "v5.110B",
+    "v5.110C"
+  ],
+  "runtime_changes": false
+}

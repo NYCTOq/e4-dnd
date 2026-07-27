@@ -1,0 +1,2 @@
+import{describe,expect,it}from"vitest";import{DEFAULT_CERTIFICATION_CATALOG}from"./defaultCertificationCatalog";import{generatePairwiseScenarios}from"./pairwiseScenarioGenerator";
+describe("pairwise certification generator",()=>{it("creates deterministic unique scenarios",()=>{const first=generatePairwiseScenarios(DEFAULT_CERTIFICATION_CATALOG);const second=generatePairwiseScenarios(DEFAULT_CERTIFICATION_CATALOG);expect(first).toEqual(second);expect(new Set(first.map(item=>item.id)).size).toBe(first.length);expect(first.length).toBeGreaterThan(30);});});

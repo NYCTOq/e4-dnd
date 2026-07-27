@@ -1,0 +1,15 @@
+{
+  "name": "E4 D&D Equipment & Combat Reference Oracle",
+  "version": "5.110A",
+  "files": [
+    "APPLY_EQUIPMENT_COMBAT_REFERENCE_ORACLE_v5.110A.ps1",
+    "README_v5.110A.md",
+    "scripts/apply-equipment-combat-v5-110A.mjs",
+    "scripts/generate-equipment-combat-certification-report.mjs",
+    "src/certification/matrix/equipmentCombatScenarioMatrix.test.ts",
+    "src/certification/matrix/equipmentCombatScenarioMatrix.ts",
+    "src/certification/oracle/equipmentCombatOracle.test.ts",
+    "src/certification/oracle/equipmentCombatOracle.ts",
+    "src/certification/reference/equipmentCombat.reference.ts"
+  ]
+}

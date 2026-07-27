@@ -1,0 +1,8 @@
+{
+  "name": "E4 D&D Rest Recovery Runtime Matrix Mega",
+  "version": "5.111B",
+  "requires": [
+    "v5.111A"
+  ],
+  "runtime_changes": true
+}

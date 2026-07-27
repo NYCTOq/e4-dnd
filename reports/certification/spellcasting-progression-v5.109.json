@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-07-24T14:19:37.266Z",
+  "package": "v5.109 Spellcasting & Spell Progression Mega",
+  "casterClasses": 8,
+  "rulesets": 2,
+  "levels": 20,
+  "scenarios": 208,
+  "progressionTypes": [
+    "full",
+    "half",
+    "pact",
+    "third"
+  ],
+  "commands": {
+    "oracle": "npm run certify:spellcasting:oracle",
+    "matrix": "npm run certify:spellcasting:matrix",
+    "e2e": "npm run certify:spellcasting:e2e",
+    "release": "npm run certify:spellcasting:release"
+  }
+}

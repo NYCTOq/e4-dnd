@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Level-Up Canonical Runtime Differential Matrix Mega",
+  "version": "5.114B",
+  "requires": [
+    "v5.114A.1"
+  ],
+  "runtime_changes": true,
+  "runtime": "src/core/rulesets/levelUpProgressionRules.ts"
+}

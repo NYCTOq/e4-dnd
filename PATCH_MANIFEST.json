@@ -1,0 +1,15 @@
+{
+  "version": "5.104.0",
+  "name": "Ancestry & Species Builder Completion Mega",
+  "files": [
+    "src/core/rulesets/ancestryChoiceRules.ts",
+    "src/core/rulesets/ancestryChoiceRules.test.ts",
+    "src/features/builder/AncestryChoicePanel.tsx",
+    "scripts/apply-ancestry-builder-mega-patch.mjs",
+    "APPLY_ANCESTRY_MEGA_PATCH.ps1"
+  ],
+  "rulesets": [
+    "dnd_2014",
+    "dnd_2024"
+  ]
+}

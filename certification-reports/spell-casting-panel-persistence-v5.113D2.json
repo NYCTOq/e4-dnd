@@ -1,0 +1,19 @@
+{
+  "package": "v5.113D2",
+  "generatedAt": "2026-07-27T08:56:09.782Z",
+  "component": "src/components/spells/SpellCastingRuntimePanel.tsx",
+  "bridge": "src/core/rulesets/spellCastingPersistenceBridge.ts",
+  "coverage": [
+    "spell save DC display",
+    "spell attack bonus display",
+    "normal spell slots",
+    "pact spell slots",
+    "slot spend/restore",
+    "concentration start/stop",
+    "combat target damage",
+    "combat target healing",
+    "array and wrapped storage",
+    "homebrew metadata preservation"
+  ],
+  "next": "contract-driven Spellbook / Play Mode / Combat Tracker wiring and E2E"
+}

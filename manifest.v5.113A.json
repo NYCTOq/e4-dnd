@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Spell Runtime Combat Oracle Discovery Mega",
+  "version": "5.113A",
+  "requires": [
+    "v5.112D3"
+  ],
+  "runtime_changes": false,
+  "domain": "spell-runtime-combat"
+}

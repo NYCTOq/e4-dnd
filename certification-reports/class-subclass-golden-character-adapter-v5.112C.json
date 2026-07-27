@@ -1,0 +1,22 @@
+{
+  "package": "v5.112C",
+  "generatedAt": "2026-07-25T13:11:05.810Z",
+  "adapter": "src/core/rulesets/classSubclassCharacterAdapter.ts",
+  "goldenClasses": [
+    "fighter",
+    "cleric",
+    "wizard",
+    "rogue",
+    "warlock",
+    "monk"
+  ],
+  "coverage": [
+    "single-class migration",
+    "multiclass level boundaries",
+    "subclass unlock state",
+    "limited-use resolution",
+    "short/long rest persistence",
+    "JSON round trip",
+    "homebrew field preservation"
+  ]
+}

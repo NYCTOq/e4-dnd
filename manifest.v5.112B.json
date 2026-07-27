@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Class Subclass Runtime Differential Matrix Mega",
+  "version": "5.112B",
+  "requires": [
+    "v5.112A"
+  ],
+  "runtime_changes": true,
+  "runtime": "src/core/rulesets/classSubclassRuntimeRules.ts"
+}

@@ -1,0 +1,14 @@
+.rest-runtime-integration-mount {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 760px);
+  margin: 16px auto;
+  padding-inline: 12px;
+}
+
+@media (max-width: 640px) {
+  .rest-runtime-integration-mount {
+    margin-block: 10px;
+    padding-inline: 8px;
+  }
+}

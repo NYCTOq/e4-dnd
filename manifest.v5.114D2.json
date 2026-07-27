@@ -1,0 +1,10 @@
+{
+  "name": "E4 D&D Level-Up Panel Persistence ASI Feat Subclass Flow Mega",
+  "version": "5.114D2",
+  "requires": [
+    "v5.114D1"
+  ],
+  "runtime_changes": true,
+  "panel": "src/components/levelup/LevelUpRuntimePanel.tsx",
+  "bridge": "src/core/rulesets/levelUpPersistenceBridge.ts"
+}

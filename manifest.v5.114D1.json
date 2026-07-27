@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Level-Up UI Contract Discovery Mega",
+  "version": "5.114D1",
+  "requires": [
+    "v5.114C.1"
+  ],
+  "runtime_changes": false,
+  "domain": "level-up-ui-integration"
+}

@@ -1,0 +1,17 @@
+{
+  "package": "v5.112D2",
+  "generatedAt": "2026-07-25T13:26:55.201Z",
+  "component": "src/components/classFeatures/ClassFeaturePanel.tsx",
+  "persistenceBridge": "src/core/rulesets/classFeaturePersistenceBridge.ts",
+  "fixedTestIds": [
+    "class-feature-panel",
+    "class-feature-empty"
+  ],
+  "dynamicTestIds": [
+    "class-feature-<id>",
+    "class-feature-uses-<id>",
+    "class-feature-spend-<id>",
+    "class-feature-restore-<id>"
+  ],
+  "next": "contract-driven Character Detail / Play Mode wiring and E2E"
+}

@@ -1,0 +1,17 @@
+{
+  "package": "v5.112B",
+  "domain": "class-subclass-runtime",
+  "generatedAt": "2026-07-25T13:11:05.210Z",
+  "runtime": "src/core/rulesets/classSubclassRuntimeRules.ts",
+  "coverage": [
+    "2014 subclass schedules",
+    "2024 subclass schedules",
+    "feature unlock",
+    "class-level boundaries",
+    "multiclass total level",
+    "limited uses",
+    "resource recovery",
+    "activation normalization",
+    "malformed feature normalization"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "package": "v5.111B",
+  "domain": "rest-recovery-resource-runtime",
+  "generatedAt": "2026-07-25T12:19:56.626Z",
+  "runtimeModule": "src/core/rulesets/restRecoveryRules.ts"
+}

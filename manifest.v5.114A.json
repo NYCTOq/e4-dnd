@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Level-Up Progression Oracle Discovery Mega",
+  "version": "5.114A",
+  "requires": [
+    "v5.113D3"
+  ],
+  "runtime_changes": false,
+  "domain": "level-up-progression"
+}

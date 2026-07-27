@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Spell Runtime Combat Differential Matrix Mega",
+  "version": "5.113B",
+  "requires": [
+    "v5.113A"
+  ],
+  "runtime_changes": true,
+  "runtime": "src/core/rulesets/spellRuntimeCombatRules.ts"
+}

@@ -1,0 +1,4 @@
+import{mkdir,writeFile}from"node:fs/promises";import{resolve}from"node:path";
+const reportDir=resolve(process.cwd(),"reports/certification");await mkdir(reportDir,{recursive:true});
+const result={generatedAt:new Date().toISOString(),status:"FRAMEWORK_READY",commands:{quick:"npm run certify:quick",catalog:"npm run certify:catalog",builder:"npm run certify:builder",release:"npm run certify:release"},notes:["Reference Oracle v5.105A must be installed first.","Builder E2E scenarios will expand from golden characters."]};
+await writeFile(resolve(reportDir,"results.json"),JSON.stringify(result,null,2)+"\n","utf8");await writeFile(resolve(reportDir,"failures.md"),"# Certification Failures\n\nNo certification run has failed yet.\n","utf8");console.log(`Certification report scaffold generated at ${reportDir}`);

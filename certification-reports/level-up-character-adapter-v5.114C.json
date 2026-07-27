@@ -1,0 +1,22 @@
+{
+  "package": "v5.114C",
+  "domain": "level-up-progression",
+  "generatedAt": "2026-07-27T09:52:02.683Z",
+  "adapter": "src/core/rulesets/levelUpCharacterAdapter.ts",
+  "coverage": [
+    "single-class level-up",
+    "multiclass selected class level-up",
+    "HP gain",
+    "current HP preservation",
+    "proficiency bonus refresh",
+    "cantrip tier refresh",
+    "spell tier refresh",
+    "ASI ability increase",
+    "feat selection",
+    "subclass pending choice",
+    "level-up history",
+    "legacy migration",
+    "homebrew preservation",
+    "JSON round-trip"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-07-23T12:38:54.004Z",
+  "package": "v5.108 Ability, Proficiency & Derived Stats Mega",
+  "oracleCases": {
+    "modifierScores": 26,
+    "coreSkills": 18,
+    "proficiencyLevels": 20,
+    "derivedMatrix": 240
+  },
+  "browserCases": {
+    "rulesets": 2,
+    "projects": [
+      "desktop-chromium",
+      "mobile-chromium"
+    ],
+    "expectedTests": 8
+  },
+  "covered": [
+    "standard array",
+    "point buy",
+    "ability modifiers",
+    "proficiency bonus",
+    "saving throws",
+    "skill proficiency",
+    "expertise",
+    "initiative",
+    "passive perception",
+    "spell save DC",
+    "unarmored AC"
+  ]
+}

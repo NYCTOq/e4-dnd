@@ -24,8 +24,17 @@ export function normalizeClassSkillChoices(selected: string[], classData: DndCla
   return uniqueStrings(selected).filter((skill) => allowed.has(skill)).slice(0, classData?.skillChoices.choose ?? 0);
 }
 
-export function buildFinalSkillProficiencies(selected: string[], classData: DndClassData | null, background: DndBackgroundData | null) {
-  return uniqueStrings([...getGrantedSkills(background), ...normalizeClassSkillChoices(selected, classData, background)]);
+export function buildFinalSkillProficiencies(
+  selected: string[],
+  classData: DndClassData | null,
+  background: DndBackgroundData | null,
+  ancestrySkills: string[] = [],
+) {
+  return uniqueStrings([
+    ...getGrantedSkills(background),
+    ...normalizeClassSkillChoices(selected, classData, background),
+    ...ancestrySkills,
+  ]);
 }
 
 export function normalizeExpertise(expertise: string[], proficientSkills: string[], limit: number) {

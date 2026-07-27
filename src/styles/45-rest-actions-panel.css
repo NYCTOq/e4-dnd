@@ -1,0 +1,55 @@
+.rest-actions-panel {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  border-radius: 14px;
+  background: color-mix(in srgb, Canvas 94%, currentColor 6%);
+}
+
+.rest-actions-panel__header {
+  display: grid;
+  gap: 4px;
+}
+
+.rest-actions-panel__header h2,
+.rest-actions-panel__header p {
+  margin: 0;
+}
+
+.rest-actions-panel__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.rest-actions-panel__buttons button {
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.rest-actions-panel__buttons button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.rest-actions-panel__result {
+  min-height: 24px;
+}
+
+.rest-actions-panel.is-compact {
+  padding: 12px;
+}
+
+@media (max-width: 640px) {
+  .rest-actions-panel__buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .rest-actions-panel__buttons button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "E4 D&D Level-Up UI Wiring E2E Final Closure Mega",
+  "version": "5.114D3",
+  "requires": [
+    "v5.114D2"
+  ],
+  "runtime_changes": true,
+  "expected_core_tests": 2943,
+  "expected_logical_e2e": 4,
+  "expected_total": 2947
+}

@@ -1,0 +1,9 @@
+import {REFERENCE_ITEMS,type ReferenceCombatant} from "../reference/equipmentCombat.reference";
+import {automaticArmorClass,inventoryWeight,weaponAttackBonus,weaponDamageSummary} from "../oracle/equipmentCombatOracle";
+const item=(id:string)=>REFERENCE_ITEMS.find(i=>i.id===id)!;
+const base=(level:number,str:number,dex:number):ReferenceCombatant=>({level,abilities:{str,dex,con:14,int:10,wis:10,cha:10},fightingStyleIds:[],equippedWeaponIds:[],armorClass:10,armorClassMode:"auto",equippedArmorId:null,equippedShieldId:null,inventory:[],maxHp:10,className:"Fighter",gold:0,knownSpellIds:[],preparedSpellIds:[]});
+export const EQUIPMENT_COMBAT_SCENARIOS=[
+...[1,5,9,13,17,20].flatMap(level=>[10,14,18].flatMap(str=>[10,14,18].flatMap(dex=>{const c=base(level,str,dex);return[{id:`attack-longsword-l${level}-s${str}-d${dex}`,actual:weaponAttackBonus(c,item("longsword"))},{id:`attack-rapier-l${level}-s${str}-d${dex}`,actual:weaponAttackBonus(c,item("rapier"))},{id:`attack-longbow-l${level}-s${str}-d${dex}`,actual:weaponAttackBonus(c,item("longbow"))},{id:`damage-longsword-l${level}-s${str}-d${dex}`,actual:weaponDamageSummary(c,item("longsword"))}]}))),
+...[{armor:null,shield:false},{armor:"leather",shield:false},{armor:"scale-mail",shield:false},{armor:"chain-mail",shield:false},{armor:"chain-mail",shield:true}].flatMap(loadout=>[8,10,12,14,16,18,20].map(dex=>{const c=base(1,10,dex);c.inventory=[...(loadout.armor?[{itemId:loadout.armor,quantity:1}]:[]),...(loadout.shield?[{itemId:"shield",quantity:1}]:[])];c.equippedArmorId=loadout.armor;c.equippedShieldId=loadout.shield?"shield":null;return{id:`ac-${loadout.armor??"none"}-${loadout.shield?"shield":"no-shield"}-d${dex}`,actual:automaticArmorClass(c,REFERENCE_ITEMS)}})),
+...[0,1,2,5,10].map(quantity=>({id:`weight-rope-q${quantity}`,actual:inventoryWeight([{itemId:"rope",quantity}],REFERENCE_ITEMS)}))
+] as const;

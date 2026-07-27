@@ -1,0 +1,13 @@
+{
+  "package": "v5.111D2",
+  "generatedAt": "2026-07-25T12:34:22.582Z",
+  "component": "src/components/rest/RestActionsPanel.tsx",
+  "persistenceBridge": "src/core/rulesets/restRecoveryPersistenceBridge.ts",
+  "testIds": [
+    "rest-actions-panel",
+    "rest-short-button",
+    "rest-long-button",
+    "rest-result"
+  ],
+  "next": "contract-driven page wiring and desktop/mobile E2E"
+}

@@ -1,0 +1,21 @@
+{
+  "package": "v5.114B",
+  "domain": "level-up-progression",
+  "generatedAt": "2026-07-27T09:52:02.171Z",
+  "runtime": "src/core/rulesets/levelUpProgressionRules.ts",
+  "coverage": [
+    "level 1-20 clamp",
+    "proficiency bonus",
+    "ASI progression",
+    "fighter extra ASI",
+    "rogue extra ASI",
+    "2014 subclass unlock",
+    "2024 subclass unlock",
+    "HP gain",
+    "multiclass total level",
+    "spell tier",
+    "cantrip tier",
+    "single-class level-up mutation",
+    "milestone summary"
+  ]
+}

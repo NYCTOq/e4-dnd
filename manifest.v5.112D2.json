@@ -1,0 +1,10 @@
+{
+  "name": "E4 D&D Class Feature Panel Persistence Bridge Mega",
+  "version": "5.112D2",
+  "requires": [
+    "v5.112D1"
+  ],
+  "runtime_changes": true,
+  "component": "src/components/classFeatures/ClassFeaturePanel.tsx",
+  "bridge": "src/core/rulesets/classFeaturePersistenceBridge.ts"
+}

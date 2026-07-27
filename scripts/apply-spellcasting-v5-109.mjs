@@ -1,0 +1,14 @@
+import {readFile,writeFile} from "node:fs/promises";
+import {resolve} from "node:path";
+const path=resolve(process.cwd(),"package.json");
+const pkg=JSON.parse(await readFile(path,"utf8"));
+pkg.version="5.109.0";
+pkg.scripts??={};
+pkg.scripts["certify:spellcasting:oracle"]="vitest run src/certification/oracle/spellcastingOracle.test.ts";
+pkg.scripts["certify:spellcasting:matrix"]="vitest run src/certification/matrix/spellcastingScenarioMatrix.test.ts";
+pkg.scripts["certify:spellcasting:e2e"]="playwright test e2e/certification-spellcasting-smoke.spec.ts --workers=2";
+pkg.scripts["certify:spellcasting:report"]="node scripts/generate-spellcasting-certification-report.mjs";
+pkg.scripts["certify:spellcasting:quick"]="npm run certify:spellcasting:oracle && npm run certify:spellcasting:matrix && npm run build && npm run certify:spellcasting:report";
+pkg.scripts["certify:spellcasting:release"]="npm run certify:spellcasting:quick && npm run certify:spellcasting:e2e";
+await writeFile(path,JSON.stringify(pkg,null,2)+"\n");
+console.log("v5.109 spellcasting scripts installed.");

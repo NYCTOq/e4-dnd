@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Class Subclass Golden Character Adapter Mega",
+  "version": "5.112C",
+  "requires": [
+    "v5.112B"
+  ],
+  "runtime_changes": true,
+  "adapter": "src/core/rulesets/classSubclassCharacterAdapter.ts"
+}

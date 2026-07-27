@@ -1,0 +1,29 @@
+{
+  "package": "v5.114D3",
+  "domain": "level-up-progression-ui",
+  "generatedAt": "2026-07-27T10:19:40.036Z",
+  "status": "GREEN",
+  "certified": {
+    "core": 2943,
+    "logicalE2E": 4,
+    "total": 2947
+  },
+  "requiredFiles": [
+    "src/certification/reference/levelUpProgression.reference.ts",
+    "src/core/rulesets/levelUpProgressionRules.ts",
+    "src/core/rulesets/levelUpCharacterAdapter.ts",
+    "src/core/rulesets/levelUpPersistenceBridge.ts",
+    "src/components/levelup/LevelUpRuntimePanel.tsx",
+    "src/components/levelup/LevelUpRuntimeIntegrationMount.tsx",
+    "e2e/level-up-runtime-ui-v5.114D3.spec.ts",
+    "dist/index.html",
+    "dist/manifest.webmanifest",
+    "dist/sw.js",
+    "certification-reports/level-up-progression-discovery-v5.114A.json",
+    "certification-reports/level-up-runtime-v5.114B.json",
+    "certification-reports/level-up-character-adapter-v5.114C.json",
+    "certification-reports/level-up-ui-contract-v5.114D1.json",
+    "certification-reports/level-up-panel-persistence-v5.114D2.json"
+  ],
+  "missingFiles": []
+}

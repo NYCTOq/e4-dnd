@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Death Dying Canonical Runtime Differential Matrix Mega",
+  "version": "5.115B",
+  "requires": [
+    "v5.115A"
+  ],
+  "runtime_changes": true,
+  "runtime": "src/core/rulesets/deathDyingRuntimeRules.ts"
+}

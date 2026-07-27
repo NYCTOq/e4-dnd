@@ -1,0 +1,6180 @@
+{
+  "package": "v5.111D1",
+  "domain": "rest-ui-integration",
+  "generatedAt": "2026-07-25T12:27:02.240Z",
+  "scannedFiles": 560,
+  "matchedFiles": 187,
+  "candidates": {
+    "restCenter": [
+      {
+        "file": "src/features/rest/RestCenterPage.tsx",
+        "basename": "RestCenterPage.tsx",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "RestCenterPage",
+              "line": 11
+            },
+            {
+              "signal": "short rest",
+              "line": 9
+            },
+            {
+              "signal": "short rest",
+              "line": 35
+            },
+            {
+              "signal": "short rest",
+              "line": 57
+            },
+            {
+              "signal": "short rest",
+              "line": 59
+            },
+            {
+              "signal": "short rest",
+              "line": 77
+            },
+            {
+              "signal": "short rest",
+              "line": 79
+            },
+            {
+              "signal": "short rest",
+              "line": 83
+            },
+            {
+              "signal": "long rest",
+              "line": 9
+            },
+            {
+              "signal": "long rest",
+              "line": 35
+            },
+            {
+              "signal": "long rest",
+              "line": 57
+            },
+            {
+              "signal": "long rest",
+              "line": 59
+            },
+            {
+              "signal": "long rest",
+              "line": 77
+            },
+            {
+              "signal": "long rest",
+              "line": 79
+            },
+            {
+              "signal": "long rest",
+              "line": 83
+            },
+            {
+              "signal": "hit dice",
+              "line": 57
+            }
+          ],
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 33
+            },
+            {
+              "signal": "currentHp",
+              "line": 33
+            },
+            {
+              "signal": "currentHp",
+              "line": 33
+            },
+            {
+              "signal": "currentHp",
+              "line": 77
+            },
+            {
+              "signal": "maxHp",
+              "line": 77
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "RestCenterPage"
+        ],
+        "excerpt": {
+          "startLine": 5,
+          "endLine": 13,
+          "text": "import { applyRestToCharacters, getDefaultRestOptions, loadRestHistory, restoreRestSnapshot, saveRestHistory, type RestHistoryEntry, type RestKind } from \"./restAutomation\";\nimport { getPlayerJourneyIntegrationSnapshot } from \"../../core/rulesets/playerJourneyIntegration\";\n\ntype Props = { characters: Character[]; onReplaceCharacters: (characters: Character[]) => void };\nconst RECOVERY_LABELS: Record<ResourceRecovery, string> = { short: \"Short Rest\", long: \"Long Rest\", manual: \"Manuel\" };\n\nexport function RestCenterPage({ characters, onReplaceCharacters }: Props) {\n  const [selectedIds, setSelectedIds] = useState<string[]>(() => characters.map((item) => item.id));\n  const [kind, setKind] = useState<RestKind>(\"long\");"
+        },
+        "lineCount": 86
+      },
+      {
+        "file": "src/shared/release/releaseNotes.ts",
+        "basename": "releaseNotes.ts",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "short rest",
+              "line": 20
+            },
+            {
+              "signal": "short rest",
+              "line": 21
+            },
+            {
+              "signal": "short rest",
+              "line": 154
+            },
+            {
+              "signal": "short rest",
+              "line": 329
+            },
+            {
+              "signal": "short rest",
+              "line": 332
+            },
+            {
+              "signal": "short rest",
+              "line": 784
+            },
+            {
+              "signal": "short rest",
+              "line": 787
+            },
+            {
+              "signal": "short rest",
+              "line": 788
+            },
+            {
+              "signal": "long rest",
+              "line": 61
+            },
+            {
+              "signal": "long rest",
+              "line": 83
+            },
+            {
+              "signal": "long rest",
+              "line": 85
+            },
+            {
+              "signal": "long rest",
+              "line": 86
+            },
+            {
+              "signal": "long rest",
+              "line": 86
+            },
+            {
+              "signal": "long rest",
+              "line": 89
+            },
+            {
+              "signal": "long rest",
+              "line": 106
+            },
+            {
+              "signal": "long rest",
+              "line": 347
+            },
+            {
+              "signal": "long rest",
+              "line": 784
+            },
+            {
+              "signal": "long rest",
+              "line": 787
+            },
+            {
+              "signal": "long rest",
+              "line": 789
+            },
+            {
+              "signal": "hit dice",
+              "line": 59
+            },
+            {
+              "signal": "hit dice",
+              "line": 68
+            },
+            {
+              "signal": "hit dice",
+              "line": 76
+            },
+            {
+              "signal": "hit dice",
+              "line": 76
+            },
+            {
+              "signal": "hit dice",
+              "line": 784
+            },
+            {
+              "signal": "hit dice",
+              "line": 788
+            }
+          ],
+          "characterDetail": [
+            {
+              "signal": "character detail",
+              "line": 66
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "line": 25
+            },
+            {
+              "signal": "Route",
+              "line": 54
+            },
+            {
+              "signal": "Route",
+              "line": 54
+            },
+            {
+              "signal": "Route",
+              "line": 54
+            },
+            {
+              "signal": "Route",
+              "line": 1015
+            },
+            {
+              "signal": "Route",
+              "line": 1044
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "line": 949
+            },
+            {
+              "signal": "localStorage",
+              "line": 964
+            },
+            {
+              "signal": "localStorage",
+              "line": 979
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "getCurrentRelease"
+        ],
+        "excerpt": {
+          "startLine": 16,
+          "endLine": 24,
+          "text": "\nexport const RELEASE_NOTES: readonly ReleaseEntry[] = [\n  {version:\"5.70.0\",date:\"2026-07-21\",title:\"Final Integrity, E2E & Release Readiness\",summary:\"Builder, Sheet, Play Mode, Rest, Backup and offline PWA evidence are unified behind one honest release gate.\",changes:[{text:\"Final release evidence gate with blocker and warning separation\",category:\"Teknik\"},{text:\"Browser E2E preflight prevents retry storms when Chromium is missing\",category:\"Düzeltme\"},{text:\"Stable release version gate updated to 5.70.0\",category:\"Teknik\"},{text:\"One-command release verification workflow\",category:\"İyileştirme\"}]},\n  {version:\"5.39.0\",date:\"2026-07-18\",title:\"Rogue Race, Subclass & Level Certification\",summary:\"2014/2024 Rogue; bütün mevcut race/species, Thief/Assassin ve level 1-20 kombinasyonlarında derin sertifikadan geçirildi.\",changes:[{text:\"760 Rogue race/species × subclass × level senaryosu\",category:\"Teknik\"},{text:\"2024 Weapon Mastery bütün levellerde 2 olarak düzeltildi\",category:\"Düzeltme\"},{text:\"Reliable Talent, Blindsense ve Slippery Mind edition-aware hale getirildi\",category:\"Düzeltme\"},{text:\"Cunning Strike, Improved Cunning Strike ve Devious Strikes progression eklendi\",category:\"Özellik\"},{text:\"Thief ve Assassin 2014/2024 checkpointleri sertifikalandı\",category:\"Teknik\"}]},\n  {version:\"5.34.0\",date:\"2026-07-18\",title:\"Druid Race, Circle & Level Certification\",summary:\"2014/2024 Druid; bütün mevcut race/species, Land/Moon ve level 1-20 kombinasyonlarında derin sertifikadan geçirildi.\",changes:[{text:\"760 Druid race/species × circle × level senaryosu\",category:\"Teknik\"},{text:\"2024 prepared spell 4-22 resmi tablosuna bağlandı\",category:\"Düzeltme\"},{text:\"2014 Archdruid sınırsız Wild Shape ve 2024 Short Rest +1 recovery düzeltildi\",category:\"Düzeltme\"},{text:\"Wild Shape known forms, CR, fly/swim progression sertifikalandı\",category:\"Teknik\"},{text:\"Primal Order, Wild Companion, Wild Resurgence ve Elemental Fury checkpointleri eklendi\",category:\"Özellik\"},{text:\"Circle of the Land ve Moon edition checkpointleri doğrulandı\",category:\"Teknik\"}]},\n  {version:\"5.33.0\",date:\"2026-07-18\",title:\"Cleric Race, Domain & Level Certification\",summary:\"2014/2024 Cleric; bütün mevcut race/species, domain ve level 1-20 kombinasyonlarında derin sertifikadan geçirildi.\",changes:[{text:\"3.320 Cleric race/species × domain × level senaryosu\",category:\"Teknik\"},{text:\"2024 Channel Divinity 2/3/4 ve Short Rest +1 recovery düzeltildi\",category:\"Düzeltme\"},{text:\"2024 Divine Spark 1d8-4d8 progression düzeltildi\",category:\"Düzeltme\"},{text:\"2014 Destroy Undead ve 2024 Sear Undead ayrıldı\",category:\"Düzeltme\"},{text:\"2024 prepared spell tablosu sabit resmi progression ile bağlandı\",category:\"Düzeltme\"},{text:\"Life Domain ve bütün mevcut domain checkpointleri sertifikalandı\",category:\"Teknik\"}]},\n  {version:\"5.32.0\",date:\"2026-07-18\",title:\"Bard Race, Subclass & Level Certification\",summary:\"2014/2024 Bard; bütün race/species, Lore/Valor ve level 1-20 kombinasyonlarında derin sertifikadan geçirildi.\",changes:[{text:\"760 Bard race/species × subclass × level senaryosu\",category:\"Teknik\"},{text:\"2014 known spells ve 2024 prepared spells tabloları düzeltildi\",category:\"Düzeltme\"},{text:\"2024 Expertise 2/9 ve Countercharm reaction akışı düzeltildi\",category:\"Düzeltme\"},{text:\"2014 Magical Secrets, Song of Rest ve Superior Inspiration edition-aware hale getirildi\",category:\"Özellik\"},{text:\"2024 Bard weapon proficiency Simple Weapons olarak düzeltildi\",category:\"Düzeltme\"}]},\n  {version:\"5.30.1\",date:\"2026-07-18\",title:\"Builder ASI / Feat Slot Conflict Hotfix\",summary:\"Prevents a feat from consuming an ASI slot while old ability increases remain allocated.\",changes:[{text:\"Block feat selection when the same level slot still contains ASI points\",category:\"Düzeltme\"},{text:\"Show a clear ASI/feat conflict message instead of delayed 2/0 validation\",category:\"Düzeltme\"},{text:\"Add one-click ASI allocation reset for restored invalid drafts\",category:\"Özellik\"},{text:\"Add regression coverage for level 5 Cleric ASI-to-feat switching\",category:\"Teknik\"}]},\n  {version:\"5.30.0\",date:\"2026-07-18\",title:\"Origin, Ability & High-Level Character Builder Reconstruction Mega Pack\",summary:\"Character Builder now separates base ability generation, origin bonuses and high-level ASI progression while closing major 2014/2024 origin gaps.\",changes:[{text:\"True assignable Standard Array and 27-point Point Buy controls\",category:\"Düzeltme\"},{text:\"Separate base, origin and level ASI ability layers\",category:\"Özellik\"},{text:\"2024 background +2/+1 and +1/+1/+1 distributions\",category:\"Düzeltme\"},{text:\"2014 Half-Elf flexible ability choices and mandatory subrace validation\",category:\"Düzeltme\"},{text:\"High-level ASI/feat budget controls with final score breakdown\",category:\"Özellik\"},{text:\"Ability-builder regression certification tests\",category:\"Teknik\"}]},"
+        },
+        "lineCount": 1057
+      },
+      {
+        "file": "src/core/rulesets/classSpecificRuntimePolicy.ts",
+        "basename": "classSpecificRuntimePolicy.ts",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "short rest",
+              "line": 45
+            },
+            {
+              "signal": "short rest",
+              "line": 46
+            },
+            {
+              "signal": "short rest",
+              "line": 47
+            },
+            {
+              "signal": "short rest",
+              "line": 48
+            },
+            {
+              "signal": "short rest",
+              "line": 49
+            },
+            {
+              "signal": "short rest",
+              "line": 54
+            },
+            {
+              "signal": "long rest",
+              "line": 44
+            },
+            {
+              "signal": "long rest",
+              "line": 45
+            },
+            {
+              "signal": "long rest",
+              "line": 46
+            },
+            {
+              "signal": "long rest",
+              "line": 47
+            },
+            {
+              "signal": "long rest",
+              "line": 48
+            },
+            {
+              "signal": "long rest",
+              "line": 49
+            },
+            {
+              "signal": "long rest",
+              "line": 50
+            },
+            {
+              "signal": "long rest",
+              "line": 51
+            },
+            {
+              "signal": "long rest",
+              "line": 53
+            },
+            {
+              "signal": "long rest",
+              "line": 54
+            },
+            {
+              "signal": "long rest",
+              "line": 55
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "getClassSpecificRuntimePolicyReport"
+        ],
+        "excerpt": {
+          "startLine": 40,
+          "endLine": 48,
+          "text": "  notices: string[];\n}\n\nexport const CLASS_RUNTIME_EXPECTATIONS: ClassRuntimeExpectation[] = [\n  { classId: \"barbarian\", className: \"Barbarian\", choices: [\"Primal Knowledge\", \"Weapon Mastery\"], resources: [\"Rage\"], runtimeFeatures: [\"Rage\", \"Reckless Attack\"], recovery: [\"Long Rest\"] },\n  { classId: \"bard\", className: \"Bard\", choices: [\"Expertise\", \"Magical Secrets\"], resources: [\"Bardic Inspiration\"], runtimeFeatures: [\"Bardic Inspiration\", \"Jack of All Trades\"], recovery: [\"Short Rest\", \"Long Rest\"] },\n  { classId: \"cleric\", className: \"Cleric\", choices: [\"Divine Order\"], resources: [\"Channel Divinity\"], runtimeFeatures: [\"Channel Divinity\", \"Divine Intervention\"], recovery: [\"Short Rest\", \"Long Rest\"] },\n  { classId: \"druid\", className: \"Druid\", choices: [\"Primal Order\", \"Wild Shape Forms\"], resources: [\"Wild Shape\"], runtimeFeatures: [\"Wild Shape\", \"Wild Resurgence\"], recovery: [\"Short Rest\", \"Long Rest\"] },\n  { classId: \"fighter\", className: \"Fighter\", choices: [\"Fighting Style\", \"Weapon Mastery\", \"Maneuvers\"], resources: [\"Second Wind\", \"Action Surge\", \"Indomitable\", \"Superiority Dice\"], runtimeFeatures: [\"Second Wind\", \"Action Surge\", \"Extra Attack\"], recovery: [\"Short Rest\", \"Long Rest\"] },"
+        },
+        "lineCount": 131
+      },
+      {
+        "file": "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+        "basename": "restRecoveryGoldenCharacters.test.ts",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "short rest",
+              "line": 155
+            },
+            {
+              "signal": "short rest",
+              "line": 186
+            },
+            {
+              "signal": "short rest",
+              "line": 195
+            },
+            {
+              "signal": "short rest",
+              "line": 203
+            },
+            {
+              "signal": "short rest",
+              "line": 209
+            },
+            {
+              "signal": "long rest",
+              "line": 164
+            },
+            {
+              "signal": "long rest",
+              "line": 174
+            },
+            {
+              "signal": "long rest",
+              "line": 215
+            },
+            {
+              "signal": "long rest",
+              "line": 222
+            }
+          ],
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 25
+            },
+            {
+              "signal": "currentHp",
+              "line": 45
+            },
+            {
+              "signal": "currentHp",
+              "line": 70
+            },
+            {
+              "signal": "currentHp",
+              "line": 90
+            },
+            {
+              "signal": "currentHp",
+              "line": 110
+            },
+            {
+              "signal": "currentHp",
+              "line": 144
+            },
+            {
+              "signal": "currentHp",
+              "line": 145
+            },
+            {
+              "signal": "currentHp",
+              "line": 167
+            },
+            {
+              "signal": "currentHp",
+              "line": 239
+            },
+            {
+              "signal": "currentHp",
+              "line": 245
+            },
+            {
+              "signal": "maxHp",
+              "line": 26
+            },
+            {
+              "signal": "maxHp",
+              "line": 46
+            },
+            {
+              "signal": "maxHp",
+              "line": 71
+            },
+            {
+              "signal": "maxHp",
+              "line": 91
+            },
+            {
+              "signal": "maxHp",
+              "line": 111
+            },
+            {
+              "signal": "maxHp",
+              "line": 145
+            },
+            {
+              "signal": "maxHp",
+              "line": 167
+            },
+            {
+              "signal": "maxHp",
+              "line": 235
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 21,
+          "endLine": 29,
+          "text": "    name: \"Golden 2014 Fighter\",\n    classId: \"fighter\",\n    level: 5,\n    ruleset: \"dnd_2014\",\n    currentHp: 12,\n    maxHp: 44,\n    tempHp: 4,\n    hitDice: [{ die: 10, max: 5, used: 4 }],\n    spellSlots: [],"
+        },
+        "lineCount": 254
+      },
+      {
+        "file": "src/features/play-mode/PlayMode.tsx",
+        "basename": "PlayMode.tsx",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "Rest Center",
+              "line": 637
+            },
+            {
+              "signal": "short rest",
+              "line": 574
+            },
+            {
+              "signal": "short rest",
+              "line": 637
+            },
+            {
+              "signal": "short rest",
+              "line": 731
+            },
+            {
+              "signal": "short rest",
+              "line": 795
+            },
+            {
+              "signal": "short rest",
+              "line": 925
+            },
+            {
+              "signal": "long rest",
+              "line": 637
+            },
+            {
+              "signal": "long rest",
+              "line": 797
+            },
+            {
+              "signal": "long rest",
+              "line": 929
+            }
+          ],
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 190
+            },
+            {
+              "signal": "currentHp",
+              "line": 242
+            },
+            {
+              "signal": "currentHp",
+              "line": 242
+            },
+            {
+              "signal": "currentHp",
+              "line": 327
+            },
+            {
+              "signal": "currentHp",
+              "line": 327
+            },
+            {
+              "signal": "currentHp",
+              "line": 328
+            },
+            {
+              "signal": "currentHp",
+              "line": 328
+            },
+            {
+              "signal": "currentHp",
+              "line": 328
+            },
+            {
+              "signal": "currentHp",
+              "line": 328
+            },
+            {
+              "signal": "currentHp",
+              "line": 328
+            },
+            {
+              "signal": "currentHp",
+              "line": 328
+            },
+            {
+              "signal": "currentHp",
+              "line": 328
+            },
+            {
+              "signal": "currentHp",
+              "line": 335
+            },
+            {
+              "signal": "currentHp",
+              "line": 335
+            },
+            {
+              "signal": "currentHp",
+              "line": 335
+            },
+            {
+              "signal": "currentHp",
+              "line": 335
+            },
+            {
+              "signal": "currentHp",
+              "line": 336
+            },
+            {
+              "signal": "currentHp",
+              "line": 336
+            },
+            {
+              "signal": "currentHp",
+              "line": 336
+            },
+            {
+              "signal": "currentHp",
+              "line": 336
+            },
+            {
+              "signal": "currentHp",
+              "line": 337
+            },
+            {
+              "signal": "currentHp",
+              "line": 337
+            },
+            {
+              "signal": "currentHp",
+              "line": 337
+            },
+            {
+              "signal": "currentHp",
+              "line": 337
+            },
+            {
+              "signal": "currentHp",
+              "line": 341
+            },
+            {
+              "signal": "currentHp",
+              "line": 343
+            },
+            {
+              "signal": "currentHp",
+              "line": 398
+            },
+            {
+              "signal": "currentHp",
+              "line": 398
+            },
+            {
+              "signal": "currentHp",
+              "line": 398
+            },
+            {
+              "signal": "currentHp",
+              "line": 461
+            },
+            {
+              "signal": "currentHp",
+              "line": 461
+            },
+            {
+              "signal": "currentHp",
+              "line": 462
+            },
+            {
+              "signal": "currentHp",
+              "line": 462
+            },
+            {
+              "signal": "currentHp",
+              "line": 470
+            },
+            {
+              "signal": "currentHp",
+              "line": 485
+            },
+            {
+              "signal": "currentHp",
+              "line": 485
+            },
+            {
+              "signal": "currentHp",
+              "line": 485
+            },
+            {
+              "signal": "currentHp",
+              "line": 485
+            },
+            {
+              "signal": "currentHp",
+              "line": 558
+            },
+            {
+              "signal": "currentHp",
+              "line": 560
+            },
+            {
+              "signal": "currentHp",
+              "line": 585
+            },
+            {
+              "signal": "currentHp",
+              "line": 604
+            },
+            {
+              "signal": "currentHp",
+              "line": 693
+            },
+            {
+              "signal": "currentHp",
+              "line": 718
+            },
+            {
+              "signal": "currentHp",
+              "line": 793
+            },
+            {
+              "signal": "maxHp",
+              "line": 33
+            },
+            {
+              "signal": "maxHp",
+              "line": 242
+            },
+            {
+              "signal": "maxHp",
+              "line": 242
+            },
+            {
+              "signal": "maxHp",
+              "line": 269
+            },
+            {
+              "signal": "maxHp",
+              "line": 269
+            },
+            {
+              "signal": "maxHp",
+              "line": 269
+            },
+            {
+              "signal": "maxHp",
+              "line": 327
+            },
+            {
+              "signal": "maxHp",
+              "line": 328
+            },
+            {
+              "signal": "maxHp",
+              "line": 328
+            },
+            {
+              "signal": "maxHp",
+              "line": 335
+            },
+            {
+              "signal": "maxHp",
+              "line": 335
+            },
+            {
+              "signal": "maxHp",
+              "line": 336
+            },
+            {
+              "signal": "maxHp",
+              "line": 336
+            },
+            {
+              "signal": "maxHp",
+              "line": 337
+            },
+            {
+              "signal": "maxHp",
+              "line": 337
+            },
+            {
+              "signal": "maxHp",
+              "line": 343
+            },
+            {
+              "signal": "maxHp",
+              "line": 398
+            },
+            {
+              "signal": "maxHp",
+              "line": 462
+            },
+            {
+              "signal": "maxHp",
+              "line": 485
+            },
+            {
+              "signal": "maxHp",
+              "line": 485
+            },
+            {
+              "signal": "maxHp",
+              "line": 559
+            },
+            {
+              "signal": "maxHp",
+              "line": 585
+            },
+            {
+              "signal": "maxHp",
+              "line": 604
+            },
+            {
+              "signal": "maxHp",
+              "line": 672
+            },
+            {
+              "signal": "maxHp",
+              "line": 672
+            },
+            {
+              "signal": "maxHp",
+              "line": 693
+            },
+            {
+              "signal": "maxHp",
+              "line": 750
+            },
+            {
+              "signal": "maxHp",
+              "line": 793
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "router",
+              "line": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "line": 127
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 131
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 301
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 309
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/rest"
+        ],
+        "exportedSymbols": [
+          "PlayMode"
+        ],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { useMemo, useState } from \"react\";\nimport { NavLink, useSearchParams } from \"react-router-dom\";\nimport type { AbilityKey, Character, CharacterCondition } from \"../../core/character/character.types\";\nimport type { RulesetData } from \"../../core/rulesets/ruleset.types\";\nimport { rollDice } from \"../../core/dice/diceRoller\";\nimport {"
+        },
+        "lineCount": 937
+      },
+      {
+        "file": "src/core/rulesets/levelOneRestReadiness.ts",
+        "basename": "levelOneRestReadiness.ts",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "short rest",
+              "line": 125
+            },
+            {
+              "signal": "short rest",
+              "line": 128
+            },
+            {
+              "signal": "short rest",
+              "line": 129
+            },
+            {
+              "signal": "long rest",
+              "line": 131
+            },
+            {
+              "signal": "hit dice",
+              "line": 81
+            },
+            {
+              "signal": "hit dice",
+              "line": 86
+            },
+            {
+              "signal": "hit dice",
+              "line": 123
+            },
+            {
+              "signal": "hit dice",
+              "line": 128
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "getLevelOneRestReadiness"
+        ],
+        "excerpt": {
+          "startLine": 77,
+          "endLine": 85,
+          "text": "  const hitDice = draft.hitDice ?? [];\n  const hitDiceValid = hitDice.every(validHitDie)\n    && new Set(hitDice.map((pool) => pool.die)).size === hitDice.length;\n  checks.push(hitDiceValid);\n  if (!hitDiceValid) blockers.push(\"Hit Dice havuzları benzersiz ve geçerli kullanım sınırlarında olmalı.\");\n\n  const hitDiceCapacity = hitDice.reduce((total, pool) => total + pool.max, 0);\n  const hitDiceCountValid = !selectedClass || hitDiceCapacity >= level;\n  checks.push(hitDiceCountValid);"
+        },
+        "lineCount": 143
+      },
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "basename": "CharacterDetail.tsx",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "Rest Center",
+              "line": 691
+            },
+            {
+              "signal": "short rest",
+              "line": 312
+            },
+            {
+              "signal": "short rest",
+              "line": 691
+            },
+            {
+              "signal": "short rest",
+              "line": 1013
+            },
+            {
+              "signal": "short rest",
+              "line": 1054
+            },
+            {
+              "signal": "long rest",
+              "line": 691
+            },
+            {
+              "signal": "long rest",
+              "line": 1435
+            }
+          ],
+          "characterDetail": [
+            {
+              "signal": "CharacterDetail",
+              "line": 100
+            },
+            {
+              "signal": "character detail",
+              "line": 132
+            },
+            {
+              "signal": "character detail",
+              "line": 627
+            },
+            {
+              "signal": "currentHp",
+              "line": 236
+            },
+            {
+              "signal": "currentHp",
+              "line": 241
+            },
+            {
+              "signal": "currentHp",
+              "line": 297
+            },
+            {
+              "signal": "currentHp",
+              "line": 301
+            },
+            {
+              "signal": "currentHp",
+              "line": 581
+            },
+            {
+              "signal": "currentHp",
+              "line": 692
+            },
+            {
+              "signal": "currentHp",
+              "line": 985
+            },
+            {
+              "signal": "currentHp",
+              "line": 1062
+            },
+            {
+              "signal": "maxHp",
+              "line": 236
+            },
+            {
+              "signal": "maxHp",
+              "line": 297
+            },
+            {
+              "signal": "maxHp",
+              "line": 581
+            },
+            {
+              "signal": "maxHp",
+              "line": 692
+            },
+            {
+              "signal": "maxHp",
+              "line": 985
+            },
+            {
+              "signal": "maxHp",
+              "line": 1062
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "useNavigate",
+              "line": 2
+            },
+            {
+              "signal": "useNavigate",
+              "line": 112
+            },
+            {
+              "signal": "router",
+              "line": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "line": 103
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 108
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 226
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 239
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 247
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 260
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 268
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 276
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 299
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 332
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 360
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 378
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 391
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 537
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 579
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 672
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 672
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 686
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 686
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 1109
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters",
+          "/rest"
+        ],
+        "exportedSymbols": [
+          "CharacterDetail"
+        ],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { useState } from \"react\";\nimport { useNavigate, useParams } from \"react-router-dom\";\nimport { rollDice } from \"../../core/dice/diceRoller\";\nimport type { RulesetData, DndSpellData } from \"../../core/rulesets/ruleset.types\";\nimport type { AbilityKey, Character } from \"../../core/character/character.types\";\nimport { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellAttackBonus, getSpellSaveDc } from \"../../core/character/characterCalculator\";"
+        },
+        "lineCount": 1443
+      },
+      {
+        "file": "src/core/rulesets/levelOneSupportReadiness.ts",
+        "basename": "levelOneSupportReadiness.ts",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "short rest",
+              "line": 77
+            },
+            {
+              "signal": "hit dice",
+              "line": 77
+            },
+            {
+              "signal": "hit dice",
+              "line": 78
+            },
+            {
+              "signal": "hit dice",
+              "line": 82
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "getLevelOneSupportReadiness"
+        ],
+        "excerpt": {
+          "startLine": 73,
+          "endLine": 81,
+          "text": "  if (recoveryResources.length) summary.push(`Recovery resources ${recoveryResources.map((resource) => resource.name).slice(0, 3).join(\", \")}`);\n\n  const hasHitDice = (draft.hitDice ?? []).some((pool) => pool.max > 0);\n  checks.push(hasHitDice);\n  if (!hasHitDice) blockers.push(\"Short Rest iyileşmesi için geçerli bir Hit Dice havuzu bulunmalı.\");\n  else summary.push(`Hit Dice ${draft.hitDice.map((pool) => `${pool.max - pool.used}/${pool.max}d${pool.die}`).join(\", \")}`);\n\n  const canSelfRecover = healingSpells.length > 0 || recoveryResources.length > 0 || hasHitDice;\n  checks.push(canSelfRecover);"
+        },
+        "lineCount": 99
+      },
+      {
+        "file": "src/core/rulesets/subclassExpansion.ts",
+        "basename": "subclassExpansion.ts",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "long rest",
+              "line": 73
+            },
+            {
+              "signal": "long rest",
+              "line": 98
+            },
+            {
+              "signal": "long rest",
+              "line": 100
+            },
+            {
+              "signal": "long rest",
+              "line": 134
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 69,
+          "endLine": 77,
+          "text": "  make(\"divine-soul\", \"Divine Soul\", \"Sorcerer\", \"dnd_2014\", 1, [[1,\"Divine Magic\",\"Cleric spell listesine erişim ve affinity büyüsü sağlar.\"],[1,\"Favored by the Gods\",\"Başarısız save veya attack roll sonucuna dinlenme bazlı bonus ekler.\"],[6,\"Empowered Healing\",\"Yakındaki healing spell zarlarını Sorcery Point ile yeniden attırır.\"],[14,\"Otherworldly Wings\",\"Bonus Action ile kalıcı uçuş hızı açar.\"],[18,\"Unearthly Recovery\",\"Bonus Action ile maksimum HP'nin yarısı kadar iyileşme sağlar.\"]], { resourceName:\"Sorcery Points\" }),\n  make(\"shadow-magic\", \"Shadow Magic\", \"Sorcerer\", \"dnd_2014\", 1, [[1,\"Eyes of the Dark\",\"Gelişmiş Darkvision ve ileride Darkness kullanımı sağlar.\"],[1,\"Strength of the Grave\",\"Ölümcül hasarda ayakta kalma kontrolü sunar.\"],[6,\"Hound of Ill Omen\",\"Sorcery Point harcayarak hedefi takip eden gölge tazısı çağırır.\"],[14,\"Shadow Walk\",\"Gölgeler arasında Bonus Action teleport sağlar.\"],[18,\"Umbral Form\",\"Sorcery Point ile gölge formuna geçiş sağlar.\"]], { resourceName:\"Sorcery Points\" }),\n  make(\"aberrant-mind\", \"Aberrant Mind\", \"Sorcerer\", \"dnd_2014\", 1, [[1,\"Psionic Spells\",\"Subclass büyülerini otomatik öğrenir.\"],[1,\"Telepathic Speech\",\"Yakındaki bir yaratıkla geçici telepatik bağ kurar.\"],[6,\"Psionic Sorcery\",\"Psionic Spells büyülerini Sorcery Point ile farklı component kurallarıyla kullanır.\"],[6,\"Psychic Defenses\",\"Psychic direnci ve charm/fear savunması sağlar.\"],[14,\"Revelation in Flesh\",\"Sorcery Point ile bedensel psionic uyarlamalar açar.\"],[18,\"Warping Implosion\",\"Alan teleportu ve çekme etkisi üretir.\"]], { resourceName:\"Sorcery Points\" }),\n  make(\"clockwork-soul\", \"Clockwork Soul\", \"Sorcerer\", \"dnd_2014\", 1, [[1,\"Clockwork Magic\",\"Subclass büyülerini otomatik öğrenir.\"],[1,\"Restore Balance\",\"Reaction ile advantage veya disadvantage durumunu dengeler.\"],[6,\"Bastion of Law\",\"Sorcery Point ile hasar emen koruyucu ward oluşturur.\"],[14,\"Trance of Order\",\"Düzen formunda d20 taban sonuçlarını güvenilir hale getirir.\"],[18,\"Clockwork Cavalcade\",\"Construct ruhlarıyla iyileştirme, onarım ve spell temizleme etkisi sağlar.\"]], { resourceName:\"Sorcery Points\" }),\n  make(\"lunar-sorcery\", \"Lunar Sorcery\", \"Sorcerer\", \"dnd_2014\", 1, [[1,\"Lunar Embodiment\",\"Ay fazına bağlı bonus büyü listeleri sağlar.\"],[1,\"Moon Fire\",\"Sacred Flame cantripini güçlendirir.\"],[6,\"Lunar Boons\",\"Aktif ay fazına göre Sorcery Point maliyetini azaltır.\"],[6,\"Waxing and Waning\",\"Long Rest beklemeden ay fazı değiştirmeyi sağlar.\"],[14,\"Lunar Empowerment\",\"Ay fazına bağlı savunma veya algı bonusları sağlar.\"],[18,\"Lunar Phenomenon\",\"Ay fazına bağlı güçlü Bonus Action etkileri açar.\"]], { resourceName:\"Sorcery Points\" }),\n  make(\"the-archfey\", \"The Archfey\", \"Warlock\", \"dnd_2014\", 1, [[1,\"Fey Presence\",\"Yakındaki yaratıkları kısa süreli charm veya fear etkisine sokar.\"],[6,\"Misty Escape\",\"Hasar aldığında reaction ile görünmez olup teleport olursun.\"],[10,\"Beguiling Defenses\",\"Charm bağışıklığı ve charm etkisini geri çevirme sağlar.\"],[14,\"Dark Delirium\",\"Bir hedefi illüzyon dünyasında charm veya fear etkisine hapseder.\"]]),\n  make(\"the-celestial\", \"The Celestial\", \"Warlock\", \"dnd_2014\", 1, [[1,\"Healing Light\",\"Bonus Action ile d6 havuzundan iyileştirme sağlar.\"],[6,\"Radiant Soul\",\"Radiant ve fire hasarına direnç ile büyü hasarı desteği verir.\"],[10,\"Celestial Resilience\",\"Dinlenme sonrasında partiye Temporary Hit Point sağlar.\"],[14,\"Searing Vengeance\",\"Ölüm save başlangıcında ayağa kalkıp radiant alan hasarı verir.\"]], { resourceName:\"Healing Light\" }),\n  make(\"the-fathomless\", \"The Fathomless\", \"Warlock\", \"dnd_2014\", 1, [[1,\"Tentacle of the Deeps\",\"Bonus Action ile saldıran ve yavaşlatan spektral tentacle çağırır.\"],[1,\"Gift of the Sea\",\"Yüzme hızı ve su altında nefes alma sağlar.\"],[6,\"Oceanic Soul\",\"Cold direnci ve su altında iletişim sağlar.\"],[6,\"Guardian Coil\",\"Tentacle reaction ile alınan hasarı azaltır.\"],[10,\"Grasping Tentacles\",\"Evard's Black Tentacles büyüsünü ve concentration korumasını geliştirir.\"],[14,\"Fathomless Plunge\",\"Partiyi su kütlesine yakın bir noktaya teleport eder.\"]], { resourceName:\"Tentacle of the Deeps\" }),\n  make(\"the-genie\", \"The Genie\", \"Warlock\", \"dnd_2014\", 1, [[1,\"Genie's Vessel\",\"Patron türüne bağlı vessel, ek hasar ve sığınak sağlar.\"],[6,\"Elemental Gift\",\"Patrona bağlı direnç ve uçuş hızı kazandırır.\"],[10,\"Sanctuary Vessel\",\"Müttefikleri vessel içine alarak kısa dinlenmeyi güçlendirir.\"],[14,\"Limited Wish\",\"Level 6 veya daha düşük uygun bir büyünün etkisini taklit eder.\"]], { resourceName:\"Genie's Vessel\" }),"
+        },
+        "lineCount": 137
+      },
+      {
+        "file": "src/features/legacy/AppRoutes.tsx",
+        "basename": "AppRoutes.tsx",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "RestCenterPage",
+              "line": 127
+            },
+            {
+              "signal": "RestCenterPage",
+              "line": 128
+            },
+            {
+              "signal": "RestCenterPage",
+              "line": 128
+            },
+            {
+              "signal": "RestCenterPage",
+              "line": 320
+            }
+          ],
+          "characterDetail": [
+            {
+              "signal": "CharacterDetail",
+              "line": 21
+            },
+            {
+              "signal": "CharacterDetail",
+              "line": 22
+            },
+            {
+              "signal": "CharacterDetail",
+              "line": 23
+            },
+            {
+              "signal": "CharacterDetail",
+              "line": 254
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Routes",
+              "line": 2
+            },
+            {
+              "signal": "Routes",
+              "line": 136
+            },
+            {
+              "signal": "Routes",
+              "line": 169
+            },
+            {
+              "signal": "Routes",
+              "line": 196
+            },
+            {
+              "signal": "Routes",
+              "line": 206
+            },
+            {
+              "signal": "Routes",
+              "line": 468
+            },
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "Route",
+              "line": 136
+            },
+            {
+              "signal": "Route",
+              "line": 169
+            },
+            {
+              "signal": "Route",
+              "line": 196
+            },
+            {
+              "signal": "Route",
+              "line": 200
+            },
+            {
+              "signal": "Route",
+              "line": 201
+            },
+            {
+              "signal": "Route",
+              "line": 206
+            },
+            {
+              "signal": "Route",
+              "line": 207
+            },
+            {
+              "signal": "Route",
+              "line": 221
+            },
+            {
+              "signal": "Route",
+              "line": 233
+            },
+            {
+              "signal": "Route",
+              "line": 238
+            },
+            {
+              "signal": "Route",
+              "line": 251
+            },
+            {
+              "signal": "Route",
+              "line": 263
+            },
+            {
+              "signal": "Route",
+              "line": 275
+            },
+            {
+              "signal": "Route",
+              "line": 285
+            },
+            {
+              "signal": "Route",
+              "line": 287
+            },
+            {
+              "signal": "Route",
+              "line": 292
+            },
+            {
+              "signal": "Route",
+              "line": 297
+            },
+            {
+              "signal": "Route",
+              "line": 302
+            },
+            {
+              "signal": "Route",
+              "line": 307
+            },
+            {
+              "signal": "Route",
+              "line": 311
+            },
+            {
+              "signal": "Route",
+              "line": 315
+            },
+            {
+              "signal": "Route",
+              "line": 320
+            },
+            {
+              "signal": "Route",
+              "line": 321
+            },
+            {
+              "signal": "Route",
+              "line": 323
+            },
+            {
+              "signal": "Route",
+              "line": 334
+            },
+            {
+              "signal": "Route",
+              "line": 345
+            },
+            {
+              "signal": "Route",
+              "line": 356
+            },
+            {
+              "signal": "Route",
+              "line": 367
+            },
+            {
+              "signal": "Route",
+              "line": 381
+            },
+            {
+              "signal": "Route",
+              "line": 398
+            },
+            {
+              "signal": "Route",
+              "line": 409
+            },
+            {
+              "signal": "Route",
+              "line": 410
+            },
+            {
+              "signal": "Route",
+              "line": 411
+            },
+            {
+              "signal": "Route",
+              "line": 412
+            },
+            {
+              "signal": "Route",
+              "line": 413
+            },
+            {
+              "signal": "Route",
+              "line": 414
+            },
+            {
+              "signal": "Route",
+              "line": 415
+            },
+            {
+              "signal": "Route",
+              "line": 417
+            },
+            {
+              "signal": "Route",
+              "line": 419
+            },
+            {
+              "signal": "Route",
+              "line": 422
+            },
+            {
+              "signal": "Route",
+              "line": 436
+            },
+            {
+              "signal": "Route",
+              "line": 452
+            },
+            {
+              "signal": "Route",
+              "line": 468
+            },
+            {
+              "signal": "router",
+              "line": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "line": 146
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 179
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 246
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 246
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 257
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 257
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 281
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 281
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/",
+          "/backup",
+          "/builder",
+          "/calendar",
+          "/campaigns",
+          "/characters",
+          "/characters/:characterId",
+          "/characters/:characterId/edit",
+          "/characters/compare",
+          "/classes",
+          "/collections",
+          "/combat",
+          "/dice",
+          "/factions",
+          "/feats",
+          "/help",
+          "/homebrew-lab",
+          "/inventory",
+          "/library",
+          "/locations",
+          "/loot",
+          "/monsters",
+          "/monsters/:monsterId",
+          "/npcs",
+          "/origins",
+          "/play-mode",
+          "/player-test",
+          "/quests",
+          "/rest",
+          "/rulesets",
+          "/search",
+          "/session-planner",
+          "/settings",
+          "/spellbook",
+          "/subclasses",
+          "/updates"
+        ],
+        "exportedSymbols": [
+          "AppRoutes"
+        ],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { lazy, Suspense } from \"react\";\nimport { Route, Routes } from \"react-router-dom\";\nimport type {\n  DndItemData,\n  DndMonsterData,\n  DndSpellData,"
+        },
+        "lineCount": 472
+      }
+    ],
+    "characterDetail": [
+      {
+        "file": "src/features/play-mode/PlayMode.tsx",
+        "basename": "PlayMode.tsx",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "Rest Center",
+              "line": 637
+            },
+            {
+              "signal": "short rest",
+              "line": 574
+            },
+            {
+              "signal": "short rest",
+              "line": 637
+            },
+            {
+              "signal": "short rest",
+              "line": 731
+            },
+            {
+              "signal": "short rest",
+              "line": 795
+            },
+            {
+              "signal": "short rest",
+              "line": 925
+            },
+            {
+              "signal": "long rest",
+              "line": 637
+            },
+            {
+              "signal": "long rest",
+              "line": 797
+            },
+            {
+              "signal": "long rest",
+              "line": 929
+            }
+          ],
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 190
+            },
+            {
+              "signal": "currentHp",
+              "line": 242
+            },
+            {
+              "signal": "currentHp",
+              "line": 242
+            },
+            {
+              "signal": "currentHp",
+              "line": 327
+            },
+            {
+              "signal": "currentHp",
+              "line": 327
+            },
+            {
+              "signal": "currentHp",
+              "line": 328
+            },
+            {
+              "signal": "currentHp",
+              "line": 328
+            },
+            {
+              "signal": "currentHp",
+              "line": 328
+            },
+            {
+              "signal": "currentHp",
+              "line": 328
+            },
+            {
+              "signal": "currentHp",
+              "line": 328
+            },
+            {
+              "signal": "currentHp",
+              "line": 328
+            },
+            {
+              "signal": "currentHp",
+              "line": 328
+            },
+            {
+              "signal": "currentHp",
+              "line": 335
+            },
+            {
+              "signal": "currentHp",
+              "line": 335
+            },
+            {
+              "signal": "currentHp",
+              "line": 335
+            },
+            {
+              "signal": "currentHp",
+              "line": 335
+            },
+            {
+              "signal": "currentHp",
+              "line": 336
+            },
+            {
+              "signal": "currentHp",
+              "line": 336
+            },
+            {
+              "signal": "currentHp",
+              "line": 336
+            },
+            {
+              "signal": "currentHp",
+              "line": 336
+            },
+            {
+              "signal": "currentHp",
+              "line": 337
+            },
+            {
+              "signal": "currentHp",
+              "line": 337
+            },
+            {
+              "signal": "currentHp",
+              "line": 337
+            },
+            {
+              "signal": "currentHp",
+              "line": 337
+            },
+            {
+              "signal": "currentHp",
+              "line": 341
+            },
+            {
+              "signal": "currentHp",
+              "line": 343
+            },
+            {
+              "signal": "currentHp",
+              "line": 398
+            },
+            {
+              "signal": "currentHp",
+              "line": 398
+            },
+            {
+              "signal": "currentHp",
+              "line": 398
+            },
+            {
+              "signal": "currentHp",
+              "line": 461
+            },
+            {
+              "signal": "currentHp",
+              "line": 461
+            },
+            {
+              "signal": "currentHp",
+              "line": 462
+            },
+            {
+              "signal": "currentHp",
+              "line": 462
+            },
+            {
+              "signal": "currentHp",
+              "line": 470
+            },
+            {
+              "signal": "currentHp",
+              "line": 485
+            },
+            {
+              "signal": "currentHp",
+              "line": 485
+            },
+            {
+              "signal": "currentHp",
+              "line": 485
+            },
+            {
+              "signal": "currentHp",
+              "line": 485
+            },
+            {
+              "signal": "currentHp",
+              "line": 558
+            },
+            {
+              "signal": "currentHp",
+              "line": 560
+            },
+            {
+              "signal": "currentHp",
+              "line": 585
+            },
+            {
+              "signal": "currentHp",
+              "line": 604
+            },
+            {
+              "signal": "currentHp",
+              "line": 693
+            },
+            {
+              "signal": "currentHp",
+              "line": 718
+            },
+            {
+              "signal": "currentHp",
+              "line": 793
+            },
+            {
+              "signal": "maxHp",
+              "line": 33
+            },
+            {
+              "signal": "maxHp",
+              "line": 242
+            },
+            {
+              "signal": "maxHp",
+              "line": 242
+            },
+            {
+              "signal": "maxHp",
+              "line": 269
+            },
+            {
+              "signal": "maxHp",
+              "line": 269
+            },
+            {
+              "signal": "maxHp",
+              "line": 269
+            },
+            {
+              "signal": "maxHp",
+              "line": 327
+            },
+            {
+              "signal": "maxHp",
+              "line": 328
+            },
+            {
+              "signal": "maxHp",
+              "line": 328
+            },
+            {
+              "signal": "maxHp",
+              "line": 335
+            },
+            {
+              "signal": "maxHp",
+              "line": 335
+            },
+            {
+              "signal": "maxHp",
+              "line": 336
+            },
+            {
+              "signal": "maxHp",
+              "line": 336
+            },
+            {
+              "signal": "maxHp",
+              "line": 337
+            },
+            {
+              "signal": "maxHp",
+              "line": 337
+            },
+            {
+              "signal": "maxHp",
+              "line": 343
+            },
+            {
+              "signal": "maxHp",
+              "line": 398
+            },
+            {
+              "signal": "maxHp",
+              "line": 462
+            },
+            {
+              "signal": "maxHp",
+              "line": 485
+            },
+            {
+              "signal": "maxHp",
+              "line": 485
+            },
+            {
+              "signal": "maxHp",
+              "line": 559
+            },
+            {
+              "signal": "maxHp",
+              "line": 585
+            },
+            {
+              "signal": "maxHp",
+              "line": 604
+            },
+            {
+              "signal": "maxHp",
+              "line": 672
+            },
+            {
+              "signal": "maxHp",
+              "line": 672
+            },
+            {
+              "signal": "maxHp",
+              "line": 693
+            },
+            {
+              "signal": "maxHp",
+              "line": 750
+            },
+            {
+              "signal": "maxHp",
+              "line": 793
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "router",
+              "line": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "line": 127
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 131
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 301
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 309
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/rest"
+        ],
+        "exportedSymbols": [
+          "PlayMode"
+        ],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { useMemo, useState } from \"react\";\nimport { NavLink, useSearchParams } from \"react-router-dom\";\nimport type { AbilityKey, Character, CharacterCondition } from \"../../core/character/character.types\";\nimport type { RulesetData } from \"../../core/rulesets/ruleset.types\";\nimport { rollDice } from \"../../core/dice/diceRoller\";\nimport {"
+        },
+        "lineCount": 937
+      },
+      {
+        "file": "src/features/combat-tracker/combatTrackerStorage.ts",
+        "basename": "combatTrackerStorage.ts",
+        "categories": {
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 54
+            },
+            {
+              "signal": "currentHp",
+              "line": 220
+            },
+            {
+              "signal": "currentHp",
+              "line": 220
+            },
+            {
+              "signal": "currentHp",
+              "line": 254
+            },
+            {
+              "signal": "currentHp",
+              "line": 285
+            },
+            {
+              "signal": "currentHp",
+              "line": 285
+            },
+            {
+              "signal": "currentHp",
+              "line": 286
+            },
+            {
+              "signal": "currentHp",
+              "line": 286
+            },
+            {
+              "signal": "currentHp",
+              "line": 290
+            },
+            {
+              "signal": "currentHp",
+              "line": 290
+            },
+            {
+              "signal": "currentHp",
+              "line": 291
+            },
+            {
+              "signal": "currentHp",
+              "line": 291
+            },
+            {
+              "signal": "currentHp",
+              "line": 310
+            },
+            {
+              "signal": "currentHp",
+              "line": 342
+            },
+            {
+              "signal": "currentHp",
+              "line": 342
+            },
+            {
+              "signal": "currentHp",
+              "line": 345
+            },
+            {
+              "signal": "currentHp",
+              "line": 352
+            },
+            {
+              "signal": "maxHp",
+              "line": 53
+            },
+            {
+              "signal": "maxHp",
+              "line": 63
+            },
+            {
+              "signal": "maxHp",
+              "line": 209
+            },
+            {
+              "signal": "maxHp",
+              "line": 209
+            },
+            {
+              "signal": "maxHp",
+              "line": 219
+            },
+            {
+              "signal": "maxHp",
+              "line": 220
+            },
+            {
+              "signal": "maxHp",
+              "line": 220
+            },
+            {
+              "signal": "maxHp",
+              "line": 254
+            },
+            {
+              "signal": "maxHp",
+              "line": 290
+            },
+            {
+              "signal": "maxHp",
+              "line": 310
+            },
+            {
+              "signal": "maxHp",
+              "line": 310
+            },
+            {
+              "signal": "maxHp",
+              "line": 310
+            },
+            {
+              "signal": "maxHp",
+              "line": 328
+            },
+            {
+              "signal": "maxHp",
+              "line": 328
+            },
+            {
+              "signal": "maxHp",
+              "line": 341
+            },
+            {
+              "signal": "maxHp",
+              "line": 341
+            },
+            {
+              "signal": "maxHp",
+              "line": 342
+            },
+            {
+              "signal": "maxHp",
+              "line": 352
+            },
+            {
+              "signal": "maxHp",
+              "line": 352
+            },
+            {
+              "signal": "maxHp",
+              "line": 352
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "line": 296
+            },
+            {
+              "signal": "localStorage",
+              "line": 302
+            },
+            {
+              "signal": "localStorage",
+              "line": 302
+            },
+            {
+              "signal": "localStorage",
+              "line": 358
+            },
+            {
+              "signal": "localStorage",
+              "line": 364
+            },
+            {
+              "signal": "localStorage",
+              "line": 364
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "addCombatLog",
+          "advanceTurn",
+          "applyDamage",
+          "applyHealing",
+          "createBattlefieldZone",
+          "createCombatEffect",
+          "createCombatEncounter",
+          "createCombatLogEntry",
+          "createCombatTemplate",
+          "createCombatant",
+          "createEncounterFromCampaignEncounter",
+          "createEncounterFromTemplate",
+          "getActiveConditions",
+          "getCombatSummary",
+          "loadCombatEncounters",
+          "loadCombatTemplates",
+          "sanitizeCombatEncounter",
+          "sanitizeCombatant",
+          "saveCombatEncounters",
+          "saveCombatTemplates",
+          "sortCombatants",
+          "tickBattlefieldZones",
+          "tickCombatEffects"
+        ],
+        "excerpt": {
+          "startLine": 49,
+          "endLine": 57,
+          "text": "  name: string;\n  kind: CombatantKind;\n  initiative: number;\n  armorClass: number;\n  maxHp: number;\n  currentHp: number;\n  tempHp: number;\n  conditions: CombatCondition[];\n  effects: CombatEffect[];"
+        },
+        "lineCount": 366
+      },
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "basename": "CharacterDetail.tsx",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "Rest Center",
+              "line": 691
+            },
+            {
+              "signal": "short rest",
+              "line": 312
+            },
+            {
+              "signal": "short rest",
+              "line": 691
+            },
+            {
+              "signal": "short rest",
+              "line": 1013
+            },
+            {
+              "signal": "short rest",
+              "line": 1054
+            },
+            {
+              "signal": "long rest",
+              "line": 691
+            },
+            {
+              "signal": "long rest",
+              "line": 1435
+            }
+          ],
+          "characterDetail": [
+            {
+              "signal": "CharacterDetail",
+              "line": 100
+            },
+            {
+              "signal": "character detail",
+              "line": 132
+            },
+            {
+              "signal": "character detail",
+              "line": 627
+            },
+            {
+              "signal": "currentHp",
+              "line": 236
+            },
+            {
+              "signal": "currentHp",
+              "line": 241
+            },
+            {
+              "signal": "currentHp",
+              "line": 297
+            },
+            {
+              "signal": "currentHp",
+              "line": 301
+            },
+            {
+              "signal": "currentHp",
+              "line": 581
+            },
+            {
+              "signal": "currentHp",
+              "line": 692
+            },
+            {
+              "signal": "currentHp",
+              "line": 985
+            },
+            {
+              "signal": "currentHp",
+              "line": 1062
+            },
+            {
+              "signal": "maxHp",
+              "line": 236
+            },
+            {
+              "signal": "maxHp",
+              "line": 297
+            },
+            {
+              "signal": "maxHp",
+              "line": 581
+            },
+            {
+              "signal": "maxHp",
+              "line": 692
+            },
+            {
+              "signal": "maxHp",
+              "line": 985
+            },
+            {
+              "signal": "maxHp",
+              "line": 1062
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "useNavigate",
+              "line": 2
+            },
+            {
+              "signal": "useNavigate",
+              "line": 112
+            },
+            {
+              "signal": "router",
+              "line": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "line": 103
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 108
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 226
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 239
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 247
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 260
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 268
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 276
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 299
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 332
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 360
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 378
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 391
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 537
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 579
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 672
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 672
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 686
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 686
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 1109
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters",
+          "/rest"
+        ],
+        "exportedSymbols": [
+          "CharacterDetail"
+        ],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { useState } from \"react\";\nimport { useNavigate, useParams } from \"react-router-dom\";\nimport { rollDice } from \"../../core/dice/diceRoller\";\nimport type { RulesetData, DndSpellData } from \"../../core/rulesets/ruleset.types\";\nimport type { AbilityKey, Character } from \"../../core/character/character.types\";\nimport { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellAttackBonus, getSpellSaveDc } from \"../../core/character/characterCalculator\";"
+        },
+        "lineCount": 1443
+      },
+      {
+        "file": "src/features/campaigns/Campaigns.tsx",
+        "basename": "Campaigns.tsx",
+        "categories": {
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 118
+            },
+            {
+              "signal": "currentHp",
+              "line": 455
+            },
+            {
+              "signal": "currentHp",
+              "line": 455
+            },
+            {
+              "signal": "currentHp",
+              "line": 491
+            },
+            {
+              "signal": "currentHp",
+              "line": 508
+            },
+            {
+              "signal": "currentHp",
+              "line": 510
+            },
+            {
+              "signal": "currentHp",
+              "line": 669
+            },
+            {
+              "signal": "currentHp",
+              "line": 1015
+            },
+            {
+              "signal": "currentHp",
+              "line": 1055
+            },
+            {
+              "signal": "currentHp",
+              "line": 1258
+            },
+            {
+              "signal": "maxHp",
+              "line": 121
+            },
+            {
+              "signal": "maxHp",
+              "line": 122
+            },
+            {
+              "signal": "maxHp",
+              "line": 133
+            },
+            {
+              "signal": "maxHp",
+              "line": 454
+            },
+            {
+              "signal": "maxHp",
+              "line": 454
+            },
+            {
+              "signal": "maxHp",
+              "line": 490
+            },
+            {
+              "signal": "maxHp",
+              "line": 510
+            },
+            {
+              "signal": "maxHp",
+              "line": 669
+            },
+            {
+              "signal": "maxHp",
+              "line": 795
+            },
+            {
+              "signal": "maxHp",
+              "line": 1013
+            },
+            {
+              "signal": "maxHp",
+              "line": 1015
+            },
+            {
+              "signal": "maxHp",
+              "line": 1055
+            },
+            {
+              "signal": "maxHp",
+              "line": 1258
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "Campaigns"
+        ],
+        "excerpt": {
+          "startLine": 114,
+          "endLine": 122,
+          "text": "  }, [characters, selectedCampaign]);\n\n  const partySummary = useMemo(() => {\n    const totalHp = partyCharacters.reduce(\n      (sum, character) => sum + character.currentHp,\n      0,\n    );\n    const totalMaxHp = partyCharacters.reduce(\n      (sum, character) => sum + character.maxHp,"
+        },
+        "lineCount": 1433
+      },
+      {
+        "file": "src/core/rulesets/restRecoveryRules.ts",
+        "basename": "restRecoveryRules.ts",
+        "categories": {
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 7
+            },
+            {
+              "signal": "currentHp",
+              "line": 13
+            },
+            {
+              "signal": "currentHp",
+              "line": 13
+            },
+            {
+              "signal": "currentHp",
+              "line": 24
+            },
+            {
+              "signal": "currentHp",
+              "line": 25
+            },
+            {
+              "signal": "currentHp",
+              "line": 26
+            },
+            {
+              "signal": "currentHp",
+              "line": 26
+            },
+            {
+              "signal": "currentHp",
+              "line": 27
+            },
+            {
+              "signal": "currentHp",
+              "line": 30
+            },
+            {
+              "signal": "currentHp",
+              "line": 42
+            },
+            {
+              "signal": "currentHp",
+              "line": 43
+            },
+            {
+              "signal": "currentHp",
+              "line": 43
+            },
+            {
+              "signal": "maxHp",
+              "line": 7
+            },
+            {
+              "signal": "maxHp",
+              "line": 12
+            },
+            {
+              "signal": "maxHp",
+              "line": 13
+            },
+            {
+              "signal": "maxHp",
+              "line": 24
+            },
+            {
+              "signal": "maxHp",
+              "line": 26
+            },
+            {
+              "signal": "maxHp",
+              "line": 30
+            },
+            {
+              "signal": "maxHp",
+              "line": 42
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "applyLongRest",
+          "applyRest",
+          "applyShortRest",
+          "normalizeRestState",
+          "recoverHitDice",
+          "recoverResources",
+          "recoverSpellSlots",
+          "spendHitDie",
+          "spendResource",
+          "spendSpellSlot",
+          "usedHitDice",
+          "usedSpellSlots"
+        ],
+        "excerpt": {
+          "startLine": 3,
+          "endLine": 11,
+          "text": "export type HitDiePool={die:number;max:number;used:number};\nexport type SpellSlotPool={level:number;max:number;used:number;pact?:boolean};\nexport type ResourcePool={id:string;current:number;max:number;recovery:\"short\"|\"long\"|\"both\"|\"manual\"};\nexport type ActiveEffect={id:string;durationType:\"rounds\"|\"minutes\"|\"hours\"|\"until-rest\"|\"permanent\";expiresOn?:RestKind};\nexport type RestState={currentHp:number;maxHp:number;tempHp:number;hitDice:HitDiePool[];spellSlots:SpellSlotPool[];resources:ResourcePool[];exhaustion:number;deathSaves:{successes:number;failures:number};concentrating:boolean;activeEffects:ActiveEffect[]};\nexport type RestRecoveryState = RestState;\nconst n=(v:number,f=0)=>Number.isFinite(v)?Math.floor(v):f;\nconst c=(v:number,a:number,b:number)=>Math.min(b,Math.max(a,v));\nexport function normalizeRestState(s:RestState):RestState{"
+        },
+        "lineCount": 47
+      },
+      {
+        "file": "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+        "basename": "restRecoveryGoldenCharacters.test.ts",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "short rest",
+              "line": 155
+            },
+            {
+              "signal": "short rest",
+              "line": 186
+            },
+            {
+              "signal": "short rest",
+              "line": 195
+            },
+            {
+              "signal": "short rest",
+              "line": 203
+            },
+            {
+              "signal": "short rest",
+              "line": 209
+            },
+            {
+              "signal": "long rest",
+              "line": 164
+            },
+            {
+              "signal": "long rest",
+              "line": 174
+            },
+            {
+              "signal": "long rest",
+              "line": 215
+            },
+            {
+              "signal": "long rest",
+              "line": 222
+            }
+          ],
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 25
+            },
+            {
+              "signal": "currentHp",
+              "line": 45
+            },
+            {
+              "signal": "currentHp",
+              "line": 70
+            },
+            {
+              "signal": "currentHp",
+              "line": 90
+            },
+            {
+              "signal": "currentHp",
+              "line": 110
+            },
+            {
+              "signal": "currentHp",
+              "line": 144
+            },
+            {
+              "signal": "currentHp",
+              "line": 145
+            },
+            {
+              "signal": "currentHp",
+              "line": 167
+            },
+            {
+              "signal": "currentHp",
+              "line": 239
+            },
+            {
+              "signal": "currentHp",
+              "line": 245
+            },
+            {
+              "signal": "maxHp",
+              "line": 26
+            },
+            {
+              "signal": "maxHp",
+              "line": 46
+            },
+            {
+              "signal": "maxHp",
+              "line": 71
+            },
+            {
+              "signal": "maxHp",
+              "line": 91
+            },
+            {
+              "signal": "maxHp",
+              "line": 111
+            },
+            {
+              "signal": "maxHp",
+              "line": 145
+            },
+            {
+              "signal": "maxHp",
+              "line": 167
+            },
+            {
+              "signal": "maxHp",
+              "line": 235
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 21,
+          "endLine": 29,
+          "text": "    name: \"Golden 2014 Fighter\",\n    classId: \"fighter\",\n    level: 5,\n    ruleset: \"dnd_2014\",\n    currentHp: 12,\n    maxHp: 44,\n    tempHp: 4,\n    hitDice: [{ die: 10, max: 5, used: 4 }],\n    spellSlots: [],"
+        },
+        "lineCount": 254
+      },
+      {
+        "file": "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+        "basename": "equipmentCombatGoldenLoadouts.test.ts",
+        "categories": {
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 138
+            },
+            {
+              "signal": "maxHp",
+              "line": 32
+            },
+            {
+              "signal": "maxHp",
+              "line": 137
+            },
+            {
+              "signal": "maxHp",
+              "line": 137
+            },
+            {
+              "signal": "maxHp",
+              "line": 138
+            },
+            {
+              "signal": "maxHp",
+              "line": 181
+            },
+            {
+              "signal": "maxHp",
+              "line": 214
+            },
+            {
+              "signal": "maxHp",
+              "line": 247
+            },
+            {
+              "signal": "maxHp",
+              "line": 279
+            },
+            {
+              "signal": "maxHp",
+              "line": 311
+            },
+            {
+              "signal": "maxHp",
+              "line": 341
+            },
+            {
+              "signal": "maxHp",
+              "line": 368
+            },
+            {
+              "signal": "maxHp",
+              "line": 394
+            },
+            {
+              "signal": "maxHp",
+              "line": 423
+            },
+            {
+              "signal": "maxHp",
+              "line": 451
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 28,
+          "endLine": 36,
+          "text": "  ruleset: RulesetId;\n  level: number;\n  str: number;\n  dex: number;\n  maxHp: number;\n  armorClassMode: \"manual\" | \"auto\";\n  manualArmorClass?: number;\n  inventory: Array<{ itemId: string; quantity: number }>;\n  equippedArmorId: string | null;"
+        },
+        "lineCount": 546
+      },
+      {
+        "file": "src/core/character/survivalRules.ts",
+        "basename": "survivalRules.ts",
+        "categories": {
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 4
+            },
+            {
+              "signal": "currentHp",
+              "line": 25
+            },
+            {
+              "signal": "currentHp",
+              "line": 27
+            },
+            {
+              "signal": "currentHp",
+              "line": 29
+            },
+            {
+              "signal": "currentHp",
+              "line": 39
+            },
+            {
+              "signal": "currentHp",
+              "line": 51
+            },
+            {
+              "signal": "currentHp",
+              "line": 51
+            },
+            {
+              "signal": "currentHp",
+              "line": 54
+            },
+            {
+              "signal": "currentHp",
+              "line": 55
+            },
+            {
+              "signal": "currentHp",
+              "line": 60
+            },
+            {
+              "signal": "currentHp",
+              "line": 61
+            },
+            {
+              "signal": "maxHp",
+              "line": 5
+            },
+            {
+              "signal": "maxHp",
+              "line": 29
+            },
+            {
+              "signal": "maxHp",
+              "line": 51
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "applyDamage",
+          "applyHealing",
+          "getConcentrationDc",
+          "resolveDeathSave"
+        ],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 8,
+          "text": "import type { CharacterDeathSaves } from \"./character.types\";\n\nexport type SurvivalState = {\n  currentHp: number;\n  maxHp: number;\n  tempHp: number;\n  deathSaves: CharacterDeathSaves;\n};"
+        },
+        "lineCount": 68
+      },
+      {
+        "file": "src/features/combat-tracker/CombatTrackerPage.tsx",
+        "basename": "CombatTrackerPage.tsx",
+        "categories": {
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 163
+            },
+            {
+              "signal": "currentHp",
+              "line": 163
+            },
+            {
+              "signal": "currentHp",
+              "line": 171
+            },
+            {
+              "signal": "currentHp",
+              "line": 335
+            },
+            {
+              "signal": "currentHp",
+              "line": 341
+            },
+            {
+              "signal": "currentHp",
+              "line": 355
+            },
+            {
+              "signal": "currentHp",
+              "line": 355
+            },
+            {
+              "signal": "maxHp",
+              "line": 163
+            },
+            {
+              "signal": "maxHp",
+              "line": 163
+            },
+            {
+              "signal": "maxHp",
+              "line": 171
+            },
+            {
+              "signal": "maxHp",
+              "line": 335
+            },
+            {
+              "signal": "maxHp",
+              "line": 341
+            },
+            {
+              "signal": "maxHp",
+              "line": 355
+            },
+            {
+              "signal": "maxHp",
+              "line": 355
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "CombatTrackerPage"
+        ],
+        "excerpt": {
+          "startLine": 159,
+          "endLine": 167,
+          "text": "    let combatant: Combatant;\n    if (sourceType === \"character\") {\n      const character = characters.find((item) => item.id === sourceId) ?? characters[0];\n      if (!character) return;\n      combatant = { ...createCombatant(character.name, \"Karakter\"), sourceId: character.id, initiative: getDexModifier(character.abilities.dex), armorClass: character.armorClass, maxHp: character.maxHp, currentHp: character.currentHp, tempHp: character.tempHp, conditions: [...character.conditions], effects: [] };\n    } else if (sourceType === \"npc\") {\n      const npc = npcs.find((item) => item.id === sourceId) ?? npcs[0];\n      if (!npc) return;\n      combatant = { ...createCombatant(npc.name, \"NPC\"), sourceId: npc.id, notes: npc.role };"
+        },
+        "lineCount": 379
+      },
+      {
+        "file": "src/features/monsters/MonsterLibrary.tsx",
+        "basename": "MonsterLibrary.tsx",
+        "categories": {
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 192
+            },
+            {
+              "signal": "currentHp",
+              "line": 201
+            },
+            {
+              "signal": "currentHp",
+              "line": 209
+            },
+            {
+              "signal": "currentHp",
+              "line": 211
+            },
+            {
+              "signal": "currentHp",
+              "line": 222
+            },
+            {
+              "signal": "currentHp",
+              "line": 231
+            },
+            {
+              "signal": "currentHp",
+              "line": 506
+            },
+            {
+              "signal": "currentHp",
+              "line": 711
+            },
+            {
+              "signal": "currentHp",
+              "line": 780
+            },
+            {
+              "signal": "currentHp",
+              "line": 786
+            },
+            {
+              "signal": "currentHp",
+              "line": 788
+            },
+            {
+              "signal": "currentHp",
+              "line": 796
+            },
+            {
+              "signal": "currentHp",
+              "line": 804
+            },
+            {
+              "signal": "currentHp",
+              "line": 933
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "useNavigate",
+              "line": 2
+            },
+            {
+              "signal": "useNavigate",
+              "line": 29
+            },
+            {
+              "signal": "useNavigate",
+              "line": 694
+            },
+            {
+              "signal": "router",
+              "line": 2
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/monsters"
+        ],
+        "exportedSymbols": [
+          "MonsterDetail",
+          "MonsterLibrary"
+        ],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { useDeferredValue, useEffect, useMemo, useState } from \"react\";\nimport { useNavigate, useParams } from \"react-router-dom\";\nimport { motion } from \"framer-motion\";\nimport type { DiceRollResult } from \"../../core/dice/dice.types\";\nimport { rollDice } from \"../../core/dice/diceRoller\";\nimport type { DndMonsterData, RulesetData } from \"../../core/rulesets/ruleset.types\";"
+        },
+        "lineCount": 1023
+      }
+    ],
+    "routing": [
+      {
+        "file": "src/features/legacy/AppRoutes.tsx",
+        "basename": "AppRoutes.tsx",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "RestCenterPage",
+              "line": 127
+            },
+            {
+              "signal": "RestCenterPage",
+              "line": 128
+            },
+            {
+              "signal": "RestCenterPage",
+              "line": 128
+            },
+            {
+              "signal": "RestCenterPage",
+              "line": 320
+            }
+          ],
+          "characterDetail": [
+            {
+              "signal": "CharacterDetail",
+              "line": 21
+            },
+            {
+              "signal": "CharacterDetail",
+              "line": 22
+            },
+            {
+              "signal": "CharacterDetail",
+              "line": 23
+            },
+            {
+              "signal": "CharacterDetail",
+              "line": 254
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Routes",
+              "line": 2
+            },
+            {
+              "signal": "Routes",
+              "line": 136
+            },
+            {
+              "signal": "Routes",
+              "line": 169
+            },
+            {
+              "signal": "Routes",
+              "line": 196
+            },
+            {
+              "signal": "Routes",
+              "line": 206
+            },
+            {
+              "signal": "Routes",
+              "line": 468
+            },
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "Route",
+              "line": 136
+            },
+            {
+              "signal": "Route",
+              "line": 169
+            },
+            {
+              "signal": "Route",
+              "line": 196
+            },
+            {
+              "signal": "Route",
+              "line": 200
+            },
+            {
+              "signal": "Route",
+              "line": 201
+            },
+            {
+              "signal": "Route",
+              "line": 206
+            },
+            {
+              "signal": "Route",
+              "line": 207
+            },
+            {
+              "signal": "Route",
+              "line": 221
+            },
+            {
+              "signal": "Route",
+              "line": 233
+            },
+            {
+              "signal": "Route",
+              "line": 238
+            },
+            {
+              "signal": "Route",
+              "line": 251
+            },
+            {
+              "signal": "Route",
+              "line": 263
+            },
+            {
+              "signal": "Route",
+              "line": 275
+            },
+            {
+              "signal": "Route",
+              "line": 285
+            },
+            {
+              "signal": "Route",
+              "line": 287
+            },
+            {
+              "signal": "Route",
+              "line": 292
+            },
+            {
+              "signal": "Route",
+              "line": 297
+            },
+            {
+              "signal": "Route",
+              "line": 302
+            },
+            {
+              "signal": "Route",
+              "line": 307
+            },
+            {
+              "signal": "Route",
+              "line": 311
+            },
+            {
+              "signal": "Route",
+              "line": 315
+            },
+            {
+              "signal": "Route",
+              "line": 320
+            },
+            {
+              "signal": "Route",
+              "line": 321
+            },
+            {
+              "signal": "Route",
+              "line": 323
+            },
+            {
+              "signal": "Route",
+              "line": 334
+            },
+            {
+              "signal": "Route",
+              "line": 345
+            },
+            {
+              "signal": "Route",
+              "line": 356
+            },
+            {
+              "signal": "Route",
+              "line": 367
+            },
+            {
+              "signal": "Route",
+              "line": 381
+            },
+            {
+              "signal": "Route",
+              "line": 398
+            },
+            {
+              "signal": "Route",
+              "line": 409
+            },
+            {
+              "signal": "Route",
+              "line": 410
+            },
+            {
+              "signal": "Route",
+              "line": 411
+            },
+            {
+              "signal": "Route",
+              "line": 412
+            },
+            {
+              "signal": "Route",
+              "line": 413
+            },
+            {
+              "signal": "Route",
+              "line": 414
+            },
+            {
+              "signal": "Route",
+              "line": 415
+            },
+            {
+              "signal": "Route",
+              "line": 417
+            },
+            {
+              "signal": "Route",
+              "line": 419
+            },
+            {
+              "signal": "Route",
+              "line": 422
+            },
+            {
+              "signal": "Route",
+              "line": 436
+            },
+            {
+              "signal": "Route",
+              "line": 452
+            },
+            {
+              "signal": "Route",
+              "line": 468
+            },
+            {
+              "signal": "router",
+              "line": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "line": 146
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 179
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 246
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 246
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 257
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 257
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 281
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 281
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/",
+          "/backup",
+          "/builder",
+          "/calendar",
+          "/campaigns",
+          "/characters",
+          "/characters/:characterId",
+          "/characters/:characterId/edit",
+          "/characters/compare",
+          "/classes",
+          "/collections",
+          "/combat",
+          "/dice",
+          "/factions",
+          "/feats",
+          "/help",
+          "/homebrew-lab",
+          "/inventory",
+          "/library",
+          "/locations",
+          "/loot",
+          "/monsters",
+          "/monsters/:monsterId",
+          "/npcs",
+          "/origins",
+          "/play-mode",
+          "/player-test",
+          "/quests",
+          "/rest",
+          "/rulesets",
+          "/search",
+          "/session-planner",
+          "/settings",
+          "/spellbook",
+          "/subclasses",
+          "/updates"
+        ],
+        "exportedSymbols": [
+          "AppRoutes"
+        ],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { lazy, Suspense } from \"react\";\nimport { Route, Routes } from \"react-router-dom\";\nimport type {\n  DndItemData,\n  DndMonsterData,\n  DndSpellData,"
+        },
+        "lineCount": 472
+      },
+      {
+        "file": "src/core/rulesets/fullCharacterCreationJourney.ts",
+        "basename": "fullCharacterCreationJourney.ts",
+        "categories": {
+          "routing": [
+            {
+              "signal": "Routes",
+              "line": 8
+            },
+            {
+              "signal": "Routes",
+              "line": 12
+            },
+            {
+              "signal": "Routes",
+              "line": 13
+            },
+            {
+              "signal": "Routes",
+              "line": 14
+            },
+            {
+              "signal": "Routes",
+              "line": 15
+            },
+            {
+              "signal": "Routes",
+              "line": 16
+            },
+            {
+              "signal": "Routes",
+              "line": 17
+            },
+            {
+              "signal": "Routes",
+              "line": 18
+            },
+            {
+              "signal": "Routes",
+              "line": 19
+            },
+            {
+              "signal": "Routes",
+              "line": 26
+            },
+            {
+              "signal": "Route",
+              "line": 8
+            },
+            {
+              "signal": "Route",
+              "line": 12
+            },
+            {
+              "signal": "Route",
+              "line": 13
+            },
+            {
+              "signal": "Route",
+              "line": 14
+            },
+            {
+              "signal": "Route",
+              "line": 15
+            },
+            {
+              "signal": "Route",
+              "line": 16
+            },
+            {
+              "signal": "Route",
+              "line": 17
+            },
+            {
+              "signal": "Route",
+              "line": 18
+            },
+            {
+              "signal": "Route",
+              "line": 19
+            },
+            {
+              "signal": "Route",
+              "line": 26
+            },
+            {
+              "signal": "Route",
+              "line": 26
+            },
+            {
+              "signal": "Route",
+              "line": 32
+            },
+            {
+              "signal": "Route",
+              "line": 33
+            },
+            {
+              "signal": "Route",
+              "line": 34
+            },
+            {
+              "signal": "Route",
+              "line": 35
+            },
+            {
+              "signal": "Route",
+              "line": 36
+            },
+            {
+              "signal": "Route",
+              "line": 36
+            },
+            {
+              "signal": "Route",
+              "line": 36
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "getCharacterCreationJourneyCoverage"
+        ],
+        "excerpt": {
+          "startLine": 4,
+          "endLine": 12,
+          "text": "  id: string;\n  ruleset: RulesetId;\n  className: string;\n  requiresSpellcasting: boolean;\n  expectedRoutes: string[];\n}\n\nexport const FULL_CHARACTER_CREATION_SCENARIOS: CharacterCreationJourneyScenario[] = [\n  { id: \"2024-fighter\", ruleset: \"dnd_2024\", className: \"Fighter\", requiresSpellcasting: false, expectedRoutes: [\"/builder\", \"/characters\", \"/play-mode\", \"/rest\"] },"
+        },
+        "lineCount": 39
+      },
+      {
+        "file": "src/shared/layout/AppFrame.tsx",
+        "basename": "AppFrame.tsx",
+        "categories": {
+          "routing": [
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "Route",
+              "line": 8
+            },
+            {
+              "signal": "Route",
+              "line": 8
+            },
+            {
+              "signal": "Route",
+              "line": 17
+            },
+            {
+              "signal": "Route",
+              "line": 17
+            },
+            {
+              "signal": "Route",
+              "line": 107
+            },
+            {
+              "signal": "Route",
+              "line": 136
+            },
+            {
+              "signal": "Route",
+              "line": 137
+            },
+            {
+              "signal": "Route",
+              "line": 138
+            },
+            {
+              "signal": "Route",
+              "line": 138
+            },
+            {
+              "signal": "Route",
+              "line": 142
+            },
+            {
+              "signal": "Route",
+              "line": 148
+            },
+            {
+              "signal": "useNavigate",
+              "line": 2
+            },
+            {
+              "signal": "useNavigate",
+              "line": 84
+            },
+            {
+              "signal": "router",
+              "line": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "sessionStorage",
+              "line": 136
+            },
+            {
+              "signal": "sessionStorage",
+              "line": 137
+            },
+            {
+              "signal": "sessionStorage",
+              "line": 140
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/"
+        ],
+        "exportedSymbols": [
+          "AppFrame"
+        ],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { useEffect, useMemo, useRef, useState } from \"react\";\nimport { NavLink, useLocation, useNavigate } from \"react-router-dom\";\nimport { getMobileQuickItems, getNavGroupForPath, navGroups, navItems, type NavGroup } from \"../navigation/navItems\";\nimport { StorageRecoveryCenter } from \"../errors/StorageRecoveryCenter\";\nimport { PwaUpdateManager } from \"../pwa/PwaUpdateManager\";\nimport { PwaInstallGuide } from \"../pwa/PwaInstallGuide\";"
+        },
+        "lineCount": 218
+      },
+      {
+        "file": "src/shared/settings/appSettings.ts",
+        "basename": "appSettings.ts",
+        "categories": {
+          "routing": [
+            {
+              "signal": "Routes",
+              "line": 47
+            },
+            {
+              "signal": "Routes",
+              "line": 64
+            },
+            {
+              "signal": "Routes",
+              "line": 65
+            },
+            {
+              "signal": "Route",
+              "line": 14
+            },
+            {
+              "signal": "Route",
+              "line": 27
+            },
+            {
+              "signal": "Route",
+              "line": 33
+            },
+            {
+              "signal": "Route",
+              "line": 47
+            },
+            {
+              "signal": "Route",
+              "line": 47
+            },
+            {
+              "signal": "Route",
+              "line": 64
+            },
+            {
+              "signal": "Route",
+              "line": 64
+            },
+            {
+              "signal": "Route",
+              "line": 65
+            },
+            {
+              "signal": "Route",
+              "line": 65
+            },
+            {
+              "signal": "Route",
+              "line": 67
+            },
+            {
+              "signal": "Route",
+              "line": 68
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "APP_SETTINGS_STORAGE_KEY",
+          "START_ROUTE_OPTIONS",
+          "sanitizeAppSettings"
+        ],
+        "excerpt": {
+          "startLine": 10,
+          "endLine": 18,
+          "text": "  accentTheme: AccentTheme;\n  density: UiDensity;\n  motion: MotionPreference;\n  fontScale: FontScale;\n  startRoute: string;\n  campaignToolProfile: CampaignToolProfile;\n  defaultRuleset: RulesetId;\n  locale: AppLocale;\n};"
+        },
+        "lineCount": 82
+      },
+      {
+        "file": "e2e/rc1-critical-smoke.spec.ts",
+        "basename": "rc1-critical-smoke.spec.ts",
+        "categories": {
+          "routing": [
+            {
+              "signal": "Routes",
+              "line": 8
+            },
+            {
+              "signal": "Routes",
+              "line": 17
+            },
+            {
+              "signal": "Routes",
+              "line": 30
+            },
+            {
+              "signal": "Route",
+              "line": 8
+            },
+            {
+              "signal": "Route",
+              "line": 17
+            },
+            {
+              "signal": "Route",
+              "line": 17
+            },
+            {
+              "signal": "Route",
+              "line": 18
+            },
+            {
+              "signal": "Route",
+              "line": 18
+            },
+            {
+              "signal": "Route",
+              "line": 19
+            },
+            {
+              "signal": "Route",
+              "line": 21
+            },
+            {
+              "signal": "Route",
+              "line": 30
+            },
+            {
+              "signal": "Route",
+              "line": 30
+            },
+            {
+              "signal": "Route",
+              "line": 31
+            }
+          ],
+          "testing": [
+            {
+              "signal": "installKnownAppState",
+              "line": 2
+            },
+            {
+              "signal": "installKnownAppState",
+              "line": 5
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/",
+          "/backup",
+          "/builder",
+          "/characters",
+          "/combat",
+          "/settings"
+        ],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { expect, test } from \"@playwright/test\";\nimport { installKnownAppState } from \"./support/appState\";\n\ntest.beforeEach(async ({ page }) => {\n  await installKnownAppState(page);\n});"
+        },
+        "lineCount": 37
+      },
+      {
+        "file": "src/features/settings/Settings.tsx",
+        "basename": "Settings.tsx",
+        "categories": {
+          "routing": [
+            {
+              "signal": "Route",
+              "line": 1
+            },
+            {
+              "signal": "Route",
+              "line": 7
+            },
+            {
+              "signal": "Route",
+              "line": 184
+            },
+            {
+              "signal": "Route",
+              "line": 185
+            },
+            {
+              "signal": "Route",
+              "line": 187
+            },
+            {
+              "signal": "Route",
+              "line": 198
+            },
+            {
+              "signal": "Route",
+              "line": 198
+            },
+            {
+              "signal": "Route",
+              "line": 203
+            },
+            {
+              "signal": "useNavigate",
+              "line": 1
+            },
+            {
+              "signal": "useNavigate",
+              "line": 67
+            },
+            {
+              "signal": "router",
+              "line": 1
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "Settings"
+        ],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 5,
+          "text": "import { useNavigate } from \"react-router-dom\";\nimport { PageShell } from \"../../shared/layout/PageShell\";\nimport { AccessibilityPerformancePanel } from \"./AccessibilityPerformancePanel\";\nimport { RULESET_DEFINITIONS } from \"../../core/rulesets/rulesetRegistry\";\nimport { useAppSettings } from \"../../shared/settings/AppSettingsProvider\";"
+        },
+        "lineCount": 291
+      },
+      {
+        "file": "src/features/legacy/LegacyApp.tsx",
+        "basename": "LegacyApp.tsx",
+        "categories": {
+          "routing": [
+            {
+              "signal": "Routes",
+              "line": 36
+            },
+            {
+              "signal": "Routes",
+              "line": 36
+            },
+            {
+              "signal": "Routes",
+              "line": 385
+            },
+            {
+              "signal": "Route",
+              "line": 36
+            },
+            {
+              "signal": "Route",
+              "line": 36
+            },
+            {
+              "signal": "Route",
+              "line": 385
+            }
+          ],
+          "storage": [
+            {
+              "signal": "saveCharacter",
+              "line": 15
+            },
+            {
+              "signal": "saveCharacter",
+              "line": 125
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 140
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 395
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 395
+            },
+            {
+              "signal": "setCharacters",
+              "line": 47
+            },
+            {
+              "signal": "setCharacters",
+              "line": 133
+            },
+            {
+              "signal": "setCharacters",
+              "line": 137
+            },
+            {
+              "signal": "setCharacters",
+              "line": 141
+            },
+            {
+              "signal": "setCharacters",
+              "line": 161
+            },
+            {
+              "signal": "setCharacters",
+              "line": 182
+            },
+            {
+              "signal": "setCharacters",
+              "line": 187
+            },
+            {
+              "signal": "setCharacters",
+              "line": 191
+            },
+            {
+              "signal": "setCharacters",
+              "line": 202
+            },
+            {
+              "signal": "setCharacters",
+              "line": 245
+            },
+            {
+              "signal": "characterStorage",
+              "line": 16
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "App"
+        ],
+        "excerpt": {
+          "startLine": 11,
+          "endLine": 19,
+          "text": "  CharacterDraft,\n} from \"../../core/character/character.types\";\nimport {\n  loadCharacters,\n  saveCharacters,\n} from \"../../core/storage/characterStorage\";\nimport \"../../App.css\";\nimport { createCharacterFromDraft } from \"../characters/characterShared\";\nimport type { Campaign } from \"../campaigns/campaignTypes\";"
+        },
+        "lineCount": 418
+      },
+      {
+        "file": "src/core/quality/releaseReadinessAudit.ts",
+        "basename": "releaseReadinessAudit.ts",
+        "categories": {
+          "routing": [
+            {
+              "signal": "Routes",
+              "line": 43
+            },
+            {
+              "signal": "Routes",
+              "line": 43
+            },
+            {
+              "signal": "Routes",
+              "line": 46
+            },
+            {
+              "signal": "Routes",
+              "line": 52
+            },
+            {
+              "signal": "Route",
+              "line": 43
+            },
+            {
+              "signal": "Route",
+              "line": 43
+            },
+            {
+              "signal": "Route",
+              "line": 46
+            },
+            {
+              "signal": "Route",
+              "line": 52
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "OPEN_RULES_LICENSE",
+          "auditLicensing",
+          "auditNavigationAccessibility",
+          "auditNavigationLocalization",
+          "buildReleaseReadinessAudit"
+        ],
+        "excerpt": {
+          "startLine": 39,
+          "endLine": 47,
+          "text": "  };\n}\n\nexport function auditNavigationAccessibility(): AuditCheck {\n  const duplicateRoutes = uniqueValues(navItems.map((item) => item.to)) ? [] : [\"Navigation routes must be unique.\"];\n  const missingLabels = navItems.filter((item) => !item.label.trim() || !item.shortLabel.trim()).map((item) => item.to);\n  const mobileWithoutShortLabel = navItems.filter((item) => item.mobileQuick && !item.shortLabel.trim()).map((item) => item.to);\n  const details = [...duplicateRoutes, ...missingLabels, ...mobileWithoutShortLabel];\n"
+        },
+        "lineCount": 84
+      },
+      {
+        "file": "src/main.tsx",
+        "basename": "main.tsx",
+        "categories": {
+          "routing": [
+            {
+              "signal": "Route",
+              "line": 3
+            },
+            {
+              "signal": "Route",
+              "line": 3
+            },
+            {
+              "signal": "Route",
+              "line": 17
+            },
+            {
+              "signal": "Route",
+              "line": 19
+            },
+            {
+              "signal": "router",
+              "line": 3
+            },
+            {
+              "signal": "router",
+              "line": 3
+            },
+            {
+              "signal": "router",
+              "line": 17
+            },
+            {
+              "signal": "router",
+              "line": 19
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 7,
+          "text": "import { StrictMode } from \"react\";\nimport { createRoot } from \"react-dom/client\";\nimport { BrowserRouter } from \"react-router-dom\";\nimport \"./index.css\";\nimport App from \"./App.tsx\";\nimport { AppErrorBoundary } from \"./shared/errors/AppErrorBoundary\";\nimport { AppSettingsProvider } from \"./shared/settings/AppSettingsProvider\";"
+        },
+        "lineCount": 25
+      },
+      {
+        "file": "e2e/app-shell.spec.ts",
+        "basename": "app-shell.spec.ts",
+        "categories": {
+          "routing": [
+            {
+              "signal": "Routes",
+              "line": 2
+            },
+            {
+              "signal": "Routes",
+              "line": 5
+            },
+            {
+              "signal": "Routes",
+              "line": 5
+            },
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "Route",
+              "line": 5
+            },
+            {
+              "signal": "Route",
+              "line": 5
+            },
+            {
+              "signal": "Route",
+              "line": 5
+            },
+            {
+              "signal": "Route",
+              "line": 5
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "line": 3
+            },
+            {
+              "signal": "sessionStorage",
+              "line": 3
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByRole",
+              "line": 4
+            },
+            {
+              "signal": "getByRole",
+              "line": 4
+            },
+            {
+              "signal": "getByRole",
+              "line": 5
+            },
+            {
+              "signal": "getByRole",
+              "line": 6
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { expect, test } from \"@playwright/test\";\nconst routes = [[\"/\", \"Masa hazır.\"], [\"/characters\", \"Karakterler\"], [\"/builder\", \"Yeni Karakter\"], [\"/play-mode\", \"Play Mode\"], [\"/backup\", \"Yedek\"]] as const;\ntest.beforeEach(async ({ page }) => { await page.addInitScript(() => { localStorage.clear(); sessionStorage.clear(); }); });\ntest(\"dashboard shell opens\", async ({ page }) => { await page.goto(\"/\"); await expect(page.getByRole(\"link\", { name: \"E4 D&D ana sayfa\" })).toBeVisible(); await expect(page.getByRole(\"heading\", { name: \"Masa hazır.\" })).toBeVisible(); });\ntest(\"core routes support direct navigation\", async ({ page }) => { for (const [route, heading] of routes) { await page.goto(route); await expect(page.getByRole(\"heading\", { name: new RegExp(heading, \"i\") }).first()).toBeVisible(); } });\ntest(\"keyboard skip link reaches main\", async ({ page }) => { await page.goto(\"/\"); await page.keyboard.press(\"Tab\"); await expect(page.getByRole(\"link\", { name: \"Ana içeriğe geç\" })).toBeFocused(); await page.keyboard.press(\"Enter\"); await expect(page.locator(\"#main-content\")).toBeFocused(); });"
+        },
+        "lineCount": 7
+      }
+    ],
+    "storage": [
+      {
+        "file": "src/features/characters/CharacterDetail.tsx",
+        "basename": "CharacterDetail.tsx",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "Rest Center",
+              "line": 691
+            },
+            {
+              "signal": "short rest",
+              "line": 312
+            },
+            {
+              "signal": "short rest",
+              "line": 691
+            },
+            {
+              "signal": "short rest",
+              "line": 1013
+            },
+            {
+              "signal": "short rest",
+              "line": 1054
+            },
+            {
+              "signal": "long rest",
+              "line": 691
+            },
+            {
+              "signal": "long rest",
+              "line": 1435
+            }
+          ],
+          "characterDetail": [
+            {
+              "signal": "CharacterDetail",
+              "line": 100
+            },
+            {
+              "signal": "character detail",
+              "line": 132
+            },
+            {
+              "signal": "character detail",
+              "line": 627
+            },
+            {
+              "signal": "currentHp",
+              "line": 236
+            },
+            {
+              "signal": "currentHp",
+              "line": 241
+            },
+            {
+              "signal": "currentHp",
+              "line": 297
+            },
+            {
+              "signal": "currentHp",
+              "line": 301
+            },
+            {
+              "signal": "currentHp",
+              "line": 581
+            },
+            {
+              "signal": "currentHp",
+              "line": 692
+            },
+            {
+              "signal": "currentHp",
+              "line": 985
+            },
+            {
+              "signal": "currentHp",
+              "line": 1062
+            },
+            {
+              "signal": "maxHp",
+              "line": 236
+            },
+            {
+              "signal": "maxHp",
+              "line": 297
+            },
+            {
+              "signal": "maxHp",
+              "line": 581
+            },
+            {
+              "signal": "maxHp",
+              "line": 692
+            },
+            {
+              "signal": "maxHp",
+              "line": 985
+            },
+            {
+              "signal": "maxHp",
+              "line": 1062
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "useNavigate",
+              "line": 2
+            },
+            {
+              "signal": "useNavigate",
+              "line": 112
+            },
+            {
+              "signal": "router",
+              "line": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "line": 103
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 108
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 226
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 239
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 247
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 260
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 268
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 276
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 299
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 332
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 360
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 378
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 391
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 537
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 579
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 672
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 672
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 686
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 686
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 1109
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/characters",
+          "/rest"
+        ],
+        "exportedSymbols": [
+          "CharacterDetail"
+        ],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { useState } from \"react\";\nimport { useNavigate, useParams } from \"react-router-dom\";\nimport { rollDice } from \"../../core/dice/diceRoller\";\nimport type { RulesetData, DndSpellData } from \"../../core/rulesets/ruleset.types\";\nimport type { AbilityKey, Character } from \"../../core/character/character.types\";\nimport { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellAttackBonus, getSpellSaveDc } from \"../../core/character/characterCalculator\";"
+        },
+        "lineCount": 1443
+      },
+      {
+        "file": "src/features/legacy/LegacyApp.tsx",
+        "basename": "LegacyApp.tsx",
+        "categories": {
+          "routing": [
+            {
+              "signal": "Routes",
+              "line": 36
+            },
+            {
+              "signal": "Routes",
+              "line": 36
+            },
+            {
+              "signal": "Routes",
+              "line": 385
+            },
+            {
+              "signal": "Route",
+              "line": 36
+            },
+            {
+              "signal": "Route",
+              "line": 36
+            },
+            {
+              "signal": "Route",
+              "line": 385
+            }
+          ],
+          "storage": [
+            {
+              "signal": "saveCharacter",
+              "line": 15
+            },
+            {
+              "signal": "saveCharacter",
+              "line": 125
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 140
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 395
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 395
+            },
+            {
+              "signal": "setCharacters",
+              "line": 47
+            },
+            {
+              "signal": "setCharacters",
+              "line": 133
+            },
+            {
+              "signal": "setCharacters",
+              "line": 137
+            },
+            {
+              "signal": "setCharacters",
+              "line": 141
+            },
+            {
+              "signal": "setCharacters",
+              "line": 161
+            },
+            {
+              "signal": "setCharacters",
+              "line": 182
+            },
+            {
+              "signal": "setCharacters",
+              "line": 187
+            },
+            {
+              "signal": "setCharacters",
+              "line": 191
+            },
+            {
+              "signal": "setCharacters",
+              "line": 202
+            },
+            {
+              "signal": "setCharacters",
+              "line": 245
+            },
+            {
+              "signal": "characterStorage",
+              "line": 16
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "App"
+        ],
+        "excerpt": {
+          "startLine": 11,
+          "endLine": 19,
+          "text": "  CharacterDraft,\n} from \"../../core/character/character.types\";\nimport {\n  loadCharacters,\n  saveCharacters,\n} from \"../../core/storage/characterStorage\";\nimport \"../../App.css\";\nimport { createCharacterFromDraft } from \"../characters/characterShared\";\nimport type { Campaign } from \"../campaigns/campaignTypes\";"
+        },
+        "lineCount": 418
+      },
+      {
+        "file": "src/core/storage/safeStorage.ts",
+        "basename": "safeStorage.ts",
+        "categories": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "line": 20
+            },
+            {
+              "signal": "localStorage",
+              "line": 53
+            },
+            {
+              "signal": "localStorage",
+              "line": 54
+            },
+            {
+              "signal": "localStorage",
+              "line": 67
+            },
+            {
+              "signal": "localStorage",
+              "line": 91
+            },
+            {
+              "signal": "localStorage",
+              "line": 110
+            },
+            {
+              "signal": "localStorage",
+              "line": 132
+            },
+            {
+              "signal": "localStorage",
+              "line": 133
+            },
+            {
+              "signal": "localStorage",
+              "line": 135
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "STORAGE_RECOVERY_EVENT",
+          "clearRecoveryRecords",
+          "downloadEmergencyStorageSnapshot",
+          "downloadRecoveryRecord",
+          "loadRecoveryRecords",
+          "quarantineStorageValue",
+          "readJsonSafely",
+          "removeRecoveryRecord",
+          "writeJsonSafely"
+        ],
+        "excerpt": {
+          "startLine": 16,
+          "endLine": 24,
+          "text": "}\n\nfunction readRecoveryRecordsUnsafe(): RecoveryRecord[] {\n  try {\n    const raw = localStorage.getItem(RECOVERY_STORAGE_KEY);\n    if (!raw) return [];\n    const parsed = JSON.parse(raw);\n    return Array.isArray(parsed) ? parsed : [];\n  } catch {"
+        },
+        "lineCount": 151
+      },
+      {
+        "file": "src/features/combat-tracker/combatTrackerStorage.ts",
+        "basename": "combatTrackerStorage.ts",
+        "categories": {
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 54
+            },
+            {
+              "signal": "currentHp",
+              "line": 220
+            },
+            {
+              "signal": "currentHp",
+              "line": 220
+            },
+            {
+              "signal": "currentHp",
+              "line": 254
+            },
+            {
+              "signal": "currentHp",
+              "line": 285
+            },
+            {
+              "signal": "currentHp",
+              "line": 285
+            },
+            {
+              "signal": "currentHp",
+              "line": 286
+            },
+            {
+              "signal": "currentHp",
+              "line": 286
+            },
+            {
+              "signal": "currentHp",
+              "line": 290
+            },
+            {
+              "signal": "currentHp",
+              "line": 290
+            },
+            {
+              "signal": "currentHp",
+              "line": 291
+            },
+            {
+              "signal": "currentHp",
+              "line": 291
+            },
+            {
+              "signal": "currentHp",
+              "line": 310
+            },
+            {
+              "signal": "currentHp",
+              "line": 342
+            },
+            {
+              "signal": "currentHp",
+              "line": 342
+            },
+            {
+              "signal": "currentHp",
+              "line": 345
+            },
+            {
+              "signal": "currentHp",
+              "line": 352
+            },
+            {
+              "signal": "maxHp",
+              "line": 53
+            },
+            {
+              "signal": "maxHp",
+              "line": 63
+            },
+            {
+              "signal": "maxHp",
+              "line": 209
+            },
+            {
+              "signal": "maxHp",
+              "line": 209
+            },
+            {
+              "signal": "maxHp",
+              "line": 219
+            },
+            {
+              "signal": "maxHp",
+              "line": 220
+            },
+            {
+              "signal": "maxHp",
+              "line": 220
+            },
+            {
+              "signal": "maxHp",
+              "line": 254
+            },
+            {
+              "signal": "maxHp",
+              "line": 290
+            },
+            {
+              "signal": "maxHp",
+              "line": 310
+            },
+            {
+              "signal": "maxHp",
+              "line": 310
+            },
+            {
+              "signal": "maxHp",
+              "line": 310
+            },
+            {
+              "signal": "maxHp",
+              "line": 328
+            },
+            {
+              "signal": "maxHp",
+              "line": 328
+            },
+            {
+              "signal": "maxHp",
+              "line": 341
+            },
+            {
+              "signal": "maxHp",
+              "line": 341
+            },
+            {
+              "signal": "maxHp",
+              "line": 342
+            },
+            {
+              "signal": "maxHp",
+              "line": 352
+            },
+            {
+              "signal": "maxHp",
+              "line": 352
+            },
+            {
+              "signal": "maxHp",
+              "line": 352
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "line": 296
+            },
+            {
+              "signal": "localStorage",
+              "line": 302
+            },
+            {
+              "signal": "localStorage",
+              "line": 302
+            },
+            {
+              "signal": "localStorage",
+              "line": 358
+            },
+            {
+              "signal": "localStorage",
+              "line": 364
+            },
+            {
+              "signal": "localStorage",
+              "line": 364
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "addCombatLog",
+          "advanceTurn",
+          "applyDamage",
+          "applyHealing",
+          "createBattlefieldZone",
+          "createCombatEffect",
+          "createCombatEncounter",
+          "createCombatLogEntry",
+          "createCombatTemplate",
+          "createCombatant",
+          "createEncounterFromCampaignEncounter",
+          "createEncounterFromTemplate",
+          "getActiveConditions",
+          "getCombatSummary",
+          "loadCombatEncounters",
+          "loadCombatTemplates",
+          "sanitizeCombatEncounter",
+          "sanitizeCombatant",
+          "saveCombatEncounters",
+          "saveCombatTemplates",
+          "sortCombatants",
+          "tickBattlefieldZones",
+          "tickCombatEffects"
+        ],
+        "excerpt": {
+          "startLine": 49,
+          "endLine": 57,
+          "text": "  name: string;\n  kind: CombatantKind;\n  initiative: number;\n  armorClass: number;\n  maxHp: number;\n  currentHp: number;\n  tempHp: number;\n  conditions: CombatCondition[];\n  effects: CombatEffect[];"
+        },
+        "lineCount": 366
+      },
+      {
+        "file": "src/core/storage/characterStorage.ts",
+        "basename": "characterStorage.ts",
+        "categories": {
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 199
+            },
+            {
+              "signal": "currentHp",
+              "line": 199
+            },
+            {
+              "signal": "currentHp",
+              "line": 199
+            }
+          ],
+          "storage": [
+            {
+              "signal": "saveCharacter",
+              "line": 246
+            },
+            {
+              "signal": "safeStorage",
+              "line": 9
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "exportCharacters",
+          "hydrateCharacterRecord",
+          "loadCharacters",
+          "saveCharacters"
+        ],
+        "excerpt": {
+          "startLine": 5,
+          "endLine": 13,
+          "text": "  CharacterInventoryItem,\n  CharacterSpellSlot,\n  CharacterResource,\n} from \"../character/character.types\";\nimport { readJsonSafely, writeJsonSafely } from \"./safeStorage\";\nimport { normalizeRulesetId } from \"../rulesets/rulesetMigration\";\nimport { getClassResources, mergeClassResources } from \"../rulesets/classFeatureEngine\";\nimport { getPactMagicSlots } from \"../rulesets/pactMagicRules\";\nimport { getMulticlassHitDice, normalizeClassLevels } from \"../rulesets/multiclassRules\";"
+        },
+        "lineCount": 275
+      },
+      {
+        "file": "src/features/campaigns/campaignStorage.test.ts",
+        "basename": "campaignStorage.test.ts",
+        "categories": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "line": 15
+            },
+            {
+              "signal": "localStorage",
+              "line": 20
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 11,
+          "endLine": 19,
+          "text": "  get length() { return this.values.size; }\n}\n\nbeforeEach(() => {\n  Object.defineProperty(globalThis, \"localStorage\", { value: new MemoryStorage(), configurable: true });\n});\n\ndescribe(\"campaignStorage migration\", () => {\n  it(\"fills missing modern fields without discarding old data\", () => {"
+        },
+        "lineCount": 33
+      },
+      {
+        "file": "src/features/downtime/campaignCalendarStorage.ts",
+        "basename": "campaignCalendarStorage.ts",
+        "categories": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "line": 102
+            },
+            {
+              "signal": "localStorage",
+              "line": 113
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "advanceCampaignDays",
+          "createCampaignCalendar",
+          "getDowntimeProgress",
+          "getUpcomingEvents",
+          "loadCampaignCalendars",
+          "sanitizeCampaignCalendar",
+          "saveCampaignCalendars"
+        ],
+        "excerpt": {
+          "startLine": 98,
+          "endLine": 106,
+          "text": "}\n\nexport function loadCampaignCalendars(): CampaignCalendar[] {\n  try {\n    const parsed: unknown = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? \"[]\");\n    return Array.isArray(parsed)\n      ? parsed.map(sanitizeCampaignCalendar).filter((calendar): calendar is CampaignCalendar => Boolean(calendar))\n      : [];\n  } catch {"
+        },
+        "lineCount": 149
+      },
+      {
+        "file": "src/features/factions/factionStorage.ts",
+        "basename": "factionStorage.ts",
+        "categories": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "line": 85
+            },
+            {
+              "signal": "localStorage",
+              "line": 92
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "createFactionRecord",
+          "loadFactionRecords",
+          "removeFactionAndRelations",
+          "sanitizeFactionRecord",
+          "saveFactionRecords"
+        ],
+        "excerpt": {
+          "startLine": 81,
+          "endLine": 89,
+          "text": "}\n\nexport function loadFactionRecords(): FactionRecord[] {\n  try {\n    const parsed: unknown = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? \"[]\");\n    if (!Array.isArray(parsed)) return [];\n    return parsed.map(sanitizeFactionRecord).filter((record): record is FactionRecord => Boolean(record));\n  } catch { return []; }\n}"
+        },
+        "lineCount": 100
+      },
+      {
+        "file": "src/features/legacy/AppRoutes.tsx",
+        "basename": "AppRoutes.tsx",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "RestCenterPage",
+              "line": 127
+            },
+            {
+              "signal": "RestCenterPage",
+              "line": 128
+            },
+            {
+              "signal": "RestCenterPage",
+              "line": 128
+            },
+            {
+              "signal": "RestCenterPage",
+              "line": 320
+            }
+          ],
+          "characterDetail": [
+            {
+              "signal": "CharacterDetail",
+              "line": 21
+            },
+            {
+              "signal": "CharacterDetail",
+              "line": 22
+            },
+            {
+              "signal": "CharacterDetail",
+              "line": 23
+            },
+            {
+              "signal": "CharacterDetail",
+              "line": 254
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Routes",
+              "line": 2
+            },
+            {
+              "signal": "Routes",
+              "line": 136
+            },
+            {
+              "signal": "Routes",
+              "line": 169
+            },
+            {
+              "signal": "Routes",
+              "line": 196
+            },
+            {
+              "signal": "Routes",
+              "line": 206
+            },
+            {
+              "signal": "Routes",
+              "line": 468
+            },
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "Route",
+              "line": 136
+            },
+            {
+              "signal": "Route",
+              "line": 169
+            },
+            {
+              "signal": "Route",
+              "line": 196
+            },
+            {
+              "signal": "Route",
+              "line": 200
+            },
+            {
+              "signal": "Route",
+              "line": 201
+            },
+            {
+              "signal": "Route",
+              "line": 206
+            },
+            {
+              "signal": "Route",
+              "line": 207
+            },
+            {
+              "signal": "Route",
+              "line": 221
+            },
+            {
+              "signal": "Route",
+              "line": 233
+            },
+            {
+              "signal": "Route",
+              "line": 238
+            },
+            {
+              "signal": "Route",
+              "line": 251
+            },
+            {
+              "signal": "Route",
+              "line": 263
+            },
+            {
+              "signal": "Route",
+              "line": 275
+            },
+            {
+              "signal": "Route",
+              "line": 285
+            },
+            {
+              "signal": "Route",
+              "line": 287
+            },
+            {
+              "signal": "Route",
+              "line": 292
+            },
+            {
+              "signal": "Route",
+              "line": 297
+            },
+            {
+              "signal": "Route",
+              "line": 302
+            },
+            {
+              "signal": "Route",
+              "line": 307
+            },
+            {
+              "signal": "Route",
+              "line": 311
+            },
+            {
+              "signal": "Route",
+              "line": 315
+            },
+            {
+              "signal": "Route",
+              "line": 320
+            },
+            {
+              "signal": "Route",
+              "line": 321
+            },
+            {
+              "signal": "Route",
+              "line": 323
+            },
+            {
+              "signal": "Route",
+              "line": 334
+            },
+            {
+              "signal": "Route",
+              "line": 345
+            },
+            {
+              "signal": "Route",
+              "line": 356
+            },
+            {
+              "signal": "Route",
+              "line": 367
+            },
+            {
+              "signal": "Route",
+              "line": 381
+            },
+            {
+              "signal": "Route",
+              "line": 398
+            },
+            {
+              "signal": "Route",
+              "line": 409
+            },
+            {
+              "signal": "Route",
+              "line": 410
+            },
+            {
+              "signal": "Route",
+              "line": 411
+            },
+            {
+              "signal": "Route",
+              "line": 412
+            },
+            {
+              "signal": "Route",
+              "line": 413
+            },
+            {
+              "signal": "Route",
+              "line": 414
+            },
+            {
+              "signal": "Route",
+              "line": 415
+            },
+            {
+              "signal": "Route",
+              "line": 417
+            },
+            {
+              "signal": "Route",
+              "line": 419
+            },
+            {
+              "signal": "Route",
+              "line": 422
+            },
+            {
+              "signal": "Route",
+              "line": 436
+            },
+            {
+              "signal": "Route",
+              "line": 452
+            },
+            {
+              "signal": "Route",
+              "line": 468
+            },
+            {
+              "signal": "router",
+              "line": 2
+            }
+          ],
+          "storage": [
+            {
+              "signal": "updateCharacter",
+              "line": 146
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 179
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 246
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 246
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 257
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 257
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 281
+            },
+            {
+              "signal": "updateCharacter",
+              "line": 281
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [
+          "/",
+          "/backup",
+          "/builder",
+          "/calendar",
+          "/campaigns",
+          "/characters",
+          "/characters/:characterId",
+          "/characters/:characterId/edit",
+          "/characters/compare",
+          "/classes",
+          "/collections",
+          "/combat",
+          "/dice",
+          "/factions",
+          "/feats",
+          "/help",
+          "/homebrew-lab",
+          "/inventory",
+          "/library",
+          "/locations",
+          "/loot",
+          "/monsters",
+          "/monsters/:monsterId",
+          "/npcs",
+          "/origins",
+          "/play-mode",
+          "/player-test",
+          "/quests",
+          "/rest",
+          "/rulesets",
+          "/search",
+          "/session-planner",
+          "/settings",
+          "/spellbook",
+          "/subclasses",
+          "/updates"
+        ],
+        "exportedSymbols": [
+          "AppRoutes"
+        ],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { lazy, Suspense } from \"react\";\nimport { Route, Routes } from \"react-router-dom\";\nimport type {\n  DndItemData,\n  DndMonsterData,\n  DndSpellData,"
+        },
+        "lineCount": 472
+      },
+      {
+        "file": "src/features/locations/locationAtlasStorage.ts",
+        "basename": "locationAtlasStorage.ts",
+        "categories": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "line": 60
+            },
+            {
+              "signal": "localStorage",
+              "line": 67
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [
+          "createWorldLocation",
+          "getLocationDepth",
+          "loadWorldLocations",
+          "removeLocationAndDetach",
+          "sanitizeWorldLocation",
+          "saveWorldLocations"
+        ],
+        "excerpt": {
+          "startLine": 56,
+          "endLine": 64,
+          "text": "}\n\nexport function loadWorldLocations(): WorldLocation[] {\n  try {\n    const parsed: unknown = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? \"[]\");\n    if (!Array.isArray(parsed)) return [];\n    return parsed.map(sanitizeWorldLocation).filter((item): item is WorldLocation => Boolean(item));\n  } catch { return []; }\n}"
+        },
+        "lineCount": 88
+      }
+    ],
+    "testing": [
+      {
+        "file": "e2e/equipment-combat-certification.spec.ts",
+        "basename": "equipment-combat-certification.spec.ts",
+        "categories": {
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 27
+            },
+            {
+              "signal": "currentHp",
+              "line": 73
+            },
+            {
+              "signal": "maxHp",
+              "line": 26
+            },
+            {
+              "signal": "maxHp",
+              "line": 72
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "line": 107
+            },
+            {
+              "signal": "getByRole",
+              "line": 106
+            },
+            {
+              "signal": "getByRole",
+              "line": 143
+            },
+            {
+              "signal": "installKnownAppState",
+              "line": 2
+            },
+            {
+              "signal": "installKnownAppState",
+              "line": 98
+            },
+            {
+              "signal": "seedCharacters",
+              "line": 2
+            },
+            {
+              "signal": "seedCharacters",
+              "line": 100
+            }
+          ]
+        },
+        "testIds": [
+          "inventory-economy-panel"
+        ],
+        "routes": [],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { expect, test } from \"@playwright/test\";\nimport { installKnownAppState, seedCharacters } from \"./support/appState\";\n\nconst now = new Date().toISOString();\n\nconst characters = ["
+        },
+        "lineCount": 154
+      },
+      {
+        "file": "e2e/mobile-and-storage.spec.ts",
+        "basename": "mobile-and-storage.spec.ts",
+        "categories": {
+          "storage": [
+            {
+              "signal": "localStorage",
+              "line": 32
+            },
+            {
+              "signal": "localStorage",
+              "line": 34
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByRole",
+              "line": 6
+            },
+            {
+              "signal": "getByRole",
+              "line": 8
+            },
+            {
+              "signal": "getByRole",
+              "line": 9
+            },
+            {
+              "signal": "getByRole",
+              "line": 10
+            },
+            {
+              "signal": "getByRole",
+              "line": 12
+            },
+            {
+              "signal": "getByRole",
+              "line": 13
+            },
+            {
+              "signal": "getByRole",
+              "line": 42
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 2,
+          "endLine": 10,
+          "text": "\ntest(\"mobile quick navigation and full menu are usable\", async ({ page }, info) => {\n  test.skip(!info.project.name.includes(\"mobile\"), \"Mobile only\");\n  await page.goto(\"/\");\n  const nav = page.getByRole(\"navigation\", { name: \"Mobil navigasyon\" });\n  await expect(nav).toBeVisible();\n  await expect(nav.getByRole(\"link\")).toHaveCount(4);\n  await nav.getByRole(\"button\", { name: \"Menü\" }).click();\n  const drawer = page.getByRole(\"dialog\", { name: \"Tüm menü\" });"
+        },
+        "lineCount": 45
+      },
+      {
+        "file": "e2e/certification-golden-builders.spec.ts",
+        "basename": "certification-golden-builders.spec.ts",
+        "categories": {
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "line": 61
+            },
+            {
+              "signal": "getByTestId",
+              "line": 72
+            },
+            {
+              "signal": "getByTestId",
+              "line": 82
+            },
+            {
+              "signal": "getByRole",
+              "line": 53
+            },
+            {
+              "signal": "getByRole",
+              "line": 85
+            }
+          ]
+        },
+        "testIds": [
+          "ancestry-choice-panel"
+        ],
+        "routes": [],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 49,
+          "endLine": 57,
+          "text": "    await classStep.evaluate((element: HTMLElement) => element.click());\n  }\n\n  await neutralizeFirstRunOverlay(page);\n  await expect(page.getByRole(\"form\", { name: /Race & Class/i })).toBeVisible();\n}\n\ntest.describe(\"golden builder certification\", () => {\n  test(\"2024 Human exposes ancestry choices\", async ({ page }) => {"
+        },
+        "lineCount": 88
+      },
+      {
+        "file": "e2e/inventory-economy-runtime.spec.ts",
+        "basename": "inventory-economy-runtime.spec.ts",
+        "categories": {
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 23
+            },
+            {
+              "signal": "maxHp",
+              "line": 22
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "line": 54
+            },
+            {
+              "signal": "installKnownAppState",
+              "line": 2
+            },
+            {
+              "signal": "installKnownAppState",
+              "line": 47
+            },
+            {
+              "signal": "seedCharacters",
+              "line": 2
+            },
+            {
+              "signal": "seedCharacters",
+              "line": 52
+            }
+          ]
+        },
+        "testIds": [
+          "inventory-economy-panel"
+        ],
+        "routes": [],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { expect, test } from \"@playwright/test\";\nimport { installKnownAppState, seedCharacters } from \"./support/appState\";\n\nconst now = new Date().toISOString();\nconst character = {\n  id: \"e2e-inventory\","
+        },
+        "lineCount": 57
+      },
+      {
+        "file": "e2e/app-shell.spec.ts",
+        "basename": "app-shell.spec.ts",
+        "categories": {
+          "routing": [
+            {
+              "signal": "Routes",
+              "line": 2
+            },
+            {
+              "signal": "Routes",
+              "line": 5
+            },
+            {
+              "signal": "Routes",
+              "line": 5
+            },
+            {
+              "signal": "Route",
+              "line": 2
+            },
+            {
+              "signal": "Route",
+              "line": 5
+            },
+            {
+              "signal": "Route",
+              "line": 5
+            },
+            {
+              "signal": "Route",
+              "line": 5
+            },
+            {
+              "signal": "Route",
+              "line": 5
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "line": 3
+            },
+            {
+              "signal": "sessionStorage",
+              "line": 3
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByRole",
+              "line": 4
+            },
+            {
+              "signal": "getByRole",
+              "line": 4
+            },
+            {
+              "signal": "getByRole",
+              "line": 5
+            },
+            {
+              "signal": "getByRole",
+              "line": 6
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { expect, test } from \"@playwright/test\";\nconst routes = [[\"/\", \"Masa hazır.\"], [\"/characters\", \"Karakterler\"], [\"/builder\", \"Yeni Karakter\"], [\"/play-mode\", \"Play Mode\"], [\"/backup\", \"Yedek\"]] as const;\ntest.beforeEach(async ({ page }) => { await page.addInitScript(() => { localStorage.clear(); sessionStorage.clear(); }); });\ntest(\"dashboard shell opens\", async ({ page }) => { await page.goto(\"/\"); await expect(page.getByRole(\"link\", { name: \"E4 D&D ana sayfa\" })).toBeVisible(); await expect(page.getByRole(\"heading\", { name: \"Masa hazır.\" })).toBeVisible(); });\ntest(\"core routes support direct navigation\", async ({ page }) => { for (const [route, heading] of routes) { await page.goto(route); await expect(page.getByRole(\"heading\", { name: new RegExp(heading, \"i\") }).first()).toBeVisible(); } });\ntest(\"keyboard skip link reaches main\", async ({ page }) => { await page.goto(\"/\"); await page.keyboard.press(\"Tab\"); await expect(page.getByRole(\"link\", { name: \"Ana içeriğe geç\" })).toBeFocused(); await page.keyboard.press(\"Enter\"); await expect(page.locator(\"#main-content\")).toBeFocused(); });"
+        },
+        "lineCount": 7
+      },
+      {
+        "file": "e2e/combat-runtime-automation.spec.ts",
+        "basename": "combat-runtime-automation.spec.ts",
+        "categories": {
+          "testing": [
+            {
+              "signal": "getByRole",
+              "line": 11
+            },
+            {
+              "signal": "getByRole",
+              "line": 13
+            },
+            {
+              "signal": "installKnownAppState",
+              "line": 2
+            },
+            {
+              "signal": "installKnownAppState",
+              "line": 5
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 6,
+          "text": "import { expect, test } from \"@playwright/test\";\nimport { installKnownAppState } from \"./support/appState\";\n\ntest.beforeEach(async ({ page }) => {\n  await installKnownAppState(page);\n});"
+        },
+        "lineCount": 16
+      },
+      {
+        "file": "src/features/builder/Builder.tsx",
+        "basename": "Builder.tsx",
+        "categories": {
+          "restCenter": [
+            {
+              "signal": "hit dice",
+              "line": 234
+            },
+            {
+              "signal": "hit dice",
+              "line": 1239
+            }
+          ],
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 308
+            },
+            {
+              "signal": "maxHp",
+              "line": 1009
+            },
+            {
+              "signal": "maxHp",
+              "line": 1095
+            },
+            {
+              "signal": "maxHp",
+              "line": 1096
+            },
+            {
+              "signal": "maxHp",
+              "line": 1383
+            }
+          ],
+          "testing": [
+            {
+              "signal": "data-testid",
+              "line": 552
+            },
+            {
+              "signal": "data-testid",
+              "line": 1338
+            },
+            {
+              "signal": "data-testid",
+              "line": 1460
+            }
+          ]
+        },
+        "testIds": [
+          "builder-character-name",
+          "builder-review",
+          "builder-save"
+        ],
+        "routes": [],
+        "exportedSymbols": [
+          "Builder"
+        ],
+        "excerpt": {
+          "startLine": 230,
+          "endLine": 238,
+          "text": "    { id: \"utility\", label: \"Keşif & Utility\", status: utilityReadiness },\n    { id: \"social\", label: \"Sosyal profil\", status: socialReadiness },\n    { id: \"support\", label: \"Destek & Recovery\", status: supportReadiness },\n    { id: \"economy\", label: \"Action economy\", status: actionEconomyReadiness },\n    { id: \"rest\", label: \"Rest & Hit Dice\", status: restReadiness },\n    { id: \"features\", label: \"Class feature seçimleri\", status: featureChoiceReadiness },\n  ]), [playableReadiness, combatReadiness, spellcastingReadiness, proficiencyReadiness, ancestryReadiness, originReadiness, equipmentReadiness, defenseReadiness, offenseReadiness, utilityReadiness, socialReadiness, supportReadiness, actionEconomyReadiness, restReadiness, featureChoiceReadiness]);\n  const builderProgress = Math.round((activeStepIndex / (builderSteps.length - 1)) * 100);\n"
+        },
+        "lineCount": 1474
+      },
+      {
+        "file": "src/features/rulesets/RulesetCenterPage.tsx",
+        "basename": "RulesetCenterPage.tsx",
+        "categories": {
+          "routing": [
+            {
+              "signal": "Route",
+              "line": 1
+            },
+            {
+              "signal": "router",
+              "line": 1
+            }
+          ],
+          "testing": [
+            {
+              "signal": "data-testid",
+              "line": 80
+            },
+            {
+              "signal": "data-testid",
+              "line": 91
+            },
+            {
+              "signal": "data-testid",
+              "line": 107
+            }
+          ]
+        },
+        "testIds": [
+          "class-runtime-policy",
+          "content-completion-plan",
+          "content-integrity-audit"
+        ],
+        "routes": [
+          "/builder"
+        ],
+        "exportedSymbols": [
+          "RulesetCenterPage"
+        ],
+        "excerpt": {
+          "startLine": 1,
+          "endLine": 5,
+          "text": "import { Link } from \"react-router-dom\";\nimport { PageShell } from \"../../shared/layout/PageShell\";\nimport { useAppSettings } from \"../../shared/settings/AppSettingsProvider\";\nimport { RULESET_DEFINITIONS } from \"../../core/rulesets/rulesetRegistry\";\nimport type { RulesetData } from \"../../core/rulesets/ruleset.types\";"
+        },
+        "lineCount": 143
+      },
+      {
+        "file": "e2e/full-character-creation.spec.ts",
+        "basename": "full-character-creation.spec.ts",
+        "categories": {
+          "characterDetail": [
+            {
+              "signal": "currentHp",
+              "line": 27
+            },
+            {
+              "signal": "maxHp",
+              "line": 27
+            }
+          ],
+          "routing": [
+            {
+              "signal": "Routes",
+              "line": 22
+            },
+            {
+              "signal": "Route",
+              "line": 9
+            },
+            {
+              "signal": "Route",
+              "line": 22
+            }
+          ],
+          "storage": [
+            {
+              "signal": "localStorage",
+              "line": 33
+            }
+          ],
+          "testing": [
+            {
+              "signal": "getByTestId",
+              "line": 11
+            },
+            {
+              "signal": "getByTestId",
+              "line": 17
+            },
+            {
+              "signal": "getByTestId",
+              "line": 18
+            }
+          ]
+        },
+        "testIds": [
+          "builder-character-name",
+          "builder-review"
+        ],
+        "routes": [],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 5,
+          "endLine": 13,
+          "text": "  [\"D&D 2014\", \"Bard\"], [\"D&D 2014\", \"Monk\"], [\"D&D 2014\", \"Paladin\"], [\"D&D 2014\", \"Rogue\"],\n] as const;\n\nfor (const [ruleset, className] of journeys) {\n  test(`${ruleset} ${className} builder route and review journey`, async ({ page }) => {\n    await page.goto(\"/builder\");\n    await page.getByTestId(\"builder-character-name\").fill(`E2E ${className}`);\n    const rulesetSelect = page.getByLabel(\"Ruleset\");\n    await rulesetSelect.selectOption({ label: ruleset });"
+        },
+        "lineCount": 45
+      },
+      {
+        "file": "e2e/builder-ui-mega.spec.ts",
+        "basename": "builder-ui-mega.spec.ts",
+        "categories": {
+          "testing": [
+            {
+              "signal": "getByRole",
+              "line": 24
+            },
+            {
+              "signal": "getByRole",
+              "line": 27
+            },
+            {
+              "signal": "getByRole",
+              "line": 35
+            }
+          ]
+        },
+        "testIds": [],
+        "routes": [],
+        "exportedSymbols": [],
+        "excerpt": {
+          "startLine": 20,
+          "endLine": 28,
+          "text": "}\n\ntest(\"builder exposes accessible step navigation\", async ({ page }) => {\n  await page.goto(\"/builder\");\n  const stepper = page.getByRole(\"complementary\", { name: \"Karakter oluşturma adımları\" });\n  await expect(stepper).toBeVisible();\n  await stepper.locator('[data-builder-step=\"abilities\"]').click();\n  await expect(page.getByRole(\"heading\", { name: \"Abilities\", exact: true })).toBeFocused();\n});"
+        },
+        "lineCount": 39
+      }
+    ]
+  },
+  "consolidated": {
+    "testIds": [
+      "ancestry-choice-panel",
+      "backup-safety-report",
+      "builder-character-name",
+      "builder-review",
+      "builder-save",
+      "class-runtime-policy",
+      "combat-turn-automation",
+      "content-completion-plan",
+      "content-integrity-audit",
+      "inventory-economy-panel"
+    ],
+    "routes": [
+      "/",
+      "/backup",
+      "/builder",
+      "/calendar",
+      "/campaigns",
+      "/characters",
+      "/characters/:characterId",
+      "/characters/:characterId/edit",
+      "/characters/compare",
+      "/classes",
+      "/collections",
+      "/combat",
+      "/dice",
+      "/factions",
+      "/feats",
+      "/help",
+      "/homebrew-lab",
+      "/inventory",
+      "/library",
+      "/locations",
+      "/loot",
+      "/monsters",
+      "/monsters/:monsterId",
+      "/npcs",
+      "/origins",
+      "/play-mode",
+      "/player-test",
+      "/quests",
+      "/rest",
+      "/rulesets",
+      "/search",
+      "/session-planner",
+      "/settings",
+      "/spellbook",
+      "/subclasses",
+      "/updates"
+    ],
+    "exportedSymbols": [
+      "APP_SETTINGS_STORAGE_KEY",
+      "AncestryChoicePanel",
+      "App",
+      "AppErrorBoundary",
+      "AppFrame",
+      "AppRoutes",
+      "AppSettingsProvider",
+      "Builder",
+      "CHARACTER_BACKUP_VERSION",
+      "CHARACTER_TRANSFER_VERSION",
+      "CampaignDashboard",
+      "Campaigns",
+      "CharacterCompare",
+      "CharacterDetail",
+      "CharacterEditor",
+      "CharacterInventoryManager",
+      "CharacterSpellSelector",
+      "Characters",
+      "ChoiceDebtResolver",
+      "ClassBasedSpellSelector",
+      "CollectionsPage",
+      "CombatTrackerPage",
+      "CombatTurnAutomationPanel",
+      "CommandPalette",
+      "Dashboard",
+      "DataBackup",
+      "EQUIPMENT_COMBAT_SCENARIOS",
+      "FULL_BACKUP_VERSION",
+      "FULL_CASTER_CLASSES",
+      "GOLDEN_CHARACTERS",
+      "GlobalSearch",
+      "HOMEBREW_LIBRARY_PREFERENCES_STORAGE_KEY",
+      "HOMEBREW_MARKETPLACE_REVOCATIONS_STORAGE_KEY",
+      "HOMEBREW_MARKETPLACE_SECURITY_EVENTS_STORAGE_KEY",
+      "HOMEBREW_MARKETPLACE_SOURCES_STORAGE_KEY",
+      "HOMEBREW_PACKAGES_CHANGED_EVENT",
+      "HOMEBREW_PACKAGES_STORAGE_KEY",
+      "HOMEBREW_PACKAGE_SNAPSHOTS_STORAGE_KEY",
+      "HOMEBREW_QUARANTINE_STORAGE_KEY",
+      "HOMEBREW_SOURCE_HEALTH_STORAGE_KEY",
+      "HelpCenter",
+      "HomebrewLab",
+      "HomebrewPackageCreator",
+      "InventoryEconomyPanel",
+      "LevelUpAssistant",
+      "MonsterDetail",
+      "MonsterLibrary",
+      "OPEN_RULES_LICENSE",
+      "PlayMode",
+      "PlayerTestCenter",
+      "PwaInstallGuide",
+      "PwaUpdateManager",
+      "ReleaseNotesDialog",
+      "RestCenterPage",
+      "RouteAccessibility",
+      "RulesetCenterPage",
+      "START_ROUTE_OPTIONS",
+      "STORAGE_RECOVERY_EVENT",
+      "Settings",
+      "StorageRecoveryCenter",
+      "abilityModifier",
+      "addCombatLog",
+      "addRecentItem",
+      "addTagToItem",
+      "advanceCampaignDays",
+      "advanceConditionDurations",
+      "advanceTurn",
+      "applyAbilityIncrease",
+      "applyClassFeatureUse",
+      "applyDamage",
+      "applyHealing",
+      "applyHomebrewFeatAbilityBonus",
+      "applyHomebrewSpellSelfEffect",
+      "applyLongRest",
+      "applyRest",
+      "applyRestToCharacter",
+      "applyRestToCharacters",
+      "applyShortRest",
+      "auditCharacterIntegrity",
+      "auditCharacterLifecycle",
+      "auditLicensing",
+      "auditNavigationAccessibility",
+      "auditNavigationLocalization",
+      "automaticArmorClass",
+      "buildClassSubclassRuntimeClosureReport",
+      "buildEditedCharacter",
+      "buildLeveledCharacter",
+      "buildReleaseReadinessAudit",
+      "buildStableReleaseHardeningReport",
+      "calculateEffectiveArmorClass",
+      "calculateLootTotal",
+      "calculateQuestProgress",
+      "calculateSuggestedArmorClass",
+      "canUseClassFeature",
+      "certifyClassRuntime",
+      "certifySubclassRuntime",
+      "characterToEditDraft",
+      "characterToRestState",
+      "clearRecoveryRecords",
+      "combatReadiness",
+      "compareSheetAndPlayMode",
+      "createBattlefieldZone",
+      "createCampaignCalendar",
+      "createCharacterBackup",
+      "createCharacterFromDraft",
+      "createCharacterTransfer",
+      "createCombatEffect",
+      "createCombatEncounter",
+      "createCombatLogEntry",
+      "createCombatTemplate",
+      "createCombatant",
+      "createEncounterFromCampaignEncounter",
+      "createEncounterFromTemplate",
+      "createFactionRecord",
+      "createFullBackup",
+      "createLootRecord",
+      "createNpcRecord",
+      "createQuestRecord",
+      "createRollbackBackup",
+      "createSessionPlan",
+      "createWorldLocation",
+      "deleteTag",
+      "deserializeRestCompatibleCharacter",
+      "dispelSpellEffects",
+      "downloadCharacterTransfer",
+      "downloadEmergencyStorageSnapshot",
+      "downloadRecoveryRecord",
+      "effectiveArmorClass",
+      "endClassFeatureCondition",
+      "endConcentration",
+      "exportCharacters",
+      "exportFullBackup",
+      "formatClassSubclassRuntimeClosureSummary",
+      "formatMonsterModifier",
+      "getActiveConditions",
+      "getAdvancedFeatRuntime",
+      "getAllTags",
+      "getAncestryAbilityOptions",
+      "getAncestryBuilderContract",
+      "getAncestryGrantedSpells",
+      "getAncestryRuntime",
+      "getAncestrySaveMode",
+      "getAncestryValidationErrors",
+      "getAverageHpGain",
+      "getCharacterCreationJourneyCoverage",
+      "getCharacterFeatures",
+      "getCharacterInventoryItems",
+      "getCharacterSheetCertificationSnapshot",
+      "getCharacterValidationError",
+      "getClassFeatureActions",
+      "getClassFeatureRuntimePlan",
+      "getClassResources",
+      "getClassSpecificRuntimePolicyReport",
+      "getCombatStatusLabel",
+      "getCombatSummary",
+      "getCompanionChoiceCount",
+      "getCompanionStats",
+      "getConcentrationDc",
+      "getCurrentRelease",
+      "getDeathSaveStatus",
+      "getDefaultRestOptions",
+      "getDefaultSpellSaveRule",
+      "getDefaultSpellSlots",
+      "getDowntimeProgress",
+      "getEffectiveMaxHp",
+      "getEffectiveSpeed",
+      "getEnglishTranslationCoverage",
+      "getEquippedItems",
+      "getExhaustionEffects",
+      "getGlobalCastableSlotLevels",
+      "getHitDieForClass",
+      "getHomebrewContentRuntime",
+      "getInspiringLeaderTempHp",
+      "getIntlLocale",
+      "getInventoryQuantity",
+      "getInventoryWeight",
+      "getItemCategoryLabel",
+      "getItemRulesSummary",
+      "getLatestLevelUp",
+      "getLevelOneAncestryReadiness",
+      "getLevelOneCombatReadiness",
+      "getLevelOneDefenseReadiness",
+      "getLevelOneRestReadiness",
+      "getLevelOneSupportReadiness",
+      "getLifeDomainHealing",
+      "getLocationDepth",
+      "getMartialClassRuntime",
+      "getMobileQuickItems",
+      "getMonsterAbilityModifier",
+      "getMonsterMainAttackModifier",
+      "getNavGroupForPath",
+      "getNpcRelationshipCount",
+      "getPassiveScore",
+      "getPlayerJourneyIntegrationSnapshot",
+      "getPreserveLifeHealing",
+      "getQaScenario",
+      "getRangerCompanions",
+      "getRemainingClassResource",
+      "getSavingThrowBonus",
+      "getSelectedAncestryOption",
+      "getSessionProgress",
+      "getSheetPlayModeConsistencySnapshot",
+      "getSingleClassPlayableReadiness",
+      "getSkillBonus",
+      "getSpellGroupTitle",
+      "getSpellLevelGroups",
+      "getSpellLevelLabel",
+      "getSpellRuntimePlan",
+      "getSummonPersistentSpellRuntime",
+      "getUiCatalogCoverage",
+      "getUpcomingEvents",
+      "getWeaponAbilityModifier",
+      "getWeaponAttackBonus",
+      "getWeaponConsistencyRows",
+      "getWeaponDamageSummary",
+      "hasEnglishTranslation",
+      "hasValidationErrors",
+      "hydrateCharacterRecord",
+      "inspectBackupCandidate",
+      "installHomebrewShareManifest",
+      "inventoryWeight",
+      "isAsiMilestone",
+      "isBeastMaster",
+      "isSpellReadyToCast",
+      "loadCampaignCalendars",
+      "loadCampaigns",
+      "loadCharacters",
+      "loadCombatEncounters",
+      "loadCombatTemplates",
+      "loadFactionRecords",
+      "loadFavoriteMonsterIds",
+      "loadFavorites",
+      "loadHomebrewItems",
+      "loadHomebrewLibraryPreferences",
+      "loadHomebrewMarketplaceRevocations",
+      "loadHomebrewMarketplaceSecurityEvents",
+      "loadHomebrewMarketplaceSources",
+      "loadHomebrewMonsters",
+      "loadHomebrewPackageSnapshots",
+      "loadHomebrewPackages",
+      "loadHomebrewQuarantines",
+      "loadHomebrewSourceHealth",
+      "loadHomebrewSpells",
+      "loadItemTags",
+      "loadLevelUpHistory",
+      "loadLootRecords",
+      "loadNpcRecords",
+      "loadQuestRecords",
+      "loadRecentItems",
+      "loadRecoveryRecords",
+      "loadRestHistory",
+      "loadSessionPlans",
+      "loadWorldLocations",
+      "makeCharacter",
+      "makeEncounter",
+      "makeMonster",
+      "mergeAncestrySkills",
+      "mergeClassResources",
+      "mergeImportedHomebrewPackage",
+      "mergeImportedHomebrewShareManifest",
+      "normalizeCharacterDraft",
+      "normalizeDraftForProgression",
+      "normalizeHitDice",
+      "normalizeRestState",
+      "normalizeSpellSlots",
+      "parseCharacterBackup",
+      "parseCharacterTransfer",
+      "parseFirstDiceExpression",
+      "parseFullBackup",
+      "performCharacterLongRest",
+      "performCharacterShortRest",
+      "proficiencyBonus",
+      "quarantineStorageValue",
+      "readJsonSafely",
+      "recoverHitDice",
+      "recoverResources",
+      "recoverSpellSlots",
+      "reduceAncestryDamage",
+      "removeFactionAndRelations",
+      "removeLevelUpHistoryEntry",
+      "removeLocationAndDetach",
+      "removeRecoveryRecord",
+      "removeTagFromItem",
+      "renameTag",
+      "resetDeathSaves",
+      "resetHitDice",
+      "resetSpellSlots",
+      "resolveCharacterRuleset",
+      "resolveDeathSave",
+      "resolveGlobalSpell",
+      "resolveImportedCharacter",
+      "resolveSpellHealing",
+      "resolveSpellSave",
+      "restStateToCharacter",
+      "restoreRestSnapshot",
+      "sanitizeAppSettings",
+      "sanitizeCampaignCalendar",
+      "sanitizeCombatEncounter",
+      "sanitizeCombatant",
+      "sanitizeFactionRecord",
+      "sanitizeLootRecord",
+      "sanitizeNpcRecord",
+      "sanitizeQuestRecord",
+      "sanitizeSessionPlan",
+      "sanitizeWorldLocation",
+      "saveCampaignCalendars",
+      "saveCampaigns",
+      "saveCharacters",
+      "saveCombatEncounters",
+      "saveCombatTemplates",
+      "saveFactionRecords",
+      "saveFavoriteMonsterIds",
+      "saveFavorites",
+      "saveHomebrewItems",
+      "saveHomebrewLibraryPreferences",
+      "saveHomebrewMarketplaceRevocations",
+      "saveHomebrewMarketplaceSecurityEvents",
+      "saveHomebrewMarketplaceSources",
+      "saveHomebrewMonsters",
+      "saveHomebrewPackageSnapshots",
+      "saveHomebrewPackages",
+      "saveHomebrewQuarantines",
+      "saveHomebrewSourceHealth",
+      "saveHomebrewSpells",
+      "saveItemTags",
+      "saveLevelUpSnapshot",
+      "saveLootRecords",
+      "saveNpcRecords",
+      "saveQuestRecords",
+      "saveRecentItems",
+      "saveRestHistory",
+      "saveSessionPlans",
+      "saveWorldLocations",
+      "serializeRestCompatibleCharacter",
+      "setInventoryItemQuantity",
+      "setInventoryQuantity",
+      "shouldRequestConcentrationSave",
+      "sortCombatants",
+      "sortSpellsByLevelAndName",
+      "spendHitDie",
+      "spendHomebrewItemCharge",
+      "spendResource",
+      "spendSpellSlot",
+      "summarizeQaCoverage",
+      "tickBattlefieldZones",
+      "tickCombatEffects",
+      "toggleFavoriteItem",
+      "translate",
+      "translateUiText",
+      "useAppSettings",
+      "useAutosavedDraft",
+      "usePersistentState",
+      "usedHitDice",
+      "usedSpellSlots",
+      "validateCharacterDraft",
+      "weaponAbilityModifier",
+      "weaponAttackBonus",
+      "weaponDamageSummary",
+      "weaponMastery",
+      "writeJsonSafely"
+    ]
+  },
+  "requiredRuntimeFiles": [
+    "src/core/rulesets/restRecoveryRules.ts",
+    "src/core/rulesets/restRecoveryCharacterAdapter.ts"
+  ],
+  "missingRuntimeFiles": [],
+  "status": "READY"
+}

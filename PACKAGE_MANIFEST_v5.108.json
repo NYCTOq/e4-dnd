@@ -1,0 +1,5 @@
+{
+  "name": "E4 D&D Ability Proficiency Derived Stats Mega",
+  "version": "5.108.0",
+  "apply": "APPLY_ABILITY_PROFICIENCY_DERIVED_STATS_v5.108.ps1"
+}

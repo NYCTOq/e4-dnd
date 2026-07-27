@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Death Dying Oracle Discovery Foundation Mega",
+  "version": "5.115A",
+  "requires": [
+    "v5.114D3.1"
+  ],
+  "runtime_changes": false,
+  "domain": "death-dying-stabilization-revival"
+}

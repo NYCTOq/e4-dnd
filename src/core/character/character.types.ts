@@ -76,7 +76,14 @@ export interface Character {
 
   race: string;
   subrace?: string;
-  className: string;
+  
+  ancestryChoiceId?: string;
+  ancestrySkillProficiencies?: string[];
+  ancestryOriginFeatId?: string;
+  ancestryLanguageChoices?: string[];
+  ancestrySize?: "Small" | "Medium";
+  ancestrySpellIds?: string[];
+className: string;
   classLevels?: CharacterClassLevel[];
   subclass: string;
   background: string;
@@ -148,7 +155,14 @@ export interface CharacterDraft {
 
   race: string;
   subrace?: string;
-  className: string;
+  
+  ancestryChoiceId?: string;
+  ancestrySkillProficiencies?: string[];
+  ancestryOriginFeatId?: string;
+  ancestryLanguageChoices?: string[];
+  ancestrySize?: "Small" | "Medium";
+  ancestrySpellIds?: string[];
+className: string;
   classLevels?: CharacterClassLevel[];
   subclass: string;
   background: string;

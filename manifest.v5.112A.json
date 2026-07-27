@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Class Subclass Runtime Oracle Discovery Mega",
+  "version": "5.112A",
+  "requires": [
+    "v5.111D3.2"
+  ],
+  "runtime_changes": false,
+  "domain": "class-subclass-runtime"
+}

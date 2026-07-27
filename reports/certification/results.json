@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-07-23T11:19:59.812Z",
+  "status": "FRAMEWORK_READY",
+  "commands": {
+    "quick": "npm run certify:quick",
+    "catalog": "npm run certify:catalog",
+    "builder": "npm run certify:builder",
+    "release": "npm run certify:release"
+  },
+  "notes": [
+    "Reference Oracle v5.105A must be installed first.",
+    "Builder E2E scenarios will expand from golden characters."
+  ]
+}

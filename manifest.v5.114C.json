@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Level-Up Character Adapter Golden ASI Feat Persistence Mega",
+  "version": "5.114C",
+  "requires": [
+    "v5.114B"
+  ],
+  "runtime_changes": true,
+  "adapter": "src/core/rulesets/levelUpCharacterAdapter.ts"
+}

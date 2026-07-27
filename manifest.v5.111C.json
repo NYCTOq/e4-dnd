@@ -1,0 +1,9 @@
+{
+  "name": "E4 D&D Rest Recovery Golden Character Integration Mega",
+  "version": "5.111C",
+  "requires": [
+    "v5.111B1"
+  ],
+  "runtime_changes": true,
+  "adapter": "src/core/rulesets/restRecoveryCharacterAdapter.ts"
+}

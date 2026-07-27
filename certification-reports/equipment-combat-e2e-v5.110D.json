@@ -1,0 +1,17 @@
+{
+  "package": "v5.110D",
+  "domain": "equipment-combat-e2e",
+  "generatedAt": "2026-07-25T11:36:42.912Z",
+  "coverage": [
+    "desktop fighter loadout",
+    "mobile fighter loadout",
+    "desktop offensive spellcaster",
+    "mobile offensive spellcaster",
+    "inventory panel",
+    "equipped weapon, armor and shield",
+    "armor class",
+    "damage summary",
+    "weapon mastery",
+    "offensive spell option"
+  ]
+}
