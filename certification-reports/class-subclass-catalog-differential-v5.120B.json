@@ -1,0 +1,21 @@
+{
+  "package": "v5.120B",
+  "version": "5.120.1",
+  "status": "GREEN",
+  "editions": [
+    "dnd_2014",
+    "dnd_2024"
+  ],
+  "matchedClasses": 12,
+  "comparedProgressionRows": 480,
+  "releaseBlockers": 0,
+  "gates": [
+    "independent canonical class oracle",
+    "2014/2024 class and progression differential",
+    "subclass identity and parent reference integrity",
+    "selection-level and bonus-spell reference integrity",
+    "production and PWA build"
+  ],
+  "nextPackage": "v5.120C",
+  "nextTarget": "Golden Class and Subclass Integration"
+}

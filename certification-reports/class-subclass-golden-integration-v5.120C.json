@@ -1,0 +1,18 @@
+{
+  "package": "v5.120C",
+  "version": "5.120.2",
+  "status": "GREEN",
+  "goldenCharacters": 24,
+  "classEditionPairs": 24,
+  "lifecycleChecks": 144,
+  "releaseBlockers": 0,
+  "gates": [
+    "real class and subclass catalog identity",
+    "official subclass selection-level unlock",
+    "shared subclass runtime snapshot",
+    "Character Edit preservation",
+    "JSON and storage hydration preservation"
+  ],
+  "nextPackage": "v5.120D",
+  "nextTarget": "Class and Subclass UI E2E Final Closure"
+}

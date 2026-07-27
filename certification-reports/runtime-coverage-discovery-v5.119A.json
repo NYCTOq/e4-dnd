@@ -1,0 +1,98 @@
+{
+  "package": "v5.119A",
+  "version": "5.119.0",
+  "status": "READY_FOR_CLOSURE",
+  "selectedDomain": "runtime-coverage",
+  "editions": [
+    "dnd_2014",
+    "dnd_2024"
+  ],
+  "categories": [
+    "subclasses",
+    "feats",
+    "spells",
+    "items"
+  ],
+  "catalogCounts": {
+    "dnd_2014": {
+      "subclasses": 12,
+      "feats": 12,
+      "spells": 58,
+      "items": 35
+    },
+    "dnd_2024": {
+      "subclasses": 12,
+      "feats": 20,
+      "spells": 58,
+      "items": 35
+    }
+  },
+  "certificationCommandCount": 49,
+  "certificationCommands": [
+    "certify:class-subclass:closure",
+    "certify:class-subclass:closure:core",
+    "certify:class-subclass:differential",
+    "certify:class-subclass:discover",
+    "certify:class-subclass:foundation",
+    "certify:class-subclass:golden",
+    "certify:class-subclass:golden:report",
+    "certify:class-subclass:integration",
+    "certify:class-subclass:matrix",
+    "certify:class-subclass:oracle",
+    "certify:class-subclass:persistence",
+    "certify:class-subclass:runtime",
+    "certify:class-subclass:runtime:report",
+    "certify:class-subclass:ui:component-foundation",
+    "certify:class-subclass:ui:contract",
+    "certify:class-subclass:ui:discover",
+    "certify:class-subclass:ui:e2e",
+    "certify:class-subclass:ui:foundation",
+    "certify:class-subclass:ui:persistence-bridge",
+    "certify:class-subclass:ui:usage-matrix",
+    "certify:runtime-coverage:discover:report",
+    "certify:runtime-coverage:discovery",
+    "certify:runtime-coverage:foundation",
+    "certify:spell-runtime:adapter:report",
+    "certify:spell-runtime:closure",
+    "certify:spell-runtime:closure:core",
+    "certify:spell-runtime:differential",
+    "certify:spell-runtime:discover",
+    "certify:spell-runtime:foundation",
+    "certify:spell-runtime:golden",
+    "certify:spell-runtime:integration",
+    "certify:spell-runtime:matrix",
+    "certify:spell-runtime:oracle",
+    "certify:spell-runtime:persistence",
+    "certify:spell-runtime:report",
+    "certify:spell-runtime:runtime",
+    "certify:spell-runtime:ui:casting-matrix",
+    "certify:spell-runtime:ui:component-foundation",
+    "certify:spell-runtime:ui:contract",
+    "certify:spell-runtime:ui:discover",
+    "certify:spell-runtime:ui:e2e",
+    "certify:spell-runtime:ui:foundation",
+    "certify:spell-runtime:ui:persistence-bridge",
+    "certify:spellcasting:e2e",
+    "certify:spellcasting:matrix",
+    "certify:spellcasting:oracle",
+    "certify:spellcasting:quick",
+    "certify:spellcasting:release",
+    "certify:spellcasting:report"
+  ],
+  "evidence": [
+    "src/core/rulesets/runtimeCoverageCertification.ts",
+    "src/core/rulesets/runtimeCoverageClosure.ts",
+    "src/core/rulesets/featRuntimeRules.ts",
+    "src/core/rulesets/spellRuntimeCombatRules.ts",
+    "src/core/rulesets/itemEffectRuntimeRules.ts",
+    "src/core/rulesets/subclassRuntimeRules.ts"
+  ],
+  "policy": {
+    "automatic": "Shared runtime resolves the mechanical result.",
+    "assisted": "Guided Play Mode plan remains visible and captures choices.",
+    "manual": "Explicit table-ruling policy remains visible and tested.",
+    "missing": "Release blocker until runtime metadata or manual policy exists."
+  },
+  "nextPackage": "v5.119B",
+  "nextTarget": "Runtime Differential and Missing Behavior Closure"
+}

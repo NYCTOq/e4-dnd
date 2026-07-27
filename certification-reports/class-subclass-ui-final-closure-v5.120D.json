@@ -1,0 +1,24 @@
+{
+  "package": "v5.120D",
+  "version": "5.120.3",
+  "status": "GREEN",
+  "routes": [
+    "/classes",
+    "/subclasses"
+  ],
+  "projects": [
+    "desktop-chromium",
+    "mobile-chromium"
+  ],
+  "physicalScenarios": 8,
+  "releaseBlockers": 0,
+  "certified": [
+    "real catalog rendering",
+    "physical pointer",
+    "keyboard activation",
+    "overlay interception",
+    "mobile overflow"
+  ],
+  "nextPackage": "v5.121A",
+  "nextTarget": "Cross-Domain Integrity Discovery Foundation"
+}

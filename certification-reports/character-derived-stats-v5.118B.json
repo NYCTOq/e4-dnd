@@ -1,0 +1,37 @@
+{
+  "package": "v5.118B",
+  "domain": "Full Character Sheet Derived Stats Oracle and Differential Matrix",
+  "status": "GREEN",
+  "editions": [
+    "dnd_2014",
+    "dnd_2024"
+  ],
+  "deterministicScenarios": 480,
+  "certifiedFields": [
+    "proficiency bonus",
+    "armor class",
+    "initiative",
+    "speed",
+    "passive perception",
+    "spellcasting ability",
+    "spell save DC",
+    "spell attack bonus",
+    "18 skills",
+    "6 saving throws"
+  ],
+  "combinations": [
+    "manual and automatic AC",
+    "light, medium and heavy armor",
+    "shield",
+    "Defense fighting style",
+    "attuned armor/save bonus",
+    "Alert",
+    "Observant",
+    "Mobile",
+    "proficiency",
+    "expertise",
+    "Jack of All Trades"
+  ],
+  "nextPackage": "v5.118C",
+  "generatedAt": "2026-07-27T14:21:20.613Z"
+}

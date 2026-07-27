@@ -1,0 +1,28 @@
+{
+  "package": "v5.120A",
+  "version": "5.120.0",
+  "status": "READY_FOR_CLOSURE",
+  "selectedDomain": "class-subclass-catalog-integrity",
+  "catalog": [
+    {
+      "edition": "dnd_2014",
+      "baseClasses": 12,
+      "baseSubclasses": 12
+    },
+    {
+      "edition": "dnd_2024",
+      "baseClasses": 12,
+      "baseSubclasses": 12
+    }
+  ],
+  "checks": [
+    "12 classes per edition",
+    "20 ordered progression rows per class",
+    "subclass parent-class references",
+    "subclass selection levels",
+    "bonus-spell catalog references",
+    "class/subclass runtime closure"
+  ],
+  "nextPackage": "v5.120B",
+  "nextTarget": "Catalog Differential and Reference Integrity"
+}

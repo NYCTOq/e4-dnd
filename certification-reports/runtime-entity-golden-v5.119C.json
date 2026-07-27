@@ -1,0 +1,20 @@
+{
+  "package": "v5.119C",
+  "version": "5.119.3",
+  "status": "GREEN",
+  "goldenProfiles": {
+    "feats": 2,
+    "spells": 2,
+    "items": 1,
+    "subclasses": 2
+  },
+  "integrations": [
+    "real 2014 and 2024 catalog entities",
+    "shared feat, spell, item and subclass runtime engines",
+    "runtime tier certification",
+    "JSON catalog and selection round-trip",
+    "production and PWA build"
+  ],
+  "nextPackage": "v5.119D",
+  "nextTarget": "Runtime Coverage UI E2E Final Closure"
+}

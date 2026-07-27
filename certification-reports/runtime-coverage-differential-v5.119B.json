@@ -1,0 +1,26 @@
+{
+  "package": "v5.119B",
+  "version": "5.119.3",
+  "status": "GREEN",
+  "editions": [
+    "dnd_2014",
+    "dnd_2024"
+  ],
+  "categories": [
+    "subclasses",
+    "feats",
+    "spells",
+    "items"
+  ],
+  "matrixScenarios": 480,
+  "missingRuntime": 0,
+  "gates": [
+    "independent reference oracle",
+    "full expanded catalog differential",
+    "deterministic metadata matrix",
+    "zero missing runtime release gate",
+    "production and PWA build"
+  ],
+  "nextPackage": "v5.119C",
+  "nextTarget": "Golden Runtime Entity Integration"
+}

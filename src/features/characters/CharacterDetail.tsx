@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { rollDice } from "../../core/dice/diceRoller";
 import type { RulesetData, DndSpellData } from "../../core/rulesets/ruleset.types";
 import type { AbilityKey, Character } from "../../core/character/character.types";
-import { formatModifier, getAbilityModifier, getInitiative, getPassivePerception, getProficiencyBonus, getSpellAttackBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
+import { formatModifier, getAbilityModifier, getSpellAttackBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
 import { LevelUpAssistant } from "./LevelUpAssistant";
 import { normalizeClassLevels } from "../../core/rulesets/multiclassRules";
@@ -219,6 +219,7 @@ export function CharacterDetail({
   const spellcastingClasses=getCharacterSpellcastingClasses(activeCharacter,rulesetData);
   const spellcastingClassStats=spellcastingClasses.map(entry=>getSpellcastingStatsForClass(activeCharacter,entry.className,rulesetData)).filter((entry): entry is NonNullable<typeof entry>=>Boolean(entry));
   const sheetCertification=getCharacterSheetCertificationSnapshot(activeCharacter,rulesetData);
+  const derivedStats=sheetCertification.derivedStats;
   const completedSheetSections=Object.values(sheetCertification.sectionCoverage).filter(Boolean).length;
   const journeySnapshot=getPlayerJourneyIntegrationSnapshot(activeCharacter);
 
@@ -689,7 +690,7 @@ export function CharacterDetail({
           </details>
 
           <section className="player-journey-integration panel" aria-label="Sheet Play Mode Rest entegrasyonu"><div><span className="mini-label">Player Journey Integration</span><h2>Sheet → Play → Rest</h2><p>{journeySnapshot.restReason}</p></div><div className="player-journey-integration-grid"><span>HP eksik <strong>{journeySnapshot.hpMissing}</strong></span><span>Slot harcandı <strong>{journeySnapshot.spentSpellSlots+journeySnapshot.spentPactSlots}</strong></span><span>Kaynak harcandı <strong>{journeySnapshot.spentResources}</strong></span><span>Öneri <strong>{journeySnapshot.restRecommendation==="long"?"Long Rest":journeySnapshot.restRecommendation==="short"?"Short Rest":"Hazır"}</strong></span></div><div className="player-journey-actions"><button type="button" onClick={()=>navigate(`/play-mode?character=${activeCharacter.id}`)}>Play Mode</button><button type="button" onClick={()=>navigate("/rest")}>Rest Center</button></div></section>
-          <section className="character-sheet-command-center" aria-label="Karakter kağıdı hızlı özeti"><div className="character-sheet-command-heading"><div><span className="mini-label">Table Ready Snapshot</span><h2>Masada Hızlı Özet</h2><p>{sheetCertification.classSummary}</p></div><strong>{completedSheetSections}/7 bölüm</strong></div><div className="character-sheet-command-grid"><article><span>HP</span><strong>{activeCharacter.currentHp}/{activeCharacter.maxHp}</strong><small>{activeCharacter.tempHp?`+${activeCharacter.tempHp} geçici`:"Geçici HP yok"}</small></article><article><span>Savunma</span><strong>AC {effectiveArmorClass}</strong><small>Initiative {formatModifier(getInitiative(activeCharacter))}</small></article><article><span>Kaynaklar</span><strong>{sheetCertification.usableResourceCount} hazır</strong><small>{sheetCertification.exhaustedResourceCount} tükenmiş</small></article><article><span>Büyüler</span><strong>{sheetCertification.preparedSpellCount}/{sheetCertification.knownSpellCount}</strong><small>{sheetCertification.spellcastingClassCount} casting class</small></article><article><span>Ekipman</span><strong>{sheetCertification.equippedItemCount} kuşanılmış</strong><small>{sheetCertification.attunedItemCount}/3 attuned</small></article><article><span>Aktif Durum</span><strong>{sheetCertification.activeConditionCount+sheetCertification.activeEffectCount}</strong><small>{sheetCertification.activeConditionCount} condition · {sheetCertification.activeEffectCount} effect</small></article></div></section>
+          <section className="character-sheet-command-center" aria-label="Karakter kağıdı hızlı özeti" data-testid="derived-stats-command-center"><div className="character-sheet-command-heading"><div><span className="mini-label">Table Ready Snapshot</span><h2>Masada Hızlı Özet</h2><p>{sheetCertification.classSummary}</p></div><strong>{completedSheetSections}/7 bölüm</strong></div><div className="character-sheet-command-grid"><article><span>HP</span><strong>{activeCharacter.currentHp}/{activeCharacter.maxHp}</strong><small>{activeCharacter.tempHp?`+${activeCharacter.tempHp} geçici`:"Geçici HP yok"}</small></article><article data-testid="derived-stats-defense-summary"><span>Savunma</span><strong>AC {derivedStats.armorClass}</strong><small>Initiative {formatModifier(derivedStats.initiative)}</small></article><article><span>Kaynaklar</span><strong>{sheetCertification.usableResourceCount} hazır</strong><small>{sheetCertification.exhaustedResourceCount} tükenmiş</small></article><article><span>Büyüler</span><strong>{sheetCertification.preparedSpellCount}/{sheetCertification.knownSpellCount}</strong><small>{sheetCertification.spellcastingClassCount} casting class</small></article><article><span>Ekipman</span><strong>{sheetCertification.equippedItemCount} kuşanılmış</strong><small>{sheetCertification.attunedItemCount}/3 attuned</small></article><article><span>Aktif Durum</span><strong>{sheetCertification.activeConditionCount+sheetCertification.activeEffectCount}</strong><small>{sheetCertification.activeConditionCount} condition · {sheetCertification.activeEffectCount} effect</small></article></div></section>
 
           <div className="ability-detail-grid">
             {Object.entries(activeCharacter.abilities).map(
@@ -703,31 +704,31 @@ export function CharacterDetail({
             )}
           </div>
 
-          <div className="detail-stat-grid">
-            <div>
+          <div className="detail-stat-grid" data-testid="derived-stats-grid">
+            <div data-testid="derived-stat-armor-class">
               <span>Armor Class</span>
-              <strong>{effectiveArmorClass}</strong>
+              <strong>{derivedStats.armorClass}</strong>
               <em>{activeCharacter.armorClassMode === "auto" ? "Auto" : "Manual"}</em>
             </div>
 
-            <div>
+            <div data-testid="derived-stat-proficiency">
               <span>Proficiency</span>
-              <strong>+{getProficiencyBonus(activeCharacter.level)}</strong>
+              <strong>+{derivedStats.proficiencyBonus}</strong>
             </div>
 
-            <div>
+            <div data-testid="derived-stat-initiative">
               <span>Initiative</span>
-              <strong>{formatModifier(getInitiative(activeCharacter))}</strong>
+              <strong>{formatModifier(derivedStats.initiative)}</strong>
             </div>
 
-            <div>
+            <div data-testid="derived-stat-passive-perception">
               <span>Passive Perception</span>
-              <strong>{getPassivePerception(activeCharacter)}</strong>
+              <strong>{derivedStats.passivePerception}</strong>
             </div>
 
             {spellcastingClassStats.length ? spellcastingClassStats.map((entry)=><div key={`spellcasting-${entry.className}`}><span>{entry.className} Spellcasting</span><strong>DC {entry.saveDc}</strong><em>{entry.ability.toUpperCase()} · Atk {formatModifier(entry.attackBonus)}</em></div>) : <>
-            <div><span>Spell Save DC</span><strong>{getSpellSaveDc(activeCharacter)}</strong></div>
-            <div><span>Spell Attack</span><strong>{formatModifier(getSpellAttackBonus(activeCharacter))}</strong></div>
+            <div><span>Spell Save DC</span><strong>{derivedStats.spellSaveDc}</strong></div>
+            <div><span>Spell Attack</span><strong>{formatModifier(derivedStats.spellAttackBonus)}</strong></div>
             </>}
           </div>
 
@@ -1334,10 +1335,12 @@ export function CharacterDetail({
 
             <div className="quick-roll-grid">
               <button
+                type="button"
+                data-testid="derived-stats-initiative-roll"
                 onClick={() =>
                   quickCharacterRoll(
                     "Initiative",
-                    getInitiative(activeCharacter),
+                    derivedStats.initiative,
                   )
                 }
               >

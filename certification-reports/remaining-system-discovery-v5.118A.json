@@ -1,0 +1,73 @@
+{
+  "package": "v5.118A",
+  "version": "5.118.0",
+  "status": "READY_FOR_CLOSURE",
+  "selectedDomain": "character-sheet-derived-stats",
+  "nextPackage": "v5.118B",
+  "catalogCounts": {
+    "dnd_2014": {
+      "classes": 12,
+      "subclasses": 12,
+      "races": 9,
+      "backgrounds": 13,
+      "feats": 12,
+      "spells": 58,
+      "items": 35,
+      "monsters": 12
+    },
+    "dnd_2024": {
+      "classes": 12,
+      "subclasses": 12,
+      "races": 10,
+      "backgrounds": 16,
+      "feats": 20,
+      "spells": 58,
+      "items": 35,
+      "monsters": 11
+    }
+  },
+  "certificationCommands": 161,
+  "domains": [
+    {
+      "priority": "P0",
+      "title": "Full Character Sheet Derived Stats Closure",
+      "disposition": "v5.118B"
+    },
+    {
+      "priority": "P1",
+      "title": "Feat, Spell, Item and Subclass Runtime Coverage",
+      "disposition": "queued"
+    },
+    {
+      "priority": "P1",
+      "title": "Class and Subclass Catalog Integrity",
+      "disposition": "queued"
+    },
+    {
+      "priority": "P1",
+      "title": "Level 1–20 Player Journey",
+      "disposition": "queued"
+    },
+    {
+      "priority": "P1",
+      "title": "Backup, Restore and Migration Safety",
+      "disposition": "queued"
+    },
+    {
+      "priority": "P2",
+      "title": "Mobile, PWA and Accessibility",
+      "disposition": "monitor"
+    },
+    {
+      "priority": "P2",
+      "title": "Bundle and Runtime Performance",
+      "disposition": "monitor"
+    },
+    {
+      "priority": "P2",
+      "title": "Campaign and DM Tools",
+      "disposition": "monitor"
+    }
+  ],
+  "generatedAt": "2026-07-27T13:26:55.642Z"
+}

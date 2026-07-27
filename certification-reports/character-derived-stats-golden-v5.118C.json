@@ -1,0 +1,22 @@
+{
+  "package": "v5.118C",
+  "domain": "Character Derived Stats Golden Character Integration",
+  "status": "GREEN",
+  "goldenCharacters": 4,
+  "editions": 2,
+  "lifecycles": [
+    "Character Sheet snapshot",
+    "Character Edit",
+    "JSON/storage hydration"
+  ],
+  "uiBindings": [
+    "armor class",
+    "proficiency bonus",
+    "initiative",
+    "passive perception",
+    "spell save DC",
+    "spell attack bonus"
+  ],
+  "nextPackage": "v5.118D",
+  "generatedAt": "2026-07-27T14:21:46.518Z"
+}
