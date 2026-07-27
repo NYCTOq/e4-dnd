@@ -81,15 +81,15 @@ describe("v5.115B death & dying scenario matrix", () => {
     });
   }
 
-  it("stabilize preserves death-save counts", () => {
+  it("stabilize resets death-save counts", () => {
     expect(
       runtimeStabilize({
         successes: 2,
         failures: 1,
       }),
     ).toEqual({
-      successes: 2,
-      failures: 1,
+      successes: 0,
+      failures: 0,
       stable: true,
       dead: false,
     });

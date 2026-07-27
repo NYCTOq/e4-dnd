@@ -2,10 +2,14 @@ import type { CharacterCondition, CharacterConditionDurations, CharacterDeathSav
 
 export type DeathSaveStatus = "conscious" | "dying" | "stable" | "dead";
 
-export function getDeathSaveStatus(currentHp: number, deathSaves: CharacterDeathSaves): DeathSaveStatus {
+export function getDeathSaveStatus(
+  currentHp: number,
+  deathSaves: CharacterDeathSaves,
+  state?: { stable?: boolean; dead?: boolean },
+): DeathSaveStatus {
   if (currentHp > 0) return "conscious";
-  if (deathSaves.failures >= 3) return "dead";
-  if (deathSaves.successes >= 3) return "stable";
+  if (state?.dead || deathSaves.failures >= 3) return "dead";
+  if (state?.stable || deathSaves.successes >= 3) return "stable";
   return "dying";
 }
 

@@ -25,7 +25,7 @@ import { getClassFeatureActions } from "../../core/rulesets/classFeatureEngine";
 import { getDivineSmiteDice, getPaladinAuraSummary, isPaladin } from "../../core/rulesets/paladinRules";
 import { getCastableSlotLevels, getSpellRollFormula, rollFormula } from "../../core/rulesets/spellResolution";
 import { addSpellEffect, advanceSpellEffects, createSpellEffect, removeEffectsBrokenByDamage } from "../../core/rulesets/spellEffectRules";
-import { applyDamage, applyHealing, resolveDeathSave } from "../../core/character/survivalRules";
+import { applyDamage, applyHealing, resolveDeathSave, stabilizeCharacter, type SurvivalState } from "../../core/character/survivalRules";
 import { getCriticalDamageFormula, resolveAttack, type RollMode } from "../../core/rulesets/attackResolution";
 import { combineRollModes, getConditionEffects } from "../../core/rulesets/conditionRules";
 import { getSavingThrowBonus, getSkillBonus, SKILL_ABILITIES } from "../../core/rulesets/characterSheetRules";
@@ -187,7 +187,14 @@ export function PlayMode({
   }
 
   const activeCharacter = character;
-  const deathSaveStatus=getDeathSaveStatus(activeCharacter.currentHp,activeCharacter.deathSaves);
+  const deathSaveStatus=getDeathSaveStatus(
+    activeCharacter.currentHp,
+    activeCharacter.deathSaves,
+    {
+      stable: activeCharacter.deathSaveStable,
+      dead: activeCharacter.dead,
+    },
+  );
   const journeySnapshot=getPlayerJourneyIntegrationSnapshot(activeCharacter);
   const homebrewRuntime = getHomebrewCharacterRuntime(activeCharacter, homebrewPackages);
   const homebrewContentRuntime = getHomebrewContentRuntime(activeCharacter, homebrewPackages, rulesetData);
@@ -332,9 +339,12 @@ export function PlayMode({
   function endSpellEffect(id:string){const next=activeSpellEffects.filter(effect=>effect.id!==id);commit({activeSpellEffects:next,conditions:next.some(effect=>effect.concentration)?activeCharacter.conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")})}
   function concentrationSave(dc:number){const modifier=getAbilityModifier(effectiveCharacter.abilities.con)+magicAccessoryRuntime.savingThrowBonus;const result=rollDice({count:advancedFeatRuntime.concentrationAdvantage?2:1,sides:20,modifier:0});const natural=advancedFeatRuntime.concentrationAdvantage?Math.max(...result.rolls):result.rolls[0];const total=natural+modifier;const success=total>=dc;commit(success?{}:{activeSpellEffects:activeSpellEffects.filter(effect=>!effect.concentration),conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")});setPendingConcentrationDc(null);setRollHistory(current=>[{id:result.id,label:`Concentration Save DC ${dc} · ${success?"Başarılı":"Başarısız"}`,notation:`${advancedFeatRuntime.concentrationAdvantage?"advantage":"normal"} · [${result.rolls.join(", ")}] ${formatModifier(modifier)}`,total},...current].slice(0,6))}
 
-  function takeDamage(critical=false){const rageReduced=reduceRageDamage(survivalAmount,isRaging,incomingPhysical);const ancestryReduced=reduceAncestryDamage(rageReduced,incomingDamageType,ancestryRuntime);const subclassResisted=subclassRuntime.damageResistances.includes(incomingDamageType);const subclassReduced=subclassResisted?Math.ceil(ancestryReduced/2):ancestryReduced;const armorResisted=magicArmorRuntime.resistanceDamageTypes.includes(incomingDamageType);const potionResisted=itemEffectRuntime.damageResistance&&incomingPotionResisted;const finalDamage=armorResisted||potionResisted?Math.ceil(subclassReduced/2):subclassReduced;const effectiveCritical=critical&&!magicArmorRuntime.preventsCriticalDamage;const result=applyDamage({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},finalDamage,effectiveCritical);const damageBrokenEffects=removeEffectsBrokenByDamage(activeSpellEffects);const hasConcentration=damageBrokenEffects.some(effect=>effect.concentration);commit({currentHp:result.currentHp,tempHp:result.tempHp,deathSaves:result.deathSaves,activeSpellEffects:damageBrokenEffects,conditions:hasConcentration?activeCharacter.conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")});if(shouldRequestConcentrationSave(hasConcentration,finalDamage))setPendingConcentrationDc(result.concentrationDc);setRollHistory(current=>[{id:crypto.randomUUID(),label:`${critical?"Kritik ":""}Hasar${critical&&!effectiveCritical?" · Adamantine":""}${rageReduced!==survivalAmount?" · Rage Resistance":""}${ancestryReduced!==rageReduced?" · Ancestry Resistance":""}${subclassResisted?" · Subclass Resistance":""}${armorResisted?" · Armor Resistance":potionResisted?" · Potion Resistance":""}${result.absorbedByTempHp?` · ${result.absorbedByTempHp} Temp HP emdi`:""}`,notation:`-${finalDamage} HP`,total:-finalDamage},...current].slice(0,6))}
-  function healDamage(){const result=applyHealing({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},survivalAmount);commit({currentHp:result.currentHp,deathSaves:result.deathSaves})}
-  function rollDeathSave(){const roll=rollDice({count:1,sides:20,modifier:0});const result=resolveDeathSave({currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves},roll.rolls[0]);commit({currentHp:result.currentHp,deathSaves:result.deathSaves});setRollHistory(current=>[{id:roll.id,label:`Death Save${roll.rolls[0]===20?" · Natural 20":roll.rolls[0]===1?" · Natural 1":""}`,notation:roll.notation,total:roll.total},...current].slice(0,6))}
+  function survivalState(){return {currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves,deathSaveStable:activeCharacter.deathSaveStable,dead:activeCharacter.dead,deathDyingHistory:activeCharacter.deathDyingHistory}}
+  function commitSurvival(result:SurvivalState){commit({currentHp:result.currentHp,tempHp:result.tempHp,deathSaves:result.deathSaves,deathSaveStable:result.deathSaveStable,dead:result.dead,deathDyingHistory:result.deathDyingHistory})}
+  function takeDamage(critical=false){const rageReduced=reduceRageDamage(survivalAmount,isRaging,incomingPhysical);const ancestryReduced=reduceAncestryDamage(rageReduced,incomingDamageType,ancestryRuntime);const subclassResisted=subclassRuntime.damageResistances.includes(incomingDamageType);const subclassReduced=subclassResisted?Math.ceil(ancestryReduced/2):ancestryReduced;const armorResisted=magicArmorRuntime.resistanceDamageTypes.includes(incomingDamageType);const potionResisted=itemEffectRuntime.damageResistance&&incomingPotionResisted;const finalDamage=armorResisted||potionResisted?Math.ceil(subclassReduced/2):subclassReduced;const effectiveCritical=critical&&!magicArmorRuntime.preventsCriticalDamage;const result=applyDamage(survivalState(),finalDamage,effectiveCritical);const damageBrokenEffects=removeEffectsBrokenByDamage(activeSpellEffects);const hasConcentration=damageBrokenEffects.some(effect=>effect.concentration);commit({currentHp:result.currentHp,tempHp:result.tempHp,deathSaves:result.deathSaves,deathSaveStable:result.deathSaveStable,dead:result.dead,deathDyingHistory:result.deathDyingHistory,activeSpellEffects:damageBrokenEffects,conditions:hasConcentration?activeCharacter.conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")});if(shouldRequestConcentrationSave(hasConcentration,finalDamage))setPendingConcentrationDc(result.concentrationDc);setRollHistory(current=>[{id:crypto.randomUUID(),label:`${critical?"Kritik ":""}Hasar${result.massiveDamage?" · Massive Damage":""}`,notation:`-${finalDamage} HP`,total:-finalDamage},...current].slice(0,6))}
+  function healDamage(){commitSurvival(applyHealing(survivalState(),survivalAmount))}
+  function rollDeathSave(){const roll=rollDice({count:1,sides:20,modifier:0});const result=resolveDeathSave(survivalState(),roll.rolls[0]);commitSurvival(result);setRollHistory(current=>[{id:roll.id,label:`Death Save${roll.rolls[0]===20?" · Natural 20":roll.rolls[0]===1?" · Natural 1":""}`,notation:roll.notation,total:roll.total},...current].slice(0,6))}
+  function stabilize(){commitSurvival(stabilizeCharacter(survivalState()))}
 
   function updateHp(amount: number) {
     commit({
@@ -704,18 +714,18 @@ export function PlayMode({
             </div>
 
             <div className="survival-console">
-              <input type="number" min="1" value={survivalAmount} onChange={event=>setSurvivalAmount(Math.max(1,Number(event.target.value)||1))}/>
+              <input data-testid="death-dying-amount" type="number" min="1" value={survivalAmount} onChange={event=>setSurvivalAmount(Math.max(1,Number(event.target.value)||1))}/>
               <select aria-label="Gelen hasar türü" value={incomingDamageType} onChange={event=>setIncomingDamageType(event.target.value)}><option value="physical">Physical</option><option value="fire">Fire</option><option value="cold">Cold</option><option value="lightning">Lightning</option><option value="poison">Poison</option><option value="acid">Acid</option><option value="necrotic">Necrotic</option><option value="radiant">Radiant</option><option value="psychic">Psychic</option><option value="force">Force</option><option value="thunder">Thunder</option></select>
-              <button type="button" onClick={()=>takeDamage(false)}>Hasar Al</button>
-              <button type="button" onClick={()=>takeDamage(true)}>Kritik Hasar</button>
-              <button type="button" onClick={healDamage}>İyileştir</button>
+              <button data-testid="death-dying-damage" type="button" onClick={()=>takeDamage(false)}>Hasar Al</button>
+              <button data-testid="death-dying-critical-damage" type="button" onClick={()=>takeDamage(true)}>Kritik Hasar</button>
+              <button data-testid="death-dying-heal" type="button" onClick={healDamage}>İyileştir</button>
             </div>
             {isBarbarian?<label className="rage-resistance-toggle"><input type="checkbox" checked={incomingPhysical} onChange={event=>setIncomingPhysical(event.target.checked)}/> Gelen hasar fiziksel</label>:null}
             {itemEffectRuntime.damageResistance?<label className="rage-resistance-toggle"><input type="checkbox" checked={incomingPotionResisted} onChange={event=>setIncomingPotionResisted(event.target.checked)}/> Gelen hasar potion direnciyle eşleşiyor</label>:null}
             {magicArmorRuntime.resistanceDamageTypes.length?<small>Armor Resistance: {magicArmorRuntime.resistanceDamageTypes.join(", ")}</small>:null}
             {magicArmorRuntime.preventsCriticalDamage?<small>Adamantine: gelen critical hit normal hit sayılır.</small>:null}
             {pendingConcentrationDc?<button type="button" className="concentration-prompt" onClick={()=>concentrationSave(pendingConcentrationDc)}>Concentration Save At · DC {pendingConcentrationDc}</button>:null}
-            {activeCharacter.currentHp===0?<div className="death-save-console"><strong>{getCombatStatusLabel(deathSaveStatus)} · ✓ {activeCharacter.deathSaves.successes}/3 · ✕ {activeCharacter.deathSaves.failures}/3</strong><button type="button" disabled={deathSaveStatus!=="dying"} onClick={rollDeathSave}>Death Save At</button>{deathSaveStatus==="stable"?<small>3 başarı: karakter stabil, yeni hasar almadıkça death save atmaz.</small>:null}{deathSaveStatus==="dead"?<small>3 başarısızlık: karakter öldü.</small>:null}</div>:null}
+            {activeCharacter.currentHp===0?<div data-testid="death-dying-console" className="death-save-console"><strong data-testid="death-dying-status">{getCombatStatusLabel(deathSaveStatus)} · ✓ {activeCharacter.deathSaves.successes}/3 · ✕ {activeCharacter.deathSaves.failures}/3</strong><button data-testid="death-dying-roll" type="button" disabled={deathSaveStatus!=="dying"} onClick={rollDeathSave}>Death Save At</button><button data-testid="death-dying-stabilize" type="button" disabled={deathSaveStatus!=="dying"} onClick={stabilize}>Stabilize Et</button>{deathSaveStatus==="stable"?<small>Karakter stabil, yeni hasar almadıkça death save atmaz.</small>:null}{deathSaveStatus==="dead"?<small>3 başarısızlık: karakter öldü.</small>:null}</div>:null}
 
             <label className="play-mode-temp-hp">
               Temp HP

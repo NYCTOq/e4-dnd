@@ -85,20 +85,52 @@ export function normalizeClassLevels(
   className: string,
   totalLevel: number,
 ) {
+  const desiredTotal = Math.max(1, Math.min(20, Math.floor(totalLevel)));
   const valid = (value ?? [])
     .filter((item) => item && typeof item.className === "string" && item.className.trim() && item.level > 0)
     .map((item) => ({ ...item, className: item.className.trim(), level: Math.max(1, Math.min(20, Math.floor(item.level))) }));
-  if (!valid.length) return [{ className, level: Math.max(1, Math.min(20, totalLevel)) }];
+  if (!valid.length) return [{ className, level: desiredTotal }];
   const merged = new Map<string, CharacterClassLevel>();
   for (const item of valid) {
-    const previous = merged.get(item.className);
-    merged.set(item.className, previous
-      ? { ...previous, level: previous.level + item.level, subclass: item.subclass ?? previous.subclass }
+    const key = item.className.toLowerCase();
+    const previous = merged.get(key);
+    merged.set(key, previous
+      ? { ...previous, level: Math.min(20, previous.level + item.level), subclass: item.subclass ?? previous.subclass }
       : item);
   }
-  const normalized = [...merged.values()];
-  const total = normalized.reduce((sum, item) => sum + item.level, 0);
-  return total === totalLevel ? normalized : [{ className, level: Math.max(1, Math.min(20, totalLevel)) }];
+  const normalized = [...merged.values()].sort((left, right) => {
+    if (left.className.toLowerCase() === className.toLowerCase()) return -1;
+    if (right.className.toLowerCase() === className.toLowerCase()) return 1;
+    return 0;
+  });
+
+  // Reconcile legacy total-level drift without flattening valid multiclass
+  // entries into the primary class.
+  while (normalized.length > desiredTotal) normalized.pop();
+  let total = normalized.reduce((sum, item) => sum + item.level, 0);
+  if (total > desiredTotal) {
+    for (let index = normalized.length - 1; index >= 0 && total > desiredTotal; index -= 1) {
+      const removable = Math.min(normalized[index].level - 1, total - desiredTotal);
+      normalized[index] = { ...normalized[index], level: normalized[index].level - removable };
+      total -= removable;
+    }
+  } else if (total < desiredTotal) {
+    const primaryIndex = Math.max(
+      0,
+      normalized.findIndex((item) => item.className.toLowerCase() === className.toLowerCase()),
+    );
+    const room = 20 - normalized[primaryIndex].level;
+    const added = Math.min(room, desiredTotal - total);
+    normalized[primaryIndex] = {
+      ...normalized[primaryIndex],
+      level: normalized[primaryIndex].level + added,
+    };
+    total += added;
+  }
+
+  return total === desiredTotal
+    ? normalized
+    : [{ className, level: desiredTotal }];
 }
 
 export function getClassLevel(levels: CharacterClassLevel[], className: string) {
@@ -219,6 +251,63 @@ export function getMulticlassAttacksPerAction(levels: CharacterClassLevel[]) {
 export function getMulticlassProficiencyGains(className: string, ruleset: RulesetId) {
   const table = ruleset === "dnd_2024" ? proficiencyGains2024 : proficiencyGains2014;
   return [...(table[className.toLowerCase()] ?? [])];
+}
+
+export function getEffectiveMulticlassClassProfiles(
+  levels: CharacterClassLevel[],
+  primaryClassName: string,
+  classes: DndClassData[],
+  ruleset: RulesetId,
+) {
+  const activeNames = new Set(levels.map((entry) => entry.className.toLowerCase()));
+  return classes
+    .filter((entry) => activeNames.has(entry.name.toLowerCase()))
+    .map((entry) => {
+      if (entry.name.toLowerCase() === primaryClassName.toLowerCase()) return entry;
+      const gains = getMulticlassProficiencyGains(entry.name, ruleset);
+      return {
+        ...entry,
+        savingThrows: [],
+        armorProficiencies: gains.filter((gain) =>
+          /armor|shield/i.test(gain),
+        ),
+        weaponProficiencies: gains.filter((gain) =>
+          /weapon|shortsword/i.test(gain),
+        ),
+      };
+    });
+}
+
+export function getMulticlassRuntimeSummary(
+  levels: CharacterClassLevel[],
+  primaryClassName: string,
+  classes: DndClassData[],
+  ruleset: RulesetId,
+  currentSlots: CharacterSpellSlot[] = [],
+  currentPactSlots: CharacterSpellSlot[] = [],
+  currentHitDice: CharacterHitDiePool[] = [],
+) {
+  const normalizedLevels = normalizeClassLevels(
+    levels,
+    primaryClassName,
+    levels.reduce((sum, entry) => sum + entry.level, 0),
+  );
+  return {
+    totalLevel: normalizedLevels.reduce((sum, entry) => sum + entry.level, 0),
+    classCount: normalizedLevels.length,
+    casterLevel: getCombinedCasterLevel(normalizedLevels, classes, ruleset),
+    spellSlots: getMulticlassSpellSlots(normalizedLevels, classes, currentSlots, ruleset),
+    pactMagicSlots: getMulticlassPactMagicSlots(normalizedLevels, classes, currentPactSlots),
+    hitDice: getMulticlassHitDice(normalizedLevels, currentHitDice),
+    attacksPerAction: getMulticlassAttacksPerAction(normalizedLevels),
+    classProfiles: getEffectiveMulticlassClassProfiles(
+      normalizedLevels,
+      primaryClassName,
+      classes,
+      ruleset,
+    ),
+    warnings: getMulticlassConflictSummary(normalizedLevels),
+  };
 }
 
 export function getMulticlassConflictSummary(levels: CharacterClassLevel[]) {

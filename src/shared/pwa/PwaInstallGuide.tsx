@@ -1,5 +1,10 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { writeJsonSafely } from "../../core/storage/safeStorage";
+import {
+  FIRST_RUN_COMPLETED_EVENT,
+  FIRST_RUN_STORAGE_KEY,
+} from "../layout/shellOverlayRuntime";
 import { usePersistentState } from "../state/usePersistentState";
 
 type BeforeInstallPromptEvent = Event & {
@@ -10,8 +15,6 @@ type BeforeInstallPromptEvent = Event & {
 type NavigatorWithStandalone = Navigator & {
   standalone?: boolean;
 };
-
-const FIRST_RUN_STORAGE_KEY = "e4_dnd_first_run_guide_v1";
 
 function isStandaloneMode() {
   return (
@@ -31,24 +34,19 @@ export function PwaInstallGuide() {
   );
   const [installEvent, setInstallEvent] =
     useState<BeforeInstallPromptEvent | null>(null);
-  const [isGuideOpen, setIsGuideOpen] = useState(false);
+  // The initial state must be deterministic. A delayed modal can appear under
+  // a pointer after the user has already started interacting with the page.
+  const [isGuideOpen, setIsGuideOpen] = useState(() => !guideCompleted);
   const [isInstalling, setIsInstalling] = useState(false);
   const [isOnline, setIsOnline] = useState(() => navigator.onLine);
   const [networkNotice, setNetworkNotice] = useState<"offline" | "online" | null>(
     null,
   );
   const [isInstalled, setIsInstalled] = useState(isStandaloneMode);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const guideOpenerRef = useRef<HTMLButtonElement>(null);
 
   const isIos = useMemo(isIosDevice, []);
-
-  useEffect(() => {
-    if (!guideCompleted) {
-      const timeoutId = window.setTimeout(() => setIsGuideOpen(true), 650);
-      return () => window.clearTimeout(timeoutId);
-    }
-
-    return undefined;
-  }, [guideCompleted]);
 
   useEffect(() => {
     function handleBeforeInstallPrompt(event: Event) {
@@ -132,9 +130,35 @@ export function PwaInstallGuide() {
   }, [installEvent, setGuideCompleted]);
 
   const handleFinishGuide = useCallback(() => {
+    // Persist synchronously so an immediate navigation/reload cannot resurrect
+    // the first-run barrier while the debounced state writer is still pending.
+    writeJsonSafely(FIRST_RUN_STORAGE_KEY, true);
     setGuideCompleted(true);
     setIsGuideOpen(false);
+    window.setTimeout(() => {
+      window.dispatchEvent(new Event(FIRST_RUN_COMPLETED_EVENT));
+    }, 0);
   }, [setGuideCompleted]);
+
+  useEffect(() => {
+    if (!isGuideOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const guideOpener = guideOpenerRef.current;
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") handleFinishGuide();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+      guideOpener?.focus();
+    };
+  }, [handleFinishGuide, isGuideOpen]);
 
   return (
     <>
@@ -166,21 +190,30 @@ export function PwaInstallGuide() {
 
       {guideCompleted && !isInstalled ? (
         <button
+          ref={guideOpenerRef}
           type="button"
           className="first-run-help-button"
           onClick={() => setIsGuideOpen(true)}
+          data-testid="pwa-install-guide-open"
         >
           Kurulum
         </button>
       ) : null}
 
       {isGuideOpen ? (
-        <div className="first-run-overlay" role="presentation">
+        <div
+          className="first-run-overlay"
+          data-testid="first-run-overlay"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) handleFinishGuide();
+          }}
+        >
           <section
             className="first-run-dialog"
             role="dialog"
             aria-modal="true"
             aria-labelledby="first-run-title"
+            data-testid="first-run-dialog"
           >
             <div className="first-run-head">
               <div>
@@ -193,10 +226,12 @@ export function PwaInstallGuide() {
               </div>
 
               <button
+                ref={closeButtonRef}
                 type="button"
                 className="first-run-close"
                 aria-label="Rehberi kapat"
                 onClick={handleFinishGuide}
+                data-testid="first-run-close"
               >
                 ×
               </button>
@@ -272,7 +307,11 @@ export function PwaInstallGuide() {
               <Link className="secondary-action" to="/backup" onClick={handleFinishGuide}>
                 Backup sayfası
               </Link>
-              <button type="button" onClick={handleFinishGuide}>
+              <button
+                type="button"
+                onClick={handleFinishGuide}
+                data-testid="first-run-complete"
+              >
                 Anladım, devam et
               </button>
             </div>

@@ -1,0 +1,17 @@
+{
+  "package": "v5.115D",
+  "domain": "Death & Dying Final Closure",
+  "status": "GREEN",
+  "generatedAt": "2026-07-27T11:13:52.530Z",
+  "certifiedCore": 1416,
+  "logicalE2E": 4,
+  "certifiedTotal": 1420,
+  "realPlaywrightRuns": 8,
+  "required": [
+    "src/core/rulesets/deathDyingRuntimeRules.ts",
+    "src/core/rulesets/deathDyingCharacterAdapter.ts",
+    "src/core/character/survivalRules.ts",
+    "src/features/play-mode/PlayMode.tsx",
+    "e2e/death-dying-play-mode-v5.115D.spec.ts"
+  ]
+}

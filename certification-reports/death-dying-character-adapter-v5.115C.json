@@ -1,0 +1,28 @@
+{
+  "package": "v5.115C",
+  "domain": "Death & Dying Character Integration",
+  "generatedAt": "2026-07-27T11:13:09.292Z",
+  "status": "GREEN",
+  "suites": {
+    "oracle": 245,
+    "differential": 567,
+    "runtimeMatrix": 350,
+    "golden": 20,
+    "characterPersistenceMatrix": 224
+  },
+  "certifiedTotal": 1406,
+  "coverage": [
+    "character adapter",
+    "temporary HP",
+    "damage at zero",
+    "critical damage at zero",
+    "massive damage",
+    "death saves",
+    "natural 1 and natural 20",
+    "stabilization",
+    "healing",
+    "JSON persistence",
+    "homebrew metadata",
+    "bounded history"
+  ]
+}

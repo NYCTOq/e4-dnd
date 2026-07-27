@@ -224,6 +224,23 @@ export function hydrateCharacterRecord(character: Character): Character {
       successes: clampNumber(character.deathSaves?.successes, 0, 3, 0),
       failures: clampNumber(character.deathSaves?.failures, 0, 3, 0),
     },
+    deathSaveStable:
+      character.currentHp <= 0 &&
+      character.deathSaves?.failures < 3 &&
+      Boolean(character.deathSaveStable),
+    dead:
+      Boolean(character.dead) ||
+      character.deathSaves?.failures >= 3,
+    deathDyingHistory: Array.isArray(character.deathDyingHistory)
+      ? character.deathDyingHistory
+          .filter((entry) =>
+            entry &&
+            typeof entry.id === "string" &&
+            typeof entry.at === "string" &&
+            typeof entry.summary === "string"
+          )
+          .slice(0, 50)
+      : [],
     hitDice: hydrateHitDice(character),
     resources: mergeClassResources(hydrateResources(character), getClassResources(character.className, character.level, character.abilities, normalizeRulesetId(character.ruleset),character.subclass)),
     exhaustion: clampNumber(character.exhaustion, 0, 6, 0),

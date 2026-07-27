@@ -1,0 +1,19 @@
+{
+  "package": "v5.116",
+  "domain": "Global Shell, Onboarding & PWA Overlay Safety",
+  "status": "GREEN",
+  "generatedAt": "2026-07-27T11:30:52.764Z",
+  "contractTests": 6,
+  "logicalE2E": 2,
+  "browserProjects": 2,
+  "physicalPointerRuns": 4,
+  "required": [
+    "src/shared/pwa/PwaInstallGuide.tsx",
+    "src/shared/layout/shellOverlayRuntime.ts",
+    "src/shared/release/ReleaseNotesDialog.tsx",
+    "src/shared/navigation/RouteAccessibility.tsx",
+    "src/styles/18-pwa-install-guide.css",
+    "src/certification/integration/globalShellOverlayContract.test.ts",
+    "e2e/global-shell-overlay-safety-v5.116.spec.ts"
+  ]
+}

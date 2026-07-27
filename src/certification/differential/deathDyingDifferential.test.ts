@@ -1,14 +1,14 @@
 import { describe, expect, it } from "vitest";
 import {
   applyDeathSaveRoll,
-  classifyDeathSaveRoll,
   clampDeathSaveCount,
-  damageAtZero,
+  damageAtZeroFailureCount,
+  deathSaveRollOutcome,
   healFromZero,
-  isMassiveDamageDeath,
+  massiveDamageKills,
   normalizeDeathSaveState,
   resetDeathSaves,
-  stabilize,
+  stabilizeDeathSaveState,
 } from "../reference/deathDying.reference";
 import {
   runtimeApplyDeathSaveRoll,
@@ -38,7 +38,7 @@ describe("v5.115B death & dying differential", () => {
       expect(
         runtimeClassifyDeathSaveRoll(roll),
       ).toBe(
-        classifyDeathSaveRoll(roll),
+        deathSaveRollOutcome(roll),
       );
     });
   }
@@ -61,6 +61,17 @@ describe("v5.115B death & dying differential", () => {
 
       for (let roll = 1; roll <= 20; roll += 1) {
         it(`roll ${successes}/${failures}/${roll}`, () => {
+          const oracleState = normalizeDeathSaveState({
+            successes,
+            failures,
+          });
+          const oracleResult = applyDeathSaveRoll(
+            oracleState,
+            roll,
+          );
+          const { regainHp, ...expectedState } =
+            oracleResult;
+
           expect(
             runtimeApplyDeathSaveRoll(
               {
@@ -69,15 +80,15 @@ describe("v5.115B death & dying differential", () => {
               },
               roll,
             ),
-          ).toEqual(
-            applyDeathSaveRoll(
-              {
-                successes,
-                failures,
-              },
-              roll,
-            ),
-          );
+          ).toEqual({
+            state: expectedState,
+            roll,
+            outcome:
+              oracleState.dead || oracleState.stable
+                ? "ignored"
+                : deathSaveRollOutcome(roll),
+            hpDelta: regainHp,
+          });
         });
       }
     }
@@ -87,9 +98,12 @@ describe("v5.115B death & dying differential", () => {
     it(`damage-zero/${critical}`, () => {
       expect(
         runtimeDamageAtZero(critical),
-      ).toEqual(
-        damageAtZero(critical),
-      );
+      ).toEqual({
+        failuresAdded:
+          damageAtZeroFailureCount(critical),
+        dead:
+          damageAtZeroFailureCount(critical) >= 3,
+      });
     });
   }
 
@@ -108,7 +122,7 @@ describe("v5.115B death & dying differential", () => {
           scenario.damage,
         ),
       ).toBe(
-        isMassiveDamageDeath(
+        massiveDamageKills(
           scenario.currentHp,
           scenario.maxHp,
           scenario.damage,
@@ -124,9 +138,11 @@ describe("v5.115B death & dying differential", () => {
         failures: 2,
       }),
     ).toEqual(
-      stabilize({
+      stabilizeDeathSaveState({
         successes: 1,
         failures: 2,
+        stable: false,
+        dead: false,
       }),
     );
   });
@@ -139,9 +155,10 @@ describe("v5.115B death & dying differential", () => {
         dead: true,
       }),
     ).toEqual(
-      stabilize({
+      stabilizeDeathSaveState({
         successes: 0,
         failures: 3,
+        stable: false,
         dead: true,
       }),
     );
@@ -149,11 +166,14 @@ describe("v5.115B death & dying differential", () => {
 
   for (const healing of [0, 1, 5, 20]) {
     it(`heal-zero/${healing}`, () => {
+      const oracleResult = healFromZero(healing);
+
       expect(
         runtimeHealFromZero(healing),
-      ).toEqual(
-        healFromZero(healing),
-      );
+      ).toEqual({
+        hp: oracleResult.currentHp,
+        state: oracleResult.deathSaves,
+      });
     });
   }
 

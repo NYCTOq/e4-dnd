@@ -1,0 +1,20 @@
+{
+  "package": "v5.115B",
+  "domain": "death-dying",
+  "generatedAt": "2026-07-27T11:12:42.746Z",
+  "runtime": "src/core/rulesets/deathDyingRuntimeRules.ts",
+  "coverage": [
+    "death save count clamp",
+    "death save roll classification",
+    "natural 1",
+    "natural 20",
+    "three successes",
+    "three failures",
+    "damage at zero HP",
+    "critical damage at zero HP",
+    "massive damage death",
+    "stabilize",
+    "heal from zero",
+    "death save reset"
+  ]
+}

@@ -5,7 +5,7 @@ import type { DndClassData, DndFeatData } from "../../core/rulesets/ruleset.type
 import { applyFeatAbilityChoice } from "../../core/rulesets/levelUpChoiceCompletion";
 import { getClassResources, mergeClassResources } from "../../core/rulesets/classFeatureEngine";
 import { getClassSpellSlots } from "../../core/rulesets/spellcastingRules";
-import { addClassLevel, getClassLevel, getMulticlassHitDice, getMulticlassPactMagicSlots, getMulticlassSpellSlots, normalizeClassLevels } from "../../core/rulesets/multiclassRules";
+import { addClassLevel, getClassLevel, getMulticlassHitDice, getMulticlassPactMagicSlots, getMulticlassProficiencyGains, getMulticlassSpellSlots, normalizeClassLevels } from "../../core/rulesets/multiclassRules";
 
 export type LevelUpAsiMode = "none" | "plus-two" | "split";
 
@@ -23,6 +23,8 @@ export type LevelUpOptions = {
   featData?: DndFeatData | null;
   featChoice?: string;
   targetSubclassName?: string;
+  multiclassSkillProficiency?: string;
+  multiclassToolProficiency?: string;
 };
 
 export function isAsiMilestone(level: number, className = ""): boolean {
@@ -72,6 +74,8 @@ export function buildLeveledCharacter(
   const currentClassLevels=normalizeClassLevels(character.classLevels,character.className,character.level);
   const targetClass=options.targetClassData??options.classData;
   const targetClassName=targetClass?.name??character.className;
+  const addsNewClass=getClassLevel(currentClassLevels,targetClassName)===0;
+  const multiclassGains=addsNewClass?getMulticlassProficiencyGains(targetClassName,character.ruleset):[];
   const nextClassLevels=addClassLevel(currentClassLevels,targetClassName,options.targetSubclassName);
   const nextTargetClassLevel=getClassLevel(nextClassLevels,targetClassName);
   const hpGain = Math.max(1, Math.floor(options.hpGain || 1));
@@ -86,6 +90,23 @@ export function buildLeveledCharacter(
     ...character,
     level: nextLevel,
     classLevels: nextClassLevels,
+    multiclassProficiencies: addsNewClass
+      ? [...new Set([...(character.multiclassProficiencies ?? []), ...multiclassGains])]
+      : character.multiclassProficiencies,
+    multiclassSkillProficiencies: options.multiclassSkillProficiency
+      ? [...new Set([...(character.multiclassSkillProficiencies ?? []), options.multiclassSkillProficiency])]
+      : character.multiclassSkillProficiencies,
+    skillProficiencies: options.multiclassSkillProficiency &&
+      !character.skillProficiencies.includes(options.multiclassSkillProficiency)
+      ? [...character.skillProficiencies, options.multiclassSkillProficiency]
+      : character.skillProficiencies,
+    toolProficiencies: [
+      ...new Set([
+        ...character.toolProficiencies,
+        ...(addsNewClass && multiclassGains.includes("Thieves' tools") ? ["Thieves' tools"] : []),
+        ...(options.multiclassToolProficiency ? [options.multiclassToolProficiency] : []),
+      ]),
+    ],
     subclass: targetClassName === character.className && options.targetSubclassName ? options.targetSubclassName : character.subclass,
     featIds: options.featId&&!character.featIds.includes(options.featId)?[...character.featIds,options.featId]:character.featIds,
     featChoices: options.featId && options.featChoice

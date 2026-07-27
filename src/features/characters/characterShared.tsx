@@ -12,6 +12,7 @@ import { getClassResources, mergeClassResources } from "../../core/rulesets/clas
 import { canPrepareSpell, canRitualCast, canSelectKnownSpell, getSpellcastingProfile } from "../../core/rulesets/spellcastingRules";
 import { getCompanionStats, getRangerCompanions } from "../../core/rulesets/companionRules";
 import { getCharacterSpellcastingClasses, getSpellcastingStatsForClass } from "../../core/rulesets/multiclassSpellcastingSeparation";
+import { getEffectiveMulticlassClassProfiles, normalizeClassLevels } from "../../core/rulesets/multiclassRules";
 import { getClassSpellSelection, hydrateClassSpellSelections, setClassSpellSelection } from "../../core/rulesets/classSpellSelectionRules";
 import { getAlwaysPreparedSpells } from "../../core/rulesets/subclassRules";
 
@@ -937,8 +938,17 @@ export function CharacterInventoryManager({
   const effectiveAc = armorClassMode === "auto" ? suggestedAc : armorClass;
   const attunedCount = getAttunedItemCount(inventory);
   const classProfiles = useMemo(() => {
-    const classNames = new Set([className, ...(classLevels ?? []).map((entry) => entry.className)].filter(Boolean));
-    return (rulesetData?.classes ?? []).filter((entry) => classNames.has(entry.name));
+    const levels = normalizeClassLevels(
+      classLevels,
+      className,
+      (classLevels ?? []).reduce((sum, entry) => sum + entry.level, 0) || 1,
+    );
+    return getEffectiveMulticlassClassProfiles(
+      levels,
+      className,
+      rulesetData?.classes ?? [],
+      rulesetData?.id ?? "dnd_2014",
+    );
   }, [className, classLevels, rulesetData]);
 
   const filteredItems = useMemo(() => {

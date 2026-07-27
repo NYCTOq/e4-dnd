@@ -157,8 +157,8 @@ export function runtimeStabilize(
   if (current.dead) return current;
 
   return {
-    successes: current.successes,
-    failures: current.failures,
+    successes: 0,
+    failures: 0,
     stable: true,
     dead: false,
   };

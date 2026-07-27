@@ -1,0 +1,8 @@
+{
+  "name": "E4 D&D Death Dying Play Mode Final Closure Mega",
+  "version": "5.115D",
+  "requires": ["v5.115C"],
+  "runtime_changes": true,
+  "certified_total": 1420,
+  "real_playwright_runs": 8
+}

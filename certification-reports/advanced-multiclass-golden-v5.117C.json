@@ -1,0 +1,18 @@
+{
+  "package": "v5.117C",
+  "domain": "Advanced Multiclass Golden Character Integration",
+  "status": "GREEN",
+  "goldenCharacters": 3,
+  "lifecycleStages": [
+    "Level-Up",
+    "Character Edit",
+    "Persistence"
+  ],
+  "certifiedChoices": [
+    "Rogue skill and Thieves' Tools",
+    "Fighter limited armor and weapon proficiencies",
+    "Bard skill and musical instrument"
+  ],
+  "inheritedRuntimeScenarios": 26667,
+  "generatedAt": "2026-07-27T12:08:08.776Z"
+}

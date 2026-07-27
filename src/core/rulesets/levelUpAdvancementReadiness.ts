@@ -23,12 +23,16 @@ export function getLevelUpAdvancementReadiness({
   targetClassName,
   selectedSubclassName,
   milestoneChoiceComplete,
+  multiclassSkillChoiceComplete = true,
+  multiclassToolChoiceComplete = true,
 }: {
   character: Character;
   rulesetData: RulesetData | null;
   targetClassName: string;
   selectedSubclassName?: string;
   milestoneChoiceComplete: boolean;
+  multiclassSkillChoiceComplete?: boolean;
+  multiclassToolChoiceComplete?: boolean;
 }): AdvancementReadiness {
   const blockers: string[] = [];
   const notices: string[] = [];
@@ -51,6 +55,8 @@ export function getLevelUpAdvancementReadiness({
   if (currentClassLevel === 0) {
     const eligibility = getMulticlassTransitionEligibility(classLevels, targetClassName, character.abilities);
     if (!eligibility.eligible) blockers.push(`Multiclass prerequisite eksik: ${eligibility.missing.join(", ")}.`);
+    if (!multiclassSkillChoiceComplete) blockers.push(`${targetClassName} multiclass skill proficiency seçimi tamamlanmalı.`);
+    if (!multiclassToolChoiceComplete) blockers.push(`${targetClassName} multiclass tool/instrument seçimi tamamlanmalı.`);
   }
 
   if (subclassRequired) {

@@ -8,6 +8,14 @@
   box-shadow: var(--shadow);
 }
 
+/* Fixed shell notices only own their painted bounds; they never create an
+   invisible full-page hit target above application controls. */
+.network-status-pill,
+.network-status-toast,
+.first-run-help-button {
+  pointer-events: auto;
+}
+
 .network-status-pill {
   top: 18px;
   right: 18px;
@@ -75,6 +83,9 @@
   padding: 20px;
   background: rgba(2, 5, 14, 0.78);
   backdrop-filter: blur(14px);
+  isolation: isolate;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
 }
 
 .first-run-dialog {

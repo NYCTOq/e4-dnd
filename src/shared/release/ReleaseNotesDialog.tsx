@@ -1,24 +1,35 @@
 import { useCallback, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { Link } from "react-router-dom";
 import { getCurrentRelease, RELEASE_NOTES } from "./releaseNotes";
 import { useDialogFocus } from "../accessibility/dialogFocus";
-
-const LAST_SEEN_VERSION_KEY = "e4_dnd_last_seen_version_v1";
+import {
+  FIRST_RUN_COMPLETED_EVENT,
+  LAST_SEEN_VERSION_KEY,
+  shouldOpenReleaseNotes,
+} from "../layout/shellOverlayRuntime";
 
 export function ReleaseNotesDialog() {
   const [isOpen, setIsOpen] = useState(false);
   const currentRelease = getCurrentRelease();
 
   useEffect(() => {
-    try {
-      const lastSeenVersion = localStorage.getItem(LAST_SEEN_VERSION_KEY);
-
-      if (lastSeenVersion !== __APP_VERSION__) {
-        setIsOpen(true);
+    const openWhenEligible = () => {
+      try {
+        if (shouldOpenReleaseNotes(localStorage, __APP_VERSION__)) {
+          setIsOpen(true);
+        }
+      } catch {
+        // localStorage kapalıysa sürüm notları yalnızca manuel açılır.
       }
-    } catch {
-      // localStorage kapalıysa sürüm notları yalnızca manuel açılır.
-    }
+    };
+
+    openWhenEligible();
+    window.addEventListener(FIRST_RUN_COMPLETED_EVENT, openWhenEligible);
+
+    return () => {
+      window.removeEventListener(FIRST_RUN_COMPLETED_EVENT, openWhenEligible);
+    };
   }, []);
 
   const closeReleaseNotes = useCallback(() => {
@@ -45,7 +56,7 @@ export function ReleaseNotesDialog() {
         <small>Sürüm notları</small>
       </button>
 
-      {isOpen ? (
+      {isOpen ? createPortal(
         <div
           className="release-notes-backdrop"
           role="presentation"
@@ -55,6 +66,7 @@ export function ReleaseNotesDialog() {
             ref={dialogRef}
             tabIndex={-1}
             data-dialog-id="release-notes"
+            data-testid="release-notes-dialog"
             className="release-notes-dialog"
             role="dialog"
             aria-modal="true"
@@ -72,6 +84,7 @@ export function ReleaseNotesDialog() {
                 type="button"
                 onClick={closeReleaseNotes}
                 aria-label="Sürüm notlarını kapat"
+                data-testid="release-notes-close"
               >
                 ×
               </button>
@@ -115,7 +128,8 @@ export function ReleaseNotesDialog() {
               </div>
             </footer>
           </section>
-        </div>
+        </div>,
+        document.body,
       ) : null}
     </>
   );

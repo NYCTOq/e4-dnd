@@ -1,0 +1,2924 @@
+{
+  "package": "v5.117A",
+  "domain": "Advanced Multiclass Oracle & Runtime Foundation",
+  "status": "GREEN",
+  "editions": 2,
+  "classesPerEdition": 12,
+  "orderedClassTransitions": 264,
+  "certifiedConcerns": [
+    "current and target ability prerequisites",
+    "edition-aware combined caster level",
+    "Pact Magic separation",
+    "class-specific Hit Dice pools",
+    "non-stacking Extra Attack",
+    "starting-class versus multiclass proficiency",
+    "property-limited martial weapon proficiency"
+  ],
+  "generatedAt": "2026-07-27T11:39:33.099Z",
+  "rows": [
+    {
+      "edition": "dnd_2014",
+      "primary": "Barbarian",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Barbarian",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Barbarian",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Barbarian",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Barbarian",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Barbarian",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Barbarian",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Barbarian",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Barbarian",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Barbarian",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "none",
+        "pact"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Barbarian",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Bard",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Bard",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Bard",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Bard",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Bard",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Bard",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Bard",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Bard",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Bard",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Bard",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "full",
+        "pact"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Bard",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Cleric",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Cleric",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Cleric",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Cleric",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Cleric",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Cleric",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Cleric",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Cleric",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Cleric",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Cleric",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "full",
+        "pact"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Cleric",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Druid",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Druid",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Druid",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Druid",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Druid",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Druid",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Druid",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Druid",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Druid",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Druid",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "full",
+        "pact"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Druid",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Fighter",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Fighter",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Fighter",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Fighter",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Fighter",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Fighter",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Fighter",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Fighter",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Fighter",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Fighter",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "none",
+        "pact"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Fighter",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Monk",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Monk",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Monk",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Monk",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Monk",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Monk",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Monk",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Monk",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Monk",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Monk",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "none",
+        "pact"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Monk",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Paladin",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Paladin",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Paladin",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Paladin",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Paladin",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Paladin",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Paladin",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "half",
+        "half"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Paladin",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Paladin",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Paladin",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "half",
+        "pact"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Paladin",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Ranger",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Ranger",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Ranger",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Ranger",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Ranger",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Ranger",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Ranger",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "half",
+        "half"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Ranger",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Ranger",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Ranger",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "half",
+        "pact"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Ranger",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Rogue",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Rogue",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Rogue",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Rogue",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Rogue",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Rogue",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Rogue",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Rogue",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Rogue",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Rogue",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "none",
+        "pact"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Rogue",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Sorcerer",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Sorcerer",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Sorcerer",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Sorcerer",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Sorcerer",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Sorcerer",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Sorcerer",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Sorcerer",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Sorcerer",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Sorcerer",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "full",
+        "pact"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Sorcerer",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Warlock",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "pact",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Warlock",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "pact",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Warlock",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "pact",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Warlock",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "pact",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Warlock",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "pact",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Warlock",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "pact",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Warlock",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "pact",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Warlock",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "pact",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Warlock",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "pact",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Warlock",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "pact",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Warlock",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "pact",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Wizard",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Wizard",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Wizard",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Wizard",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Wizard",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Wizard",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Wizard",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Wizard",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Wizard",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Wizard",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2014",
+      "primary": "Wizard",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "full",
+        "pact"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Barbarian",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Barbarian",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Barbarian",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Barbarian",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Barbarian",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Barbarian",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Barbarian",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Barbarian",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Barbarian",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Barbarian",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "none",
+        "pact"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Barbarian",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 12,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Bard",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Bard",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Bard",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Bard",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Bard",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Bard",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Bard",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Bard",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Bard",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Bard",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "full",
+        "pact"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Bard",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Cleric",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Cleric",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Cleric",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Cleric",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Cleric",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Cleric",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Cleric",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Cleric",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Cleric",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Cleric",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "full",
+        "pact"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Cleric",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Druid",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Druid",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Druid",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Druid",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Druid",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Druid",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Druid",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Druid",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Druid",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Druid",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "full",
+        "pact"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Druid",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Fighter",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Fighter",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Fighter",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Fighter",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Fighter",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Fighter",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Fighter",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Fighter",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Fighter",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Fighter",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "none",
+        "pact"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Fighter",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Monk",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Monk",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Monk",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Monk",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Monk",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Monk",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Monk",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Monk",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Monk",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Monk",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "none",
+        "pact"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Monk",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Paladin",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Paladin",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Paladin",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Paladin",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Paladin",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Paladin",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Paladin",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "half",
+        "half"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Paladin",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Paladin",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Paladin",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "half",
+        "pact"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Paladin",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Ranger",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Ranger",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Ranger",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Ranger",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Ranger",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Ranger",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Ranger",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "half",
+        "half"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Ranger",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "half",
+        "none"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Ranger",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Ranger",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "half",
+        "pact"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Ranger",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "half",
+        "full"
+      ],
+      "primaryHitDie": 10,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Rogue",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Rogue",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Rogue",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Rogue",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Rogue",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Rogue",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "none",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Rogue",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Rogue",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "none",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Rogue",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Rogue",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "none",
+        "pact"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Rogue",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "none",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Sorcerer",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Sorcerer",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Sorcerer",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Sorcerer",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Sorcerer",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Sorcerer",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Sorcerer",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Sorcerer",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Sorcerer",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Sorcerer",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "full",
+        "pact"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Sorcerer",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Warlock",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "pact",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Warlock",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "pact",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Warlock",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "pact",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Warlock",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "pact",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Warlock",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "pact",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Warlock",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "pact",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Warlock",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "pact",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Warlock",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "pact",
+        "half"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Warlock",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "pact",
+        "none"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Warlock",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "pact",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Warlock",
+      "secondary": "Wizard",
+      "spellProgressions": [
+        "pact",
+        "full"
+      ],
+      "primaryHitDie": 8,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Wizard",
+      "secondary": "Barbarian",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 12
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Wizard",
+      "secondary": "Bard",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Wizard",
+      "secondary": "Cleric",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Wizard",
+      "secondary": "Druid",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Wizard",
+      "secondary": "Fighter",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Wizard",
+      "secondary": "Monk",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Wizard",
+      "secondary": "Paladin",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Wizard",
+      "secondary": "Ranger",
+      "spellProgressions": [
+        "full",
+        "half"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 10
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Wizard",
+      "secondary": "Rogue",
+      "spellProgressions": [
+        "full",
+        "none"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Wizard",
+      "secondary": "Sorcerer",
+      "spellProgressions": [
+        "full",
+        "full"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 6
+    },
+    {
+      "edition": "dnd_2024",
+      "primary": "Wizard",
+      "secondary": "Warlock",
+      "spellProgressions": [
+        "full",
+        "pact"
+      ],
+      "primaryHitDie": 6,
+      "secondaryHitDie": 8
+    }
+  ]
+}

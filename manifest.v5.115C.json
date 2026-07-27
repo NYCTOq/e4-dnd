@@ -1,0 +1,7 @@
+{
+  "name": "E4 D&D Death Dying Character Integration Mega",
+  "version": "5.115C",
+  "requires": ["v5.115B"],
+  "runtime_changes": true,
+  "certification_target": 1406
+}

@@ -25,6 +25,13 @@ export interface CharacterDeathSaves {
   failures: number;
 }
 
+export interface CharacterDeathDyingHistoryEntry {
+  id: string;
+  at: string;
+  type: "damage" | "death-save" | "healing" | "stabilize" | "reset";
+  summary: string;
+}
+
 export interface CharacterHitDiePool {
   die: number;
   max: number;
@@ -110,6 +117,8 @@ className: string;
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];
+  multiclassProficiencies?: string[];
+  multiclassSkillProficiencies?: string[];
   languages: string[];
   level: number;
 
@@ -136,6 +145,9 @@ className: string;
   gold: number;
 
   deathSaves: CharacterDeathSaves;
+  deathSaveStable?: boolean;
+  dead?: boolean;
+  deathDyingHistory?: CharacterDeathDyingHistoryEntry[];
   hitDice: CharacterHitDiePool[];
   resources: CharacterResource[];
   exhaustion: number;
@@ -189,6 +201,8 @@ className: string;
   skillProficiencies: string[];
   expertiseSkills: string[];
   toolProficiencies: string[];
+  multiclassProficiencies?: string[];
+  multiclassSkillProficiencies?: string[];
   languages: string[];
   level: number;
 
@@ -213,6 +227,9 @@ className: string;
   gold: number;
 
   deathSaves: CharacterDeathSaves;
+  deathSaveStable?: boolean;
+  dead?: boolean;
+  deathDyingHistory?: CharacterDeathDyingHistoryEntry[];
   hitDice: CharacterHitDiePool[];
   resources?: CharacterResource[];
   exhaustion: number;

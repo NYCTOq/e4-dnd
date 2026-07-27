@@ -19,7 +19,10 @@ export function characterToEditDraft(character: Character): CharacterDraft {
     arcanumSpellIds: [...(character.arcanumSpellIds ?? [])], usedArcanumSpellIds: [...(character.usedArcanumSpellIds ?? [])],
     activeSpellEffects: (character.activeSpellEffects ?? []).map((effect) => ({ ...effect })),
     skillProficiencies: [...(character.skillProficiencies ?? [])], expertiseSkills: [...(character.expertiseSkills ?? [])],
-    toolProficiencies: [...(character.toolProficiencies ?? [])], languages: [...(character.languages ?? [])],
+    toolProficiencies: [...(character.toolProficiencies ?? [])],
+    multiclassProficiencies: [...(character.multiclassProficiencies ?? [])],
+    multiclassSkillProficiencies: [...(character.multiclassSkillProficiencies ?? [])],
+    languages: [...(character.languages ?? [])],
     level: character.level, abilities: { ...character.abilities }, maxHp: character.maxHp,
     armorClass: character.armorClass, armorClassMode: character.armorClassMode === "auto" ? "auto" : "manual",
     knownSpellIds: [...(character.knownSpellIds ?? [])], preparedSpellIds: [...(character.preparedSpellIds ?? [])],
@@ -39,7 +42,10 @@ export function buildEditedCharacter(character: Character, draft: CharacterDraft
   const alwaysPrepared = getAlwaysPreparedSpells(subclass, getHighestSpellLevel(classData ?? undefined, draft.level), rulesetData?.spells ?? []);
   const knownSpellIds = [...new Set([...draft.knownSpellIds, ...alwaysPrepared.map((spell) => spell.id)])];
   const preparedSpellIds = [...new Set([...draft.preparedSpellIds, ...alwaysPrepared.map((spell) => spell.id)])];
-  const skillProficiencies = buildFinalSkillProficiencies(draft.skillProficiencies, classData, background);
+  const skillProficiencies = [...new Set([
+    ...buildFinalSkillProficiencies(draft.skillProficiencies, classData, background),
+    ...(draft.multiclassSkillProficiencies ?? []),
+  ])];
   const multiclass = (draft.classLevels?.length ?? 0) > 1;
   return {
     ...character, ...draft, knownSpellIds, preparedSpellIds, skillProficiencies,

@@ -36,7 +36,11 @@ export function RouteAccessibility() {
 
     const main = document.getElementById("main-content");
 
-    if (main) {
+    // Route announcements must never steal focus from an active modal. This
+    // effect can re-run after translations hydrate, including after a dialog
+    // has already established its focus boundary.
+    const hasOpenModal = document.querySelector('[aria-modal="true"]');
+    if (main && !hasOpenModal) {
       main.focus({ preventScroll: true });
     }
 
