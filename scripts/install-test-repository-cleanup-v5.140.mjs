@@ -1,0 +1,14 @@
+import fs from "node:fs";
+const packagePath = "package.json";
+const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8"));
+pkg.version = "5.140.0";
+pkg.scripts ??= {};
+pkg.scripts["audit:repository"] = "node scripts/repository-cleanup-v5.140.mjs";
+pkg.scripts["test:repository-cleanup"] = "vitest run src/release/repositoryCleanupPolicy-v5.140.test.ts";
+pkg.scripts["test:unit"] = "vitest run";
+pkg.scripts["test:critical"] = "vitest run src/core/runtime/criticalGameplayGuards-v5.139.test.ts src/core/runtime/manualRuntimeBridge-v5.135.test.ts src/core/session/sessionPlayLoop-v5.134.test.ts src/core/rulesets/featItemRuntimeCompletion-v5.133.test.ts src/core/rulesets/subclassRuntimeCompletion-v5.131.test.ts src/core/rulesets/classRuntimeCompletion-v5.130.test.ts";
+pkg.scripts["test:release"] = "npm run test:critical && npm run build";
+pkg.scripts["certify"] = "npm run test:unit && npm run build";
+pkg.scripts["certify:test-repository-cleanup"] = "npm run test:repository-cleanup && npm run audit:repository && npm run build";
+fs.writeFileSync(packagePath, JSON.stringify(pkg, null, 2) + "\n", "utf8");
+console.log("v5.140 canonical scripts installed; package.json kept UTF-8.");

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-07-28T12:10:56.064Z",
+  "packageVersion": "6.0.0",
+  "auditMetadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 2,
+      "critical": 0,
+      "total": 2
+    },
+    "dependencies": {
+      "prod": 12,
+      "dev": 450,
+      "optional": 80,
+      "peer": 3,
+      "peerOptional": 0,
+      "total": 461
+    }
+  },
+  "scanScope": [
+    "src/**",
+    "vite.config.*",
+    "vitest.config.*",
+    "package.json"
+  ],
+  "rscMarkers": [],
+  "acceptedContextualAdvisories": [
+    {
+      "name": "react-router",
+      "severity": "high",
+      "reason": "Only GHSA-qwww-vcr4-c8h2 remains in the React Router chain, and application/config scan found no unstable RSC API or RSC plugin usage."
+    },
+    {
+      "name": "react-router-dom",
+      "severity": "high",
+      "reason": "Only GHSA-qwww-vcr4-c8h2 remains in the React Router chain, and application/config scan found no unstable RSC API or RSC plugin usage."
+    }
+  ],
+  "blockingVulnerabilities": [],
+  "status": "PASS"
+}

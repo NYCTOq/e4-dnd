@@ -9,6 +9,7 @@ import { useTagCollections } from "../../shared/collections/TagCollectionsProvid
 import { getPlayReadiness } from "../../core/character/playReadiness";
 import { useI18n } from "../../shared/i18n/useI18n";
 import { CharacterHubActionLink } from "../characters/CharacterHubActionLink";
+import { GettingStartedPanel } from "./GettingStartedPanel";
 
 type DashboardProps = {
   characters: Character[];
@@ -67,6 +68,7 @@ export function Dashboard({
       title={t("dashboard.title","Masa hazır.")}
       description={t("dashboard.description","Karakter, campaign ve oyun araçlarına tek yerden ulaş. Gereken şey önde, geri kalan dijital çekmecelerde uslu uslu bekliyor.")}
     >
+      <GettingStartedPanel characterCount={characters.length} />
       <section className="dashboard-command-grid">
         <motion.article
           className="dashboard-command-card dashboard-command-primary"

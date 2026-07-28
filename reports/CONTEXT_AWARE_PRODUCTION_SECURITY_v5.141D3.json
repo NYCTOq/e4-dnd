@@ -1,0 +1,91 @@
+{
+  "generatedAt": "2026-07-28T11:36:05.625Z",
+  "packageVersion": "5.141.3",
+  "auditMetadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 2,
+      "critical": 0,
+      "total": 2
+    },
+    "dependencies": {
+      "prod": 12,
+      "dev": 450,
+      "optional": 80,
+      "peer": 3,
+      "peerOptional": 0,
+      "total": 461
+    }
+  },
+  "rscMarkers": [
+    {
+      "file": "scripts\\context-aware-production-security-gate-v5.141D3.mjs",
+      "marker": "unstable_reactRouterRSC"
+    },
+    {
+      "file": "scripts\\context-aware-production-security-gate-v5.141D3.mjs",
+      "marker": "@vitejs/plugin-rsc"
+    },
+    {
+      "file": "scripts\\context-aware-production-security-gate-v5.141D3.mjs",
+      "marker": "unstable_RSCStaticRouter"
+    },
+    {
+      "file": "scripts\\context-aware-production-security-gate-v5.141D3.mjs",
+      "marker": "unstable_routeRSCServerRequest"
+    },
+    {
+      "file": "scripts\\context-aware-production-security-gate-v5.141D3.mjs",
+      "marker": "unstable_createCallServer"
+    },
+    {
+      "file": "scripts\\context-aware-production-security-gate-v5.141D3.mjs",
+      "marker": "use server"
+    },
+    {
+      "file": "scripts\\context-aware-production-security-gate-v5.141D3.mjs",
+      "marker": "RSCPayload"
+    },
+    {
+      "file": "scripts\\context-aware-production-security-gate-v5.141D3.mjs",
+      "marker": "RSCStaticRouter"
+    }
+  ],
+  "acceptedContextualAdvisories": [],
+  "blockingVulnerabilities": [
+    {
+      "name": "react-router",
+      "severity": "high",
+      "via": [
+        {
+          "source": 1124282,
+          "name": "react-router",
+          "dependency": "react-router",
+          "title": "React Router: RSC Mode CSRF Bypass Allows Action Execution Before 400 Response",
+          "url": "https://github.com/advisories/GHSA-qwww-vcr4-c8h2",
+          "severity": "high",
+          "cwe": [
+            "CWE-352"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=7.12.0 <8.3.0"
+        }
+      ],
+      "range": "7.12.0 - 8.2.0"
+    },
+    {
+      "name": "react-router-dom",
+      "severity": "high",
+      "via": [
+        "react-router"
+      ],
+      "range": ">=7.12.0-pre.0"
+    }
+  ],
+  "status": "BLOCKED"
+}

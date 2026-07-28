@@ -13,15 +13,23 @@ export default defineConfig({
     __BUILD_DATE__: JSON.stringify(new Date().toISOString()),
   },
   build: {
-    chunkSizeWarningLimit: 450,
+    cssCodeSplit: true,
+    modulePreload: { polyfill: false },
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 400,
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (id.includes("node_modules/react") || id.includes("node_modules/react-dom") || id.includes("node_modules/react-router")) return "vendor-react";
+          if (id.includes("node_modules/react-router")) return "vendor-router";
+          if (id.includes("node_modules/react") || id.includes("node_modules/react-dom")) return "vendor-react";
           if (id.includes("spellExpansion")) return "data-spells";
           if (id.includes("subclassExpansion")) return "data-subclasses";
           if (id.includes("itemExpansion")) return "data-items";
-          if (id.includes("PageShell") || id.includes("AppFrame")) return "shell";
+          if (id.includes("/src/core/")) return "app-core";
+          if (id.includes("/src/shared/")) return "app-shared";
+          if (id.includes("/src/features/homebrew/homebrewStorage") || id.includes("/src/core/homebrew/")) return "app-homebrew-core";
+          if (id.includes("/src/features/campaigns/campaignStorage") || id.includes("/src/features/campaigns/campaignTemplates") || id.includes("/src/features/campaigns/campaignTypes")) return "app-campaign-core";
+          if (id.includes("/src/features/backup/")) return "app-backup-core";
         },
       },
     },

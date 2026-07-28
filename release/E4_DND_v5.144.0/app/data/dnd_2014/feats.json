@@ -1,0 +1,140 @@
+[
+  {
+    "id": "alert",
+    "name": "Alert",
+    "ruleset": "dnd_2014",
+    "category": "general",
+    "summary": "Tehlikeye hızlı tepki veren karakterler için farkındalık feat'i.",
+    "benefits": [
+      "Initiative desteği",
+      "Sürprize karşı daha güvenli başlangıç"
+    ]
+  },
+  {
+    "id": "athlete",
+    "name": "Athlete",
+    "ruleset": "dnd_2014",
+    "category": "general",
+    "summary": "Tırmanma, sıçrama ve ayağa kalkma hareketlerini güçlendirir.",
+    "benefits": [
+      "Fiziksel hareket kolaylığı"
+    ],
+    "abilityOptions": [
+      "str",
+      "dex"
+    ]
+  },
+  {
+    "id": "durable",
+    "name": "Durable",
+    "ruleset": "dnd_2014",
+    "category": "general",
+    "summary": "Short Rest sırasında Hit Dice kullanımını daha güvenilir kılar.",
+    "benefits": [
+      "Dayanıklılık artışı"
+    ],
+    "abilityOptions": [
+      "con"
+    ]
+  },
+  {
+    "id": "grappler",
+    "name": "Grappler",
+    "ruleset": "dnd_2014",
+    "category": "general",
+    "summary": "Yakalama ve yakın temas kontrolü konusunda uzmanlaşma sağlar.",
+    "benefits": [
+      "Grapple odaklı avantajlar"
+    ],
+    "prerequisite": {
+      "abilityMinimums": {
+        "str": 13
+      }
+    }
+  },
+  {
+    "id": "healer",
+    "name": "Healer",
+    "ruleset": "dnd_2014",
+    "category": "general",
+    "summary": "Healer's Kit ile daha etkili saha tedavisi sağlar.",
+    "benefits": [
+      "Kaynak harcamadan destek iyileştirmesi"
+    ]
+  },
+  {
+    "id": "lucky",
+    "name": "Lucky",
+    "ruleset": "dnd_2014",
+    "category": "general",
+    "summary": "Kritik zarları yeniden değerlendirmek için sınırlı şans kullanımları verir.",
+    "benefits": [
+      "Sınırlı reroll kaynağı"
+    ]
+  },
+  {
+    "id": "magic-initiate",
+    "name": "Magic Initiate",
+    "ruleset": "dnd_2014",
+    "category": "general",
+    "summary": "Başka bir büyü listesinden sınırlı spellcasting kazandırır.",
+    "benefits": [
+      "Cantrip ve seviye 1 büyü erişimi"
+    ]
+  },
+  {
+    "id": "skilled",
+    "name": "Skilled",
+    "ruleset": "dnd_2014",
+    "category": "general",
+    "summary": "Ek skill veya tool proficiency seçimleri verir.",
+    "benefits": [
+      "Üç ek proficiency"
+    ]
+  },
+  {
+    "id": "tough",
+    "name": "Tough",
+    "ruleset": "dnd_2014",
+    "category": "general",
+    "summary": "Her seviyede maksimum HP'yi yükseltir.",
+    "benefits": [
+      "Seviye başına ek HP"
+    ]
+  },
+  {
+    "id": "war-caster",
+    "name": "War Caster",
+    "ruleset": "dnd_2014",
+    "category": "general",
+    "summary": "Savaş içinde concentration ve büyü kullanımını destekler.",
+    "benefits": [
+      "Concentration kontrollerinde avantaj",
+      "Silah eldeyken somatic kullanım kolaylığı"
+    ],
+    "prerequisite": {
+      "spellcasting": true
+    }
+  },
+  {
+    "id": "mobile",
+    "name": "Mobile",
+    "ruleset": "dnd_2014",
+    "category": "general",
+    "summary": "Hareket hızını ve yakın dövüşten ayrılmayı destekler.",
+    "benefits": [
+      "Hız artışı",
+      "Vurulan hedeften daha güvenli ayrılma"
+    ]
+  },
+  {
+    "id": "sentinel",
+    "name": "Sentinel",
+    "ruleset": "dnd_2014",
+    "category": "general",
+    "summary": "Yakındaki düşmanların hareketini ve hedef seçimini cezalandırır.",
+    "benefits": [
+      "Reaction tabanlı alan kontrolü"
+    ]
+  }
+]

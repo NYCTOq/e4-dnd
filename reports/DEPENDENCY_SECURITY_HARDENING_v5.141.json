@@ -1,0 +1,241 @@
+{
+  "generatedAt": "2026-07-28T11:28:03.267Z",
+  "packageVersion": "5.141.0",
+  "policy": {
+    "forceUpgradeUsed": false,
+    "automaticMajorUpgradeUsed": false,
+    "productionHighCriticalAllowed": false
+  },
+  "allDependencies": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 10,
+    "critical": 0,
+    "total": 10
+  },
+  "productionDependencies": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 2,
+    "critical": 0,
+    "total": 2
+  },
+  "directHighCritical": [
+    {
+      "name": "react-router-dom",
+      "severity": "high",
+      "direct": true,
+      "via": [
+        "react-router"
+      ],
+      "effects": [],
+      "range": ">=7.12.0-pre.0",
+      "fixAvailable": {
+        "name": "react-router-dom",
+        "version": "7.11.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "name": "vite-plugin-pwa",
+      "severity": "high",
+      "direct": true,
+      "via": [
+        "workbox-build"
+      ],
+      "effects": [],
+      "range": ">=1.3.0",
+      "fixAvailable": {
+        "name": "vite-plugin-pwa",
+        "version": "1.2.0",
+        "isSemVerMajor": true
+      }
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "name": "@trickfilm400/rollup-plugin-off-main-thread",
+      "severity": "high",
+      "direct": false,
+      "via": [
+        "ejs"
+      ],
+      "effects": [
+        "workbox-build"
+      ],
+      "range": "<=3.1.0-pre2",
+      "fixAvailable": {
+        "name": "vite-plugin-pwa",
+        "version": "1.2.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "name": "brace-expansion",
+      "severity": "high",
+      "direct": false,
+      "via": [
+        "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash"
+      ],
+      "effects": [
+        "minimatch"
+      ],
+      "range": "<=5.0.7",
+      "fixAvailable": {
+        "name": "vite-plugin-pwa",
+        "version": "1.2.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "name": "ejs",
+      "severity": "high",
+      "direct": false,
+      "via": [
+        "jake"
+      ],
+      "effects": [
+        "@trickfilm400/rollup-plugin-off-main-thread"
+      ],
+      "range": "3.1.2 - 4.0.1",
+      "fixAvailable": {
+        "name": "vite-plugin-pwa",
+        "version": "1.2.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "name": "filelist",
+      "severity": "high",
+      "direct": false,
+      "via": [
+        "minimatch"
+      ],
+      "effects": [
+        "jake"
+      ],
+      "range": "0.0.5 - 1.0.6",
+      "fixAvailable": {
+        "name": "vite-plugin-pwa",
+        "version": "1.2.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "name": "jake",
+      "severity": "high",
+      "direct": false,
+      "via": [
+        "filelist"
+      ],
+      "effects": [
+        "ejs"
+      ],
+      "range": "10.6.1 - 10.9.4",
+      "fixAvailable": {
+        "name": "vite-plugin-pwa",
+        "version": "1.2.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "name": "minimatch",
+      "severity": "high",
+      "direct": false,
+      "via": [
+        "brace-expansion"
+      ],
+      "effects": [
+        "filelist"
+      ],
+      "range": "2.0.0 - 10.0.2",
+      "fixAvailable": {
+        "name": "vite-plugin-pwa",
+        "version": "1.2.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "name": "react-router",
+      "severity": "high",
+      "direct": false,
+      "via": [
+        "React Router: RSC Mode CSRF Bypass Allows Action Execution Before 400 Response"
+      ],
+      "effects": [
+        "react-router-dom"
+      ],
+      "range": "7.12.0 - 8.2.0",
+      "fixAvailable": {
+        "name": "react-router-dom",
+        "version": "7.11.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "name": "react-router-dom",
+      "severity": "high",
+      "direct": true,
+      "via": [
+        "react-router"
+      ],
+      "effects": [],
+      "range": ">=7.12.0-pre.0",
+      "fixAvailable": {
+        "name": "react-router-dom",
+        "version": "7.11.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "name": "vite-plugin-pwa",
+      "severity": "high",
+      "direct": true,
+      "via": [
+        "workbox-build"
+      ],
+      "effects": [],
+      "range": ">=1.3.0",
+      "fixAvailable": {
+        "name": "vite-plugin-pwa",
+        "version": "1.2.0",
+        "isSemVerMajor": true
+      }
+    },
+    {
+      "name": "workbox-build",
+      "severity": "high",
+      "direct": false,
+      "via": [
+        "@trickfilm400/rollup-plugin-off-main-thread"
+      ],
+      "effects": [
+        "vite-plugin-pwa"
+      ],
+      "range": ">=7.4.1",
+      "fixAvailable": {
+        "name": "vite-plugin-pwa",
+        "version": "1.2.0",
+        "isSemVerMajor": true
+      }
+    }
+  ],
+  "outdated": {
+    "@types/node": {
+      "current": "24.13.3",
+      "wanted": "24.13.3",
+      "latest": "26.1.2",
+      "dependent": "e4_dnd",
+      "location": "D:\\Projects\\e4_dnd\\node_modules\\@types\\node"
+    },
+    "typescript": {
+      "current": "6.0.3",
+      "wanted": "6.0.3",
+      "latest": "7.0.2",
+      "dependent": "e4_dnd",
+      "location": "D:\\Projects\\e4_dnd\\node_modules\\typescript"
+    }
+  }
+}

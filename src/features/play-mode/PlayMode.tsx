@@ -63,6 +63,7 @@ import { getSpellBehavior } from "../../core/rulesets/spellBehaviorRules";
 import { appendSessionEvent, clearPlaySession, endPlaySession, ensurePlaySession, getSessionSummary, savePlaySession, type PlaySession } from "../../core/session/sessionPlayLoop";
 import { addManualRuntimeEffect, advanceManualRuntimeEffects, loadManualRuntimeEffects, removeManualRuntimeEffect, saveManualRuntimeEffects, type ManualRuntimeKind } from "../../core/runtime/manualRuntimeBridge";
 import { getSpellMaterialReadiness } from "../../core/rulesets/spellMaterialRules";
+import { evaluateGameplayGuard, getCastingEconomy } from "../../core/runtime/criticalGameplayGuards";
 import { getActiveDefenseMovementModifiers, removeEffectsBrokenByAttack, removeEffectsBrokenBySpellCast } from "../../core/rulesets/spellDefenseMovementRules";
 import { getEncumbrance, getEquipmentLegality, getInventoryWeight, findAmmunitionId, consumeAmmunition } from "../../core/rulesets/equipmentRuntimeRules";
 import { getMulticlassAttacksPerAction, normalizeClassLevels } from "../../core/rulesets/multiclassRules";
@@ -388,7 +389,7 @@ export function PlayMode({
   }
   function useSuperiorityDie(){if(!superiorityDice||superiorityDice.used>=superiorityDice.max)return;commit({resources:activeCharacter.resources.map(resource=>resource.id==="superiority-dice"?{...resource,used:Math.min(resource.max,resource.used+1)}:resource)})}
   function updateCompanionHp(amount:number){if(!companionStats)return;commit({companionCurrentHp:Math.min(companionStats.maxHp,Math.max(0,companionCurrentHp+amount))})}
-  function executeClassAction(resourceId:string,amount=1){const resource=activeCharacter.resources.find(item=>item.id===resourceId);if(!resource||(!resource.unlimited&&resource.max-resource.used<amount))return;let currentHp=activeCharacter.currentHp;let conditions=activeCharacter.conditions;if(resourceId==="second-wind"){const result=rollDice({count:1,sides:10,modifier:activeCharacter.level});currentHp=Math.min(activeCharacter.maxHp,currentHp+result.total);setRollHistory(current=>[{id:result.id,label:"Second Wind",notation:result.notation,total:result.total},...current].slice(0,6))}if(resourceId==="lay-on-hands")currentHp=Math.min(activeCharacter.maxHp,currentHp+amount);if(resourceId==="rage"&&!conditions.includes("Rage"))conditions=[...conditions,"Rage"];commit({currentHp,conditions,resources:activeCharacter.resources.map(item=>item.id===resourceId?item.unlimited?item:{...item,used:Math.min(item.max,item.used+amount)}:item)})}
+  function executeClassAction(resourceId:string,amount=1){const resource=activeCharacter.resources.find(item=>item.id===resourceId);const guard=evaluateGameplayGuard({resourceRemaining:resource?.unlimited?Number.POSITIVE_INFINITY:resource?resource.max-resource.used:0,resourceCost:amount});if(!resource||!guard.allowed){setActionFeedback(guard.allowed?"Kaynak bulunamadı":guard.reason);return;}let currentHp=activeCharacter.currentHp;let conditions=activeCharacter.conditions;if(resourceId==="second-wind"){const result=rollDice({count:1,sides:10,modifier:activeCharacter.level});currentHp=Math.min(activeCharacter.maxHp,currentHp+result.total);setRollHistory(current=>[{id:result.id,label:"Second Wind",notation:result.notation,total:result.total},...current].slice(0,6))}if(resourceId==="lay-on-hands")currentHp=Math.min(activeCharacter.maxHp,currentHp+amount);if(resourceId==="rage"&&!conditions.includes("Rage"))conditions=[...conditions,"Rage"];commit({currentHp,conditions,resources:activeCharacter.resources.map(item=>item.id===resourceId?item.unlimited?item:{...item,used:Math.min(item.max,item.used+amount)}:item)})}
   function castArcanum(spellId:string){if(activeCharacter.usedArcanumSpellIds?.includes(spellId))return;commit({usedArcanumSpellIds:[...(activeCharacter.usedArcanumSpellIds??[]),spellId]})}
   function divineSmite(slotLevel:number){const slot=spellSlots.find(item=>item.level===slotLevel);if(!slot||slot.used>=slot.max)return;const dice=getDivineSmiteDice(slotLevel,activeCharacter.ruleset,smiteHolyTarget);const result=rollDice({count:dice,sides:8,modifier:0});commit({spellSlots:spellSlots.map(item=>item.level===slotLevel?{...item,used:item.used+1}:item)});setRollHistory(current=>[{id:result.id,label:`Divine Smite · Level ${slotLevel}`,notation:result.notation,total:result.total},...current].slice(0,6))}
   function advanceEffectRound(){const next=advanceSpellEffects(activeSpellEffects);const timed=advanceConditionDurations(activeCharacter.conditions,activeCharacter.conditionDurations??{});const hasConcentration=next.some(effect=>effect.concentration);const conditions=(hasConcentration?timed.conditions:timed.conditions.filter(condition=>condition!=="Concentration"));commit({activeSpellEffects:next,conditions,conditionDurations:timed.durations})}
@@ -440,16 +441,21 @@ export function PlayMode({
   function castSpell(spellId: string, requestedSlotLevel?:number, consumeSlot=true, inventoryAfterCast?:Character["inventory"]) {
     const spell = rulesetData?.spells.find((item) => item.id === spellId);
 
-    if (!spell) return;
-    if(itemEffectRuntime.blocksAggressiveActions)return;
+    if (!spell) { setActionFeedback("Büyü verisi bulunamadı."); return; }
     const spellTime=spell.castingTime.toLowerCase();
-    if ((spellTime.includes("bonus")&&turnEconomy.bonusActionUsed)||(spellTime.includes("reaction")&&turnEconomy.reactionUsed)||(!spellTime.includes("bonus")&&!spellTime.includes("reaction")&&turnEconomy.actionUsed)) return;
-
+    const castingEconomy=getCastingEconomy(spell.castingTime);
     const slotLevel=spell.level===0?0:requestedSlotLevel??getCastableSlotLevels(spell,spellSlots)[0];
-    if (spell.level > 0 && consumeSlot) {
-      const slot = spellSlots.find((item) => item.level === slotLevel);
-      if (!slot || slot.used >= slot.max) return;
-    }
+    const slot=spell.level>0&&consumeSlot?spellSlots.find(item=>item.level===slotLevel):undefined;
+    const guard=evaluateGameplayGuard({
+      economy:castingEconomy,
+      actionUsed:turnEconomy.actionUsed,
+      bonusActionUsed:turnEconomy.bonusActionUsed,
+      reactionUsed:turnEconomy.reactionUsed,
+      blockedByEffect:itemEffectRuntime.blocksAggressiveActions,
+      requiresSlot:spell.level>0&&consumeSlot,
+      slotRemaining:slot?slot.max-slot.used:0,
+    });
+    if(!guard.allowed){setActionFeedback(guard.reason);return;}
 
     const nextConditions =
       spell.concentration &&

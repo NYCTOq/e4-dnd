@@ -1,0 +1,112 @@
+{
+  "generatedAt": "2026-07-28T12:11:19.047Z",
+  "budgets": {
+    "maxSingleJsBytes": 409600,
+    "maxEntryJsBytes": 204800,
+    "maxCssBytes": 225280,
+    "maxTotalPrecacheBytes": 2560000
+  },
+  "summary": {
+    "jsAssetCount": 54,
+    "cssAssetCount": 1,
+    "totalJsBytes": 1659045,
+    "totalCssBytes": 191667,
+    "totalPrecacheBytes": 2338774,
+    "largestJs": {
+      "file": "assets/app-core-4yh4n_C_.js",
+      "bytes": 285646,
+      "kib": 278.95
+    },
+    "largestCss": {
+      "file": "assets/index-CRcbpRLS.css",
+      "bytes": 191667,
+      "kib": 187.17
+    },
+    "entryAssets": [
+      {
+        "file": "assets/index-CA_v7Lx2.js",
+        "bytes": 34824,
+        "kib": 34.01
+      }
+    ]
+  },
+  "largestAssets": [
+    {
+      "file": "assets/app-core-4yh4n_C_.js",
+      "bytes": 285646,
+      "kib": 278.95
+    },
+    {
+      "file": "assets/app-shared-ZDe8kjLm.js",
+      "bytes": 221871,
+      "kib": 216.67
+    },
+    {
+      "file": "assets/index-CRcbpRLS.css",
+      "bytes": 191667,
+      "kib": 187.17
+    },
+    {
+      "file": "assets/vendor-react-B8YhAL_l.js",
+      "bytes": 178363,
+      "kib": 174.18
+    },
+    {
+      "file": "assets/app-backup-core-CjQfkEBT.js",
+      "bytes": 176180,
+      "kib": 172.05
+    },
+    {
+      "file": "assets/PlayMode-CfZS1dTu.js",
+      "bytes": 85870,
+      "kib": 83.86
+    },
+    {
+      "file": "assets/Builder-eEVV_cnc.js",
+      "bytes": 69660,
+      "kib": 68.03
+    },
+    {
+      "file": "assets/data-spells-BFucoLFa.js",
+      "bytes": 65088,
+      "kib": 63.56
+    },
+    {
+      "file": "assets/CharacterDetail-DwnRsUY5.js",
+      "bytes": 51790,
+      "kib": 50.58
+    },
+    {
+      "file": "assets/PlayerTestCenter-Bd3J0eHb.js",
+      "bytes": 51274,
+      "kib": 50.07
+    },
+    {
+      "file": "assets/Campaigns-DAi8KKAa.js",
+      "bytes": 49281,
+      "kib": 48.13
+    },
+    {
+      "file": "assets/HomebrewLab-J2-hS4Hv.js",
+      "bytes": 47831,
+      "kib": 46.71
+    },
+    {
+      "file": "assets/data-subclasses-C2VwVsBV.js",
+      "bytes": 46127,
+      "kib": 45.05
+    },
+    {
+      "file": "assets/index-CA_v7Lx2.js",
+      "bytes": 34824,
+      "kib": 34.01
+    },
+    {
+      "file": "assets/data-items-ES4mGrSJ.js",
+      "bytes": 31569,
+      "kib": 30.83
+    }
+  ],
+  "violations": [],
+  "passed": true
+}

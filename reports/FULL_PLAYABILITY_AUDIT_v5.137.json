@@ -1,0 +1,86 @@
+{
+  "version": "5.137.0",
+  "generated": "2026-07-28T11:13:28.599Z",
+  "averageScore": 100,
+  "domains": [
+    {
+      "name": "Class",
+      "runtime": true,
+      "ui": true,
+      "tests": 4,
+      "score": 100,
+      "status": "READY"
+    },
+    {
+      "name": "Subclass",
+      "runtime": true,
+      "ui": true,
+      "tests": 119,
+      "score": 100,
+      "status": "READY"
+    },
+    {
+      "name": "Spell",
+      "runtime": true,
+      "ui": true,
+      "tests": 89,
+      "score": 100,
+      "status": "READY"
+    },
+    {
+      "name": "Feat",
+      "runtime": true,
+      "ui": true,
+      "tests": 178,
+      "score": 100,
+      "status": "READY"
+    },
+    {
+      "name": "Item",
+      "runtime": true,
+      "ui": true,
+      "tests": 142,
+      "score": 100,
+      "status": "READY"
+    },
+    {
+      "name": "Session",
+      "runtime": true,
+      "ui": true,
+      "tests": 12,
+      "score": 100,
+      "status": "READY"
+    },
+    {
+      "name": "Manual bridge",
+      "runtime": true,
+      "ui": true,
+      "tests": 1,
+      "score": 100,
+      "status": "READY"
+    }
+  ],
+  "criticalChecks": [
+    {
+      "name": "Character builder",
+      "passed": true
+    },
+    {
+      "name": "Play mode",
+      "passed": true
+    },
+    {
+      "name": "Backup recovery",
+      "passed": true
+    },
+    {
+      "name": "PWA manifest",
+      "passed": true
+    },
+    {
+      "name": "Release scripts",
+      "passed": true
+    }
+  ],
+  "nextPriority": []
+}
