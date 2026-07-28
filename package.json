@@ -1,7 +1,7 @@
 {
   "name": "e4_dnd",
   "private": true,
-  "version": "5.126.0",
+  "version": "5.130.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -308,7 +308,20 @@
     "certify:builder-guidance": "npm run test:builder-guidance && npm run build && npm run test:e2e:builder-guidance",
     "test:backup-recovery": "vitest run src/features/backup/backupRecovery.test.ts",
     "test:e2e:backup-recovery": "playwright test e2e/error-offline-backup-recovery-v5.126.spec.ts",
-    "certify:backup-recovery": "npm run test:backup-recovery && npm run build && npm run test:e2e:backup-recovery"
+    "certify:backup-recovery": "npm run test:backup-recovery && npm run build && npm run test:e2e:backup-recovery",
+    "test:accessibility-essentials": "vitest run src/shared/accessibility/accessibilityEssentials.test.ts",
+    "test:e2e:accessibility-essentials": "playwright test e2e/accessibility-essentials-v5.127.spec.ts",
+    "certify:accessibility-essentials": "npm run test:accessibility-essentials && npm run build && npm run test:e2e:accessibility-essentials",
+    "test:release-hardening": "vitest run src/release/releaseHardening.test.ts",
+    "test:e2e:release-hardening": "playwright test e2e/release-hardening-smoke-v5.128.spec.ts",
+    "audit:release-artifacts": "node scripts/audit-release-artifacts-v5.128.mjs",
+    "release:gate": "node scripts/run-release-gate-v5.128.mjs",
+    "certify:release-hardening": "npm run release:gate",
+    "audit:playable-content": "node scripts/playable-content-audit-v5.129.mjs",
+    "test:playable-content-audit": "vitest run src/content-audit/playableContentAuditPolicy.test.ts",
+    "certify:playable-content-audit": "npm run audit:playable-content && npm run test:playable-content-audit && npm run build",
+    "test:class-runtime-completion": "vitest run src/core/rulesets/classRuntimeCompletion-v5.130.test.ts",
+    "certify:class-runtime-completion": "npm run test:class-runtime-completion && npm run build"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",

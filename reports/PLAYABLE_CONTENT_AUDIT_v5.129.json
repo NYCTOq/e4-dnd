@@ -1,0 +1,96 @@
+{
+  "version": "5.129.0",
+  "generatedAt": "2026-07-28T10:21:23.049Z",
+  "counts": {
+    "classes": 12,
+    "subclasses": 113,
+    "spells": 277,
+    "feats": 26,
+    "items": 145,
+    "tests": 358
+  },
+  "classes": [
+    "barbarian",
+    "bard",
+    "cleric",
+    "druid",
+    "fighter",
+    "monk",
+    "paladin",
+    "ranger",
+    "rogue",
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "runtime": {
+    "class": {
+      "handlers": 0,
+      "resourceMentions": 51,
+      "persistenceMentions": 0
+    },
+    "subclass": {
+      "handlers": 0,
+      "resourceMentions": 22,
+      "persistenceMentions": 0
+    },
+    "spell": {
+      "handlers": 1,
+      "resourceMentions": 0,
+      "persistenceMentions": 0
+    },
+    "feat": {
+      "handlers": 0,
+      "resourceMentions": 2,
+      "persistenceMentions": 0
+    },
+    "item": {
+      "handlers": 1,
+      "resourceMentions": 0,
+      "persistenceMentions": 0
+    }
+  },
+  "priorities": [
+    {
+      "rank": 1,
+      "id": "class-runtime-depth",
+      "title": "Class feature runtime depth",
+      "reason": "Twelve classes exist, but catalogue presence is not the same as every level feature being interactive in play mode.",
+      "nextPackage": "v5.130 Class Runtime Completion Mega"
+    },
+    {
+      "rank": 2,
+      "id": "subclass-runtime-depth",
+      "title": "Subclass feature runtime depth",
+      "reason": "Subclass catalogue is broad; the next risk is placeholder summaries without executable resources, actions, reactions, saves or persistence.",
+      "nextPackage": "v5.131 Subclass Runtime Completion Mega"
+    },
+    {
+      "rank": 3,
+      "id": "spell-edge-runtime",
+      "title": "Spell edge-case runtime",
+      "reason": "Spell catalogue is large; summons, persistent zones, reactions, concentration and material-cost flows need playable parity rather than catalogue-only coverage.",
+      "nextPackage": "v5.132 Spell Runtime Completion Mega"
+    },
+    {
+      "rank": 4,
+      "id": "feat-item-effects",
+      "title": "Feat and item effect wiring",
+      "reason": "Passive bonuses are useful, but action-granting feats and charged items must appear and persist in sheet/play flows.",
+      "nextPackage": "v5.133 Feat & Item Runtime Mega"
+    },
+    {
+      "rank": 5,
+      "id": "campaign-play-loop",
+      "title": "Campaign-to-play loop",
+      "reason": "Characters, encounters, rest, loot and journals exist; the remaining value is a continuous session loop with fewer manual jumps.",
+      "nextPackage": "v5.134 Session Play Loop Mega"
+    }
+  ],
+  "policy": {
+    "implementationFirst": true,
+    "maxCriticalE2EPerPackage": 6,
+    "separateDiscoveryPackages": false,
+    "rule": "Every package after v5.129 must add a playable user-facing capability and include only targeted tests."
+  }
+}

@@ -66,3 +66,7 @@
     grid-template-columns: auto 1fr 1fr;
   }
 }
+
+
+/* v5.130 class runtime completion */
+.class-feature-panel__rest-controls{display:flex;flex-wrap:wrap;gap:.5rem;margin:.75rem 0}.class-feature-panel__rest-controls button{min-height:44px;padding:.55rem .8rem}.class-feature-panel__feedback{min-height:1.25rem;margin:.25rem 0 .75rem;font-size:.875rem;opacity:.86}

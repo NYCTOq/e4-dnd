@@ -12,6 +12,20 @@ export default defineConfig({
     __APP_VERSION__: JSON.stringify(packageJson.version),
     __BUILD_DATE__: JSON.stringify(new Date().toISOString()),
   },
+  build: {
+    chunkSizeWarningLimit: 450,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules/react") || id.includes("node_modules/react-dom") || id.includes("node_modules/react-router")) return "vendor-react";
+          if (id.includes("spellExpansion")) return "data-spells";
+          if (id.includes("subclassExpansion")) return "data-subclasses";
+          if (id.includes("itemExpansion")) return "data-items";
+          if (id.includes("PageShell") || id.includes("AppFrame")) return "shell";
+        },
+      },
+    },
+  },
   plugins: [
     react(),
     VitePWA({

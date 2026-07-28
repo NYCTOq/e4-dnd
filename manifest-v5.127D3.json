@@ -1,0 +1,20 @@
+{
+  "version": "5.127D3",
+  "files": [
+    {
+      "path": "APPLY_ACCESSIBILITY_TEST_ISOLATION_HOTFIX_v5.127D3.ps1",
+      "sha256": "20f039b1d0674da490ed372cc9a9402aaca21018640ddd6341521a4a608c875d",
+      "bytes": 710
+    },
+    {
+      "path": "README_ACCESSIBILITY_TEST_ISOLATION_HOTFIX_v5.127D3.md",
+      "sha256": "2b293e7410fa922e35451ed625590a5b0b2c5fd31faf184185fe808fb47df78e",
+      "bytes": 781
+    },
+    {
+      "path": "e2e/accessibility-essentials-v5.127.spec.ts",
+      "sha256": "b6ada858e76a339229ae2bbbbd376878973a06c06ab1427e2b827b2026438109",
+      "bytes": 1881
+    }
+  ]
+}

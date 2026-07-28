@@ -17,8 +17,8 @@ export function getFocusableElements(container: HTMLElement | null) {
   );
 }
 
-export function useDialogFocus(isOpen: boolean, onClose: () => void) {
-  const dialogRef = useRef<HTMLElement>(null);
+export function useDialogFocus<T extends HTMLElement = HTMLElement>(isOpen: boolean, onClose: () => void) {
+  const dialogRef = useRef<T>(null);
   const openerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {

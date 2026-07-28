@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const file = 'package.json';
+const pkg = JSON.parse(fs.readFileSync(file, 'utf8'));
+pkg.version = '5.129.0';
+pkg.scripts ??= {};
+pkg.scripts['audit:playable-content'] = 'node scripts/playable-content-audit-v5.129.mjs';
+pkg.scripts['test:playable-content-audit'] = 'vitest run src/content-audit/playableContentAuditPolicy.test.ts';
+pkg.scripts['certify:playable-content-audit'] = 'npm run audit:playable-content && npm run test:playable-content-audit && npm run build';
+fs.writeFileSync(file, JSON.stringify(pkg, null, 2) + '\n');
+console.log('[v5.129] package.json updated');

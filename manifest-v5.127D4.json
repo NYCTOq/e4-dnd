@@ -1,0 +1,25 @@
+{
+  "version": "5.127D4",
+  "files": [
+    {
+      "path": "APPLY_ACCESSIBILITY_MOBILE_CONTROL_COLLISION_HOTFIX_v5.127D4.ps1",
+      "sha256": "16b9837ab3d74367ffa0f84b16cbf16479903e83408fdcb02c663ca666479b8b",
+      "bytes": 484
+    },
+    {
+      "path": "README_ACCESSIBILITY_MOBILE_CONTROL_COLLISION_HOTFIX_v5.127D4.md",
+      "sha256": "62fe5223db4f3b723a242bc4732e5b60455f250d5c1b8a64bbb7e731ad9abeab",
+      "bytes": 677
+    },
+    {
+      "path": "e2e/accessibility-essentials-v5.127.spec.ts",
+      "sha256": "62ed590e9fcb1040c3cf89d8d13d390938e85d5d5bf880d3c9008ae906843035",
+      "bytes": 2529
+    },
+    {
+      "path": "src/styles/18-pwa-install-guide.css",
+      "sha256": "96cc464dc58acceb23a34313b94ac232a5efe28e559e213d7dbf5ccc08ea532c",
+      "bytes": 4923
+    }
+  ]
+}

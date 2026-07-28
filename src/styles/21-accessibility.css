@@ -99,3 +99,97 @@ button:disabled,
     animation-iteration-count: 1 !important;
   }
 }
+
+/* v5.127 Accessibility Essentials */
+.accessibility-help-trigger {
+  position: fixed;
+  left: 36px;
+  bottom: 34px;
+  z-index: 18;
+  width: 234px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .accessibility-help-trigger {
+    left: auto;
+    right: 14px;
+    bottom: 92px;
+    width: auto;
+    min-width: 48px;
+    padding-inline: 14px;
+    box-shadow: var(--shadow);
+  }
+}
+
+.accessibility-help-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(3, 6, 14, .76);
+  backdrop-filter: blur(10px);
+}
+
+.accessibility-help-dialog {
+  width: min(560px, 100%);
+  max-height: min(720px, calc(100vh - 40px));
+  overflow: auto;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #0b1020;
+  box-shadow: var(--shadow);
+}
+
+.accessibility-help-dialog > header,
+.accessibility-help-actions,
+.accessibility-help-dialog dl > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.accessibility-help-dialog h2,
+.accessibility-help-dialog p,
+.accessibility-help-dialog dl {
+  margin-top: 0;
+}
+
+.accessibility-help-dialog dl {
+  display: grid;
+  gap: 8px;
+}
+
+.accessibility-help-dialog dl > div {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.accessibility-help-dialog dd { margin: 0; text-align: right; }
+.accessibility-help-dialog kbd {
+  display: inline-block;
+  min-width: 92px;
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-bottom-width: 3px;
+  border-radius: 9px;
+  background: rgba(255,255,255,.07);
+  color: var(--text);
+  font: inherit;
+  font-weight: 800;
+}
+
+.accessibility-help-actions { margin-top: 18px; }
+.accessibility-help-actions a { font-weight: 800; }
+
+@media (max-width: 700px) {
+  .accessibility-help-dialog { padding: 18px; border-radius: 20px; }
+  .accessibility-help-dialog dl > div { align-items: flex-start; }
+}

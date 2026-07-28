@@ -1,0 +1,25 @@
+{
+  "version": "5.127D2",
+  "files": [
+    {
+      "path": "APPLY_ACCESSIBILITY_MOBILE_GLOBAL_TRIGGER_HOTFIX_v5.127D2.ps1",
+      "sha256": "f8bf97de8c71b05670a25242b7ca360ae77d365d575b91a936c456491eb900eb"
+    },
+    {
+      "path": "README_ACCESSIBILITY_MOBILE_GLOBAL_TRIGGER_HOTFIX_v5.127D2.md",
+      "sha256": "b401b7fd122d076163a7702a0b5927e27302d7ffd8a797b31139aedc50be38f9"
+    },
+    {
+      "path": "e2e/accessibility-essentials-v5.127.spec.ts",
+      "sha256": "ba7916da1df81d69d6c81ad08881d6948a5f4df88df64450f5aca0803ef38c20"
+    },
+    {
+      "path": "src/shared/layout/AppFrame.tsx",
+      "sha256": "4e828c23d123468e8eadc9880f6f295e27eb4c0ffd63c840548ae6a0839da108"
+    },
+    {
+      "path": "src/styles/21-accessibility.css",
+      "sha256": "3096cc67381752456c81b1d5c064c0733f583c077634463d2d70c3ace37b9fd5"
+    }
+  ]
+}

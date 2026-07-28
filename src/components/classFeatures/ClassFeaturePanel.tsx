@@ -1,5 +1,6 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import {
+  applyClassFeatureRest,
   buildClassRuntimeSnapshot,
   type ClassCompatibleCharacter,
 } from "../../core/rulesets/classSubclassCharacterAdapter";
@@ -27,6 +28,8 @@ export function ClassFeaturePanel<T extends ClassCompatibleCharacter>({
   onCharacterChange,
   compact = false,
 }: ClassFeaturePanelProps<T>) {
+  const [restFeedback, setRestFeedback] = useState("");
+
   const snapshot = useMemo(
     () => buildClassRuntimeSnapshot(character),
     [character],
@@ -47,6 +50,27 @@ export function ClassFeaturePanel<T extends ClassCompatibleCharacter>({
     onCharacterChange(
       mutateCharacterFeature(character, featureId, mode) as T,
     );
+    setRestFeedback(mode === "spend" ? "Sınıf özelliği kullanıldı." : "Sınıf özelliği yenilendi.");
+  };
+
+  const recoverByRest = (rest: "short" | "long") => {
+    const before = snapshot.unlockedFeatures.reduce(
+      (sum, feature) => sum + (feature.currentUses ?? 0),
+      0,
+    );
+    const next = applyClassFeatureRest(character, rest) as T;
+    const after = buildClassRuntimeSnapshot(next).unlockedFeatures.reduce(
+      (sum, feature) => sum + (feature.currentUses ?? 0),
+      0,
+    );
+    onCharacterChange(next);
+    const restored = Math.max(0, after - before);
+    const restLabel = rest === "short" ? "Kısa" : "Uzun";
+    setRestFeedback(
+      restored > 0
+        ? restLabel + " dinlenme: " + restored + " kullanım yenilendi."
+        : restLabel + " dinlenmede yenilenecek kullanım yok.",
+    );
   };
 
   return (
@@ -60,6 +84,32 @@ export function ClassFeaturePanel<T extends ClassCompatibleCharacter>({
           Seviye {snapshot.characterLevel} · PB +{snapshot.proficiencyBonus}
         </p>
       </header>
+
+      <div className="class-feature-panel__rest-controls" aria-label="Sınıf özelliği dinlenme yenilemeleri">
+        <button
+          type="button"
+          onClick={() => recoverByRest("short")}
+          data-testid="class-feature-short-rest"
+        >
+          Kısa Dinlenme
+        </button>
+        <button
+          type="button"
+          onClick={() => recoverByRest("long")}
+          data-testid="class-feature-long-rest"
+        >
+          Uzun Dinlenme
+        </button>
+      </div>
+
+      <p
+        className="class-feature-panel__feedback"
+        role="status"
+        aria-live="polite"
+        data-testid="class-feature-feedback"
+      >
+        {restFeedback}
+      </p>
 
       {snapshot.unlockedFeatures.length === 0 ? (
         <p data-testid="class-feature-empty">

@@ -212,8 +212,10 @@
 
 @media (max-width: 900px) {
   .first-run-help-button {
-    right: 80px;
+    left: 14px;
+    right: auto;
     bottom: 92px;
+    max-width: calc(50vw - 24px);
   }
 
   .network-status-pill {

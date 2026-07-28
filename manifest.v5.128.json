@@ -1,0 +1,55 @@
+{
+  "version": "5.128.0",
+  "files": [
+    {
+      "path": "APPLY_RELEASE_HARDENING_MEGA_v5.128.ps1",
+      "sha256": "af1122a2753979499b7429df48dad4450442c5bb50b1b2b6378b0b6cbe556580",
+      "bytes": 615
+    },
+    {
+      "path": "README_RELEASE_HARDENING_MEGA_v5.128.md",
+      "sha256": "d2bc392841894f46e1f3a344607ec1a621a319ba5ffb903ece870246e010fa76",
+      "bytes": 743
+    },
+    {
+      "path": "e2e/release-hardening-smoke-v5.128.spec.ts",
+      "sha256": "721b33d13ace19060c71f7182051d2bfc9abab1ce500c7c68caac1247092d4f6",
+      "bytes": 878
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "1cfb582a8b26c7c045c3f546dfd62552988521a862984595affb9fa77787fc67",
+      "bytes": 208564
+    },
+    {
+      "path": "package.json",
+      "sha256": "a9fde3f98ddf21396cef8811093b0408ae0c3f18c1df61269b50950062dea998",
+      "bytes": 43398
+    },
+    {
+      "path": "scripts/audit-release-artifacts-v5.128.mjs",
+      "sha256": "29d459aff6027c096eb2803cc675befb354326b629a0c46f8b8f022a7530c612",
+      "bytes": 881
+    },
+    {
+      "path": "scripts/run-release-gate-v5.128.mjs",
+      "sha256": "75b6cea2ebe495124ac080f9aaf02d9c9192a96640e7f1f4615a8cdab651a44e",
+      "bytes": 578
+    },
+    {
+      "path": "src/release/releaseHardening.test.ts",
+      "sha256": "dec3ddd2a1b551c2c09e072e4bb458d2135ca2a9608bcd82422ff0d430e9c40f",
+      "bytes": 624
+    },
+    {
+      "path": "src/release/releaseHardening.ts",
+      "sha256": "3cf13134904ff91a0ce2ff415714d83fce6d49905b25bc727918b08b274608df",
+      "bytes": 224
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "85ec451e4af430330c463102c689027694155b20b3b0d5a970a02f8391b35d98",
+      "bytes": 2162
+    }
+  ]
+}

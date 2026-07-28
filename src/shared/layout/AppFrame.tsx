@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { getMobileQuickItems, getNavGroupForPath, navGroups, navItems, type NavGroup } from "../navigation/navItems";
 import { StorageRecoveryCenter } from "../errors/StorageRecoveryCenter";
@@ -13,6 +13,8 @@ import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import type { Campaign } from "../../features/campaigns/campaignTypes";
 import { useI18n } from "../i18n/useI18n";
 import { InterfaceTranslationBridge } from "../i18n/InterfaceTranslationBridge";
+import { AccessibilityHelpDialog } from "../accessibility/AccessibilityHelpDialog";
+import { useDialogFocus } from "../accessibility/dialogFocus";
 
 const START_ROUTE_SESSION_KEY = "e4_dnd_start_route_applied_v1";
 
@@ -89,7 +91,8 @@ export function AppFrame({ children, characters, campaigns, rulesetData }: AppFr
   const [mobileGroups, setMobileGroups] = useState<Set<NavGroup>>(() => new Set([activeGroup]));
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
-  const mobileDrawerRef = useRef<HTMLDivElement>(null);
+  const closeMobileMenu = useCallback(() => setMobileMenuOpen(false), []);
+  const mobileDrawerRef = useDialogFocus<HTMLDivElement>(mobileMenuOpen, closeMobileMenu);
 
   const toggleGroup = (setter: React.Dispatch<React.SetStateAction<Set<NavGroup>>>, group: NavGroup) => {
     setter((current) => {
@@ -112,24 +115,7 @@ export function AppFrame({ children, characters, campaigns, rulesetData }: AppFr
     }
   }, [activeGroup, location.pathname]);
 
-  useEffect(() => {
-    if (!mobileMenuOpen) return;
-    const previousOverflow = document.body.style.overflow;
-    const opener = mobileMenuButtonRef.current;
-    document.body.style.overflow = "hidden";
-    const firstFocusable = mobileDrawerRef.current?.querySelector<HTMLElement>("button, a[href]");
-    firstFocusable?.focus();
 
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setMobileMenuOpen(false);
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = previousOverflow;
-      opener?.focus();
-    };
-  }, [mobileMenuOpen]);
 
   useEffect(() => {
     try {
@@ -162,6 +148,7 @@ export function AppFrame({ children, characters, campaigns, rulesetData }: AppFr
 
       <main id="main-content" className="content" tabIndex={-1}>{children}</main>
 
+      <AccessibilityHelpDialog />
       <CommandPalette characters={characters} campaigns={campaigns} rulesetData={rulesetData} />
       <StorageRecoveryCenter />
       <PwaUpdateManager />
@@ -189,7 +176,7 @@ export function AppFrame({ children, characters, campaigns, rulesetData }: AppFr
 
       {mobileMenuOpen && (
         <div className="mobile-nav-backdrop" role="presentation" onMouseDown={(event) => {
-          if (event.target === event.currentTarget) setMobileMenuOpen(false);
+          if (event.target === event.currentTarget) closeMobileMenu();
         }}>
           <div
             ref={mobileDrawerRef}
@@ -201,13 +188,13 @@ export function AppFrame({ children, characters, campaigns, rulesetData }: AppFr
           >
             <header className="mobile-nav-head">
               <div><strong>{t("nav.all", "Tüm menü")}</strong><span>{t("nav.choose", "Bir bölüm seç")}</span></div>
-              <button type="button" className="mobile-nav-close" onClick={() => setMobileMenuOpen(false)} aria-label={t("nav.close", "Menüyü kapat")}>×</button>
+              <button type="button" className="mobile-nav-close" onClick={closeMobileMenu} aria-label={t("nav.close", "Menüyü kapat")}>×</button>
             </header>
             <NavigationGroups
               compact
               openGroups={mobileGroups}
               onToggle={(group) => toggleGroup(setMobileGroups, group)}
-              onNavigate={() => setMobileMenuOpen(false)}
+              onNavigate={closeMobileMenu}
             />
           </div>
         </div>
