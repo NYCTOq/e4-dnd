@@ -1,0 +1,15 @@
+{
+  "version": "5.123.3",
+  "release": "v5.123D",
+  "surfaces": [
+    "Global Search",
+    "Command Palette"
+  ],
+  "goldenIntents": 4,
+  "browserProjects": 2,
+  "browserScenarios": 8,
+  "queryReloadCoverage": true,
+  "physicalPointerCoverage": true,
+  "keyboardCoverage": true,
+  "releaseBlockers": []
+}

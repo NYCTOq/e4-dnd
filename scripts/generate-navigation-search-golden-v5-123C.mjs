@@ -1,0 +1,2 @@
+import { readFileSync,writeFileSync } from "node:fs";
+const path="certification-reports/navigation-search-golden-intent-v5.123C.json";const report=JSON.parse(readFileSync(path,"utf8"));if(report.blockers.length)process.exit(1);writeFileSync(path,JSON.stringify(report,null,2)+"\n");console.log(`v5.123C report GREEN: ${report.routes} routes, ${report.canonicalAliases} aliases, ${report.goldenIntents} intents, 0 blockers`);

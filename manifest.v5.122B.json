@@ -1,0 +1,14 @@
+{
+  "APPLY_CHARACTER_HUB_ACTIONABILITY_DIFFERENTIAL_MATRIX_MEGA_v5.122B.ps1": "4ce7137e30abc8fb0a5cd302c3052e1d1fcf117d424c10ee95df1f160fc75041",
+  "README_CHARACTER_HUB_ACTIONABILITY_DIFFERENTIAL_MATRIX_MEGA_v5.122B.md": "25ad15506bcb2dc53a88bd044dfb75ad50cdf1deebdc97ef1dafce96d758ae91",
+  "certification-reports/character-hub-actionability-v5.122B.json": "94b9ff0c187e99347a6335d8c670edd50393b2906fb57248e501d4a04632fc16",
+  "certification-reports/character-hub-actionability-v5.122B.md": "8e1cb64839c62ff490ea74f6319f4eb84423b6d3477a9ee9fc37cb4b0177e539",
+  "package-lock.json": "4bca406d1e8156a9f15c90592ae58ff73ba34b8b7eedf90192a081caf8d5df3f",
+  "package.json": "bc0c58086a247071f99471b5638f64f52fbedc7e7e079542479c3b649730b1a4",
+  "scripts/generate-character-hub-actionability-v5-122B.mjs": "a41efddc03dae91a12b516c18721d5cf40a5d548e7171c415cc742e6a41471d4",
+  "src/certification/differential/characterHubActionabilityDifferential.test.ts": "db8e468cdfc42746fef71651afb8da165426c2c898bbdcb1a7809bceffe4d799",
+  "src/certification/differential/characterHubActionabilityDifferential.ts": "e17b767bb85c9fa4b5b277cc5032c76e050d591ebd6ee46ef0860617c8ec782f",
+  "src/certification/integration/characterHubActionabilityContract.test.ts": "d97150612b3af99335371539fc5fb476838346daef5bf15b214f9992675b2a1f",
+  "src/certification/oracle/characterHubActionabilityOracle.ts": "477904caf9e8842b1204f9233e2fc0cc70b81cf2fb1ef4c8d886de2076c2052b",
+  "src/shared/release/releaseNotes.ts": "d0fb7f7fbf943dd031d1dae1148c6d4b8adc0e9ca684a10b8f5c264985827af9"
+}

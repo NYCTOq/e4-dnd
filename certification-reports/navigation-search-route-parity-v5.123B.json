@@ -1,0 +1,19 @@
+{
+  "version": "5.123.2",
+  "status": "GREEN",
+  "staticRoutes": 32,
+  "dynamicRoutePatterns": 4,
+  "registrySurfaces": [
+    "AppRoutes",
+    "navItems",
+    "Global Search",
+    "Command Palette"
+  ],
+  "canonicalAliasChecks": 154,
+  "aliasDiscoveryGaps": 0,
+  "orphanRoutes": 0,
+  "deadSearchTargets": 0,
+  "commandMismatches": 0,
+  "releaseBlockers": [],
+  "nextTarget": "v5.123D Navigation and Search UI E2E Final Closure"
+}

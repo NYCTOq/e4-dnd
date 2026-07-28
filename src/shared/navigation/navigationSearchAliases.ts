@@ -1,0 +1,38 @@
+export const NAVIGATION_SEARCH_ALIASES: Readonly<Record<string, readonly string[]>> = {
+  "/": ["ana sayfa", "home", "panel"],
+  "/play-mode": ["oyun modu", "masa modu", "play", "oyna"],
+  "/characters": ["characters", "karakter listesi"],
+  "/builder": ["karakter oluştur", "yeni karakter", "builder"],
+  "/spellbook": ["büyüler", "spell book", "spell"],
+  "/inventory": ["envanter", "eşya", "items"],
+  "/rest": ["dinlenme", "short rest", "long rest"],
+  "/dice": ["dice", "zar at", "roller"],
+  "/campaigns": ["kampanyalar", "campaign"],
+  "/session-planner": ["oturum planlayıcı", "session"],
+  "/combat": ["savaş takip", "combat", "initiative"],
+  "/calendar": ["kampanya takvimi", "calendar"],
+  "/quests": ["görev günlüğü", "quest"],
+  "/loot": ["ganimet takip", "loot"],
+  "/npcs": ["npc yönetimi", "npc"],
+  "/locations": ["dünya atlası", "konumlar", "locations"],
+  "/factions": ["gruplar", "örgütler", "faction"],
+  "/monsters": ["canavarlar", "monster"],
+  "/search": ["global search", "arama", "search"],
+  "/collections": ["collections", "favoriler", "etiketler"],
+  "/classes": ["sınıflar", "class"],
+  "/subclasses": ["alt sınıflar", "subclass"],
+  "/origins": ["türler", "ırklar", "backgrounds", "kökenler"],
+  "/feats": ["yetenekler", "feat"],
+  "/homebrew-lab": ["ev yapımı", "homebrew"],
+  "/rulesets": ["kural setleri", "ruleset"],
+  "/library": ["kural kütüphanesi", "library"],
+  "/backup": ["backup", "geri yükleme", "restore"],
+  "/player-test": ["player test", "test merkezi"],
+  "/settings": ["settings", "tercihler"],
+  "/updates": ["updates", "release notes", "güncellemeler"],
+  "/help": ["help", "rehber", "yardım"],
+};
+
+export function getNavigationSearchAliases(route: string): readonly string[] {
+  return NAVIGATION_SEARCH_ALIASES[route] ?? [];
+}

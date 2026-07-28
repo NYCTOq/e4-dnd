@@ -2,6 +2,7 @@ import type { Character } from "../../core/character/character.types";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import type { Campaign } from "../campaigns/campaignTypes";
 import { navItems } from "../../shared/navigation/navItems";
+import { getNavigationSearchAliases } from "../../shared/navigation/navigationSearchAliases";
 
 export type GlobalSearchCategory =
   | "Sayfa"
@@ -108,7 +109,7 @@ export function buildGlobalSearchEntries({
     title: item.label,
     subtitle: `${item.group} bölümü`,
     description: `${item.label} sayfasına git.`,
-    keywords: `${item.label} ${item.shortLabel} ${item.group}`,
+    keywords: `${item.label} ${item.shortLabel} ${item.group} ${getNavigationSearchAliases(item.to).join(" ")}`,
     to: item.to,
     icon: item.icon,
   }));

@@ -1,0 +1,13 @@
+{
+  "package": "v5.122C",
+  "version": "5.122.2",
+  "status": "GREEN",
+  "profileCount": 4,
+  "checkpointCount": 6,
+  "surfaceCount": 3,
+  "projectionCount": 72,
+  "mismatchCount": 0,
+  "selectedDomain": "character-hub-actionability",
+  "nextPackage": "v5.122D",
+  "generatedAt": "2026-07-28T08:22:53.128Z"
+}

@@ -12,6 +12,7 @@ import {
 import { PageShell } from "../../shared/layout/PageShell";
 import { usePersistentState } from "../../shared/state/usePersistentState";
 import { downloadCharacterTransfer, parseCharacterTransfer, resolveImportedCharacter } from "./characterTransfer";
+import { CharacterHubActionLink } from "./CharacterHubActionLink";
 
 type CharacterSort = "recent" | "name" | "level-desc" | "level-asc";
 
@@ -282,6 +283,7 @@ export function Characters({
               </div>
 
               <div className="character-actions">
+                <CharacterHubActionLink surface="characters" character={character} />
                 <button onClick={() => navigate(`/characters/${character.id}`)}>
                   Detay
                 </button>

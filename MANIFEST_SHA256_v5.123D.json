@@ -1,0 +1,60 @@
+{
+  "release": "v5.123D",
+  "files": [
+    {
+      "path": "APPLY_NAVIGATION_SEARCH_UI_E2E_FINAL_CLOSURE_MEGA_v5.123D.ps1",
+      "sha256": "be5bcfe53a6e53171f4d92d5de8e46767ed3489890934ba06b313dfc8b862b07",
+      "bytes": 930
+    },
+    {
+      "path": "README_NAVIGATION_SEARCH_UI_E2E_FINAL_CLOSURE_MEGA_v5.123D.md",
+      "sha256": "ba3f3621811a466b12d7c2395f6c4f2999aad4c41eec5e47c3318d3598f343b5",
+      "bytes": 572
+    },
+    {
+      "path": "certification-reports/navigation-search-ui-final-closure-v5.123D.json",
+      "sha256": "3d96132eab2b86aad1773951626a8314506c3ed71eafe64b737f3cc116d37ba8",
+      "bytes": 293
+    },
+    {
+      "path": "certification-reports/navigation-search-ui-final-closure-v5.123D.md",
+      "sha256": "6177c6fdbbd2d0fc430633ce998b7e3c26c47b4904e31f55d96cc612ac7884ac",
+      "bytes": 301
+    },
+    {
+      "path": "e2e/navigation-search-ui-v5.123D.spec.ts",
+      "sha256": "e65c1fc384a9e905a3a60bc3f601fa29fee99df598c0e53aca1546b550fbaac0",
+      "bytes": 2116
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "c5780402af42719d6358aedfa3849bafbe31acfd2e2abfade5965f1da8afa5d4",
+      "bytes": 208564
+    },
+    {
+      "path": "package.json",
+      "sha256": "8fc441d98620fdac696f15e8b3c6dfa1339100a1ee35d96f00fb9d871d7816f5",
+      "bytes": 41776
+    },
+    {
+      "path": "scripts/audit-navigation-search-ui-v5-123D.mjs",
+      "sha256": "c07cd1da7a91475dc4c8954a13a0e378e3caada20d962b6a6a27966d99767c99",
+      "bytes": 1535
+    },
+    {
+      "path": "src/certification/integration/navigationSearchUiFinalClosureContract.test.ts",
+      "sha256": "e6654b64927f66a56eeae03268374ba05d5fb2eff4cc72429b91790fc7539f90",
+      "bytes": 898
+    },
+    {
+      "path": "src/shared/commands/CommandPalette.tsx",
+      "sha256": "1a08e167d0b2c8bb041e583346504a4f8274d908af951114bb5be5933ee91d40",
+      "bytes": 10798
+    },
+    {
+      "path": "src/shared/release/releaseNotes.ts",
+      "sha256": "a00464f6916c2a7fdcd4308e43a935853ef1c03044a5ab38ad816cda87c2a5d7",
+      "bytes": 132107
+    }
+  ]
+}

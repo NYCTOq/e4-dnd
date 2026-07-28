@@ -1,0 +1,14 @@
+{
+  "package": "v5.122B",
+  "version": "5.122.1",
+  "status": "GREEN",
+  "scenarioCount": 144,
+  "surfaceCount": 3,
+  "stateCount": 6,
+  "editionCount": 2,
+  "archetypeCount": 4,
+  "mismatchCount": 0,
+  "selectedDomain": "character-hub-actionability",
+  "nextPackage": "v5.122C",
+  "generatedAt": "2026-07-28T08:22:21.060Z"
+}

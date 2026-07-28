@@ -1,0 +1,66 @@
+{
+  "package": "v5.122A",
+  "version": "5.122.0",
+  "status": "READY_FOR_EXPERIENCE_MATRIX",
+  "selectedDomain": "character-hub-actionability",
+  "nextPackage": "v5.122B",
+  "domainCount": 8,
+  "priorities": {
+    "P0": 1,
+    "P1": 5,
+    "P2": 2
+  },
+  "evidencePathsChecked": 22,
+  "missingEvidence": [],
+  "domains": [
+    {
+      "priority": "P0",
+      "status": "selected",
+      "id": "character-hub-actionability",
+      "evidenceCount": 5
+    },
+    {
+      "priority": "P1",
+      "status": "queued",
+      "id": "navigation-search-discoverability",
+      "evidenceCount": 4
+    },
+    {
+      "priority": "P1",
+      "status": "queued",
+      "id": "play-feedback-recovery",
+      "evidenceCount": 4
+    },
+    {
+      "priority": "P1",
+      "status": "queued",
+      "id": "builder-guidance-errors",
+      "evidenceCount": 4
+    },
+    {
+      "priority": "P1",
+      "status": "queued",
+      "id": "empty-error-offline-states",
+      "evidenceCount": 4
+    },
+    {
+      "priority": "P1",
+      "status": "queued",
+      "id": "accessibility-language-consistency",
+      "evidenceCount": 4
+    },
+    {
+      "priority": "P2",
+      "status": "monitor",
+      "id": "preferences-continuity",
+      "evidenceCount": 3
+    },
+    {
+      "priority": "P2",
+      "status": "monitor",
+      "id": "performance-perceived-speed",
+      "evidenceCount": 4
+    }
+  ],
+  "generatedAt": "2026-07-28T07:24:40.913Z"
+}

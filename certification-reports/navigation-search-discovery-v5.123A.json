@@ -1,0 +1,60 @@
+{
+  "package": "v5.123A",
+  "version": "5.123.0",
+  "status": "READY_FOR_ROUTE_SEARCH_MATRIX",
+  "selectedDomain": "route-search-parity",
+  "nextPackage": "v5.123B",
+  "domainCount": 7,
+  "priorities": {
+    "P0": 1,
+    "P1": 4,
+    "P2": 2
+  },
+  "evidencePathsChecked": 14,
+  "missingEvidence": [],
+  "domains": [
+    {
+      "priority": "P0",
+      "status": "selected",
+      "id": "route-search-parity",
+      "evidenceCount": 4
+    },
+    {
+      "priority": "P1",
+      "status": "queued",
+      "id": "natural-language-aliases",
+      "evidenceCount": 3
+    },
+    {
+      "priority": "P1",
+      "status": "queued",
+      "id": "empty-result-recovery",
+      "evidenceCount": 3
+    },
+    {
+      "priority": "P1",
+      "status": "queued",
+      "id": "result-ranking-intent",
+      "evidenceCount": 3
+    },
+    {
+      "priority": "P1",
+      "status": "queued",
+      "id": "keyboard-mobile-discovery",
+      "evidenceCount": 4
+    },
+    {
+      "priority": "P2",
+      "status": "monitor",
+      "id": "deep-link-query-continuity",
+      "evidenceCount": 3
+    },
+    {
+      "priority": "P2",
+      "status": "monitor",
+      "id": "recent-favorite-navigation",
+      "evidenceCount": 3
+    }
+  ],
+  "generatedAt": "2026-07-28T08:55:18.743Z"
+}

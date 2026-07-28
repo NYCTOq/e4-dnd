@@ -1,0 +1,18 @@
+{
+  "README_CHARACTER_HUB_UI_E2E_FINAL_CLOSURE_MEGA_v5.122D.md": "473a609e5f7872cdc5aefe2fa087c6fe43be1e174227daec056a05f280bb4aa0",
+  "package-lock.json": "c2663221dc624730365e143eb91b0871c952ac82d28dc1686c90ec68876675b3",
+  "APPLY_CHARACTER_HUB_UI_E2E_FINAL_CLOSURE_MEGA_v5.122D.ps1": "37512d1198525f3615dd95c5ccec88594096e2a79bc2e0ea46aefcfe3e5a8552",
+  "package.json": "d9062c5d20df85d7726618ce8e4a0a68c0cd60a3a3d0c97ccf122806fa1fc734",
+  "e2e/character-hub-actionability-v5.122D.spec.ts": "d8466abe5e4972991ee9c66d2f2ac234f32de6b0f8d7e32906d64cc6f42c37df",
+  "scripts/audit-character-hub-ui-v5-122D.mjs": "0229808b3a75acf76649ea307138d7675ce07506bb58c6b9ccc6f13a1cdd9388",
+  "certification-reports/character-hub-ui-final-closure-v5.122D.json": "b35d102739fa70dcf0d3c56a224b02b4224f38897bf141a568574cf235a8e255",
+  "certification-reports/character-hub-ui-final-closure-v5.122D.md": "4ddec3aded7051f8b42232a031b0b8bd8b8c66d2f2c2ea682c235f3387154b97",
+  "src/shared/release/releaseNotes.ts": "1e1379aa50a7a55efe365a0da16dfa7bd115d6d7ff573f19153e9fb97f56327f",
+  "src/features/dashboard/Dashboard.tsx": "00b8af50b600b5af83507975a4098cef559cdc64c25d98bfea9dcae85875c875",
+  "src/features/characters/CharacterHubActionLink.tsx": "f690bfa7ea0ec8e4178912b7b6beb7de9c1abc55ac1d1175d75a6c464f87bdcd",
+  "src/features/characters/Characters.tsx": "a2f89ac62a32dbd33df1087a61c245a2bb02aa96a89885faa46aa065f9fac5d4",
+  "src/features/characters/CharacterDetail.tsx": "2b26cb731edb5f084ec64839cc5f8e2d6362fa59325e8324c85d31b352d00e25",
+  "src/core/character/characterHubActionability.ts": "eabae1cb8334fa51dc724a23aece6cac51880d4833e9ec1d43c5a04a55efc696",
+  "src/certification/oracle/characterHubActionabilityOracle.ts": "af91de3e4794d80edc368346d33f73f0ee990bbbf9d9c601d06bdf8851f0d313",
+  "src/certification/integration/characterHubUiFinalClosureContract.test.ts": "850bb3008ebebfafbc8d87b9dd15b0f41a875bb89f575a3f76e392ed7303fbbc"
+}

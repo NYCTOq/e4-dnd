@@ -1,0 +1,24 @@
+{
+  "package": "v5.122D",
+  "version": "5.122.3",
+  "status": "GREEN",
+  "surfaces": [
+    "dashboard",
+    "characters",
+    "detail"
+  ],
+  "states": [
+    "empty",
+    "ready",
+    "wounded",
+    "critical"
+  ],
+  "browserProjects": [
+    "desktop-chromium",
+    "mobile-chromium"
+  ],
+  "physicalScenarioCount": 8,
+  "runtimeBridge": "src/core/character/characterHubActionability.ts",
+  "releaseBlockers": [],
+  "nextPackage": "v5.123A"
+}

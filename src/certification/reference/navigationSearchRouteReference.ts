@@ -1,0 +1,38 @@
+export type RouteReference = { to:string; label:string; shortLabel:string; group:string; aliases:readonly string[] };
+
+export const STATIC_ROUTE_REFERENCE: readonly RouteReference[] = [
+  ["/","Dashboard","Ana","Oyuncu",["ana sayfa","home","panel"]],
+  ["/play-mode","Play Mode","Oyna","Oyuncu",["oyun modu","masa modu","play","oyna"]],
+  ["/characters","Karakterler","Karakter","Oyuncu",["characters","karakter listesi"]],
+  ["/builder","Character Builder","Builder","Oyuncu",["karakter oluştur","yeni karakter","builder"]],
+  ["/spellbook","Spellbook","Spells","Oyuncu",["büyüler","spell book","spell"]],
+  ["/inventory","Inventory","Eşya","Oyuncu",["envanter","eşya","items"]],
+  ["/rest","Rest Center","Dinlen","Oyuncu",["dinlenme","short rest","long rest"]],
+  ["/dice","Zar","Zar","Oyuncu",["dice","zar at","roller"]],
+  ["/campaigns","Campaigns","Campaign","Kampanya",["kampanyalar","campaign"]],
+  ["/session-planner","Session Planner","Oturum","Kampanya",["oturum planlayıcı","session"]],
+  ["/combat","Combat Tracker","Savaş","Kampanya",["savaş takip","combat","initiative"]],
+  ["/calendar","Campaign Calendar","Takvim","Kampanya",["kampanya takvimi","calendar"]],
+  ["/quests","Quest Journal","Görev","Kampanya",["görev günlüğü","quest"]],
+  ["/loot","Loot Tracker","Ganimet","Kampanya",["ganimet takip","loot"]],
+  ["/npcs","NPC Manager","NPC","Dünya",["npc yönetimi","npc"]],
+  ["/locations","World Atlas","Atlas","Dünya",["dünya atlası","konumlar","locations"]],
+  ["/factions","Factions","Örgüt","Dünya",["gruplar","örgütler","faction"]],
+  ["/monsters","Monsters","Monster","Dünya",["canavarlar","monster"]],
+  ["/search","Global Arama","Ara","Kurallar",["global search","arama","search"]],
+  ["/collections","Koleksiyonlar","Etiket","Kurallar",["collections","favoriler","etiketler"]],
+  ["/classes","Classes","Class","Kurallar",["sınıflar","class"]],
+  ["/subclasses","Subclasses","Subclass","Kurallar",["alt sınıflar","subclass"]],
+  ["/origins","Species & Backgrounds","Origins","Kurallar",["türler","ırklar","backgrounds","kökenler"]],
+  ["/feats","Feats","Feats","Kurallar",["yetenekler","feat"]],
+  ["/homebrew-lab","Homebrew Lab","Homebrew","Homebrew",["ev yapımı","homebrew"]],
+  ["/rulesets","Ruleset Center","Ruleset","Homebrew",["kural setleri","ruleset"]],
+  ["/library","Ruleset Library","Library","Homebrew",["kural kütüphanesi","library"]],
+  ["/backup","Yedek & Kurtarma","Yedek","Sistem",["backup","geri yükleme","restore"]],
+  ["/player-test","Oyuncu Test Merkezi","Test","Sistem",["player test","test merkezi"]],
+  ["/settings","Ayarlar","Ayarlar","Sistem",["settings","tercihler"]],
+  ["/updates","Sürüm Geçmişi","Sürümler","Sistem",["updates","release notes","güncellemeler"]],
+  ["/help","Yardım Merkezi","Yardım","Sistem",["help","rehber","yardım"]],
+].map(([to,label,shortLabel,group,aliases])=>({to,label,shortLabel,group,aliases})) as readonly RouteReference[];
+
+export const DYNAMIC_ROUTE_PATTERNS = ["/characters/:characterId","/characters/:characterId/edit","/characters/compare","/monsters/:monsterId"] as const;

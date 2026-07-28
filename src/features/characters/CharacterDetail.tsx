@@ -6,6 +6,7 @@ import type { AbilityKey, Character } from "../../core/character/character.types
 import { formatModifier, getAbilityModifier, getSpellAttackBonus, getSpellSaveDc } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
 import { LevelUpAssistant } from "./LevelUpAssistant";
+import { CharacterHubActionLink } from "./CharacterHubActionLink";
 import { normalizeClassLevels } from "../../core/rulesets/multiclassRules";
 import { calculateEffectiveArmorClass, calculateSuggestedArmorClass, getCharacterInventoryItems, getEquippedItems, getInventoryWeight, getItemCategoryLabel, getItemRulesSummary, getSpellGroupTitle, getSpellLevelGroups, getSpellLevelLabel, getWeaponAttackBonus, getWeaponDamageSummary, isSpellReadyToCast, normalizeHitDice, normalizeSpellSlots, resetDeathSaves, resetHitDice, resetSpellSlots, sortSpellsByLevelAndName } from "./characterShared";
 import { getClassFeatureActions } from "../../core/rulesets/classFeatureEngine";
@@ -651,6 +652,7 @@ export function CharacterDetail({
           </div>
 
           <div className="character-actions detail-actions">
+            <CharacterHubActionLink surface="detail" character={activeCharacter} />
             <button
               onClick={() => navigate(`/characters/${activeCharacter.id}/edit`)}
             >

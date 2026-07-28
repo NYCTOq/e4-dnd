@@ -1,0 +1,62 @@
+{
+  "package": "v5.122C",
+  "version": "5.122.2",
+  "fileCount": 11,
+  "files": [
+    {
+      "path": "APPLY_CHARACTER_HUB_GOLDEN_INTEGRATION_MEGA_v5.122C.ps1",
+      "sha256": "9775923f29dc9cee62896c159eb284f33e292b07c561fac1d56e2b795134924e",
+      "bytes": 498
+    },
+    {
+      "path": "README_CHARACTER_HUB_GOLDEN_INTEGRATION_MEGA_v5.122C.md",
+      "sha256": "67336f84f42b8f43725e8f4617be83e4b8c06eeace09bd7885833e8362a973cf",
+      "bytes": 707
+    },
+    {
+      "path": "certification-reports/character-hub-golden-integration-v5.122C.json",
+      "sha256": "873921beb79bf201e97e6c2062117f615493c85feca6fa0e503f51ea6ecd9f66",
+      "bytes": 264
+    },
+    {
+      "path": "certification-reports/character-hub-golden-integration-v5.122C.md",
+      "sha256": "fcf0f6d993b391edead58d5bbf1782ea9986ed38306fd4059337dfa0bcb7e8f3",
+      "bytes": 257
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "e1bf756ab32646581a4a5e5e388c7501a8cf47a2c2285169d8dfd721bb42c0c0",
+      "bytes": 208564
+    },
+    {
+      "path": "package.json",
+      "sha256": "fdfc6ef4807a3a36242aad05b9346065d098a907d40dc6587ec9cbbe64dd62fb",
+      "bytes": 38978
+    },
+    {
+      "path": "scripts/generate-character-hub-golden-v5-122C.mjs",
+      "sha256": "6a8a7a72044c89e525386995e104a1ec09cdc62814ef518d143f2130d4bfeecf",
+      "bytes": 1349
+    },
+    {
+      "path": "src/certification/golden/characterHubGoldenIntegration.test.ts",
+      "sha256": "7dc6f00d8452e2b813eb1ba36a12e15ffdc234b0a4bd8f500036846287ea103e",
+      "bytes": 1991
+    },
+    {
+      "path": "src/certification/golden/characterHubGoldenIntegration.ts",
+      "sha256": "412c11cd762ef69195aa850ee8a68c0a45a37f0c80fdd8379db0f43dece0c20e",
+      "bytes": 3561
+    },
+    {
+      "path": "src/certification/integration/characterHubGoldenIntegrationContract.test.ts",
+      "sha256": "3d9a6e3a9eeb9454d47944d68693a4d778ea538f91f91037fb07255a4b5a2ee0",
+      "bytes": 904
+    },
+    {
+      "path": "src/shared/release/releaseNotes.ts",
+      "sha256": "690dbc0523e01c8eb9a652a4bed4cf000406299d833c5d770835c524e8a9c929",
+      "bytes": 128288
+    }
+  ]
+}

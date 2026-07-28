@@ -8,6 +8,7 @@ import { useFavorites } from "../../shared/favorites/FavoritesProvider";
 import { useTagCollections } from "../../shared/collections/TagCollectionsProvider";
 import { getPlayReadiness } from "../../core/character/playReadiness";
 import { useI18n } from "../../shared/i18n/useI18n";
+import { CharacterHubActionLink } from "../characters/CharacterHubActionLink";
 
 type DashboardProps = {
   characters: Character[];
@@ -82,12 +83,7 @@ export function Dashboard({
           </p>
 
           <div className="quick-actions">
-            <NavLink
-              to={recentCharacter ? `/play-mode?character=${recentCharacter.id}` : "/builder"}
-              className="primary-action"
-            >
-              {recentCharacter ? t("dashboard.openPlay","Play Mode'u Aç") : t("dashboard.create","Karakter Oluştur")}
-            </NavLink>
+            <CharacterHubActionLink surface="dashboard" character={recentCharacter} />
             <NavLink to="/dice" className="secondary-action">
               {t("dashboard.roll","Zar At")}
             </NavLink>

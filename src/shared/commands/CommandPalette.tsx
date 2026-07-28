@@ -4,6 +4,7 @@ import type { Character } from "../../core/character/character.types";
 import type { RulesetData } from "../../core/rulesets/ruleset.types";
 import type { Campaign } from "../../features/campaigns/campaignTypes";
 import { navItems } from "../navigation/navItems";
+import { getNavigationSearchAliases } from "../navigation/navigationSearchAliases";
 
 type CommandPaletteProps = {
   characters: Character[];
@@ -49,7 +50,7 @@ export function CommandPalette({
       subtitle: `${item.group} sayfasına git`,
       group: "Sayfalar",
       icon: item.icon,
-      keywords: `${item.label} ${item.shortLabel} ${item.group}`,
+      keywords: `${item.label} ${item.shortLabel} ${item.group} ${getNavigationSearchAliases(item.to).join(" ")}`,
       to: item.to,
     }));
 

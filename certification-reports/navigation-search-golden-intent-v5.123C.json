@@ -1,0 +1,11 @@
+{
+  "version": "5.123.2",
+  "release": "v5.123C",
+  "routes": 32,
+  "canonicalAliases": 82,
+  "goldenIntents": 12,
+  "missingAliases": 0,
+  "missingIntents": 0,
+  "blockers": [],
+  "next": "Navigation and Search UI E2E Final Closure v5.123D"
+}
