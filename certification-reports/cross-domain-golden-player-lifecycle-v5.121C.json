@@ -1,0 +1,21 @@
+{
+  "version": "5.121.2",
+  "status": "GREEN",
+  "profiles": 4,
+  "lifecycleCheckpoints": 28,
+  "editions": [
+    "dnd_2014",
+    "dnd_2024"
+  ],
+  "flows": [
+    "create",
+    "edit",
+    "level-up",
+    "play",
+    "short-rest",
+    "long-rest",
+    "backup-restore"
+  ],
+  "releaseBlockers": [],
+  "nextTarget": "Cross-Domain UI E2E Final Closure v5.121D"
+}

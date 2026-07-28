@@ -1,0 +1,61 @@
+{
+  "package": "E4_DND_CROSS_DOMAIN_GOLDEN_PLAYER_LIFECYCLE_MEGA_v5.121C",
+  "version": "5.121.2",
+  "files": [
+    {
+      "path": "APPLY_CROSS_DOMAIN_GOLDEN_PLAYER_LIFECYCLE_MEGA_v5.121C.ps1",
+      "sha256": "7ee9e775bedc5a1840ca9dd7b33ed44252a27679afdeb37ce0751ee964074ddb",
+      "bytes": 537
+    },
+    {
+      "path": "README_CROSS_DOMAIN_GOLDEN_PLAYER_LIFECYCLE_MEGA_v5.121C.md",
+      "sha256": "2489ff95254b09ebca506ed2c185c0e37102de759d9526b0f72883e89ded3af1",
+      "bytes": 519
+    },
+    {
+      "path": "certification-reports/cross-domain-golden-player-lifecycle-v5.121C.json",
+      "sha256": "029b0668fdc50c5fda3d9f9a2dc02505dc0bf8869ba6f1ab19308a22e5721918",
+      "bytes": 361
+    },
+    {
+      "path": "certification-reports/cross-domain-golden-player-lifecycle-v5.121C.md",
+      "sha256": "290b1e13066ba53f8dcfa64f6cd7b3422ee10735b4142c6796f114e2760e3ca6",
+      "bytes": 515
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "17acc4432ea43f8d920d23eb9dd822641c1618ab94ec29e68e6518d901f6b28d",
+      "bytes": 208564
+    },
+    {
+      "path": "package.json",
+      "sha256": "b76fe3b10b5f098cc163a00f0f29d6430447bef72ecc9dfa78551d86d457204a",
+      "bytes": 36787
+    },
+    {
+      "path": "scripts/generate-cross-domain-golden-lifecycle-v5-121C.mjs",
+      "sha256": "6b1151189c68648d93d4d03253bd3c0aa90f8097d05730714170023ad140ea0b",
+      "bytes": 592
+    },
+    {
+      "path": "src/certification/golden/crossDomainGoldenPlayerLifecycle.test.ts",
+      "sha256": "9842db5d344e42533d702548f2225e9fb5a0c8b6bdbdb70110320eb688b12ddc",
+      "bytes": 2204
+    },
+    {
+      "path": "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "sha256": "6f89daf27586fd6b38406aaca1f8fcd97935f1471b33edc8ab28ac0060104067",
+      "bytes": 7063
+    },
+    {
+      "path": "src/certification/integration/crossDomainGoldenLifecycleContract.test.ts",
+      "sha256": "4a0ca6da1e6e9cfc532c46378e426c1e6fd214cfd9d84be62149e19bb0977af8",
+      "bytes": 860
+    },
+    {
+      "path": "src/shared/release/releaseNotes.ts",
+      "sha256": "96806d9acb71ac4d345b557fc621d73dfd6d99d166fca84338c723830dfc9ae3",
+      "bytes": 125243
+    }
+  ]
+}

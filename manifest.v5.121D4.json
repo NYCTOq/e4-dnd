@@ -1,0 +1,17 @@
+{
+  "version": "5.121D4",
+  "files": [
+    {
+      "path": "APPLY_CROSS_DOMAIN_UI_E2E_CLASS_SELECTOR_HOTFIX_v5.121D4.ps1",
+      "sha256": "ffc6069c195458767a237fe7035da8b8337d5361b3327af5d64f604a788036ff"
+    },
+    {
+      "path": "README_CROSS_DOMAIN_UI_E2E_CLASS_SELECTOR_HOTFIX_v5.121D4.md",
+      "sha256": "102d7ec529a354c35b0773b6b345f234f5702e8df09f96150326ac65a0b48592"
+    },
+    {
+      "path": "e2e/cross-domain-player-lifecycle-v5.121D.spec.ts",
+      "sha256": "cc9665e9de70a156e145c38b7f2b5815cef704cfb340a1679cc728bf14b25838"
+    }
+  ]
+}

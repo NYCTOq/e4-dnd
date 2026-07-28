@@ -1,0 +1,20 @@
+{
+  "version": "5.121C1",
+  "files": [
+    {
+      "path": "APPLY_CROSS_DOMAIN_GOLDEN_IDENTITY_ASSERTION_HOTFIX_v5.121C1.ps1",
+      "sha256": "20069dd6edf1786642b7a191bc58039608e144c437468a456b96b551a97416b1",
+      "size": 570
+    },
+    {
+      "path": "README_CROSS_DOMAIN_GOLDEN_IDENTITY_ASSERTION_HOTFIX_v5.121C1.md",
+      "sha256": "eb21aa9f34603d289be986e794ba334b168861bf1f3c91496c797dd5644b292f",
+      "size": 681
+    },
+    {
+      "path": "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "sha256": "989bb2dbec676d2bcbab07b98127a8d5dcb5c84e58a688c7f9b1ca42bf19cf15",
+      "size": 7120
+    }
+  ]
+}

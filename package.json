@@ -1,7 +1,7 @@
 {
   "name": "e4_dnd",
   "private": true,
-  "version": "5.120.3",
+  "version": "5.121.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -253,7 +253,23 @@
     "certify:catalog-integrity:ui:contract": "vitest run src/certification/integration/classSubclassCatalogUiE2eContract.test.ts",
     "certify:catalog-integrity:e2e": "playwright test e2e/class-subclass-catalog-ui-v5.120D.spec.ts",
     "certify:catalog-integrity:final:audit": "node scripts/audit-class-subclass-ui-final-closure-v5-120D.mjs",
-    "certify:catalog-integrity:final": "npm run certify:catalog-integrity:golden:test && npm run certify:catalog-integrity:ui:contract && npm run build && npm run certify:catalog-integrity:e2e && npm run certify:catalog-integrity:final:audit"
+    "certify:catalog-integrity:final": "npm run certify:catalog-integrity:golden:test && npm run certify:catalog-integrity:ui:contract && npm run build && npm run certify:catalog-integrity:e2e && npm run certify:catalog-integrity:final:audit",
+    "certify:cross-domain:discovery": "vitest run src/certification/discovery/crossDomainIntegrityDiscovery.test.ts",
+    "certify:cross-domain:contract": "vitest run src/certification/integration/crossDomainIntegrityContract.test.ts",
+    "certify:cross-domain:report": "node scripts/discover-cross-domain-integrity-v5-121A.mjs",
+    "certify:cross-domain:foundation": "npm run certify:cross-domain:discovery && npm run certify:cross-domain:contract && npm run build && npm run certify:cross-domain:report",
+    "certify:cross-domain:differential:test": "vitest run src/certification/differential/crossDomainBuilderRecordSheetDifferential.test.ts",
+    "certify:cross-domain:reference:contract": "vitest run src/certification/integration/crossDomainReferenceIntegrityContract.test.ts",
+    "certify:cross-domain:differential:report": "node scripts/generate-cross-domain-differential-v5-121B.mjs",
+    "certify:cross-domain:differential": "npm run certify:cross-domain:differential:test && npm run certify:cross-domain:reference:contract && npm run certify:cross-domain:discovery && npm run certify:cross-domain:contract && npm run build && npm run certify:cross-domain:differential:report",
+    "certify:cross-domain:golden:test": "vitest run src/certification/golden/crossDomainGoldenPlayerLifecycle.test.ts",
+    "certify:cross-domain:golden:contract": "vitest run src/certification/integration/crossDomainGoldenLifecycleContract.test.ts",
+    "certify:cross-domain:golden:report": "node scripts/generate-cross-domain-golden-lifecycle-v5-121C.mjs",
+    "certify:cross-domain:golden": "npm run certify:cross-domain:differential:test && npm run certify:cross-domain:reference:contract && npm run certify:cross-domain:golden:test && npm run certify:cross-domain:golden:contract && npm run build && npm run certify:cross-domain:golden:report",
+    "certify:cross-domain:ui:contract": "vitest run src/certification/integration/crossDomainUiFinalClosureContract.test.ts",
+    "certify:cross-domain:e2e": "playwright test e2e/cross-domain-player-lifecycle-v5.121D.spec.ts",
+    "certify:cross-domain:final:audit": "node scripts/audit-cross-domain-ui-final-closure-v5-121D.mjs",
+    "certify:cross-domain:final": "npm run certify:cross-domain:golden:test && npm run certify:cross-domain:golden:contract && npm run certify:cross-domain:ui:contract && npm run build && npm run certify:cross-domain:e2e && npm run certify:cross-domain:final:audit"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",

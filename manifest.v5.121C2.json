@@ -1,0 +1,25 @@
+{
+  "version": "5.121C2",
+  "files": [
+    {
+      "path": "APPLY_CROSS_DOMAIN_GOLDEN_OPTIONAL_FIELD_TYPE_HOTFIX_v5.121C2.ps1",
+      "sha256": "1a127908fae50461f86409ab3676305a48e70454ea371e8c48ff1beebaa373ff",
+      "bytes": 569
+    },
+    {
+      "path": "README_CROSS_DOMAIN_GOLDEN_OPTIONAL_FIELD_TYPE_HOTFIX_v5.121C2.md",
+      "sha256": "1358a6e18a7cce9408891e108f3646e4cc86f0ca909ef163c6b4f93961e5f4ca",
+      "bytes": 490
+    },
+    {
+      "path": "src/certification/golden/crossDomainGoldenPlayerLifecycle.test.ts",
+      "sha256": "b54d3408ae60d8c865ae106ca643442f2d39da16e0fce6c524119ac1ec44b696",
+      "bytes": 2296
+    },
+    {
+      "path": "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "sha256": "f64b77674ddcda031832d5aefb3cc52a2c2ee5c2659c177af1db69ed4d7d33a0",
+      "bytes": 7169
+    }
+  ]
+}

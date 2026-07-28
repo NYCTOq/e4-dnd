@@ -1,0 +1,55 @@
+{
+  "version": "5.121.3",
+  "files": [
+    {
+      "path": "APPLY_CROSS_DOMAIN_UI_E2E_FINAL_CLOSURE_MEGA_v5.121D.ps1",
+      "sha256": "ef005d4ea2a81f28cd8defd725cf0b39158354b92540a3d95a833934386a4032",
+      "bytes": 691
+    },
+    {
+      "path": "README_CROSS_DOMAIN_UI_E2E_FINAL_CLOSURE_MEGA_v5.121D.md",
+      "sha256": "55b207a5933863659890dcd6892e587e0d7a8118587890a5a50b079a9ab3e074",
+      "bytes": 425
+    },
+    {
+      "path": "certification-reports/cross-domain-ui-final-closure-v5.121D.json",
+      "sha256": "c0b71ae61a812f0e3fe133adf3a3f1d49698c5877be3889d18da43beee007156",
+      "bytes": 429
+    },
+    {
+      "path": "certification-reports/cross-domain-ui-final-closure-v5.121D.md",
+      "sha256": "35ae5ab35c91622e5ab717a9312b394559b4f41b0a514db16c96651f9835dddb",
+      "bytes": 219
+    },
+    {
+      "path": "e2e/cross-domain-player-lifecycle-v5.121D.spec.ts",
+      "sha256": "6150c9200f23b1d83ac90323742c8345e8eebbb1f00e8b3ec1977878a678ec9c",
+      "bytes": 4387
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "6572181e695aec09a033809975ad5bebeeef41ca5de1116bd3fdd8f7675af7f2",
+      "bytes": 208564
+    },
+    {
+      "path": "package.json",
+      "sha256": "90578c5ed461a908aa8e6d6cf0abb5329df80ccf50b85cf2fd1f5017a9dc4dd0",
+      "bytes": 37385
+    },
+    {
+      "path": "scripts/audit-cross-domain-ui-final-closure-v5-121D.mjs",
+      "sha256": "f016cbb0993a9d78f35333160f3a9c9c3aec371ac1ee4d869aa207d4c62cf432",
+      "bytes": 1235
+    },
+    {
+      "path": "src/certification/integration/crossDomainUiFinalClosureContract.test.ts",
+      "sha256": "00796b84a136d98de131a7f25545101878296d606d1e8a8e62287d609793b1ec",
+      "bytes": 744
+    },
+    {
+      "path": "src/shared/release/releaseNotes.ts",
+      "sha256": "85e1435846c989674cfe43dd2d8553d2235accc211141faeb804e63e7f9ab2bf",
+      "bytes": 125934
+    }
+  ]
+}

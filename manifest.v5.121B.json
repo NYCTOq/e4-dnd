@@ -1,0 +1,72 @@
+{
+  "package": "v5.121B",
+  "version": "5.121.1",
+  "fileCount": 13,
+  "files": [
+    {
+      "path": "APPLY_CROSS_DOMAIN_DIFFERENTIAL_REFERENCE_MATRIX_MEGA_v5.121B.ps1",
+      "sha256": "c16906c46a7da660f6f2e5c1ba806ec7435ff73777d70a27dae01c9449a18c62",
+      "bytes": 558
+    },
+    {
+      "path": "README_CROSS_DOMAIN_DIFFERENTIAL_REFERENCE_MATRIX_MEGA_v5.121B.md",
+      "sha256": "420bec98293c2ebf456349be09b5efd046aa4110d4f58ec46f5bee3775f82432",
+      "bytes": 664
+    },
+    {
+      "path": "certification-reports/cross-domain-differential-v5.121B.json",
+      "sha256": "871520a25405678da76b44c5655c41bc031e3ab71c15b43760355237591d8fe4",
+      "bytes": 578
+    },
+    {
+      "path": "certification-reports/cross-domain-differential-v5.121B.md",
+      "sha256": "693e6c75e5dc37a228f824b93d46bbc7f7c6ed97ce5537e0a459c8ad2dd2c00e",
+      "bytes": 386
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "7f5b515605457d24549251d556edf4d3b4bec8c46898b134fdb366bb43eeec6c",
+      "bytes": 208564
+    },
+    {
+      "path": "package.json",
+      "sha256": "28a6471485a657d13297eb93b1d2b7dce0ccdc86ed01fc02282161e6b8bb86cc",
+      "bytes": 36136
+    },
+    {
+      "path": "scripts/generate-cross-domain-differential-v5-121B.mjs",
+      "sha256": "3c3bc29651992cf301fe74747419254503706d33fe7e6d05d72490f8e8dc6c3a",
+      "bytes": 1480
+    },
+    {
+      "path": "src/certification/differential/crossDomainBuilderRecordSheetDifferential.test.ts",
+      "sha256": "c0fa94fa92514728505e05b6d09d66f522aeb8ea5e91a114d91a0485d1d08aca",
+      "bytes": 2472
+    },
+    {
+      "path": "src/certification/differential/crossDomainBuilderRecordSheetRuntime.ts",
+      "sha256": "b31201efc088c04b88a9bce683d696fd75f480f021ce5cf1367be8448c0feaf3",
+      "bytes": 1575
+    },
+    {
+      "path": "src/certification/integration/crossDomainReferenceIntegrityContract.test.ts",
+      "sha256": "ef4851a34a63c7c43e0b2e0572c6a91afb9cc7f2efbacc79b9b2bb49a8a343a5",
+      "bytes": 874
+    },
+    {
+      "path": "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "sha256": "93013c4fe4e42da6839dddc71fc268f524d931d3b057013e9409e1a9d6bc4837",
+      "bytes": 2992
+    },
+    {
+      "path": "src/certification/oracle/crossDomainBuilderRecordSheetOracle.ts",
+      "sha256": "2282582f50d9ffbd68f8dade6d4673f78925359df250403557486d53b42b500a",
+      "bytes": 4035
+    },
+    {
+      "path": "src/shared/release/releaseNotes.ts",
+      "sha256": "8ab87cc1f81c8dc0a51ae6c23f7a1b6942409faed05c6eac5153e1deef53fa71",
+      "bytes": 124545
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "release": "v5.121D3",
+  "files": [
+    {
+      "path": "APPLY_CROSS_DOMAIN_UI_E2E_RUNTIME_ALIGNMENT_HOTFIX_v5.121D3.ps1",
+      "sha256": "451604991bde4ed27052e3a3888fcb3d588499f41ca4de0eefa82e7c73f50665",
+      "bytes": 551
+    },
+    {
+      "path": "README_CROSS_DOMAIN_UI_E2E_RUNTIME_ALIGNMENT_HOTFIX_v5.121D3.md",
+      "sha256": "f219877885950c9a67a144e9ccf713aa1c5ecdaa935feebe2b56c4aa9ec52709",
+      "bytes": 732
+    },
+    {
+      "path": "e2e/cross-domain-player-lifecycle-v5.121D.spec.ts",
+      "sha256": "5583255e766b22f913a31dcb42de1dfd1835611ffd80caf33b5aa401a4c5bf68",
+      "bytes": 5043
+    },
+    {
+      "path": "e2e/support/appState.ts",
+      "sha256": "61cc5447b2285e996fcd0d7a158daf049ac774c6f3e689b12c91745ecd5578ef",
+      "bytes": 1288
+    }
+  ]
+}

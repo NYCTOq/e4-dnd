@@ -1,0 +1,62 @@
+{
+  "package": "v5.121A",
+  "version": "5.121.0",
+  "fileCount": 11,
+  "files": [
+    {
+      "path": "APPLY_CROSS_DOMAIN_INTEGRITY_DISCOVERY_FOUNDATION_MEGA_v5.121A.ps1",
+      "sha256": "0bb420d0fbd21e0bb79081c48a49b3660d8296ee608c1a304bb79ec40c3804b0",
+      "bytes": 570
+    },
+    {
+      "path": "README_CROSS_DOMAIN_INTEGRITY_DISCOVERY_FOUNDATION_MEGA_v5.121A.md",
+      "sha256": "22aacb3cb297b491176f9c8aad85f1296764f57483e259a9e048b73cf2c7746b",
+      "bytes": 801
+    },
+    {
+      "path": "certification-reports/cross-domain-integrity-discovery-v5.121A.json",
+      "sha256": "85a447c453278fc7781de61e4a22d31dfd6b0af2bd9853b305a3f1f93a5293a9",
+      "bytes": 1910
+    },
+    {
+      "path": "certification-reports/cross-domain-integrity-discovery-v5.121A.md",
+      "sha256": "49cd522655c0f08560b0f06484ca0268a29f123daf1b823f6e403596d1f96381",
+      "bytes": 1131
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "6751f574b7e3f3cab4fcdaa64e81f6fe92e693493e78eb6d7c08043204578068",
+      "bytes": 208564
+    },
+    {
+      "path": "package.json",
+      "sha256": "da5bba0c0dbd94cfda41e2895ad1b0cfc55425f88955245e512e729893ac9929",
+      "bytes": 35453
+    },
+    {
+      "path": "scripts/discover-cross-domain-integrity-v5-121A.mjs",
+      "sha256": "50b90d4c35fe6e09cd71ba312b95b478522f4f171388e81abd99414267556e6a",
+      "bytes": 3927
+    },
+    {
+      "path": "src/certification/discovery/crossDomainIntegrityDiscovery.test.ts",
+      "sha256": "688bbd828aa51d98307550cfdd9b08499e8f968d4b59c45dfe6f80950ad377eb",
+      "bytes": 1330
+    },
+    {
+      "path": "src/certification/discovery/crossDomainIntegrityDiscovery.ts",
+      "sha256": "a1456cb7c63b19737cc71672be0b3aa0800f851a5ee6567bbca6601ccf1ff02c",
+      "bytes": 7622
+    },
+    {
+      "path": "src/certification/integration/crossDomainIntegrityContract.test.ts",
+      "sha256": "df43a6bc3f95947982c76b5c020ac6d1595a2c2dcc78da496873fdabbc129101",
+      "bytes": 1250
+    },
+    {
+      "path": "src/shared/release/releaseNotes.ts",
+      "sha256": "b2863b035b0511d34291199dd66c1f03f1469e0ccc50b5e3d01cf0115ac09e4b",
+      "bytes": 123845
+    }
+  ]
+}

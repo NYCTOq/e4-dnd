@@ -1,0 +1,38 @@
+{
+  "package": "v5.121B",
+  "version": "5.121.1",
+  "status": "GREEN",
+  "selectedEdge": "builder-record-sheet",
+  "rulesets": [
+    "2014",
+    "2024"
+  ],
+  "archetypes": [
+    "martial",
+    "prepared-caster",
+    "known-caster",
+    "multiclass"
+  ],
+  "levels": [
+    1,
+    3,
+    5,
+    9,
+    13,
+    17
+  ],
+  "equipmentStates": 2,
+  "resourceStates": 2,
+  "scenarioCount": 192,
+  "mutationGuards": [
+    "ruleset",
+    "subclass",
+    "ability",
+    "proficiency",
+    "spell",
+    "inventory",
+    "resource"
+  ],
+  "releaseBlockers": 0,
+  "nextPackage": "v5.121C"
+}

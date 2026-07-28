@@ -1,0 +1,25 @@
+{
+  "package": "E4_DND_CROSS_DOMAIN_UI_E2E_STATE_BOOTSTRAP_HOTFIX_v5.121D2",
+  "files": [
+    {
+      "path": "APPLY_CROSS_DOMAIN_UI_E2E_STATE_BOOTSTRAP_HOTFIX_v5.121D2.ps1",
+      "sha256": "f3622b0a27cebf118b1416bd275c8d88cb1bcf876d19e08c7b53a163785b7307",
+      "bytes": 696
+    },
+    {
+      "path": "README_CROSS_DOMAIN_UI_E2E_STATE_BOOTSTRAP_HOTFIX_v5.121D2.md",
+      "sha256": "6c520a4f6e0781c01119ade720ba33febd7aca9a67be2f2f4413c1d1122e74bd",
+      "bytes": 739
+    },
+    {
+      "path": "e2e/cross-domain-player-lifecycle-v5.121D.spec.ts",
+      "sha256": "4dec9b223567ee13de12c07c13edb1c632c3d39cac0a6ace32df0bd8b648bd05",
+      "bytes": 4657
+    },
+    {
+      "path": "e2e/support/appState.ts",
+      "sha256": "0058c3908d505fd165e420dfcd45ccab7264e57120e330ea16f13cf23fd01404",
+      "bytes": 1248
+    }
+  ]
+}

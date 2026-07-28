@@ -1,0 +1,25 @@
+{
+  "version": "5.121.3",
+  "series": "v5.121D",
+  "projects": [
+    "desktop-chromium",
+    "mobile-chromium"
+  ],
+  "testsPerProject": 4,
+  "physicalScenarios": 8,
+  "routes": [
+    "/builder",
+    "/characters/:id",
+    "/play-mode",
+    "/rest"
+  ],
+  "checks": {
+    "pointer": true,
+    "keyboard": true,
+    "persistence": true,
+    "reload": true,
+    "overflow": true,
+    "overlay": true
+  },
+  "releaseBlockers": []
+}
