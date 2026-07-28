@@ -1,7 +1,7 @@
 {
   "name": "e4_dnd",
   "private": true,
-  "version": "5.130.0",
+  "version": "5.136.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -317,11 +317,19 @@
     "audit:release-artifacts": "node scripts/audit-release-artifacts-v5.128.mjs",
     "release:gate": "node scripts/run-release-gate-v5.128.mjs",
     "certify:release-hardening": "npm run release:gate",
-    "audit:playable-content": "node scripts/playable-content-audit-v5.129.mjs",
-    "test:playable-content-audit": "vitest run src/content-audit/playableContentAuditPolicy.test.ts",
-    "certify:playable-content-audit": "npm run audit:playable-content && npm run test:playable-content-audit && npm run build",
     "test:class-runtime-completion": "vitest run src/core/rulesets/classRuntimeCompletion-v5.130.test.ts",
-    "certify:class-runtime-completion": "npm run test:class-runtime-completion && npm run build"
+    "certify:class-runtime-completion": "npm run test:class-runtime-completion && npm run build",
+    "test:subclass-runtime-completion": "vitest run src/core/rulesets/subclassRuntimeCompletion-v5.131.test.ts",
+    "certify:subclass-runtime-completion": "npm run test:subclass-runtime-completion && npm run build",
+    "test:feat-item-runtime-completion": "vitest run src/core/rulesets/featItemRuntimeCompletion-v5.133.test.ts",
+    "certify:feat-item-runtime-completion": "npm run test:feat-item-runtime-completion && npm run build",
+    "test:session-play-loop": "vitest run src/core/session/sessionPlayLoop-v5.134.test.ts",
+    "certify:session-play-loop": "npm run test:session-play-loop && npm run build",
+    "test:playable-gap-closure": "vitest run src/core/runtime/manualRuntimeBridge-v5.135.test.ts",
+    "certify:playable-gap-closure": "npm run test:playable-gap-closure && npm run build",
+    "test:release-candidate-v5.136": "vitest run src/release/fullRegressionReleaseCandidate-v5.136.test.ts",
+    "test:e2e:rc-v5.136": "playwright test e2e/rc1-critical-smoke.spec.ts e2e/release-hardening-smoke-v5.128.spec.ts e2e/accessibility-essentials-v5.127.spec.ts e2e/error-offline-backup-recovery-v5.126.spec.ts --workers=1",
+    "certify:release-candidate-v5.136": "npm run test:release-candidate-v5.136 && node scripts/run-full-regression-rc-v5.136.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",

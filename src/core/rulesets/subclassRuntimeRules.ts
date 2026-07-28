@@ -49,5 +49,40 @@ export function getSubclassRuntime(subclass:DndSubclassData|null|undefined,level
  return{unlockedFeatures:unlocked,actions,criticalThreshold,attacksPerActionMinimum,armorClassFloor,damageResistances:resistances,initiativeBonus,notes};
 }
 
-export function canUseSubclassAction(action:SubclassRuntimeAction,resources:CharacterResource[]){if(!action.resourceId)return true;const resource=resources.find(item=>item.id===action.resourceId);return Boolean(resource&&resource.used<resource.max)}
-export function spendSubclassActionResource(action:SubclassRuntimeAction,resources:CharacterResource[]){if(!action.resourceId)return resources;return resources.map(item=>item.id===action.resourceId?{...item,used:Math.min(item.max,item.used+1)}:item)}
+export type SubclassActionResourceState={
+ id:string;name:string;remaining:number;maximum:number;available:boolean;unlimited:boolean
+};
+
+export function getSubclassActionResourceState(action:SubclassRuntimeAction,resources:CharacterResource[]):SubclassActionResourceState|null{
+ if(!action.resourceId)return null;
+ const resource=resources.find(item=>item.id===action.resourceId);
+ if(!resource)return{id:action.resourceId,name:action.resourceId,remaining:0,maximum:0,available:false,unlimited:false};
+ const unlimited=Boolean(resource.unlimited);
+ const remaining=unlimited?resource.max:Math.max(0,resource.max-resource.used);
+ return{id:resource.id,name:resource.name,remaining,maximum:resource.max,available:unlimited||remaining>0,unlimited};
+}
+
+export function canUseSubclassAction(action:SubclassRuntimeAction,resources:CharacterResource[]){
+ const state=getSubclassActionResourceState(action,resources);
+ return state?state.available:true;
+}
+
+export function spendSubclassActionResource(action:SubclassRuntimeAction,resources:CharacterResource[]){
+ if(!action.resourceId)return resources;
+ return resources.map(item=>{
+  if(item.id!==action.resourceId||item.unlimited)return item;
+  return{...item,used:Math.min(item.max,item.used+1)};
+ });
+}
+
+export function recoverSubclassResources(resources:CharacterResource[],rest:"short"|"long"){
+ return resources.map(resource=>{
+  if(resource.unlimited||resource.recovery==="manual")return resource;
+  if(rest==="short"&&resource.recovery!=="short")return resource;
+  if(rest==="short"){
+   const amount=resource.shortRecoveryAmount??resource.max;
+   return{...resource,used:Math.max(0,resource.used-amount)};
+  }
+  return{...resource,used:0};
+ });
+}

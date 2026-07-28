@@ -7,6 +7,8 @@
 @import "./styles/45-rest-actions-panel.css";
 @import "./styles/44-mobile-accessibility-performance.css";
 @import "./styles/46-rest-runtime-integration.css";
+@import "./styles/41-session-play-loop.css";
+@import "./styles/42-playable-gap-closure.css";
 
 :root {
   color-scheme: dark;
@@ -59,3 +61,4 @@ a {
 ::selection {
   background: rgba(159, 177, 255, 0.35);
 }
+
