@@ -13,6 +13,7 @@ import {
 } from "../../core/character/characterCalculator";
 import { PageShell } from "../../shared/layout/PageShell";
 import { getPlayReadiness } from "../../core/character/playReadiness";
+import { clearPlayActionSnapshot, readPlayActionSnapshot, savePlayActionSnapshot } from "../../core/character/playActionHistory";
 import { getCharacterSpellcastingAbility } from "../../core/character/playerJourneyConsistency";
 import { getPlayerJourneyIntegrationSnapshot } from "../../core/rulesets/playerJourneyIntegration";
 import { useI18n } from "../../shared/i18n/useI18n";
@@ -165,6 +166,8 @@ export function PlayMode({
   const [featActionUses,setFeatActionUses]=useState<Record<string,number>>({});
   const [spellTargetCount,setSpellTargetCount]=useState(1);
   const [homebrewPackages] = useState(() => loadHomebrewPackages());
+  const [actionFeedback, setActionFeedback] = useState<string | null>(null);
+  const [undoRevision, setUndoRevision] = useState(0);
 
   const character =
     characters.find((item) => item.id === selectedCharacterId) ?? characters[0];
@@ -304,12 +307,27 @@ export function PlayMode({
   const favoredEnemy=activeCharacter.resources.find(resource=>resource.id==="favored-enemy");
   const capstoneSummary=getCapstoneSummary(activeCharacter.className,activeCharacter.level,activeCharacter.ruleset);
 
-  function commit(patch: Partial<Character>) {
+  function commit(patch: Partial<Character>, label = "Karakter güncellendi") {
+    savePlayActionSnapshot(activeCharacter, label);
     onUpdateCharacter({
       ...activeCharacter,
       ...patch,
       updatedAt: new Date().toISOString(),
     });
+    setActionFeedback(label);
+    setUndoRevision((value) => value + 1);
+  }
+
+  const undoSnapshot = readPlayActionSnapshot(activeCharacter.id);
+  void undoRevision;
+
+  function undoLastPlayAction() {
+    const snapshot = readPlayActionSnapshot(activeCharacter.id);
+    if (!snapshot) return;
+    onUpdateCharacter({ ...snapshot.character, updatedAt: new Date().toISOString() });
+    clearPlayActionSnapshot(activeCharacter.id);
+    setActionFeedback(`${snapshot.label} geri alındı`);
+    setUndoRevision((value) => value + 1);
   }
 
   function syncHomebrewResources(){commit({resources:synchronizeHomebrewResources(activeCharacter,homebrewPackages)})}
@@ -340,11 +358,11 @@ export function PlayMode({
   function concentrationSave(dc:number){const modifier=getAbilityModifier(effectiveCharacter.abilities.con)+magicAccessoryRuntime.savingThrowBonus;const result=rollDice({count:advancedFeatRuntime.concentrationAdvantage?2:1,sides:20,modifier:0});const natural=advancedFeatRuntime.concentrationAdvantage?Math.max(...result.rolls):result.rolls[0];const total=natural+modifier;const success=total>=dc;commit(success?{}:{activeSpellEffects:activeSpellEffects.filter(effect=>!effect.concentration),conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")});setPendingConcentrationDc(null);setRollHistory(current=>[{id:result.id,label:`Concentration Save DC ${dc} · ${success?"Başarılı":"Başarısız"}`,notation:`${advancedFeatRuntime.concentrationAdvantage?"advantage":"normal"} · [${result.rolls.join(", ")}] ${formatModifier(modifier)}`,total},...current].slice(0,6))}
 
   function survivalState(){return {currentHp:activeCharacter.currentHp,maxHp:activeCharacter.maxHp,tempHp:activeCharacter.tempHp,deathSaves:activeCharacter.deathSaves,deathSaveStable:activeCharacter.deathSaveStable,dead:activeCharacter.dead,deathDyingHistory:activeCharacter.deathDyingHistory}}
-  function commitSurvival(result:SurvivalState){commit({currentHp:result.currentHp,tempHp:result.tempHp,deathSaves:result.deathSaves,deathSaveStable:result.deathSaveStable,dead:result.dead,deathDyingHistory:result.deathDyingHistory})}
-  function takeDamage(critical=false){const rageReduced=reduceRageDamage(survivalAmount,isRaging,incomingPhysical);const ancestryReduced=reduceAncestryDamage(rageReduced,incomingDamageType,ancestryRuntime);const subclassResisted=subclassRuntime.damageResistances.includes(incomingDamageType);const subclassReduced=subclassResisted?Math.ceil(ancestryReduced/2):ancestryReduced;const armorResisted=magicArmorRuntime.resistanceDamageTypes.includes(incomingDamageType);const potionResisted=itemEffectRuntime.damageResistance&&incomingPotionResisted;const finalDamage=armorResisted||potionResisted?Math.ceil(subclassReduced/2):subclassReduced;const effectiveCritical=critical&&!magicArmorRuntime.preventsCriticalDamage;const result=applyDamage(survivalState(),finalDamage,effectiveCritical);const damageBrokenEffects=removeEffectsBrokenByDamage(activeSpellEffects);const hasConcentration=damageBrokenEffects.some(effect=>effect.concentration);commit({currentHp:result.currentHp,tempHp:result.tempHp,deathSaves:result.deathSaves,deathSaveStable:result.deathSaveStable,dead:result.dead,deathDyingHistory:result.deathDyingHistory,activeSpellEffects:damageBrokenEffects,conditions:hasConcentration?activeCharacter.conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")});if(shouldRequestConcentrationSave(hasConcentration,finalDamage))setPendingConcentrationDc(result.concentrationDc);setRollHistory(current=>[{id:crypto.randomUUID(),label:`${critical?"Kritik ":""}Hasar${result.massiveDamage?" · Massive Damage":""}`,notation:`-${finalDamage} HP`,total:-finalDamage},...current].slice(0,6))}
-  function healDamage(){commitSurvival(applyHealing(survivalState(),survivalAmount))}
-  function rollDeathSave(){const roll=rollDice({count:1,sides:20,modifier:0});const result=resolveDeathSave(survivalState(),roll.rolls[0]);commitSurvival(result);setRollHistory(current=>[{id:roll.id,label:`Death Save${roll.rolls[0]===20?" · Natural 20":roll.rolls[0]===1?" · Natural 1":""}`,notation:roll.notation,total:roll.total},...current].slice(0,6))}
-  function stabilize(){commitSurvival(stabilizeCharacter(survivalState()))}
+  function commitSurvival(result:SurvivalState,label="Hayatta kalma durumu güncellendi"){commit({currentHp:result.currentHp,tempHp:result.tempHp,deathSaves:result.deathSaves,deathSaveStable:result.deathSaveStable,dead:result.dead,deathDyingHistory:result.deathDyingHistory},label)}
+  function takeDamage(critical=false){const rageReduced=reduceRageDamage(survivalAmount,isRaging,incomingPhysical);const ancestryReduced=reduceAncestryDamage(rageReduced,incomingDamageType,ancestryRuntime);const subclassResisted=subclassRuntime.damageResistances.includes(incomingDamageType);const subclassReduced=subclassResisted?Math.ceil(ancestryReduced/2):ancestryReduced;const armorResisted=magicArmorRuntime.resistanceDamageTypes.includes(incomingDamageType);const potionResisted=itemEffectRuntime.damageResistance&&incomingPotionResisted;const finalDamage=armorResisted||potionResisted?Math.ceil(subclassReduced/2):subclassReduced;const effectiveCritical=critical&&!magicArmorRuntime.preventsCriticalDamage;const result=applyDamage(survivalState(),finalDamage,effectiveCritical);const damageBrokenEffects=removeEffectsBrokenByDamage(activeSpellEffects);const hasConcentration=damageBrokenEffects.some(effect=>effect.concentration);commit({currentHp:result.currentHp,tempHp:result.tempHp,deathSaves:result.deathSaves,deathSaveStable:result.deathSaveStable,dead:result.dead,deathDyingHistory:result.deathDyingHistory,activeSpellEffects:damageBrokenEffects,conditions:hasConcentration?activeCharacter.conditions:activeCharacter.conditions.filter(condition=>condition!=="Concentration")}, `${finalDamage} hasar uygulandı`);if(shouldRequestConcentrationSave(hasConcentration,finalDamage))setPendingConcentrationDc(result.concentrationDc);setRollHistory(current=>[{id:crypto.randomUUID(),label:`${critical?"Kritik ":""}Hasar${result.massiveDamage?" · Massive Damage":""}`,notation:`-${finalDamage} HP`,total:-finalDamage},...current].slice(0,6))}
+  function healDamage(){commitSurvival(applyHealing(survivalState(),survivalAmount), `İyileştirme uygulandı: +${survivalAmount} HP`)}
+  function rollDeathSave(){const roll=rollDice({count:1,sides:20,modifier:0});const result=resolveDeathSave(survivalState(),roll.rolls[0]);commitSurvival(result,"Death Save işlendi");setRollHistory(current=>[{id:roll.id,label:`Death Save${roll.rolls[0]===20?" · Natural 20":roll.rolls[0]===1?" · Natural 1":""}`,notation:roll.notation,total:roll.total},...current].slice(0,6))}
+  function stabilize(){commitSurvival(stabilizeCharacter(survivalState()),"Karakter stabilize edildi")}
 
   function updateHp(amount: number) {
     commit({
@@ -352,7 +370,7 @@ export function PlayMode({
         0,
         Math.min(activeCharacter.maxHp, activeCharacter.currentHp + amount),
       ),
-    });
+    }, amount < 0 ? `${Math.abs(amount)} HP azaltıldı` : `${amount} HP artırıldı`);
   }
 
   function toggleCondition(condition: CharacterCondition) {
@@ -621,6 +639,15 @@ export function PlayMode({
       description="Masada lazım olan şeyler. Geri kalanı karakter sayfasında usulca bekliyor."
     >
       <div className={`play-mode-v1 ${isFocusMode ? "focus-mode" : ""}`}>
+        {(actionFeedback || undoSnapshot) ? (
+          <section className="play-action-feedback" role="status" aria-live="polite" data-testid="play-action-feedback">
+            <div><strong>{actionFeedback ?? "Son oyun işlemi geri alınabilir"}</strong><small>{undoSnapshot ? undoSnapshot.label : "İşlem kaydedildi"}</small></div>
+            <div className="play-action-feedback-actions">
+              {undoSnapshot ? <button type="button" data-testid="play-action-undo" onClick={undoLastPlayAction}>Geri Al</button> : null}
+              <button type="button" aria-label="Bildirimi kapat" onClick={() => setActionFeedback(null)}>Kapat</button>
+            </div>
+          </section>
+        ) : null}
         <header className="play-mode-toolbar">
           <label>
             Aktif karakter

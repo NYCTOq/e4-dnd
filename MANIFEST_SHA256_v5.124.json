@@ -1,0 +1,50 @@
+{
+  "version": "5.124.0",
+  "files": [
+    {
+      "path": "APPLY_PLAY_FEEDBACK_RECOVERY_UNDO_MEGA_v5.124.ps1",
+      "sha256": "b131a52c14c3345d2b02c1792861f1670ff53f2d49c571510f656cc57f938e4e",
+      "bytes": 907
+    },
+    {
+      "path": "README_PLAY_FEEDBACK_RECOVERY_UNDO_MEGA_v5.124.md",
+      "sha256": "e03782f40bc8e5a230e6c64fa988a0baa53686393b56cd436191812812a50c58",
+      "bytes": 489
+    },
+    {
+      "path": "e2e/play-feedback-undo-v5.124.spec.ts",
+      "sha256": "129b756fd61d1ec6f222f998182a19397fc8cb901f694830781901bf62e5a12f",
+      "bytes": 2131
+    },
+    {
+      "path": "package.json",
+      "sha256": "74fef36f59bce10009fc8d4f4c5bb50623bd6da8e2a9b9d0794e06972966c068",
+      "bytes": 42058
+    },
+    {
+      "path": "src/core/character/playActionHistory.test.ts",
+      "sha256": "d22045957513e5280f78374b0c1cdf413438f9ff3d9c4fb8b3a488e8181bfaac",
+      "bytes": 1531
+    },
+    {
+      "path": "src/core/character/playActionHistory.ts",
+      "sha256": "788d3ac501e7da8f802ac6b87a7d3d00b71aa3d930aa7d91e5fa2cfc83e52d8e",
+      "bytes": 1358
+    },
+    {
+      "path": "src/features/play-mode/PlayMode.tsx",
+      "sha256": "b403765a60139924d15d05c9f120bf91679177c443ba7aac9f7090158c65e263",
+      "bytes": 115564
+    },
+    {
+      "path": "src/shared/release/releaseNotes.ts",
+      "sha256": "b2a7d9c968b76d7eba479c240f28cd7b2e39aac23271fba560c1d84460de9380",
+      "bytes": 132818
+    },
+    {
+      "path": "src/styles/15-play-mode.css",
+      "sha256": "c8ecfc86ca7664ca6747b1891715d8cf0071422bba3cee51d475d957589fd485",
+      "bytes": 10936
+    }
+  ]
+}

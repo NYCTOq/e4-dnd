@@ -1,0 +1,17 @@
+{
+  "version": "5.125D1",
+  "files": [
+    {
+      "path": "APPLY_BUILDER_GUIDANCE_ACTIVE_STEP_SELECTOR_HOTFIX_v5.125D1.ps1",
+      "sha256": "c8b5aea2bf54c9b90193f3f501aacb3bd8eb762677c9fc4e073a7b394a8e5564"
+    },
+    {
+      "path": "README_BUILDER_GUIDANCE_ACTIVE_STEP_SELECTOR_HOTFIX_v5.125D1.md",
+      "sha256": "f70b3c011daa2b83d260935372b085360f5efecc6fb4892e9f3faaaeca569a27"
+    },
+    {
+      "path": "e2e/builder-guidance-recovery-v5.125.spec.ts",
+      "sha256": "813475a560b50a80d5577dbb36b5b0473928e72b9d89d85b9c466943b37d87eb"
+    }
+  ]
+}

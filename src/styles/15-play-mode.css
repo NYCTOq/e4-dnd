@@ -347,3 +347,9 @@
 .combat-turn-summary { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin-bottom:12px; }
 .combat-turn-summary > * { padding:10px 12px; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.05); }
 @media (max-width: 720px) { .combat-turn-summary { grid-template-columns:1fr; } .combat-turn-actions { width:100%; } .combat-turn-actions button { min-height:48px; flex:1; } }
+
+
+/* v5.124 Play feedback and persistent undo */
+.play-action-feedback{position:sticky;top:.75rem;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 1rem;margin-bottom:1rem;border:1px solid var(--border-color,#475569);border-radius:14px;background:var(--panel-bg,#111827);box-shadow:0 10px 30px rgba(0,0,0,.22)}
+.play-action-feedback div:first-child{display:grid;gap:.2rem}.play-action-feedback small{opacity:.75}.play-action-feedback-actions{display:flex;gap:.5rem;flex-wrap:wrap}.play-action-feedback-actions button:first-child{font-weight:700}
+@media(max-width:720px){.play-action-feedback{top:.5rem;align-items:stretch;flex-direction:column}.play-action-feedback-actions button{min-height:44px;flex:1}}

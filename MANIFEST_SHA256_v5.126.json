@@ -1,0 +1,55 @@
+{
+  "version": "5.126.0",
+  "files": [
+    {
+      "path": "APPLY_ERROR_OFFLINE_BACKUP_RECOVERY_MEGA_v5.126.ps1",
+      "sha256": "b8b9beb8eec10175232a4ab9f35096c57b38dad2da8ecdda88982b3d9718596b",
+      "bytes": 961
+    },
+    {
+      "path": "README_ERROR_OFFLINE_BACKUP_RECOVERY_MEGA_v5.126.md",
+      "sha256": "9a901e3f8734ccad84621e31c86f9d64e06ea7d9af67a1daaa7b549c7f7f4e1b",
+      "bytes": 242
+    },
+    {
+      "path": "e2e/error-offline-backup-recovery-v5.126.spec.ts",
+      "sha256": "9bdea23ef1d9c902ca4987edc104390b276861428bab41a0fcbd4692525a936a",
+      "bytes": 1026
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "354e356ff35b0558652d116d8fdb28cb5c588f7d591af1cb5c00eac586695f47",
+      "bytes": 208564
+    },
+    {
+      "path": "package.json",
+      "sha256": "f4af57ae7a2871cb9ae79e90699702c17ede1c59ef4c6d17a28319c9900feba3",
+      "bytes": 42663
+    },
+    {
+      "path": "src/features/backup/DataBackup.tsx",
+      "sha256": "abc5d2b74921c29389bfea66112821871b8a1401c9d9f94339482a32e9649f6b",
+      "bytes": 18915
+    },
+    {
+      "path": "src/features/backup/backupRecovery.test.ts",
+      "sha256": "d01831435a5f0ba34aedf1553d40299e96ba686296cf1e50410c9e0345a59315",
+      "bytes": 1926
+    },
+    {
+      "path": "src/features/backup/backupRecovery.ts",
+      "sha256": "7103bcadf01c1d5d5adc720dff61fb637e1347c40eab0d4245fff465d473d355",
+      "bytes": 2388
+    },
+    {
+      "path": "src/shared/release/releaseNotes.ts",
+      "sha256": "ceabc4d0bb20775597b5e4a1366f77ed9ab0a04235e631202396910d126b1faf",
+      "bytes": 134244
+    },
+    {
+      "path": "src/styles/00-base.css",
+      "sha256": "abc607b514243b1fe7225f2f3cdfe5833da16172ce050d0ad70151dfb9dcea21",
+      "bytes": 22987
+    }
+  ]
+}

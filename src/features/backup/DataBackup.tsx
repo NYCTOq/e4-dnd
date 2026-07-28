@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Character } from "../../core/character/character.types";
 import type {
   DndItemData,
@@ -8,6 +8,14 @@ import type {
 import { exportCharacters } from "../../core/storage/characterStorage";
 import { parseCharacterBackup } from "./characterBackup";
 import { inspectAndRepairFullBackup, type BackupSafetyReport } from "./backupSafetyRuntime";
+import {
+  classifyBackupImportError,
+  clearPreRestoreSnapshot,
+  downloadPreRestoreSnapshot,
+  loadPreRestoreSnapshot,
+  savePreRestoreSnapshot,
+  type BackupRecoveryMessage,
+} from "./backupRecovery";
 import { PageShell } from "../../shared/layout/PageShell";
 import type { Campaign } from "../campaigns/campaignTypes";
 import { useAppSettings } from "../../shared/settings/AppSettingsProvider";
@@ -72,8 +80,31 @@ export function DataBackup({
   const [importSections, setImportSections] = useState<BackupImportSections>(
     DEFAULT_BACKUP_IMPORT_SECTIONS,
   );
+  const [recoveryMessage, setRecoveryMessage] = useState<BackupRecoveryMessage | null>(null);
+  const [isOnline, setIsOnline] = useState(() => typeof navigator === "undefined" || navigator.onLine);
+  const [preRestoreSnapshot, setPreRestoreSnapshot] = useState(() => loadPreRestoreSnapshot());
   const totalHomebrew =
     homebrewSpells.length + homebrewItems.length + homebrewMonsters.length;
+
+  useEffect(() => {
+    const sync = () => setIsOnline(navigator.onLine);
+    window.addEventListener("online", sync);
+    window.addEventListener("offline", sync);
+    return () => {
+      window.removeEventListener("online", sync);
+      window.removeEventListener("offline", sync);
+    };
+  }, []);
+
+  const currentBackupData: FullBackupData = {
+    characters,
+    campaigns,
+    homebrewSpells,
+    homebrewItems,
+    homebrewMonsters,
+    favoriteMonsterIds: loadFavoriteMonsterIds(),
+    appSettings: settings,
+  };
 
   const preview = useMemo(() => {
     if (!pendingBackup) return null;
@@ -90,14 +121,12 @@ export function DataBackup({
   }, [pendingBackup, characters.length, campaigns.length, homebrewSpells.length, homebrewItems.length, homebrewMonsters.length]);
 
   function handleFullExport() {
-    exportFullBackup({
-      characters,
-      campaigns,
-      homebrewSpells,
-      homebrewItems,
-      homebrewMonsters,
-      favoriteMonsterIds: loadFavoriteMonsterIds(),
-      appSettings: settings,
+    exportFullBackup(currentBackupData);
+    setRecoveryMessage({
+      tone: "success",
+      title: "Tam yedek hazırlandı",
+      detail: "İndirme başlatıldı. Dosyayı uygulama dışındaki güvenli bir yerde sakla.",
+      action: "Geri yükleme öncesinde yeni bir yedek almak veri kaybı riskini azaltır.",
     });
   }
 
@@ -114,14 +143,17 @@ export function DataBackup({
       }
       const backup = parseFullBackup(safety.repairedValue);
       setPendingBackup({ fileName: file.name, backup, safety });
+      setRecoveryMessage({
+        tone: "success",
+        title: "Yedek güvenli biçimde okundu",
+        detail: `${file.name} içeriği henüz uygulanmadı. Önizleme ve bölüm seçimi hazır.`,
+        action: "Verileri kontrol edip birleştirme veya değiştirme modunu seç.",
+      });
       setImportMode("merge");
       setImportSections({ ...DEFAULT_BACKUP_IMPORT_SECTIONS });
     } catch (error) {
-      alert(
-        error instanceof Error
-          ? error.message
-          : "Tam yedek okunamadı. JSON goblinleri yine iş başında.",
-      );
+      setPendingBackup(null);
+      setRecoveryMessage(classifyBackupImportError(error));
     } finally {
       event.target.value = "";
     }
@@ -138,12 +170,23 @@ export function DataBackup({
     const verb = importMode === "merge" ? "mevcut verilerle birleştirilecek" : "seçilen mevcut verilerin üzerine yazılacak";
     if (!confirm(`Seçilen yedek verileri ${verb}. Devam edilsin mi?`)) return;
 
+    const snapshotSaved = savePreRestoreSnapshot(currentBackupData);
+    setPreRestoreSnapshot(loadPreRestoreSnapshot());
     onImportFullBackup(pendingBackup.backup.data, {
       mode: importMode,
       sections: importSections,
     });
     setPendingBackup(null);
-    alert(importMode === "merge" ? "Yedek verileri birleştirildi." : "Seçilen veriler geri yüklendi.");
+    setRecoveryMessage({
+      tone: "success",
+      title: importMode === "merge" ? "Yedek verileri birleştirildi" : "Seçilen veriler geri yüklendi",
+      detail: snapshotSaved
+        ? "İşlem öncesindeki mevcut veriler otomatik güvenli snapshot olarak saklandı."
+        : "Geri yükleme tamamlandı ancak tarayıcı güvenli snapshot kaydedemedi.",
+      action: snapshotSaved
+        ? "Sorun fark edersen işlem öncesi snapshot'ı indirip yeniden içe aktarabilirsin."
+        : "Şimdi yeni bir tam yedek indirmen önerilir.",
+    });
   }
 
   function toggleSection(key: keyof BackupImportSections) {
@@ -218,6 +261,35 @@ export function DataBackup({
       title="Yedek"
       description="Yedeği önce incele, veri türlerini seç ve birleştirme biçimine karar ver. Körlemesine geri yükleme dönemi, insanlık adına küçük de olsa sona erdi."
     >
+      <section className="backup-recovery-strip" data-testid="backup-recovery-center" aria-live="polite">
+        <div className={`backup-network-status ${isOnline ? "online" : "offline"}`} data-testid="backup-network-status">
+          <strong>{isOnline ? "Çevrimiçi" : "Çevrimdışı mod"}</strong>
+          <span>{isOnline ? "Yedek işlemleri hazır." : "Yerel yedek ve geri yükleme çalışır; bulut veya dış bağlantılar kullanılamaz."}</span>
+        </div>
+
+        {recoveryMessage && (
+          <div className={`backup-recovery-message ${recoveryMessage.tone}`} data-testid="backup-recovery-message">
+            <strong>{recoveryMessage.title}</strong>
+            <span>{recoveryMessage.detail}</span>
+            <small>{recoveryMessage.action}</small>
+            <button type="button" onClick={() => setRecoveryMessage(null)}>Kapat</button>
+          </div>
+        )}
+
+        {preRestoreSnapshot && (
+          <div className="backup-pre-restore" data-testid="backup-pre-restore-snapshot">
+            <div>
+              <strong>İşlem öncesi güvenli snapshot mevcut</strong>
+              <span>{new Date(preRestoreSnapshot.exportedAt).toLocaleString("tr-TR")}</span>
+            </div>
+            <div className="backup-actions">
+              <button type="button" onClick={() => downloadPreRestoreSnapshot(preRestoreSnapshot)}>Snapshot İndir</button>
+              <button type="button" className="danger-action" onClick={() => { clearPreRestoreSnapshot(); setPreRestoreSnapshot(null); }}>Snapshot'ı Kaldır</button>
+            </div>
+          </div>
+        )}
+      </section>
+
       <div className="backup-layout">
         <section className="backup-card backup-primary backup-wide">
           <span className="mini-label">Full Backup V2</span>

@@ -1,0 +1,17 @@
+{
+  "version": "5.126D1",
+  "files": [
+    {
+      "path": "APPLY_BACKUP_RECOVERY_OFFLINE_BOOTSTRAP_HOTFIX_v5.126D1.ps1",
+      "sha256": "1a6f2f2fc86b6541d9af5443973b2cec7f39cb8fea2779b6719e61de75acd5c3"
+    },
+    {
+      "path": "README_BACKUP_RECOVERY_OFFLINE_BOOTSTRAP_HOTFIX_v5.126D1.md",
+      "sha256": "728b1c2f333b8221e4a703cb93d8581e371b2cedc60441ba867436f90507664e"
+    },
+    {
+      "path": "e2e/error-offline-backup-recovery-v5.126.spec.ts",
+      "sha256": "c01d5f0a7e5c1a1eefe960c51d3ad4867f9565412806ce098e129da8a321ae1d"
+    }
+  ]
+}

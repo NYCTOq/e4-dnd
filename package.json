@@ -1,7 +1,7 @@
 {
   "name": "e4_dnd",
   "private": true,
-  "version": "5.123.3",
+  "version": "5.126.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -299,7 +299,16 @@
     "certify:navigation-search:ui:contract": "vitest run src/certification/integration/navigationSearchUiFinalClosureContract.test.ts",
     "certify:navigation-search:e2e": "playwright test e2e/navigation-search-ui-v5.123D.spec.ts",
     "certify:navigation-search:ui:audit": "node scripts/audit-navigation-search-ui-v5-123D.mjs",
-    "certify:navigation-search:final": "npm run certify:navigation-search:golden && npm run certify:navigation-search:ui:contract && npm run build && npm run certify:navigation-search:e2e && npm run certify:navigation-search:ui:audit"
+    "certify:navigation-search:final": "npm run certify:navigation-search:golden && npm run certify:navigation-search:ui:contract && npm run build && npm run certify:navigation-search:e2e && npm run certify:navigation-search:ui:audit",
+    "test:play-feedback": "vitest run src/core/character/playActionHistory.test.ts",
+    "test:e2e:play-feedback": "playwright test e2e/play-feedback-undo-v5.124.spec.ts",
+    "certify:play-feedback": "npm run test:play-feedback && npm run build && npm run test:e2e:play-feedback",
+    "test:builder-guidance": "vitest run src/features/builder/builderGuidance.test.ts",
+    "test:e2e:builder-guidance": "playwright test e2e/builder-guidance-recovery-v5.125.spec.ts",
+    "certify:builder-guidance": "npm run test:builder-guidance && npm run build && npm run test:e2e:builder-guidance",
+    "test:backup-recovery": "vitest run src/features/backup/backupRecovery.test.ts",
+    "test:e2e:backup-recovery": "playwright test e2e/error-offline-backup-recovery-v5.126.spec.ts",
+    "certify:backup-recovery": "npm run test:backup-recovery && npm run build && npm run test:e2e:backup-recovery"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",

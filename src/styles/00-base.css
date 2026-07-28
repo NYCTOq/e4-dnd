@@ -1312,3 +1312,37 @@ textarea {
     display: grid;
   }
 }
+
+/* v5.126 Error, Offline & Backup Recovery */
+.backup-recovery-strip {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.backup-network-status,
+.backup-recovery-message,
+.backup-pre-restore {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  background: var(--surface-raised);
+}
+.backup-network-status span,
+.backup-recovery-message span,
+.backup-recovery-message small,
+.backup-pre-restore span { color: var(--text-muted); }
+.backup-network-status.offline { border-color: color-mix(in srgb, #d97706 55%, var(--border-soft)); }
+.backup-recovery-message { align-items: flex-start; flex-direction: column; }
+.backup-recovery-message.error { border-color: color-mix(in srgb, #dc2626 55%, var(--border-soft)); }
+.backup-recovery-message.warning { border-color: color-mix(in srgb, #d97706 55%, var(--border-soft)); }
+.backup-recovery-message.success { border-color: color-mix(in srgb, #16a34a 45%, var(--border-soft)); }
+.backup-pre-restore { justify-content: space-between; }
+.backup-pre-restore > div:first-child { display: grid; gap: 4px; }
+@media (max-width: 720px) {
+  .backup-network-status,
+  .backup-pre-restore { align-items: stretch; flex-direction: column; }
+  .backup-pre-restore .backup-actions { display: grid; grid-template-columns: 1fr; width: 100%; }
+}

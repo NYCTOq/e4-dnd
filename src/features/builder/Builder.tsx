@@ -86,7 +86,14 @@ export function Builder({
         ),
     },
   );
-  const [activeStepIndex, setActiveStepIndex] = useState(0);
+  const [activeStepIndex, setActiveStepIndex] = useState(() => {
+    try {
+      const saved = Number(localStorage.getItem("e4_dnd_builder_active_step_v1") ?? "0");
+      return Number.isInteger(saved) && saved >= 0 && saved <= 8 ? saved : 0;
+    } catch {
+      return 0;
+    }
+  });
   const [stepAnnouncement, setStepAnnouncement] = useState("");
   const stepHeadingRef = useRef<HTMLHeadingElement>(null);
   const [abilityMethod, setAbilityMethod] = useState<AbilityGenerationMethod>("standard-array");
@@ -112,6 +119,14 @@ export function Builder({
   const activeStep = builderSteps[activeStepIndex];
   const isFirstStep = activeStepIndex === 0;
   const isLastStep = activeStepIndex === builderSteps.length - 1;
+
+  useEffect(() => {
+    try {
+      localStorage.setItem("e4_dnd_builder_active_step_v1", String(activeStepIndex));
+    } catch {
+      // Builder remains usable when storage is unavailable.
+    }
+  }, [activeStepIndex]);
 
   useEffect(() => {
     setStepAnnouncement(`Adım ${activeStepIndex + 1}/${builderSteps.length}: ${activeStep.title}`);
@@ -535,11 +550,31 @@ export function Builder({
             }}
           />
           {restoredAt ? (
-            <div className="draft-restored-banner" role="status">
-              <strong>Taslak geri yüklendi</strong>
-              <span>Yarım kalan karakterin kaldığı verilerle devam edebilirsin.</span>
+            <div className="draft-restored-banner" role="status" data-testid="builder-draft-restored">
+              <strong>Taslak ve son açık adım geri yüklendi</strong>
+              <span>Yarım kalan karakterin kaldığı yerden devam edebilirsin.</span>
             </div>
           ) : null}
+
+          {validationIssues.length ? (
+            <section className="builder-guidance-summary" aria-label="Builder eksik alan özeti" data-testid="builder-guidance-summary">
+              <div>
+                <span className="mini-label">Tamamlanması gerekenler</span>
+                <strong>{validationIssues.filter((issue) => issue.severity === "error").length} hata · {validationIssues.filter((issue) => issue.severity === "warning").length} uyarı</strong>
+              </div>
+              <div className="builder-guidance-actions">
+                {validationIssues.slice(0, 3).map((issue) => (
+                  <button key={issue.id} type="button" onClick={() => goToValidationIssue(issue.step)}>
+                    <span>{issue.step}</span>
+                    <strong>{issue.message}</strong>
+                  </button>
+                ))}
+                {validationHasErrors ? <button type="button" className="primary-action" onClick={goToFirstError}>İlk zorunlu hataya git</button> : null}
+              </div>
+            </section>
+          ) : (
+            <div className="builder-guidance-ready" role="status" data-testid="builder-guidance-ready">Zorunlu Builder seçimleri tamamlandı.</div>
+          )}
 
           {activeStep.id === "basic" ? (
             <section className="form-panel">
@@ -571,6 +606,12 @@ export function Builder({
                     value={draft.ruleset}
                     onChange={(event) => {
                       const nextRuleset = event.target.value as CharacterDraft["ruleset"];
+                      if (nextRuleset === draft.ruleset) return;
+                      const hasProgress = Boolean(draft.name.trim() || draft.playerName.trim() || draft.className || draft.race || draft.background || draft.knownSpellIds.length || draft.inventory.length);
+                      if (hasProgress && !confirm("Ruleset değişikliği sınıf, tür, büyü ve ekipman seçimlerini temizleyecek. Devam edilsin mi?")) {
+                        event.currentTarget.value = draft.ruleset;
+                        return;
+                      }
                       setDraft((current) => ({
                         ...current,
                         ruleset: nextRuleset,

@@ -1,0 +1,50 @@
+{
+  "version": "5.125.0",
+  "files": [
+    {
+      "path": "APPLY_BUILDER_GUIDANCE_DRAFT_RECOVERY_MEGA_v5.125.ps1",
+      "sha256": "492178387736ab6bd2ea04d2c958d93dfed9592ebbbc598a1c09388a5346cbfa",
+      "bytes": 895
+    },
+    {
+      "path": "README_BUILDER_GUIDANCE_DRAFT_RECOVERY_MEGA_v5.125.md",
+      "sha256": "9d94a5337314d61c010f26f086afaf39cef1872919ba7fa3ff271dd979f91585",
+      "bytes": 344
+    },
+    {
+      "path": "e2e/builder-guidance-recovery-v5.125.spec.ts",
+      "sha256": "f691356713770ba31a67bdaa644a94293c8a62b1125dfcb049d3d0b4c1ad0636",
+      "bytes": 1979
+    },
+    {
+      "path": "package.json",
+      "sha256": "1ad2e8928c6925adb4671d91bba6bee669492c97dbf8e6f6f4a408a66a633907",
+      "bytes": 42362
+    },
+    {
+      "path": "src/features/builder/Builder.tsx",
+      "sha256": "581b662a39a22255ff38ae0b59cade83087e7ee15702d6c51e8404593f903fbe",
+      "bytes": 103619
+    },
+    {
+      "path": "src/features/builder/builderGuidance.test.ts",
+      "sha256": "e23ad123b651ee84a223b26935b2d6a5d5564a3d4c9ac2d52bb24e3b4a349b63",
+      "bytes": 1422
+    },
+    {
+      "path": "src/features/builder/builderGuidance.ts",
+      "sha256": "cfaa13459d2c430b8fb9151ab652458ebe646ea67a263f2c156e1c775f5b65b8",
+      "bytes": 789
+    },
+    {
+      "path": "src/shared/release/releaseNotes.ts",
+      "sha256": "6ccb55eee67895c945ad8cef879ec1335085f9e0f723953c2b35071db6ba83d3",
+      "bytes": 133542
+    },
+    {
+      "path": "src/styles/03-builder.css",
+      "sha256": "1b42ba2a31f264da481767e902880f93636d720c8bf6aa8cd6751a0389612319",
+      "bytes": 10911
+    }
+  ]
+}
