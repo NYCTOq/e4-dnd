@@ -1,0 +1,5192 @@
+{
+  "generatedAt": "2026-07-29T15:21:33.569Z",
+  "scope": {
+    "rulesets": [
+      "dnd_2014",
+      "dnd_2024"
+    ],
+    "levels": [
+      1,
+      4,
+      8,
+      12,
+      16,
+      19,
+      20
+    ],
+    "expectedScenarios": 168,
+    "systems": [
+      "raceAncestry",
+      "background",
+      "abilityBonuses",
+      "skillProficiencies",
+      "originFeat",
+      "regularFeat",
+      "abilityScoreImprovement",
+      "epicBoon",
+      "persistenceIdentity"
+    ]
+  },
+  "summary": {
+    "ready": 168,
+    "blocked": 0,
+    "total": 168,
+    "structuralBlockers": 0
+  },
+  "rulesets": [
+    {
+      "ruleset": "dnd_2014",
+      "counts": {
+        "classes": 12,
+        "races": 9,
+        "backgrounds": 13,
+        "feats": 35,
+        "scenarios": 84
+      },
+      "blockers": [],
+      "warnings": [],
+      "scenarios": [
+        {
+          "id": "dnd_2014-barbarian-origin-l1",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "level": 1,
+          "race": "Elf",
+          "background": "Criminal",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Deception",
+            "Stealth"
+          ],
+          "advancementSlots": 0,
+          "originFeat": null,
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-origin-l4",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "level": 4,
+          "race": "Tiefling",
+          "background": "Guild Artisan",
+          "raceAbilityBonuses": {
+            "int": 1,
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Insight",
+            "Persuasion"
+          ],
+          "advancementSlots": 1,
+          "originFeat": null,
+          "regularFeat": "Ritual Caster",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-origin-l8",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "level": 8,
+          "race": "Half-Orc",
+          "background": "Sage",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "con": 1
+          },
+          "backgroundSkills": [
+            "Arcana",
+            "History"
+          ],
+          "advancementSlots": 3,
+          "originFeat": null,
+          "regularFeat": "Crossbow Expert",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-origin-l12",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "level": 12,
+          "race": "Half-Elf",
+          "background": "Acolyte",
+          "raceAbilityBonuses": {
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Insight",
+            "Religion"
+          ],
+          "advancementSlots": 5,
+          "originFeat": null,
+          "regularFeat": "Weapon Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-origin-l16",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "level": 16,
+          "race": "Gnome",
+          "background": "Folk Hero",
+          "raceAbilityBonuses": {
+            "int": 2
+          },
+          "backgroundSkills": [
+            "Animal Handling",
+            "Survival"
+          ],
+          "advancementSlots": 7,
+          "originFeat": null,
+          "regularFeat": "Great Weapon Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-origin-l19",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "level": 19,
+          "race": "Elf",
+          "background": "Noble",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "History",
+            "Persuasion"
+          ],
+          "advancementSlots": 8,
+          "originFeat": null,
+          "regularFeat": "Weapon Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-origin-l20",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "level": 20,
+          "race": "Dragonborn",
+          "background": "Outlander",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Survival"
+          ],
+          "advancementSlots": 8,
+          "originFeat": null,
+          "regularFeat": "Healer",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-origin-l1",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "level": 1,
+          "race": "Half-Elf",
+          "background": "Acolyte",
+          "raceAbilityBonuses": {
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Insight",
+            "Religion"
+          ],
+          "advancementSlots": 0,
+          "originFeat": null,
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-origin-l4",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "level": 4,
+          "race": "Halfling",
+          "background": "Entertainer",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Acrobatics",
+            "Performance"
+          ],
+          "advancementSlots": 1,
+          "originFeat": null,
+          "regularFeat": "Martial Adept",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-origin-l8",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "level": 8,
+          "race": "Elf",
+          "background": "Noble",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "History",
+            "Persuasion"
+          ],
+          "advancementSlots": 3,
+          "originFeat": null,
+          "regularFeat": "War Caster",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-origin-l12",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "level": 12,
+          "race": "Dwarf",
+          "background": "Soldier",
+          "raceAbilityBonuses": {
+            "con": 2
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Intimidation"
+          ],
+          "advancementSlots": 4,
+          "originFeat": null,
+          "regularFeat": "Ritual Caster",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-origin-l16",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "level": 16,
+          "race": "Human",
+          "background": "Criminal",
+          "raceAbilityBonuses": {
+            "str": 1,
+            "dex": 1,
+            "con": 1,
+            "int": 1,
+            "wis": 1,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Deception",
+            "Stealth"
+          ],
+          "advancementSlots": 6,
+          "originFeat": null,
+          "regularFeat": "Crossbow Expert",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-origin-l19",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "level": 19,
+          "race": "Half-Elf",
+          "background": "Guild Artisan",
+          "raceAbilityBonuses": {
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Insight",
+            "Persuasion"
+          ],
+          "advancementSlots": 7,
+          "originFeat": null,
+          "regularFeat": "Ritual Caster",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-origin-l20",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "level": 20,
+          "race": "Tiefling",
+          "background": "Hermit",
+          "raceAbilityBonuses": {
+            "int": 1,
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Medicine",
+            "Religion"
+          ],
+          "advancementSlots": 7,
+          "originFeat": null,
+          "regularFeat": "Weapon Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-origin-l1",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "level": 1,
+          "race": "Tiefling",
+          "background": "Hermit",
+          "raceAbilityBonuses": {
+            "int": 1,
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Medicine",
+            "Religion"
+          ],
+          "advancementSlots": 0,
+          "originFeat": null,
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-origin-l4",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "level": 4,
+          "race": "Gnome",
+          "background": "Sage",
+          "raceAbilityBonuses": {
+            "int": 2
+          },
+          "backgroundSkills": [
+            "Arcana",
+            "History"
+          ],
+          "advancementSlots": 1,
+          "originFeat": null,
+          "regularFeat": "Observant",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-origin-l8",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "level": 8,
+          "race": "Dragonborn",
+          "background": "Acolyte",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Insight",
+            "Religion"
+          ],
+          "advancementSlots": 3,
+          "originFeat": null,
+          "regularFeat": "Sentinel",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-origin-l12",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "level": 12,
+          "race": "Halfling",
+          "background": "Folk Hero",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Animal Handling",
+            "Survival"
+          ],
+          "advancementSlots": 4,
+          "originFeat": null,
+          "regularFeat": "Shield Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-origin-l16",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "level": 16,
+          "race": "Elf",
+          "background": "Outlander",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Survival"
+          ],
+          "advancementSlots": 5,
+          "originFeat": null,
+          "regularFeat": "Dual Wielder",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-origin-l19",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "level": 19,
+          "race": "Tiefling",
+          "background": "Soldier",
+          "raceAbilityBonuses": {
+            "int": 1,
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Intimidation"
+          ],
+          "advancementSlots": 7,
+          "originFeat": null,
+          "regularFeat": "Shield Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-origin-l20",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "level": 20,
+          "race": "Dwarf",
+          "background": "Urchin",
+          "raceAbilityBonuses": {
+            "con": 2
+          },
+          "backgroundSkills": [
+            "Sleight of Hand",
+            "Stealth"
+          ],
+          "advancementSlots": 7,
+          "originFeat": null,
+          "regularFeat": "Athlete",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-origin-l1",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "level": 1,
+          "race": "Half-Orc",
+          "background": "Entertainer",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "con": 1
+          },
+          "backgroundSkills": [
+            "Acrobatics",
+            "Performance"
+          ],
+          "advancementSlots": 0,
+          "originFeat": null,
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-origin-l4",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "level": 4,
+          "race": "Dragonborn",
+          "background": "Hermit",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Medicine",
+            "Religion"
+          ],
+          "advancementSlots": 1,
+          "originFeat": null,
+          "regularFeat": "Medium Armor Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-origin-l8",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "level": 8,
+          "race": "Halfling",
+          "background": "Sailor",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Perception"
+          ],
+          "advancementSlots": 3,
+          "originFeat": null,
+          "regularFeat": "Mobile",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-origin-l12",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "level": 12,
+          "race": "Elf",
+          "background": "Charlatan",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Deception",
+            "Sleight of Hand"
+          ],
+          "advancementSlots": 5,
+          "originFeat": null,
+          "regularFeat": "Sharpshooter",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-origin-l16",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "level": 16,
+          "race": "Dwarf",
+          "background": "Guild Artisan",
+          "raceAbilityBonuses": {
+            "con": 2
+          },
+          "backgroundSkills": [
+            "Insight",
+            "Persuasion"
+          ],
+          "advancementSlots": 7,
+          "originFeat": null,
+          "regularFeat": "Defensive Duelist",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-origin-l19",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "level": 19,
+          "race": "Half-Orc",
+          "background": "Outlander",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "con": 1
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Survival"
+          ],
+          "advancementSlots": 8,
+          "originFeat": null,
+          "regularFeat": "Sharpshooter",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-origin-l20",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "level": 20,
+          "race": "Human",
+          "background": "Sage",
+          "raceAbilityBonuses": {
+            "str": 1,
+            "dex": 1,
+            "con": 1,
+            "int": 1,
+            "wis": 1,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Arcana",
+            "History"
+          ],
+          "advancementSlots": 8,
+          "originFeat": null,
+          "regularFeat": "Alert",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-origin-l1",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "level": 1,
+          "race": "Human",
+          "background": "Sage",
+          "raceAbilityBonuses": {
+            "str": 1,
+            "dex": 1,
+            "con": 1,
+            "int": 1,
+            "wis": 1,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Arcana",
+            "History"
+          ],
+          "advancementSlots": 0,
+          "originFeat": null,
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-origin-l4",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "level": 4,
+          "race": "Half-Elf",
+          "background": "Urchin",
+          "raceAbilityBonuses": {
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Sleight of Hand",
+            "Stealth"
+          ],
+          "advancementSlots": 1,
+          "originFeat": null,
+          "regularFeat": "Polearm Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-origin-l8",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Entertainer",
+          "raceAbilityBonuses": {
+            "int": 2
+          },
+          "backgroundSkills": [
+            "Acrobatics",
+            "Performance"
+          ],
+          "advancementSlots": 4,
+          "originFeat": null,
+          "regularFeat": "Actor",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-origin-l12",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "level": 12,
+          "race": "Dragonborn",
+          "background": "Noble",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "History",
+            "Persuasion"
+          ],
+          "advancementSlots": 6,
+          "originFeat": null,
+          "regularFeat": "Skulker",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-origin-l16",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "level": 16,
+          "race": "Halfling",
+          "background": "Soldier",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Intimidation"
+          ],
+          "advancementSlots": 9,
+          "originFeat": null,
+          "regularFeat": "Dungeon Delver",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-origin-l19",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "level": 19,
+          "race": "Human",
+          "background": "Charlatan",
+          "raceAbilityBonuses": {
+            "str": 1,
+            "dex": 1,
+            "con": 1,
+            "int": 1,
+            "wis": 1,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Deception",
+            "Sleight of Hand"
+          ],
+          "advancementSlots": 11,
+          "originFeat": null,
+          "regularFeat": "Skulker",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-origin-l20",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "level": 20,
+          "race": "Elf",
+          "background": "Criminal",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Deception",
+            "Stealth"
+          ],
+          "advancementSlots": 11,
+          "originFeat": null,
+          "regularFeat": "Durable",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-origin-l1",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "level": 1,
+          "race": "Half-Elf",
+          "background": "Acolyte",
+          "raceAbilityBonuses": {
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Insight",
+            "Religion"
+          ],
+          "advancementSlots": 0,
+          "originFeat": null,
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-origin-l4",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "level": 4,
+          "race": "Halfling",
+          "background": "Entertainer",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Acrobatics",
+            "Performance"
+          ],
+          "advancementSlots": 1,
+          "originFeat": null,
+          "regularFeat": "Martial Adept",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-origin-l8",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "level": 8,
+          "race": "Elf",
+          "background": "Noble",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "History",
+            "Persuasion"
+          ],
+          "advancementSlots": 3,
+          "originFeat": null,
+          "regularFeat": "War Caster",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-origin-l12",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "level": 12,
+          "race": "Dwarf",
+          "background": "Soldier",
+          "raceAbilityBonuses": {
+            "con": 2
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Intimidation"
+          ],
+          "advancementSlots": 5,
+          "originFeat": null,
+          "regularFeat": "Ritual Caster",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-origin-l16",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "level": 16,
+          "race": "Human",
+          "background": "Criminal",
+          "raceAbilityBonuses": {
+            "str": 1,
+            "dex": 1,
+            "con": 1,
+            "int": 1,
+            "wis": 1,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Deception",
+            "Stealth"
+          ],
+          "advancementSlots": 6,
+          "originFeat": null,
+          "regularFeat": "Crossbow Expert",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-origin-l19",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "level": 19,
+          "race": "Half-Elf",
+          "background": "Guild Artisan",
+          "raceAbilityBonuses": {
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Insight",
+            "Persuasion"
+          ],
+          "advancementSlots": 8,
+          "originFeat": null,
+          "regularFeat": "Ritual Caster",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-origin-l20",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "level": 20,
+          "race": "Tiefling",
+          "background": "Hermit",
+          "raceAbilityBonuses": {
+            "int": 1,
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Medicine",
+            "Religion"
+          ],
+          "advancementSlots": 8,
+          "originFeat": null,
+          "regularFeat": "Weapon Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-origin-l1",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "level": 1,
+          "race": "Human",
+          "background": "Sage",
+          "raceAbilityBonuses": {
+            "str": 1,
+            "dex": 1,
+            "con": 1,
+            "int": 1,
+            "wis": 1,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Arcana",
+            "History"
+          ],
+          "advancementSlots": 0,
+          "originFeat": null,
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-origin-l4",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "level": 4,
+          "race": "Half-Elf",
+          "background": "Urchin",
+          "raceAbilityBonuses": {
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Sleight of Hand",
+            "Stealth"
+          ],
+          "advancementSlots": 1,
+          "originFeat": null,
+          "regularFeat": "Polearm Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-origin-l8",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Entertainer",
+          "raceAbilityBonuses": {
+            "int": 2
+          },
+          "backgroundSkills": [
+            "Acrobatics",
+            "Performance"
+          ],
+          "advancementSlots": 3,
+          "originFeat": null,
+          "regularFeat": "Actor",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-origin-l12",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "level": 12,
+          "race": "Dragonborn",
+          "background": "Noble",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "History",
+            "Persuasion"
+          ],
+          "advancementSlots": 4,
+          "originFeat": null,
+          "regularFeat": "Skulker",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-origin-l16",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "level": 16,
+          "race": "Halfling",
+          "background": "Soldier",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Intimidation"
+          ],
+          "advancementSlots": 6,
+          "originFeat": null,
+          "regularFeat": "Dungeon Delver",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-origin-l19",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "level": 19,
+          "race": "Human",
+          "background": "Charlatan",
+          "raceAbilityBonuses": {
+            "str": 1,
+            "dex": 1,
+            "con": 1,
+            "int": 1,
+            "wis": 1,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Deception",
+            "Sleight of Hand"
+          ],
+          "advancementSlots": 7,
+          "originFeat": null,
+          "regularFeat": "Skulker",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-origin-l20",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "level": 20,
+          "race": "Elf",
+          "background": "Criminal",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Deception",
+            "Stealth"
+          ],
+          "advancementSlots": 7,
+          "originFeat": null,
+          "regularFeat": "Durable",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-origin-l1",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "level": 1,
+          "race": "Tiefling",
+          "background": "Hermit",
+          "raceAbilityBonuses": {
+            "int": 1,
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Medicine",
+            "Religion"
+          ],
+          "advancementSlots": 0,
+          "originFeat": null,
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-origin-l4",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "level": 4,
+          "race": "Gnome",
+          "background": "Sage",
+          "raceAbilityBonuses": {
+            "int": 2
+          },
+          "backgroundSkills": [
+            "Arcana",
+            "History"
+          ],
+          "advancementSlots": 1,
+          "originFeat": null,
+          "regularFeat": "Observant",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-origin-l8",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "level": 8,
+          "race": "Dragonborn",
+          "background": "Acolyte",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Insight",
+            "Religion"
+          ],
+          "advancementSlots": 3,
+          "originFeat": null,
+          "regularFeat": "Sentinel",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-origin-l12",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "level": 12,
+          "race": "Halfling",
+          "background": "Folk Hero",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Animal Handling",
+            "Survival"
+          ],
+          "advancementSlots": 5,
+          "originFeat": null,
+          "regularFeat": "Shield Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-origin-l16",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "level": 16,
+          "race": "Elf",
+          "background": "Outlander",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Survival"
+          ],
+          "advancementSlots": 7,
+          "originFeat": null,
+          "regularFeat": "Dual Wielder",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-origin-l19",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "level": 19,
+          "race": "Tiefling",
+          "background": "Soldier",
+          "raceAbilityBonuses": {
+            "int": 1,
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Intimidation"
+          ],
+          "advancementSlots": 8,
+          "originFeat": null,
+          "regularFeat": "Shield Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-origin-l20",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "level": 20,
+          "race": "Dwarf",
+          "background": "Urchin",
+          "raceAbilityBonuses": {
+            "con": 2
+          },
+          "backgroundSkills": [
+            "Sleight of Hand",
+            "Stealth"
+          ],
+          "advancementSlots": 8,
+          "originFeat": null,
+          "regularFeat": "Athlete",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-origin-l1",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "level": 1,
+          "race": "Half-Orc",
+          "background": "Entertainer",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "con": 1
+          },
+          "backgroundSkills": [
+            "Acrobatics",
+            "Performance"
+          ],
+          "advancementSlots": 0,
+          "originFeat": null,
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-origin-l4",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "level": 4,
+          "race": "Dragonborn",
+          "background": "Hermit",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Medicine",
+            "Religion"
+          ],
+          "advancementSlots": 1,
+          "originFeat": null,
+          "regularFeat": "Medium Armor Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-origin-l8",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "level": 8,
+          "race": "Halfling",
+          "background": "Sailor",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Perception"
+          ],
+          "advancementSlots": 2,
+          "originFeat": null,
+          "regularFeat": "Mobile",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-origin-l12",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "level": 12,
+          "race": "Elf",
+          "background": "Charlatan",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Deception",
+            "Sleight of Hand"
+          ],
+          "advancementSlots": 5,
+          "originFeat": null,
+          "regularFeat": "Sharpshooter",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-origin-l16",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "level": 16,
+          "race": "Dwarf",
+          "background": "Guild Artisan",
+          "raceAbilityBonuses": {
+            "con": 2
+          },
+          "backgroundSkills": [
+            "Insight",
+            "Persuasion"
+          ],
+          "advancementSlots": 7,
+          "originFeat": null,
+          "regularFeat": "Defensive Duelist",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-origin-l19",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "level": 19,
+          "race": "Half-Orc",
+          "background": "Outlander",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "con": 1
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Survival"
+          ],
+          "advancementSlots": 9,
+          "originFeat": null,
+          "regularFeat": "Sharpshooter",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-origin-l20",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "level": 20,
+          "race": "Human",
+          "background": "Sage",
+          "raceAbilityBonuses": {
+            "str": 1,
+            "dex": 1,
+            "con": 1,
+            "int": 1,
+            "wis": 1,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Arcana",
+            "History"
+          ],
+          "advancementSlots": 9,
+          "originFeat": null,
+          "regularFeat": "Alert",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-origin-l1",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "level": 1,
+          "race": "Dwarf",
+          "background": "Urchin",
+          "raceAbilityBonuses": {
+            "con": 2
+          },
+          "backgroundSkills": [
+            "Sleight of Hand",
+            "Stealth"
+          ],
+          "advancementSlots": 0,
+          "originFeat": null,
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-origin-l4",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "level": 4,
+          "race": "Half-Orc",
+          "background": "Criminal",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "con": 1
+          },
+          "backgroundSkills": [
+            "Deception",
+            "Stealth"
+          ],
+          "advancementSlots": 1,
+          "originFeat": null,
+          "regularFeat": "Resilient",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-origin-l8",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "level": 8,
+          "race": "Half-Elf",
+          "background": "Hermit",
+          "raceAbilityBonuses": {
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Medicine",
+            "Religion"
+          ],
+          "advancementSlots": 3,
+          "originFeat": null,
+          "regularFeat": "Charger",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-origin-l12",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "level": 12,
+          "race": "Gnome",
+          "background": "Sailor",
+          "raceAbilityBonuses": {
+            "int": 2
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Perception"
+          ],
+          "advancementSlots": 4,
+          "originFeat": null,
+          "regularFeat": "Spell Sniper",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-origin-l16",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "level": 16,
+          "race": "Dragonborn",
+          "background": "Charlatan",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Deception",
+            "Sleight of Hand"
+          ],
+          "advancementSlots": 6,
+          "originFeat": null,
+          "regularFeat": "Elemental Adept",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-origin-l19",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "level": 19,
+          "race": "Dwarf",
+          "background": "Folk Hero",
+          "raceAbilityBonuses": {
+            "con": 2
+          },
+          "backgroundSkills": [
+            "Animal Handling",
+            "Survival"
+          ],
+          "advancementSlots": 8,
+          "originFeat": null,
+          "regularFeat": "Spell Sniper",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-origin-l20",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "level": 20,
+          "race": "Halfling",
+          "background": "Guild Artisan",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Insight",
+            "Persuasion"
+          ],
+          "advancementSlots": 8,
+          "originFeat": null,
+          "regularFeat": "Grappler",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-origin-l1",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "level": 1,
+          "race": "Human",
+          "background": "Sage",
+          "raceAbilityBonuses": {
+            "str": 1,
+            "dex": 1,
+            "con": 1,
+            "int": 1,
+            "wis": 1,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Arcana",
+            "History"
+          ],
+          "advancementSlots": 0,
+          "originFeat": null,
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-origin-l4",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "level": 4,
+          "race": "Half-Elf",
+          "background": "Urchin",
+          "raceAbilityBonuses": {
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Sleight of Hand",
+            "Stealth"
+          ],
+          "advancementSlots": 1,
+          "originFeat": null,
+          "regularFeat": "Polearm Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-origin-l8",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Entertainer",
+          "raceAbilityBonuses": {
+            "int": 2
+          },
+          "backgroundSkills": [
+            "Acrobatics",
+            "Performance"
+          ],
+          "advancementSlots": 3,
+          "originFeat": null,
+          "regularFeat": "Actor",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-origin-l12",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "level": 12,
+          "race": "Dragonborn",
+          "background": "Noble",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "History",
+            "Persuasion"
+          ],
+          "advancementSlots": 5,
+          "originFeat": null,
+          "regularFeat": "Skulker",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-origin-l16",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "level": 16,
+          "race": "Halfling",
+          "background": "Soldier",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Intimidation"
+          ],
+          "advancementSlots": 7,
+          "originFeat": null,
+          "regularFeat": "Dungeon Delver",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-origin-l19",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "level": 19,
+          "race": "Human",
+          "background": "Charlatan",
+          "raceAbilityBonuses": {
+            "str": 1,
+            "dex": 1,
+            "con": 1,
+            "int": 1,
+            "wis": 1,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Deception",
+            "Sleight of Hand"
+          ],
+          "advancementSlots": 8,
+          "originFeat": null,
+          "regularFeat": "Skulker",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-origin-l20",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "level": 20,
+          "race": "Elf",
+          "background": "Criminal",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Deception",
+            "Stealth"
+          ],
+          "advancementSlots": 8,
+          "originFeat": null,
+          "regularFeat": "Durable",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-origin-l1",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "level": 1,
+          "race": "Tiefling",
+          "background": "Hermit",
+          "raceAbilityBonuses": {
+            "int": 1,
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Medicine",
+            "Religion"
+          ],
+          "advancementSlots": 0,
+          "originFeat": null,
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-origin-l4",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "level": 4,
+          "race": "Gnome",
+          "background": "Sage",
+          "raceAbilityBonuses": {
+            "int": 2
+          },
+          "backgroundSkills": [
+            "Arcana",
+            "History"
+          ],
+          "advancementSlots": 1,
+          "originFeat": null,
+          "regularFeat": "Observant",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-origin-l8",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "level": 8,
+          "race": "Dragonborn",
+          "background": "Acolyte",
+          "raceAbilityBonuses": {
+            "str": 2,
+            "cha": 1
+          },
+          "backgroundSkills": [
+            "Insight",
+            "Religion"
+          ],
+          "advancementSlots": 3,
+          "originFeat": null,
+          "regularFeat": "Sentinel",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-origin-l12",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "level": 12,
+          "race": "Halfling",
+          "background": "Folk Hero",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Animal Handling",
+            "Survival"
+          ],
+          "advancementSlots": 5,
+          "originFeat": null,
+          "regularFeat": "Shield Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-origin-l16",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "level": 16,
+          "race": "Elf",
+          "background": "Outlander",
+          "raceAbilityBonuses": {
+            "dex": 2
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Survival"
+          ],
+          "advancementSlots": 7,
+          "originFeat": null,
+          "regularFeat": "Dual Wielder",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-origin-l19",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "level": 19,
+          "race": "Tiefling",
+          "background": "Soldier",
+          "raceAbilityBonuses": {
+            "int": 1,
+            "cha": 2
+          },
+          "backgroundSkills": [
+            "Athletics",
+            "Intimidation"
+          ],
+          "advancementSlots": 8,
+          "originFeat": null,
+          "regularFeat": "Shield Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-origin-l20",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "level": 20,
+          "race": "Dwarf",
+          "background": "Urchin",
+          "raceAbilityBonuses": {
+            "con": 2
+          },
+          "backgroundSkills": [
+            "Sleight of Hand",
+            "Stealth"
+          ],
+          "advancementSlots": 8,
+          "originFeat": null,
+          "regularFeat": "Athlete",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "ruleset": "dnd_2024",
+      "counts": {
+        "classes": 12,
+        "races": 10,
+        "backgrounds": 16,
+        "feats": 77,
+        "scenarios": 84
+      },
+      "blockers": [],
+      "warnings": [
+        "Aasimar: no ability bonus metadata",
+        "Dragonborn: no ability bonus metadata",
+        "Dwarf: no ability bonus metadata",
+        "Elf: no ability bonus metadata",
+        "Gnome: no ability bonus metadata",
+        "Goliath: no ability bonus metadata",
+        "Halfling: no ability bonus metadata",
+        "Human: no ability bonus metadata",
+        "Orc: no ability bonus metadata",
+        "Tiefling: no ability bonus metadata"
+      ],
+      "scenarios": [
+        {
+          "id": "dnd_2024-barbarian-origin-l1",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "level": 1,
+          "race": "Dragonborn",
+          "background": "Sailor",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Acrobatics",
+            "Perception"
+          ],
+          "advancementSlots": 0,
+          "originFeat": "Alert",
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-origin-l4",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "level": 4,
+          "race": "Human",
+          "background": "Wayfarer",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Insight",
+            "Stealth"
+          ],
+          "advancementSlots": 1,
+          "originFeat": "Alert",
+          "regularFeat": "Resilient",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-origin-l8",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "level": 8,
+          "race": "Goliath",
+          "background": "Criminal",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Sleight of Hand",
+            "Stealth"
+          ],
+          "advancementSlots": 3,
+          "originFeat": "Alert",
+          "regularFeat": "Ritual Caster",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-origin-l12",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "level": 12,
+          "race": "Elf",
+          "background": "Guide",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Stealth",
+            "Survival"
+          ],
+          "advancementSlots": 5,
+          "originFeat": "Alert",
+          "regularFeat": "Boon of Fate",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-origin-l16",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "level": 16,
+          "race": "Dragonborn",
+          "background": "Sage",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Arcana",
+            "History"
+          ],
+          "advancementSlots": 7,
+          "originFeat": "Alert",
+          "regularFeat": "Ability Score Improvement",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-origin-l19",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "level": 19,
+          "race": "Human",
+          "background": "Soldier",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Athletics",
+            "Intimidation"
+          ],
+          "advancementSlots": 8,
+          "originFeat": "Alert",
+          "regularFeat": "Piercer",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-origin-l20",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "level": 20,
+          "race": "Tiefling",
+          "background": "Wayfarer",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Insight",
+            "Stealth"
+          ],
+          "advancementSlots": 8,
+          "originFeat": "Alert",
+          "regularFeat": "Skill Expert",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-origin-l1",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "level": 1,
+          "race": "Halfling",
+          "background": "Scribe",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Investigation",
+            "Perception"
+          ],
+          "advancementSlots": 0,
+          "originFeat": "Alert",
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-origin-l4",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "level": 4,
+          "race": "Dwarf",
+          "background": "Acolyte",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Insight",
+            "Religion"
+          ],
+          "advancementSlots": 1,
+          "originFeat": "Alert",
+          "regularFeat": "Fey-Touched",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-origin-l8",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "level": 8,
+          "race": "Aasimar",
+          "background": "Entertainer",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Acrobatics",
+            "Performance"
+          ],
+          "advancementSlots": 3,
+          "originFeat": "Alert",
+          "regularFeat": "Medium Armor Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-origin-l12",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "level": 12,
+          "race": "Orc",
+          "background": "Hermit",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Medicine",
+            "Religion"
+          ],
+          "advancementSlots": 4,
+          "originFeat": "Alert",
+          "regularFeat": "Thrown Weapon Fighting",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-origin-l16",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "level": 16,
+          "race": "Halfling",
+          "background": "Sailor",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Acrobatics",
+            "Perception"
+          ],
+          "advancementSlots": 6,
+          "originFeat": "Alert",
+          "regularFeat": "Musician",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-origin-l19",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "level": 19,
+          "race": "Dwarf",
+          "background": "Wayfarer",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Insight",
+            "Stealth"
+          ],
+          "advancementSlots": 7,
+          "originFeat": "Alert",
+          "regularFeat": "Dual Wielder",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-origin-l20",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "level": 20,
+          "race": "Gnome",
+          "background": "Acolyte",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Insight",
+            "Religion"
+          ],
+          "advancementSlots": 7,
+          "originFeat": "Alert",
+          "regularFeat": "Piercer",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-origin-l1",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "level": 1,
+          "race": "Orc",
+          "background": "Criminal",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Sleight of Hand",
+            "Stealth"
+          ],
+          "advancementSlots": 0,
+          "originFeat": "Alert",
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-origin-l4",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "level": 4,
+          "race": "Gnome",
+          "background": "Guard",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Athletics",
+            "Perception"
+          ],
+          "advancementSlots": 1,
+          "originFeat": "Alert",
+          "regularFeat": "Mage Slayer",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-origin-l8",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "level": 8,
+          "race": "Dwarf",
+          "background": "Noble",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "History",
+            "Persuasion"
+          ],
+          "advancementSlots": 3,
+          "originFeat": "Alert",
+          "regularFeat": "Mounted Combatant",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-origin-l12",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "level": 12,
+          "race": "Aasimar",
+          "background": "Soldier",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Athletics",
+            "Intimidation"
+          ],
+          "advancementSlots": 4,
+          "originFeat": "Alert",
+          "regularFeat": "Unarmed Fighting",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-origin-l16",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "level": 16,
+          "race": "Orc",
+          "background": "Charlatan",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Deception",
+            "Sleight of Hand"
+          ],
+          "advancementSlots": 5,
+          "originFeat": "Alert",
+          "regularFeat": "Skilled",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-origin-l19",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "level": 19,
+          "race": "Gnome",
+          "background": "Farmer",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Animal Handling",
+            "Nature"
+          ],
+          "advancementSlots": 7,
+          "originFeat": "Alert",
+          "regularFeat": "Fey-Touched",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-origin-l20",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "level": 20,
+          "race": "Halfling",
+          "background": "Guard",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Athletics",
+            "Perception"
+          ],
+          "advancementSlots": 7,
+          "originFeat": "Alert",
+          "regularFeat": "Resilient",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-origin-l1",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "level": 1,
+          "race": "Human",
+          "background": "Acolyte",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Insight",
+            "Religion"
+          ],
+          "advancementSlots": 0,
+          "originFeat": "Alert",
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-origin-l4",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "level": 4,
+          "race": "Elf",
+          "background": "Criminal",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Sleight of Hand",
+            "Stealth"
+          ],
+          "advancementSlots": 1,
+          "originFeat": "Alert",
+          "regularFeat": "Inspiring Leader",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-origin-l8",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "level": 8,
+          "race": "Dragonborn",
+          "background": "Guide",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Stealth",
+            "Survival"
+          ],
+          "advancementSlots": 3,
+          "originFeat": "Alert",
+          "regularFeat": "Moderately Armored",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-origin-l12",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "level": 12,
+          "race": "Tiefling",
+          "background": "Sage",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Arcana",
+            "History"
+          ],
+          "advancementSlots": 5,
+          "originFeat": "Alert",
+          "regularFeat": "Two-Weapon Fighting",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-origin-l16",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "level": 16,
+          "race": "Human",
+          "background": "Wayfarer",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Insight",
+            "Stealth"
+          ],
+          "advancementSlots": 7,
+          "originFeat": "Alert",
+          "regularFeat": "Savage Attacker",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-origin-l19",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "level": 19,
+          "race": "Elf",
+          "background": "Charlatan",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Deception",
+            "Sleight of Hand"
+          ],
+          "advancementSlots": 8,
+          "originFeat": "Alert",
+          "regularFeat": "Elemental Adept",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-origin-l20",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "level": 20,
+          "race": "Goliath",
+          "background": "Criminal",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Sleight of Hand",
+            "Stealth"
+          ],
+          "advancementSlots": 8,
+          "originFeat": "Alert",
+          "regularFeat": "Polearm Master",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-origin-l1",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "level": 1,
+          "race": "Tiefling",
+          "background": "Guard",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Athletics",
+            "Perception"
+          ],
+          "advancementSlots": 0,
+          "originFeat": "Alert",
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-origin-l4",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "level": 4,
+          "race": "Goliath",
+          "background": "Merchant",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Animal Handling",
+            "Persuasion"
+          ],
+          "advancementSlots": 1,
+          "originFeat": "Alert",
+          "regularFeat": "Piercer",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-origin-l8",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "level": 8,
+          "race": "Elf",
+          "background": "Scribe",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Investigation",
+            "Perception"
+          ],
+          "advancementSlots": 4,
+          "originFeat": "Alert",
+          "regularFeat": "Observant",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-origin-l12",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "level": 12,
+          "race": "Dragonborn",
+          "background": "Artisan",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Investigation",
+            "Persuasion"
+          ],
+          "advancementSlots": 6,
+          "originFeat": "Alert",
+          "regularFeat": "Boon of Dimensional Travel",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-origin-l16",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "level": 16,
+          "race": "Tiefling",
+          "background": "Farmer",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Animal Handling",
+            "Nature"
+          ],
+          "advancementSlots": 9,
+          "originFeat": "Alert",
+          "regularFeat": "Tavern Brawler",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-origin-l19",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "level": 19,
+          "race": "Goliath",
+          "background": "Hermit",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Medicine",
+            "Religion"
+          ],
+          "advancementSlots": 11,
+          "originFeat": "Alert",
+          "regularFeat": "Inspiring Leader",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-origin-l20",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "level": 20,
+          "race": "Human",
+          "background": "Merchant",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Animal Handling",
+            "Persuasion"
+          ],
+          "advancementSlots": 11,
+          "originFeat": "Alert",
+          "regularFeat": "Sentinel",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-origin-l1",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "level": 1,
+          "race": "Halfling",
+          "background": "Scribe",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Investigation",
+            "Perception"
+          ],
+          "advancementSlots": 0,
+          "originFeat": "Alert",
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-origin-l4",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "level": 4,
+          "race": "Dwarf",
+          "background": "Acolyte",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Insight",
+            "Religion"
+          ],
+          "advancementSlots": 1,
+          "originFeat": "Alert",
+          "regularFeat": "Fey-Touched",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-origin-l8",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "level": 8,
+          "race": "Aasimar",
+          "background": "Entertainer",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Acrobatics",
+            "Performance"
+          ],
+          "advancementSlots": 3,
+          "originFeat": "Alert",
+          "regularFeat": "Medium Armor Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-origin-l12",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "level": 12,
+          "race": "Orc",
+          "background": "Hermit",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Medicine",
+            "Religion"
+          ],
+          "advancementSlots": 5,
+          "originFeat": "Alert",
+          "regularFeat": "Thrown Weapon Fighting",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-origin-l16",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "level": 16,
+          "race": "Halfling",
+          "background": "Sailor",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Acrobatics",
+            "Perception"
+          ],
+          "advancementSlots": 6,
+          "originFeat": "Alert",
+          "regularFeat": "Musician",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-origin-l19",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "level": 19,
+          "race": "Dwarf",
+          "background": "Wayfarer",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Insight",
+            "Stealth"
+          ],
+          "advancementSlots": 8,
+          "originFeat": "Alert",
+          "regularFeat": "Dual Wielder",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-origin-l20",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "level": 20,
+          "race": "Gnome",
+          "background": "Acolyte",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Insight",
+            "Religion"
+          ],
+          "advancementSlots": 8,
+          "originFeat": "Alert",
+          "regularFeat": "Piercer",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-origin-l1",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "level": 1,
+          "race": "Tiefling",
+          "background": "Guard",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Athletics",
+            "Perception"
+          ],
+          "advancementSlots": 0,
+          "originFeat": "Alert",
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-origin-l4",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "level": 4,
+          "race": "Goliath",
+          "background": "Merchant",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Animal Handling",
+            "Persuasion"
+          ],
+          "advancementSlots": 1,
+          "originFeat": "Alert",
+          "regularFeat": "Piercer",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-origin-l8",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "level": 8,
+          "race": "Elf",
+          "background": "Scribe",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Investigation",
+            "Perception"
+          ],
+          "advancementSlots": 3,
+          "originFeat": "Alert",
+          "regularFeat": "Observant",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-origin-l12",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "level": 12,
+          "race": "Dragonborn",
+          "background": "Artisan",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Investigation",
+            "Persuasion"
+          ],
+          "advancementSlots": 4,
+          "originFeat": "Alert",
+          "regularFeat": "Boon of Dimensional Travel",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-origin-l16",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "level": 16,
+          "race": "Tiefling",
+          "background": "Farmer",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Animal Handling",
+            "Nature"
+          ],
+          "advancementSlots": 6,
+          "originFeat": "Alert",
+          "regularFeat": "Tavern Brawler",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-origin-l19",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "level": 19,
+          "race": "Goliath",
+          "background": "Hermit",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Medicine",
+            "Religion"
+          ],
+          "advancementSlots": 7,
+          "originFeat": "Alert",
+          "regularFeat": "Inspiring Leader",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-origin-l20",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "level": 20,
+          "race": "Human",
+          "background": "Merchant",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Animal Handling",
+            "Persuasion"
+          ],
+          "advancementSlots": 8,
+          "originFeat": "Alert",
+          "regularFeat": "Sentinel",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-origin-l1",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "level": 1,
+          "race": "Orc",
+          "background": "Criminal",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Sleight of Hand",
+            "Stealth"
+          ],
+          "advancementSlots": 0,
+          "originFeat": "Alert",
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-origin-l4",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "level": 4,
+          "race": "Gnome",
+          "background": "Guard",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Athletics",
+            "Perception"
+          ],
+          "advancementSlots": 1,
+          "originFeat": "Alert",
+          "regularFeat": "Mage Slayer",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-origin-l8",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "level": 8,
+          "race": "Dwarf",
+          "background": "Noble",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "History",
+            "Persuasion"
+          ],
+          "advancementSlots": 3,
+          "originFeat": "Alert",
+          "regularFeat": "Mounted Combatant",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-origin-l12",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "level": 12,
+          "race": "Aasimar",
+          "background": "Soldier",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Athletics",
+            "Intimidation"
+          ],
+          "advancementSlots": 5,
+          "originFeat": "Alert",
+          "regularFeat": "Unarmed Fighting",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-origin-l16",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "level": 16,
+          "race": "Orc",
+          "background": "Charlatan",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Deception",
+            "Sleight of Hand"
+          ],
+          "advancementSlots": 7,
+          "originFeat": "Alert",
+          "regularFeat": "Skilled",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-origin-l19",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "level": 19,
+          "race": "Gnome",
+          "background": "Farmer",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Animal Handling",
+            "Nature"
+          ],
+          "advancementSlots": 8,
+          "originFeat": "Alert",
+          "regularFeat": "Fey-Touched",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-origin-l20",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "level": 20,
+          "race": "Halfling",
+          "background": "Guard",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Athletics",
+            "Perception"
+          ],
+          "advancementSlots": 8,
+          "originFeat": "Alert",
+          "regularFeat": "Resilient",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-origin-l1",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "level": 1,
+          "race": "Human",
+          "background": "Acolyte",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Insight",
+            "Religion"
+          ],
+          "advancementSlots": 0,
+          "originFeat": "Alert",
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-origin-l4",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "level": 4,
+          "race": "Elf",
+          "background": "Criminal",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Sleight of Hand",
+            "Stealth"
+          ],
+          "advancementSlots": 1,
+          "originFeat": "Alert",
+          "regularFeat": "Inspiring Leader",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-origin-l8",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "level": 8,
+          "race": "Dragonborn",
+          "background": "Guide",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Stealth",
+            "Survival"
+          ],
+          "advancementSlots": 2,
+          "originFeat": "Alert",
+          "regularFeat": "Moderately Armored",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-origin-l12",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "level": 12,
+          "race": "Tiefling",
+          "background": "Sage",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Arcana",
+            "History"
+          ],
+          "advancementSlots": 5,
+          "originFeat": "Alert",
+          "regularFeat": "Two-Weapon Fighting",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-origin-l16",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "level": 16,
+          "race": "Human",
+          "background": "Wayfarer",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Insight",
+            "Stealth"
+          ],
+          "advancementSlots": 7,
+          "originFeat": "Alert",
+          "regularFeat": "Savage Attacker",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-origin-l19",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "level": 19,
+          "race": "Elf",
+          "background": "Charlatan",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Deception",
+            "Sleight of Hand"
+          ],
+          "advancementSlots": 9,
+          "originFeat": "Alert",
+          "regularFeat": "Elemental Adept",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-origin-l20",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "level": 20,
+          "race": "Goliath",
+          "background": "Criminal",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Sleight of Hand",
+            "Stealth"
+          ],
+          "advancementSlots": 9,
+          "originFeat": "Alert",
+          "regularFeat": "Polearm Master",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-origin-l1",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "level": 1,
+          "race": "Aasimar",
+          "background": "Merchant",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Animal Handling",
+            "Persuasion"
+          ],
+          "advancementSlots": 0,
+          "originFeat": "Alert",
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-origin-l4",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "level": 4,
+          "race": "Halfling",
+          "background": "Sailor",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Acrobatics",
+            "Perception"
+          ],
+          "advancementSlots": 1,
+          "originFeat": "Alert",
+          "regularFeat": "Polearm Master",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-origin-l8",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Acolyte",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Insight",
+            "Religion"
+          ],
+          "advancementSlots": 3,
+          "originFeat": "Alert",
+          "regularFeat": "Poisoner",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-origin-l12",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "level": 12,
+          "race": "Dwarf",
+          "background": "Entertainer",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Acrobatics",
+            "Performance"
+          ],
+          "advancementSlots": 4,
+          "originFeat": "Alert",
+          "regularFeat": "Boon of Energy Resistance",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-origin-l16",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "level": 16,
+          "race": "Aasimar",
+          "background": "Hermit",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Medicine",
+            "Religion"
+          ],
+          "advancementSlots": 6,
+          "originFeat": "Alert",
+          "regularFeat": "Tough",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-origin-l19",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "level": 19,
+          "race": "Halfling",
+          "background": "Sage",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Arcana",
+            "History"
+          ],
+          "advancementSlots": 8,
+          "originFeat": "Alert",
+          "regularFeat": "Mage Slayer",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-origin-l20",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "level": 20,
+          "race": "Orc",
+          "background": "Sailor",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Acrobatics",
+            "Perception"
+          ],
+          "advancementSlots": 8,
+          "originFeat": "Alert",
+          "regularFeat": "Sharpshooter",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-origin-l1",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "level": 1,
+          "race": "Tiefling",
+          "background": "Guard",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Athletics",
+            "Perception"
+          ],
+          "advancementSlots": 0,
+          "originFeat": "Alert",
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-origin-l4",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "level": 4,
+          "race": "Goliath",
+          "background": "Merchant",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Animal Handling",
+            "Persuasion"
+          ],
+          "advancementSlots": 1,
+          "originFeat": "Alert",
+          "regularFeat": "Piercer",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-origin-l8",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "level": 8,
+          "race": "Elf",
+          "background": "Scribe",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Investigation",
+            "Perception"
+          ],
+          "advancementSlots": 3,
+          "originFeat": "Alert",
+          "regularFeat": "Observant",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-origin-l12",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "level": 12,
+          "race": "Dragonborn",
+          "background": "Artisan",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Investigation",
+            "Persuasion"
+          ],
+          "advancementSlots": 5,
+          "originFeat": "Alert",
+          "regularFeat": "Boon of Dimensional Travel",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-origin-l16",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "level": 16,
+          "race": "Tiefling",
+          "background": "Farmer",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Animal Handling",
+            "Nature"
+          ],
+          "advancementSlots": 7,
+          "originFeat": "Alert",
+          "regularFeat": "Tavern Brawler",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-origin-l19",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "level": 19,
+          "race": "Goliath",
+          "background": "Hermit",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Medicine",
+            "Religion"
+          ],
+          "advancementSlots": 8,
+          "originFeat": "Alert",
+          "regularFeat": "Inspiring Leader",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-origin-l20",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "level": 20,
+          "race": "Human",
+          "background": "Merchant",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Animal Handling",
+            "Persuasion"
+          ],
+          "advancementSlots": 8,
+          "originFeat": "Alert",
+          "regularFeat": "Sentinel",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-origin-l1",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "level": 1,
+          "race": "Orc",
+          "background": "Criminal",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Sleight of Hand",
+            "Stealth"
+          ],
+          "advancementSlots": 0,
+          "originFeat": "Alert",
+          "regularFeat": null,
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-origin-l4",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "level": 4,
+          "race": "Gnome",
+          "background": "Guard",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Athletics",
+            "Perception"
+          ],
+          "advancementSlots": 1,
+          "originFeat": "Alert",
+          "regularFeat": "Mage Slayer",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-origin-l8",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "level": 8,
+          "race": "Dwarf",
+          "background": "Noble",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "History",
+            "Persuasion"
+          ],
+          "advancementSlots": 3,
+          "originFeat": "Alert",
+          "regularFeat": "Mounted Combatant",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-origin-l12",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "level": 12,
+          "race": "Aasimar",
+          "background": "Soldier",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Athletics",
+            "Intimidation"
+          ],
+          "advancementSlots": 5,
+          "originFeat": "Alert",
+          "regularFeat": "Unarmed Fighting",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-origin-l16",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "level": 16,
+          "race": "Orc",
+          "background": "Charlatan",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Deception",
+            "Sleight of Hand"
+          ],
+          "advancementSlots": 7,
+          "originFeat": "Alert",
+          "regularFeat": "Skilled",
+          "epicBoon": null,
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-origin-l19",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "level": 19,
+          "race": "Gnome",
+          "background": "Farmer",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Animal Handling",
+            "Nature"
+          ],
+          "advancementSlots": 8,
+          "originFeat": "Alert",
+          "regularFeat": "Fey-Touched",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-origin-l20",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "level": 20,
+          "race": "Halfling",
+          "background": "Guard",
+          "raceAbilityBonuses": {},
+          "backgroundSkills": [
+            "Athletics",
+            "Perception"
+          ],
+          "advancementSlots": 8,
+          "originFeat": "Alert",
+          "regularFeat": "Resilient",
+          "epicBoon": "Boon of Combat Prowess",
+          "lifecycle": {
+            "raceIdentity": true,
+            "backgroundIdentity": true,
+            "originAbilityMetadata": true,
+            "backgroundSkillMetadata": true,
+            "originFeatEligibility": true,
+            "regularFeatEligibility": true,
+            "epicBoonEligibility": true,
+            "persistenceIdentity": true
+          },
+          "blockers": [],
+          "status": "ready"
+        }
+      ]
+    }
+  ]
+}

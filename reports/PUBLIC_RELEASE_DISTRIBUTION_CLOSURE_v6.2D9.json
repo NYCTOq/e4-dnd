@@ -1,0 +1,100 @@
+{
+  "generatedAt": "2026-07-29T15:21:41.243Z",
+  "schemaVersion": "6.2D9",
+  "package": {
+    "name": "e4_dnd",
+    "version": "6.2.0",
+    "hasBuildScript": true,
+    "hasTestScript": true
+  },
+  "summary": {
+    "total": 6,
+    "ready": 6,
+    "blocked": 0,
+    "blockerCount": 0
+  },
+  "checks": [
+    {
+      "id": "web-entry",
+      "label": "Web Application Entry",
+      "requiredAll": [
+        "index.html",
+        "src",
+        "public"
+      ],
+      "requiredAny": [],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "pwa-shell",
+      "label": "PWA Shell",
+      "requiredAll": [],
+      "requiredAny": [
+        "public/manifest.webmanifest",
+        "public/manifest.json",
+        "src/manifest.webmanifest"
+      ],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "service-worker",
+      "label": "Service Worker Registration",
+      "requiredAll": [],
+      "requiredAny": [
+        "public/sw.js",
+        "public/service-worker.js",
+        "src/registerSW.ts",
+        "src/registerSW.tsx",
+        "src/serviceWorker.ts",
+        "src/serviceWorker.tsx",
+        "vite.config.ts"
+      ],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "release-tests",
+      "label": "Release Certification",
+      "requiredAll": [
+        "src/core/release/stablePlayerRelease.test.ts",
+        "src/core/release/stableReleaseHardening.test.ts",
+        "src/core/release/finalReleaseGate.test.ts",
+        "src/core/release/publicReleaseReadiness-v6.test.ts",
+        "src/core/release/releasePackaging-v5.144.test.ts",
+        "src/certification/player-readiness/releaseCandidateCertification-v6.2D8.test.ts"
+      ],
+      "requiredAny": [],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "offline-recovery",
+      "label": "Offline Recovery and Backup",
+      "requiredAll": [
+        "src/features/backup/characterBackup.test.ts",
+        "src/features/backup/fullBackup.test.ts",
+        "src/features/backup/backupRecovery.test.ts",
+        "src/features/characters/characterTransfer.test.ts",
+        "src/core/storage/characterHydration.test.ts"
+      ],
+      "requiredAny": [],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "performance",
+      "label": "Distribution Performance",
+      "requiredAll": [
+        "src/core/performance/bundlePerformanceBudget-v5.142.test.ts",
+        "src/core/rulesets/rulesetLoaderChunks.test.ts",
+        "src/core/qa/mobileAccessibilityPerformance.test.ts"
+      ],
+      "requiredAny": [],
+      "status": "ready",
+      "blockers": []
+    }
+  ],
+  "blockers": []
+}

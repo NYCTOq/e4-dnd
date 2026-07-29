@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-07-29T13:49:18.263Z",
+  "schemaVersion": "I-MEGA1",
+  "acceptance": {
+    "desktop": true,
+    "tablet": true,
+    "mobile": true,
+    "keyboardNavigation": true,
+    "persistenceReload": true,
+    "pwaShell": true
+  },
+  "dist": {
+    "hasIndex": true,
+    "hasManifest": true,
+    "hasServiceWorker": true
+  },
+  "reports": [
+    "FINAL_USER_ACCEPTANCE_I_MEGA1.json",
+    "FINAL_USER_ACCEPTANCE_I_MEGA1.md"
+  ]
+}

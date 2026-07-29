@@ -1,0 +1,124 @@
+{
+  "generatedAt": "2026-07-29T15:21:47.934Z",
+  "schemaVersion": "G-MEGA1",
+  "package": {
+    "name": "e4_dnd",
+    "version": "6.2.0",
+    "hasTestScript": true,
+    "hasBuildScript": true
+  },
+  "summary": {
+    "totalDomains": 8,
+    "readyDomains": 8,
+    "blockedDomains": 0,
+    "blockerCount": 0
+  },
+  "domains": [
+    {
+      "id": "hydration",
+      "label": "Save Hydration and Compatibility",
+      "requiredAll": [
+        "src/core/storage/characterHydration.test.ts",
+        "src/core/character/characterIntegrity.test.ts",
+        "src/core/character/characterLifecycle.integration.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "backup",
+      "label": "Pre-Migration Backup and Recovery",
+      "requiredAll": [
+        "src/features/backup/characterBackup.test.ts",
+        "src/features/backup/fullBackup.test.ts",
+        "src/features/backup/backupRecovery.test.ts",
+        "src/features/characters/characterTransfer.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "persistence",
+      "label": "Cross-Version Persistence",
+      "requiredAll": [
+        "src/certification/matrix/classSubclassPersistenceMatrix.test.ts",
+        "src/certification/matrix/levelUpCharacterPersistenceMatrix.test.ts",
+        "src/certification/matrix/spellCharacterCombatPersistenceMatrix.test.ts",
+        "src/certification/matrix/deathDyingCharacterPersistenceMatrix.test.ts",
+        "src/certification/matrix/restRecoveryPersistenceMatrix.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "release",
+      "label": "Versioning and Release Gates",
+      "requiredAll": [
+        "src/core/release/stablePlayerRelease.test.ts",
+        "src/core/release/stableReleaseHardening.test.ts",
+        "src/core/release/finalReleaseGate.test.ts",
+        "src/core/release/publicReleaseReadiness-v6.test.ts",
+        "src/core/release/releasePackaging-v5.144.test.ts",
+        "src/core/release/postReleaseQa.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "pwa-update",
+      "label": "PWA Update and Cache Strategy",
+      "requiredAll": [
+        "src/certification/player-readiness/postBuildOfflineInstallClosure-v6.2D10.test.ts"
+      ],
+      "requiredAny": [
+        "vite.config.ts",
+        "vite.config.js",
+        "src/registerSW.ts",
+        "src/registerSW.tsx",
+        "src/serviceWorker.ts",
+        "src/serviceWorker.tsx"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "rollback",
+      "label": "Rollback and Recovery Safety",
+      "requiredAll": [
+        "src/features/backup/backupRecovery.test.ts",
+        "src/core/release/stableReleaseHardening.test.ts",
+        "src/core/release/postReleaseQa.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "browser",
+      "label": "Browser Migration Shell",
+      "requiredAll": [
+        "e2e/save-migration-release-G-MEGA1.spec.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "release-artifacts",
+      "label": "Release Metadata Artifacts",
+      "requiredAll": [
+        "release/RELEASE_MANIFEST_G_MEGA1.json",
+        "release/CHANGELOG_G_MEGA1.md",
+        "release/ROLLBACK_PLAN_G_MEGA1.md"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    }
+  ],
+  "blockers": []
+}

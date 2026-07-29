@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-07-29T15:21:40.039Z",
+  "schemaVersion": "F-MEGA1",
+  "summary": {
+    "totalDomains": 8,
+    "readyDomains": 8,
+    "blockedDomains": 0,
+    "blockerCount": 0
+  },
+  "domains": [
+    {
+      "id": "class-progression",
+      "label": "Class Progression Accuracy",
+      "requiredAll": [
+        "src/certification/oracle/levelUpProgressionOracle.test.ts",
+        "src/certification/differential/levelUpProgressionDifferential.test.ts",
+        "src/core/rulesets/martialOfficialProgression.test.ts",
+        "src/core/rulesets/clericDruidOfficialProgression.test.ts",
+        "src/core/rulesets/bardSorcererOfficialProgression.test.ts",
+        "src/core/rulesets/warlockWizardOfficialProgression.test.ts",
+        "src/core/rulesets/halfCasterOfficialProgression.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "subclass",
+      "label": "Subclass Progression Accuracy",
+      "requiredAll": [
+        "src/core/rulesets/subclassExpansion.test.ts",
+        "src/core/rulesets/subclassRuntimeRules.test.ts",
+        "src/certification/matrix/classSubclassRuntimeScenarioMatrix.test.ts",
+        "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+        "src/certification/oracle/classSubclassRuntimeOracle.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "spellcasting",
+      "label": "Spellcasting Accuracy",
+      "requiredAll": [
+        "src/certification/oracle/spellcastingOracle.test.ts",
+        "src/certification/player-readiness/spellcastingRuntimeMatrix-v6.2C5.test.ts",
+        "src/core/rulesets/spellBuilderOfficial.test.ts",
+        "src/core/rulesets/spellRuntimeOfficial2024.test.ts",
+        "src/core/rulesets/damageSaveSpellOfficial.test.ts",
+        "src/core/rulesets/spellControlOfficial.test.ts",
+        "src/core/rulesets/spellDefenseMovementOfficial.test.ts",
+        "src/core/rulesets/spellSummonPersistentOfficial.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "feat-origin",
+      "label": "Feat and Origin Accuracy",
+      "requiredAll": [
+        "src/core/rulesets/featOfficialCertification.test.ts",
+        "src/core/rulesets/featCatalog2024Official.test.ts",
+        "src/certification/player-readiness/originFeatRuntimeMatrix-v6.2C7.test.ts",
+        "src/certification/oracle/classBackgroundOracle.test.ts",
+        "src/core/rulesets/ancestryChoiceRules.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "multiclass",
+      "label": "Multiclass Accuracy",
+      "requiredAll": [
+        "src/core/rulesets/multiclassOfficialCertification.test.ts",
+        "src/core/rulesets/multiclassRules.test.ts",
+        "src/core/rulesets/multiclassSpellcastingSeparation.test.ts",
+        "src/core/rulesets/multiclassPactMagic.test.ts",
+        "src/certification/player-readiness/multiclassRuntimeMatrix-v6.2C8.test.ts",
+        "src/certification/oracle/advancedMulticlassOracle.test.ts",
+        "src/certification/differential/advancedMulticlassDifferential.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "equipment-items",
+      "label": "Equipment and Magic Item Accuracy",
+      "requiredAll": [
+        "src/certification/oracle/equipmentCombatOracle.test.ts",
+        "src/certification/differential/equipmentCombatDifferential.test.ts",
+        "src/certification/matrix/equipmentCombatScenarioMatrix.test.ts",
+        "src/core/rulesets/magicItemRules.test.ts",
+        "src/core/rulesets/itemEffectRuntimeRules.test.ts",
+        "src/core/rulesets/equipmentMagicItemFinalCoverage.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "ruleset-differential",
+      "label": "2014 and 2024 Differential Accuracy",
+      "requiredAll": [
+        "src/certification/differential/crossDomainBuilderRecordSheetDifferential.test.ts",
+        "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+        "src/certification/differential/spellRuntimeCombatDifferential.test.ts",
+        "src/certification/differential/restRecoveryDifferential.test.ts",
+        "src/certification/differential/deathDyingDifferential.test.ts",
+        "src/certification/differential/runtimeCoverageDifferential.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "content-integrity",
+      "label": "Content Integrity and Release Audit",
+      "requiredAll": [
+        "src/core/rulesets/contentIntegrityAudit.test.ts",
+        "src/core/rulesets/contentIntegrityAudit.integration.test.ts",
+        "src/core/rulesets/fullCharacterCertification.integration.test.ts",
+        "src/core/rulesets/runtimeCoverageCertification.integration.test.ts",
+        "src/core/quality/releaseReadinessAudit.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    }
+  ],
+  "blockers": []
+}

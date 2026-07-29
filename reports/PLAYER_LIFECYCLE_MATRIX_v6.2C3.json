@@ -1,0 +1,5902 @@
+{
+  "generatedAt": "2026-07-29T15:21:33.499Z",
+  "scope": {
+    "rulesets": [
+      "dnd_2014",
+      "dnd_2024"
+    ],
+    "lifecycleLevels": [
+      1,
+      3,
+      5,
+      8,
+      11,
+      17,
+      20
+    ],
+    "expectedScenarios": 168,
+    "lifecycleSteps": [
+      "creation",
+      "subclassSelection",
+      "featSelection",
+      "spellSelection",
+      "playModeEntry",
+      "shortRest",
+      "longRest",
+      "persistence",
+      "levelUp"
+    ]
+  },
+  "summary": {
+    "ready": 168,
+    "blocked": 0,
+    "total": 168,
+    "structuralBlockers": 0
+  },
+  "rulesets": [
+    {
+      "ruleset": "dnd_2014",
+      "counts": {
+        "classes": 12,
+        "subclasses": 73,
+        "races": 9,
+        "backgrounds": 13,
+        "feats": 35,
+        "spells": 335,
+        "scenarios": 84
+      },
+      "blockers": [],
+      "warnings": [],
+      "scenarios": [
+        {
+          "id": "dnd_2014-barbarian-l1",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "level": 1,
+          "race": "Dwarf",
+          "background": "Criminal",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-l3",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "level": 3,
+          "race": "Halfling",
+          "background": "Folk Hero",
+          "subclass": "Path of the Berserker",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-l5",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "level": 5,
+          "race": "Gnome",
+          "background": "Hermit",
+          "subclass": "Path of the Berserker",
+          "featSlots": 1,
+          "chosenFeat": "Great Weapon Master",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-l8",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "level": 8,
+          "race": "Tiefling",
+          "background": "Sage",
+          "subclass": "Path of the Totem Warrior",
+          "featSlots": 3,
+          "chosenFeat": "Medium Armor Master",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-l11",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "level": 11,
+          "race": "Elf",
+          "background": "Urchin",
+          "subclass": "Path of the Berserker",
+          "featSlots": 4,
+          "chosenFeat": "Shield Master",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-l17",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "level": 17,
+          "race": "Tiefling",
+          "background": "Guild Artisan",
+          "subclass": "Path of the Berserker",
+          "featSlots": 7,
+          "chosenFeat": "Tough",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-l20",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "level": 20,
+          "race": "Elf",
+          "background": "Outlander",
+          "subclass": "Path of the Totem Warrior",
+          "featSlots": 8,
+          "chosenFeat": "Crossbow Expert",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-l1",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "level": 1,
+          "race": "Gnome",
+          "background": "Acolyte",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-l3",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "level": 3,
+          "race": "Half-Orc",
+          "background": "Criminal",
+          "subclass": "College of Spirits",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-l5",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "level": 5,
+          "race": "Human",
+          "background": "Folk Hero",
+          "subclass": "College of Valor",
+          "featSlots": 1,
+          "chosenFeat": "Crossbow Expert",
+          "selectedSpells": [
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-l8",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "level": 8,
+          "race": "Halfling",
+          "background": "Noble",
+          "subclass": "College of Whispers",
+          "featSlots": 3,
+          "chosenFeat": "Inspiring Leader",
+          "selectedSpells": [
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-l11",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "level": 11,
+          "race": "Half-Elf",
+          "background": "Sailor",
+          "subclass": "College of Spirits",
+          "featSlots": 3,
+          "chosenFeat": "Observant",
+          "selectedSpells": [
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-l17",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "level": 17,
+          "race": "Halfling",
+          "background": "Entertainer",
+          "subclass": "College of Eloquence",
+          "featSlots": 6,
+          "chosenFeat": "Grappler",
+          "selectedSpells": [
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-l20",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "level": 20,
+          "race": "Half-Elf",
+          "background": "Hermit",
+          "subclass": "College of Lore",
+          "featSlots": 7,
+          "chosenFeat": "War Caster",
+          "selectedSpells": [
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-l1",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "level": 1,
+          "race": "Half-Orc",
+          "background": "Hermit",
+          "subclass": "Death Domain",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-l3",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "level": 3,
+          "race": "Human",
+          "background": "Outlander",
+          "subclass": "Forge Domain",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-l5",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "level": 5,
+          "race": "Elf",
+          "background": "Sailor",
+          "subclass": "Order Domain",
+          "featSlots": 1,
+          "chosenFeat": "Dual Wielder",
+          "selectedSpells": [
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-l8",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Acolyte",
+          "subclass": "Life Domain",
+          "featSlots": 3,
+          "chosenFeat": "Lightly Armored",
+          "selectedSpells": [
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-l11",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "level": 11,
+          "race": "Tiefling",
+          "background": "Entertainer",
+          "subclass": "Nature Domain",
+          "featSlots": 3,
+          "chosenFeat": "Resilient",
+          "selectedSpells": [
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-l17",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "level": 17,
+          "race": "Gnome",
+          "background": "Sage",
+          "subclass": "Forge Domain",
+          "featSlots": 6,
+          "chosenFeat": "Lucky",
+          "selectedSpells": [
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-l20",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "level": 20,
+          "race": "Tiefling",
+          "background": "Urchin",
+          "subclass": "Peace Domain",
+          "featSlots": 7,
+          "chosenFeat": "Sentinel",
+          "selectedSpells": [
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-l1",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "level": 1,
+          "race": "Half-Elf",
+          "background": "Entertainer",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "druidcraft",
+              "name": "Druidcraft",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-l3",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "level": 3,
+          "race": "Tiefling",
+          "background": "Guild Artisan",
+          "subclass": "Circle of the Moon",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "druidcraft",
+              "name": "Druidcraft",
+              "level": 0
+            },
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-l5",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "level": 5,
+          "race": "Dwarf",
+          "background": "Noble",
+          "subclass": "Circle of Dreams",
+          "featSlots": 1,
+          "chosenFeat": "Defensive Duelist",
+          "selectedSpells": [
+            {
+              "id": "druidcraft",
+              "name": "Druidcraft",
+              "level": 0
+            },
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-l8",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "level": 8,
+          "race": "Dragonborn",
+          "background": "Sailor",
+          "subclass": "Circle of Dreams",
+          "featSlots": 3,
+          "chosenFeat": "Keen Mind",
+          "selectedSpells": [
+            {
+              "id": "druidcraft",
+              "name": "Druidcraft",
+              "level": 0
+            },
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-l11",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "level": 11,
+          "race": "Half-Orc",
+          "background": "Acolyte",
+          "subclass": "Circle of Dreams",
+          "featSlots": 4,
+          "chosenFeat": "Polearm Master",
+          "selectedSpells": [
+            {
+              "id": "druidcraft",
+              "name": "Druidcraft",
+              "level": 0
+            },
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-l17",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "level": 17,
+          "race": "Dragonborn",
+          "background": "Hermit",
+          "subclass": "Circle of Dreams",
+          "featSlots": 7,
+          "chosenFeat": "Healer",
+          "selectedSpells": [
+            {
+              "id": "druidcraft",
+              "name": "Druidcraft",
+              "level": 0
+            },
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-l20",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "level": 20,
+          "race": "Half-Orc",
+          "background": "Sage",
+          "subclass": "Circle of Dreams",
+          "featSlots": 8,
+          "chosenFeat": "Mobile",
+          "selectedSpells": [
+            {
+              "id": "druidcraft",
+              "name": "Druidcraft",
+              "level": 0
+            },
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-l1",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "level": 1,
+          "race": "Tiefling",
+          "background": "Sage",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-l3",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "level": 3,
+          "race": "Dwarf",
+          "background": "Soldier",
+          "subclass": "Battle Master",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-l5",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "level": 5,
+          "race": "Halfling",
+          "background": "Acolyte",
+          "subclass": "Champion",
+          "featSlots": 1,
+          "chosenFeat": "Dungeon Delver",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-l8",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "level": 8,
+          "race": "Half-Elf",
+          "background": "Entertainer",
+          "subclass": "Champion",
+          "featSlots": 4,
+          "chosenFeat": "Mage Slayer",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-l11",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "level": 11,
+          "race": "Human",
+          "background": "Hermit",
+          "subclass": "Champion",
+          "featSlots": 5,
+          "chosenFeat": "Ritual Caster",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-l17",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "level": 17,
+          "race": "Half-Elf",
+          "background": "Urchin",
+          "subclass": "Champion",
+          "featSlots": 9,
+          "chosenFeat": "Magic Initiate",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-l20",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "level": 20,
+          "race": "Human",
+          "background": "Criminal",
+          "subclass": "Champion",
+          "featSlots": 11,
+          "chosenFeat": "Actor",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-l1",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "level": 1,
+          "race": "Gnome",
+          "background": "Acolyte",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-l3",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "level": 3,
+          "race": "Half-Orc",
+          "background": "Criminal",
+          "subclass": "Way of the Kensei",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-l5",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "level": 5,
+          "race": "Human",
+          "background": "Folk Hero",
+          "subclass": "Way of the Open Hand",
+          "featSlots": 1,
+          "chosenFeat": "Crossbow Expert",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-l8",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "level": 8,
+          "race": "Halfling",
+          "background": "Noble",
+          "subclass": "Way of the Open Hand",
+          "featSlots": 3,
+          "chosenFeat": "Inspiring Leader",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-l11",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "level": 11,
+          "race": "Half-Elf",
+          "background": "Sailor",
+          "subclass": "Way of the Open Hand",
+          "featSlots": 4,
+          "chosenFeat": "Observant",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-l17",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "level": 17,
+          "race": "Halfling",
+          "background": "Entertainer",
+          "subclass": "Way of the Open Hand",
+          "featSlots": 7,
+          "chosenFeat": "Grappler",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-l20",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "level": 20,
+          "race": "Half-Elf",
+          "background": "Hermit",
+          "subclass": "Way of the Open Hand",
+          "featSlots": 8,
+          "chosenFeat": "War Caster",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-l1",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "level": 1,
+          "race": "Tiefling",
+          "background": "Sage",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "bless",
+              "name": "Bless",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-l3",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "level": 3,
+          "race": "Dwarf",
+          "background": "Soldier",
+          "subclass": "Oath of Vengeance",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "bless",
+              "name": "Bless",
+              "level": 1
+            },
+            {
+              "id": "command",
+              "name": "Command",
+              "level": 1
+            },
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-l5",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "level": 5,
+          "race": "Halfling",
+          "background": "Acolyte",
+          "subclass": "Oath of Devotion",
+          "featSlots": 1,
+          "chosenFeat": "Dungeon Delver",
+          "selectedSpells": [
+            {
+              "id": "bless",
+              "name": "Bless",
+              "level": 1
+            },
+            {
+              "id": "command",
+              "name": "Command",
+              "level": 1
+            },
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-l8",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "level": 8,
+          "race": "Half-Elf",
+          "background": "Entertainer",
+          "subclass": "Oath of Devotion",
+          "featSlots": 3,
+          "chosenFeat": "Mage Slayer",
+          "selectedSpells": [
+            {
+              "id": "bless",
+              "name": "Bless",
+              "level": 1
+            },
+            {
+              "id": "command",
+              "name": "Command",
+              "level": 1
+            },
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-l11",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "level": 11,
+          "race": "Human",
+          "background": "Hermit",
+          "subclass": "Oath of Devotion",
+          "featSlots": 3,
+          "chosenFeat": "Ritual Caster",
+          "selectedSpells": [
+            {
+              "id": "bless",
+              "name": "Bless",
+              "level": 1
+            },
+            {
+              "id": "command",
+              "name": "Command",
+              "level": 1
+            },
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-l17",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "level": 17,
+          "race": "Half-Elf",
+          "background": "Urchin",
+          "subclass": "Oath of Devotion",
+          "featSlots": 6,
+          "chosenFeat": "Magic Initiate",
+          "selectedSpells": [
+            {
+              "id": "bless",
+              "name": "Bless",
+              "level": 1
+            },
+            {
+              "id": "command",
+              "name": "Command",
+              "level": 1
+            },
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-l20",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "level": 20,
+          "race": "Human",
+          "background": "Criminal",
+          "subclass": "Oath of Devotion",
+          "featSlots": 7,
+          "chosenFeat": "Actor",
+          "selectedSpells": [
+            {
+              "id": "bless",
+              "name": "Bless",
+              "level": 1
+            },
+            {
+              "id": "command",
+              "name": "Command",
+              "level": 1
+            },
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-l1",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "level": 1,
+          "race": "Half-Orc",
+          "background": "Hermit",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-l3",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "level": 3,
+          "race": "Human",
+          "background": "Outlander",
+          "subclass": "Hunter",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            },
+            {
+              "id": "detect-magic",
+              "name": "Detect Magic",
+              "level": 1
+            },
+            {
+              "id": "lesser-restoration",
+              "name": "Lesser Restoration",
+              "level": 2
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-l5",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "level": 5,
+          "race": "Elf",
+          "background": "Sailor",
+          "subclass": "Beast Master",
+          "featSlots": 1,
+          "chosenFeat": "Dual Wielder",
+          "selectedSpells": [
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            },
+            {
+              "id": "detect-magic",
+              "name": "Detect Magic",
+              "level": 1
+            },
+            {
+              "id": "lesser-restoration",
+              "name": "Lesser Restoration",
+              "level": 2
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-l8",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Acolyte",
+          "subclass": "Beast Master",
+          "featSlots": 3,
+          "chosenFeat": "Lightly Armored",
+          "selectedSpells": [
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            },
+            {
+              "id": "detect-magic",
+              "name": "Detect Magic",
+              "level": 1
+            },
+            {
+              "id": "lesser-restoration",
+              "name": "Lesser Restoration",
+              "level": 2
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-l11",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "level": 11,
+          "race": "Tiefling",
+          "background": "Entertainer",
+          "subclass": "Beast Master",
+          "featSlots": 4,
+          "chosenFeat": "Resilient",
+          "selectedSpells": [
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            },
+            {
+              "id": "detect-magic",
+              "name": "Detect Magic",
+              "level": 1
+            },
+            {
+              "id": "lesser-restoration",
+              "name": "Lesser Restoration",
+              "level": 2
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-l17",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "level": 17,
+          "race": "Gnome",
+          "background": "Sage",
+          "subclass": "Beast Master",
+          "featSlots": 7,
+          "chosenFeat": "Lucky",
+          "selectedSpells": [
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            },
+            {
+              "id": "detect-magic",
+              "name": "Detect Magic",
+              "level": 1
+            },
+            {
+              "id": "lesser-restoration",
+              "name": "Lesser Restoration",
+              "level": 2
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-l20",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "level": 20,
+          "race": "Tiefling",
+          "background": "Urchin",
+          "subclass": "Beast Master",
+          "featSlots": 8,
+          "chosenFeat": "Sentinel",
+          "selectedSpells": [
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            },
+            {
+              "id": "detect-magic",
+              "name": "Detect Magic",
+              "level": 1
+            },
+            {
+              "id": "lesser-restoration",
+              "name": "Lesser Restoration",
+              "level": 2
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-l1",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "level": 1,
+          "race": "Half-Elf",
+          "background": "Entertainer",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-l3",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "level": 3,
+          "race": "Tiefling",
+          "background": "Guild Artisan",
+          "subclass": "Thief",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-l5",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "level": 5,
+          "race": "Dwarf",
+          "background": "Noble",
+          "subclass": "Assassin",
+          "featSlots": 1,
+          "chosenFeat": "Defensive Duelist",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-l8",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "level": 8,
+          "race": "Dragonborn",
+          "background": "Sailor",
+          "subclass": "Swashbuckler",
+          "featSlots": 2,
+          "chosenFeat": "Keen Mind",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-l11",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "level": 11,
+          "race": "Half-Orc",
+          "background": "Acolyte",
+          "subclass": "Thief",
+          "featSlots": 4,
+          "chosenFeat": "Polearm Master",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-l17",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "level": 17,
+          "race": "Dragonborn",
+          "background": "Hermit",
+          "subclass": "Assassin",
+          "featSlots": 8,
+          "chosenFeat": "Healer",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-l20",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "level": 20,
+          "race": "Half-Orc",
+          "background": "Sage",
+          "subclass": "Swashbuckler",
+          "featSlots": 9,
+          "chosenFeat": "Mobile",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-l1",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "level": 1,
+          "race": "Human",
+          "background": "Urchin",
+          "subclass": "Wild Magic",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-l3",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "level": 3,
+          "race": "Elf",
+          "background": "Charlatan",
+          "subclass": "Divine Soul",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-l5",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "level": 5,
+          "race": "Dragonborn",
+          "background": "Entertainer",
+          "subclass": "Aberrant Mind",
+          "featSlots": 1,
+          "chosenFeat": "Elemental Adept",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-l8",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "level": 8,
+          "race": "Half-Orc",
+          "background": "Hermit",
+          "subclass": "Draconic Bloodline",
+          "featSlots": 3,
+          "chosenFeat": "Martial Adept",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-l11",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "level": 11,
+          "race": "Dwarf",
+          "background": "Sage",
+          "subclass": "Divine Soul",
+          "featSlots": 3,
+          "chosenFeat": "Sharpshooter",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-l17",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "level": 17,
+          "race": "Half-Orc",
+          "background": "Criminal",
+          "subclass": "Wild Magic",
+          "featSlots": 6,
+          "chosenFeat": "Skilled",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-l20",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "level": 20,
+          "race": "Dwarf",
+          "background": "Guild Artisan",
+          "subclass": "Shadow Magic",
+          "featSlots": 8,
+          "chosenFeat": "Charger",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-l1",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "level": 1,
+          "race": "Tiefling",
+          "background": "Sage",
+          "subclass": "The Great Old One",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-l3",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "level": 3,
+          "race": "Dwarf",
+          "background": "Soldier",
+          "subclass": "The Archfey",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "minor-illusion",
+              "name": "Minor Illusion",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-l5",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "level": 5,
+          "race": "Halfling",
+          "background": "Acolyte",
+          "subclass": "The Fathomless",
+          "featSlots": 1,
+          "chosenFeat": "Dungeon Delver",
+          "selectedSpells": [
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "minor-illusion",
+              "name": "Minor Illusion",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-l8",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "level": 8,
+          "race": "Half-Elf",
+          "background": "Entertainer",
+          "subclass": "The Undead",
+          "featSlots": 3,
+          "chosenFeat": "Mage Slayer",
+          "selectedSpells": [
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "minor-illusion",
+              "name": "Minor Illusion",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-l11",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "level": 11,
+          "race": "Human",
+          "background": "Hermit",
+          "subclass": "The Fiend",
+          "featSlots": 4,
+          "chosenFeat": "Ritual Caster",
+          "selectedSpells": [
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "minor-illusion",
+              "name": "Minor Illusion",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-l17",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "level": 17,
+          "race": "Half-Elf",
+          "background": "Urchin",
+          "subclass": "The Undead",
+          "featSlots": 7,
+          "chosenFeat": "Magic Initiate",
+          "selectedSpells": [
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "minor-illusion",
+              "name": "Minor Illusion",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-l20",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "level": 20,
+          "race": "Human",
+          "background": "Criminal",
+          "subclass": "The Fiend",
+          "featSlots": 8,
+          "chosenFeat": "Actor",
+          "selectedSpells": [
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "minor-illusion",
+              "name": "Minor Illusion",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-l1",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "level": 1,
+          "race": "Half-Orc",
+          "background": "Hermit",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-l3",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "level": 3,
+          "race": "Human",
+          "background": "Outlander",
+          "subclass": "War Magic",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-l5",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "level": 5,
+          "race": "Elf",
+          "background": "Sailor",
+          "subclass": "Chronurgy Magic",
+          "featSlots": 1,
+          "chosenFeat": "Dual Wielder",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-l8",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Acolyte",
+          "subclass": "School of Abjuration",
+          "featSlots": 3,
+          "chosenFeat": "Lightly Armored",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-l11",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "level": 11,
+          "race": "Tiefling",
+          "background": "Entertainer",
+          "subclass": "School of Enchantment",
+          "featSlots": 4,
+          "chosenFeat": "Resilient",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-l17",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "level": 17,
+          "race": "Gnome",
+          "background": "Sage",
+          "subclass": "Order of Scribes",
+          "featSlots": 7,
+          "chosenFeat": "Lucky",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-l20",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "level": 20,
+          "race": "Tiefling",
+          "background": "Urchin",
+          "subclass": "School of Evocation",
+          "featSlots": 8,
+          "chosenFeat": "Sentinel",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "ruleset": "dnd_2024",
+      "counts": {
+        "classes": 12,
+        "subclasses": 48,
+        "races": 10,
+        "backgrounds": 16,
+        "feats": 77,
+        "spells": 335,
+        "scenarios": 84
+      },
+      "blockers": [],
+      "warnings": [],
+      "scenarios": [
+        {
+          "id": "dnd_2024-barbarian-l1",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "level": 1,
+          "race": "Aasimar",
+          "background": "Sailor",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-l3",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "level": 3,
+          "race": "Dwarf",
+          "background": "Soldier",
+          "subclass": "Path of the Berserker",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-l5",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "level": 5,
+          "race": "Gnome",
+          "background": "Acolyte",
+          "subclass": "Path of the Zealot",
+          "featSlots": 1,
+          "chosenFeat": "Boon of Fortitude",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-l8",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "level": 8,
+          "race": "Human",
+          "background": "Criminal",
+          "subclass": "Path of the Wild Heart",
+          "featSlots": 3,
+          "chosenFeat": "Inspiring Leader",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-l11",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "level": 11,
+          "race": "Aasimar",
+          "background": "Guard",
+          "subclass": "Path of the Berserker",
+          "featSlots": 4,
+          "chosenFeat": "Sharpshooter",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-l17",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "level": 17,
+          "race": "Halfling",
+          "background": "Sailor",
+          "subclass": "Path of the Zealot",
+          "featSlots": 7,
+          "chosenFeat": "Martial Weapon Training",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-l20",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "level": 20,
+          "race": "Tiefling",
+          "background": "Wayfarer",
+          "subclass": "Path of the Wild Heart",
+          "featSlots": 8,
+          "chosenFeat": "Ritual Caster",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-l1",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "level": 1,
+          "race": "Goliath",
+          "background": "Scribe",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-l3",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "level": 3,
+          "race": "Human",
+          "background": "Wayfarer",
+          "subclass": "College of Valor",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-l5",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "level": 5,
+          "race": "Tiefling",
+          "background": "Artisan",
+          "subclass": "College of Dance",
+          "featSlots": 1,
+          "chosenFeat": "Charger",
+          "selectedSpells": [
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-l8",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "level": 8,
+          "race": "Dwarf",
+          "background": "Entertainer",
+          "subclass": "College of Lore",
+          "featSlots": 3,
+          "chosenFeat": "Actor",
+          "selectedSpells": [
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-l11",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "level": 11,
+          "race": "Goliath",
+          "background": "Guide",
+          "subclass": "College of Valor",
+          "featSlots": 3,
+          "chosenFeat": "Mage Slayer",
+          "selectedSpells": [
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-l17",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "level": 17,
+          "race": "Dragonborn",
+          "background": "Scribe",
+          "subclass": "College of Dance",
+          "featSlots": 6,
+          "chosenFeat": "Grappler",
+          "selectedSpells": [
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-l20",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "level": 20,
+          "race": "Gnome",
+          "background": "Acolyte",
+          "subclass": "College of Lore",
+          "featSlots": 7,
+          "chosenFeat": "Medium Armor Master",
+          "selectedSpells": [
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-l1",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "level": 1,
+          "race": "Human",
+          "background": "Criminal",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-l3",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "level": 3,
+          "race": "Tiefling",
+          "background": "Farmer",
+          "subclass": "Light Domain",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-l5",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "level": 5,
+          "race": "Dragonborn",
+          "background": "Guide",
+          "subclass": "War Domain",
+          "featSlots": 1,
+          "chosenFeat": "Great Weapon Master",
+          "selectedSpells": [
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-l8",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Noble",
+          "subclass": "Trickery Domain",
+          "featSlots": 3,
+          "chosenFeat": "Dual Wielder",
+          "selectedSpells": [
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-l11",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "level": 11,
+          "race": "Human",
+          "background": "Scribe",
+          "subclass": "Light Domain",
+          "featSlots": 3,
+          "chosenFeat": "Polearm Master",
+          "selectedSpells": [
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-l17",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "level": 17,
+          "race": "Elf",
+          "background": "Criminal",
+          "subclass": "War Domain",
+          "featSlots": 6,
+          "chosenFeat": "Heavy Armor Master",
+          "selectedSpells": [
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-l20",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "level": 20,
+          "race": "Halfling",
+          "background": "Guard",
+          "subclass": "Trickery Domain",
+          "featSlots": 7,
+          "chosenFeat": "Mounted Combatant",
+          "selectedSpells": [
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "light",
+              "name": "Light",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-l1",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "level": 1,
+          "race": "Halfling",
+          "background": "Acolyte",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "druidcraft",
+              "name": "Druidcraft",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-l3",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "level": 3,
+          "race": "Orc",
+          "background": "Charlatan",
+          "subclass": "Circle of the Land",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "druidcraft",
+              "name": "Druidcraft",
+              "level": 0
+            },
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-l5",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "level": 5,
+          "race": "Aasimar",
+          "background": "Entertainer",
+          "subclass": "Circle of the Sea",
+          "featSlots": 1,
+          "chosenFeat": "Defensive Duelist",
+          "selectedSpells": [
+            {
+              "id": "druidcraft",
+              "name": "Druidcraft",
+              "level": 0
+            },
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-l8",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "level": 8,
+          "race": "Elf",
+          "background": "Guide",
+          "subclass": "Circle of the Stars",
+          "featSlots": 3,
+          "chosenFeat": "Crossbow Expert",
+          "selectedSpells": [
+            {
+              "id": "druidcraft",
+              "name": "Druidcraft",
+              "level": 0
+            },
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-l11",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "level": 11,
+          "race": "Halfling",
+          "background": "Noble",
+          "subclass": "Circle of the Land",
+          "featSlots": 4,
+          "chosenFeat": "Piercer",
+          "selectedSpells": [
+            {
+              "id": "druidcraft",
+              "name": "Druidcraft",
+              "level": 0
+            },
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-l17",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "level": 17,
+          "race": "Dwarf",
+          "background": "Acolyte",
+          "subclass": "Circle of the Sea",
+          "featSlots": 7,
+          "chosenFeat": "Heavily Armored",
+          "selectedSpells": [
+            {
+              "id": "druidcraft",
+              "name": "Druidcraft",
+              "level": 0
+            },
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-l20",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "level": 20,
+          "race": "Goliath",
+          "background": "Criminal",
+          "subclass": "Circle of the Stars",
+          "featSlots": 8,
+          "chosenFeat": "Moderately Armored",
+          "selectedSpells": [
+            {
+              "id": "druidcraft",
+              "name": "Druidcraft",
+              "level": 0
+            },
+            {
+              "id": "guidance",
+              "name": "Guidance",
+              "level": 0
+            },
+            {
+              "id": "mending",
+              "name": "Mending",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-l1",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "level": 1,
+          "race": "Orc",
+          "background": "Guard",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-l3",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "level": 3,
+          "race": "Aasimar",
+          "background": "Hermit",
+          "subclass": "Eldritch Knight",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-l5",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "level": 5,
+          "race": "Dwarf",
+          "background": "Noble",
+          "subclass": "Champion",
+          "featSlots": 1,
+          "chosenFeat": "War Caster",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-l8",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "level": 8,
+          "race": "Goliath",
+          "background": "Scribe",
+          "subclass": "Battle Master",
+          "featSlots": 4,
+          "chosenFeat": "Elemental Adept",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-l11",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "level": 11,
+          "race": "Orc",
+          "background": "Acolyte",
+          "subclass": "Eldritch Knight",
+          "featSlots": 5,
+          "chosenFeat": "Resilient",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-l17",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "level": 17,
+          "race": "Gnome",
+          "background": "Guard",
+          "subclass": "Champion",
+          "featSlots": 9,
+          "chosenFeat": "Keen Mind",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-l20",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "level": 20,
+          "race": "Human",
+          "background": "Merchant",
+          "subclass": "Battle Master",
+          "featSlots": 11,
+          "chosenFeat": "Observant",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-l1",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "level": 1,
+          "race": "Goliath",
+          "background": "Scribe",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-l3",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "level": 3,
+          "race": "Human",
+          "background": "Wayfarer",
+          "subclass": "Warrior of Shadow",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-l5",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "level": 5,
+          "race": "Tiefling",
+          "background": "Artisan",
+          "subclass": "Warrior of Mercy",
+          "featSlots": 1,
+          "chosenFeat": "Charger",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-l8",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "level": 8,
+          "race": "Dwarf",
+          "background": "Entertainer",
+          "subclass": "Warrior of the Open Hand",
+          "featSlots": 3,
+          "chosenFeat": "Actor",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-l11",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "level": 11,
+          "race": "Goliath",
+          "background": "Guide",
+          "subclass": "Warrior of Shadow",
+          "featSlots": 4,
+          "chosenFeat": "Mage Slayer",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-l17",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "level": 17,
+          "race": "Dragonborn",
+          "background": "Scribe",
+          "subclass": "Warrior of Mercy",
+          "featSlots": 7,
+          "chosenFeat": "Grappler",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-l20",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "level": 20,
+          "race": "Gnome",
+          "background": "Acolyte",
+          "subclass": "Warrior of the Open Hand",
+          "featSlots": 8,
+          "chosenFeat": "Medium Armor Master",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-l1",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "level": 1,
+          "race": "Orc",
+          "background": "Guard",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "bless",
+              "name": "Bless",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-l3",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "level": 3,
+          "race": "Aasimar",
+          "background": "Hermit",
+          "subclass": "Oath of the Ancients",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "bless",
+              "name": "Bless",
+              "level": 1
+            },
+            {
+              "id": "command",
+              "name": "Command",
+              "level": 1
+            },
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-l5",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "level": 5,
+          "race": "Dwarf",
+          "background": "Noble",
+          "subclass": "Oath of Devotion",
+          "featSlots": 1,
+          "chosenFeat": "War Caster",
+          "selectedSpells": [
+            {
+              "id": "bless",
+              "name": "Bless",
+              "level": 1
+            },
+            {
+              "id": "command",
+              "name": "Command",
+              "level": 1
+            },
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-l8",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "level": 8,
+          "race": "Goliath",
+          "background": "Scribe",
+          "subclass": "Oath of Vengeance",
+          "featSlots": 3,
+          "chosenFeat": "Elemental Adept",
+          "selectedSpells": [
+            {
+              "id": "bless",
+              "name": "Bless",
+              "level": 1
+            },
+            {
+              "id": "command",
+              "name": "Command",
+              "level": 1
+            },
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-l11",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "level": 11,
+          "race": "Orc",
+          "background": "Acolyte",
+          "subclass": "Oath of the Ancients",
+          "featSlots": 3,
+          "chosenFeat": "Resilient",
+          "selectedSpells": [
+            {
+              "id": "bless",
+              "name": "Bless",
+              "level": 1
+            },
+            {
+              "id": "command",
+              "name": "Command",
+              "level": 1
+            },
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-l17",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "level": 17,
+          "race": "Gnome",
+          "background": "Guard",
+          "subclass": "Oath of Devotion",
+          "featSlots": 6,
+          "chosenFeat": "Keen Mind",
+          "selectedSpells": [
+            {
+              "id": "bless",
+              "name": "Bless",
+              "level": 1
+            },
+            {
+              "id": "command",
+              "name": "Command",
+              "level": 1
+            },
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-l20",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "level": 20,
+          "race": "Human",
+          "background": "Merchant",
+          "subclass": "Oath of Vengeance",
+          "featSlots": 8,
+          "chosenFeat": "Observant",
+          "selectedSpells": [
+            {
+              "id": "bless",
+              "name": "Bless",
+              "level": 1
+            },
+            {
+              "id": "command",
+              "name": "Command",
+              "level": 1
+            },
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-l1",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "level": 1,
+          "race": "Human",
+          "background": "Criminal",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-l3",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "level": 3,
+          "race": "Tiefling",
+          "background": "Farmer",
+          "subclass": "Fey Wanderer",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            },
+            {
+              "id": "detect-magic",
+              "name": "Detect Magic",
+              "level": 1
+            },
+            {
+              "id": "lesser-restoration",
+              "name": "Lesser Restoration",
+              "level": 2
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-l5",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "level": 5,
+          "race": "Dragonborn",
+          "background": "Guide",
+          "subclass": "Gloom Stalker",
+          "featSlots": 1,
+          "chosenFeat": "Great Weapon Master",
+          "selectedSpells": [
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            },
+            {
+              "id": "detect-magic",
+              "name": "Detect Magic",
+              "level": 1
+            },
+            {
+              "id": "lesser-restoration",
+              "name": "Lesser Restoration",
+              "level": 2
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-l8",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Noble",
+          "subclass": "Beast Master",
+          "featSlots": 3,
+          "chosenFeat": "Dual Wielder",
+          "selectedSpells": [
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            },
+            {
+              "id": "detect-magic",
+              "name": "Detect Magic",
+              "level": 1
+            },
+            {
+              "id": "lesser-restoration",
+              "name": "Lesser Restoration",
+              "level": 2
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-l11",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "level": 11,
+          "race": "Human",
+          "background": "Scribe",
+          "subclass": "Fey Wanderer",
+          "featSlots": 4,
+          "chosenFeat": "Polearm Master",
+          "selectedSpells": [
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            },
+            {
+              "id": "detect-magic",
+              "name": "Detect Magic",
+              "level": 1
+            },
+            {
+              "id": "lesser-restoration",
+              "name": "Lesser Restoration",
+              "level": 2
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-l17",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "level": 17,
+          "race": "Elf",
+          "background": "Criminal",
+          "subclass": "Gloom Stalker",
+          "featSlots": 7,
+          "chosenFeat": "Heavy Armor Master",
+          "selectedSpells": [
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            },
+            {
+              "id": "detect-magic",
+              "name": "Detect Magic",
+              "level": 1
+            },
+            {
+              "id": "lesser-restoration",
+              "name": "Lesser Restoration",
+              "level": 2
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-l20",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "level": 20,
+          "race": "Halfling",
+          "background": "Guard",
+          "subclass": "Beast Master",
+          "featSlots": 8,
+          "chosenFeat": "Mounted Combatant",
+          "selectedSpells": [
+            {
+              "id": "cure-wounds",
+              "name": "Cure Wounds",
+              "level": 1
+            },
+            {
+              "id": "detect-magic",
+              "name": "Detect Magic",
+              "level": 1
+            },
+            {
+              "id": "lesser-restoration",
+              "name": "Lesser Restoration",
+              "level": 2
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-l1",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "level": 1,
+          "race": "Halfling",
+          "background": "Acolyte",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-l3",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "level": 3,
+          "race": "Orc",
+          "background": "Charlatan",
+          "subclass": "Thief",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-l5",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "level": 5,
+          "race": "Aasimar",
+          "background": "Entertainer",
+          "subclass": "Soulknife",
+          "featSlots": 1,
+          "chosenFeat": "Defensive Duelist",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-l8",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "level": 8,
+          "race": "Elf",
+          "background": "Guide",
+          "subclass": "Arcane Trickster",
+          "featSlots": 2,
+          "chosenFeat": "Crossbow Expert",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-l11",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "level": 11,
+          "race": "Halfling",
+          "background": "Noble",
+          "subclass": "Thief",
+          "featSlots": 4,
+          "chosenFeat": "Piercer",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-l17",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "level": 17,
+          "race": "Dwarf",
+          "background": "Acolyte",
+          "subclass": "Soulknife",
+          "featSlots": 8,
+          "chosenFeat": "Heavily Armored",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-l20",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "level": 20,
+          "race": "Goliath",
+          "background": "Criminal",
+          "subclass": "Arcane Trickster",
+          "featSlots": 9,
+          "chosenFeat": "Moderately Armored",
+          "selectedSpells": [],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-l1",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "level": 1,
+          "race": "Tiefling",
+          "background": "Merchant",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-l3",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "level": 3,
+          "race": "Dragonborn",
+          "background": "Sage",
+          "subclass": "Clockwork Sorcery",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-l5",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "level": 5,
+          "race": "Elf",
+          "background": "Scribe",
+          "subclass": "Wild Magic Sorcery",
+          "featSlots": 1,
+          "chosenFeat": "Boon of Combat Prowess",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-l8",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "level": 8,
+          "race": "Halfling",
+          "background": "Acolyte",
+          "subclass": "Draconic Sorcery",
+          "featSlots": 3,
+          "chosenFeat": "Fey-Touched",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-l11",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "level": 11,
+          "race": "Tiefling",
+          "background": "Criminal",
+          "subclass": "Clockwork Sorcery",
+          "featSlots": 3,
+          "chosenFeat": "Sentinel",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-l17",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "level": 17,
+          "race": "Goliath",
+          "background": "Merchant",
+          "subclass": "Wild Magic Sorcery",
+          "featSlots": 6,
+          "chosenFeat": "Lightly Armored",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-l20",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "level": 20,
+          "race": "Orc",
+          "background": "Sailor",
+          "subclass": "Draconic Sorcery",
+          "featSlots": 8,
+          "chosenFeat": "Poisoner",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-l1",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "level": 1,
+          "race": "Orc",
+          "background": "Guard",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-l3",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "level": 3,
+          "race": "Aasimar",
+          "background": "Hermit",
+          "subclass": "Celestial Patron",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "minor-illusion",
+              "name": "Minor Illusion",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-l5",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "level": 5,
+          "race": "Dwarf",
+          "background": "Noble",
+          "subclass": "Fiend Patron",
+          "featSlots": 1,
+          "chosenFeat": "War Caster",
+          "selectedSpells": [
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "minor-illusion",
+              "name": "Minor Illusion",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-l8",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "level": 8,
+          "race": "Goliath",
+          "background": "Scribe",
+          "subclass": "Great Old One Patron",
+          "featSlots": 3,
+          "chosenFeat": "Elemental Adept",
+          "selectedSpells": [
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "minor-illusion",
+              "name": "Minor Illusion",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-l11",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "level": 11,
+          "race": "Orc",
+          "background": "Acolyte",
+          "subclass": "Celestial Patron",
+          "featSlots": 4,
+          "chosenFeat": "Resilient",
+          "selectedSpells": [
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "minor-illusion",
+              "name": "Minor Illusion",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-l17",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "level": 17,
+          "race": "Gnome",
+          "background": "Guard",
+          "subclass": "Fiend Patron",
+          "featSlots": 7,
+          "chosenFeat": "Keen Mind",
+          "selectedSpells": [
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "minor-illusion",
+              "name": "Minor Illusion",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-l20",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "level": 20,
+          "race": "Human",
+          "background": "Merchant",
+          "subclass": "Great Old One Patron",
+          "featSlots": 8,
+          "chosenFeat": "Observant",
+          "selectedSpells": [
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "mage-hand",
+              "name": "Mage Hand",
+              "level": 0
+            },
+            {
+              "id": "minor-illusion",
+              "name": "Minor Illusion",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-l1",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "level": 1,
+          "race": "Human",
+          "background": "Criminal",
+          "subclass": null,
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-l3",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "level": 3,
+          "race": "Tiefling",
+          "background": "Farmer",
+          "subclass": "Abjurer",
+          "featSlots": 0,
+          "chosenFeat": null,
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-l5",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "level": 5,
+          "race": "Dragonborn",
+          "background": "Guide",
+          "subclass": "Illusionist",
+          "featSlots": 1,
+          "chosenFeat": "Great Weapon Master",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-l8",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Noble",
+          "subclass": "Diviner",
+          "featSlots": 3,
+          "chosenFeat": "Dual Wielder",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-l11",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "level": 11,
+          "race": "Human",
+          "background": "Scribe",
+          "subclass": "Abjurer",
+          "featSlots": 4,
+          "chosenFeat": "Polearm Master",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-l17",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "level": 17,
+          "race": "Elf",
+          "background": "Criminal",
+          "subclass": "Illusionist",
+          "featSlots": 7,
+          "chosenFeat": "Heavy Armor Master",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-l20",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "level": 20,
+          "race": "Halfling",
+          "background": "Guard",
+          "subclass": "Diviner",
+          "featSlots": 8,
+          "chosenFeat": "Mounted Combatant",
+          "selectedSpells": [
+            {
+              "id": "acid-splash",
+              "name": "Acid Splash",
+              "level": 0
+            },
+            {
+              "id": "chill-touch",
+              "name": "Chill Touch",
+              "level": 0
+            },
+            {
+              "id": "fire-bolt",
+              "name": "Fire Bolt",
+              "level": 0
+            }
+          ],
+          "lifecycleSteps": {
+            "creation": true,
+            "subclassSelection": true,
+            "featSelection": true,
+            "spellSelection": true,
+            "playModeEntry": true,
+            "shortRest": true,
+            "longRest": true,
+            "persistence": true,
+            "levelUp": true
+          },
+          "blockers": [],
+          "status": "ready"
+        }
+      ]
+    }
+  ]
+}

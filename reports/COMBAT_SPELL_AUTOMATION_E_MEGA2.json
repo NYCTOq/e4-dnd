@@ -1,0 +1,104 @@
+{
+  "generatedAt": "2026-07-29T15:21:41.061Z",
+  "schemaVersion": "E-MEGA2",
+  "summary": {
+    "totalDomains": 8,
+    "readyDomains": 8,
+    "blockedDomains": 0,
+    "blockerCount": 0
+  },
+  "domains": [
+    {
+      "id": "initiative-turns",
+      "label": "Initiative and Turn Flow",
+      "requiredAll": [
+        "src/features/combat-tracker/combatTrackerStorage.test.ts",
+        "src/features/combat-tracker/combatEncounterBridge.test.ts",
+        "src/core/session/sessionPlayLoop-v5.134.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "conditions-reactions",
+      "label": "Conditions and Reactions",
+      "requiredAll": [
+        "src/core/rulesets/combatAutomationRuntime.test.ts",
+        "src/core/rulesets/spellControlOfficial.test.ts",
+        "src/core/rulesets/spellEffectRules.test.ts",
+        "src/features/combat-tracker/combatLogStorage.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "concentration-targeting",
+      "label": "Concentration and Targeting",
+      "requiredAll": [
+        "src/core/rulesets/spellTargetRules.test.ts",
+        "src/core/rulesets/spellBehaviorRules.test.ts",
+        "src/core/rulesets/globalSpellRuntime.test.ts",
+        "src/certification/integration/spellUiContract.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "auras-zones",
+      "label": "Auras, Movement and Battlefield Zones",
+      "requiredAll": [
+        "src/core/rulesets/spellDefenseMovementOfficial.test.ts",
+        "src/features/combat-tracker/battlefieldZones.test.ts",
+        "src/certification/matrix/spellRuntimeCombatScenarioMatrix.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "summons-companions",
+      "label": "Summons and Companions",
+      "requiredAll": [
+        "src/core/rulesets/spellSummonPersistentOfficial.test.ts",
+        "src/core/rulesets/companionRules.test.ts",
+        "src/certification/integration/runtimeEntityPersistenceBridge.test.ts",
+        "src/certification/golden/runtimeEntityGoldenIntegration.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "upcasting-resources",
+      "label": "Upcasting, Resources and Rest",
+      "requiredAll": [
+        "src/certification/player-readiness/spellcastingRuntimeMatrix-v6.2C5.test.ts",
+        "src/core/rulesets/classFeatureRuntime.test.ts",
+        "src/features/rest/restAutomation.test.ts",
+        "src/certification/matrix/restRecoveryPersistenceMatrix.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "death-persistence",
+      "label": "Death Saves and Combat Persistence",
+      "requiredAll": [
+        "src/certification/integration/deathDyingPlayModeIntegration.test.ts",
+        "src/certification/matrix/deathDyingCharacterPersistenceMatrix.test.ts",
+        "src/certification/matrix/spellCharacterCombatPersistenceMatrix.test.ts",
+        "src/core/storage/characterHydration.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "browser",
+      "label": "Browser Combat Shell",
+      "requiredAll": [
+        "e2e/combat-spell-automation-E-MEGA2.spec.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    }
+  ],
+  "blockers": []
+}

@@ -1,0 +1,121 @@
+{
+  "generatedAt": "2026-07-29T15:21:39.139Z",
+  "scope": {
+    "domains": [
+      "Character Hub",
+      "Navigation and Search",
+      "Backup and Character Transfer",
+      "Onboarding and Accessibility",
+      "Performance and Bundle Budget",
+      "Release Gates",
+      "Player Journey",
+      "Cross-Domain Closure"
+    ],
+    "expectedDomains": 8,
+    "requiredTestArtifacts": 33
+  },
+  "summary": {
+    "ready": 8,
+    "blocked": 0,
+    "total": 8
+  },
+  "checks": [
+    {
+      "id": "character-hub",
+      "label": "Character Hub",
+      "paths": [
+        "src/certification/golden/characterHubGoldenIntegration.test.ts",
+        "src/certification/integration/characterHubGoldenIntegrationContract.test.ts",
+        "src/certification/integration/characterHubActionabilityContract.test.ts",
+        "src/certification/integration/characterHubUiFinalClosureContract.test.ts"
+      ],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "navigation-search",
+      "label": "Navigation and Search",
+      "paths": [
+        "src/certification/discovery/navigationSearchDiscovery.test.ts",
+        "src/certification/integration/navigationSearchDiscoveryContract.test.ts",
+        "src/certification/differential/navigationSearchRouteParity.test.ts",
+        "src/certification/integration/navigationSearchUiFinalClosureContract.test.ts",
+        "src/certification/golden/navigationSearchGoldenIntentIntegration.test.ts"
+      ],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "backup-transfer",
+      "label": "Backup and Character Transfer",
+      "paths": [
+        "src/features/backup/characterBackup.test.ts",
+        "src/features/backup/fullBackup.test.ts",
+        "src/features/backup/backupRecovery.test.ts",
+        "src/features/characters/characterTransfer.test.ts",
+        "src/core/storage/characterHydration.test.ts"
+      ],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "onboarding-accessibility",
+      "label": "Onboarding and Accessibility",
+      "paths": [
+        "src/core/onboarding/onboardingProgress-v5.143.test.ts",
+        "src/core/quality/uiMobileAccessibilityPolish.test.ts",
+        "src/core/qa/mobileAccessibilityPerformance.test.ts"
+      ],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "performance",
+      "label": "Performance and Bundle Budget",
+      "paths": [
+        "src/core/performance/bundlePerformanceBudget-v5.142.test.ts",
+        "src/core/rulesets/rulesetLoaderChunks.test.ts"
+      ],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "release-gates",
+      "label": "Release Gates",
+      "paths": [
+        "src/core/release/stablePlayerRelease.test.ts",
+        "src/core/release/stableReleaseHardening.test.ts",
+        "src/core/release/finalReleaseGate.test.ts",
+        "src/core/release/releasePackaging-v5.144.test.ts",
+        "src/core/release/postReleaseQa.test.ts",
+        "src/core/quality/releaseReadinessAudit.test.ts"
+      ],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "player-journey",
+      "label": "Player Journey",
+      "paths": [
+        "src/core/character/playerJourneyConsistency.test.ts",
+        "src/core/character/playReadiness.test.ts",
+        "src/core/character/characterLifecycle.integration.test.ts",
+        "src/core/rulesets/fullCharacterCertification.integration.test.ts"
+      ],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "cross-domain",
+      "label": "Cross-Domain Closure",
+      "paths": [
+        "src/certification/discovery/crossDomainIntegrityDiscovery.test.ts",
+        "src/certification/integration/crossDomainIntegrityContract.test.ts",
+        "src/certification/golden/crossDomainGoldenPlayerLifecycle.test.ts",
+        "src/certification/integration/crossDomainUiFinalClosureContract.test.ts"
+      ],
+      "status": "ready",
+      "blockers": []
+    }
+  ]
+}

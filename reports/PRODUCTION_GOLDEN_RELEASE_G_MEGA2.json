@@ -1,0 +1,124 @@
+{
+  "generatedAt": "2026-07-29T15:21:47.861Z",
+  "schemaVersion": "G-MEGA2",
+  "package": {
+    "name": "e4_dnd",
+    "version": "6.2.0",
+    "hasTestScript": true,
+    "hasBuildScript": true
+  },
+  "summary": {
+    "totalDomains": 8,
+    "readyDomains": 8,
+    "blockedDomains": 0,
+    "blockerCount": 0
+  },
+  "domains": [
+    {
+      "id": "mega-regression",
+      "label": "Mega Regression Chain",
+      "requiredAll": [
+        "src/certification/player-readiness/fullInteractivePlayerJourney-E-MEGA1.test.ts",
+        "src/certification/player-readiness/combatSpellAutomation-E-MEGA2.test.ts",
+        "src/certification/player-readiness/contentAccuracyRulesetDifferential-F-MEGA1.test.ts",
+        "src/certification/player-readiness/contentExpansionCatalogClosure-F-MEGA2.test.ts",
+        "src/certification/player-readiness/saveMigrationVersioningRelease-G-MEGA1.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "release-gates",
+      "label": "Release Gates",
+      "requiredAll": [
+        "src/core/release/stablePlayerRelease.test.ts",
+        "src/core/release/stableReleaseHardening.test.ts",
+        "src/core/release/finalReleaseGate.test.ts",
+        "src/core/release/publicReleaseReadiness-v6.test.ts",
+        "src/core/release/releasePackaging-v5.144.test.ts",
+        "src/core/release/postReleaseQa.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "distribution",
+      "label": "Distribution and Offline Shell",
+      "requiredAll": [
+        "src/certification/player-readiness/publicReleaseDistributionClosure-v6.2D9.test.ts",
+        "src/certification/player-readiness/postBuildOfflineInstallClosure-v6.2D10.test.ts",
+        "src/core/performance/bundlePerformanceBudget-v5.142.test.ts",
+        "src/core/rulesets/rulesetLoaderChunks.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "recovery",
+      "label": "Backup, Migration and Rollback",
+      "requiredAll": [
+        "src/features/backup/characterBackup.test.ts",
+        "src/features/backup/fullBackup.test.ts",
+        "src/features/backup/backupRecovery.test.ts",
+        "src/features/characters/characterTransfer.test.ts",
+        "src/core/storage/characterHydration.test.ts",
+        "release/ROLLBACK_PLAN_G_MEGA1.md"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "browser",
+      "label": "Production Browser Smoke",
+      "requiredAll": [
+        "e2e/production-golden-release-G-MEGA2.spec.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "pwa",
+      "label": "PWA and Service Worker",
+      "requiredAll": [],
+      "requiredAny": [
+        "vite.config.ts",
+        "vite.config.js",
+        "src/registerSW.ts",
+        "src/registerSW.tsx",
+        "src/serviceWorker.ts",
+        "src/serviceWorker.tsx"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "release-meta",
+      "label": "Release Metadata",
+      "requiredAll": [
+        "release/RELEASE_MANIFEST_G_MEGA1.json",
+        "release/CHANGELOG_G_MEGA1.md",
+        "release/ROLLBACK_PLAN_G_MEGA1.md",
+        "release/GOLDEN_RELEASE_CHECKLIST_G_MEGA2.md"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "bundle-script",
+      "label": "Bundle Manifest Tooling",
+      "requiredAll": [
+        "scripts/generate-golden-release-manifest-G-MEGA2.mjs"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    }
+  ],
+  "blockers": []
+}

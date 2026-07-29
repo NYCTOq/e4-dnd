@@ -1,0 +1,5130 @@
+{
+  "generatedAt": "2026-07-29T15:21:32.606Z",
+  "scope": {
+    "rulesets": [
+      "dnd_2014",
+      "dnd_2024"
+    ],
+    "classes": [
+      "Barbarian",
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Fighter",
+      "Monk",
+      "Paladin",
+      "Ranger",
+      "Rogue",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "checkpointLevels": [
+      1,
+      3,
+      4,
+      5,
+      8,
+      11,
+      17,
+      20
+    ],
+    "expectedScenarios": 192
+  },
+  "summary": {
+    "ready": 192,
+    "blocked": 0,
+    "total": 192,
+    "structuralBlockers": 0
+  },
+  "rulesets": [
+    {
+      "ruleset": "dnd_2014",
+      "counts": {
+        "classes": 12,
+        "subclasses": 73,
+        "races": 9,
+        "backgrounds": 13,
+        "feats": 35,
+        "spells": 335,
+        "scenarios": 96
+      },
+      "blockers": [],
+      "warnings": [],
+      "scenarios": [
+        {
+          "id": "dnd_2014-barbarian-l1",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 1,
+          "race": "Dwarf",
+          "background": "Soldier",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-l3",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 3,
+          "race": "Halfling",
+          "background": "Criminal",
+          "subclass": "Path of the Berserker",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-l4",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 4,
+          "race": "Dragonborn",
+          "background": "Folk Hero",
+          "subclass": "Path of the Totem Warrior",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Charger",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-l5",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 5,
+          "race": "Gnome",
+          "background": "Hermit",
+          "subclass": "Path of the Berserker",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Crossbow Expert",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-l8",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 8,
+          "race": "Tiefling",
+          "background": "Urchin",
+          "subclass": "Path of the Totem Warrior",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Dungeon Delver",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-l11",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 11,
+          "race": "Elf",
+          "background": "Guild Artisan",
+          "subclass": "Path of the Berserker",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Inspiring Leader",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-l17",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 17,
+          "race": "Tiefling",
+          "background": "Folk Hero",
+          "subclass": "Path of the Berserker",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Observant",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-barbarian-l20",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 20,
+          "race": "Elf",
+          "background": "Sailor",
+          "subclass": "Path of the Totem Warrior",
+          "subclassRequired": true,
+          "featSlots": 5,
+          "selectedFeat": "Ritual Caster",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-l1",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 1,
+          "race": "Gnome",
+          "background": "Hermit",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 110,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-l3",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 3,
+          "race": "Half-Orc",
+          "background": "Sailor",
+          "subclass": "College of Whispers",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 110,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-l4",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 4,
+          "race": "Tiefling",
+          "background": "Urchin",
+          "subclass": "College of Creation",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Tough",
+          "spellProgression": "full",
+          "classSpellCount": 110,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-l5",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 5,
+          "race": "Human",
+          "background": "Charlatan",
+          "subclass": "College of Eloquence",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "War Caster",
+          "spellProgression": "full",
+          "classSpellCount": 110,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-l8",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 8,
+          "race": "Halfling",
+          "background": "Noble",
+          "subclass": "College of Spirits",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Actor",
+          "spellProgression": "full",
+          "classSpellCount": 110,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-l11",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 11,
+          "race": "Half-Elf",
+          "background": "Acolyte",
+          "subclass": "College of Whispers",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Defensive Duelist",
+          "spellProgression": "full",
+          "classSpellCount": 110,
+          "highestCatalogSpellLevelAtCheckpoint": 6,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-l17",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 17,
+          "race": "Halfling",
+          "background": "Urchin",
+          "subclass": "College of Swords",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Keen Mind",
+          "spellProgression": "full",
+          "classSpellCount": 110,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-l20",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 20,
+          "race": "Half-Elf",
+          "background": "Guild Artisan",
+          "subclass": "College of Creation",
+          "subclassRequired": true,
+          "featSlots": 5,
+          "selectedFeat": "Martial Adept",
+          "spellProgression": "full",
+          "classSpellCount": 110,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-l1",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 1,
+          "race": "Half-Orc",
+          "background": "Outlander",
+          "subclass": "Nature Domain",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-l3",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 3,
+          "race": "Human",
+          "background": "Urchin",
+          "subclass": "Peace Domain",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-l4",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 4,
+          "race": "Dwarf",
+          "background": "Charlatan",
+          "subclass": "Tempest Domain",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Mobile",
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-l5",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 5,
+          "race": "Elf",
+          "background": "Entertainer",
+          "subclass": "Trickery Domain",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Sentinel",
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-l8",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Sage",
+          "subclass": "Arcana Domain",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Crossbow Expert",
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-l11",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 11,
+          "race": "Tiefling",
+          "background": "Criminal",
+          "subclass": "Grave Domain",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Dungeon Delver",
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 6,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-l17",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 17,
+          "race": "Gnome",
+          "background": "Charlatan",
+          "subclass": "Peace Domain",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Mage Slayer",
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-l20",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 20,
+          "race": "Tiefling",
+          "background": "Noble",
+          "subclass": "Twilight Domain",
+          "subclassRequired": true,
+          "featSlots": 5,
+          "selectedFeat": "Observant",
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-l1",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 1,
+          "race": "Half-Elf",
+          "background": "Noble",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-l3",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 3,
+          "race": "Tiefling",
+          "background": "Soldier",
+          "subclass": "Circle of the Moon",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-l4",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 4,
+          "race": "Human",
+          "background": "Acolyte",
+          "subclass": "Circle of Dreams",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "War Caster",
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-l5",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 5,
+          "race": "Dwarf",
+          "background": "Criminal",
+          "subclass": "Circle of the Land",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Mobile",
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-l8",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 8,
+          "race": "Dragonborn",
+          "background": "Outlander",
+          "subclass": "Circle of the Land",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Charger",
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-l11",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 11,
+          "race": "Half-Orc",
+          "background": "Charlatan",
+          "subclass": "Circle of the Land",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Dual Wielder",
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 6,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-l17",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 17,
+          "race": "Dragonborn",
+          "background": "Acolyte",
+          "subclass": "Circle of the Land",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Lightly Armored",
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-l20",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 20,
+          "race": "Half-Orc",
+          "background": "Hermit",
+          "subclass": "Circle of the Land",
+          "subclassRequired": true,
+          "featSlots": 5,
+          "selectedFeat": "Medium Armor Master",
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-l1",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 1,
+          "race": "Tiefling",
+          "background": "Sage",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-l3",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 3,
+          "race": "Dwarf",
+          "background": "Acolyte",
+          "subclass": "Champion",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-l4",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 4,
+          "race": "Elf",
+          "background": "Criminal",
+          "subclass": "Eldritch Knight",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Sentinel",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-l5",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 5,
+          "race": "Halfling",
+          "background": "Folk Hero",
+          "subclass": "Battle Master",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Actor",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-l8",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 8,
+          "race": "Half-Elf",
+          "background": "Sailor",
+          "subclass": "Battle Master",
+          "subclassRequired": true,
+          "featSlots": 3,
+          "selectedFeat": "Defensive Duelist",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-l11",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 11,
+          "race": "Human",
+          "background": "Entertainer",
+          "subclass": "Battle Master",
+          "subclassRequired": true,
+          "featSlots": 3,
+          "selectedFeat": "Elemental Adept",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-l17",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 17,
+          "race": "Half-Elf",
+          "background": "Criminal",
+          "subclass": "Battle Master",
+          "subclassRequired": true,
+          "featSlots": 6,
+          "selectedFeat": "Martial Adept",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-fighter-l20",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 20,
+          "race": "Human",
+          "background": "Outlander",
+          "subclass": "Battle Master",
+          "subclassRequired": true,
+          "featSlots": 7,
+          "selectedFeat": "Polearm Master",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-l1",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 1,
+          "race": "Gnome",
+          "background": "Hermit",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-l3",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 3,
+          "race": "Half-Orc",
+          "background": "Sailor",
+          "subclass": "Way of the Kensei",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-l4",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 4,
+          "race": "Tiefling",
+          "background": "Urchin",
+          "subclass": "Way of the Open Hand",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Tough",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-l5",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 5,
+          "race": "Human",
+          "background": "Charlatan",
+          "subclass": "Way of Shadow",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "War Caster",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-l8",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 8,
+          "race": "Halfling",
+          "background": "Noble",
+          "subclass": "Way of Shadow",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Actor",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-l11",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 11,
+          "race": "Half-Elf",
+          "background": "Acolyte",
+          "subclass": "Way of Shadow",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Defensive Duelist",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-l17",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 17,
+          "race": "Halfling",
+          "background": "Urchin",
+          "subclass": "Way of Shadow",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Keen Mind",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-monk-l20",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 20,
+          "race": "Half-Elf",
+          "background": "Guild Artisan",
+          "subclass": "Way of Shadow",
+          "subclassRequired": true,
+          "featSlots": 5,
+          "selectedFeat": "Martial Adept",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-l1",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 1,
+          "race": "Tiefling",
+          "background": "Sage",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-l3",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 3,
+          "race": "Dwarf",
+          "background": "Acolyte",
+          "subclass": "Oath of the Ancients",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-l4",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 4,
+          "race": "Elf",
+          "background": "Criminal",
+          "subclass": "Oath of Vengeance",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Sentinel",
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-l5",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 5,
+          "race": "Halfling",
+          "background": "Folk Hero",
+          "subclass": "Oath of Devotion",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Actor",
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-l8",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 8,
+          "race": "Half-Elf",
+          "background": "Sailor",
+          "subclass": "Oath of Devotion",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Defensive Duelist",
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-l11",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 11,
+          "race": "Human",
+          "background": "Entertainer",
+          "subclass": "Oath of Devotion",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Elemental Adept",
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 5,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-l17",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 17,
+          "race": "Half-Elf",
+          "background": "Criminal",
+          "subclass": "Oath of Devotion",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Martial Adept",
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 5,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-l20",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 20,
+          "race": "Human",
+          "background": "Outlander",
+          "subclass": "Oath of Devotion",
+          "subclassRequired": true,
+          "featSlots": 5,
+          "selectedFeat": "Polearm Master",
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 5,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-l1",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 1,
+          "race": "Half-Orc",
+          "background": "Outlander",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-l3",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 3,
+          "race": "Human",
+          "background": "Urchin",
+          "subclass": "Beast Master",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-l4",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 4,
+          "race": "Dwarf",
+          "background": "Charlatan",
+          "subclass": "Gloom Stalker",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Mobile",
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-l5",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 5,
+          "race": "Elf",
+          "background": "Entertainer",
+          "subclass": "Hunter",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Sentinel",
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-l8",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Sage",
+          "subclass": "Hunter",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Crossbow Expert",
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-l11",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 11,
+          "race": "Tiefling",
+          "background": "Criminal",
+          "subclass": "Hunter",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Dungeon Delver",
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 5,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-l17",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 17,
+          "race": "Gnome",
+          "background": "Charlatan",
+          "subclass": "Hunter",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Mage Slayer",
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 5,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-l20",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 20,
+          "race": "Tiefling",
+          "background": "Noble",
+          "subclass": "Hunter",
+          "subclassRequired": true,
+          "featSlots": 5,
+          "selectedFeat": "Observant",
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 5,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-l1",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 1,
+          "race": "Half-Elf",
+          "background": "Noble",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-l3",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 3,
+          "race": "Tiefling",
+          "background": "Soldier",
+          "subclass": "Arcane Trickster",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-l4",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 4,
+          "race": "Human",
+          "background": "Acolyte",
+          "subclass": "Assassin",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "War Caster",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-l5",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 5,
+          "race": "Dwarf",
+          "background": "Criminal",
+          "subclass": "Swashbuckler",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Mobile",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-l8",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 8,
+          "race": "Dragonborn",
+          "background": "Outlander",
+          "subclass": "Assassin",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Charger",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-l11",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 11,
+          "race": "Half-Orc",
+          "background": "Charlatan",
+          "subclass": "Arcane Trickster",
+          "subclassRequired": true,
+          "featSlots": 3,
+          "selectedFeat": "Dual Wielder",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-l17",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 17,
+          "race": "Dragonborn",
+          "background": "Acolyte",
+          "subclass": "Swashbuckler",
+          "subclassRequired": true,
+          "featSlots": 5,
+          "selectedFeat": "Lightly Armored",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-rogue-l20",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 20,
+          "race": "Half-Orc",
+          "background": "Hermit",
+          "subclass": "Assassin",
+          "subclassRequired": true,
+          "featSlots": 6,
+          "selectedFeat": "Medium Armor Master",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-l1",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 1,
+          "race": "Human",
+          "background": "Sailor",
+          "subclass": "Clockwork Soul",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-l3",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 3,
+          "race": "Elf",
+          "background": "Charlatan",
+          "subclass": "Draconic Bloodline",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-l4",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 4,
+          "race": "Halfling",
+          "background": "Entertainer",
+          "subclass": "Lunar Sorcery",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Actor",
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-l5",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 5,
+          "race": "Dragonborn",
+          "background": "Guild Artisan",
+          "subclass": "Shadow Magic",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Charger",
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-l8",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 8,
+          "race": "Half-Orc",
+          "background": "Soldier",
+          "subclass": "Aberrant Mind",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Dual Wielder",
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-l11",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 11,
+          "race": "Dwarf",
+          "background": "Folk Hero",
+          "subclass": "Draconic Bloodline",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Great Weapon Master",
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 6,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-l17",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 17,
+          "race": "Half-Orc",
+          "background": "Entertainer",
+          "subclass": "Clockwork Soul",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Medium Armor Master",
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-l20",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 20,
+          "race": "Dwarf",
+          "background": "Sage",
+          "subclass": "Lunar Sorcery",
+          "subclassRequired": true,
+          "featSlots": 5,
+          "selectedFeat": "Resilient",
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-l1",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 1,
+          "race": "Tiefling",
+          "background": "Sage",
+          "subclass": "The Undying",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "pact",
+          "classSpellCount": 70,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-l3",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 3,
+          "race": "Dwarf",
+          "background": "Acolyte",
+          "subclass": "The Celestial",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "pact",
+          "classSpellCount": 70,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-l4",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 4,
+          "race": "Elf",
+          "background": "Criminal",
+          "subclass": "The Fathomless",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Sentinel",
+          "spellProgression": "pact",
+          "classSpellCount": 70,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-l5",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 5,
+          "race": "Halfling",
+          "background": "Folk Hero",
+          "subclass": "The Fiend",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Actor",
+          "spellProgression": "pact",
+          "classSpellCount": 70,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-l8",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 8,
+          "race": "Half-Elf",
+          "background": "Sailor",
+          "subclass": "The Hexblade",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Defensive Duelist",
+          "spellProgression": "pact",
+          "classSpellCount": 70,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-l11",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 11,
+          "race": "Human",
+          "background": "Entertainer",
+          "subclass": "The Archfey",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Elemental Adept",
+          "spellProgression": "pact",
+          "classSpellCount": 70,
+          "highestCatalogSpellLevelAtCheckpoint": 6,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-l17",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 17,
+          "race": "Half-Elf",
+          "background": "Criminal",
+          "subclass": "The Hexblade",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Martial Adept",
+          "spellProgression": "pact",
+          "classSpellCount": 70,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-l20",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 20,
+          "race": "Human",
+          "background": "Outlander",
+          "subclass": "The Archfey",
+          "subclassRequired": true,
+          "featSlots": 5,
+          "selectedFeat": "Polearm Master",
+          "spellProgression": "pact",
+          "classSpellCount": 70,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-l1",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 1,
+          "race": "Half-Orc",
+          "background": "Outlander",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-l3",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 3,
+          "race": "Human",
+          "background": "Urchin",
+          "subclass": "School of Illusion",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-l4",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 4,
+          "race": "Dwarf",
+          "background": "Charlatan",
+          "subclass": "School of Necromancy",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Mobile",
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-l5",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 5,
+          "race": "Elf",
+          "background": "Entertainer",
+          "subclass": "School of Transmutation",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Sentinel",
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-l8",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Sage",
+          "subclass": "Chronurgy Magic",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Crossbow Expert",
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-l11",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 11,
+          "race": "Tiefling",
+          "background": "Criminal",
+          "subclass": "School of Abjuration",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Dungeon Delver",
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 6,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-l17",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 17,
+          "race": "Gnome",
+          "background": "Charlatan",
+          "subclass": "School of Necromancy",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Mage Slayer",
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-l20",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 20,
+          "race": "Tiefling",
+          "background": "Noble",
+          "subclass": "Bladesinging",
+          "subclassRequired": true,
+          "featSlots": 5,
+          "selectedFeat": "Observant",
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "ruleset": "dnd_2024",
+      "counts": {
+        "classes": 12,
+        "subclasses": 48,
+        "races": 10,
+        "backgrounds": 16,
+        "feats": 77,
+        "spells": 335,
+        "scenarios": 96
+      },
+      "blockers": [],
+      "warnings": [],
+      "scenarios": [
+        {
+          "id": "dnd_2024-barbarian-l1",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 1,
+          "race": "Aasimar",
+          "background": "Sage",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-l3",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 3,
+          "race": "Dwarf",
+          "background": "Wayfarer",
+          "subclass": "Path of the Berserker",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-l4",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 4,
+          "race": "Elf",
+          "background": "Artisan",
+          "subclass": "Path of the Wild Heart",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Athlete",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-l5",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 5,
+          "race": "Gnome",
+          "background": "Criminal",
+          "subclass": "Path of the World Tree",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Charger",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-l8",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 8,
+          "race": "Human",
+          "background": "Merchant",
+          "subclass": "Path of the Wild Heart",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "War Caster",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-l11",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 11,
+          "race": "Aasimar",
+          "background": "Wayfarer",
+          "subclass": "Path of the Berserker",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Actor",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-l17",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 17,
+          "race": "Halfling",
+          "background": "Sage",
+          "subclass": "Path of the World Tree",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Mage Slayer",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-barbarian-l20",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "classId": "barbarian",
+          "level": 20,
+          "race": "Tiefling",
+          "background": "Artisan",
+          "subclass": "Path of the Wild Heart",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Resilient",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-l1",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 1,
+          "race": "Goliath",
+          "background": "Guard",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 111,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-l3",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 3,
+          "race": "Human",
+          "background": "Noble",
+          "subclass": "College of Valor",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 111,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-l4",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 4,
+          "race": "Orc",
+          "background": "Sailor",
+          "subclass": "College of Dance",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Savage Attacker",
+          "spellProgression": "full",
+          "classSpellCount": 111,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-l5",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 5,
+          "race": "Tiefling",
+          "background": "Soldier",
+          "subclass": "College of Glamour",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Skilled",
+          "spellProgression": "full",
+          "classSpellCount": 111,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-l8",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 8,
+          "race": "Dwarf",
+          "background": "Entertainer",
+          "subclass": "College of Dance",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Ability Score Improvement",
+          "spellProgression": "full",
+          "classSpellCount": 111,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-l11",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 11,
+          "race": "Goliath",
+          "background": "Noble",
+          "subclass": "College of Valor",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Defensive Duelist",
+          "spellProgression": "full",
+          "classSpellCount": 111,
+          "highestCatalogSpellLevelAtCheckpoint": 6,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-l17",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 17,
+          "race": "Dragonborn",
+          "background": "Guard",
+          "subclass": "College of Glamour",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Crossbow Expert",
+          "spellProgression": "full",
+          "classSpellCount": 111,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-l20",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "classId": "bard",
+          "level": 20,
+          "race": "Gnome",
+          "background": "Sailor",
+          "subclass": "College of Dance",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Fey-Touched",
+          "spellProgression": "full",
+          "classSpellCount": 111,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "dex",
+            "cha"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-l1",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 1,
+          "race": "Human",
+          "background": "Hermit",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-l3",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 3,
+          "race": "Tiefling",
+          "background": "Sailor",
+          "subclass": "Light Domain",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-l4",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 4,
+          "race": "Aasimar",
+          "background": "Soldier",
+          "subclass": "Trickery Domain",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Tavern Brawler",
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-l5",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 5,
+          "race": "Dragonborn",
+          "background": "Acolyte",
+          "subclass": "War Domain",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Tough",
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-l8",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Guard",
+          "subclass": "Trickery Domain",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Charger",
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-l11",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 11,
+          "race": "Human",
+          "background": "Sailor",
+          "subclass": "Light Domain",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "War Caster",
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 6,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-l17",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 17,
+          "race": "Elf",
+          "background": "Hermit",
+          "subclass": "War Domain",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Elemental Adept",
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-l20",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "classId": "cleric",
+          "level": 20,
+          "race": "Halfling",
+          "background": "Soldier",
+          "subclass": "Trickery Domain",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Mage Slayer",
+          "spellProgression": "full",
+          "classSpellCount": 103,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-l1",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 1,
+          "race": "Halfling",
+          "background": "Guide",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-l3",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 3,
+          "race": "Orc",
+          "background": "Sage",
+          "subclass": "Circle of the Land",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-l4",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 4,
+          "race": "Tiefling",
+          "background": "Scribe",
+          "subclass": "Circle of the Moon",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Skilled",
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-l5",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 5,
+          "race": "Aasimar",
+          "background": "Wayfarer",
+          "subclass": "Circle of the Sea",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Tavern Brawler",
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-l8",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 8,
+          "race": "Elf",
+          "background": "Farmer",
+          "subclass": "Circle of the Moon",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Athlete",
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-l11",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 11,
+          "race": "Halfling",
+          "background": "Sage",
+          "subclass": "Circle of the Land",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Great Weapon Master",
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 6,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-l17",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 17,
+          "race": "Dwarf",
+          "background": "Guide",
+          "subclass": "Circle of the Sea",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Dual Wielder",
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-l20",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "classId": "druid",
+          "level": 20,
+          "race": "Goliath",
+          "background": "Scribe",
+          "subclass": "Circle of the Moon",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Inspiring Leader",
+          "spellProgression": "full",
+          "classSpellCount": 102,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "wis"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-l1",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 1,
+          "race": "Orc",
+          "background": "Merchant",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-l3",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 3,
+          "race": "Aasimar",
+          "background": "Scribe",
+          "subclass": "Eldritch Knight",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-l4",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 4,
+          "race": "Dragonborn",
+          "background": "Wayfarer",
+          "subclass": "Psi Warrior",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Tough",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-l5",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 5,
+          "race": "Dwarf",
+          "background": "Artisan",
+          "subclass": "Battle Master",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Ability Score Improvement",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-l8",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 8,
+          "race": "Goliath",
+          "background": "Guide",
+          "subclass": "Psi Warrior",
+          "subclassRequired": true,
+          "featSlots": 3,
+          "selectedFeat": "Defensive Duelist",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-l11",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 11,
+          "race": "Orc",
+          "background": "Scribe",
+          "subclass": "Eldritch Knight",
+          "subclassRequired": true,
+          "featSlots": 3,
+          "selectedFeat": "Boon of Combat Prowess",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-l17",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 17,
+          "race": "Gnome",
+          "background": "Merchant",
+          "subclass": "Battle Master",
+          "subclassRequired": true,
+          "featSlots": 6,
+          "selectedFeat": "Fey-Touched",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-fighter-l20",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "classId": "fighter",
+          "level": 20,
+          "race": "Human",
+          "background": "Wayfarer",
+          "subclass": "Psi Warrior",
+          "subclassRequired": true,
+          "featSlots": 6,
+          "selectedFeat": "Piercer",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "str",
+            "dex"
+          ],
+          "savingThrows": [
+            "str",
+            "con"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-l1",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 1,
+          "race": "Goliath",
+          "background": "Guard",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-l3",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 3,
+          "race": "Human",
+          "background": "Noble",
+          "subclass": "Warrior of the Open Hand",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-l4",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 4,
+          "race": "Orc",
+          "background": "Sailor",
+          "subclass": "Warrior of Mercy",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Savage Attacker",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-l5",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 5,
+          "race": "Tiefling",
+          "background": "Soldier",
+          "subclass": "Warrior of Shadow",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Skilled",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-l8",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 8,
+          "race": "Dwarf",
+          "background": "Entertainer",
+          "subclass": "Warrior of Mercy",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Ability Score Improvement",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-l11",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 11,
+          "race": "Goliath",
+          "background": "Noble",
+          "subclass": "Warrior of the Open Hand",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Defensive Duelist",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-l17",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 17,
+          "race": "Dragonborn",
+          "background": "Guard",
+          "subclass": "Warrior of Shadow",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Crossbow Expert",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-monk-l20",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "classId": "monk",
+          "level": 20,
+          "race": "Gnome",
+          "background": "Sailor",
+          "subclass": "Warrior of Mercy",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Fey-Touched",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-l1",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 1,
+          "race": "Orc",
+          "background": "Merchant",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-l3",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 3,
+          "race": "Aasimar",
+          "background": "Scribe",
+          "subclass": "Oath of the Ancients",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-l4",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 4,
+          "race": "Dragonborn",
+          "background": "Wayfarer",
+          "subclass": "Oath of Vengeance",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Tough",
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-l5",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 5,
+          "race": "Dwarf",
+          "background": "Artisan",
+          "subclass": "Oath of Devotion",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Ability Score Improvement",
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-l8",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 8,
+          "race": "Goliath",
+          "background": "Guide",
+          "subclass": "Oath of Vengeance",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Defensive Duelist",
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-l11",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 11,
+          "race": "Orc",
+          "background": "Scribe",
+          "subclass": "Oath of the Ancients",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Boon of Combat Prowess",
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 5,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-l17",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 17,
+          "race": "Gnome",
+          "background": "Merchant",
+          "subclass": "Oath of Devotion",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Fey-Touched",
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 5,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-l20",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "classId": "paladin",
+          "level": 20,
+          "race": "Human",
+          "background": "Wayfarer",
+          "subclass": "Oath of Vengeance",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Piercer",
+          "spellProgression": "half",
+          "classSpellCount": 41,
+          "highestCatalogSpellLevelAtCheckpoint": 5,
+          "primaryAbilities": [
+            "str",
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-l1",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 1,
+          "race": "Human",
+          "background": "Hermit",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-l3",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 3,
+          "race": "Tiefling",
+          "background": "Sailor",
+          "subclass": "Fey Wanderer",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-l4",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 4,
+          "race": "Aasimar",
+          "background": "Soldier",
+          "subclass": "Gloom Stalker",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Tavern Brawler",
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-l5",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 5,
+          "race": "Dragonborn",
+          "background": "Acolyte",
+          "subclass": "Hunter",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Tough",
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-l8",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Guard",
+          "subclass": "Gloom Stalker",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Charger",
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-l11",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 11,
+          "race": "Human",
+          "background": "Sailor",
+          "subclass": "Fey Wanderer",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "War Caster",
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 5,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-l17",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 17,
+          "race": "Elf",
+          "background": "Hermit",
+          "subclass": "Hunter",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Elemental Adept",
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 5,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-l20",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "classId": "ranger",
+          "level": 20,
+          "race": "Halfling",
+          "background": "Soldier",
+          "subclass": "Gloom Stalker",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Mage Slayer",
+          "spellProgression": "half",
+          "classSpellCount": 38,
+          "highestCatalogSpellLevelAtCheckpoint": 5,
+          "primaryAbilities": [
+            "dex",
+            "wis"
+          ],
+          "savingThrows": [
+            "str",
+            "dex"
+          ],
+          "skillChoiceCount": 3,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-l1",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 1,
+          "race": "Halfling",
+          "background": "Guide",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-l3",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 3,
+          "race": "Orc",
+          "background": "Sage",
+          "subclass": "Arcane Trickster",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-l4",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 4,
+          "race": "Tiefling",
+          "background": "Scribe",
+          "subclass": "Assassin",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Skilled",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-l5",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 5,
+          "race": "Aasimar",
+          "background": "Wayfarer",
+          "subclass": "Soulknife",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Tavern Brawler",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-l8",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 8,
+          "race": "Elf",
+          "background": "Farmer",
+          "subclass": "Assassin",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Athlete",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-l11",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 11,
+          "race": "Halfling",
+          "background": "Sage",
+          "subclass": "Arcane Trickster",
+          "subclassRequired": true,
+          "featSlots": 3,
+          "selectedFeat": "Great Weapon Master",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-l17",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 17,
+          "race": "Dwarf",
+          "background": "Guide",
+          "subclass": "Soulknife",
+          "subclassRequired": true,
+          "featSlots": 5,
+          "selectedFeat": "Dual Wielder",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-rogue-l20",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "classId": "rogue",
+          "level": 20,
+          "race": "Goliath",
+          "background": "Scribe",
+          "subclass": "Assassin",
+          "subclassRequired": true,
+          "featSlots": 5,
+          "selectedFeat": "Inspiring Leader",
+          "spellProgression": "none",
+          "classSpellCount": 0,
+          "highestCatalogSpellLevelAtCheckpoint": 0,
+          "primaryAbilities": [
+            "dex"
+          ],
+          "savingThrows": [
+            "dex",
+            "int"
+          ],
+          "skillChoiceCount": 4,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-l1",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 1,
+          "race": "Tiefling",
+          "background": "Noble",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-l3",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 3,
+          "race": "Dragonborn",
+          "background": "Soldier",
+          "subclass": "Wild Magic Sorcery",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-l4",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 4,
+          "race": "Dwarf",
+          "background": "Acolyte",
+          "subclass": "Aberrant Sorcery",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Ability Score Improvement",
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-l5",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 5,
+          "race": "Elf",
+          "background": "Charlatan",
+          "subclass": "Clockwork Sorcery",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Athlete",
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-l8",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 8,
+          "race": "Halfling",
+          "background": "Hermit",
+          "subclass": "Aberrant Sorcery",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Great Weapon Master",
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-l11",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 11,
+          "race": "Tiefling",
+          "background": "Soldier",
+          "subclass": "Wild Magic Sorcery",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Boon of Fortitude",
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 6,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-l17",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 17,
+          "race": "Goliath",
+          "background": "Noble",
+          "subclass": "Clockwork Sorcery",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Inspiring Leader",
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-l20",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "classId": "sorcerer",
+          "level": 20,
+          "race": "Orc",
+          "background": "Acolyte",
+          "subclass": "Aberrant Sorcery",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Polearm Master",
+          "spellProgression": "full",
+          "classSpellCount": 126,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "con",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-l1",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 1,
+          "race": "Orc",
+          "background": "Merchant",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "pact",
+          "classSpellCount": 71,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-l3",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 3,
+          "race": "Aasimar",
+          "background": "Scribe",
+          "subclass": "Fiend Patron",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "pact",
+          "classSpellCount": 71,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-l4",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 4,
+          "race": "Dragonborn",
+          "background": "Wayfarer",
+          "subclass": "Great Old One Patron",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Tough",
+          "spellProgression": "pact",
+          "classSpellCount": 71,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-l5",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 5,
+          "race": "Dwarf",
+          "background": "Artisan",
+          "subclass": "Archfey Patron",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Ability Score Improvement",
+          "spellProgression": "pact",
+          "classSpellCount": 71,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-l8",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 8,
+          "race": "Goliath",
+          "background": "Guide",
+          "subclass": "Great Old One Patron",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Defensive Duelist",
+          "spellProgression": "pact",
+          "classSpellCount": 71,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-l11",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 11,
+          "race": "Orc",
+          "background": "Scribe",
+          "subclass": "Fiend Patron",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Boon of Combat Prowess",
+          "spellProgression": "pact",
+          "classSpellCount": 71,
+          "highestCatalogSpellLevelAtCheckpoint": 6,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-l17",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 17,
+          "race": "Gnome",
+          "background": "Merchant",
+          "subclass": "Archfey Patron",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Fey-Touched",
+          "spellProgression": "pact",
+          "classSpellCount": 71,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-l20",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "classId": "warlock",
+          "level": 20,
+          "race": "Human",
+          "background": "Wayfarer",
+          "subclass": "Great Old One Patron",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Piercer",
+          "spellProgression": "pact",
+          "classSpellCount": 71,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "cha"
+          ],
+          "savingThrows": [
+            "wis",
+            "cha"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-l1",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 1,
+          "race": "Human",
+          "background": "Hermit",
+          "subclass": null,
+          "subclassRequired": false,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 1,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-l3",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 3,
+          "race": "Tiefling",
+          "background": "Sailor",
+          "subclass": "Diviner",
+          "subclassRequired": true,
+          "featSlots": 0,
+          "selectedFeat": null,
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-l4",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 4,
+          "race": "Aasimar",
+          "background": "Soldier",
+          "subclass": "Evoker",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Tavern Brawler",
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 2,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-l5",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 5,
+          "race": "Dragonborn",
+          "background": "Acolyte",
+          "subclass": "Illusionist",
+          "subclassRequired": true,
+          "featSlots": 1,
+          "selectedFeat": "Tough",
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 3,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-l8",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 8,
+          "race": "Gnome",
+          "background": "Guard",
+          "subclass": "Evoker",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "Charger",
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 4,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-l11",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 11,
+          "race": "Human",
+          "background": "Sailor",
+          "subclass": "Diviner",
+          "subclassRequired": true,
+          "featSlots": 2,
+          "selectedFeat": "War Caster",
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 6,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-l17",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 17,
+          "race": "Elf",
+          "background": "Hermit",
+          "subclass": "Illusionist",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Elemental Adept",
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-l20",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "classId": "wizard",
+          "level": 20,
+          "race": "Halfling",
+          "background": "Soldier",
+          "subclass": "Evoker",
+          "subclassRequired": true,
+          "featSlots": 4,
+          "selectedFeat": "Mage Slayer",
+          "spellProgression": "full",
+          "classSpellCount": 209,
+          "highestCatalogSpellLevelAtCheckpoint": 9,
+          "primaryAbilities": [
+            "int"
+          ],
+          "savingThrows": [
+            "int",
+            "wis"
+          ],
+          "skillChoiceCount": 2,
+          "blockers": [],
+          "status": "ready"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-07-29T13:30:12.285Z",
+  "schemaVersion": "H-MEGA2",
+  "releaseArtifacts": [
+    "CHANGELOG_G_MEGA1.md",
+    "E4_DND_v5.144.0.zip",
+    "E4_DND_v5.144.0.zip.sha256",
+    "E4_DND_v6.0.0_PUBLIC.zip",
+    "E4_DND_v6.0.0_PUBLIC.zip.sha256",
+    "GOLDEN_RELEASE_ASSET_MANIFEST_G_MEGA2.json",
+    "GOLDEN_RELEASE_CHECKLIST_G_MEGA2.md",
+    "MAINTENANCE_RUNBOOK_H_MEGA2.md",
+    "PRODUCTION_HEALTH_SNAPSHOT_H_MEGA1.json",
+    "PRODUCTION_OPERATIONS_CHECKLIST_H_MEGA1.md",
+    "RELEASE_MANIFEST_G_MEGA1.json",
+    "ROLLBACK_PLAN_G_MEGA1.md",
+    "USER_RECOVERY_CHECKLIST_H_MEGA2.md"
+  ],
+  "reportArtifacts": [
+    "PRODUCTION_GOLDEN_RELEASE_G_MEGA2.json",
+    "PRODUCTION_GOLDEN_RELEASE_G_MEGA2.md",
+    "PRODUCTION_OPERATIONS_DIAGNOSTICS_H_MEGA1.json",
+    "PRODUCTION_OPERATIONS_DIAGNOSTICS_H_MEGA1.md",
+    "SUPPORT_RECOVERY_MAINTENANCE_H_MEGA2.json",
+    "SUPPORT_RECOVERY_MAINTENANCE_H_MEGA2.md"
+  ],
+  "dist": {
+    "fileCount": 78,
+    "hasIndex": true,
+    "hasManifest": true,
+    "hasServiceWorker": true
+  },
+  "recoveryReadiness": {
+    "hasRollbackPlan": true,
+    "hasOperationsSnapshot": true,
+    "hasRecoveryChecklist": true,
+    "hasMaintenanceRunbook": true
+  }
+}

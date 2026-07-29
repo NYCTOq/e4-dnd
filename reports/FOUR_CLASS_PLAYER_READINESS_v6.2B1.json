@@ -1,0 +1,1240 @@
+{
+  "generatedAt": "2026-07-29T15:21:35.355Z",
+  "scope": {
+    "rulesets": [
+      "dnd_2014",
+      "dnd_2024"
+    ],
+    "classes": [
+      "Cleric",
+      "Fighter",
+      "Rogue",
+      "Wizard"
+    ],
+    "expectedJourneys": 8
+  },
+  "summary": {
+    "ready": 8,
+    "blocked": 0,
+    "total": 8
+  },
+  "evidence": [
+    {
+      "ruleset": "dnd_2014",
+      "className": "Cleric",
+      "status": "ready",
+      "classId": "cleric",
+      "hitDie": 8,
+      "primaryAbilities": [
+        "wis"
+      ],
+      "savingThrows": [
+        "wis",
+        "cha"
+      ],
+      "skillChoiceCount": 2,
+      "skillPoolSize": 5,
+      "spellProgression": "full",
+      "subclassSelectionLevel": 1,
+      "subclasses": [
+        {
+          "id": "arcana-domain",
+          "name": "Arcana Domain",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            2,
+            6,
+            8,
+            17
+          ]
+        },
+        {
+          "id": "death-domain",
+          "name": "Death Domain",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            2,
+            6,
+            8,
+            17
+          ]
+        },
+        {
+          "id": "forge-domain",
+          "name": "Forge Domain",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            2,
+            6,
+            8,
+            17
+          ]
+        },
+        {
+          "id": "grave-domain",
+          "name": "Grave Domain",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            2,
+            6,
+            8,
+            17
+          ]
+        },
+        {
+          "id": "knowledge-domain",
+          "name": "Knowledge Domain",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            2,
+            6,
+            8,
+            17
+          ]
+        },
+        {
+          "id": "life-domain",
+          "name": "Life Domain",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            1,
+            2,
+            6,
+            8,
+            17
+          ]
+        },
+        {
+          "id": "light-domain",
+          "name": "Light Domain",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            2,
+            6,
+            8,
+            17
+          ]
+        },
+        {
+          "id": "nature-domain",
+          "name": "Nature Domain",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            2,
+            6,
+            8,
+            17
+          ]
+        },
+        {
+          "id": "order-domain",
+          "name": "Order Domain",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            2,
+            6,
+            8,
+            17
+          ]
+        },
+        {
+          "id": "peace-domain",
+          "name": "Peace Domain",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            2,
+            6,
+            8,
+            17
+          ]
+        },
+        {
+          "id": "tempest-domain",
+          "name": "Tempest Domain",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            2,
+            6,
+            8,
+            17
+          ]
+        },
+        {
+          "id": "trickery-domain",
+          "name": "Trickery Domain",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            2,
+            6,
+            8,
+            17
+          ]
+        },
+        {
+          "id": "twilight-domain",
+          "name": "Twilight Domain",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            2,
+            6,
+            8,
+            17
+          ]
+        },
+        {
+          "id": "war-domain",
+          "name": "War Domain",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            2,
+            6,
+            8,
+            17
+          ]
+        }
+      ],
+      "spellCount": 103,
+      "spellLevelDistribution": {
+        "0": 7,
+        "1": 15,
+        "2": 16,
+        "3": 19,
+        "4": 8,
+        "5": 13,
+        "6": 9,
+        "7": 8,
+        "8": 4,
+        "9": 4
+      },
+      "featCatalogCount": 35,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        10,
+        11,
+        12,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "ruleset": "dnd_2014",
+      "className": "Fighter",
+      "status": "ready",
+      "classId": "fighter",
+      "hitDie": 10,
+      "primaryAbilities": [
+        "str",
+        "dex"
+      ],
+      "savingThrows": [
+        "str",
+        "con"
+      ],
+      "skillChoiceCount": 2,
+      "skillPoolSize": 8,
+      "spellProgression": "none",
+      "subclassSelectionLevel": 3,
+      "subclasses": [
+        {
+          "id": "battle-master",
+          "name": "Battle Master",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            7,
+            10,
+            15,
+            18
+          ]
+        },
+        {
+          "id": "champion",
+          "name": "Champion",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            7,
+            10,
+            15,
+            18
+          ]
+        },
+        {
+          "id": "eldritch-knight",
+          "name": "Eldritch Knight",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            7,
+            10,
+            15,
+            18
+          ]
+        }
+      ],
+      "spellCount": 0,
+      "spellLevelDistribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "featCatalogCount": 35,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "ruleset": "dnd_2014",
+      "className": "Rogue",
+      "status": "ready",
+      "classId": "rogue",
+      "hitDie": 8,
+      "primaryAbilities": [
+        "dex"
+      ],
+      "savingThrows": [
+        "dex",
+        "int"
+      ],
+      "skillChoiceCount": 4,
+      "skillPoolSize": 11,
+      "spellProgression": "none",
+      "subclassSelectionLevel": 3,
+      "subclasses": [
+        {
+          "id": "arcane-trickster",
+          "name": "Arcane Trickster",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            9,
+            13,
+            17
+          ]
+        },
+        {
+          "id": "assassin",
+          "name": "Assassin",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            9,
+            13,
+            17
+          ]
+        },
+        {
+          "id": "swashbuckler",
+          "name": "Swashbuckler",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            9,
+            13,
+            17
+          ]
+        },
+        {
+          "id": "thief",
+          "name": "Thief",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            9,
+            13,
+            17
+          ]
+        }
+      ],
+      "spellCount": 0,
+      "spellLevelDistribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "featCatalogCount": 35,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "ruleset": "dnd_2014",
+      "className": "Wizard",
+      "status": "ready",
+      "classId": "wizard",
+      "hitDie": 6,
+      "primaryAbilities": [
+        "int"
+      ],
+      "savingThrows": [
+        "int",
+        "wis"
+      ],
+      "skillChoiceCount": 2,
+      "skillPoolSize": 6,
+      "spellProgression": "full",
+      "subclassSelectionLevel": 2,
+      "subclasses": [
+        {
+          "id": "bladesinging",
+          "name": "Bladesinging",
+          "selectionLevel": 2,
+          "featureLevels": [
+            2,
+            2,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "chronurgy-magic",
+          "name": "Chronurgy Magic",
+          "selectionLevel": 2,
+          "featureLevels": [
+            2,
+            2,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "graviturgy-magic",
+          "name": "Graviturgy Magic",
+          "selectionLevel": 2,
+          "featureLevels": [
+            2,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "order-of-scribes",
+          "name": "Order of Scribes",
+          "selectionLevel": 2,
+          "featureLevels": [
+            2,
+            2,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "school-of-abjuration",
+          "name": "School of Abjuration",
+          "selectionLevel": 2,
+          "featureLevels": [
+            2,
+            2,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "school-of-conjuration",
+          "name": "School of Conjuration",
+          "selectionLevel": 2,
+          "featureLevels": [
+            2,
+            2,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "school-of-divination",
+          "name": "School of Divination",
+          "selectionLevel": 2,
+          "featureLevels": [
+            2,
+            2,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "school-of-enchantment",
+          "name": "School of Enchantment",
+          "selectionLevel": 2,
+          "featureLevels": [
+            2,
+            2,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "school-of-evocation",
+          "name": "School of Evocation",
+          "selectionLevel": 2,
+          "featureLevels": [
+            2,
+            2,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "school-of-illusion",
+          "name": "School of Illusion",
+          "selectionLevel": 2,
+          "featureLevels": [
+            2,
+            2,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "school-of-necromancy",
+          "name": "School of Necromancy",
+          "selectionLevel": 2,
+          "featureLevels": [
+            2,
+            2,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "school-of-transmutation",
+          "name": "School of Transmutation",
+          "selectionLevel": 2,
+          "featureLevels": [
+            2,
+            2,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "war-magic",
+          "name": "War Magic",
+          "selectionLevel": 2,
+          "featureLevels": [
+            2,
+            2,
+            6,
+            10,
+            14
+          ]
+        }
+      ],
+      "spellCount": 209,
+      "spellLevelDistribution": {
+        "0": 16,
+        "1": 27,
+        "2": 34,
+        "3": 29,
+        "4": 23,
+        "5": 23,
+        "6": 19,
+        "7": 14,
+        "8": 13,
+        "9": 11
+      },
+      "featCatalogCount": 35,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "ruleset": "dnd_2024",
+      "className": "Cleric",
+      "status": "ready",
+      "classId": "cleric",
+      "hitDie": 8,
+      "primaryAbilities": [
+        "wis"
+      ],
+      "savingThrows": [
+        "wis",
+        "cha"
+      ],
+      "skillChoiceCount": 2,
+      "skillPoolSize": 5,
+      "spellProgression": "full",
+      "subclassSelectionLevel": 3,
+      "subclasses": [
+        {
+          "id": "life-domain-2024",
+          "name": "Life Domain",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            6,
+            17
+          ]
+        },
+        {
+          "id": "light-domain-2024",
+          "name": "Light Domain",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            6,
+            17
+          ]
+        },
+        {
+          "id": "trickery-domain-2024",
+          "name": "Trickery Domain",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            6,
+            17
+          ]
+        },
+        {
+          "id": "war-domain-2024",
+          "name": "War Domain",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            6,
+            17
+          ]
+        }
+      ],
+      "spellCount": 103,
+      "spellLevelDistribution": {
+        "0": 7,
+        "1": 15,
+        "2": 16,
+        "3": 19,
+        "4": 8,
+        "5": 13,
+        "6": 9,
+        "7": 8,
+        "8": 4,
+        "9": 4
+      },
+      "featCatalogCount": 77,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        12,
+        14,
+        16,
+        17,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "ruleset": "dnd_2024",
+      "className": "Fighter",
+      "status": "ready",
+      "classId": "fighter",
+      "hitDie": 10,
+      "primaryAbilities": [
+        "str",
+        "dex"
+      ],
+      "savingThrows": [
+        "str",
+        "con"
+      ],
+      "skillChoiceCount": 2,
+      "skillPoolSize": 8,
+      "spellProgression": "none",
+      "subclassSelectionLevel": 3,
+      "subclasses": [
+        {
+          "id": "battle-master-2024",
+          "name": "Battle Master",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            7,
+            10,
+            15,
+            18
+          ]
+        },
+        {
+          "id": "champion-2024",
+          "name": "Champion",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            7,
+            10,
+            15,
+            18
+          ]
+        },
+        {
+          "id": "eldritch-knight-2024",
+          "name": "Eldritch Knight",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            7,
+            10,
+            15,
+            18
+          ]
+        },
+        {
+          "id": "psi-warrior-2024",
+          "name": "Psi Warrior",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            7,
+            10,
+            15,
+            18
+          ]
+        }
+      ],
+      "spellCount": 0,
+      "spellLevelDistribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "featCatalogCount": 77,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "ruleset": "dnd_2024",
+      "className": "Rogue",
+      "status": "ready",
+      "classId": "rogue",
+      "hitDie": 8,
+      "primaryAbilities": [
+        "dex"
+      ],
+      "savingThrows": [
+        "dex",
+        "int"
+      ],
+      "skillChoiceCount": 4,
+      "skillPoolSize": 11,
+      "spellProgression": "none",
+      "subclassSelectionLevel": 3,
+      "subclasses": [
+        {
+          "id": "arcane-trickster-2024",
+          "name": "Arcane Trickster",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            9,
+            13,
+            17
+          ]
+        },
+        {
+          "id": "assassin-2024",
+          "name": "Assassin",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            9,
+            13,
+            17
+          ]
+        },
+        {
+          "id": "soulknife-2024",
+          "name": "Soulknife",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            9,
+            13,
+            17
+          ]
+        },
+        {
+          "id": "thief-2024",
+          "name": "Thief",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            9,
+            13,
+            17
+          ]
+        }
+      ],
+      "spellCount": 0,
+      "spellLevelDistribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "featCatalogCount": 77,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "ruleset": "dnd_2024",
+      "className": "Wizard",
+      "status": "ready",
+      "classId": "wizard",
+      "hitDie": 6,
+      "primaryAbilities": [
+        "int"
+      ],
+      "savingThrows": [
+        "int",
+        "wis"
+      ],
+      "skillChoiceCount": 2,
+      "skillPoolSize": 7,
+      "spellProgression": "full",
+      "subclassSelectionLevel": 3,
+      "subclasses": [
+        {
+          "id": "abjurer-2024",
+          "name": "Abjurer",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "diviner-2024",
+          "name": "Diviner",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "evoker",
+          "name": "Evoker",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "illusionist-2024",
+          "name": "Illusionist",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            6,
+            10,
+            14
+          ]
+        }
+      ],
+      "spellCount": 209,
+      "spellLevelDistribution": {
+        "0": 16,
+        "1": 27,
+        "2": 34,
+        "3": 29,
+        "4": 23,
+        "5": 23,
+        "6": 19,
+        "7": 14,
+        "8": 13,
+        "9": 11
+      },
+      "featCatalogCount": 77,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    }
+  ]
+}

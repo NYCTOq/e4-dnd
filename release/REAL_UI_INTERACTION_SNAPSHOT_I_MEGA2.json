@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-07-29T15:02:24.753Z",
+  "schemaVersion": "I-MEGA2",
+  "interactions": {
+    "builderControls": true,
+    "keyboardReachability": true,
+    "classSubclassChoices": true,
+    "spellFeatEquipmentChoices": true,
+    "sheetPlayMode": true,
+    "combatRestLevelUp": true,
+    "backupReload": true,
+    "desktopTabletMobile": true
+  },
+  "dist": {
+    "hasIndex": true,
+    "hasManifest": true,
+    "hasServiceWorker": true
+  },
+  "reports": [
+    "REAL_UI_INTERACTION_CLOSURE_I_MEGA2.json",
+    "REAL_UI_INTERACTION_CLOSURE_I_MEGA2.md"
+  ]
+}

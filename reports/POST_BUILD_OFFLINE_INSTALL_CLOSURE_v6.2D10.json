@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-07-29T15:21:34.323Z",
+  "schemaVersion": "6.2D10",
+  "package": {
+    "name": "e4_dnd",
+    "version": "6.2.0"
+  },
+  "summary": {
+    "total": 7,
+    "ready": 7,
+    "blocked": 0
+  },
+  "checks": [
+    {
+      "id": "package-build",
+      "label": "Package build command",
+      "ready": true,
+      "detail": "tsc -b && vite build"
+    },
+    {
+      "id": "vite-config",
+      "label": "Vite configuration",
+      "ready": true,
+      "detail": "vite.config.ts"
+    },
+    {
+      "id": "pwa-manifest",
+      "label": "PWA manifest source",
+      "ready": true,
+      "detail": "public/manifest.webmanifest"
+    },
+    {
+      "id": "service-worker",
+      "label": "Service worker registration source",
+      "ready": true,
+      "detail": "vite.config.ts"
+    },
+    {
+      "id": "backup-recovery",
+      "label": "Backup and recovery coverage",
+      "ready": true,
+      "detail": "character, full-backup and recovery suites"
+    },
+    {
+      "id": "route-fallback",
+      "label": "Navigation and route fallback coverage",
+      "ready": true,
+      "detail": "route parity and fallback contracts"
+    },
+    {
+      "id": "release-regression",
+      "label": "Distribution regression chain",
+      "ready": true,
+      "detail": "D8 and D9 release distribution regression"
+    }
+  ],
+  "blockers": []
+}

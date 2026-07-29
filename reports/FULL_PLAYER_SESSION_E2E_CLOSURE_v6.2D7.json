@@ -1,0 +1,2939 @@
+{
+  "generatedAt": "2026-07-29T15:21:45.158Z",
+  "schemaVersion": "6.2D7",
+  "scope": {
+    "rulesets": [
+      "dnd_2014",
+      "dnd_2024"
+    ],
+    "levels": [
+      1,
+      3,
+      5,
+      11,
+      17,
+      20
+    ],
+    "expectedScenarios": 144,
+    "sessionSteps": [
+      "creation",
+      "sheet",
+      "playMode",
+      "combat",
+      "rest",
+      "levelUp",
+      "persistence",
+      "backupTransfer",
+      "reload"
+    ]
+  },
+  "summary": {
+    "total": 144,
+    "ready": 144,
+    "blocked": 0
+  },
+  "matrices": [
+    {
+      "ruleset": "dnd_2014",
+      "counts": {
+        "classes": 12,
+        "subclasses": 73,
+        "scenarios": 72
+      },
+      "blockers": [],
+      "scenarios": [
+        {
+          "id": "dnd_2014:barbarian:path-of-the-berserker:1",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "subclassName": "Path of the Berserker",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:barbarian:path-of-the-berserker:3",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "subclassName": "Path of the Berserker",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:barbarian:path-of-the-berserker:5",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "subclassName": "Path of the Berserker",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:barbarian:path-of-the-berserker:11",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "subclassName": "Path of the Berserker",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:barbarian:path-of-the-berserker:17",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "subclassName": "Path of the Berserker",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:barbarian:path-of-the-totem-warrior:20",
+          "ruleset": "dnd_2014",
+          "className": "Barbarian",
+          "subclassName": "Path of the Totem Warrior",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:bard:college-of-eloquence:1",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "subclassName": "College of Eloquence",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:bard:college-of-spirits:3",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "subclassName": "College of Spirits",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:bard:college-of-valor:5",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "subclassName": "College of Valor",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:bard:college-of-spirits:11",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "subclassName": "College of Spirits",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:bard:college-of-eloquence:17",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "subclassName": "College of Eloquence",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:bard:college-of-lore:20",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "subclassName": "College of Lore",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:cleric:death-domain:1",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "subclassName": "Death Domain",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:cleric:forge-domain:3",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "subclassName": "Forge Domain",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:cleric:order-domain:5",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "subclassName": "Order Domain",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:cleric:nature-domain:11",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "subclassName": "Nature Domain",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:cleric:forge-domain:17",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "subclassName": "Forge Domain",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:cleric:peace-domain:20",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "subclassName": "Peace Domain",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:druid:circle-of-the-land:1",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "subclassName": "Circle of the Land",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:druid:circle-of-the-moon:3",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "subclassName": "Circle of the Moon",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:druid:circle-of-dreams:5",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "subclassName": "Circle of Dreams",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:druid:circle-of-dreams:11",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "subclassName": "Circle of Dreams",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:druid:circle-of-dreams:17",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "subclassName": "Circle of Dreams",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:druid:circle-of-dreams:20",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "subclassName": "Circle of Dreams",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:fighter:eldritch-knight:1",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "subclassName": "Eldritch Knight",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:fighter:battle-master:3",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "subclassName": "Battle Master",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:fighter:champion:5",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "subclassName": "Champion",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:fighter:champion:11",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "subclassName": "Champion",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:fighter:champion:17",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "subclassName": "Champion",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:fighter:champion:20",
+          "ruleset": "dnd_2014",
+          "className": "Fighter",
+          "subclassName": "Champion",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:monk:way-of-shadow:1",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "subclassName": "Way of Shadow",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:monk:way-of-the-kensei:3",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "subclassName": "Way of the Kensei",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:monk:way-of-the-open-hand:5",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "subclassName": "Way of the Open Hand",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:monk:way-of-the-open-hand:11",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "subclassName": "Way of the Open Hand",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:monk:way-of-the-open-hand:17",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "subclassName": "Way of the Open Hand",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:monk:way-of-the-open-hand:20",
+          "ruleset": "dnd_2014",
+          "className": "Monk",
+          "subclassName": "Way of the Open Hand",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:paladin:oath-of-the-ancients:1",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "subclassName": "Oath of the Ancients",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:paladin:oath-of-vengeance:3",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "subclassName": "Oath of Vengeance",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:paladin:oath-of-devotion:5",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "subclassName": "Oath of Devotion",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:paladin:oath-of-devotion:11",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "subclassName": "Oath of Devotion",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:paladin:oath-of-devotion:17",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "subclassName": "Oath of Devotion",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:paladin:oath-of-devotion:20",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "subclassName": "Oath of Devotion",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:ranger:gloom-stalker:1",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "subclassName": "Gloom Stalker",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:ranger:hunter:3",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "subclassName": "Hunter",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:ranger:beast-master:5",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "subclassName": "Beast Master",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:ranger:beast-master:11",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "subclassName": "Beast Master",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:ranger:beast-master:17",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "subclassName": "Beast Master",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:ranger:beast-master:20",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "subclassName": "Beast Master",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:rogue:assassin:1",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "subclassName": "Assassin",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:rogue:thief:3",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "subclassName": "Thief",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:rogue:assassin:5",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "subclassName": "Assassin",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:rogue:thief:11",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "subclassName": "Thief",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:rogue:assassin:17",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "subclassName": "Assassin",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:rogue:swashbuckler:20",
+          "ruleset": "dnd_2014",
+          "className": "Rogue",
+          "subclassName": "Swashbuckler",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:sorcerer:wild-magic:1",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "subclassName": "Wild Magic",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:sorcerer:divine-soul:3",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "subclassName": "Divine Soul",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:sorcerer:aberrant-mind:5",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "subclassName": "Aberrant Mind",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:sorcerer:divine-soul:11",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "subclassName": "Divine Soul",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:sorcerer:wild-magic:17",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "subclassName": "Wild Magic",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:sorcerer:shadow-magic:20",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "subclassName": "Shadow Magic",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:warlock:great-old-one:1",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "subclassName": "The Great Old One",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:warlock:the-archfey:3",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "subclassName": "The Archfey",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:warlock:the-fathomless:5",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "subclassName": "The Fathomless",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:warlock:the-fiend:11",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "subclassName": "The Fiend",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:warlock:the-undead:17",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "subclassName": "The Undead",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:warlock:the-fiend:20",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "subclassName": "The Fiend",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:wizard:school-of-transmutation:1",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "subclassName": "School of Transmutation",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:wizard:war-magic:3",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "subclassName": "War Magic",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:wizard:chronurgy-magic:5",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "subclassName": "Chronurgy Magic",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:wizard:school-of-enchantment:11",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "subclassName": "School of Enchantment",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:wizard:order-of-scribes:17",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "subclassName": "Order of Scribes",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014:wizard:school-of-evocation:20",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "subclassName": "School of Evocation",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "ruleset": "dnd_2024",
+      "counts": {
+        "classes": 12,
+        "subclasses": 48,
+        "scenarios": 72
+      },
+      "blockers": [],
+      "scenarios": [
+        {
+          "id": "dnd_2024:barbarian:zealot-2024:1",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "subclassName": "Path of the Zealot",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:barbarian:path-of-the-berserker-2024:3",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "subclassName": "Path of the Berserker",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:barbarian:zealot-2024:5",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "subclassName": "Path of the Zealot",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:barbarian:path-of-the-berserker-2024:11",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "subclassName": "Path of the Berserker",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:barbarian:zealot-2024:17",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "subclassName": "Path of the Zealot",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:barbarian:wild-heart-2024:20",
+          "ruleset": "dnd_2024",
+          "className": "Barbarian",
+          "subclassName": "Path of the Wild Heart",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:bard:college-of-dance-2024:1",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "subclassName": "College of Dance",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:bard:valor-2024:3",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "subclassName": "College of Valor",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:bard:college-of-dance-2024:5",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "subclassName": "College of Dance",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:bard:valor-2024:11",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "subclassName": "College of Valor",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:bard:college-of-dance-2024:17",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "subclassName": "College of Dance",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:bard:college-of-lore-2024:20",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "subclassName": "College of Lore",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:cleric:war-domain-2024:1",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "subclassName": "War Domain",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:cleric:light-domain-2024:3",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "subclassName": "Light Domain",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:cleric:war-domain-2024:5",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "subclassName": "War Domain",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:cleric:light-domain-2024:11",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "subclassName": "Light Domain",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:cleric:war-domain-2024:17",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "subclassName": "War Domain",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:cleric:trickery-domain-2024:20",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "subclassName": "Trickery Domain",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:druid:circle-of-the-sea-2024:1",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "subclassName": "Circle of the Sea",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:druid:circle-of-the-land-2024:3",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "subclassName": "Circle of the Land",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:druid:circle-of-the-sea-2024:5",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "subclassName": "Circle of the Sea",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:druid:circle-of-the-land-2024:11",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "subclassName": "Circle of the Land",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:druid:circle-of-the-sea-2024:17",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "subclassName": "Circle of the Sea",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:druid:circle-of-stars-2024:20",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "subclassName": "Circle of the Stars",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:fighter:champion-2024:1",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "subclassName": "Champion",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:fighter:eldritch-knight-2024:3",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "subclassName": "Eldritch Knight",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:fighter:champion-2024:5",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "subclassName": "Champion",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:fighter:eldritch-knight-2024:11",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "subclassName": "Eldritch Knight",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:fighter:champion-2024:17",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "subclassName": "Champion",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:fighter:battle-master-2024:20",
+          "ruleset": "dnd_2024",
+          "className": "Fighter",
+          "subclassName": "Battle Master",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:monk:warrior-of-mercy-2024:1",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "subclassName": "Warrior of Mercy",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:monk:shadow-monk-2024:3",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "subclassName": "Warrior of Shadow",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:monk:warrior-of-mercy-2024:5",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "subclassName": "Warrior of Mercy",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:monk:shadow-monk-2024:11",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "subclassName": "Warrior of Shadow",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:monk:warrior-of-mercy-2024:17",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "subclassName": "Warrior of Mercy",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:monk:warrior-of-the-open-hand:20",
+          "ruleset": "dnd_2024",
+          "className": "Monk",
+          "subclassName": "Warrior of the Open Hand",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:paladin:oath-of-devotion-2024:1",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "subclassName": "Oath of Devotion",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:paladin:ancients-2024:3",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "subclassName": "Oath of the Ancients",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:paladin:oath-of-devotion-2024:5",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "subclassName": "Oath of Devotion",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:paladin:ancients-2024:11",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "subclassName": "Oath of the Ancients",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:paladin:oath-of-devotion-2024:17",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "subclassName": "Oath of Devotion",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:paladin:oath-of-vengeance-2024:20",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "subclassName": "Oath of Vengeance",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:ranger:gloom-stalker-2024:1",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "subclassName": "Gloom Stalker",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:ranger:fey-wanderer-2024:3",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "subclassName": "Fey Wanderer",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:ranger:gloom-stalker-2024:5",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "subclassName": "Gloom Stalker",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:ranger:fey-wanderer-2024:11",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "subclassName": "Fey Wanderer",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:ranger:gloom-stalker-2024:17",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "subclassName": "Gloom Stalker",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:ranger:beast-master-2024:20",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "subclassName": "Beast Master",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:rogue:soulknife-2024:1",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "subclassName": "Soulknife",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:rogue:thief-2024:3",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "subclassName": "Thief",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:rogue:soulknife-2024:5",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "subclassName": "Soulknife",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:rogue:thief-2024:11",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "subclassName": "Thief",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:rogue:soulknife-2024:17",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "subclassName": "Soulknife",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:rogue:arcane-trickster-2024:20",
+          "ruleset": "dnd_2024",
+          "className": "Rogue",
+          "subclassName": "Arcane Trickster",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:sorcerer:wild-magic-2024:1",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "subclassName": "Wild Magic Sorcery",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:sorcerer:clockwork-sorcery-2024:3",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "subclassName": "Clockwork Sorcery",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:sorcerer:wild-magic-2024:5",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "subclassName": "Wild Magic Sorcery",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:sorcerer:clockwork-sorcery-2024:11",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "subclassName": "Clockwork Sorcery",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:sorcerer:wild-magic-2024:17",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "subclassName": "Wild Magic Sorcery",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:sorcerer:draconic-sorcery:20",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "subclassName": "Draconic Sorcery",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:warlock:fiend-patron-2024:1",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "subclassName": "Fiend Patron",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:warlock:celestial-patron-2024:3",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "subclassName": "Celestial Patron",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:warlock:fiend-patron-2024:5",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "subclassName": "Fiend Patron",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:warlock:celestial-patron-2024:11",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "subclassName": "Celestial Patron",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:warlock:fiend-patron-2024:17",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "subclassName": "Fiend Patron",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:warlock:great-old-one-2024:20",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "subclassName": "Great Old One Patron",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:wizard:illusionist-2024:1",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "subclassName": "Illusionist",
+          "level": 1,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:wizard:abjurer-2024:3",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "subclassName": "Abjurer",
+          "level": 3,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:wizard:illusionist-2024:5",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "subclassName": "Illusionist",
+          "level": 5,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:wizard:abjurer-2024:11",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "subclassName": "Abjurer",
+          "level": 11,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:wizard:illusionist-2024:17",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "subclassName": "Illusionist",
+          "level": 17,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024:wizard:diviner-2024:20",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "subclassName": "Diviner",
+          "level": 20,
+          "steps": {
+            "creation": true,
+            "sheet": true,
+            "playMode": true,
+            "combat": true,
+            "rest": true,
+            "levelUp": true,
+            "persistence": true,
+            "backupTransfer": true,
+            "reload": true
+          },
+          "blockers": [],
+          "status": "ready"
+        }
+      ]
+    }
+  ]
+}

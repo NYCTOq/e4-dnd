@@ -1,0 +1,103 @@
+{
+  "generatedAt": "2026-07-29T15:21:48.019Z",
+  "schemaVersion": "I-MEGA2",
+  "summary": {
+    "totalDomains": 8,
+    "readyDomains": 8,
+    "blockedDomains": 0,
+    "blockerCount": 0
+  },
+  "domains": [
+    {
+      "id": "builder",
+      "label": "Builder Interaction",
+      "requiredAll": [
+        "src/features/builder/builderGuidance.test.ts",
+        "src/core/rulesets/unifiedCharacterChoices.test.ts",
+        "src/core/rulesets/fullCharacterCertification.integration.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "choices",
+      "label": "Class, Subclass, Spell, Feat and Equipment Choices",
+      "requiredAll": [
+        "src/certification/player-readiness/playerChoiceIntegrityMatrix-v6.2C2.test.ts",
+        "src/core/rulesets/builderSpellIntegration.test.ts",
+        "src/core/rulesets/featOfficialCertification.test.ts",
+        "src/core/rulesets/itemUseRules.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "sheet-play",
+      "label": "Character Sheet and Play Mode",
+      "requiredAll": [
+        "src/core/character/sheetPlayModeConsistency.test.ts",
+        "src/core/character/playReadiness.test.ts",
+        "src/certification/integration/characterHubActionabilityContract.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "combat-rest",
+      "label": "Combat, Rest and Death",
+      "requiredAll": [
+        "src/certification/player-readiness/combatSpellAutomation-E-MEGA2.test.ts",
+        "src/features/rest/restAutomation.test.ts",
+        "src/certification/integration/deathDyingPlayModeIntegration.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "level-up",
+      "label": "Level Up and Persistence",
+      "requiredAll": [
+        "src/certification/oracle/levelUpProgressionOracle.test.ts",
+        "src/certification/integration/levelUpPersistenceBridge.test.ts",
+        "src/certification/matrix/levelUpCharacterPersistenceMatrix.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "backup",
+      "label": "Backup, Transfer and Reload",
+      "requiredAll": [
+        "src/features/backup/characterBackup.test.ts",
+        "src/features/backup/fullBackup.test.ts",
+        "src/features/backup/backupRecovery.test.ts",
+        "src/features/characters/characterTransfer.test.ts",
+        "src/core/storage/characterHydration.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "browser",
+      "label": "Real Browser Interaction Matrix",
+      "requiredAll": [
+        "e2e/real-ui-interaction-I-MEGA2.spec.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "release",
+      "label": "Acceptance and Release Regression",
+      "requiredAll": [
+        "src/certification/player-readiness/finalUserAcceptance-I-MEGA1.test.ts",
+        "src/certification/player-readiness/productionGoldenRelease-G-MEGA2.test.ts",
+        "src/core/release/finalReleaseGate.test.ts",
+        "release/REAL_UI_INTERACTION_CHECKLIST_I_MEGA2.md"
+      ],
+      "blockers": [],
+      "status": "ready"
+    }
+  ],
+  "blockers": []
+}

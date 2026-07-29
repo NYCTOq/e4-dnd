@@ -1,0 +1,116 @@
+{
+  "generatedAt": "2026-07-29T15:21:41.074Z",
+  "schemaVersion": "F-MEGA2",
+  "summary": {
+    "totalDomains": 8,
+    "readyDomains": 8,
+    "blockedDomains": 0,
+    "blockerCount": 0
+  },
+  "domains": [
+    {
+      "id": "class-subclass",
+      "label": "Class and Subclass Catalogs",
+      "requiredAll": [
+        "src/certification/discovery/classSubclassCatalogIntegrityDiscovery.test.ts",
+        "src/certification/golden/classSubclassCatalogGoldenIntegration.test.ts",
+        "src/core/rulesets/subclassExpansion.test.ts",
+        "src/core/rulesets/contentIntegrityAudit.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "spell",
+      "label": "Spell Catalog and Runtime",
+      "requiredAll": [
+        "src/core/rulesets/spellExpansion.test.ts",
+        "src/core/rulesets/spellCertificationExpansion.test.ts",
+        "src/core/rulesets/spellBuilderOfficial.test.ts",
+        "src/core/rulesets/globalSpellRuntime.test.ts",
+        "src/certification/integration/spellUiContract.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "feat-origin",
+      "label": "Feat and Origin Catalogs",
+      "requiredAll": [
+        "src/core/rulesets/featOfficialCertification.test.ts",
+        "src/core/rulesets/featCatalog2024Official.test.ts",
+        "src/certification/player-readiness/originFeatRuntimeMatrix-v6.2C7.test.ts",
+        "src/certification/oracle/classBackgroundOracle.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "items",
+      "label": "Equipment and Item Catalogs",
+      "requiredAll": [
+        "src/core/rulesets/itemExpansion.test.ts",
+        "src/core/rulesets/itemUseRules.test.ts",
+        "src/core/rulesets/itemEffectRuntimeRules.test.ts",
+        "src/core/rulesets/magicItemRules.test.ts",
+        "src/core/rulesets/equipmentMagicItemFinalCoverage.integration.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "builder",
+      "label": "Builder and Choice Integration",
+      "requiredAll": [
+        "src/features/builder/builderGuidance.test.ts",
+        "src/core/rulesets/unifiedCharacterChoices.test.ts",
+        "src/core/rulesets/levelUpChoiceCompletion.test.ts",
+        "src/core/rulesets/builderSpellIntegration.test.ts",
+        "src/core/rulesets/fullCharacterCertification.integration.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "discovery",
+      "label": "Search and Discovery",
+      "requiredAll": [
+        "src/features/search/globalSearch.test.ts",
+        "src/certification/discovery/navigationSearchDiscovery.test.ts",
+        "src/certification/integration/navigationSearchDiscoveryContract.test.ts",
+        "src/certification/differential/navigationSearchRouteParity.test.ts",
+        "src/certification/integration/navigationSearchGoldenIntentContract.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "homebrew",
+      "label": "Homebrew Import and Security",
+      "requiredAll": [
+        "src/core/homebrew/homebrewPackageSharing.test.ts",
+        "src/core/homebrew/homebrewCreator.test.ts",
+        "src/core/homebrew/homebrewBuilderIntegration.test.ts",
+        "src/core/homebrew/homebrewRuntimeIntegration.test.ts",
+        "src/core/homebrew/homebrewMarketplaceSecurity.test.ts",
+        "src/core/homebrew/homebrewSecurityResolution.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "play-mode",
+      "label": "Catalog to Play Mode",
+      "requiredAll": [
+        "src/core/character/sheetPlayModeConsistency.test.ts",
+        "src/core/character/playReadiness.test.ts",
+        "src/certification/integration/characterHubActionabilityContract.test.ts",
+        "src/certification/player-readiness/finalPlayableRuntimeClosure-v6.2D6.test.ts",
+        "e2e/content-catalog-expansion-F-MEGA2.spec.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    }
+  ],
+  "blockers": []
+}

@@ -1,0 +1,103 @@
+{
+  "generatedAt": "2026-07-29T15:21:47.985Z",
+  "schemaVersion": "I-MEGA1",
+  "summary": {
+    "totalDomains": 8,
+    "readyDomains": 8,
+    "blockedDomains": 0,
+    "blockerCount": 0
+  },
+  "domains": [
+    {
+      "id": "journey",
+      "label": "Full Player Journey",
+      "requiredAll": [
+        "src/certification/player-readiness/fullInteractivePlayerJourney-E-MEGA1.test.ts",
+        "src/certification/player-readiness/combatSpellAutomation-E-MEGA2.test.ts",
+        "src/certification/player-readiness/contentExpansionCatalogClosure-F-MEGA2.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "accessibility",
+      "label": "Accessibility and Mobile Quality",
+      "requiredAll": [
+        "src/core/qa/mobileAccessibilityPerformance.test.ts",
+        "src/core/quality/uiMobileAccessibilityPolish.test.ts",
+        "src/certification/integration/navigationSearchUiFinalClosureContract.test.ts",
+        "src/certification/integration/characterHubUiFinalClosureContract.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "navigation",
+      "label": "Navigation and Search",
+      "requiredAll": [
+        "src/features/search/globalSearch.test.ts",
+        "src/certification/discovery/navigationSearchDiscovery.test.ts",
+        "src/certification/differential/navigationSearchRouteParity.test.ts",
+        "src/certification/integration/navigationSearchGoldenIntentContract.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "builder-play",
+      "label": "Builder, Sheet and Play Mode",
+      "requiredAll": [
+        "src/core/character/sheetPlayModeConsistency.test.ts",
+        "src/core/character/playReadiness.test.ts",
+        "src/core/rulesets/fullCharacterCertification.integration.test.ts",
+        "src/certification/integration/characterHubActionabilityContract.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "persistence",
+      "label": "Persistence and Recovery",
+      "requiredAll": [
+        "src/core/storage/characterHydration.test.ts",
+        "src/features/backup/backupRecovery.test.ts",
+        "src/features/backup/fullBackup.test.ts",
+        "src/features/characters/characterTransfer.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "release",
+      "label": "Release and Operations",
+      "requiredAll": [
+        "src/certification/player-readiness/productionGoldenRelease-G-MEGA2.test.ts",
+        "src/certification/player-readiness/productionOperationsDiagnostics-H-MEGA1.test.ts",
+        "src/certification/player-readiness/supportRecoveryMaintenance-H-MEGA2.test.ts",
+        "src/core/release/finalReleaseGate.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "browser",
+      "label": "Browser Device Matrix",
+      "requiredAll": [
+        "e2e/final-user-acceptance-I-MEGA1.spec.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "acceptance-artifacts",
+      "label": "Acceptance Artifacts",
+      "requiredAll": [
+        "release/FINAL_USER_ACCEPTANCE_CHECKLIST_I_MEGA1.md",
+        "scripts/generate-user-acceptance-snapshot-I-MEGA1.mjs"
+      ],
+      "blockers": [],
+      "status": "ready"
+    }
+  ],
+  "blockers": []
+}

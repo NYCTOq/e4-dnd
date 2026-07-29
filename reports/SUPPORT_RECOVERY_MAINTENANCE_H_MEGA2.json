@@ -1,0 +1,103 @@
+{
+  "generatedAt": "2026-07-29T15:21:47.950Z",
+  "schemaVersion": "H-MEGA2",
+  "summary": {
+    "totalDomains": 8,
+    "readyDomains": 8,
+    "blockedDomains": 0,
+    "blockerCount": 0
+  },
+  "domains": [
+    {
+      "id": "operations",
+      "label": "Operations Baseline",
+      "requiredAll": [
+        "src/certification/player-readiness/productionOperationsDiagnostics-H-MEGA1.test.ts",
+        "release/PRODUCTION_HEALTH_SNAPSHOT_H_MEGA1.json",
+        "release/PRODUCTION_OPERATIONS_CHECKLIST_H_MEGA1.md"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "recovery",
+      "label": "Recovery Drill",
+      "requiredAll": [
+        "src/features/backup/characterBackup.test.ts",
+        "src/features/backup/fullBackup.test.ts",
+        "src/features/backup/backupRecovery.test.ts",
+        "src/features/characters/characterTransfer.test.ts",
+        "src/core/storage/characterHydration.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "integrity",
+      "label": "Character and Save Integrity",
+      "requiredAll": [
+        "src/core/character/characterIntegrity.test.ts",
+        "src/core/character/characterLifecycle.integration.test.ts",
+        "src/core/character/playerJourneyConsistency.test.ts",
+        "src/certification/matrix/levelUpCharacterPersistenceMatrix.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "release-support",
+      "label": "Release Support and History",
+      "requiredAll": [
+        "src/core/release/postReleaseQa.test.ts",
+        "src/core/release/stableReleaseHardening.test.ts",
+        "src/core/release/finalReleaseGate.test.ts",
+        "src/core/release/publicReleaseReadiness-v6.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "offline-update",
+      "label": "Offline and Update Recovery",
+      "requiredAll": [
+        "src/certification/player-readiness/publicReleaseDistributionClosure-v6.2D9.test.ts",
+        "src/certification/player-readiness/postBuildOfflineInstallClosure-v6.2D10.test.ts",
+        "src/certification/player-readiness/saveMigrationVersioningRelease-G-MEGA1.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "browser-support",
+      "label": "Browser Support Shell",
+      "requiredAll": [
+        "e2e/support-recovery-maintenance-H-MEGA2.spec.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "maintenance",
+      "label": "Maintenance Tooling",
+      "requiredAll": [
+        "scripts/generate-maintenance-snapshot-H-MEGA2.mjs",
+        "release/MAINTENANCE_RUNBOOK_H_MEGA2.md",
+        "release/USER_RECOVERY_CHECKLIST_H_MEGA2.md"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "golden-regression",
+      "label": "Golden Release Regression",
+      "requiredAll": [
+        "src/certification/player-readiness/productionGoldenRelease-G-MEGA2.test.ts",
+        "src/certification/player-readiness/productionOperationsDiagnostics-H-MEGA1.test.ts",
+        "src/core/quality/releaseReadinessAudit.test.ts"
+      ],
+      "blockers": [],
+      "status": "ready"
+    }
+  ],
+  "blockers": []
+}

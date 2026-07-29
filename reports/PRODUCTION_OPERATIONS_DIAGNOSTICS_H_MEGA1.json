@@ -1,0 +1,111 @@
+{
+  "generatedAt": "2026-07-29T15:21:48.020Z",
+  "schemaVersion": "H-MEGA1",
+  "summary": {
+    "totalDomains": 8,
+    "readyDomains": 8,
+    "blockedDomains": 0,
+    "blockerCount": 0
+  },
+  "domains": [
+    {
+      "id": "golden-release",
+      "label": "Golden Release Baseline",
+      "requiredAll": [
+        "src/certification/player-readiness/productionGoldenRelease-G-MEGA2.test.ts",
+        "release/GOLDEN_RELEASE_ASSET_MANIFEST_G_MEGA2.json",
+        "release/GOLDEN_RELEASE_CHECKLIST_G_MEGA2.md"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "post-release",
+      "label": "Post-Release QA",
+      "requiredAll": [
+        "src/core/release/postReleaseQa.test.ts",
+        "src/core/release/stableReleaseHardening.test.ts",
+        "src/core/release/finalReleaseGate.test.ts",
+        "src/core/quality/releaseReadinessAudit.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "storage",
+      "label": "Storage Health and Recovery",
+      "requiredAll": [
+        "src/core/storage/characterHydration.test.ts",
+        "src/features/backup/backupRecovery.test.ts",
+        "src/features/backup/fullBackup.test.ts",
+        "src/features/characters/characterTransfer.test.ts",
+        "src/core/character/characterIntegrity.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "performance",
+      "label": "Performance and Bundle Health",
+      "requiredAll": [
+        "src/core/performance/bundlePerformanceBudget-v5.142.test.ts",
+        "src/core/rulesets/rulesetLoaderChunks.test.ts",
+        "src/core/qa/mobileAccessibilityPerformance.test.ts",
+        "src/core/quality/uiMobileAccessibilityPolish.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "offline",
+      "label": "Offline and PWA Recovery",
+      "requiredAll": [
+        "src/certification/player-readiness/publicReleaseDistributionClosure-v6.2D9.test.ts",
+        "src/certification/player-readiness/postBuildOfflineInstallClosure-v6.2D10.test.ts",
+        "release/ROLLBACK_PLAN_G_MEGA1.md"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "journey",
+      "label": "Player Journey Regression",
+      "requiredAll": [
+        "src/certification/player-readiness/fullInteractivePlayerJourney-E-MEGA1.test.ts",
+        "src/certification/player-readiness/combatSpellAutomation-E-MEGA2.test.ts",
+        "src/certification/player-readiness/contentExpansionCatalogClosure-F-MEGA2.test.ts",
+        "src/certification/player-readiness/saveMigrationVersioningRelease-G-MEGA1.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "browser",
+      "label": "Operations Browser Smoke",
+      "requiredAll": [
+        "e2e/production-operations-H-MEGA1.spec.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "ops-artifacts",
+      "label": "Operations Artifacts",
+      "requiredAll": [
+        "release/PRODUCTION_OPERATIONS_CHECKLIST_H_MEGA1.md",
+        "scripts/generate-production-health-snapshot-H-MEGA1.mjs"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    }
+  ],
+  "blockers": []
+}

@@ -1,0 +1,113 @@
+{
+  "generatedAt": "2026-07-29T15:21:37.457Z",
+  "schemaVersion": "E-MEGA1",
+  "package": {
+    "name": "e4_dnd",
+    "version": "6.2.0",
+    "hasTestScript": true,
+    "hasBuildScript": true
+  },
+  "summary": {
+    "totalDomains": 7,
+    "readyDomains": 7,
+    "blockedDomains": 0,
+    "blockerCount": 0
+  },
+  "domains": [
+    {
+      "id": "creation",
+      "label": "Character Creation",
+      "requiredAll": [
+        "src/certification/player-readiness/allClassCharacterCreationMatrix-v6.2C1.test.ts",
+        "src/certification/player-readiness/playerChoiceIntegrityMatrix-v6.2C2.test.ts",
+        "src/core/character/characterLifecycle.integration.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "sheet-play",
+      "label": "Character Sheet and Play Mode",
+      "requiredAll": [
+        "src/core/character/sheetPlayModeConsistency.test.ts",
+        "src/core/character/playReadiness.test.ts",
+        "src/core/rulesets/characterSheetCertification.test.ts",
+        "src/certification/integration/classSubclassUiContract.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "combat-rest",
+      "label": "Combat, Rest and Recovery",
+      "requiredAll": [
+        "src/certification/player-readiness/combatSurvivalEquipmentMatrix-v6.2C4.test.ts",
+        "src/features/rest/restAutomation.test.ts",
+        "src/features/rest/restSheetPlayIntegration.test.ts",
+        "src/certification/integration/deathDyingPlayModeIntegration.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "level-up",
+      "label": "Level Up and Multiclass",
+      "requiredAll": [
+        "src/certification/player-readiness/multiclassRuntimeMatrix-v6.2C8.test.ts",
+        "src/certification/oracle/levelUpProgressionOracle.test.ts",
+        "src/certification/integration/levelUpPersistenceBridge.test.ts",
+        "src/certification/matrix/levelUpCharacterPersistenceMatrix.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "backup",
+      "label": "Backup, Transfer and Reload",
+      "requiredAll": [
+        "src/features/backup/characterBackup.test.ts",
+        "src/features/backup/fullBackup.test.ts",
+        "src/features/backup/backupRecovery.test.ts",
+        "src/features/characters/characterTransfer.test.ts",
+        "src/core/storage/characterHydration.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "browser-shell",
+      "label": "Browser and PWA Shell",
+      "requiredAll": [
+        "e2e/full-interactive-player-journey-E-MEGA1.spec.ts"
+      ],
+      "requiredAny": [
+        "playwright.config.ts",
+        "playwright.config.js",
+        "playwright.config.mts",
+        "playwright.config.mjs"
+      ],
+      "blockers": [],
+      "status": "ready"
+    },
+    {
+      "id": "release",
+      "label": "Release and Distribution Regression",
+      "requiredAll": [
+        "src/certification/player-readiness/finalPlayableRuntimeClosure-v6.2D6.test.ts",
+        "src/certification/player-readiness/fullPlayerSessionE2EClosure-v6.2D7.test.ts",
+        "src/certification/player-readiness/releaseCandidateCertification-v6.2D8.test.ts",
+        "src/certification/player-readiness/publicReleaseDistributionClosure-v6.2D9.test.ts",
+        "src/certification/player-readiness/postBuildOfflineInstallClosure-v6.2D10.test.ts"
+      ],
+      "requiredAny": [],
+      "blockers": [],
+      "status": "ready"
+    }
+  ],
+  "blockers": []
+}

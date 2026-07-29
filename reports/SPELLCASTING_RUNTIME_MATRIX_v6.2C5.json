@@ -1,0 +1,1997 @@
+{
+  "generatedAt": "2026-07-29T15:21:33.585Z",
+  "scope": {
+    "rulesets": [
+      "dnd_2014",
+      "dnd_2024"
+    ],
+    "casterClasses": [
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "characterLevels": [
+      1,
+      5,
+      11,
+      17
+    ],
+    "expectedScenarios": 64,
+    "spellSystems": [
+      "cantrip",
+      "attackOrSave",
+      "concentration",
+      "ritual",
+      "healing",
+      "summonOrPersistent",
+      "preparedKnownOrPactEligibility",
+      "runtimePersistence"
+    ]
+  },
+  "summary": {
+    "ready": 64,
+    "blocked": 0,
+    "total": 64,
+    "structuralBlockers": 0
+  },
+  "rulesets": [
+    {
+      "ruleset": "dnd_2014",
+      "counts": {
+        "classes": 12,
+        "casterClasses": 8,
+        "spells": 335,
+        "scenarios": 32
+      },
+      "blockers": [],
+      "warnings": [
+        "Paladin: no cantrip spell detected",
+        "Ranger: no cantrip spell detected",
+        "Ranger: no attackOrSave spell detected"
+      ],
+      "scenarios": [
+        {
+          "id": "dnd_2014-bard-spell-l1",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "characterLevel": 1,
+          "spellProgression": "full",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 30,
+          "selectedSpell": "Faerie Fire",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": "Light",
+            "attackOrSave": "Faerie Fire",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Light"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-spell-l5",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "characterLevel": 5,
+          "spellProgression": "full",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 64,
+          "selectedSpell": "Faerie Fire",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": "Light",
+            "attackOrSave": "Faerie Fire",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Light"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-spell-l11",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "characterLevel": 11,
+          "spellProgression": "full",
+          "spellLevelCeiling": 6,
+          "availableSpellCount": 94,
+          "selectedSpell": "Faerie Fire",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": "Light",
+            "attackOrSave": "Faerie Fire",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Light"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-bard-spell-l17",
+          "ruleset": "dnd_2014",
+          "className": "Bard",
+          "characterLevel": 17,
+          "spellProgression": "full",
+          "spellLevelCeiling": 9,
+          "availableSpellCount": 110,
+          "selectedSpell": "Faerie Fire",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": "Light",
+            "attackOrSave": "Faerie Fire",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Light"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-spell-l1",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "characterLevel": 1,
+          "spellProgression": "full",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 22,
+          "selectedSpell": "Resistance",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Guidance",
+            "attackOrSave": "Resistance",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Spare the Dying",
+            "summonOrPersistent": "Guidance"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-spell-l5",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "characterLevel": 5,
+          "spellProgression": "full",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 57,
+          "selectedSpell": "Resistance",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Guidance",
+            "attackOrSave": "Resistance",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Spare the Dying",
+            "summonOrPersistent": "Guidance"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-spell-l11",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "characterLevel": 11,
+          "spellProgression": "full",
+          "spellLevelCeiling": 6,
+          "availableSpellCount": 87,
+          "selectedSpell": "Resistance",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Guidance",
+            "attackOrSave": "Resistance",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Spare the Dying",
+            "summonOrPersistent": "Guidance"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-cleric-spell-l17",
+          "ruleset": "dnd_2014",
+          "className": "Cleric",
+          "characterLevel": 17,
+          "spellProgression": "full",
+          "spellLevelCeiling": 9,
+          "availableSpellCount": 103,
+          "selectedSpell": "Resistance",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Guidance",
+            "attackOrSave": "Resistance",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Spare the Dying",
+            "summonOrPersistent": "Guidance"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-spell-l1",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "characterLevel": 1,
+          "spellProgression": "full",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 24,
+          "selectedSpell": "Poison Spray",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Druidcraft",
+            "attackOrSave": "Poison Spray",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Druidcraft"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-spell-l5",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "characterLevel": 5,
+          "spellProgression": "full",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 49,
+          "selectedSpell": "Poison Spray",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Druidcraft",
+            "attackOrSave": "Poison Spray",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Druidcraft"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-spell-l11",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "characterLevel": 11,
+          "spellProgression": "full",
+          "spellLevelCeiling": 6,
+          "availableSpellCount": 86,
+          "selectedSpell": "Poison Spray",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Druidcraft",
+            "attackOrSave": "Poison Spray",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Druidcraft"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-druid-spell-l17",
+          "ruleset": "dnd_2014",
+          "className": "Druid",
+          "characterLevel": 17,
+          "spellProgression": "full",
+          "spellLevelCeiling": 9,
+          "availableSpellCount": 102,
+          "selectedSpell": "Poison Spray",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Druidcraft",
+            "attackOrSave": "Poison Spray",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Druidcraft"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-spell-l1",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "characterLevel": 1,
+          "spellProgression": "half",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 13,
+          "selectedSpell": "Bless",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": "Bless",
+            "concentration": "Bless",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Bless"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-spell-l5",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "characterLevel": 5,
+          "spellProgression": "half",
+          "spellLevelCeiling": 2,
+          "availableSpellCount": 21,
+          "selectedSpell": "Bless",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": "Bless",
+            "concentration": "Bless",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Bless"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-spell-l11",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "characterLevel": 11,
+          "spellProgression": "half",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 30,
+          "selectedSpell": "Bless",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": "Bless",
+            "concentration": "Bless",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Bless"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-paladin-spell-l17",
+          "ruleset": "dnd_2014",
+          "className": "Paladin",
+          "characterLevel": 17,
+          "spellProgression": "half",
+          "spellLevelCeiling": 5,
+          "availableSpellCount": 41,
+          "selectedSpell": "Bless",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": "Bless",
+            "concentration": "Bless",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Bless"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-spell-l1",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "characterLevel": 1,
+          "spellProgression": "half",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 12,
+          "selectedSpell": "Cure Wounds",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": null,
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Detect Magic"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-spell-l5",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "characterLevel": 5,
+          "spellProgression": "half",
+          "spellLevelCeiling": 2,
+          "availableSpellCount": 21,
+          "selectedSpell": "Cure Wounds",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": null,
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Detect Magic"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-spell-l11",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "characterLevel": 11,
+          "spellProgression": "half",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 29,
+          "selectedSpell": "Cure Wounds",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": null,
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Detect Magic"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-ranger-spell-l17",
+          "ruleset": "dnd_2014",
+          "className": "Ranger",
+          "characterLevel": 17,
+          "spellProgression": "half",
+          "spellLevelCeiling": 5,
+          "availableSpellCount": 38,
+          "selectedSpell": "Cure Wounds",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": null,
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Detect Magic"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-spell-l1",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "characterLevel": 1,
+          "spellProgression": "full",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 33,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-spell-l5",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "characterLevel": 5,
+          "spellProgression": "full",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 77,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-spell-l11",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "characterLevel": 11,
+          "spellProgression": "full",
+          "spellLevelCeiling": 6,
+          "availableSpellCount": 108,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-sorcerer-spell-l17",
+          "ruleset": "dnd_2014",
+          "className": "Sorcerer",
+          "characterLevel": 17,
+          "spellProgression": "full",
+          "spellLevelCeiling": 9,
+          "availableSpellCount": 126,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-spell-l1",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "characterLevel": 1,
+          "spellProgression": "pact",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 20,
+          "selectedSpell": "Chill Touch",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Chill Touch",
+            "attackOrSave": "Chill Touch",
+            "concentration": "Friends",
+            "ritual": "Comprehend Languages",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-spell-l5",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "characterLevel": 5,
+          "spellProgression": "pact",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 42,
+          "selectedSpell": "Chill Touch",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Chill Touch",
+            "attackOrSave": "Chill Touch",
+            "concentration": "Hold Person",
+            "ritual": "Comprehend Languages",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-spell-l11",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "characterLevel": 11,
+          "spellProgression": "pact",
+          "spellLevelCeiling": 5,
+          "availableSpellCount": 50,
+          "selectedSpell": "Chill Touch",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Chill Touch",
+            "attackOrSave": "Chill Touch",
+            "concentration": "Hold Person",
+            "ritual": "Comprehend Languages",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-warlock-spell-l17",
+          "ruleset": "dnd_2014",
+          "className": "Warlock",
+          "characterLevel": 17,
+          "spellProgression": "pact",
+          "spellLevelCeiling": 5,
+          "availableSpellCount": 50,
+          "selectedSpell": "Chill Touch",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Chill Touch",
+            "attackOrSave": "Chill Touch",
+            "concentration": "Hold Person",
+            "ritual": "Comprehend Languages",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-spell-l1",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "characterLevel": 1,
+          "spellProgression": "full",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 43,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-spell-l5",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "characterLevel": 5,
+          "spellProgression": "full",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 106,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-spell-l11",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "characterLevel": 11,
+          "spellProgression": "full",
+          "spellLevelCeiling": 6,
+          "availableSpellCount": 171,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2014-wizard-spell-l17",
+          "ruleset": "dnd_2014",
+          "className": "Wizard",
+          "characterLevel": 17,
+          "spellProgression": "full",
+          "spellLevelCeiling": 9,
+          "availableSpellCount": 209,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "ruleset": "dnd_2024",
+      "counts": {
+        "classes": 12,
+        "casterClasses": 8,
+        "spells": 335,
+        "scenarios": 32
+      },
+      "blockers": [],
+      "warnings": [
+        "Paladin: no cantrip spell detected",
+        "Ranger: no cantrip spell detected"
+      ],
+      "scenarios": [
+        {
+          "id": "dnd_2024-bard-spell-l1",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "characterLevel": 1,
+          "spellProgression": "full",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 30,
+          "selectedSpell": "Faerie Fire",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": "Light",
+            "attackOrSave": "Faerie Fire",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Light"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-spell-l5",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "characterLevel": 5,
+          "spellProgression": "full",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 65,
+          "selectedSpell": "Faerie Fire",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": "Light",
+            "attackOrSave": "Faerie Fire",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Light"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-spell-l11",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "characterLevel": 11,
+          "spellProgression": "full",
+          "spellLevelCeiling": 6,
+          "availableSpellCount": 95,
+          "selectedSpell": "Faerie Fire",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": "Light",
+            "attackOrSave": "Faerie Fire",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Light"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-bard-spell-l17",
+          "ruleset": "dnd_2024",
+          "className": "Bard",
+          "characterLevel": 17,
+          "spellProgression": "full",
+          "spellLevelCeiling": 9,
+          "availableSpellCount": 111,
+          "selectedSpell": "Faerie Fire",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": "Light",
+            "attackOrSave": "Faerie Fire",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Light"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-spell-l1",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "characterLevel": 1,
+          "spellProgression": "full",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 22,
+          "selectedSpell": "Resistance",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Guidance",
+            "attackOrSave": "Resistance",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Spare the Dying",
+            "summonOrPersistent": "Guidance"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-spell-l5",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "characterLevel": 5,
+          "spellProgression": "full",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 57,
+          "selectedSpell": "Resistance",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Guidance",
+            "attackOrSave": "Resistance",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Spare the Dying",
+            "summonOrPersistent": "Guidance"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-spell-l11",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "characterLevel": 11,
+          "spellProgression": "full",
+          "spellLevelCeiling": 6,
+          "availableSpellCount": 87,
+          "selectedSpell": "Resistance",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Guidance",
+            "attackOrSave": "Resistance",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Spare the Dying",
+            "summonOrPersistent": "Guidance"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-cleric-spell-l17",
+          "ruleset": "dnd_2024",
+          "className": "Cleric",
+          "characterLevel": 17,
+          "spellProgression": "full",
+          "spellLevelCeiling": 9,
+          "availableSpellCount": 103,
+          "selectedSpell": "Resistance",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Guidance",
+            "attackOrSave": "Resistance",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Spare the Dying",
+            "summonOrPersistent": "Guidance"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-spell-l1",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "characterLevel": 1,
+          "spellProgression": "full",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 24,
+          "selectedSpell": "Poison Spray",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Druidcraft",
+            "attackOrSave": "Poison Spray",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Druidcraft"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-spell-l5",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "characterLevel": 5,
+          "spellProgression": "full",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 49,
+          "selectedSpell": "Poison Spray",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Druidcraft",
+            "attackOrSave": "Poison Spray",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Druidcraft"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-spell-l11",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "characterLevel": 11,
+          "spellProgression": "full",
+          "spellLevelCeiling": 6,
+          "availableSpellCount": 86,
+          "selectedSpell": "Poison Spray",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Druidcraft",
+            "attackOrSave": "Poison Spray",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Druidcraft"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-druid-spell-l17",
+          "ruleset": "dnd_2024",
+          "className": "Druid",
+          "characterLevel": 17,
+          "spellProgression": "full",
+          "spellLevelCeiling": 9,
+          "availableSpellCount": 102,
+          "selectedSpell": "Poison Spray",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Druidcraft",
+            "attackOrSave": "Poison Spray",
+            "concentration": "Guidance",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Druidcraft"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-spell-l1",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "characterLevel": 1,
+          "spellProgression": "half",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 13,
+          "selectedSpell": "Bless",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": "Bless",
+            "concentration": "Bless",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Bless"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-spell-l5",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "characterLevel": 5,
+          "spellProgression": "half",
+          "spellLevelCeiling": 2,
+          "availableSpellCount": 21,
+          "selectedSpell": "Bless",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": "Bless",
+            "concentration": "Bless",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Bless"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-spell-l11",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "characterLevel": 11,
+          "spellProgression": "half",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 30,
+          "selectedSpell": "Bless",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": "Bless",
+            "concentration": "Bless",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Bless"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-paladin-spell-l17",
+          "ruleset": "dnd_2024",
+          "className": "Paladin",
+          "characterLevel": 17,
+          "spellProgression": "half",
+          "spellLevelCeiling": 5,
+          "availableSpellCount": 41,
+          "selectedSpell": "Bless",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": "Bless",
+            "concentration": "Bless",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Bless"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-spell-l1",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "characterLevel": 1,
+          "spellProgression": "half",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 12,
+          "selectedSpell": "Cure Wounds",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": null,
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Detect Magic"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-spell-l5",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "characterLevel": 5,
+          "spellProgression": "half",
+          "spellLevelCeiling": 2,
+          "availableSpellCount": 21,
+          "selectedSpell": "Cure Wounds",
+          "selectedSpellLevel": 1,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": null,
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Detect Magic"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-spell-l11",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "characterLevel": 11,
+          "spellProgression": "half",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 29,
+          "selectedSpell": "Conjure Animals",
+          "selectedSpellLevel": 3,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": "Conjure Animals",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Detect Magic"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-ranger-spell-l17",
+          "ruleset": "dnd_2024",
+          "className": "Ranger",
+          "characterLevel": 17,
+          "spellProgression": "half",
+          "spellLevelCeiling": 5,
+          "availableSpellCount": 38,
+          "selectedSpell": "Conjure Animals",
+          "selectedSpellLevel": 3,
+          "coverage": {
+            "cantrip": null,
+            "attackOrSave": "Conjure Animals",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Cure Wounds",
+            "summonOrPersistent": "Detect Magic"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-spell-l1",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "characterLevel": 1,
+          "spellProgression": "full",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 33,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-spell-l5",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "characterLevel": 5,
+          "spellProgression": "full",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 77,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-spell-l11",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "characterLevel": 11,
+          "spellProgression": "full",
+          "spellLevelCeiling": 6,
+          "availableSpellCount": 108,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-sorcerer-spell-l17",
+          "ruleset": "dnd_2024",
+          "className": "Sorcerer",
+          "characterLevel": 17,
+          "spellProgression": "full",
+          "spellLevelCeiling": 9,
+          "availableSpellCount": 126,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-spell-l1",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "characterLevel": 1,
+          "spellProgression": "pact",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 21,
+          "selectedSpell": "Chill Touch",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Chill Touch",
+            "attackOrSave": "Chill Touch",
+            "concentration": "Friends",
+            "ritual": "Comprehend Languages",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-spell-l5",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "characterLevel": 5,
+          "spellProgression": "pact",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 43,
+          "selectedSpell": "Chill Touch",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Chill Touch",
+            "attackOrSave": "Chill Touch",
+            "concentration": "Hold Person",
+            "ritual": "Comprehend Languages",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-spell-l11",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "characterLevel": 11,
+          "spellProgression": "pact",
+          "spellLevelCeiling": 5,
+          "availableSpellCount": 51,
+          "selectedSpell": "Chill Touch",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Chill Touch",
+            "attackOrSave": "Chill Touch",
+            "concentration": "Hold Person",
+            "ritual": "Comprehend Languages",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-warlock-spell-l17",
+          "ruleset": "dnd_2024",
+          "className": "Warlock",
+          "characterLevel": 17,
+          "spellProgression": "pact",
+          "spellLevelCeiling": 5,
+          "availableSpellCount": 51,
+          "selectedSpell": "Chill Touch",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Chill Touch",
+            "attackOrSave": "Chill Touch",
+            "concentration": "Hold Person",
+            "ritual": "Comprehend Languages",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-spell-l1",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "characterLevel": 1,
+          "spellProgression": "full",
+          "spellLevelCeiling": 1,
+          "availableSpellCount": 43,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-spell-l5",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "characterLevel": 5,
+          "spellProgression": "full",
+          "spellLevelCeiling": 3,
+          "availableSpellCount": 106,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-spell-l11",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "characterLevel": 11,
+          "spellProgression": "full",
+          "spellLevelCeiling": 6,
+          "availableSpellCount": 171,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        },
+        {
+          "id": "dnd_2024-wizard-spell-l17",
+          "ruleset": "dnd_2024",
+          "className": "Wizard",
+          "characterLevel": 17,
+          "spellProgression": "full",
+          "spellLevelCeiling": 9,
+          "availableSpellCount": 209,
+          "selectedSpell": "Acid Splash",
+          "selectedSpellLevel": 0,
+          "coverage": {
+            "cantrip": "Acid Splash",
+            "attackOrSave": "Acid Splash",
+            "concentration": "Detect Magic",
+            "ritual": "Detect Magic",
+            "healing": "Chill Touch",
+            "summonOrPersistent": "Chill Touch"
+          },
+          "runtimeSteps": {
+            "classListMembership": true,
+            "levelEligibility": true,
+            "castingMetadata": true,
+            "slotOrPactEligibility": true,
+            "concentrationTracking": true,
+            "ritualTracking": true,
+            "persistenceMetadata": true
+          },
+          "blockers": [],
+          "status": "ready"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "generatedAt": "2026-07-29T15:21:39.450Z",
+  "schemaVersion": "6.2D8",
+  "releaseCandidate": {
+    "name": "e4_dnd",
+    "version": "6.2.0"
+  },
+  "summary": {
+    "totalDomains": 6,
+    "readyDomains": 6,
+    "blockedDomains": 0,
+    "blockerCount": 0
+  },
+  "package": {
+    "name": "e4_dnd",
+    "version": "6.2.0",
+    "hasTestScript": true,
+    "hasBuildScript": true
+  },
+  "artifacts": [
+    {
+      "id": "runtime-waves",
+      "label": "Runtime Automation Waves",
+      "paths": [
+        "src/certification/player-readiness/guidedRuntimeGapClosure-v6.2D1.test.ts",
+        "src/certification/player-readiness/guidedFeatureAutomationWave1-v6.2D2.test.ts",
+        "src/certification/player-readiness/battlefieldAutomationWave2-v6.2D3.test.ts",
+        "src/certification/player-readiness/narrativeGuidanceWave3-v6.2D4.test.ts",
+        "src/certification/player-readiness/unifiedRuntimeContractRegistry-v6.2D5.test.ts"
+      ],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "playable-runtime",
+      "label": "Playable Runtime Closure",
+      "paths": [
+        "src/certification/player-readiness/finalPlayableRuntimeClosure-v6.2D6.test.ts",
+        "src/certification/player-readiness/fullPlayerSessionE2EClosure-v6.2D7.test.ts"
+      ],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "release-gates",
+      "label": "Release Gates",
+      "paths": [
+        "src/core/release/stablePlayerRelease.test.ts",
+        "src/core/release/stableReleaseHardening.test.ts",
+        "src/core/release/finalReleaseGate.test.ts",
+        "src/core/release/publicReleaseReadiness-v6.test.ts",
+        "src/core/release/releasePackaging-v5.144.test.ts",
+        "src/core/release/postReleaseQa.test.ts"
+      ],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "quality",
+      "label": "Quality and Performance",
+      "paths": [
+        "src/core/quality/releaseReadinessAudit.test.ts",
+        "src/core/quality/uiMobileAccessibilityPolish.test.ts",
+        "src/core/qa/mobileAccessibilityPerformance.test.ts",
+        "src/core/performance/bundlePerformanceBudget-v5.142.test.ts",
+        "src/core/rulesets/rulesetLoaderChunks.test.ts"
+      ],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "recovery",
+      "label": "Backup and Recovery",
+      "paths": [
+        "src/features/backup/characterBackup.test.ts",
+        "src/features/backup/fullBackup.test.ts",
+        "src/features/backup/backupRecovery.test.ts",
+        "src/features/characters/characterTransfer.test.ts",
+        "src/core/storage/characterHydration.test.ts"
+      ],
+      "status": "ready",
+      "blockers": []
+    },
+    {
+      "id": "player-shell",
+      "label": "Player Application Shell",
+      "paths": [
+        "src/certification/integration/characterHubUiFinalClosureContract.test.ts",
+        "src/certification/integration/navigationSearchUiFinalClosureContract.test.ts",
+        "src/certification/integration/crossDomainUiFinalClosureContract.test.ts",
+        "src/core/character/playerJourneyConsistency.test.ts"
+      ],
+      "status": "ready",
+      "blockers": []
+    }
+  ],
+  "blockers": []
+}

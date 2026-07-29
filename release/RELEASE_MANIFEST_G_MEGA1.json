@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "G-MEGA1",
+  "releaseType": "save-migration-versioning-closure",
+  "guarantees": [
+    "pre-migration backup",
+    "cross-version persistence",
+    "rollback safety",
+    "PWA update compatibility",
+    "clean production build",
+    "release gate regression"
+  ]
+}

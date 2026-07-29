@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-07-29T15:21:15.419Z",
+  "releaseId": "J-MEGA1",
+  "channel": "release-candidate",
+  "previousVersion": "6.2.0",
+  "version": "6.2.0",
+  "saveSchemaVersion": 2,
+  "compatibilityFloor": "6.1.0",
+  "gitTag": "v6.2.0-rc.1"
+}

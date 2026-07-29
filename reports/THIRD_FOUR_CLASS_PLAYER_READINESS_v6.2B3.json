@@ -1,0 +1,1107 @@
+{
+  "generatedAt": "2026-07-29T15:21:33.819Z",
+  "scope": {
+    "rulesets": [
+      "dnd_2014",
+      "dnd_2024"
+    ],
+    "classes": [
+      "Paladin",
+      "Ranger",
+      "Sorcerer",
+      "Warlock"
+    ],
+    "expectedJourneys": 8
+  },
+  "summary": {
+    "ready": 8,
+    "blocked": 0,
+    "total": 8
+  },
+  "evidence": [
+    {
+      "ruleset": "dnd_2014",
+      "className": "Paladin",
+      "status": "ready",
+      "classId": "paladin",
+      "hitDie": 10,
+      "primaryAbilities": [
+        "str",
+        "cha"
+      ],
+      "savingThrows": [
+        "wis",
+        "cha"
+      ],
+      "skillChoiceCount": 2,
+      "skillPoolSize": 6,
+      "spellProgression": "half",
+      "subclassSelectionLevel": 3,
+      "subclasses": [
+        {
+          "id": "oath-of-devotion",
+          "name": "Oath of Devotion",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            7,
+            15,
+            20
+          ]
+        },
+        {
+          "id": "oath-of-the-ancients",
+          "name": "Oath of the Ancients",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            7,
+            15,
+            20
+          ]
+        },
+        {
+          "id": "oath-of-vengeance",
+          "name": "Oath of Vengeance",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            7,
+            15,
+            20
+          ]
+        }
+      ],
+      "spellCount": 41,
+      "spellLevelDistribution": {
+        "0": 0,
+        "1": 13,
+        "2": 8,
+        "3": 9,
+        "4": 5,
+        "5": 6,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "featCatalogCount": 35,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "ruleset": "dnd_2014",
+      "className": "Ranger",
+      "status": "ready",
+      "classId": "ranger",
+      "hitDie": 10,
+      "primaryAbilities": [
+        "dex",
+        "wis"
+      ],
+      "savingThrows": [
+        "str",
+        "dex"
+      ],
+      "skillChoiceCount": 3,
+      "skillPoolSize": 8,
+      "spellProgression": "half",
+      "subclassSelectionLevel": 3,
+      "subclasses": [
+        {
+          "id": "beast-master",
+          "name": "Beast Master",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            7,
+            11,
+            15
+          ]
+        },
+        {
+          "id": "gloom-stalker",
+          "name": "Gloom Stalker",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            7,
+            11,
+            15
+          ]
+        },
+        {
+          "id": "hunter",
+          "name": "Hunter",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            7,
+            11,
+            15
+          ]
+        }
+      ],
+      "spellCount": 38,
+      "spellLevelDistribution": {
+        "0": 0,
+        "1": 12,
+        "2": 9,
+        "3": 8,
+        "4": 5,
+        "5": 4,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "featCatalogCount": 35,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "ruleset": "dnd_2014",
+      "className": "Sorcerer",
+      "status": "ready",
+      "classId": "sorcerer",
+      "hitDie": 6,
+      "primaryAbilities": [
+        "cha"
+      ],
+      "savingThrows": [
+        "con",
+        "cha"
+      ],
+      "skillChoiceCount": 2,
+      "skillPoolSize": 6,
+      "spellProgression": "full",
+      "subclassSelectionLevel": 1,
+      "subclasses": [
+        {
+          "id": "aberrant-mind",
+          "name": "Aberrant Mind",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            1,
+            6,
+            6,
+            14,
+            18
+          ]
+        },
+        {
+          "id": "clockwork-soul",
+          "name": "Clockwork Soul",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            1,
+            6,
+            14,
+            18
+          ]
+        },
+        {
+          "id": "divine-soul",
+          "name": "Divine Soul",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            1,
+            6,
+            14,
+            18
+          ]
+        },
+        {
+          "id": "draconic-bloodline",
+          "name": "Draconic Bloodline",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            1,
+            6,
+            14,
+            18
+          ]
+        },
+        {
+          "id": "lunar-sorcery",
+          "name": "Lunar Sorcery",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            1,
+            6,
+            6,
+            14,
+            18
+          ]
+        },
+        {
+          "id": "shadow-magic",
+          "name": "Shadow Magic",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            1,
+            6,
+            14,
+            18
+          ]
+        },
+        {
+          "id": "storm-sorcery",
+          "name": "Storm Sorcery",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            1,
+            6,
+            6,
+            14,
+            18
+          ]
+        },
+        {
+          "id": "wild-magic",
+          "name": "Wild Magic",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            1,
+            6,
+            14,
+            18
+          ]
+        }
+      ],
+      "spellCount": 126,
+      "spellLevelDistribution": {
+        "0": 16,
+        "1": 17,
+        "2": 25,
+        "3": 19,
+        "4": 10,
+        "5": 11,
+        "6": 10,
+        "7": 8,
+        "8": 5,
+        "9": 5
+      },
+      "featCatalogCount": 35,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "ruleset": "dnd_2014",
+      "className": "Warlock",
+      "status": "ready",
+      "classId": "warlock",
+      "hitDie": 8,
+      "primaryAbilities": [
+        "cha"
+      ],
+      "savingThrows": [
+        "wis",
+        "cha"
+      ],
+      "skillChoiceCount": 2,
+      "skillPoolSize": 7,
+      "spellProgression": "pact",
+      "subclassSelectionLevel": 1,
+      "subclasses": [
+        {
+          "id": "the-archfey",
+          "name": "The Archfey",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "the-celestial",
+          "name": "The Celestial",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "the-fathomless",
+          "name": "The Fathomless",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            1,
+            6,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "the-fiend",
+          "name": "The Fiend",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "the-genie",
+          "name": "The Genie",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "great-old-one",
+          "name": "The Great Old One",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "the-hexblade",
+          "name": "The Hexblade",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            1,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "the-undead",
+          "name": "The Undead",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "the-undying",
+          "name": "The Undying",
+          "selectionLevel": 1,
+          "featureLevels": [
+            1,
+            6,
+            10,
+            14
+          ]
+        }
+      ],
+      "spellCount": 70,
+      "spellLevelDistribution": {
+        "0": 9,
+        "1": 11,
+        "2": 11,
+        "3": 11,
+        "4": 4,
+        "5": 4,
+        "6": 7,
+        "7": 4,
+        "8": 5,
+        "9": 4
+      },
+      "featCatalogCount": 35,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "ruleset": "dnd_2024",
+      "className": "Paladin",
+      "status": "ready",
+      "classId": "paladin",
+      "hitDie": 10,
+      "primaryAbilities": [
+        "str",
+        "cha"
+      ],
+      "savingThrows": [
+        "wis",
+        "cha"
+      ],
+      "skillChoiceCount": 2,
+      "skillPoolSize": 6,
+      "spellProgression": "half",
+      "subclassSelectionLevel": 3,
+      "subclasses": [
+        {
+          "id": "oath-of-devotion-2024",
+          "name": "Oath of Devotion",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            7,
+            15,
+            20
+          ]
+        },
+        {
+          "id": "oath-of-glory-2024",
+          "name": "Oath of Glory",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            7,
+            15,
+            20
+          ]
+        },
+        {
+          "id": "ancients-2024",
+          "name": "Oath of the Ancients",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            7,
+            15,
+            20
+          ]
+        },
+        {
+          "id": "oath-of-vengeance-2024",
+          "name": "Oath of Vengeance",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            7,
+            15,
+            20
+          ]
+        }
+      ],
+      "spellCount": 41,
+      "spellLevelDistribution": {
+        "0": 0,
+        "1": 13,
+        "2": 8,
+        "3": 9,
+        "4": 5,
+        "5": 6,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "featCatalogCount": 77,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "ruleset": "dnd_2024",
+      "className": "Ranger",
+      "status": "ready",
+      "classId": "ranger",
+      "hitDie": 10,
+      "primaryAbilities": [
+        "dex",
+        "wis"
+      ],
+      "savingThrows": [
+        "str",
+        "dex"
+      ],
+      "skillChoiceCount": 3,
+      "skillPoolSize": 8,
+      "spellProgression": "half",
+      "subclassSelectionLevel": 3,
+      "subclasses": [
+        {
+          "id": "beast-master-2024",
+          "name": "Beast Master",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            7,
+            11,
+            15
+          ]
+        },
+        {
+          "id": "fey-wanderer-2024",
+          "name": "Fey Wanderer",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            3,
+            7,
+            11,
+            15
+          ]
+        },
+        {
+          "id": "gloom-stalker-2024",
+          "name": "Gloom Stalker",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            3,
+            7,
+            11,
+            15
+          ]
+        },
+        {
+          "id": "hunter-2024",
+          "name": "Hunter",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            7,
+            11,
+            15
+          ]
+        }
+      ],
+      "spellCount": 38,
+      "spellLevelDistribution": {
+        "0": 0,
+        "1": 12,
+        "2": 9,
+        "3": 8,
+        "4": 5,
+        "5": 4,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "featCatalogCount": 77,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "ruleset": "dnd_2024",
+      "className": "Sorcerer",
+      "status": "ready",
+      "classId": "sorcerer",
+      "hitDie": 6,
+      "primaryAbilities": [
+        "cha"
+      ],
+      "savingThrows": [
+        "con",
+        "cha"
+      ],
+      "skillChoiceCount": 2,
+      "skillPoolSize": 6,
+      "spellProgression": "full",
+      "subclassSelectionLevel": 3,
+      "subclasses": [
+        {
+          "id": "aberrant-sorcery-2024",
+          "name": "Aberrant Sorcery",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            6,
+            6,
+            14,
+            18
+          ]
+        },
+        {
+          "id": "clockwork-sorcery-2024",
+          "name": "Clockwork Sorcery",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            6,
+            14,
+            18
+          ]
+        },
+        {
+          "id": "draconic-sorcery",
+          "name": "Draconic Sorcery",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            6,
+            14,
+            18
+          ]
+        },
+        {
+          "id": "wild-magic-2024",
+          "name": "Wild Magic Sorcery",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            6,
+            14,
+            18
+          ]
+        }
+      ],
+      "spellCount": 126,
+      "spellLevelDistribution": {
+        "0": 16,
+        "1": 17,
+        "2": 25,
+        "3": 19,
+        "4": 10,
+        "5": 11,
+        "6": 10,
+        "7": 8,
+        "8": 5,
+        "9": 5
+      },
+      "featCatalogCount": 77,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        12,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "ruleset": "dnd_2024",
+      "className": "Warlock",
+      "status": "ready",
+      "classId": "warlock",
+      "hitDie": 8,
+      "primaryAbilities": [
+        "cha"
+      ],
+      "savingThrows": [
+        "wis",
+        "cha"
+      ],
+      "skillChoiceCount": 2,
+      "skillPoolSize": 7,
+      "spellProgression": "pact",
+      "subclassSelectionLevel": 3,
+      "subclasses": [
+        {
+          "id": "archfey-patron-2024",
+          "name": "Archfey Patron",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "celestial-patron-2024",
+          "name": "Celestial Patron",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "fiend-patron-2024",
+          "name": "Fiend Patron",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            6,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "great-old-one-2024",
+          "name": "Great Old One Patron",
+          "selectionLevel": 3,
+          "featureLevels": [
+            3,
+            3,
+            3,
+            6,
+            10,
+            10,
+            14
+          ]
+        }
+      ],
+      "spellCount": 71,
+      "spellLevelDistribution": {
+        "0": 9,
+        "1": 12,
+        "2": 11,
+        "3": 11,
+        "4": 4,
+        "5": 4,
+        "6": 7,
+        "7": 4,
+        "8": 5,
+        "9": 4
+      },
+      "featCatalogCount": 77,
+      "levelsFound": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "featureLevels": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "blockers": [],
+      "warnings": []
+    }
+  ]
+}
