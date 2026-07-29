@@ -1,7 +1,7 @@
 {
     "name":  "e4_dnd",
     "private":  true,
-    "version":  "6.0.0",
+    "version":  "6.1.0",
     "type":  "module",
     "scripts":  {
                     "dev":  "vite",
@@ -360,7 +360,14 @@
                     "certify:release-packaging":  "npm run test:release-packaging \u0026\u0026 npm run build \u0026\u0026 npm run package:release",
                     "test:public-release":  "vitest run src/core/release/publicReleaseReadiness-v6.test.ts",
                     "package:public-release":  "node scripts/package-public-release-v6.mjs",
-                    "certify:public-release":  "npm run test:public-release \u0026\u0026 npm run audit:security:context \u0026\u0026 npm run test:critical \u0026\u0026 npm run build \u0026\u0026 npm run audit:bundle-performance \u0026\u0026 npm run package:public-release"
+                    "certify:public-release":  "npm run test:public-release \u0026\u0026 npm run audit:security:context \u0026\u0026 npm run test:critical \u0026\u0026 npm run build \u0026\u0026 npm run audit:bundle-performance \u0026\u0026 npm run package:public-release",
+                    "test:golden-30":  "vitest run src/certification/golden/thirtyGoldenCharacterScenarios.test.ts",
+                    "audit:golden-30":  "node scripts/thirty-golden-character-audit-v6.1.mjs",
+                    "certify:golden-30":  "npm run test:golden-30 \u0026\u0026 npm run build \u0026\u0026 npm run audit:golden-30",
+                    "test:e2e:overlay-closure":  "playwright test e2e/accessibility-essentials-v5.127.spec.ts e2e/app-shell.spec.ts e2e/advanced-multiclass-level-up-v5.117D.spec.ts e2e/builder-ui-mega.spec.ts --workers=4",
+                    "certify:e2e:overlay-closure":  "npm run build \u0026\u0026 npm run test:e2e:overlay-closure",
+                    "test:e2e:responsive-closure":  "playwright test e2e/app-shell.spec.ts e2e/builder-ui-mega.spec.ts --workers=4",
+                    "certify:e2e:responsive-closure":  "npm run test:e2e:responsive-closure \u0026\u0026 npm run test \u0026\u0026 npm run build \u0026\u0026 npm run test:e2e"
                 },
     "dependencies":  {
                          "framer-motion":  "^12.42.2",

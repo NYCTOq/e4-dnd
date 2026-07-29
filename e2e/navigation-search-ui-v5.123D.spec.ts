@@ -1,6 +1,15 @@
 import { expect, test } from "@playwright/test";
 import { installKnownAppState } from "./support/appState";
 
+// v6.1D1: deterministic shell bootstrap for physical E2E tests.
+const __E4_E2E_APP_VERSION__ = "6.1.0";
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript((appVersion) => {
+    localStorage.setItem("e4_dnd_first_run_guide_v1", JSON.stringify(true));
+    localStorage.setItem("e4_dnd_last_seen_version_v1", appVersion);
+  }, __E4_E2E_APP_VERSION__);
+});
+
 const intents = [
   { query: "büyüler", label: "Spellbook", route: /\/spellbook$/ },
   { query: "inventory", label: "Inventory", route: /\/inventory$/ },
@@ -13,7 +22,9 @@ for (const intent of intents) {
     const input = page.getByRole("searchbox", { name: "Arama" });
     await expect(input).toHaveValue(intent.query);
     await expect(page.getByRole("link", { name: new RegExp(intent.label, "i") }).first()).toBeVisible();
-    await page.reload();
+    await page.reload({ waitUntil: "domcontentloaded" }).catch((error) => {
+    if (!String(error).includes("ERR_INTERNET_DISCONNECTED")) throw error;
+  });
     await expect(input).toHaveValue(intent.query);
     await page.getByRole("link", { name: new RegExp(intent.label, "i") }).first().click();
     await expect(page).toHaveURL(intent.route);

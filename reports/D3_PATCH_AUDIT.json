@@ -1,0 +1,21 @@
+{
+  "modified": [
+    "builder-ui-mega.spec.ts",
+    "certification-abilities-smoke.spec.ts",
+    "certification-all-ancestries.spec.ts",
+    "certification-all-classes-backgrounds.spec.ts",
+    "certification-golden-builders.spec.ts",
+    "certification-spellcasting-smoke.spec.ts",
+    "cross-domain-player-lifecycle-v5.121D.spec.ts",
+    "full-character-creation.spec.ts",
+    "global-shell-overlay-safety-v5.116.spec.ts",
+    "mobile-and-storage.spec.ts",
+    "navigation-search-ui-v5.123D.spec.ts",
+    "play-feedback-undo-v5.124.spec.ts"
+  ],
+  "helperInjected": 8,
+  "stepCalls": 3,
+  "classCalls": 1,
+  "offlineReloads": 8,
+  "staleVersionFixtures": 0
+}

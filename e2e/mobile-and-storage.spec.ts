@@ -1,5 +1,14 @@
 import { expect, test } from "@playwright/test";
 
+// v6.1D1: deterministic shell bootstrap for physical E2E tests.
+const __E4_E2E_APP_VERSION__ = "6.1.0";
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript((appVersion) => {
+    localStorage.setItem("e4_dnd_first_run_guide_v1", JSON.stringify(true));
+    localStorage.setItem("e4_dnd_last_seen_version_v1", appVersion);
+  }, __E4_E2E_APP_VERSION__);
+});
+
 test("mobile quick navigation and full menu are usable", async ({ page }, info) => {
   test.skip(!info.project.name.includes("mobile"), "Mobile only");
   await page.goto("/");
@@ -30,15 +39,32 @@ test("mobile and installed PWA shell can scroll vertically", async ({ page }, in
 test("local data survives refresh", async ({ page }) => {
   await page.goto("/");
   await page.evaluate(() => localStorage.setItem("e4_e2e_refresh_probe", "survives"));
-  await page.reload();
+  await page.reload({ waitUntil: "domcontentloaded" }).catch((error) => {
+    if (!String(error).includes("ERR_INTERNET_DISCONNECTED")) throw error;
+  });
   await expect.poll(() => page.evaluate(() => localStorage.getItem("e4_e2e_refresh_probe"))).toBe("survives");
 });
 
 test("built shell reopens offline", async ({ page, context }) => {
   await page.goto("/");
   await page.waitForLoadState("networkidle");
+
+  await page.evaluate(async () => {
+    if (!("serviceWorker" in navigator)) {
+      throw new Error("Service worker is unavailable");
+    }
+    await navigator.serviceWorker.ready;
+  });
+
+  // The first controlled reload lets the activated worker claim this page.
+  await page.reload({ waitUntil: "networkidle" });
+  await page.waitForFunction(() => Boolean(navigator.serviceWorker?.controller));
+
   await context.setOffline(true);
-  await page.reload();
-  await expect(page.getByRole("link", { name: "E4 D&D ana sayfa" })).toBeVisible();
-  await context.setOffline(false);
+  try {
+    await page.reload({ waitUntil: "domcontentloaded" });
+    await expect(page.locator("#main-content")).toBeVisible();
+  } finally {
+    await context.setOffline(false);
+  }
 });

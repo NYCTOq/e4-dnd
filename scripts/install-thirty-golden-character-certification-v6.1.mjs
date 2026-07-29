@@ -1,0 +1,10 @@
+import fs from "node:fs";
+const pkgPath = "package.json";
+const pkg = JSON.parse(fs.readFileSync(pkgPath,"utf8"));
+pkg.version = "6.1.0";
+pkg.scripts ??= {};
+pkg.scripts["test:golden-30"] = "vitest run src/certification/golden/thirtyGoldenCharacterScenarios.test.ts";
+pkg.scripts["audit:golden-30"] = "node scripts/thirty-golden-character-audit-v6.1.mjs";
+pkg.scripts["certify:golden-30"] = "npm run test:golden-30 && npm run build && npm run audit:golden-30";
+fs.writeFileSync(pkgPath, JSON.stringify(pkg,null,2)+"\n", "utf8");
+console.log("package.json updated to v6.1.0 with Golden 30 scripts.");

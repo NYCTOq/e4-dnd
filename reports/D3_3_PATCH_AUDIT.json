@@ -1,0 +1,10 @@
+[
+  {
+    "path": "e2e/full-character-creation.spec.ts",
+    "changed": true
+  },
+  {
+    "path": "src/certification/integration/characterDerivedStatsUiE2eContract.test.ts",
+    "changed": true
+  }
+]

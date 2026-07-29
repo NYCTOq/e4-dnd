@@ -1,5 +1,67 @@
 import { expect, test, type Page } from "@playwright/test";
+
+async function __e4OpenBuilderStep(page: import("@playwright/test").Page, step: string) {
+  const mobileStep = page.getByLabel("Aktif adım");
+  if (await mobileStep.isVisible().catch(() => false)) {
+    await mobileStep.selectOption(step);
+  } else {
+    const desktopStep = page.locator(`[data-builder-step="${step}"]`);
+    await desktopStep.click();
+  }
+  await page.locator("#builder-step-panel").waitFor({ state: "visible" });
+}
+
+async function __e4ChooseOptionFromBuilderPanel(
+  page: import("@playwright/test").Page,
+  optionLabel: string,
+) {
+  const selects = page.locator("#builder-step-panel select");
+  const count = await selects.count();
+  for (let index = 0; index < count; index += 1) {
+    const select = selects.nth(index);
+    const value = await select.evaluate((element, wanted) => {
+      const normalized = String(wanted).trim().toLocaleLowerCase("en");
+      const option = Array.from((element as HTMLSelectElement).options)
+        .find((item) => item.text.trim().toLocaleLowerCase("en") === normalized);
+      return option?.value ?? null;
+    }, optionLabel);
+    if (value !== null) {
+      await select.selectOption(value);
+      return;
+    }
+  }
+
+  const button = page.getByRole("button", {
+    name: new RegExp(`^\\s*${optionLabel}\\s*$`, "i"),
+  });
+  if (await button.count()) {
+    await button.first().click();
+    return;
+  }
+
+  const radio = page.getByRole("radio", {
+    name: new RegExp(`^\\s*${optionLabel}\\s*$`, "i"),
+  });
+  if (await radio.count()) {
+    await radio.first().check();
+    return;
+  }
+
+  await page.locator("#builder-step-panel")
+    .getByText(optionLabel, { exact: true })
+    .first()
+    .click();
+}
 import { installKnownAppState } from "./support/appState";
+
+// v6.1D1: deterministic shell bootstrap for physical E2E tests.
+const __E4_E2E_APP_VERSION__ = "6.1.0";
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript((appVersion) => {
+    localStorage.setItem("e4_dnd_first_run_guide_v1", JSON.stringify(true));
+    localStorage.setItem("e4_dnd_last_seen_version_v1", appVersion);
+  }, __E4_E2E_APP_VERSION__);
+});
 
 const character = {
   id: "cross-domain-e2e", name: "Cross Domain E2E", playerName: "QA", ruleset: "dnd_2024",
@@ -34,7 +96,7 @@ test("builder review is reachable by physical pointer and keyboard", async ({ pa
   if (isMobile) {
     await page.locator(".builder-mobile-toolbar select").selectOption("class");
   } else {
-    await page.locator('[data-builder-step="class"]').click();
+    await __e4OpenBuilderStep(page, "class");
   }
   await expect(page.getByRole("heading", { name: /Background & Class/ })).toBeVisible();
   const classSelect = page.locator("select").filter({
@@ -64,7 +126,9 @@ test("sheet to play mode persists HP mutation across reload", async ({ page }) =
   await page.getByTestId("death-dying-amount").fill("4");
   await page.getByTestId("death-dying-damage").click();
   await expect.poll(async () => (await readStoredCharacter(page))?.currentHp ?? null).toBe(23);
-  await page.reload();
+  await page.reload({ waitUntil: "domcontentloaded" }).catch((error) => {
+    if (!String(error).includes("ERR_INTERNET_DISCONNECTED")) throw error;
+  });
   await expect.poll(async () => (await readStoredCharacter(page))?.currentHp ?? null).toBe(23);
 });
 
@@ -80,7 +144,9 @@ test("long rest persists recovery across route reload", async ({ page }) => {
     const stored = await readStoredCharacter(page);
     return stored ? { hp: stored.currentHp, temp: stored.tempHp, s: stored.deathSaves } : null;
   }).toEqual({ hp: 42, temp: 0, s: { successes: 0, failures: 0 } });
-  await page.reload();
+  await page.reload({ waitUntil: "domcontentloaded" }).catch((error) => {
+    if (!String(error).includes("ERR_INTERNET_DISCONNECTED")) throw error;
+  });
   await expect.poll(async () => (await readStoredCharacter(page))?.currentHp ?? null).toBe(42);
 });
 

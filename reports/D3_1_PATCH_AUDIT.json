@@ -1,0 +1,17 @@
+[
+  {
+    "name": "full-character-creation.spec.ts",
+    "changed": true,
+    "missing": false
+  },
+  {
+    "name": "mobile-and-storage.spec.ts",
+    "changed": true,
+    "missing": false
+  },
+  {
+    "name": "character-derived-stats-v5.118D.spec.ts",
+    "changed": true,
+    "missing": false
+  }
+]

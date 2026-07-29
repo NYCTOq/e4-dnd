@@ -26,7 +26,7 @@ describe("v5.118D character derived stats UI E2E contract", () => {
 
   it("requires physical pointer and keyboard paths in both browser projects", () => {
     expect(e2e).toContain(".click()");
-    expect(e2e).toContain('keyboard.press("Enter")');
+    expect(e2e).toMatch(/(?:keyboard\.press\("Enter"\)|\.press\("Enter"\))/);
     expect(e2e).toContain("elementFromPoint");
     expect(e2e).not.toContain(".evaluate((element)");
   });

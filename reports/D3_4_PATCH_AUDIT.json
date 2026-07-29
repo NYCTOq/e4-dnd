@@ -1,0 +1,6 @@
+{
+  "path": "e2e/full-character-creation.spec.ts",
+  "changed": true,
+  "playModeExpectation": "first visible exact text",
+  "restExpectation": "first visible exact text"
+}

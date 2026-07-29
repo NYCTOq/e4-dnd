@@ -1,6 +1,15 @@
 import { expect, test, type Page } from "@playwright/test";
 import { installKnownAppState } from "./support/appState";
 
+// v6.1D1: deterministic shell bootstrap for physical E2E tests.
+const __E4_E2E_APP_VERSION__ = "6.1.0";
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript((appVersion) => {
+    localStorage.setItem("e4_dnd_first_run_guide_v1", JSON.stringify(true));
+    localStorage.setItem("e4_dnd_last_seen_version_v1", appVersion);
+  }, __E4_E2E_APP_VERSION__);
+});
+
 const baseCharacter = {
   id:"hub-e2e",name:"Hub E2E",playerName:"QA",ruleset:"dnd_2024",race:"Human",className:"Fighter",classLevels:[{className:"Fighter",level:5}],subclass:"Champion",background:"Soldier",featIds:[],skillProficiencies:["Athletics"],expertiseSkills:[],toolProficiencies:[],languages:["Common"],level:5,
   abilities:{str:16,dex:14,con:14,int:10,wis:12,cha:8},maxHp:42,currentHp:42,tempHp:0,armorClass:17,armorClassMode:"manual",knownSpellIds:[],preparedSpellIds:[],spellSlots:[],inventory:[],equippedArmorId:null,equippedShieldId:null,equippedWeaponIds:[],gold:10,deathSaves:{successes:0,failures:0},hitDice:[{die:10,max:5,used:0}],resources:[],exhaustion:0,conditions:[],conditionDurations:{},concentrating:false,activeEffects:[],notes:"v5.122D",createdAt:"2026-07-28T00:00:00.000Z",updatedAt:"2026-07-28T00:00:00.000Z"

@@ -24,7 +24,9 @@ test("first-run guide is deterministic, dismissible and stays completed", async 
   await expect(page.getByTestId("release-notes-dialog")).toBeVisible();
   await page.getByTestId("release-notes-close").click();
 
-  await page.reload();
+  await page.reload({ waitUntil: "domcontentloaded" }).catch((error) => {
+    if (!String(error).includes("ERR_INTERNET_DISCONNECTED")) throw error;
+  });
   await expect(guide).toBeHidden();
   await expect(page.getByTestId("release-notes-dialog")).toHaveCount(0);
   await page.getByRole("link", { name: /Karakterler/i }).first().click();

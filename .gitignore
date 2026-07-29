@@ -27,3 +27,5 @@ dist-ssr
 # Playwright artifacts
 playwright-report/
 test-results/
+
+e4_dnd.zip

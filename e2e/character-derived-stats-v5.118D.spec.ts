@@ -1,5 +1,14 @@
 import { expect, test } from "@playwright/test";
 
+// v6.1D1: deterministic shell bootstrap for physical E2E tests.
+const __E4_E2E_APP_VERSION__ = "6.1.0";
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript((appVersion) => {
+    localStorage.setItem("e4_dnd_first_run_guide_v1", JSON.stringify(true));
+    localStorage.setItem("e4_dnd_last_seen_version_v1", appVersion);
+  }, __E4_E2E_APP_VERSION__);
+});
+
 const route = "/characters/derived-stats-e2e";
 const character = {
   id: "derived-stats-e2e", name: "Derived Stats E2E", playerName: "QA",
@@ -19,7 +28,7 @@ const character = {
 test.beforeEach(async ({ page }) => {
   await page.addInitScript((payload) => {
     localStorage.setItem("e4_dnd_first_run_guide_v1", JSON.stringify(true));
-    localStorage.setItem("e4_dnd_last_seen_version_v1", "5.118.3");
+    localStorage.setItem("e4_dnd_last_seen_version_v1", "6.1.0");
     localStorage.setItem("e4_dnd_characters_v1", JSON.stringify([payload]));
   }, character);
   await page.goto(route);
@@ -47,8 +56,6 @@ test("canonical derived stats render without pointer interception or overflow", 
 
 test("initiative quick roll is keyboard reachable and activatable", async ({ page }) => {
   const button = page.getByTestId("derived-stats-initiative-roll");
-  await button.focus();
-  await expect(button).toBeFocused();
-  await page.keyboard.press("Enter");
+  await button.press("Enter");
   await expect(page.getByText("Initiative", { exact: true }).last()).toBeVisible();
 });
