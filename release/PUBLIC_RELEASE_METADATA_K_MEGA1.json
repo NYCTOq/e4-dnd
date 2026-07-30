@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-07-30T06:45:22.963Z",
+  "releaseId": "K-MEGA1",
+  "version": "6.2.0",
+  "channel": "public-release",
+  "saveSchemaVersion": 2,
+  "compatibilityFloor": "6.1.0",
+  "gitTag": "v6.2.0",
+  "previousChannel": "public-release",
+  "previousReleaseId": "K-MEGA1"
+}

@@ -1,0 +1,21 @@
+# L-MEGA1 Launch Evidence Checklist
+
+- [ ] Public ZIP hash verified
+- [ ] Previous live package preserved
+- [ ] Hosting fallback configured
+- [ ] Cache headers reviewed
+- [ ] HTTPS confirmed
+- [ ] Home route confirmed
+- [ ] Builder route confirmed
+- [ ] Character route confirmed
+- [ ] Play route confirmed
+- [ ] Manifest confirmed
+- [ ] Service worker confirmed
+- [ ] Windows Chrome tested
+- [ ] Windows Edge tested
+- [ ] Android Chrome tested
+- [ ] iPhone Safari tested or documented as unavailable
+- [ ] Installed PWA tested online
+- [ ] Installed PWA tested offline
+- [ ] Save and reload tested
+- [ ] Rollback location recorded

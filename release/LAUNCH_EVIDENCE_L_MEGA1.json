@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-07-30T07:06:52.253Z",
+  "releaseId": "L-MEGA1",
+  "sourceReleaseId": "K-MEGA1",
+  "version": "6.2.0",
+  "channel": "public-release",
+  "gitTag": "v6.2.0",
+  "saveSchemaVersion": 2,
+  "publicZip": {
+    "path": "release/E4_DND_6.2.0_PUBLIC.zip",
+    "bytes": 719048,
+    "sha256": "d5914dc39be4b5a8faed767e1f1e544e0526ff3ba9826f9c3c48013462a17aaa"
+  },
+  "postReleaseBaseline": {
+    "fileCount": 78,
+    "totalBytes": 2339665,
+    "requiredShell": {
+      "index": true,
+      "manifest": true,
+      "serviceWorker": true
+    }
+  },
+  "hostingExamples": {
+    "apache": "deployment/hosting-examples/apache-spa-pwa.htaccess.example",
+    "nginx": "deployment/hosting-examples/nginx-spa-pwa.conf.example"
+  },
+  "manualAcceptance": {
+    "windowsChrome": "pending-manual",
+    "windowsEdge": "pending-manual",
+    "androidChrome": "pending-manual",
+    "iosSafari": "pending-manual",
+    "installedPwaOnline": "pending-manual",
+    "installedPwaOffline": "pending-manual",
+    "deepRouteRefresh": "pending-manual",
+    "saveReloadPersistence": "pending-manual"
+  }
+}

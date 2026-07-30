@@ -1,0 +1,26 @@
+# E4 D&D SPA + PWA Nginx example
+# Merge into the correct server block after review.
+
+location / {
+    try_files $uri $uri/ /index.html;
+}
+
+location = /index.html {
+    add_header Cache-Control "no-cache, no-store, must-revalidate";
+}
+
+location = /manifest.webmanifest {
+    add_header Cache-Control "no-cache, no-store, must-revalidate";
+}
+
+location = /sw.js {
+    add_header Cache-Control "no-cache, no-store, must-revalidate";
+}
+
+location ~* \.(?:js|css|png|jpg|jpeg|webp|svg|woff2?)$ {
+    expires 1y;
+    add_header Cache-Control "public, max-age=31536000, immutable";
+}
+
+add_header X-Content-Type-Options "nosniff" always;
+add_header Referrer-Policy "strict-origin-when-cross-origin" always;

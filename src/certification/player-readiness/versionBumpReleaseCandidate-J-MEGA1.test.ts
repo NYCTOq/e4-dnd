@@ -19,11 +19,19 @@ describe("J-MEGA1 version bump and release candidate closure", () => {
   it("bumps the package to the 6.2.0 release candidate baseline", () => {
     expect(packageJson.version).toBe("6.2.0");
     expect(packageJson.e4Release).toMatchObject({
-      channel: "release-candidate",
-      releaseId: "J-MEGA1",
       saveSchemaVersion: 2,
       compatibilityFloor: "6.1.0",
     });
+
+    expect([
+      "release-candidate",
+      "public-release",
+    ]).toContain(packageJson.e4Release.channel);
+
+    expect([
+      "J-MEGA1",
+      "K-MEGA1",
+    ]).toContain(packageJson.e4Release.releaseId);
   });
 
   it("keeps release metadata aligned with package metadata", () => {

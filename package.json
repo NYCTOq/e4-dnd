@@ -388,9 +388,10 @@
     "vitest": "^4.1.10"
   },
   "e4Release": {
-    "channel": "release-candidate",
-    "releaseId": "J-MEGA1",
+    "channel": "public-release",
+    "releaseId": "K-MEGA1",
     "saveSchemaVersion": 2,
-    "compatibilityFloor": "6.1.0"
+    "compatibilityFloor": "6.1.0",
+    "gitTag": "v6.2.0"
   }
 }
