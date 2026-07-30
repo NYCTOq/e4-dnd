@@ -221,6 +221,62 @@ export function restoreCharacterSpellSlot<
   return next;
 }
 
+export type SpellSlotSource = "spell" | "pact";
+
+export type SpellCastTransaction<T extends SpellCompatibleCharacter> = {
+  ok: boolean;
+  character: T;
+  reason: string | null;
+  slotSpent: boolean;
+  slotSource: SpellSlotSource | null;
+  castLevel: number;
+  replacedConcentrationSpellId: string | null;
+};
+
+/**
+ * Applies a spell cast as one atomic character mutation. Invalid casts never
+ * consume a slot or replace concentration. Cantrips use cast level 0 and do
+ * not consume a slot. Leveled spells may use either normal or Pact slots.
+ */
+export function castCharacterSpell<T extends SpellCompatibleCharacter>(
+  character: T,
+  spell: CharacterSpellEntry,
+  requestedCastLevel = spell.level,
+  slotSource: SpellSlotSource = "spell",
+): SpellCastTransaction<T> {
+  const spellLevel = Math.max(0, int(spell.level));
+  const castLevel = spellLevel === 0 ? 0 : Math.max(0, int(requestedCastLevel));
+  const unchanged = structuredClone(character) as T;
+
+  if (!spell.id || !String(spell.id).trim()) {
+    return { ok: false, character: unchanged, reason: "Büyü kimliği eksik.", slotSpent: false, slotSource: null, castLevel, replacedConcentrationSpellId: null };
+  }
+  if (castLevel < spellLevel) {
+    return { ok: false, character: unchanged, reason: "Büyü en az " + spellLevel + ". seviye slot ister.", slotSpent: false, slotSource, castLevel, replacedConcentrationSpellId: null };
+  }
+  if (spellLevel > 0 && !canCharacterCastSpell(character, spellLevel, castLevel, slotSource === "pact")) {
+    return { ok: false, character: unchanged, reason: castLevel + ". seviye " + (slotSource === "pact" ? "Pact" : "büyü") + " slotu kullanılamıyor.", slotSpent: false, slotSource, castLevel, replacedConcentrationSpellId: null };
+  }
+
+  let next = spellLevel === 0
+    ? unchanged
+    : spendCharacterSpellSlot(character, castLevel, slotSource === "pact");
+  const replacedConcentrationSpellId = spell.concentration && character.concentrating
+    ? String(character.concentrationSpellId ?? "") || null
+    : null;
+  if (spell.concentration) next = setCharacterConcentration(next, String(spell.id)) as T;
+
+  return {
+    ok: true,
+    character: next as T,
+    reason: null,
+    slotSpent: spellLevel > 0,
+    slotSource: spellLevel > 0 ? slotSource : null,
+    castLevel,
+    replacedConcentrationSpellId,
+  };
+}
+
 export function setCharacterConcentration<
   T extends SpellCompatibleCharacter,
 >(

@@ -112,9 +112,12 @@ describe("v5.112C class/subclass persistence matrix", () => {
         serializeClassCompatibleCharacter(character),
       );
 
+    const restoredFeature = restored.classFeatures?.[0] as
+      | Record<string, unknown>
+      | undefined;
+
     expect(
-      (restored.classFeatures?.[0] as unknown as Record<string, unknown>)
-        .customEffect,
+      restoredFeature?.customEffect,
     ).toBe("sandstorm");
   });
 });

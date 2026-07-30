@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import LevelUpRuntimePanel from "./LevelUpRuntimePanel";
+import MulticlassRuntimePanel from "./MulticlassRuntimePanel-N-MEGA9";
 import {
   discoverLevelUpStorageKey,
   parseLevelUpCharacterCollection,
@@ -165,6 +166,14 @@ export function LevelUpRuntimeIntegrationMount() {
             serializeLevelUpCollection(next),
           );
 
+          setCollection(next);
+        }}
+      />
+      <MulticlassRuntimePanel
+        character={selectedCharacter}
+        onCharacterChange={(character) => {
+          const next = replaceCharacter(collection, character);
+          window.localStorage.setItem(storageKey, serializeLevelUpCollection(next));
           setCollection(next);
         }}
       />

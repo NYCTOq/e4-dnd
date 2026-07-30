@@ -1,0 +1,1740 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-30T09:15:51.018Z",
+  "phase": "N-MEGA2",
+  "scope": "D&D 2014 player-character builder and level 1-20 structural capability audit",
+  "principle": "D&D Beyond is only a capability and UX reference. Mechanical correctness and complete player operation are the target.",
+  "counts": {
+    "classes": 12,
+    "subclasses": 12,
+    "races": 9,
+    "backgrounds": 13,
+    "feats": 12,
+    "spells": 58,
+    "items": 35
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "info": 0
+  },
+  "classMatrix": [
+    {
+      "className": "Barbarian",
+      "present": true,
+      "levels": [
+        {
+          "level": 1,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 2,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 3,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 4,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 5,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 2
+        },
+        {
+          "level": 6,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 7,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 8,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 9,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 10,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 11,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 12,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 13,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 14,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 15,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 16,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 17,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 18,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 19,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 20,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        }
+      ],
+      "subclasses": [
+        {
+          "id": "path-of-the-berserker",
+          "name": "Path of the Berserker",
+          "selectionLevel": 3,
+          "featureCount": 4
+        }
+      ],
+      "builderCertification": {
+        "implementation": true,
+        "test": true
+      },
+      "choiceSurfaces": []
+    },
+    {
+      "className": "Bard",
+      "present": true,
+      "levels": [
+        {
+          "level": 1,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 2,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 3,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 4,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 5,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 2
+        },
+        {
+          "level": 6,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 2
+        },
+        {
+          "level": 7,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 0
+        },
+        {
+          "level": 8,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 9,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 10,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 3
+        },
+        {
+          "level": 11,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 0
+        },
+        {
+          "level": 12,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 13,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 14,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 2
+        },
+        {
+          "level": 15,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 16,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 17,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 18,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 19,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 20,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        }
+      ],
+      "subclasses": [
+        {
+          "id": "college-of-lore",
+          "name": "College of Lore",
+          "selectionLevel": 3,
+          "featureCount": 4
+        }
+      ],
+      "builderCertification": {
+        "implementation": true,
+        "test": true
+      },
+      "choiceSurfaces": [],
+      "spellCount": 20
+    },
+    {
+      "className": "Cleric",
+      "present": true,
+      "levels": [
+        {
+          "level": 1,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 2,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 3,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 0
+        },
+        {
+          "level": 4,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 5,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 2
+        },
+        {
+          "level": 6,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 2
+        },
+        {
+          "level": 7,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 0
+        },
+        {
+          "level": 8,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 3
+        },
+        {
+          "level": 9,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 0
+        },
+        {
+          "level": 10,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 11,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 12,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 13,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 0
+        },
+        {
+          "level": 14,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 15,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 0
+        },
+        {
+          "level": 16,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 17,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 2
+        },
+        {
+          "level": 18,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 19,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 20,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        }
+      ],
+      "subclasses": [
+        {
+          "id": "life-domain",
+          "name": "Life Domain",
+          "selectionLevel": 1,
+          "featureCount": 6
+        }
+      ],
+      "builderCertification": {
+        "implementation": true,
+        "test": true
+      },
+      "choiceSurfaces": [],
+      "spellCount": 25
+    },
+    {
+      "className": "Druid",
+      "present": true,
+      "levels": [
+        {
+          "level": 1,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 2,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 3,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 0
+        },
+        {
+          "level": 4,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 5,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 0
+        },
+        {
+          "level": 6,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 7,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 0
+        },
+        {
+          "level": 8,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 2
+        },
+        {
+          "level": 9,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 0
+        },
+        {
+          "level": 10,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 11,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 0
+        },
+        {
+          "level": 12,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 13,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 0
+        },
+        {
+          "level": 14,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 15,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 0
+        },
+        {
+          "level": 16,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 17,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 0
+        },
+        {
+          "level": 18,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 2
+        },
+        {
+          "level": 19,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 20,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        }
+      ],
+      "subclasses": [
+        {
+          "id": "circle-of-the-land",
+          "name": "Circle of the Land",
+          "selectionLevel": 2,
+          "featureCount": 6
+        }
+      ],
+      "builderCertification": {
+        "implementation": true,
+        "test": true
+      },
+      "choiceSurfaces": [
+        {
+          "surface": "wildShapeFormIds",
+          "present": true
+        }
+      ],
+      "spellCount": 19
+    },
+    {
+      "className": "Fighter",
+      "present": true,
+      "levels": [
+        {
+          "level": 1,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 2,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 3,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 4,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 5,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 6,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 7,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 8,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 9,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 10,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 11,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 12,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 13,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 14,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 15,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 16,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 17,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 2
+        },
+        {
+          "level": 18,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 19,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 20,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        }
+      ],
+      "subclasses": [
+        {
+          "id": "champion",
+          "name": "Champion",
+          "selectionLevel": 3,
+          "featureCount": 5
+        }
+      ],
+      "builderCertification": {
+        "implementation": true,
+        "test": true
+      },
+      "choiceSurfaces": [
+        {
+          "surface": "fightingStyleIds",
+          "present": true
+        }
+      ]
+    },
+    {
+      "className": "Monk",
+      "present": true,
+      "levels": [
+        {
+          "level": 1,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 2,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 3,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 4,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 5,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 2
+        },
+        {
+          "level": 6,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 2
+        },
+        {
+          "level": 7,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 2
+        },
+        {
+          "level": 8,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 9,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 10,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 11,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 12,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 13,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 14,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 15,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 16,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 17,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 18,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 19,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 20,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        }
+      ],
+      "subclasses": [
+        {
+          "id": "way-of-the-open-hand",
+          "name": "Way of the Open Hand",
+          "selectionLevel": 3,
+          "featureCount": 4
+        }
+      ],
+      "builderCertification": {
+        "implementation": true,
+        "test": true
+      },
+      "choiceSurfaces": []
+    },
+    {
+      "className": "Paladin",
+      "present": true,
+      "levels": [
+        {
+          "level": 1,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 2,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 3
+        },
+        {
+          "level": 3,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 4,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 5,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 6,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 7,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 8,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 9,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 0
+        },
+        {
+          "level": 10,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 11,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 12,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 13,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 0
+        },
+        {
+          "level": 14,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 15,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 16,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 17,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 0
+        },
+        {
+          "level": 18,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 19,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 20,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        }
+      ],
+      "subclasses": [
+        {
+          "id": "oath-of-devotion",
+          "name": "Oath of Devotion",
+          "selectionLevel": 3,
+          "featureCount": 5
+        }
+      ],
+      "builderCertification": {
+        "implementation": true,
+        "test": true
+      },
+      "choiceSurfaces": [
+        {
+          "surface": "fightingStyleIds",
+          "present": true
+        }
+      ],
+      "spellCount": 8
+    },
+    {
+      "className": "Ranger",
+      "present": true,
+      "levels": [
+        {
+          "level": 1,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 2,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 3,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 4,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 5,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 6,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 2
+        },
+        {
+          "level": 7,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 8,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 2
+        },
+        {
+          "level": 9,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 0
+        },
+        {
+          "level": 10,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 2
+        },
+        {
+          "level": 11,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 12,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 13,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 0
+        },
+        {
+          "level": 14,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 2
+        },
+        {
+          "level": 15,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 16,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 17,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 0
+        },
+        {
+          "level": 18,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 19,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 20,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        }
+      ],
+      "subclasses": [
+        {
+          "id": "hunter",
+          "name": "Hunter",
+          "selectionLevel": 3,
+          "featureCount": 4
+        }
+      ],
+      "builderCertification": {
+        "implementation": true,
+        "test": true
+      },
+      "choiceSurfaces": [
+        {
+          "surface": "fightingStyleIds",
+          "present": true
+        }
+      ],
+      "spellCount": 3
+    },
+    {
+      "className": "Rogue",
+      "present": true,
+      "levels": [
+        {
+          "level": 1,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 3
+        },
+        {
+          "level": 2,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 3,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 4,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 5,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 6,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 7,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 8,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 9,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 10,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 11,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 12,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 13,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 14,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 15,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 16,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 17,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 18,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 19,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 20,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        }
+      ],
+      "subclasses": [
+        {
+          "id": "thief",
+          "name": "Thief",
+          "selectionLevel": 3,
+          "featureCount": 5
+        }
+      ],
+      "builderCertification": {
+        "implementation": true,
+        "test": true
+      },
+      "choiceSurfaces": []
+    },
+    {
+      "className": "Sorcerer",
+      "present": true,
+      "levels": [
+        {
+          "level": 1,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 2,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 3,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 4,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 5,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 0
+        },
+        {
+          "level": 6,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 7,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 0
+        },
+        {
+          "level": 8,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 9,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 0
+        },
+        {
+          "level": 10,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 11,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 0
+        },
+        {
+          "level": 12,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 13,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 0
+        },
+        {
+          "level": 14,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 15,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 0
+        },
+        {
+          "level": 16,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 17,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 18,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 19,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 20,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        }
+      ],
+      "subclasses": [
+        {
+          "id": "draconic-bloodline",
+          "name": "Draconic Bloodline",
+          "selectionLevel": 1,
+          "featureCount": 5
+        }
+      ],
+      "builderCertification": {
+        "implementation": true,
+        "test": true
+      },
+      "choiceSurfaces": [
+        {
+          "surface": "metamagicIds",
+          "present": true
+        }
+      ],
+      "spellCount": 33
+    },
+    {
+      "className": "Warlock",
+      "present": true,
+      "levels": [
+        {
+          "level": 1,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 2,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 3,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 4,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 5,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 0
+        },
+        {
+          "level": 6,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 7,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 0
+        },
+        {
+          "level": 8,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 9,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 0
+        },
+        {
+          "level": 10,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 11,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 12,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 13,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 14,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 15,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 16,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 17,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 18,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 0
+        },
+        {
+          "level": 19,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 20,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        }
+      ],
+      "subclasses": [
+        {
+          "id": "the-fiend",
+          "name": "The Fiend",
+          "selectionLevel": 1,
+          "featureCount": 4
+        }
+      ],
+      "builderCertification": {
+        "implementation": true,
+        "test": true
+      },
+      "choiceSurfaces": [
+        {
+          "surface": "invocationIds",
+          "present": true
+        },
+        {
+          "surface": "arcanumSpellIds",
+          "present": true
+        }
+      ],
+      "spellCount": 14
+    },
+    {
+      "className": "Wizard",
+      "present": true,
+      "levels": [
+        {
+          "level": 1,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 2
+        },
+        {
+          "level": 2,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 3,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 0
+        },
+        {
+          "level": 4,
+          "present": true,
+          "proficiencyBonus": 2,
+          "featureCount": 1
+        },
+        {
+          "level": 5,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 0
+        },
+        {
+          "level": 6,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 7,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 0
+        },
+        {
+          "level": 8,
+          "present": true,
+          "proficiencyBonus": 3,
+          "featureCount": 1
+        },
+        {
+          "level": 9,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 0
+        },
+        {
+          "level": 10,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 11,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 0
+        },
+        {
+          "level": 12,
+          "present": true,
+          "proficiencyBonus": 4,
+          "featureCount": 1
+        },
+        {
+          "level": 13,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 0
+        },
+        {
+          "level": 14,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 15,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 0
+        },
+        {
+          "level": 16,
+          "present": true,
+          "proficiencyBonus": 5,
+          "featureCount": 1
+        },
+        {
+          "level": 17,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 0
+        },
+        {
+          "level": 18,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 19,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        },
+        {
+          "level": 20,
+          "present": true,
+          "proficiencyBonus": 6,
+          "featureCount": 1
+        }
+      ],
+      "subclasses": [
+        {
+          "id": "school-of-evocation",
+          "name": "School of Evocation",
+          "selectionLevel": 2,
+          "featureCount": 5
+        }
+      ],
+      "builderCertification": {
+        "implementation": true,
+        "test": true
+      },
+      "choiceSurfaces": [],
+      "spellCount": 33
+    }
+  ],
+  "findings": [],
+  "nextActions": [
+    "Close every critical structural finding before 2014 mechanical parity certification.",
+    "Independently verify feature timing and choice counts rather than trusting production data as its own oracle.",
+    "Trace each player option through catalog, builder, character state, sheet, runtime, rest, persistence and export/import."
+  ]
+}

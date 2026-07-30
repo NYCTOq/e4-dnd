@@ -1,0 +1,8762 @@
+[
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Rage",
+      "Unarmored Defense"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Reckless Attack",
+      "Danger Sense"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Primal Path"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Extra Attack",
+      "Fast Movement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Primal Path Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Feral Instinct"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Brutal Critical (1 die)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Primal Path Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Relentless Rage"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Brutal Critical (2 dice)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Primal Path Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Persistent Rage"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Brutal Critical (3 dice)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Indomitable Might"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Primal Champion"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Bardic Inspiration",
+      "Spellcasting"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Jack of All Trades",
+      "Song of Rest"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Bard College",
+      "Expertise"
+    ],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Bardic Inspiration d8",
+      "Font of Inspiration"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Countercharm",
+      "Bard College Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Song of Rest d8"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Bardic Inspiration d10",
+      "Expertise",
+      "Magical Secrets"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Song of Rest d10"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Magical Secrets",
+      "Bard College Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Bardic Inspiration d12"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Song of Rest d12"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Magical Secrets"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Superior Inspiration"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Spellcasting",
+      "Divine Domain"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Channel Divinity"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Destroy Undead",
+      "Destroy Undead (CR 1/2)"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Channel Divinity (2/rest)",
+      "Divine Domain Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement",
+      "Destroy Undead (CR 1)",
+      "Divine Domain Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Divine Intervention"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Destroy Undead (CR 2)"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Destroy Undead (CR 3)"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Destroy Undead (CR 4)",
+      "Divine Domain Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Channel Divinity (3/rest)"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Improved Divine Intervention"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Druidic",
+      "Spellcasting"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Wild Shape",
+      "Druid Circle"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Wild Shape Improvement",
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Druid Circle Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Wild Shape Improvement",
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Druid Circle Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Druid Circle Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Timeless Body",
+      "Beast Spells"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Archdruid"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Fighting Style",
+      "Second Wind"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Action Surge"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Martial Archetype"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Extra Attack"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Martial Archetype Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Indomitable"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Martial Archetype Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Extra Attack (2)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Indomitable (2)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Martial Archetype Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Action Surge (2)",
+      "Indomitable (3)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Martial Archetype Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Extra Attack (3)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Unarmored Defense",
+      "Martial Arts"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ki",
+      "Unarmored Movement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Monastic Tradition",
+      "Deflect Missiles"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement",
+      "Slow Fall"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Extra Attack",
+      "Stunning Strike"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ki-Empowered Strikes",
+      "Monastic Tradition Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Evasion",
+      "Stillness of Mind"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Unarmored Movement Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Purity of Body"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Monastic Tradition Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Tongue of the Sun and Moon"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Diamond Soul"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Timeless Body"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Monastic Tradition Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Empty Body"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Perfect Self"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Divine Sense",
+      "Lay on Hands"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Fighting Style",
+      "Spellcasting",
+      "Divine Smite"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Divine Health",
+      "Sacred Oath"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Extra Attack"
+    ],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Aura of Protection"
+    ],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Sacred Oath Feature"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Aura of Courage"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Improved Divine Smite"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Cleansing Touch"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Sacred Oath Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Aura Improvements"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Sacred Oath Capstone"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Favored Enemy",
+      "Natural Explorer"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Fighting Style",
+      "Spellcasting"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ranger Archetype",
+      "Primeval Awareness"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Extra Attack"
+    ],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Favored Enemy Improvement",
+      "Natural Explorer Improvement"
+    ],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ranger Archetype Feature"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Land’s Stride",
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Hide in Plain Sight",
+      "Natural Explorer Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ranger Archetype Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Vanish",
+      "Favored Enemy Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ranger Archetype Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Feral Senses"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Foe Slayer"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Expertise",
+      "Sneak Attack",
+      "Thieves’ Cant"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Cunning Action"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Roguish Archetype"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Uncanny Dodge"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Expertise"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Evasion"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Roguish Archetype Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Reliable Talent"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Roguish Archetype Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Blindsense"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Slippery Mind"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Roguish Archetype Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Elusive"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Stroke of Luck"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Spellcasting",
+      "Sorcerous Origin"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Font of Magic"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Metamagic"
+    ],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Sorcerous Origin Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Metamagic"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Sorcerous Origin Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Metamagic"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Sorcerous Origin Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Sorcerous Restoration"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Otherworldly Patron",
+      "Pact Magic"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Eldritch Invocations"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Pact Boon"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Otherworldly Patron Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Otherworldly Patron Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Mystic Arcanum (6th)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Mystic Arcanum (7th)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Otherworldly Patron Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Mystic Arcanum (8th)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Mystic Arcanum (9th)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Eldritch Master"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Spellcasting",
+      "Arcane Recovery"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Arcane Tradition"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Arcane Tradition Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Arcane Tradition Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Arcane Tradition Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Spell Mastery"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2014",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Signature Spells"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Rage",
+      "Unarmored Defense",
+      "Weapon Mastery"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Danger Sense",
+      "Reckless Attack"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Barbarian Subclass",
+      "Primal Knowledge"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 3,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Extra Attack",
+      "Fast Movement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 3,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 3,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Feral Instinct",
+      "Instinctive Pounce"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 3,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 3,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Brutal Strike"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 3,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Relentless Rage"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Improved Brutal Strike"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Persistent Rage"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Improved Brutal Strike"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Indomitable Might"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Epic Boon"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "barbarian",
+    "className": "Barbarian",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Primal Champion"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Bardic Inspiration",
+      "Spellcasting"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Expertise",
+      "Jack of All Trades"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Bard Subclass"
+    ],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Font of Inspiration",
+      "Bardic Inspiration d8"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Countercharm"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Expertise"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Magical Secrets",
+      "Bardic Inspiration d10"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Bardic Inspiration d12"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Superior Inspiration"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Epic Boon"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "bard",
+    "className": "Bard",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Words of Creation"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Divine Order",
+      "Spellcasting"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Channel Divinity"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Subclass",
+      "Cleric Subclass"
+    ],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Sear Undead"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Blessed Strikes"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Divine Intervention"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Improved Blessed Strikes"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Epic Boon"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "cleric",
+    "className": "Cleric",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Greater Divine Intervention"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Druidic",
+      "Primal Order",
+      "Spellcasting"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Wild Shape",
+      "Wild Companion"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Subclass",
+      "Druid Subclass"
+    ],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Wild Resurgence"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Elemental Fury"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Improved Elemental Fury"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Beast Spells"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Epic Boon"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "druid",
+    "className": "Druid",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Archdruid"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Fighting Style",
+      "Second Wind",
+      "Weapon Mastery"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 3,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Action Surge",
+      "Tactical Mind"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 3,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Subclass"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 3,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Extra Attack",
+      "Tactical Shift"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Indomitable",
+      "Tactical Master"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 4,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 5,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Two Extra Attacks"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 5,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 5,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Studied Attacks"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 5,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 5,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 5,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 6,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Action Surge (2)",
+      "Indomitable (3)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 6,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 6,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Epic Boon"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 6,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "fighter",
+    "className": "Fighter",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Three Extra Attacks"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 6,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Martial Arts",
+      "Unarmored Defense"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Monk's Focus",
+      "Unarmored Movement",
+      "Uncanny Metabolism"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Deflect Attacks",
+      "Monk Subclass"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement",
+      "Slow Fall"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Extra Attack",
+      "Stunning Strike"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Empowered Strikes",
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Evasion"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Acrobatic Movement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Heightened Focus",
+      "Self-Restoration"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Deflect Energy"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Disciplined Survivor"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Perfect Focus"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Superior Defense"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Epic Boon"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "monk",
+    "className": "Monk",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Body and Mind"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Lay on Hands",
+      "Spellcasting",
+      "Weapon Mastery"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Fighting Style",
+      "Paladin’s Smite"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Channel Divinity",
+      "Subclass"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Extra Attack",
+      "Faithful Steed"
+    ],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Aura of Protection"
+    ],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Abjure Foes"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Aura of Courage"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Radiant Strikes"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Restoring Touch"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Aura Expansion"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Epic Boon"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "paladin",
+    "className": "Paladin",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Spellcasting",
+      "Favored Enemy",
+      "Weapon Mastery"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Deft Explorer",
+      "Fighting Style"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ranger Subclass"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Extra Attack"
+    ],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Roving"
+    ],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Expertise"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Tireless"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Relentless Hunter"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Nature’s Veil"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Precise Hunter"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Feral Senses"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Epic Boon"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "ranger",
+    "className": "Ranger",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Foe Slayer"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Expertise",
+      "Sneak Attack",
+      "Thieves’ Cant",
+      "Weapon Mastery"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Cunning Action"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Steady Aim",
+      "Subclass"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Cunning Strike",
+      "Uncanny Dodge"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Expertise"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Evasion",
+      "Reliable Talent"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Improved Cunning Strike"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Devious Strikes"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Slippery Mind"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Elusive"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Epic Boon"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "rogue",
+    "className": "Rogue",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Stroke of Luck"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": 2,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Spellcasting",
+      "Innate Sorcery"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Font of Magic",
+      "Metamagic"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Sorcerer Subclass"
+    ],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Sorcerous Restoration"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Sorcery Incarnate"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Metamagic"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Metamagic"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Epic Boon"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "sorcerer",
+    "className": "Sorcerer",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Arcane Apotheosis"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Eldritch Invocations",
+      "Pact Magic"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Magical Cunning"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Subclass"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Contact Patron"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Mystic Arcanum (6th)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Mystic Arcanum (7th)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Mystic Arcanum (8th)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Mystic Arcanum (9th)"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Epic Boon"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "warlock",
+    "className": "Warlock",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Eldritch Master"
+    ],
+    "spellSlots": [],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 1,
+    "previousLevel": 0,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ritual Adept",
+      "Arcane Recovery",
+      "Spellcasting"
+    ],
+    "spellSlots": [
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 2,
+    "previousLevel": 1,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Scholar"
+    ],
+    "spellSlots": [
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 3,
+    "previousLevel": 2,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Subclass"
+    ],
+    "spellSlots": [
+      4,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 4,
+    "previousLevel": 3,
+    "proficiencyBonus": 2,
+    "expectedProficiencyBonus": 2,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 5,
+    "previousLevel": 4,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Memorize Spell"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 6,
+    "previousLevel": 5,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 7,
+    "previousLevel": 6,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 8,
+    "previousLevel": 7,
+    "proficiencyBonus": 3,
+    "expectedProficiencyBonus": 3,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 9,
+    "previousLevel": 8,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 10,
+    "previousLevel": 9,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 11,
+    "previousLevel": 10,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 12,
+    "previousLevel": 11,
+    "proficiencyBonus": 4,
+    "expectedProficiencyBonus": 4,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 13,
+    "previousLevel": 12,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 14,
+    "previousLevel": 13,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Subclass Feature"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 15,
+    "previousLevel": 14,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 16,
+    "previousLevel": 15,
+    "proficiencyBonus": 5,
+    "expectedProficiencyBonus": 5,
+    "features": [
+      "Ability Score Improvement"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 17,
+    "previousLevel": 16,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 18,
+    "previousLevel": 17,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Spell Mastery"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 19,
+    "previousLevel": 18,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Epic Boon"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "classId": "wizard",
+    "className": "Wizard",
+    "level": 20,
+    "previousLevel": 19,
+    "proficiencyBonus": 6,
+    "expectedProficiencyBonus": 6,
+    "features": [
+      "Signature Spells"
+    ],
+    "spellSlots": [
+      4,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      1,
+      1
+    ],
+    "weaponMasteryCount": null,
+    "issues": []
+  }
+]

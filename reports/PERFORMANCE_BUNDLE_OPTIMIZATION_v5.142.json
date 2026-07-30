@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T12:11:19.047Z",
+  "generatedAt": "2026-07-30T11:24:55.341Z",
   "budgets": {
     "maxSingleJsBytes": 409600,
     "maxEntryJsBytes": 204800,
@@ -9,13 +9,13 @@
   "summary": {
     "jsAssetCount": 54,
     "cssAssetCount": 1,
-    "totalJsBytes": 1659045,
+    "totalJsBytes": 1701401,
     "totalCssBytes": 191667,
-    "totalPrecacheBytes": 2338774,
+    "totalPrecacheBytes": 2381130,
     "largestJs": {
-      "file": "assets/app-core-4yh4n_C_.js",
-      "bytes": 285646,
-      "kib": 278.95
+      "file": "assets/app-core-ilwgbcTP.js",
+      "bytes": 305054,
+      "kib": 297.9
     },
     "largestCss": {
       "file": "assets/index-CRcbpRLS.css",
@@ -24,20 +24,20 @@
     },
     "entryAssets": [
       {
-        "file": "assets/index-CA_v7Lx2.js",
-        "bytes": 34824,
-        "kib": 34.01
+        "file": "assets/index-CVbmFOkX.js",
+        "bytes": 42518,
+        "kib": 41.52
       }
     ]
   },
   "largestAssets": [
     {
-      "file": "assets/app-core-4yh4n_C_.js",
-      "bytes": 285646,
-      "kib": 278.95
+      "file": "assets/app-core-ilwgbcTP.js",
+      "bytes": 305054,
+      "kib": 297.9
     },
     {
-      "file": "assets/app-shared-ZDe8kjLm.js",
+      "file": "assets/app-shared-C1I7JVnD.js",
       "bytes": 221871,
       "kib": 216.67
     },
@@ -47,23 +47,23 @@
       "kib": 187.17
     },
     {
-      "file": "assets/vendor-react-B8YhAL_l.js",
+      "file": "assets/vendor-react-CUXWTGYT.js",
       "bytes": 178363,
       "kib": 174.18
     },
     {
-      "file": "assets/app-backup-core-CjQfkEBT.js",
+      "file": "assets/app-backup-core-DpesL6JU.js",
       "bytes": 176180,
       "kib": 172.05
     },
     {
-      "file": "assets/PlayMode-CfZS1dTu.js",
-      "bytes": 85870,
-      "kib": 83.86
+      "file": "assets/PlayMode-pyKfysEa.js",
+      "bytes": 94254,
+      "kib": 92.04
     },
     {
-      "file": "assets/Builder-eEVV_cnc.js",
-      "bytes": 69660,
+      "file": "assets/Builder-BBUOjTqG.js",
+      "bytes": 69662,
       "kib": 68.03
     },
     {
@@ -72,23 +72,23 @@
       "kib": 63.56
     },
     {
-      "file": "assets/CharacterDetail-DwnRsUY5.js",
-      "bytes": 51790,
-      "kib": 50.58
+      "file": "assets/PlayerTestCenter-BXAnmHVM.js",
+      "bytes": 55562,
+      "kib": 54.26
     },
     {
-      "file": "assets/PlayerTestCenter-Bd3J0eHb.js",
-      "bytes": 51274,
-      "kib": 50.07
+      "file": "assets/CharacterDetail-Cgv5gbLn.js",
+      "bytes": 54368,
+      "kib": 53.09
     },
     {
-      "file": "assets/Campaigns-DAi8KKAa.js",
+      "file": "assets/Campaigns-IiKBu5yv.js",
       "bytes": 49281,
       "kib": 48.13
     },
     {
-      "file": "assets/HomebrewLab-J2-hS4Hv.js",
-      "bytes": 47831,
+      "file": "assets/HomebrewLab-T_wuaopm.js",
+      "bytes": 47833,
       "kib": 46.71
     },
     {
@@ -97,9 +97,9 @@
       "kib": 45.05
     },
     {
-      "file": "assets/index-CA_v7Lx2.js",
-      "bytes": 34824,
-      "kib": 34.01
+      "file": "assets/index-CVbmFOkX.js",
+      "bytes": 42518,
+      "kib": 41.52
     },
     {
       "file": "assets/data-items-ES4mGrSJ.js",

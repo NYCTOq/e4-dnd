@@ -1434,7 +1434,7 @@ export function CharacterDetail({
             </div>
           </details>
 
-          <InventoryEconomyPanel character={activeCharacter} items={rulesetData?.items ?? []} />
+          <InventoryEconomyPanel character={activeCharacter} items={rulesetData?.items ?? []} onUpdateCharacter={onUpdateCharacter} />
 
           <div className="character-actions character-sheet-rest-actions">
             <button onClick={longRest}>Long Rest</button>

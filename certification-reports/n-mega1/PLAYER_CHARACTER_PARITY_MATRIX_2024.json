@@ -1,0 +1,3759 @@
+[
+  {
+    "ruleset": "dnd_2024",
+    "category": "classes",
+    "id": "barbarian",
+    "name": "Barbarian",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+      "src/certification/differential/levelUpProgressionDifferential.test.ts",
+      "src/certification/golden/deathDyingGoldenCharacters.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/golden/thirtyGoldenCharacterScenarios.test.ts",
+      "src/certification/matrix/classSubclassRuntimeScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpProgressionScenarioMatrix.test.ts",
+      "src/certification/oracle/classSubclassRuntimeOracle.test.ts",
+      "src/certification/oracle/levelUpProgressionOracle.test.ts",
+      "src/certification/player-readiness/allClassCharacterCreationMatrix-v6.2C1.test.ts",
+      "src/certification/player-readiness/secondFourClassPlayerReadiness-v6.2B2.test.ts",
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "src/core/rulesets/barbarianBuilderCertification.test.ts",
+      "src/core/rulesets/barbarianRules.test.ts",
+      "src/core/rulesets/classCompletionRules.test.ts",
+      "src/core/rulesets/classFeatureEngine.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/abilityProficiency.reference.ts",
+      "src/certification/reference/classes.full.reference.ts",
+      "src/certification/reference/classSubclassCatalog.reference.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/core/rulesets/actionEconomyRules.ts",
+      "src/core/rulesets/barbarianBuilderCertification.ts",
+      "src/core/rulesets/barbarianRules.ts",
+      "src/core/rulesets/classCompletionRules.ts",
+      "src/core/rulesets/classFeatureEngine.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "classes",
+    "id": "bard",
+    "name": "Bard",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+      "src/certification/differential/levelUpProgressionDifferential.test.ts",
+      "src/certification/golden/characterDerivedStatsGoldenCharacters.test.ts",
+      "src/certification/matrix/characterDerivedStatsScenarioMatrix.test.ts",
+      "src/certification/matrix/classSubclassRuntimeScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpProgressionScenarioMatrix.test.ts",
+      "src/certification/oracle/classBackgroundOracle.test.ts",
+      "src/certification/oracle/classSubclassRuntimeOracle.test.ts",
+      "src/certification/oracle/levelUpProgressionOracle.test.ts",
+      "src/certification/player-readiness/allClassCharacterCreationMatrix-v6.2C1.test.ts",
+      "src/certification/player-readiness/contentAccuracyRulesetDifferential-F-MEGA1.test.ts",
+      "src/certification/player-readiness/guidedFeatureAutomationWave1-v6.2D2.test.ts",
+      "src/certification/player-readiness/secondFourClassPlayerReadiness-v6.2B2.test.ts",
+      "src/certification/player-readiness/spellcastingRuntimeMatrix-v6.2C5.test.ts",
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/oracle/characterDerivedStatsOracle.ts",
+      "src/certification/oracle/spellcastingOracle.ts",
+      "src/certification/reference/abilityProficiency.reference.ts",
+      "src/certification/reference/advancedMulticlassGolden.reference.ts",
+      "src/certification/reference/characterDerivedStatsGolden.reference.ts",
+      "src/certification/reference/classes.full.reference.ts",
+      "src/certification/reference/classSubclassCatalog.reference.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/certification/reference/goldenCharacters.reference.ts",
+      "src/certification/reference/spellcasting.reference.ts",
+      "src/core/character/playerJourneyConsistency.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "classes",
+    "id": "cleric",
+    "name": "Cleric",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/characterDerivedStatsDifferential.test.ts",
+      "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/differential/levelUpProgressionDifferential.test.ts",
+      "src/certification/golden/characterDerivedStatsGoldenCharacters.test.ts",
+      "src/certification/golden/classSubclassGoldenCharacters.test.ts",
+      "src/certification/golden/deathDyingGoldenCharacters.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/golden/levelUpGoldenCharacters.test.ts",
+      "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+      "src/certification/golden/spellRuntimeGoldenCasters.test.ts",
+      "src/certification/golden/thirtyGoldenCharacterScenarios.test.ts",
+      "src/certification/matrix/classFeatureUsagePersistenceMatrix.test.ts",
+      "src/certification/matrix/classSubclassPersistenceMatrix.test.ts",
+      "src/certification/matrix/classSubclassRuntimeScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpCharacterPersistenceMatrix.test.ts",
+      "src/certification/matrix/levelUpProgressionScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpUiPersistenceMatrix.test.ts",
+      "src/certification/matrix/spellCharacterCombatPersistenceMatrix.test.ts",
+      "src/certification/oracle/classSubclassRuntimeOracle.test.ts",
+      "src/certification/oracle/levelUpProgressionOracle.test.ts",
+      "src/certification/oracle/spellcastingOracle.test.ts",
+      "src/certification/player-readiness/allClassCharacterCreationMatrix-v6.2C1.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/characterHubGoldenIntegration.ts",
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/oracle/spellcastingOracle.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "classes",
+    "id": "druid",
+    "name": "Druid",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+      "src/certification/differential/levelUpProgressionDifferential.test.ts",
+      "src/certification/golden/spellRuntimeGoldenCasters.test.ts",
+      "src/certification/matrix/classSubclassRuntimeScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpCharacterPersistenceMatrix.test.ts",
+      "src/certification/matrix/levelUpProgressionScenarioMatrix.test.ts",
+      "src/certification/matrix/spellCharacterCombatPersistenceMatrix.test.ts",
+      "src/certification/oracle/classSubclassRuntimeOracle.test.ts",
+      "src/certification/oracle/levelUpProgressionOracle.test.ts",
+      "src/certification/player-readiness/allClassCharacterCreationMatrix-v6.2C1.test.ts",
+      "src/certification/player-readiness/contentAccuracyRulesetDifferential-F-MEGA1.test.ts",
+      "src/certification/player-readiness/secondFourClassPlayerReadiness-v6.2B2.test.ts",
+      "src/certification/player-readiness/spellcastingRuntimeMatrix-v6.2C5.test.ts",
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "src/core/rulesets/classFeatureEngine.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/oracle/spellcastingOracle.ts",
+      "src/certification/reference/abilityProficiency.reference.ts",
+      "src/certification/reference/classes.full.reference.ts",
+      "src/certification/reference/classSubclassCatalog.reference.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/certification/reference/classSubclassRuntime.reference.ts",
+      "src/certification/reference/levelUpProgression.reference.ts",
+      "src/certification/reference/spellcasting.reference.ts",
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/classCompletionRules.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "classes",
+    "id": "fighter",
+    "name": "Fighter",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/advancedMulticlassDifferential.test.ts",
+      "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/differential/levelUpProgressionDifferential.test.ts",
+      "src/certification/golden/advancedMulticlassGoldenCharacters.test.ts",
+      "src/certification/golden/characterDerivedStatsGoldenCharacters.test.ts",
+      "src/certification/golden/classSubclassGoldenCharacters.test.ts",
+      "src/certification/golden/deathDyingGoldenCharacters.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/golden/levelUpGoldenCharacters.test.ts",
+      "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+      "src/certification/golden/thirtyGoldenCharacterScenarios.test.ts",
+      "src/certification/integration/advancedMulticlassUiContract.test.ts",
+      "src/certification/integration/classFeaturePersistenceBridge.test.ts",
+      "src/certification/integration/crossDomainReferenceIntegrityContract.test.ts",
+      "src/certification/integration/levelUpPersistenceBridge.test.ts",
+      "src/certification/integration/restRecoveryPersistenceBridge.test.ts",
+      "src/certification/matrix/advancedMulticlassPersistenceMatrix.test.ts",
+      "src/certification/matrix/characterDerivedStatsScenarioMatrix.test.ts",
+      "src/certification/matrix/classFeatureUsagePersistenceMatrix.test.ts",
+      "src/certification/matrix/classSubclassPersistenceMatrix.test.ts",
+      "src/certification/matrix/classSubclassRuntimeScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpCharacterPersistenceMatrix.test.ts",
+      "src/certification/matrix/levelUpProgressionScenarioMatrix.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/characterHubGoldenIntegration.ts",
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/equipmentCombatScenarioMatrix.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "classes",
+    "id": "monk",
+    "name": "Monk",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/differential/levelUpProgressionDifferential.test.ts",
+      "src/certification/golden/classSubclassGoldenCharacters.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+      "src/certification/matrix/classFeatureUsagePersistenceMatrix.test.ts",
+      "src/certification/matrix/classSubclassPersistenceMatrix.test.ts",
+      "src/certification/matrix/classSubclassRuntimeScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpProgressionScenarioMatrix.test.ts",
+      "src/certification/oracle/advancedMulticlassOracle.test.ts",
+      "src/certification/oracle/classSubclassRuntimeOracle.test.ts",
+      "src/certification/oracle/equipmentCombatOracle.test.ts",
+      "src/certification/oracle/levelUpProgressionOracle.test.ts",
+      "src/certification/player-readiness/allClassCharacterCreationMatrix-v6.2C1.test.ts",
+      "src/certification/player-readiness/secondFourClassPlayerReadiness-v6.2B2.test.ts",
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/oracle/equipmentCombatOracle.ts",
+      "src/certification/reference/abilityProficiency.reference.ts",
+      "src/certification/reference/classes.full.reference.ts",
+      "src/certification/reference/classSubclassCatalog.reference.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/core/rulesets/actionEconomyRules.ts",
+      "src/core/rulesets/classCompletionRules.ts",
+      "src/core/rulesets/classFeatureEngine.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "classes",
+    "id": "paladin",
+    "name": "Paladin",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+      "src/certification/differential/levelUpProgressionDifferential.test.ts",
+      "src/certification/golden/spellRuntimeGoldenCasters.test.ts",
+      "src/certification/golden/thirtyGoldenCharacterScenarios.test.ts",
+      "src/certification/matrix/classSubclassRuntimeScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpCharacterPersistenceMatrix.test.ts",
+      "src/certification/matrix/levelUpProgressionScenarioMatrix.test.ts",
+      "src/certification/matrix/spellCharacterCombatPersistenceMatrix.test.ts",
+      "src/certification/oracle/advancedMulticlassOracle.test.ts",
+      "src/certification/oracle/classSubclassRuntimeOracle.test.ts",
+      "src/certification/oracle/levelUpProgressionOracle.test.ts",
+      "src/certification/oracle/spellcastingOracle.test.ts",
+      "src/certification/player-readiness/allClassCharacterCreationMatrix-v6.2C1.test.ts",
+      "src/certification/player-readiness/spellcastingRuntimeMatrix-v6.2C5.test.ts",
+      "src/certification/player-readiness/thirdFourClassPlayerReadiness-v6.2B3.test.ts",
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "src/core/rulesets/actionEconomyRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/oracle/characterDerivedStatsOracle.ts",
+      "src/certification/oracle/spellcastingOracle.ts",
+      "src/certification/reference/abilityProficiency.reference.ts",
+      "src/certification/reference/classes.full.reference.ts",
+      "src/certification/reference/classSubclassCatalog.reference.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/certification/reference/spellcasting.reference.ts",
+      "src/core/character/playerJourneyConsistency.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "classes",
+    "id": "ranger",
+    "name": "Ranger",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+      "src/certification/differential/levelUpProgressionDifferential.test.ts",
+      "src/certification/matrix/classSubclassRuntimeScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpProgressionScenarioMatrix.test.ts",
+      "src/certification/oracle/classSubclassRuntimeOracle.test.ts",
+      "src/certification/oracle/levelUpProgressionOracle.test.ts",
+      "src/certification/player-readiness/allClassCharacterCreationMatrix-v6.2C1.test.ts",
+      "src/certification/player-readiness/spellcastingRuntimeMatrix-v6.2C5.test.ts",
+      "src/certification/player-readiness/thirdFourClassPlayerReadiness-v6.2B3.test.ts",
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "src/core/rulesets/classFeatureRuntime.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/oracle/spellcastingOracle.ts",
+      "src/certification/reference/abilityProficiency.reference.ts",
+      "src/certification/reference/classes.full.reference.ts",
+      "src/certification/reference/classSubclassCatalog.reference.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/certification/reference/spellcasting.reference.ts",
+      "src/core/rulesets/actionEconomyRules.ts",
+      "src/core/rulesets/characterSheetRules.ts",
+      "src/core/rulesets/characterValidation.ts",
+      "src/core/rulesets/classCompletionRules.ts",
+      "src/core/rulesets/classFeatureEngine.ts",
+      "src/core/rulesets/classFeatureRuntime.ts",
+      "src/core/rulesets/classSpecificRuntimePolicy.ts",
+      "src/core/rulesets/classSubclassRuntimeClosure.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "classes",
+    "id": "rogue",
+    "name": "Rogue",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/advancedMulticlassDifferential.test.ts",
+      "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+      "src/certification/differential/levelUpProgressionDifferential.test.ts",
+      "src/certification/golden/classSubclassGoldenCharacters.test.ts",
+      "src/certification/golden/deathDyingGoldenCharacters.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/golden/levelUpGoldenCharacters.test.ts",
+      "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+      "src/certification/golden/thirtyGoldenCharacterScenarios.test.ts",
+      "src/certification/integration/advancedMulticlassUiContract.test.ts",
+      "src/certification/matrix/classFeatureUsagePersistenceMatrix.test.ts",
+      "src/certification/matrix/classSubclassPersistenceMatrix.test.ts",
+      "src/certification/matrix/classSubclassRuntimeScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpCharacterPersistenceMatrix.test.ts",
+      "src/certification/matrix/levelUpProgressionScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpUiPersistenceMatrix.test.ts",
+      "src/certification/oracle/classSubclassRuntimeOracle.test.ts",
+      "src/certification/oracle/levelUpProgressionOracle.test.ts",
+      "src/certification/player-readiness/allClassCharacterCreationMatrix-v6.2C1.test.ts",
+      "src/certification/player-readiness/fourClassPlayerReadiness-v6.2B1.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/abilityProficiency.reference.ts",
+      "src/certification/reference/advancedMulticlassGolden.reference.ts",
+      "src/certification/reference/classes.full.reference.ts",
+      "src/certification/reference/classSubclassCatalog.reference.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/certification/reference/classSubclassRuntime.reference.ts",
+      "src/certification/reference/levelUpProgression.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "classes",
+    "id": "sorcerer",
+    "name": "Sorcerer",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+      "src/certification/differential/levelUpProgressionDifferential.test.ts",
+      "src/certification/golden/spellRuntimeGoldenCasters.test.ts",
+      "src/certification/matrix/classSubclassRuntimeScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpCharacterPersistenceMatrix.test.ts",
+      "src/certification/matrix/levelUpProgressionScenarioMatrix.test.ts",
+      "src/certification/matrix/spellCharacterCombatPersistenceMatrix.test.ts",
+      "src/certification/oracle/classSubclassRuntimeOracle.test.ts",
+      "src/certification/oracle/levelUpProgressionOracle.test.ts",
+      "src/certification/player-readiness/allClassCharacterCreationMatrix-v6.2C1.test.ts",
+      "src/certification/player-readiness/contentAccuracyRulesetDifferential-F-MEGA1.test.ts",
+      "src/certification/player-readiness/spellcastingRuntimeMatrix-v6.2C5.test.ts",
+      "src/certification/player-readiness/thirdFourClassPlayerReadiness-v6.2B3.test.ts",
+      "src/core/qa/randomScenarioAudit.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/characterHubGoldenIntegration.ts",
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/oracle/characterDerivedStatsOracle.ts",
+      "src/certification/oracle/spellcastingOracle.ts",
+      "src/certification/reference/abilityProficiency.reference.ts",
+      "src/certification/reference/classes.full.reference.ts",
+      "src/certification/reference/classSubclassCatalog.reference.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/certification/reference/classSubclassRuntime.reference.ts",
+      "src/certification/reference/levelUpProgression.reference.ts",
+      "src/certification/reference/spellcasting.reference.ts",
+      "src/core/character/playerJourneyConsistency.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "classes",
+    "id": "warlock",
+    "name": "Warlock",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+      "src/certification/differential/levelUpProgressionDifferential.test.ts",
+      "src/certification/golden/classSubclassGoldenCharacters.test.ts",
+      "src/certification/golden/levelUpGoldenCharacters.test.ts",
+      "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+      "src/certification/golden/spellRuntimeGoldenCasters.test.ts",
+      "src/certification/golden/thirtyGoldenCharacterScenarios.test.ts",
+      "src/certification/matrix/classFeatureUsagePersistenceMatrix.test.ts",
+      "src/certification/matrix/classSubclassPersistenceMatrix.test.ts",
+      "src/certification/matrix/classSubclassRuntimeScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpCharacterPersistenceMatrix.test.ts",
+      "src/certification/matrix/levelUpProgressionScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpUiPersistenceMatrix.test.ts",
+      "src/certification/matrix/spellCastingUiPersistenceMatrix.test.ts",
+      "src/certification/matrix/spellCharacterCombatPersistenceMatrix.test.ts",
+      "src/certification/oracle/advancedMulticlassOracle.test.ts",
+      "src/certification/oracle/classSubclassRuntimeOracle.test.ts",
+      "src/certification/oracle/levelUpProgressionOracle.test.ts",
+      "src/certification/player-readiness/allClassCharacterCreationMatrix-v6.2C1.test.ts",
+      "src/certification/player-readiness/contentAccuracyRulesetDifferential-F-MEGA1.test.ts",
+      "src/certification/player-readiness/spellcastingRuntimeMatrix-v6.2C5.test.ts",
+      "src/certification/player-readiness/thirdFourClassPlayerReadiness-v6.2B3.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/oracle/characterDerivedStatsOracle.ts",
+      "src/certification/oracle/spellcastingOracle.ts",
+      "src/certification/reference/abilityProficiency.reference.ts",
+      "src/certification/reference/classes.full.reference.ts",
+      "src/certification/reference/classSubclassCatalog.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "classes",
+    "id": "wizard",
+    "name": "Wizard",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/differential/levelUpProgressionDifferential.test.ts",
+      "src/certification/golden/characterDerivedStatsGoldenCharacters.test.ts",
+      "src/certification/golden/classSubclassGoldenCharacters.test.ts",
+      "src/certification/golden/deathDyingGoldenCharacters.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/golden/levelUpGoldenCharacters.test.ts",
+      "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+      "src/certification/golden/spellRuntimeGoldenCasters.test.ts",
+      "src/certification/golden/thirtyGoldenCharacterScenarios.test.ts",
+      "src/certification/integration/advancedMulticlassUiContract.test.ts",
+      "src/certification/integration/crossDomainReferenceIntegrityContract.test.ts",
+      "src/certification/integration/spellCastingPersistenceBridge.test.ts",
+      "src/certification/matrix/advancedMulticlassPersistenceMatrix.test.ts",
+      "src/certification/matrix/characterDerivedStatsScenarioMatrix.test.ts",
+      "src/certification/matrix/classFeatureUsagePersistenceMatrix.test.ts",
+      "src/certification/matrix/classSubclassPersistenceMatrix.test.ts",
+      "src/certification/matrix/classSubclassRuntimeScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpCharacterPersistenceMatrix.test.ts",
+      "src/certification/matrix/levelUpProgressionScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpUiPersistenceMatrix.test.ts",
+      "src/certification/matrix/spellCastingUiPersistenceMatrix.test.ts",
+      "src/certification/matrix/spellCharacterCombatPersistenceMatrix.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/characterHubGoldenIntegration.ts",
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "subclasses",
+    "id": "path-of-the-berserker-2024",
+    "name": "Path of the Berserker",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/rulesets/martialOfficialProgression.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "subclasses",
+    "id": "college-of-lore-2024",
+    "name": "College of Lore",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "src/core/rulesets/bardSorcererOfficialProgression.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/core/rulesets/bardBuilderCertification.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "subclasses",
+    "id": "life-domain-2024",
+    "name": "Life Domain",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/rulesets/clericDomainRules.test.ts",
+      "src/core/rulesets/clericDruidOfficialProgression.test.ts",
+      "src/core/rulesets/subclassRules.test.ts",
+      "src/core/rulesets/subclassRuntimeRules.test.ts",
+      "e2e/class-subclass-catalog-ui-v5.120D.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/core/rulesets/clericBuilderCertification.ts",
+      "src/shared/release/releaseNotes.ts",
+      "scripts/audit-class-subclass-ui-final-closure-v5-120D.mjs"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "subclasses",
+    "id": "circle-of-the-land-2024",
+    "name": "Circle of the Land",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/rulesets/clericDruidOfficialProgression.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/core/rulesets/druidBuilderCertification.ts",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "subclasses",
+    "id": "champion-2024",
+    "name": "Champion",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/golden/runtimeEntityGoldenIntegration.test.ts",
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "src/core/rulesets/barbarianBuilderCertification.test.ts",
+      "src/core/rulesets/barbarianRules.test.ts",
+      "src/core/rulesets/fighterBuilderCertification.test.ts",
+      "src/core/rulesets/fighterRules.test.ts",
+      "src/core/rulesets/fightingStyleRules.test.ts",
+      "src/core/rulesets/levelUpAdvancementReadiness.test.ts",
+      "src/core/rulesets/levelUpChoiceCompletion.test.ts",
+      "src/core/rulesets/martialOfficialProgression.test.ts",
+      "src/core/rulesets/multiclassOfficialCertification.test.ts",
+      "src/core/rulesets/progressionDraftNormalization.test.ts",
+      "src/core/rulesets/runtimeCoverageClosure.test.ts",
+      "src/core/rulesets/singleClassBuilderUiRules.test.ts",
+      "src/core/rulesets/subclassRuntimeRules.test.ts",
+      "src/core/rulesets/unifiedCharacterChoices.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/core/rulesets/barbarianBuilderCertification.ts",
+      "src/core/rulesets/barbarianRules.ts",
+      "src/core/rulesets/classCompletionRules.ts",
+      "src/core/rulesets/fighterBuilderCertification.ts",
+      "src/core/rulesets/fighterRules.ts",
+      "src/core/rulesets/martialClassRuntime.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/core/rulesets/subclassRuntimeRules.ts",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "subclasses",
+    "id": "warrior-of-the-open-hand",
+    "name": "Warrior of the Open Hand",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/rulesets/martialOfficialProgression.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/reference/classSubclassGolden.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "subclasses",
+    "id": "oath-of-devotion-2024",
+    "name": "Oath of Devotion",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.test.ts",
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/rulesets/halfCasterOfficialProgression.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "subclasses",
+    "id": "hunter-2024",
+    "name": "Hunter",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/rulesets/halfCasterOfficialProgression.test.ts",
+      "src/core/rulesets/rangerBuilderCertification.test.ts",
+      "src/core/rulesets/rangerRules.test.ts",
+      "src/core/rulesets/spellExpansion.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/core/rulesets/classFeatureEngine.ts",
+      "src/core/rulesets/classFeatureRuntime.ts",
+      "src/core/rulesets/classSpecificRuntimePolicy.ts",
+      "src/core/rulesets/divineClassRuntime.ts",
+      "src/core/rulesets/rangerBuilderCertification.ts",
+      "src/core/rulesets/rangerRules.ts",
+      "src/core/rulesets/spellExpansion.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/features/play-mode/PlayMode.tsx",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "subclasses",
+    "id": "thief-2024",
+    "name": "Thief",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/rulesets/martialOfficialProgression.test.ts",
+      "src/core/rulesets/multiclassOfficialCertification.test.ts",
+      "src/core/rulesets/rogueBuilderCertification.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/core/rulesets/rogueBuilderCertification.ts",
+      "src/core/rulesets/rogueRules.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "subclasses",
+    "id": "draconic-sorcery",
+    "name": "Draconic Sorcery",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/rulesets/bardSorcererOfficialProgression.test.ts",
+      "src/core/rulesets/progressionDraftNormalization.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/core/rulesets/sorcererBuilderCertification.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "subclasses",
+    "id": "fiend-patron-2024",
+    "name": "Fiend Patron",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/rulesets/warlockWizardOfficialProgression.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/core/rulesets/warlockBuilderCertification.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "subclasses",
+    "id": "evoker",
+    "name": "Evoker",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/golden/classSubclassGoldenCharacters.test.ts",
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/rulesets/warlockWizardOfficialProgression.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/core/rulesets/wizardBuilderCertification.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "races",
+    "id": "aasimar",
+    "name": "Aasimar",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "e2e/certification-all-ancestries.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/dnd2024/species.reference.ts",
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/barbarianBuilderCertification.ts",
+      "src/core/rulesets/bardBuilderCertification.ts",
+      "src/core/rulesets/clericBuilderCertification.ts",
+      "src/core/rulesets/druidBuilderCertification.ts",
+      "src/core/rulesets/fighterBuilderCertification.ts",
+      "src/core/rulesets/monkBuilderCertification.ts",
+      "src/core/rulesets/paladinBuilderCertification.ts",
+      "src/core/rulesets/rangerBuilderCertification.ts",
+      "src/core/rulesets/rogueBuilderCertification.ts",
+      "src/core/rulesets/sorcererBuilderCertification.ts",
+      "src/core/rulesets/warlockBuilderCertification.ts",
+      "src/core/rulesets/wizardBuilderCertification.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "races",
+    "id": "dragonborn",
+    "name": "Dragonborn",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "src/core/rulesets/ancestryChoiceRules.test.ts",
+      "e2e/certification-all-ancestries.spec.ts",
+      "e2e/certification-golden-builders.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/dnd2014/races.reference.ts",
+      "src/certification/reference/dnd2024/species.reference.ts",
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/barbarianBuilderCertification.ts",
+      "src/core/rulesets/bardBuilderCertification.ts",
+      "src/core/rulesets/clericBuilderCertification.ts",
+      "src/core/rulesets/druidBuilderCertification.ts",
+      "src/core/rulesets/fighterBuilderCertification.ts",
+      "src/core/rulesets/monkBuilderCertification.ts",
+      "src/core/rulesets/paladinBuilderCertification.ts",
+      "src/core/rulesets/rangerBuilderCertification.ts",
+      "src/core/rulesets/rogueBuilderCertification.ts",
+      "src/core/rulesets/sorcererBuilderCertification.ts",
+      "src/core/rulesets/warlockBuilderCertification.ts",
+      "src/core/rulesets/wizardBuilderCertification.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "races",
+    "id": "dwarf",
+    "name": "Dwarf",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/characterDerivedStatsDifferential.test.ts",
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "src/core/rulesets/ancestryRuntimeRules.test.ts",
+      "src/core/rulesets/levelOneAncestryReadiness.test.ts",
+      "e2e/certification-all-ancestries.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/dnd2014/races.reference.ts",
+      "src/certification/reference/dnd2024/species.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "races",
+    "id": "elf",
+    "name": "Elf",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/oracle/characterDerivedStatsOracle.test.ts",
+      "src/certification/oracle/classBackgroundOracle.test.ts",
+      "src/core/homebrew/homebrewContentRuntimeIntegration.test.ts",
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "src/core/rulesets/ancestryChoiceRules.test.ts",
+      "src/core/rulesets/clericDomainRules.test.ts",
+      "src/core/rulesets/levelOneActionEconomyReadiness.test.ts",
+      "src/core/rulesets/levelOneAncestryReadiness.test.ts",
+      "src/core/rulesets/levelOneSocialReadiness.test.ts",
+      "src/core/rulesets/levelOneUtilityReadiness.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/dnd2014/races.reference.ts",
+      "src/certification/reference/dnd2024/species.reference.ts",
+      "src/certification/reference/goldenCharacters.reference.ts",
+      "src/core/homebrew/homebrewContentRuntimeIntegration.ts",
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/barbarianBuilderCertification.ts",
+      "src/core/rulesets/bardBuilderCertification.ts",
+      "src/core/rulesets/characterValidation.ts",
+      "src/core/rulesets/clericBuilderCertification.ts",
+      "src/core/rulesets/clericDomainRules.ts",
+      "src/core/rulesets/druidBuilderCertification.ts",
+      "src/core/rulesets/fighterBuilderCertification.ts",
+      "src/core/rulesets/invocationRules.ts",
+      "src/core/rulesets/levelOneAncestryReadiness.ts",
+      "src/core/rulesets/levelOneSupportReadiness.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "races",
+    "id": "gnome",
+    "name": "Gnome",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "src/core/rulesets/ancestryRuntimeRules.test.ts",
+      "e2e/certification-all-ancestries.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/dnd2014/races.reference.ts",
+      "src/certification/reference/dnd2024/species.reference.ts",
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/ancestryRuntimeRules.ts",
+      "src/core/rulesets/barbarianBuilderCertification.ts",
+      "src/core/rulesets/bardBuilderCertification.ts",
+      "src/core/rulesets/clericBuilderCertification.ts",
+      "src/core/rulesets/druidBuilderCertification.ts",
+      "src/core/rulesets/fighterBuilderCertification.ts",
+      "src/core/rulesets/monkBuilderCertification.ts",
+      "src/core/rulesets/paladinBuilderCertification.ts",
+      "src/core/rulesets/rangerBuilderCertification.ts",
+      "src/core/rulesets/rogueBuilderCertification.ts",
+      "src/core/rulesets/sorcererBuilderCertification.ts",
+      "src/core/rulesets/warlockBuilderCertification.ts",
+      "src/core/rulesets/wizardBuilderCertification.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "races",
+    "id": "goliath",
+    "name": "Goliath",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "e2e/certification-all-ancestries.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/dnd2024/species.reference.ts",
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/barbarianBuilderCertification.ts",
+      "src/core/rulesets/bardBuilderCertification.ts",
+      "src/core/rulesets/clericBuilderCertification.ts",
+      "src/core/rulesets/druidBuilderCertification.ts",
+      "src/core/rulesets/fighterBuilderCertification.ts",
+      "src/core/rulesets/monkBuilderCertification.ts",
+      "src/core/rulesets/paladinBuilderCertification.ts",
+      "src/core/rulesets/rangerBuilderCertification.ts",
+      "src/core/rulesets/rogueBuilderCertification.ts",
+      "src/core/rulesets/sorcererBuilderCertification.ts",
+      "src/core/rulesets/warlockBuilderCertification.ts",
+      "src/core/rulesets/wizardBuilderCertification.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "races",
+    "id": "halfling",
+    "name": "Halfling",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "src/core/rulesets/ancestryChoiceRules.test.ts",
+      "e2e/certification-all-ancestries.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/dnd2014/races.reference.ts",
+      "src/certification/reference/dnd2024/species.reference.ts",
+      "src/core/rulesets/ancestryChoiceRules.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "races",
+    "id": "human",
+    "name": "Human",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/golden/advancedMulticlassGoldenCharacters.test.ts",
+      "src/certification/golden/characterDerivedStatsGoldenCharacters.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/matrix/advancedMulticlassPersistenceMatrix.test.ts",
+      "src/certification/matrix/characterDerivedStatsScenarioMatrix.test.ts",
+      "src/certification/oracle/classBackgroundOracle.test.ts",
+      "src/core/character/characterLifecycle.integration.test.ts",
+      "src/core/character/playerJourneyConsistency.test.ts",
+      "src/core/homebrew/homebrewContentRuntimeIntegration.test.ts",
+      "src/core/homebrew/homebrewRuntimeIntegration.test.ts",
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "src/core/rulesets/ancestryChoiceRules.test.ts",
+      "src/core/rulesets/characterSheetCertification.test.ts",
+      "src/core/rulesets/characterValidation.test.ts",
+      "src/core/rulesets/classFeatureRuntime.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/classSubclassCatalogGoldenIntegration.ts",
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/dnd2014/races.reference.ts",
+      "src/certification/reference/dnd2024/species.reference.ts",
+      "src/certification/reference/goldenCharacters.reference.ts",
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/barbarianBuilderCertification.ts",
+      "src/core/rulesets/bardBuilderCertification.ts",
+      "src/core/rulesets/clericBuilderCertification.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "races",
+    "id": "orc",
+    "name": "Orc",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+      "src/certification/differential/levelUpProgressionDifferential.test.ts",
+      "src/certification/golden/spellRuntimeGoldenCasters.test.ts",
+      "src/certification/matrix/classSubclassRuntimeScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpCharacterPersistenceMatrix.test.ts",
+      "src/certification/matrix/levelUpProgressionScenarioMatrix.test.ts",
+      "src/certification/matrix/spellCharacterCombatPersistenceMatrix.test.ts",
+      "src/certification/oracle/classSubclassRuntimeOracle.test.ts",
+      "src/certification/oracle/levelUpProgressionOracle.test.ts",
+      "src/certification/player-readiness/allClassCharacterCreationMatrix-v6.2C1.test.ts",
+      "src/certification/player-readiness/contentAccuracyRulesetDifferential-F-MEGA1.test.ts",
+      "src/certification/player-readiness/guidedFeatureAutomationWave1-v6.2D2.test.ts",
+      "src/certification/player-readiness/spellcastingRuntimeMatrix-v6.2C5.test.ts",
+      "src/certification/player-readiness/thirdFourClassPlayerReadiness-v6.2B3.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/characterHubGoldenIntegration.ts",
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/oracle/characterDerivedStatsOracle.ts",
+      "src/certification/oracle/spellcastingOracle.ts",
+      "src/certification/reference/abilityProficiency.reference.ts",
+      "src/certification/reference/classes.full.reference.ts",
+      "src/certification/reference/classSubclassCatalog.reference.ts",
+      "src/certification/reference/classSubclassGolden.reference.ts",
+      "src/certification/reference/classSubclassRuntime.reference.ts",
+      "src/certification/reference/dnd2014/races.reference.ts",
+      "src/certification/reference/dnd2024/species.reference.ts",
+      "src/certification/reference/levelUpProgression.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "races",
+    "id": "tiefling",
+    "name": "Tiefling",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/character/sheetPlayModeConsistency.test.ts",
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "src/core/rulesets/ancestryChoiceRules.test.ts",
+      "e2e/certification-all-ancestries.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/dnd2014/races.reference.ts",
+      "src/certification/reference/dnd2024/species.reference.ts",
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/barbarianBuilderCertification.ts",
+      "src/core/rulesets/bardBuilderCertification.ts",
+      "src/core/rulesets/clericBuilderCertification.ts",
+      "src/core/rulesets/druidBuilderCertification.ts",
+      "src/core/rulesets/fighterBuilderCertification.ts",
+      "src/core/rulesets/monkBuilderCertification.ts",
+      "src/core/rulesets/paladinBuilderCertification.ts",
+      "src/core/rulesets/rangerBuilderCertification.ts",
+      "src/core/rulesets/rogueBuilderCertification.ts",
+      "src/core/rulesets/sorcererBuilderCertification.ts",
+      "src/core/rulesets/warlockBuilderCertification.ts",
+      "src/core/rulesets/wizardBuilderCertification.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "acolyte",
+    "name": "Acolyte",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/golden/advancedMulticlassGoldenCharacters.test.ts",
+      "src/certification/matrix/advancedMulticlassPersistenceMatrix.test.ts",
+      "src/core/character/characterLifecycle.integration.test.ts",
+      "src/core/rulesets/progressionDraftNormalization.test.ts",
+      "e2e/certification-all-classes-backgrounds.spec.ts",
+      "e2e/character-derived-stats-v5.118D.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/classSubclassCatalogGoldenIntegration.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/backgrounds.full.reference.ts",
+      "src/certification/reference/dnd2024/backgrounds.reference.ts",
+      "src/test/fixtures.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "artisan",
+    "name": "Artisan",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "e2e/certification-all-classes-backgrounds.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/backgrounds.full.reference.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/core/rulesets/subclassRuntimeRules.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "charlatan",
+    "name": "Charlatan",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "e2e/certification-all-classes-backgrounds.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/backgrounds.full.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "criminal",
+    "name": "Criminal",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "e2e/certification-all-classes-backgrounds.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/backgrounds.full.reference.ts",
+      "src/certification/reference/dnd2024/backgrounds.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "entertainer",
+    "name": "Entertainer",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/oracle/classBackgroundOracle.test.ts",
+      "src/core/rulesets/levelOneSocialReadiness.test.ts",
+      "e2e/certification-all-classes-backgrounds.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/backgrounds.full.reference.ts",
+      "src/certification/reference/goldenCharacters.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "farmer",
+    "name": "Farmer",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "e2e/certification-all-classes-backgrounds.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/backgrounds.full.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "guard",
+    "name": "Guard",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+      "src/core/rulesets/damageSaveSpellOfficial.test.ts",
+      "src/core/rulesets/featOfficialCertification.test.ts",
+      "src/core/rulesets/singleClassBuilderUiRules.test.ts",
+      "src/core/runtime/criticalGameplayGuards-v5.139.test.ts",
+      "src/features/combat-tracker/battlefieldZones.test.ts",
+      "e2e/certification-all-classes-backgrounds.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/backgrounds.full.reference.ts",
+      "src/core/quality/uiMobileAccessibilityPolish.ts",
+      "src/core/rulesets/advancedFeatRuntimeRules.ts",
+      "src/core/rulesets/globalSpellRuntime.ts",
+      "src/core/rulesets/spellExpansion.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/core/runtime/criticalGameplayGuards.ts",
+      "src/features/characters/CharacterDetail.tsx",
+      "src/features/combat-tracker/CombatTrackerPage.tsx",
+      "src/features/homebrew/HomebrewLab.tsx",
+      "src/features/monsters/MonsterLibrary.tsx",
+      "src/features/play-mode/PlayMode.tsx",
+      "src/shared/release/releaseNotes.ts",
+      "scripts/apply-spell-casting-mutation-regex-hotfix-v5-113D2-2.mjs",
+      "scripts/generate-cross-domain-differential-v5-121B.mjs",
+      "scripts/install-critical-gameplay-gap-fixes-v5.139.mjs",
+      "scripts/install-test-repository-cleanup-v5.140.mjs",
+      "scripts/repair-four-class-feature-shape-v6.2B1a.mjs",
+      "scripts/repair-four-class-type-narrowing-v6.2B1b.mjs"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "guide",
+    "name": "Guide",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/discovery/runtimeCoverageDiscovery.test.ts",
+      "src/certification/integration/globalShellOverlayContract.test.ts",
+      "src/certification/oracle/runtimeCoverageOracle.test.ts",
+      "src/certification/player-readiness/battlefieldAutomationWave2-v6.2D3.test.ts",
+      "src/certification/player-readiness/finalPlayableRuntimeClosure-v6.2D6.test.ts",
+      "src/certification/player-readiness/guidedFeatureAutomationWave1-v6.2D2.test.ts",
+      "src/certification/player-readiness/guidedRuntimeGapClosure-v6.2D1.test.ts",
+      "src/certification/player-readiness/narrativeGuidanceWave3-v6.2D4.test.ts",
+      "src/certification/player-readiness/releaseCandidateCertification-v6.2D8.test.ts",
+      "src/certification/player-readiness/unifiedRuntimeContractRegistry-v6.2D5.test.ts",
+      "src/core/qa/randomScenarioAudit.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/rulesets/equipmentMagicItemFinalCoverage.test.ts",
+      "src/core/rulesets/runtimeCoverageCertification.test.ts",
+      "src/core/rulesets/spellCertificationExpansion.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/discovery/remainingPlayerExperienceDiscovery.ts",
+      "src/certification/discovery/remainingSystemDiscovery.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/backgrounds.full.reference.ts",
+      "src/certification/reference/runtimeCoverage.reference.ts",
+      "src/core/rulesets/classSubclassRuntimeClosure.ts",
+      "src/core/rulesets/equipmentMagicItemFinalCoverage.ts",
+      "src/core/rulesets/runtimeCoverageCertification.ts",
+      "src/core/rulesets/runtimeCoverageClosure.ts",
+      "src/core/rulesets/spellCertificationExpansion.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/core/rulesets/subclassRuntimeRules.ts",
+      "src/features/play-mode/PlayMode.tsx",
+      "src/shared/layout/AppFrame.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "hermit",
+    "name": "Hermit",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "e2e/certification-all-classes-backgrounds.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/backgrounds.full.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "merchant",
+    "name": "Merchant",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "e2e/certification-all-classes-backgrounds.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/backgrounds.full.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "noble",
+    "name": "Noble",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "e2e/certification-all-classes-backgrounds.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/backgrounds.full.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "sage",
+    "name": "Sage",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/inventory/playerContentInventory-v6.2A1.test.ts",
+      "src/certification/matrix/classFeatureUsagePersistenceMatrix.test.ts",
+      "src/certification/player-readiness/allClassCharacterCreationMatrix-v6.2C1.test.ts",
+      "src/certification/player-readiness/combatSpellAutomation-E-MEGA2.test.ts",
+      "src/certification/player-readiness/combatSurvivalEquipmentMatrix-v6.2C4.test.ts",
+      "src/certification/player-readiness/contentAccuracyRulesetDifferential-F-MEGA1.test.ts",
+      "src/certification/player-readiness/contentExpansionCatalogClosure-F-MEGA2.test.ts",
+      "src/certification/player-readiness/finalUserAcceptance-I-MEGA1.test.ts",
+      "src/certification/player-readiness/fullInteractivePlayerJourney-E-MEGA1.test.ts",
+      "src/certification/player-readiness/multiclassRuntimeMatrix-v6.2C8.test.ts",
+      "src/certification/player-readiness/originFeatRuntimeMatrix-v6.2C7.test.ts",
+      "src/certification/player-readiness/playerChoiceIntegrityMatrix-v6.2C2.test.ts",
+      "src/certification/player-readiness/playerLifecycleMatrix-v6.2C3.test.ts",
+      "src/certification/player-readiness/productionGoldenRelease-G-MEGA2.test.ts",
+      "src/certification/player-readiness/productionOperationsDiagnostics-H-MEGA1.test.ts",
+      "src/certification/player-readiness/publicReleaseDistributionClosure-v6.2D9.test.ts",
+      "src/certification/player-readiness/realUiInteractionClosure-I-MEGA2.test.ts",
+      "src/certification/player-readiness/releaseCandidateCertification-v6.2D8.test.ts",
+      "src/certification/player-readiness/saveMigrationVersioningRelease-G-MEGA1.test.ts",
+      "src/certification/player-readiness/spellcastingRuntimeMatrix-v6.2C5.test.ts",
+      "src/certification/player-readiness/subclassRuntimeMatrix-v6.2C6.test.ts",
+      "src/certification/player-readiness/supportRecoveryMaintenance-H-MEGA2.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/backgrounds.full.reference.ts",
+      "src/certification/reference/dnd2024/backgrounds.reference.ts",
+      "src/components/rest/RestActionsPanel.tsx",
+      "src/core/character/characterIntegrity.ts",
+      "src/core/character/playReadiness.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "sailor",
+    "name": "Sailor",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "e2e/certification-all-classes-backgrounds.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/backgrounds.full.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "scribe",
+    "name": "Scribe",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/advancedMulticlassDifferential.test.ts",
+      "src/certification/differential/characterDerivedStatsDifferential.test.ts",
+      "src/certification/differential/characterHubActionabilityDifferential.test.ts",
+      "src/certification/differential/classSubclassCatalogDifferential.test.ts",
+      "src/certification/differential/classSubclassRuntimeDifferential.test.ts",
+      "src/certification/differential/crossDomainBuilderRecordSheetDifferential.test.ts",
+      "src/certification/differential/deathDyingDifferential.test.ts",
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/differential/levelUpProgressionDifferential.test.ts",
+      "src/certification/differential/navigationSearchRouteParity.test.ts",
+      "src/certification/differential/restRecoveryDifferential.test.ts",
+      "src/certification/differential/runtimeCoverageDifferential.test.ts",
+      "src/certification/differential/spellRuntimeCombatDifferential.test.ts",
+      "src/certification/discovery/classSubclassCatalogIntegrityDiscovery.test.ts",
+      "src/certification/discovery/crossDomainIntegrityDiscovery.test.ts",
+      "src/certification/discovery/navigationSearchDiscovery.test.ts",
+      "src/certification/discovery/remainingPlayerExperienceDiscovery.test.ts",
+      "src/certification/discovery/remainingSystemDiscovery.test.ts",
+      "src/certification/discovery/runtimeCoverageDiscovery.test.ts",
+      "src/certification/golden/advancedMulticlassGoldenCharacters.test.ts",
+      "src/certification/golden/characterDerivedStatsGoldenCharacters.test.ts",
+      "src/certification/golden/characterHubGoldenIntegration.test.ts",
+      "src/certification/golden/classSubclassCatalogGoldenIntegration.test.ts",
+      "src/certification/golden/classSubclassGoldenCharacters.test.ts",
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.test.ts",
+      "src/certification/golden/deathDyingGoldenCharacters.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/golden/levelUpGoldenCharacters.test.ts",
+      "src/certification/golden/navigationSearchGoldenIntentIntegration.test.ts",
+      "src/certification/golden/restRecoveryGoldenCharacters.test.ts"
+    ],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "soldier",
+    "name": "Soldier",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/oracle/classBackgroundOracle.test.ts",
+      "src/core/rulesets/characterSheetCertification.test.ts",
+      "src/core/rulesets/characterValidation.test.ts",
+      "src/core/rulesets/contentIntegrityAudit.test.ts",
+      "src/core/rulesets/fullCharacterCertification.test.ts",
+      "src/core/rulesets/levelOneFeatureChoiceReadiness.test.ts",
+      "src/core/rulesets/levelOneOriginReadiness.test.ts",
+      "src/core/rulesets/levelOneProficiencyReadiness.test.ts",
+      "src/core/rulesets/levelUpAdvancementReadiness.test.ts",
+      "src/core/rulesets/levelUpChoiceCompletion.test.ts",
+      "e2e/advanced-multiclass-level-up-v5.117D.spec.ts",
+      "e2e/certification-all-classes-backgrounds.spec.ts",
+      "e2e/character-hub-actionability-v5.122D.spec.ts",
+      "e2e/cross-domain-player-lifecycle-v5.121D.spec.ts",
+      "e2e/death-dying-play-mode-v5.115D.spec.ts",
+      "e2e/equipment-combat-certification.spec.ts",
+      "e2e/full-character-creation.spec.ts",
+      "e2e/inventory-economy-runtime.spec.ts",
+      "e2e/level-one-to-twenty-advancement.spec.ts",
+      "e2e/play-feedback-undo-v5.124.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/backgrounds.full.reference.ts",
+      "src/certification/reference/dnd2024/backgrounds.reference.ts",
+      "src/certification/reference/goldenCharacters.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "backgrounds",
+    "id": "wayfarer",
+    "name": "Wayfarer",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "e2e/certification-all-classes-backgrounds.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/matrix/defaultCertificationCatalog.ts",
+      "src/certification/matrix/megaScenarioGenerator.ts",
+      "src/certification/reference/backgrounds.full.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "alert",
+    "name": "Alert",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/golden/characterDerivedStatsGoldenCharacters.test.ts",
+      "src/certification/golden/levelUpGoldenCharacters.test.ts",
+      "src/certification/integration/levelUpPersistenceBridge.test.ts",
+      "src/certification/integration/runtimeEntityPersistenceBridge.test.ts",
+      "src/certification/matrix/characterDerivedStatsScenarioMatrix.test.ts",
+      "src/certification/matrix/levelUpCharacterPersistenceMatrix.test.ts",
+      "src/certification/matrix/levelUpUiPersistenceMatrix.test.ts",
+      "src/certification/matrix/runtimeCoverageMetadataMatrix.test.ts",
+      "src/certification/oracle/characterDerivedStatsOracle.test.ts",
+      "src/certification/oracle/runtimeCoverageOracle.test.ts",
+      "src/core/character/playerJourneyConsistency.test.ts",
+      "src/core/rulesets/featRuntimeRules.test.ts",
+      "src/core/rulesets/runtimeCoverageCertification.test.ts",
+      "src/core/rulesets/runtimeCoverageClosure.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/oracle/characterDerivedStatsOracle.ts",
+      "src/certification/reference/characterDerivedStatsGolden.reference.ts",
+      "src/certification/reference/dnd2024/backgrounds.reference.ts",
+      "src/certification/reference/runtimeCoverage.reference.ts",
+      "src/certification/reference/runtimeEntityGolden.reference.ts",
+      "src/components/levelup/LevelUpRuntimeIntegrationMount.tsx",
+      "src/core/character/playerJourneyConsistency.ts",
+      "src/core/rulesets/featRuntimeRules.ts",
+      "src/core/rulesets/runtimeCoverageCertification.ts",
+      "src/features/backup/DataBackup.tsx",
+      "src/features/builder/Builder.tsx",
+      "src/features/campaigns/Campaigns.tsx",
+      "src/features/campaigns/EncounterLootGenerator.tsx",
+      "src/features/characters/CharacterDetail.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "crafter",
+    "name": "Crafter",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "healer",
+    "name": "Healer",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "e2e/class-subclass-catalog-ui-v5.120D.spec.ts"
+    ],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "lucky",
+    "name": "Lucky",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/integration/runtimeEntityPersistenceBridge.test.ts",
+      "src/certification/matrix/levelUpUiPersistenceMatrix.test.ts",
+      "src/core/rulesets/featRuntimeRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/reference/runtimeCoverage.reference.ts",
+      "src/certification/reference/runtimeEntityGolden.reference.ts",
+      "src/components/levelup/LevelUpRuntimeIntegrationMount.tsx",
+      "src/core/rulesets/featRuntimeRules.ts",
+      "src/core/rulesets/runtimeCoverageCertification.ts",
+      "src/features/play-mode/PlayMode.tsx",
+      "src/shared/release/releaseNotes.ts",
+      "scripts/apply-feat-item-runtime-v5.133.mjs"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "magic-initiate-cleric",
+    "name": "Magic Initiate (Cleric)",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/certification/reference/dnd2024/backgrounds.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "magic-initiate-druid",
+    "name": "Magic Initiate (Druid)",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "magic-initiate-wizard",
+    "name": "Magic Initiate (Wizard)",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/certification/reference/dnd2024/backgrounds.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "musician",
+    "name": "Musician",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "savage-attacker",
+    "name": "Savage Attacker",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/levelOneOriginReadiness.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/reference/dnd2024/backgrounds.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "skilled",
+    "name": "Skilled",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/oracle/runtimeCoverageOracle.test.ts",
+      "src/core/rulesets/runtimeCoverageCertification.test.ts"
+    ],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "tavern-brawler",
+    "name": "Tavern Brawler",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "tough",
+    "name": "Tough",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/matrix/levelUpUiPersistenceMatrix.test.ts",
+      "src/core/rulesets/ancestryRuntimeRules.test.ts",
+      "src/core/rulesets/featRules.test.ts",
+      "src/core/rulesets/featRuntimeRules.test.ts",
+      "src/core/rulesets/levelOneAncestryReadiness.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/reference/runtimeCoverage.reference.ts",
+      "src/certification/reference/runtimeEntityGolden.reference.ts",
+      "src/components/levelup/LevelUpRuntimeIntegrationMount.tsx",
+      "src/core/rulesets/ancestryRuntimeRules.ts",
+      "src/core/rulesets/featRuntimeRules.ts",
+      "src/core/rulesets/runtimeCoverageCertification.ts",
+      "src/features/feats/FeatCatalogPage.tsx",
+      "src/features/play-mode/PlayMode.tsx",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "ability-score-improvement",
+    "name": "Ability Score Improvement",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/bardSorcererOfficialProgression.test.ts",
+      "src/core/rulesets/classProgressionAudit.test.ts",
+      "src/core/rulesets/clericDruidOfficialProgression.test.ts",
+      "src/core/rulesets/halfCasterOfficialProgression.test.ts",
+      "src/core/rulesets/martialOfficialProgression.test.ts",
+      "src/core/rulesets/warlockWizardOfficialProgression.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/character/characterIntegrity.ts",
+      "src/core/rulesets/classProgressionAudit.ts",
+      "src/features/builder/Builder.tsx",
+      "src/features/characters/LevelUpAssistant.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "athlete",
+    "name": "Athlete",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/fighterBuilderCertification.test.ts",
+      "src/core/rulesets/fighterRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/fighterRules.ts",
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "charger",
+    "name": "Charger",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/runtimeGapClosure.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/reference/runtimeCoverage.reference.ts",
+      "src/core/rulesets/advancedFeatRuntimeRules.ts",
+      "src/core/rulesets/featExpansion.ts",
+      "src/core/rulesets/runtimeCoverageCertification.ts",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "defensive-duelist",
+    "name": "Defensive Duelist",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/advancedFeatRuntimeRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/advancedFeatRuntimeRules.ts",
+      "src/core/rulesets/featExpansion.ts",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "great-weapon-master",
+    "name": "Great Weapon Master",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/featExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "war-caster",
+    "name": "War Caster",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/matrix/levelUpUiPersistenceMatrix.test.ts",
+      "src/core/rulesets/featRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/components/levelup/LevelUpRuntimeIntegrationMount.tsx",
+      "src/features/feats/FeatCatalogPage.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "boon-of-combat-prowess",
+    "name": "Boon of Combat Prowess",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "boon-of-fortitude",
+    "name": "Boon of Fortitude",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "acid-splash",
+    "name": "Acid Splash",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "chill-touch",
+    "name": "Chill Touch",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/ancestryChoiceRules.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "druidcraft",
+    "name": "Druidcraft",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/ancestryChoiceRules.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "fire-bolt",
+    "name": "Fire Bolt",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/golden/runtimeEntityGoldenIntegration.test.ts",
+      "src/certification/golden/spellRuntimeGoldenCasters.test.ts",
+      "src/certification/integration/runtimeEntityPersistenceBridge.test.ts",
+      "src/certification/oracle/equipmentCombatOracle.test.ts",
+      "src/core/rulesets/classSpellSelectionRules.test.ts",
+      "src/core/rulesets/levelOneCombatReadiness.test.ts",
+      "src/core/rulesets/levelOneOffenseReadiness.test.ts",
+      "src/core/rulesets/levelOneSpellcastingReadiness.test.ts",
+      "src/core/rulesets/multiclassSpellcastingSeparation.test.ts",
+      "e2e/equipment-combat-certification.spec.ts",
+      "e2e/runtime-coverage-ui-v5.119D.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/reference/equipmentCombat.reference.ts",
+      "src/certification/reference/runtimeEntityGolden.reference.ts",
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/features/characters/CharacterDetail.tsx",
+      "scripts/apply-equipment-combat-e2e-selector-matrix-hotfix-v5-110D1.mjs"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "guidance",
+    "name": "Guidance",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/integration/globalShellOverlayContract.test.ts",
+      "src/certification/player-readiness/battlefieldAutomationWave2-v6.2D3.test.ts",
+      "src/certification/player-readiness/contentExpansionCatalogClosure-F-MEGA2.test.ts",
+      "src/certification/player-readiness/guidedFeatureAutomationWave1-v6.2D2.test.ts",
+      "src/certification/player-readiness/guidedRuntimeGapClosure-v6.2D1.test.ts",
+      "src/certification/player-readiness/narrativeGuidanceWave3-v6.2D4.test.ts",
+      "src/certification/player-readiness/realUiInteractionClosure-I-MEGA2.test.ts",
+      "src/certification/player-readiness/releaseCandidateCertification-v6.2D8.test.ts",
+      "src/certification/player-readiness/unifiedRuntimeContractRegistry-v6.2D5.test.ts",
+      "src/core/rulesets/classSpellSelectionRules.test.ts",
+      "src/core/rulesets/damageSaveSpellOfficial.test.ts",
+      "src/core/rulesets/globalSpellRuntime.test.ts",
+      "src/core/rulesets/spellCertificationExpansion.test.ts",
+      "src/core/rulesets/spellDefenseMovementOfficial.test.ts",
+      "src/core/rulesets/spellSummonPersistentOfficial.test.ts",
+      "src/features/builder/builderGuidance.test.ts",
+      "e2e/builder-guidance-recovery-v5.125.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/discovery/remainingPlayerExperienceDiscovery.ts",
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/core/character/character.types.ts",
+      "src/core/rulesets/globalSpellRuntime.ts",
+      "src/core/rulesets/spellCertificationExpansion.ts",
+      "src/core/rulesets/spellControlRules.ts",
+      "src/core/rulesets/spellDefenseMovementRules.ts",
+      "src/core/rulesets/spellEffectRules.ts",
+      "src/core/rulesets/spellSummonPersistentRules.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/features/builder/Builder.tsx",
+      "src/features/builder/builderGuidance.ts",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "light",
+    "name": "Light",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/golden/characterDerivedStatsGoldenCharacters.test.ts",
+      "src/certification/matrix/characterDerivedStatsScenarioMatrix.test.ts",
+      "src/certification/oracle/advancedMulticlassOracle.test.ts",
+      "src/certification/oracle/characterDerivedStatsOracle.test.ts",
+      "src/certification/oracle/equipmentCombatOracle.test.ts",
+      "src/core/character/playerJourneyConsistency.test.ts",
+      "src/core/homebrew/homebrewContentRuntimeIntegration.test.ts",
+      "src/core/qa/randomScenarioAudit2.test.ts",
+      "src/core/qa/randomScenarioAudit3.test.ts",
+      "src/core/rulesets/barbarianBuilderCertification.test.ts",
+      "src/core/rulesets/clericDomainRules.test.ts",
+      "src/core/rulesets/clericDruidOfficialProgression.test.ts",
+      "src/core/rulesets/damageSaveSpellOfficial.test.ts",
+      "src/core/rulesets/equipmentRuntimeRules.test.ts",
+      "src/core/rulesets/levelOneActionEconomyReadiness.test.ts",
+      "src/core/rulesets/levelOneCombatReadiness.test.ts",
+      "src/core/rulesets/levelOneDefenseReadiness.test.ts",
+      "src/core/rulesets/levelOneEquipmentReadiness.test.ts",
+      "src/core/rulesets/levelOneFeatureChoiceReadiness.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/thirtyGoldenCharacterScenarios.ts",
+      "src/certification/reference/advancedMulticlassGolden.reference.ts",
+      "src/certification/reference/equipmentCombat.reference.ts",
+      "src/certification/reference/runtimeCoverage.reference.ts",
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/ancestryRuntimeRules.ts",
+      "src/core/rulesets/equipmentClosureRuntime.ts",
+      "src/core/rulesets/equipmentRules.ts",
+      "src/core/rulesets/equipmentRuntimeRules.ts",
+      "src/core/rulesets/featExpansion.ts",
+      "src/core/rulesets/itemExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "mage-hand",
+    "name": "Mage Hand",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/levelOneSpellcastingReadiness.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/featExpansion.ts",
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "mending",
+    "name": "Mending",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/ancestryChoiceRules.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "minor-illusion",
+    "name": "Minor Illusion",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "poison-spray",
+    "name": "Poison Spray",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/features/characters/CharacterDetail.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "prestidigitation",
+    "name": "Prestidigitation",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/ancestryChoiceRules.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "produce-flame",
+    "name": "Produce Flame",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/features/characters/CharacterDetail.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "ray-of-frost",
+    "name": "Ray of Frost",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/features/characters/CharacterDetail.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "resistance",
+    "name": "Resistance",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/player-readiness/finalPlayableRuntimeClosure-v6.2D6.test.ts",
+      "src/certification/player-readiness/guidedFeatureAutomationWave1-v6.2D2.test.ts",
+      "src/certification/player-readiness/guidedRuntimeGapClosure-v6.2D1.test.ts",
+      "src/certification/player-readiness/unifiedRuntimeContractRegistry-v6.2D5.test.ts",
+      "src/core/character/sheetPlayModeConsistency.test.ts",
+      "src/core/rulesets/itemEffectRuntimeRules.test.ts",
+      "src/core/rulesets/magicArmorRules.test.ts",
+      "src/core/rulesets/runtimeGapClosure.test.ts",
+      "src/core/rulesets/subclassOfficialProgressionFixes.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/reference/runtimeCoverage.reference.ts",
+      "src/certification/reference/runtimeEntityGolden.reference.ts",
+      "src/core/character/sheetPlayModeConsistency.ts",
+      "src/core/homebrew/homebrewContentRuntimeIntegration.ts",
+      "src/core/rulesets/advancedFeatRuntimeRules.ts",
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/ancestryRuntimeRules.ts",
+      "src/core/rulesets/classSubclassRuntimeClosure.ts",
+      "src/core/rulesets/itemEffectRuntimeRules.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/levelOneAncestryReadiness.ts",
+      "src/core/rulesets/levelOneSupportReadiness.ts",
+      "src/core/rulesets/magicArmorRules.ts",
+      "src/core/rulesets/officialFeatCatalog2024.ts",
+      "src/core/rulesets/rangerRules.ts",
+      "src/core/rulesets/ruleset.types.ts",
+      "src/core/rulesets/runtimeCoverageCertification.ts",
+      "src/core/rulesets/spellExpansion.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/core/rulesets/subclassRuntimeRules.ts",
+      "src/features/builder/AncestryChoicePanel.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "sacred-flame",
+    "name": "Sacred Flame",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/golden/spellRuntimeGoldenCasters.test.ts",
+      "src/core/rulesets/damageSaveSpellOfficial.test.ts",
+      "src/core/rulesets/multiclassSpellcastingSeparation.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/reference/equipmentCombat.reference.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/features/characters/CharacterDetail.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "shillelagh",
+    "name": "Shillelagh",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "shocking-grasp",
+    "name": "Shocking Grasp",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/features/characters/CharacterDetail.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "spare-the-dying",
+    "name": "Spare the Dying",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "thaumaturgy",
+    "name": "Thaumaturgy",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/ancestryChoiceRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/ancestryChoiceRules.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "thorn-whip",
+    "name": "Thorn Whip",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/features/characters/CharacterDetail.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "bless",
+    "name": "Bless",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/restRecoveryDifferential.test.ts",
+      "src/certification/golden/classSubclassGoldenCharacters.test.ts",
+      "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+      "src/certification/matrix/spellCastingUiPersistenceMatrix.test.ts",
+      "src/certification/matrix/spellCharacterCombatPersistenceMatrix.test.ts",
+      "src/certification/oracle/restRecoveryOracle.test.ts",
+      "src/core/character/sheetPlayModeConsistency.test.ts",
+      "src/core/rulesets/classSpellSelectionRules.test.ts",
+      "src/core/rulesets/clericBuilderCertification.test.ts",
+      "src/core/rulesets/clericDruidOfficialProgression.test.ts",
+      "src/core/rulesets/combatStatusRules.test.ts",
+      "src/core/rulesets/globalSpellRuntime.test.ts",
+      "src/core/rulesets/itemEffectRuntimeRules.test.ts",
+      "src/core/rulesets/levelOneSupportReadiness.test.ts",
+      "src/core/rulesets/spellControlOfficial.test.ts",
+      "src/core/rulesets/spellRuntimeCompletion-v5.132.test.ts",
+      "src/core/rulesets/subclassRules.test.ts",
+      "src/core/runtime/manualRuntimeBridge-v5.135.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/core/character/character.types.ts",
+      "src/core/rulesets/clericBuilderCertification.ts",
+      "src/core/rulesets/clericRules.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/levelOneSupportReadiness.ts",
+      "src/core/rulesets/spellControlRules.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/core/rulesets/subclassRuntimeRules.ts",
+      "src/features/campaigns/EncounterConditionTracker.tsx",
+      "src/features/characters/CharacterDetail.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "burning-hands",
+    "name": "Burning Hands",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/characterValidation.test.ts",
+      "src/core/rulesets/spellRuntimeCompletion-v5.132.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/features/characters/CharacterDetail.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "command",
+    "name": "Command",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/navigationSearchRouteParity.test.ts",
+      "src/certification/integration/characterDerivedStatsUiE2eContract.test.ts",
+      "src/certification/integration/crossDomainIntegrityContract.test.ts",
+      "src/certification/integration/navigationSearchRouteParityContract.test.ts",
+      "src/certification/integration/navigationSearchUiFinalClosureContract.test.ts",
+      "src/certification/integration/remainingSystemDiscoveryContract.test.ts",
+      "src/certification/player-readiness/postBuildOfflineInstallClosure-v6.2D10.test.ts",
+      "src/certification/player-readiness/publicReleaseDistributionClosure-v6.2D9.test.ts",
+      "e2e/cross-domain-player-lifecycle-v5.121D.spec.ts",
+      "e2e/navigation-search-ui-v5.123D.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/differential/navigationSearchRouteParity.ts",
+      "src/certification/discovery/crossDomainIntegrityDiscovery.ts",
+      "src/certification/discovery/navigationSearchDiscovery.ts",
+      "src/certification/discovery/remainingPlayerExperienceDiscovery.ts",
+      "src/core/character/character.types.ts",
+      "src/core/rulesets/maneuverRules.ts",
+      "src/core/rulesets/rangerRules.ts",
+      "src/core/rulesets/spellEffectRules.ts",
+      "src/core/rulesets/spellSummonPersistentRules.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/core/rulesets/subclassRuntimeRules.ts",
+      "src/features/campaigns/CampaignDashboard.tsx",
+      "src/features/campaigns/Campaigns.tsx",
+      "src/features/characters/CharacterDetail.tsx",
+      "src/features/dashboard/Dashboard.tsx",
+      "src/features/help/HelpCenter.tsx",
+      "src/shared/commands/CommandPalette.tsx",
+      "src/shared/layout/AppFrame.tsx",
+      "src/shared/release/releaseNotes.ts",
+      "scripts/audit-character-derived-stats-final-closure-v5-118D.mjs"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "cure-wounds",
+    "name": "Cure Wounds",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/golden/runtimeEntityGoldenIntegration.test.ts",
+      "src/certification/golden/spellRuntimeGoldenCasters.test.ts",
+      "src/core/rulesets/equipmentMagicItemFinalCoverage.test.ts",
+      "src/core/rulesets/levelOneSupportReadiness.test.ts",
+      "src/core/rulesets/spellRuntimeOfficial2024.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/reference/runtimeEntityGolden.reference.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/features/characters/CharacterDetail.tsx",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "detect-magic",
+    "name": "Detect Magic",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/levelOneUtilityReadiness.test.ts",
+      "src/core/rulesets/spellcastingRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/invocationRules.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "faerie-fire",
+    "name": "Faerie Fire",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "guiding-bolt",
+    "name": "Guiding Bolt",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/damageSaveSpellOfficial.test.ts",
+      "e2e/real-ui-interaction-I-MEGA2.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/globalSpellRuntime.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/features/characters/CharacterDetail.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "healing-word",
+    "name": "Healing Word",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/spellExpansion.test.ts",
+      "src/core/rulesets/spellRuntimeOfficial2024.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/spellExpansion.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/features/characters/CharacterDetail.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "inflict-wounds",
+    "name": "Inflict Wounds",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/features/characters/CharacterDetail.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "magic-missile",
+    "name": "Magic Missile",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/characterSheetCertification.test.ts",
+      "src/core/rulesets/damageSaveSpellOfficial.test.ts",
+      "src/core/rulesets/magicItemRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/core/rulesets/globalSpellRuntime.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/spellBehaviorRules.ts",
+      "src/core/rulesets/spellDefenseMovementRules.ts",
+      "src/core/rulesets/spellResolution.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/features/characters/CharacterDetail.tsx",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "shield",
+    "name": "Shield",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/characterDerivedStatsDifferential.test.ts",
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/golden/advancedMulticlassGoldenCharacters.test.ts",
+      "src/certification/golden/characterDerivedStatsGoldenCharacters.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/matrix/advancedMulticlassPersistenceMatrix.test.ts",
+      "src/certification/matrix/characterDerivedStatsScenarioMatrix.test.ts",
+      "src/certification/oracle/abilityProficiencyOracle.test.ts",
+      "src/certification/oracle/characterDerivedStatsOracle.test.ts",
+      "src/certification/oracle/equipmentCombatOracle.test.ts",
+      "src/certification/player-readiness/guidedFeatureAutomationWave1-v6.2D2.test.ts",
+      "src/core/character/playerJourneyConsistency.test.ts",
+      "src/core/homebrew/homebrewContentRuntimeIntegration.test.ts",
+      "src/core/homebrew/homebrewRuntimeIntegration.test.ts",
+      "src/core/rulesets/characterSheetCertification.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/classSubclassCatalogGoldenIntegration.ts",
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/matrix/equipmentCombatScenarioMatrix.ts",
+      "src/certification/oracle/abilityProficiencyOracle.ts",
+      "src/certification/oracle/characterDerivedStatsOracle.ts",
+      "src/certification/oracle/equipmentCombatOracle.ts",
+      "src/certification/reference/advancedMulticlassGolden.reference.ts",
+      "src/certification/reference/characterDerivedStatsGolden.reference.ts",
+      "src/certification/reference/equipmentCombat.reference.ts",
+      "src/certification/reference/runtimeCoverage.reference.ts",
+      "src/core/character/character.types.ts",
+      "src/core/character/characterIntegrity.ts",
+      "src/core/character/playerJourneyConsistency.ts",
+      "src/core/rulesets/advancedFeatRuntimeRules.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "sleep",
+    "name": "Sleep",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "thunderwave",
+    "name": "Thunderwave",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "aid",
+    "name": "Aid",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "hold-person",
+    "name": "Hold Person",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/integration/spellCastingPersistenceBridge.test.ts",
+      "src/certification/matrix/spellCastingUiPersistenceMatrix.test.ts",
+      "src/certification/matrix/spellCharacterCombatPersistenceMatrix.test.ts",
+      "src/core/rulesets/spellControlOfficial.test.ts",
+      "e2e/spell-runtime-ui-v5.113D3.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/spellControlRules.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "scripts/apply-spell-ui-wiring-v5-113D3.mjs"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "invisibility",
+    "name": "Invisibility",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/itemEffectRuntimeRules.test.ts",
+      "src/core/rulesets/spellDefenseMovementOfficial.test.ts",
+      "src/core/rulesets/spellExpansion.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/reference/runtimeCoverage.reference.ts",
+      "src/core/rulesets/itemEffectRuntimeRules.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/officialFeatCatalog2024.ts",
+      "src/core/rulesets/runtimeCoverageCertification.ts",
+      "src/core/rulesets/spellDefenseMovementRules.ts",
+      "src/core/rulesets/spellExpansion.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "lesser-restoration",
+    "name": "Lesser Restoration",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/subclassRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/itemExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "mirror-image",
+    "name": "Mirror Image",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/spellDefenseMovementOfficial.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/spellDefenseMovementRules.ts",
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "misty-step",
+    "name": "Misty Step",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/featItemRuntimeCompletion-v5.133.test.ts",
+      "src/core/rulesets/spellBehaviorRules.test.ts",
+      "src/core/rulesets/spellDefenseMovementOfficial.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/core/rulesets/advancedFeatRuntimeRules.ts",
+      "src/core/rulesets/ancestryChoiceRules.ts",
+      "src/core/rulesets/featExpansion.ts",
+      "src/core/rulesets/spellDefenseMovementRules.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "scripts/apply-feat-item-runtime-v5.133.mjs"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "prayer-of-healing",
+    "name": "Prayer of Healing",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "scorching-ray",
+    "name": "Scorching Ray",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/features/characters/CharacterDetail.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "spiritual-weapon",
+    "name": "Spiritual Weapon",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/spellRuntimeOfficial2024.test.ts",
+      "src/core/rulesets/spellSummonPersistentOfficial.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/core/rulesets/spellSummonPersistentRules.ts",
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "web",
+    "name": "Web",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/player-readiness/postBuildOfflineInstallClosure-v6.2D10.test.ts",
+      "src/certification/player-readiness/publicReleaseDistributionClosure-v6.2D9.test.ts",
+      "src/core/release/releasePackaging-v5.144.test.ts",
+      "src/core/rulesets/spellControlOfficial.test.ts",
+      "src/core/rulesets/spellRuntimeCompletion-v5.132.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/homebrew/homebrewMarketplaceTrust.ts",
+      "src/core/release/releasePackaging-v5.144.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/spellControlRules.ts",
+      "src/shared/release/releaseNotes.ts",
+      "scripts/apply-equipment-combat-final-report-discovery-hotfix-v5-110E1.mjs",
+      "scripts/audit-class-subclass-final-closure-v5-112D3.mjs",
+      "scripts/audit-equipment-combat-final-closure-v5-110E.mjs",
+      "scripts/audit-level-up-final-closure-v5-114D3.mjs",
+      "scripts/audit-rest-recovery-final-closure-v5-111D3.mjs",
+      "scripts/audit-spell-runtime-final-closure-v5-113D3.mjs",
+      "scripts/bundle-performance-budget-v5.142.mjs",
+      "scripts/full-playability-audit-v5.137.mjs",
+      "scripts/generate-maintenance-snapshot-H-MEGA2.mjs",
+      "scripts/generate-post-release-baseline-K-MEGA2.mjs",
+      "scripts/generate-production-health-snapshot-H-MEGA1.mjs",
+      "scripts/generate-real-ui-interaction-snapshot-I-MEGA2.mjs",
+      "scripts/generate-user-acceptance-snapshot-I-MEGA1.mjs",
+      "scripts/package-public-release-v6.mjs",
+      "scripts/package-release-v5.144.mjs",
+      "scripts/verify-deployment-package-J-MEGA2.mjs",
+      "scripts/verify-public-package-K-MEGA2.mjs",
+      "scripts/verify-public-release-archive-K-MEGA1.mjs"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "beacon-of-hope",
+    "name": "Beacon of Hope",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "counterspell",
+    "name": "Counterspell",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/spellRuntimeOfficial2024.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "dispel-magic",
+    "name": "Dispel Magic",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "fireball",
+    "name": "Fireball",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/golden/spellRuntimeGoldenCasters.test.ts",
+      "src/core/rulesets/damageSaveSpellOfficial.test.ts",
+      "src/core/rulesets/equipmentClosureRuntime.test.ts",
+      "src/core/rulesets/spellRules.test.ts",
+      "src/features/search/globalSearch.test.ts",
+      "src/shared/collections/tagCollectionStorage.test.ts",
+      "src/shared/favorites/favoriteStorage.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/spellExpansion.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/features/characters/CharacterDetail.tsx",
+      "src/features/characters/characterShared.tsx",
+      "src/features/search/GlobalSearchPage.tsx",
+      "src/features/spellbook/Spellbook.tsx",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "fly",
+    "name": "Fly",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/player-readiness/battlefieldAutomationWave2-v6.2D3.test.ts",
+      "src/certification/player-readiness/unifiedRuntimeContractRegistry-v6.2D5.test.ts",
+      "src/core/rulesets/spellDefenseMovementOfficial.test.ts",
+      "src/core/rulesets/spellSummonPersistentOfficial.test.ts",
+      "src/core/rulesets/wildShapeRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/reference/runtimeCoverage.reference.ts",
+      "src/core/character/character.types.ts",
+      "src/core/rulesets/companionRules.ts",
+      "src/core/rulesets/druidBuilderCertification.ts",
+      "src/core/rulesets/druidRules.ts",
+      "src/core/rulesets/itemEffectRuntimeRules.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/levelOneUtilityReadiness.ts",
+      "src/core/rulesets/runtimeCoverageCertification.ts",
+      "src/core/rulesets/spellCertificationExpansion.ts",
+      "src/core/rulesets/spellDefenseMovementRules.ts",
+      "src/core/rulesets/spellEffectRules.ts",
+      "src/core/rulesets/spellSummonPersistentRules.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/core/rulesets/wildShapeRules.ts",
+      "src/features/homebrew/HomebrewLab.tsx",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "haste",
+    "name": "Haste",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+      "src/core/rulesets/spellControlOfficial.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/spellControlRules.ts",
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "hypnotic-pattern",
+    "name": "Hypnotic Pattern",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/spellControlOfficial.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/spellControlRules.ts",
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "lightning-bolt",
+    "name": "Lightning Bolt",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/damageSaveSpellOfficial.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "revivify",
+    "name": "Revivify",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/spellCertificationExpansion.ts",
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "spirit-guardians",
+    "name": "Spirit Guardians",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/golden/restRecoveryGoldenCharacters.test.ts",
+      "src/core/rulesets/damageSaveSpellOfficial.test.ts",
+      "src/features/combat-tracker/battlefieldZones.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/globalSpellRuntime.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/features/characters/CharacterDetail.tsx",
+      "src/features/combat-tracker/CombatTrackerPage.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "dimension-door",
+    "name": "Dimension Door",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/spellDefenseMovementOfficial.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/spellDefenseMovementRules.ts",
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "polymorph",
+    "name": "Polymorph",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/subclassExpansion.ts",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "greater-restoration",
+    "name": "Greater Restoration",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/subclassExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "mass-cure-wounds",
+    "name": "Mass Cure Wounds",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "disintegrate",
+    "name": "Disintegrate",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "club",
+    "name": "Club",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/rogueRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/equipmentRules.ts",
+      "src/core/rulesets/itemExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "dagger",
+    "name": "Dagger",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/oracle/equipmentCombatOracle.test.ts",
+      "src/core/rulesets/levelOneFeatureChoiceReadiness.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/reference/equipmentCombat.reference.ts",
+      "src/core/rulesets/equipmentRules.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/core/rulesets/spellExpansion.ts",
+      "src/core/rulesets/wizardBuilderCertification.ts",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "quarterstaff",
+    "name": "Quarterstaff",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/equipmentRules.ts",
+      "src/core/rulesets/wizardBuilderCertification.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "mace",
+    "name": "Mace",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/weaponMasteryRuntimeRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/core/rulesets/equipmentRules.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/features/campaigns/Campaigns.tsx",
+      "src/features/campaigns/campaignTemplates.ts",
+      "src/features/campaigns/SessionTimeline.tsx",
+      "src/features/homebrew/HomebrewLab.tsx"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "handaxe",
+    "name": "Handaxe",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/barbarianBuilderCertification.test.ts",
+      "src/core/rulesets/weaponMasteryRuntimeRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/equipmentRules.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "shortsword",
+    "name": "Shortsword",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/oracle/advancedMulticlassOracle.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/bardBuilderCertification.ts",
+      "src/core/rulesets/equipmentRules.ts",
+      "src/core/rulesets/multiclassRules.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "longsword",
+    "name": "Longsword",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/oracle/advancedMulticlassOracle.test.ts",
+      "src/certification/oracle/equipmentCombatOracle.test.ts",
+      "src/core/character/playReadiness.test.ts",
+      "src/core/rulesets/equipmentRules.test.ts",
+      "src/core/rulesets/inventoryAttackRuntimeOfficial.test.ts",
+      "src/core/rulesets/levelOneCombatReadiness.test.ts",
+      "src/core/rulesets/levelOneEquipmentReadiness.test.ts",
+      "src/core/rulesets/levelOneFeatureChoiceReadiness.test.ts",
+      "src/core/rulesets/levelOneOffenseReadiness.test.ts",
+      "src/core/rulesets/singleClassPlayableReadiness.test.ts",
+      "src/core/rulesets/unifiedCharacterChoices.test.ts",
+      "src/features/characters/fightingStyleCombat.test.ts",
+      "e2e/cross-domain-player-lifecycle-v5.121D.spec.ts",
+      "e2e/equipment-combat-certification.spec.ts",
+      "e2e/real-ui-interaction-I-MEGA2.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/matrix/equipmentCombatScenarioMatrix.ts",
+      "src/certification/reference/equipmentCombat.reference.ts",
+      "src/core/rulesets/bardBuilderCertification.ts",
+      "src/core/rulesets/equipmentRules.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/features/characters/characterShared.tsx",
+      "src/features/inventory/Inventory.tsx",
+      "src/shared/i18n/uiTextCatalog.ts",
+      "scripts/apply-equipment-combat-e2e-item-scope-hotfix-v5-110D3.mjs",
+      "scripts/apply-equipment-combat-e2e-visible-scope-hotfix-v5-110D2.mjs",
+      "scripts/apply-equipment-combat-weight-block-rebuild-v5-110B4.mjs"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "rapier",
+    "name": "Rapier",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/oracle/equipmentCombatOracle.test.ts",
+      "src/core/character/sheetPlayModeConsistency.test.ts",
+      "src/core/rulesets/rogueRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/matrix/equipmentCombatScenarioMatrix.ts",
+      "src/certification/reference/equipmentCombat.reference.ts",
+      "src/core/rulesets/bardBuilderCertification.ts",
+      "src/core/rulesets/equipmentRules.ts",
+      "scripts/generate-golden-loadout-report.mjs"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "greatsword",
+    "name": "Greatsword",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/core/rulesets/levelOneDefenseReadiness.test.ts",
+      "src/core/rulesets/weaponMasteryRuntimeRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/reference/equipmentCombat.reference.ts",
+      "src/core/rulesets/equipmentRules.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "scripts/generate-golden-loadout-report.mjs"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "shortbow",
+    "name": "Shortbow",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/equipmentRules.ts",
+      "src/core/rulesets/itemExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "longbow",
+    "name": "Longbow",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/oracle/equipmentCombatOracle.test.ts",
+      "src/core/character/sheetPlayModeConsistency.test.ts",
+      "src/core/rulesets/equipmentClosureRuntime.test.ts",
+      "src/core/rulesets/levelOneEquipmentReadiness.test.ts",
+      "src/core/rulesets/levelOneFeatureChoiceReadiness.test.ts",
+      "src/features/characters/fightingStyleCombat.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/matrix/equipmentCombatScenarioMatrix.ts",
+      "src/certification/reference/equipmentCombat.reference.ts",
+      "src/core/rulesets/equipmentRules.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "src/shared/release/releaseNotes.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "crossbow-light",
+    "name": "Light Crossbow",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/equipmentRules.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "padded-armor",
+    "name": "Padded Armor",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "leather-armor",
+    "name": "Leather Armor",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/certification/reference/equipmentCombat.reference.ts",
+      "src/core/rulesets/itemExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "studded-leather-armor",
+    "name": "Studded Leather Armor",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "hide-armor",
+    "name": "Hide Armor",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "chain-shirt",
+    "name": "Chain Shirt",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "scale-mail",
+    "name": "Scale Mail",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/oracle/equipmentCombatOracle.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/matrix/equipmentCombatScenarioMatrix.ts",
+      "src/certification/reference/equipmentCombat.reference.ts",
+      "src/core/rulesets/itemExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "breastplate",
+    "name": "Breastplate",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/core/rulesets/itemExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "half-plate",
+    "name": "Half Plate",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "ring-mail",
+    "name": "Ring Mail",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "chain-mail",
+    "name": "Chain Mail",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/oracle/equipmentCombatOracle.test.ts",
+      "src/core/rulesets/levelOneCombatReadiness.test.ts",
+      "src/core/rulesets/levelOneDefenseReadiness.test.ts",
+      "src/features/characters/fightingStyleCombat.test.ts",
+      "e2e/equipment-combat-certification.spec.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/matrix/equipmentCombatScenarioMatrix.ts",
+      "src/certification/reference/equipmentCombat.reference.ts",
+      "src/core/rulesets/itemExpansion.ts",
+      "scripts/apply-equipment-combat-e2e-item-scope-hotfix-v5-110D3.mjs",
+      "scripts/apply-equipment-combat-e2e-visible-scope-hotfix-v5-110D2.mjs",
+      "scripts/apply-equipment-combat-weight-block-rebuild-v5-110B4.mjs"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "splint-armor",
+    "name": "Splint Armor",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/core/rulesets/itemExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "plate-armor",
+    "name": "Plate Armor",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/oracle/advancedMulticlassOracle.test.ts"
+    ],
+    "sourceReferences": [
+      "src/core/rulesets/itemExpansion.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "shield",
+    "name": "Shield",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/characterDerivedStatsDifferential.test.ts",
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/golden/advancedMulticlassGoldenCharacters.test.ts",
+      "src/certification/golden/characterDerivedStatsGoldenCharacters.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/matrix/advancedMulticlassPersistenceMatrix.test.ts",
+      "src/certification/matrix/characterDerivedStatsScenarioMatrix.test.ts",
+      "src/certification/oracle/abilityProficiencyOracle.test.ts",
+      "src/certification/oracle/characterDerivedStatsOracle.test.ts",
+      "src/certification/oracle/equipmentCombatOracle.test.ts",
+      "src/certification/player-readiness/guidedFeatureAutomationWave1-v6.2D2.test.ts",
+      "src/core/character/playerJourneyConsistency.test.ts",
+      "src/core/homebrew/homebrewContentRuntimeIntegration.test.ts",
+      "src/core/homebrew/homebrewRuntimeIntegration.test.ts",
+      "src/core/rulesets/characterSheetCertification.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/classSubclassCatalogGoldenIntegration.ts",
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts",
+      "src/certification/matrix/crossDomainBuilderRecordSheetScenarioMatrix.ts",
+      "src/certification/matrix/equipmentCombatScenarioMatrix.ts",
+      "src/certification/oracle/abilityProficiencyOracle.ts",
+      "src/certification/oracle/characterDerivedStatsOracle.ts",
+      "src/certification/oracle/equipmentCombatOracle.ts",
+      "src/certification/reference/advancedMulticlassGolden.reference.ts",
+      "src/certification/reference/characterDerivedStatsGolden.reference.ts",
+      "src/certification/reference/equipmentCombat.reference.ts",
+      "src/certification/reference/runtimeCoverage.reference.ts",
+      "src/core/character/character.types.ts",
+      "src/core/character/characterIntegrity.ts",
+      "src/core/character/playerJourneyConsistency.ts",
+      "src/core/rulesets/advancedFeatRuntimeRules.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "holy-symbol",
+    "name": "Holy Symbol",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "arcane-focus",
+    "name": "Arcane Focus",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/spellMaterialRules.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/crossDomainGoldenPlayerLifecycle.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "component-pouch",
+    "name": "Component Pouch",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "explorers-pack",
+    "name": "Explorer's Pack",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "priests-pack",
+    "name": "Priest's Pack",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "healers-kit",
+    "name": "Healer's Kit",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "rope-hempen",
+    "name": "Hempen Rope",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/certification/reference/equipmentCombat.reference.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "torch",
+    "name": "Torch",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/core/rulesets/equipmentClosureRuntime.test.ts"
+    ],
+    "sourceReferences": []
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "rations",
+    "name": "Rations",
+    "origin": "base-json",
+    "issues": [],
+    "highestSeverity": "none",
+    "testReferences": [
+      "src/certification/differential/equipmentCombatDifferential.test.ts",
+      "src/certification/golden/advancedMulticlassGoldenCharacters.test.ts",
+      "src/certification/golden/characterDerivedStatsGoldenCharacters.test.ts",
+      "src/certification/golden/equipmentCombatGoldenLoadouts.test.ts",
+      "src/certification/matrix/advancedMulticlassPersistenceMatrix.test.ts",
+      "src/certification/matrix/characterDerivedStatsScenarioMatrix.test.ts",
+      "src/certification/player-readiness/finalUserAcceptance-I-MEGA1.test.ts",
+      "src/certification/player-readiness/productionOperationsDiagnostics-H-MEGA1.test.ts",
+      "src/certification/player-readiness/supportRecoveryMaintenance-H-MEGA2.test.ts",
+      "src/core/homebrew/homebrewContentRuntimeIntegration.test.ts",
+      "src/core/homebrew/homebrewMarketplaceTrust.test.ts",
+      "src/core/homebrew/homebrewRuntimeIntegration.test.ts",
+      "src/core/rulesets/characterSheetCertification.test.ts",
+      "src/core/rulesets/classFeatureRuntime.test.ts",
+      "src/core/rulesets/combatStatusRules.test.ts",
+      "src/core/rulesets/fullCharacterCertification.test.ts",
+      "src/core/rulesets/levelOneAncestryReadiness.test.ts",
+      "src/core/rulesets/levelOneFeatureChoiceReadiness.test.ts",
+      "src/core/rulesets/levelOneOriginReadiness.test.ts",
+      "src/core/rulesets/levelOneProficiencyReadiness.test.ts",
+      "src/core/rulesets/levelOneSpellcastingReadiness.test.ts",
+      "src/core/rulesets/levelUpAdvancementReadiness.test.ts",
+      "src/core/rulesets/levelUpChoiceCompletion.test.ts",
+      "src/core/rulesets/multiclassSpellcastingSeparation.test.ts",
+      "src/core/rulesets/playerJourneyIntegration.test.ts"
+    ],
+    "sourceReferences": [
+      "src/certification/golden/classSubclassCatalogGoldenIntegration.ts",
+      "src/core/character/character.types.ts",
+      "src/core/release/stableReleaseHardening.ts",
+      "src/core/rulesets/classFeatureRuntime.ts",
+      "src/core/rulesets/combatStatusRules.ts"
+    ]
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "potion-of-healing",
+    "name": "Potion of Healing",
+    "origin": "base-json",
+    "issues": [
+      "no-direct-id-or-name-test-reference"
+    ],
+    "highestSeverity": "medium",
+    "testReferences": [],
+    "sourceReferences": [
+      "src/shared/release/releaseNotes.ts"
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';import{describe,expect,it}from'vitest';
+const root=process.cwd(),out=path.join(root,'certification-reports','n-mega3');
+describe('N-MEGA3 2024 builder progression contract',()=>{
+ it('ships 2024 origin, mastery, feat and progression contracts',()=>{for(const f of ['src/core/rulesets/originRules.test.ts','src/core/rulesets/levelOneOriginReadiness.test.ts','src/core/rulesets/weaponMasteryRuntimeRules.test.ts','src/core/rulesets/featCatalog2024Official.test.ts','src/core/rulesets/singleClassBuilderFinalCertification.integration.test.ts'])expect(fs.existsSync(path.join(root,f)),f).toBe(true);});
+ it('produces a complete 12 class x 20 level matrix',()=>{const r=JSON.parse(fs.readFileSync(path.join(out,'N_MEGA3_2024_BUILDER_PROGRESSION_AUDIT.json'),'utf8'));expect(r.phase).toBe('N-MEGA3');expect(r.classMatrix).toHaveLength(12);for(const row of r.classMatrix){expect(row.present,row.className).toBe(true);expect(row.levels,row.className).toHaveLength(20);expect(row.levels.every((x:{present:boolean})=>x.present),row.className).toBe(true);expect(row.subclasses.length,row.className).toBeGreaterThan(0);expect(row.epicBoon,row.className).toBe(true);}expect(r.severityCounts.critical).toBe(0);});
+});

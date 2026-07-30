@@ -54,7 +54,7 @@ async function __e4ChooseOptionFromBuilderPanel(
     .click();
 }
 // v6.1D1: deterministic shell bootstrap for physical E2E tests.
-const __E4_E2E_APP_VERSION__ = "6.1.0";
+const __E4_E2E_APP_VERSION__ = "6.2.0";
 test.beforeEach(async ({ page }) => {
   await page.addInitScript((appVersion) => {
     localStorage.setItem("e4_dnd_first_run_guide_v1", JSON.stringify(true));
@@ -111,12 +111,12 @@ async function openRaceAndClassStep(
   }
 
   await neutralizeOverlay(page);
-  await expect(page.getByRole("form", { name: /Race & Class/i })).toBeVisible({
+  await expect(page.locator("#builder-step-panel")).toBeVisible({
     timeout: 15_000,
   });
 
   await expect.poll(async () => {
-    return page.getByRole("form", { name: /Race & Class/i })
+    return page.locator("#builder-step-panel")
       .locator("select option")
       .count();
   }, { timeout: 15_000 }).toBeGreaterThan(10);
@@ -127,7 +127,7 @@ async function atomicSelectOption(
   requestedLabel: string,
   preferLast: boolean,
 ) {
-  const form = page.getByRole("form", { name: /Race & Class/i });
+  const form = page.locator("#builder-step-panel");
   const wanted = normalize(requestedLabel);
 
   await expect.poll(async () => {

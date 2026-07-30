@@ -55,7 +55,7 @@ async function __e4ChooseOptionFromBuilderPanel(
 import { installKnownAppState } from "./support/appState";
 
 // v6.1D1: deterministic shell bootstrap for physical E2E tests.
-const __E4_E2E_APP_VERSION__ = "6.1.0";
+const __E4_E2E_APP_VERSION__ = "6.2.0";
 test.beforeEach(async ({ page }) => {
   await page.addInitScript((appVersion) => {
     localStorage.setItem("e4_dnd_first_run_guide_v1", JSON.stringify(true));

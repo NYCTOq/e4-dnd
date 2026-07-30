@@ -1,0 +1,2178 @@
+[
+  {
+    "className": "Barbarian",
+    "present": true,
+    "levels": [
+      {
+        "level": 1,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Rage",
+          "Unarmored Defense",
+          "Weapon Mastery"
+        ]
+      },
+      {
+        "level": 2,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Danger Sense",
+          "Reckless Attack"
+        ]
+      },
+      {
+        "level": 3,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Barbarian Subclass",
+          "Primal Knowledge"
+        ]
+      },
+      {
+        "level": 4,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 5,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Extra Attack",
+          "Fast Movement"
+        ]
+      },
+      {
+        "level": 6,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 7,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Feral Instinct",
+          "Instinctive Pounce"
+        ]
+      },
+      {
+        "level": 8,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 9,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Brutal Strike"
+        ]
+      },
+      {
+        "level": 10,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 11,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Relentless Rage"
+        ]
+      },
+      {
+        "level": 12,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 13,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Improved Brutal Strike"
+        ]
+      },
+      {
+        "level": 14,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 15,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Persistent Rage"
+        ]
+      },
+      {
+        "level": 16,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 17,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Improved Brutal Strike"
+        ]
+      },
+      {
+        "level": 18,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Indomitable Might"
+        ]
+      },
+      {
+        "level": 19,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Epic Boon"
+        ]
+      },
+      {
+        "level": 20,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Primal Champion"
+        ]
+      }
+    ],
+    "subclasses": [
+      {
+        "id": "path-of-the-berserker-2024",
+        "name": "Path of the Berserker",
+        "selectionLevel": 3,
+        "featureLevels": [
+          3,
+          6,
+          10,
+          14
+        ]
+      }
+    ],
+    "weaponMastery": true,
+    "epicBoon": true
+  },
+  {
+    "className": "Bard",
+    "present": true,
+    "levels": [
+      {
+        "level": 1,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Bardic Inspiration",
+          "Spellcasting"
+        ]
+      },
+      {
+        "level": 2,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Expertise",
+          "Jack of All Trades"
+        ]
+      },
+      {
+        "level": 3,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Bard Subclass"
+        ]
+      },
+      {
+        "level": 4,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 5,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Font of Inspiration",
+          "Bardic Inspiration d8"
+        ]
+      },
+      {
+        "level": 6,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 7,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Countercharm"
+        ]
+      },
+      {
+        "level": 8,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 9,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Expertise"
+        ]
+      },
+      {
+        "level": 10,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Magical Secrets",
+          "Bardic Inspiration d10"
+        ]
+      },
+      {
+        "level": 11,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 12,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 13,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 15,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Bardic Inspiration d12"
+        ]
+      },
+      {
+        "level": 16,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 17,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 18,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Superior Inspiration"
+        ]
+      },
+      {
+        "level": 19,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Epic Boon"
+        ]
+      },
+      {
+        "level": 20,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Words of Creation"
+        ]
+      }
+    ],
+    "subclasses": [
+      {
+        "id": "college-of-lore-2024",
+        "name": "College of Lore",
+        "selectionLevel": 3,
+        "featureLevels": [
+          3,
+          3,
+          6,
+          14
+        ]
+      }
+    ],
+    "weaponMastery": false,
+    "epicBoon": true
+  },
+  {
+    "className": "Cleric",
+    "present": true,
+    "levels": [
+      {
+        "level": 1,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Divine Order",
+          "Spellcasting"
+        ]
+      },
+      {
+        "level": 2,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Channel Divinity"
+        ]
+      },
+      {
+        "level": 3,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Subclass",
+          "Cleric Subclass"
+        ]
+      },
+      {
+        "level": 4,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 5,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Sear Undead"
+        ]
+      },
+      {
+        "level": 6,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 7,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Blessed Strikes"
+        ]
+      },
+      {
+        "level": 8,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 9,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 10,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Divine Intervention"
+        ]
+      },
+      {
+        "level": 11,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 12,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 13,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Improved Blessed Strikes"
+        ]
+      },
+      {
+        "level": 15,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 16,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 17,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 18,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 19,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Epic Boon"
+        ]
+      },
+      {
+        "level": 20,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Greater Divine Intervention"
+        ]
+      }
+    ],
+    "subclasses": [
+      {
+        "id": "life-domain-2024",
+        "name": "Life Domain",
+        "selectionLevel": 3,
+        "featureLevels": [
+          3,
+          3,
+          6,
+          17
+        ]
+      }
+    ],
+    "weaponMastery": false,
+    "epicBoon": true
+  },
+  {
+    "className": "Druid",
+    "present": true,
+    "levels": [
+      {
+        "level": 1,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Druidic",
+          "Primal Order",
+          "Spellcasting"
+        ]
+      },
+      {
+        "level": 2,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Wild Shape",
+          "Wild Companion"
+        ]
+      },
+      {
+        "level": 3,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Subclass",
+          "Druid Subclass"
+        ]
+      },
+      {
+        "level": 4,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 5,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Wild Resurgence"
+        ]
+      },
+      {
+        "level": 6,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 7,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Elemental Fury"
+        ]
+      },
+      {
+        "level": 8,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 9,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 10,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 11,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 12,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 13,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 15,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Improved Elemental Fury"
+        ]
+      },
+      {
+        "level": 16,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 17,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 18,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Beast Spells"
+        ]
+      },
+      {
+        "level": 19,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Epic Boon"
+        ]
+      },
+      {
+        "level": 20,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Archdruid"
+        ]
+      }
+    ],
+    "subclasses": [
+      {
+        "id": "circle-of-the-land-2024",
+        "name": "Circle of the Land",
+        "selectionLevel": 3,
+        "featureLevels": [
+          3,
+          3,
+          6,
+          10,
+          14
+        ]
+      }
+    ],
+    "weaponMastery": false,
+    "epicBoon": true
+  },
+  {
+    "className": "Fighter",
+    "present": true,
+    "levels": [
+      {
+        "level": 1,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Fighting Style",
+          "Second Wind",
+          "Weapon Mastery"
+        ]
+      },
+      {
+        "level": 2,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Action Surge",
+          "Tactical Mind"
+        ]
+      },
+      {
+        "level": 3,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Subclass"
+        ]
+      },
+      {
+        "level": 4,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 5,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Extra Attack",
+          "Tactical Shift"
+        ]
+      },
+      {
+        "level": 6,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 7,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 8,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 9,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Indomitable",
+          "Tactical Master"
+        ]
+      },
+      {
+        "level": 10,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 11,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Two Extra Attacks"
+        ]
+      },
+      {
+        "level": 12,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 13,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Studied Attacks"
+        ]
+      },
+      {
+        "level": 14,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 15,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 16,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 17,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Action Surge (2)",
+          "Indomitable (3)"
+        ]
+      },
+      {
+        "level": 18,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 19,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Epic Boon"
+        ]
+      },
+      {
+        "level": 20,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Three Extra Attacks"
+        ]
+      }
+    ],
+    "subclasses": [
+      {
+        "id": "champion-2024",
+        "name": "Champion",
+        "selectionLevel": 3,
+        "featureLevels": [
+          3,
+          3,
+          7,
+          10,
+          15,
+          18
+        ]
+      }
+    ],
+    "weaponMastery": true,
+    "epicBoon": true
+  },
+  {
+    "className": "Monk",
+    "present": true,
+    "levels": [
+      {
+        "level": 1,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Martial Arts",
+          "Unarmored Defense"
+        ]
+      },
+      {
+        "level": 2,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Monk's Focus",
+          "Unarmored Movement",
+          "Uncanny Metabolism"
+        ]
+      },
+      {
+        "level": 3,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Deflect Attacks",
+          "Monk Subclass"
+        ]
+      },
+      {
+        "level": 4,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ability Score Improvement",
+          "Slow Fall"
+        ]
+      },
+      {
+        "level": 5,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Extra Attack",
+          "Stunning Strike"
+        ]
+      },
+      {
+        "level": 6,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Empowered Strikes",
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 7,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Evasion"
+        ]
+      },
+      {
+        "level": 8,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 9,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Acrobatic Movement"
+        ]
+      },
+      {
+        "level": 10,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Heightened Focus",
+          "Self-Restoration"
+        ]
+      },
+      {
+        "level": 11,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 12,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 13,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Deflect Energy"
+        ]
+      },
+      {
+        "level": 14,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Disciplined Survivor"
+        ]
+      },
+      {
+        "level": 15,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Perfect Focus"
+        ]
+      },
+      {
+        "level": 16,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 17,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 18,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Superior Defense"
+        ]
+      },
+      {
+        "level": 19,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Epic Boon"
+        ]
+      },
+      {
+        "level": 20,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Body and Mind"
+        ]
+      }
+    ],
+    "subclasses": [
+      {
+        "id": "warrior-of-the-open-hand",
+        "name": "Warrior of the Open Hand",
+        "selectionLevel": 3,
+        "featureLevels": [
+          3,
+          6,
+          11,
+          17
+        ]
+      }
+    ],
+    "weaponMastery": false,
+    "epicBoon": true
+  },
+  {
+    "className": "Paladin",
+    "present": true,
+    "levels": [
+      {
+        "level": 1,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Lay on Hands",
+          "Spellcasting",
+          "Weapon Mastery"
+        ]
+      },
+      {
+        "level": 2,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Fighting Style",
+          "Paladin’s Smite"
+        ]
+      },
+      {
+        "level": 3,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Channel Divinity",
+          "Subclass"
+        ]
+      },
+      {
+        "level": 4,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 5,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Extra Attack",
+          "Faithful Steed"
+        ]
+      },
+      {
+        "level": 6,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Aura of Protection"
+        ]
+      },
+      {
+        "level": 7,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 8,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 9,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Abjure Foes"
+        ]
+      },
+      {
+        "level": 10,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Aura of Courage"
+        ]
+      },
+      {
+        "level": 11,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Radiant Strikes"
+        ]
+      },
+      {
+        "level": 12,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 13,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Restoring Touch"
+        ]
+      },
+      {
+        "level": 15,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 16,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 17,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 18,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Aura Expansion"
+        ]
+      },
+      {
+        "level": 19,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Epic Boon"
+        ]
+      },
+      {
+        "level": 20,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Subclass Feature"
+        ]
+      }
+    ],
+    "subclasses": [
+      {
+        "id": "oath-of-devotion-2024",
+        "name": "Oath of Devotion",
+        "selectionLevel": 3,
+        "featureLevels": [
+          3,
+          3,
+          7,
+          15,
+          20
+        ]
+      }
+    ],
+    "weaponMastery": true,
+    "epicBoon": true
+  },
+  {
+    "className": "Ranger",
+    "present": true,
+    "levels": [
+      {
+        "level": 1,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Spellcasting",
+          "Favored Enemy",
+          "Weapon Mastery"
+        ]
+      },
+      {
+        "level": 2,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Deft Explorer",
+          "Fighting Style"
+        ]
+      },
+      {
+        "level": 3,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ranger Subclass"
+        ]
+      },
+      {
+        "level": 4,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 5,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Extra Attack"
+        ]
+      },
+      {
+        "level": 6,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Roving"
+        ]
+      },
+      {
+        "level": 7,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 8,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 9,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Expertise"
+        ]
+      },
+      {
+        "level": 10,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Tireless"
+        ]
+      },
+      {
+        "level": 11,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 12,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 13,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Relentless Hunter"
+        ]
+      },
+      {
+        "level": 14,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Nature’s Veil"
+        ]
+      },
+      {
+        "level": 15,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 16,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 17,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Precise Hunter"
+        ]
+      },
+      {
+        "level": 18,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Feral Senses"
+        ]
+      },
+      {
+        "level": 19,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Epic Boon"
+        ]
+      },
+      {
+        "level": 20,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Foe Slayer"
+        ]
+      }
+    ],
+    "subclasses": [
+      {
+        "id": "hunter-2024",
+        "name": "Hunter",
+        "selectionLevel": 3,
+        "featureLevels": [
+          3,
+          3,
+          7,
+          11,
+          15
+        ]
+      }
+    ],
+    "weaponMastery": true,
+    "epicBoon": true
+  },
+  {
+    "className": "Rogue",
+    "present": true,
+    "levels": [
+      {
+        "level": 1,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Expertise",
+          "Sneak Attack",
+          "Thieves’ Cant",
+          "Weapon Mastery"
+        ]
+      },
+      {
+        "level": 2,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Cunning Action"
+        ]
+      },
+      {
+        "level": 3,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Steady Aim",
+          "Subclass"
+        ]
+      },
+      {
+        "level": 4,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 5,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Cunning Strike",
+          "Uncanny Dodge"
+        ]
+      },
+      {
+        "level": 6,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Expertise"
+        ]
+      },
+      {
+        "level": 7,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Evasion",
+          "Reliable Talent"
+        ]
+      },
+      {
+        "level": 8,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 9,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 10,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 11,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Improved Cunning Strike"
+        ]
+      },
+      {
+        "level": 12,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 13,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 14,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Devious Strikes"
+        ]
+      },
+      {
+        "level": 15,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Slippery Mind"
+        ]
+      },
+      {
+        "level": 16,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 17,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 18,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Elusive"
+        ]
+      },
+      {
+        "level": 19,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Epic Boon"
+        ]
+      },
+      {
+        "level": 20,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Stroke of Luck"
+        ]
+      }
+    ],
+    "subclasses": [
+      {
+        "id": "thief-2024",
+        "name": "Thief",
+        "selectionLevel": 3,
+        "featureLevels": [
+          3,
+          3,
+          9,
+          13,
+          17
+        ]
+      }
+    ],
+    "weaponMastery": true,
+    "epicBoon": true
+  },
+  {
+    "className": "Sorcerer",
+    "present": true,
+    "levels": [
+      {
+        "level": 1,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Spellcasting",
+          "Innate Sorcery"
+        ]
+      },
+      {
+        "level": 2,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Font of Magic",
+          "Metamagic"
+        ]
+      },
+      {
+        "level": 3,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Sorcerer Subclass"
+        ]
+      },
+      {
+        "level": 4,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 5,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Sorcerous Restoration"
+        ]
+      },
+      {
+        "level": 6,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 7,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Sorcery Incarnate"
+        ]
+      },
+      {
+        "level": 8,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 9,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 10,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Metamagic"
+        ]
+      },
+      {
+        "level": 11,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 12,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 13,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 15,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 16,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 17,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Metamagic"
+        ]
+      },
+      {
+        "level": 18,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 19,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Epic Boon"
+        ]
+      },
+      {
+        "level": 20,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Arcane Apotheosis"
+        ]
+      }
+    ],
+    "subclasses": [
+      {
+        "id": "draconic-sorcery",
+        "name": "Draconic Sorcery",
+        "selectionLevel": 3,
+        "featureLevels": [
+          3,
+          3,
+          6,
+          14,
+          18
+        ]
+      }
+    ],
+    "weaponMastery": false,
+    "epicBoon": true
+  },
+  {
+    "className": "Warlock",
+    "present": true,
+    "levels": [
+      {
+        "level": 1,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Eldritch Invocations",
+          "Pact Magic"
+        ]
+      },
+      {
+        "level": 2,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Magical Cunning"
+        ]
+      },
+      {
+        "level": 3,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Subclass"
+        ]
+      },
+      {
+        "level": 4,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 5,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 6,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 7,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 8,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 9,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Contact Patron"
+        ]
+      },
+      {
+        "level": 10,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 11,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Mystic Arcanum (6th)"
+        ]
+      },
+      {
+        "level": 12,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 13,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Mystic Arcanum (7th)"
+        ]
+      },
+      {
+        "level": 14,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 15,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Mystic Arcanum (8th)"
+        ]
+      },
+      {
+        "level": 16,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 17,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Mystic Arcanum (9th)"
+        ]
+      },
+      {
+        "level": 18,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 19,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Epic Boon"
+        ]
+      },
+      {
+        "level": 20,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Eldritch Master"
+        ]
+      }
+    ],
+    "subclasses": [
+      {
+        "id": "fiend-patron-2024",
+        "name": "Fiend Patron",
+        "selectionLevel": 3,
+        "featureLevels": [
+          3,
+          3,
+          6,
+          10,
+          14
+        ]
+      }
+    ],
+    "weaponMastery": false,
+    "epicBoon": true
+  },
+  {
+    "className": "Wizard",
+    "present": true,
+    "levels": [
+      {
+        "level": 1,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ritual Adept",
+          "Arcane Recovery",
+          "Spellcasting"
+        ]
+      },
+      {
+        "level": 2,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Scholar"
+        ]
+      },
+      {
+        "level": 3,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Subclass"
+        ]
+      },
+      {
+        "level": 4,
+        "present": true,
+        "proficiencyBonus": 2,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 5,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Memorize Spell"
+        ]
+      },
+      {
+        "level": 6,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 7,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": []
+      },
+      {
+        "level": 8,
+        "present": true,
+        "proficiencyBonus": 3,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 9,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 10,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 11,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": []
+      },
+      {
+        "level": 12,
+        "present": true,
+        "proficiencyBonus": 4,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 13,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 14,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Subclass Feature"
+        ]
+      },
+      {
+        "level": 15,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": []
+      },
+      {
+        "level": 16,
+        "present": true,
+        "proficiencyBonus": 5,
+        "features": [
+          "Ability Score Improvement"
+        ]
+      },
+      {
+        "level": 17,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": []
+      },
+      {
+        "level": 18,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Spell Mastery"
+        ]
+      },
+      {
+        "level": 19,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Epic Boon"
+        ]
+      },
+      {
+        "level": 20,
+        "present": true,
+        "proficiencyBonus": 6,
+        "features": [
+          "Signature Spells"
+        ]
+      }
+    ],
+    "subclasses": [
+      {
+        "id": "evoker",
+        "name": "Evoker",
+        "selectionLevel": 3,
+        "featureLevels": [
+          3,
+          3,
+          6,
+          10,
+          14
+        ]
+      }
+    ],
+    "weaponMastery": false,
+    "epicBoon": true
+  }
+]

@@ -1,0 +1,4295 @@
+[
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-1-unarmored-defense",
+    "featureName": "Unarmored Defense",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-2-reckless-attack",
+    "featureName": "Reckless Attack",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-2-danger-sense",
+    "featureName": "Danger Sense",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-3-primal-path",
+    "featureName": "Primal Path",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-5-fast-movement",
+    "featureName": "Fast Movement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-6-primal-path-feature",
+    "featureName": "Primal Path Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-7-feral-instinct",
+    "featureName": "Feral Instinct",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-9-brutal-critical-1-die",
+    "featureName": "Brutal Critical (1 die)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-10-primal-path-feature",
+    "featureName": "Primal Path Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-11-relentless-rage",
+    "featureName": "Relentless Rage",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-11-relentless-rage",
+    "featureName": "Relentless Rage",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-13-brutal-critical-2-dice",
+    "featureName": "Brutal Critical (2 dice)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-13-brutal-critical-2-dice",
+    "featureName": "Brutal Critical (2 dice)",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-14-primal-path-feature",
+    "featureName": "Primal Path Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-15-persistent-rage",
+    "featureName": "Persistent Rage",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-15-persistent-rage",
+    "featureName": "Persistent Rage",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-17-brutal-critical-3-dice",
+    "featureName": "Brutal Critical (3 dice)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-17-brutal-critical-3-dice",
+    "featureName": "Brutal Critical (3 dice)",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-18-indomitable-might",
+    "featureName": "Indomitable Might",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-19-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-20-primal-champion",
+    "featureName": "Primal Champion",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-2-jack-of-all-trades",
+    "featureName": "Jack of All Trades",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-2-song-of-rest",
+    "featureName": "Song of Rest",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-3-bard-college",
+    "featureName": "Bard College",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-5-bardic-inspiration-d8",
+    "featureName": "Bardic Inspiration d8",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-5-bardic-inspiration-d8",
+    "featureName": "Bardic Inspiration d8",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-5-font-of-inspiration",
+    "featureName": "Font of Inspiration",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-5-font-of-inspiration",
+    "featureName": "Font of Inspiration",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-6-countercharm",
+    "featureName": "Countercharm",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-6-countercharm",
+    "featureName": "Countercharm",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-6-bard-college-feature",
+    "featureName": "Bard College Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-9-song-of-rest-d8",
+    "featureName": "Song of Rest d8",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-10-bardic-inspiration-d10",
+    "featureName": "Bardic Inspiration d10",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-10-bardic-inspiration-d10",
+    "featureName": "Bardic Inspiration d10",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-10-magical-secrets",
+    "featureName": "Magical Secrets",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-13-song-of-rest-d10",
+    "featureName": "Song of Rest d10",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-14-magical-secrets",
+    "featureName": "Magical Secrets",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-14-bard-college-feature",
+    "featureName": "Bard College Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-15-bardic-inspiration-d12",
+    "featureName": "Bardic Inspiration d12",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-15-bardic-inspiration-d12",
+    "featureName": "Bardic Inspiration d12",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-17-song-of-rest-d12",
+    "featureName": "Song of Rest d12",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-18-magical-secrets",
+    "featureName": "Magical Secrets",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-19-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-20-superior-inspiration",
+    "featureName": "Superior Inspiration",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-1-divine-domain",
+    "featureName": "Divine Domain",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-5-destroy-undead",
+    "featureName": "Destroy Undead",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-5-destroy-undead-cr-1-2",
+    "featureName": "Destroy Undead (CR 1/2)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-6-channel-divinity-2-rest",
+    "featureName": "Channel Divinity (2/rest)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-6-channel-divinity-2-rest",
+    "featureName": "Channel Divinity (2/rest)",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-6-divine-domain-feature",
+    "featureName": "Divine Domain Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-8-destroy-undead-cr-1",
+    "featureName": "Destroy Undead (CR 1)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-8-divine-domain-feature",
+    "featureName": "Divine Domain Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-10-divine-intervention",
+    "featureName": "Divine Intervention",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-11-destroy-undead-cr-2",
+    "featureName": "Destroy Undead (CR 2)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-14-destroy-undead-cr-3",
+    "featureName": "Destroy Undead (CR 3)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-17-destroy-undead-cr-4",
+    "featureName": "Destroy Undead (CR 4)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-17-divine-domain-feature",
+    "featureName": "Divine Domain Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-18-channel-divinity-3-rest",
+    "featureName": "Channel Divinity (3/rest)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-18-channel-divinity-3-rest",
+    "featureName": "Channel Divinity (3/rest)",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-19-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-20-improved-divine-intervention",
+    "featureName": "Improved Divine Intervention",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-20-improved-divine-intervention",
+    "featureName": "Improved Divine Intervention",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-1-druidic",
+    "featureName": "Druidic",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-2-wild-shape",
+    "featureName": "Wild Shape",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-2-druid-circle",
+    "featureName": "Druid Circle",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-4-wild-shape-improvement",
+    "featureName": "Wild Shape Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-4-wild-shape-improvement",
+    "featureName": "Wild Shape Improvement",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-6-druid-circle-feature",
+    "featureName": "Druid Circle Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-8-wild-shape-improvement",
+    "featureName": "Wild Shape Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-8-wild-shape-improvement",
+    "featureName": "Wild Shape Improvement",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-10-druid-circle-feature",
+    "featureName": "Druid Circle Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-14-druid-circle-feature",
+    "featureName": "Druid Circle Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-18-timeless-body",
+    "featureName": "Timeless Body",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-18-beast-spells",
+    "featureName": "Beast Spells",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-19-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-20-archdruid",
+    "featureName": "Archdruid",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-1-fighting-style",
+    "featureName": "Fighting Style",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-2-action-surge",
+    "featureName": "Action Surge",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-3-martial-archetype",
+    "featureName": "Martial Archetype",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-6-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-7-martial-archetype-feature",
+    "featureName": "Martial Archetype Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-9-indomitable",
+    "featureName": "Indomitable",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-10-martial-archetype-feature",
+    "featureName": "Martial Archetype Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-11-extra-attack-2",
+    "featureName": "Extra Attack (2)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-13-indomitable-2",
+    "featureName": "Indomitable (2)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-14-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-15-martial-archetype-feature",
+    "featureName": "Martial Archetype Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-17-action-surge-2",
+    "featureName": "Action Surge (2)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-17-action-surge-2",
+    "featureName": "Action Surge (2)",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-17-indomitable-3",
+    "featureName": "Indomitable (3)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-18-martial-archetype-feature",
+    "featureName": "Martial Archetype Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-19-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-20-extra-attack-3",
+    "featureName": "Extra Attack (3)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-1-unarmored-defense",
+    "featureName": "Unarmored Defense",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-1-martial-arts",
+    "featureName": "Martial Arts",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-2-ki",
+    "featureName": "Ki",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-2-ki",
+    "featureName": "Ki",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-2-unarmored-movement",
+    "featureName": "Unarmored Movement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-3-monastic-tradition",
+    "featureName": "Monastic Tradition",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-3-deflect-missiles",
+    "featureName": "Deflect Missiles",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-3-deflect-missiles",
+    "featureName": "Deflect Missiles",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-4-slow-fall",
+    "featureName": "Slow Fall",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-5-stunning-strike",
+    "featureName": "Stunning Strike",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-6-ki-empowered-strikes",
+    "featureName": "Ki-Empowered Strikes",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-6-ki-empowered-strikes",
+    "featureName": "Ki-Empowered Strikes",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-6-monastic-tradition-feature",
+    "featureName": "Monastic Tradition Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-7-evasion",
+    "featureName": "Evasion",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-7-stillness-of-mind",
+    "featureName": "Stillness of Mind",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-9-unarmored-movement-improvement",
+    "featureName": "Unarmored Movement Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-10-purity-of-body",
+    "featureName": "Purity of Body",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-11-monastic-tradition-feature",
+    "featureName": "Monastic Tradition Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-13-tongue-of-the-sun-and-moon",
+    "featureName": "Tongue of the Sun and Moon",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-14-diamond-soul",
+    "featureName": "Diamond Soul",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-15-timeless-body",
+    "featureName": "Timeless Body",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-17-monastic-tradition-feature",
+    "featureName": "Monastic Tradition Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-18-empty-body",
+    "featureName": "Empty Body",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-19-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-20-perfect-self",
+    "featureName": "Perfect Self",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-1-divine-sense",
+    "featureName": "Divine Sense",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-2-fighting-style",
+    "featureName": "Fighting Style",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-2-divine-smite",
+    "featureName": "Divine Smite",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-3-divine-health",
+    "featureName": "Divine Health",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-3-sacred-oath",
+    "featureName": "Sacred Oath",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-6-aura-of-protection",
+    "featureName": "Aura of Protection",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-7-sacred-oath-feature",
+    "featureName": "Sacred Oath Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-10-aura-of-courage",
+    "featureName": "Aura of Courage",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-11-improved-divine-smite",
+    "featureName": "Improved Divine Smite",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-14-cleansing-touch",
+    "featureName": "Cleansing Touch",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-15-sacred-oath-feature",
+    "featureName": "Sacred Oath Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-18-aura-improvements",
+    "featureName": "Aura Improvements",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-19-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-20-sacred-oath-capstone",
+    "featureName": "Sacred Oath Capstone",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-1-natural-explorer",
+    "featureName": "Natural Explorer",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-2-fighting-style",
+    "featureName": "Fighting Style",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-3-ranger-archetype",
+    "featureName": "Ranger Archetype",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-3-primeval-awareness",
+    "featureName": "Primeval Awareness",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-6-favored-enemy-improvement",
+    "featureName": "Favored Enemy Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-6-natural-explorer-improvement",
+    "featureName": "Natural Explorer Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-7-ranger-archetype-feature",
+    "featureName": "Ranger Archetype Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-8-land-s-stride",
+    "featureName": "Land’s Stride",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-10-hide-in-plain-sight",
+    "featureName": "Hide in Plain Sight",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-10-natural-explorer-improvement",
+    "featureName": "Natural Explorer Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-11-ranger-archetype-feature",
+    "featureName": "Ranger Archetype Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-14-vanish",
+    "featureName": "Vanish",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-14-favored-enemy-improvement",
+    "featureName": "Favored Enemy Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-15-ranger-archetype-feature",
+    "featureName": "Ranger Archetype Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-18-feral-senses",
+    "featureName": "Feral Senses",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-19-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-20-foe-slayer",
+    "featureName": "Foe Slayer",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-1-sneak-attack",
+    "featureName": "Sneak Attack",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-1-thieves-cant",
+    "featureName": "Thieves’ Cant",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-2-cunning-action",
+    "featureName": "Cunning Action",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-3-roguish-archetype",
+    "featureName": "Roguish Archetype",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-5-uncanny-dodge",
+    "featureName": "Uncanny Dodge",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-7-evasion",
+    "featureName": "Evasion",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-9-roguish-archetype-feature",
+    "featureName": "Roguish Archetype Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-10-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-11-reliable-talent",
+    "featureName": "Reliable Talent",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-13-roguish-archetype-feature",
+    "featureName": "Roguish Archetype Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-14-blindsense",
+    "featureName": "Blindsense",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-15-slippery-mind",
+    "featureName": "Slippery Mind",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-17-roguish-archetype-feature",
+    "featureName": "Roguish Archetype Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-18-elusive",
+    "featureName": "Elusive",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-19-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-20-stroke-of-luck",
+    "featureName": "Stroke of Luck",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-1-sorcerous-origin",
+    "featureName": "Sorcerous Origin",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-2-font-of-magic",
+    "featureName": "Font of Magic",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-3-metamagic",
+    "featureName": "Metamagic",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-6-sorcerous-origin-feature",
+    "featureName": "Sorcerous Origin Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-10-metamagic",
+    "featureName": "Metamagic",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-14-sorcerous-origin-feature",
+    "featureName": "Sorcerous Origin Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-17-metamagic",
+    "featureName": "Metamagic",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-18-sorcerous-origin-feature",
+    "featureName": "Sorcerous Origin Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-19-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-20-sorcerous-restoration",
+    "featureName": "Sorcerous Restoration",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-1-otherworldly-patron",
+    "featureName": "Otherworldly Patron",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-1-pact-magic",
+    "featureName": "Pact Magic",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-2-eldritch-invocations",
+    "featureName": "Eldritch Invocations",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-3-pact-boon",
+    "featureName": "Pact Boon",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-6-otherworldly-patron-feature",
+    "featureName": "Otherworldly Patron Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-10-otherworldly-patron-feature",
+    "featureName": "Otherworldly Patron Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-11-mystic-arcanum-6th",
+    "featureName": "Mystic Arcanum (6th)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-13-mystic-arcanum-7th",
+    "featureName": "Mystic Arcanum (7th)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-14-otherworldly-patron-feature",
+    "featureName": "Otherworldly Patron Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-15-mystic-arcanum-8th",
+    "featureName": "Mystic Arcanum (8th)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-17-mystic-arcanum-9th",
+    "featureName": "Mystic Arcanum (9th)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-19-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-20-eldritch-master",
+    "featureName": "Eldritch Master",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-1-arcane-recovery",
+    "featureName": "Arcane Recovery",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-2-arcane-tradition",
+    "featureName": "Arcane Tradition",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-6-arcane-tradition-feature",
+    "featureName": "Arcane Tradition Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-10-arcane-tradition-feature",
+    "featureName": "Arcane Tradition Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-14-arcane-tradition-feature",
+    "featureName": "Arcane Tradition Feature",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-18-spell-mastery",
+    "featureName": "Spell Mastery",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-19-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-20-signature-spells",
+    "featureName": "Signature Spells",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "path-of-the-berserker",
+    "entityName": "Path of the Berserker",
+    "featureId": "path-of-the-berserker-3-frenzy",
+    "featureName": "Frenzy",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "path-of-the-berserker",
+    "entityName": "Path of the Berserker",
+    "featureId": "path-of-the-berserker-6-mindless-rage",
+    "featureName": "Mindless Rage",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "path-of-the-berserker",
+    "entityName": "Path of the Berserker",
+    "featureId": "path-of-the-berserker-10-intimidating-presence",
+    "featureName": "Intimidating Presence",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "path-of-the-berserker",
+    "entityName": "Path of the Berserker",
+    "featureId": "path-of-the-berserker-14-retaliation",
+    "featureName": "Retaliation",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "college-of-lore",
+    "entityName": "College of Lore",
+    "featureId": "college-of-lore-3-bonus-proficiencies",
+    "featureName": "Bonus Proficiencies",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "college-of-lore",
+    "entityName": "College of Lore",
+    "featureId": "college-of-lore-3-cutting-words",
+    "featureName": "Cutting Words",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "college-of-lore",
+    "entityName": "College of Lore",
+    "featureId": "college-of-lore-6-additional-magical-secrets",
+    "featureName": "Additional Magical Secrets",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "college-of-lore",
+    "entityName": "College of Lore",
+    "featureId": "college-of-lore-14-peerless-skill",
+    "featureName": "Peerless Skill",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "circle-of-the-land",
+    "entityName": "Circle of the Land",
+    "featureId": "circle-of-the-land-2-natural-recovery",
+    "featureName": "Natural Recovery",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "circle-of-the-land",
+    "entityName": "Circle of the Land",
+    "featureId": "circle-of-the-land-10-nature-s-ward",
+    "featureName": "Nature's Ward",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "entityId": "thief",
+    "entityName": "Thief",
+    "featureId": "thief-13-use-magic-device",
+    "featureName": "Use Magic Device",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-1-unarmored-defense",
+    "featureName": "Unarmored Defense",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-1-weapon-mastery",
+    "featureName": "Weapon Mastery",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-2-danger-sense",
+    "featureName": "Danger Sense",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-2-reckless-attack",
+    "featureName": "Reckless Attack",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-3-barbarian-subclass",
+    "featureName": "Barbarian Subclass",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-3-primal-knowledge",
+    "featureName": "Primal Knowledge",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-5-fast-movement",
+    "featureName": "Fast Movement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-7-feral-instinct",
+    "featureName": "Feral Instinct",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-7-instinctive-pounce",
+    "featureName": "Instinctive Pounce",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-9-brutal-strike",
+    "featureName": "Brutal Strike",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-11-relentless-rage",
+    "featureName": "Relentless Rage",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-11-relentless-rage",
+    "featureName": "Relentless Rage",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-13-improved-brutal-strike",
+    "featureName": "Improved Brutal Strike",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-15-persistent-rage",
+    "featureName": "Persistent Rage",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-15-persistent-rage",
+    "featureName": "Persistent Rage",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-17-improved-brutal-strike",
+    "featureName": "Improved Brutal Strike",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-18-indomitable-might",
+    "featureName": "Indomitable Might",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-19-epic-boon",
+    "featureName": "Epic Boon",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "barbarian",
+    "entityName": "Barbarian",
+    "featureId": "barbarian-20-primal-champion",
+    "featureName": "Primal Champion",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-2-jack-of-all-trades",
+    "featureName": "Jack of All Trades",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-3-bard-subclass",
+    "featureName": "Bard Subclass",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-5-font-of-inspiration",
+    "featureName": "Font of Inspiration",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-5-font-of-inspiration",
+    "featureName": "Font of Inspiration",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-5-bardic-inspiration-d8",
+    "featureName": "Bardic Inspiration d8",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-5-bardic-inspiration-d8",
+    "featureName": "Bardic Inspiration d8",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-7-countercharm",
+    "featureName": "Countercharm",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-7-countercharm",
+    "featureName": "Countercharm",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-10-magical-secrets",
+    "featureName": "Magical Secrets",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-10-bardic-inspiration-d10",
+    "featureName": "Bardic Inspiration d10",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-10-bardic-inspiration-d10",
+    "featureName": "Bardic Inspiration d10",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-15-bardic-inspiration-d12",
+    "featureName": "Bardic Inspiration d12",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-15-bardic-inspiration-d12",
+    "featureName": "Bardic Inspiration d12",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-18-superior-inspiration",
+    "featureName": "Superior Inspiration",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-19-epic-boon",
+    "featureName": "Epic Boon",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "bard",
+    "entityName": "Bard",
+    "featureId": "bard-20-words-of-creation",
+    "featureName": "Words of Creation",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-1-divine-order",
+    "featureName": "Divine Order",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-3-cleric-subclass",
+    "featureName": "Cleric Subclass",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-5-sear-undead",
+    "featureName": "Sear Undead",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-7-blessed-strikes",
+    "featureName": "Blessed Strikes",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-10-divine-intervention",
+    "featureName": "Divine Intervention",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-14-improved-blessed-strikes",
+    "featureName": "Improved Blessed Strikes",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-19-epic-boon",
+    "featureName": "Epic Boon",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-20-greater-divine-intervention",
+    "featureName": "Greater Divine Intervention",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "cleric",
+    "entityName": "Cleric",
+    "featureId": "cleric-20-greater-divine-intervention",
+    "featureName": "Greater Divine Intervention",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-1-druidic",
+    "featureName": "Druidic",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-1-primal-order",
+    "featureName": "Primal Order",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-2-wild-shape",
+    "featureName": "Wild Shape",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-2-wild-companion",
+    "featureName": "Wild Companion",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-3-druid-subclass",
+    "featureName": "Druid Subclass",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-5-wild-resurgence",
+    "featureName": "Wild Resurgence",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-7-elemental-fury",
+    "featureName": "Elemental Fury",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-15-improved-elemental-fury",
+    "featureName": "Improved Elemental Fury",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-18-beast-spells",
+    "featureName": "Beast Spells",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-19-epic-boon",
+    "featureName": "Epic Boon",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "druid",
+    "entityName": "Druid",
+    "featureId": "druid-20-archdruid",
+    "featureName": "Archdruid",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-1-fighting-style",
+    "featureName": "Fighting Style",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-1-weapon-mastery",
+    "featureName": "Weapon Mastery",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-2-action-surge",
+    "featureName": "Action Surge",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-2-tactical-mind",
+    "featureName": "Tactical Mind",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-5-tactical-shift",
+    "featureName": "Tactical Shift",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-6-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-9-indomitable",
+    "featureName": "Indomitable",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-9-tactical-master",
+    "featureName": "Tactical Master",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-11-two-extra-attacks",
+    "featureName": "Two Extra Attacks",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-13-studied-attacks",
+    "featureName": "Studied Attacks",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-14-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-17-action-surge-2",
+    "featureName": "Action Surge (2)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-17-action-surge-2",
+    "featureName": "Action Surge (2)",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-17-indomitable-3",
+    "featureName": "Indomitable (3)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-19-epic-boon",
+    "featureName": "Epic Boon",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "fighter",
+    "entityName": "Fighter",
+    "featureId": "fighter-20-three-extra-attacks",
+    "featureName": "Three Extra Attacks",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-1-martial-arts",
+    "featureName": "Martial Arts",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-1-unarmored-defense",
+    "featureName": "Unarmored Defense",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-2-monk-s-focus",
+    "featureName": "Monk's Focus",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-2-monk-s-focus",
+    "featureName": "Monk's Focus",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-2-unarmored-movement",
+    "featureName": "Unarmored Movement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-2-uncanny-metabolism",
+    "featureName": "Uncanny Metabolism",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-3-deflect-attacks",
+    "featureName": "Deflect Attacks",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-3-deflect-attacks",
+    "featureName": "Deflect Attacks",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-3-monk-subclass",
+    "featureName": "Monk Subclass",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-4-slow-fall",
+    "featureName": "Slow Fall",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-5-stunning-strike",
+    "featureName": "Stunning Strike",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-6-empowered-strikes",
+    "featureName": "Empowered Strikes",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-7-evasion",
+    "featureName": "Evasion",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-9-acrobatic-movement",
+    "featureName": "Acrobatic Movement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-10-heightened-focus",
+    "featureName": "Heightened Focus",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-10-heightened-focus",
+    "featureName": "Heightened Focus",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-10-self-restoration",
+    "featureName": "Self-Restoration",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-10-self-restoration",
+    "featureName": "Self-Restoration",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-13-deflect-energy",
+    "featureName": "Deflect Energy",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-13-deflect-energy",
+    "featureName": "Deflect Energy",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-14-disciplined-survivor",
+    "featureName": "Disciplined Survivor",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-15-perfect-focus",
+    "featureName": "Perfect Focus",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-15-perfect-focus",
+    "featureName": "Perfect Focus",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-18-superior-defense",
+    "featureName": "Superior Defense",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-19-epic-boon",
+    "featureName": "Epic Boon",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "monk",
+    "entityName": "Monk",
+    "featureId": "monk-20-body-and-mind",
+    "featureName": "Body and Mind",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-1-weapon-mastery",
+    "featureName": "Weapon Mastery",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-2-fighting-style",
+    "featureName": "Fighting Style",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-2-paladin-s-smite",
+    "featureName": "Paladin’s Smite",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-5-faithful-steed",
+    "featureName": "Faithful Steed",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-6-aura-of-protection",
+    "featureName": "Aura of Protection",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-9-abjure-foes",
+    "featureName": "Abjure Foes",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-10-aura-of-courage",
+    "featureName": "Aura of Courage",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-11-radiant-strikes",
+    "featureName": "Radiant Strikes",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-14-restoring-touch",
+    "featureName": "Restoring Touch",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-18-aura-expansion",
+    "featureName": "Aura Expansion",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "paladin",
+    "entityName": "Paladin",
+    "featureId": "paladin-19-epic-boon",
+    "featureName": "Epic Boon",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-1-weapon-mastery",
+    "featureName": "Weapon Mastery",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-2-deft-explorer",
+    "featureName": "Deft Explorer",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-2-fighting-style",
+    "featureName": "Fighting Style",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-3-ranger-subclass",
+    "featureName": "Ranger Subclass",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-6-roving",
+    "featureName": "Roving",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-10-tireless",
+    "featureName": "Tireless",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-13-relentless-hunter",
+    "featureName": "Relentless Hunter",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-14-nature-s-veil",
+    "featureName": "Nature’s Veil",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-17-precise-hunter",
+    "featureName": "Precise Hunter",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-18-feral-senses",
+    "featureName": "Feral Senses",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-19-epic-boon",
+    "featureName": "Epic Boon",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "ranger",
+    "entityName": "Ranger",
+    "featureId": "ranger-20-foe-slayer",
+    "featureName": "Foe Slayer",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-1-sneak-attack",
+    "featureName": "Sneak Attack",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-1-thieves-cant",
+    "featureName": "Thieves’ Cant",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-1-weapon-mastery",
+    "featureName": "Weapon Mastery",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-2-cunning-action",
+    "featureName": "Cunning Action",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-3-steady-aim",
+    "featureName": "Steady Aim",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-5-cunning-strike",
+    "featureName": "Cunning Strike",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-5-uncanny-dodge",
+    "featureName": "Uncanny Dodge",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-7-evasion",
+    "featureName": "Evasion",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-7-reliable-talent",
+    "featureName": "Reliable Talent",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-10-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-11-improved-cunning-strike",
+    "featureName": "Improved Cunning Strike",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-14-devious-strikes",
+    "featureName": "Devious Strikes",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-15-slippery-mind",
+    "featureName": "Slippery Mind",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-18-elusive",
+    "featureName": "Elusive",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-19-epic-boon",
+    "featureName": "Epic Boon",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "rogue",
+    "entityName": "Rogue",
+    "featureId": "rogue-20-stroke-of-luck",
+    "featureName": "Stroke of Luck",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-1-innate-sorcery",
+    "featureName": "Innate Sorcery",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-2-font-of-magic",
+    "featureName": "Font of Magic",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-2-metamagic",
+    "featureName": "Metamagic",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-3-sorcerer-subclass",
+    "featureName": "Sorcerer Subclass",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-5-sorcerous-restoration",
+    "featureName": "Sorcerous Restoration",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-7-sorcery-incarnate",
+    "featureName": "Sorcery Incarnate",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-10-metamagic",
+    "featureName": "Metamagic",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-17-metamagic",
+    "featureName": "Metamagic",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-19-epic-boon",
+    "featureName": "Epic Boon",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "sorcerer",
+    "entityName": "Sorcerer",
+    "featureId": "sorcerer-20-arcane-apotheosis",
+    "featureName": "Arcane Apotheosis",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-1-eldritch-invocations",
+    "featureName": "Eldritch Invocations",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-1-pact-magic",
+    "featureName": "Pact Magic",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-2-magical-cunning",
+    "featureName": "Magical Cunning",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-9-contact-patron",
+    "featureName": "Contact Patron",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-11-mystic-arcanum-6th",
+    "featureName": "Mystic Arcanum (6th)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-13-mystic-arcanum-7th",
+    "featureName": "Mystic Arcanum (7th)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-15-mystic-arcanum-8th",
+    "featureName": "Mystic Arcanum (8th)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-17-mystic-arcanum-9th",
+    "featureName": "Mystic Arcanum (9th)",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-19-epic-boon",
+    "featureName": "Epic Boon",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "warlock",
+    "entityName": "Warlock",
+    "featureId": "warlock-20-eldritch-master",
+    "featureName": "Eldritch Master",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-1-ritual-adept",
+    "featureName": "Ritual Adept",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-1-arcane-recovery",
+    "featureName": "Arcane Recovery",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-2-scholar",
+    "featureName": "Scholar",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-4-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-5-memorize-spell",
+    "featureName": "Memorize Spell",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-8-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-12-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-16-ability-score-improvement",
+    "featureName": "Ability Score Improvement",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-18-spell-mastery",
+    "featureName": "Spell Mastery",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-19-epic-boon",
+    "featureName": "Epic Boon",
+    "severity": "medium",
+    "issue": "progression-name-only-needs-guidance-link"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "wizard",
+    "entityName": "Wizard",
+    "featureId": "wizard-20-signature-spells",
+    "featureName": "Signature Spells",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "path-of-the-berserker-2024",
+    "entityName": "Path of the Berserker",
+    "featureId": "path-of-the-berserker-2024-3-frenzy",
+    "featureName": "Frenzy",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "path-of-the-berserker-2024",
+    "entityName": "Path of the Berserker",
+    "featureId": "path-of-the-berserker-2024-6-mindless-rage",
+    "featureName": "Mindless Rage",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "path-of-the-berserker-2024",
+    "entityName": "Path of the Berserker",
+    "featureId": "path-of-the-berserker-2024-10-retaliation",
+    "featureName": "Retaliation",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "path-of-the-berserker-2024",
+    "entityName": "Path of the Berserker",
+    "featureId": "path-of-the-berserker-2024-14-intimidating-presence",
+    "featureName": "Intimidating Presence",
+    "severity": "medium",
+    "issue": "automatic-feature-without-direct-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "college-of-lore-2024",
+    "entityName": "College of Lore",
+    "featureId": "college-of-lore-2024-3-bonus-proficiencies",
+    "featureName": "Bonus Proficiencies",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "college-of-lore-2024",
+    "entityName": "College of Lore",
+    "featureId": "college-of-lore-2024-3-cutting-words",
+    "featureName": "Cutting Words",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "college-of-lore-2024",
+    "entityName": "College of Lore",
+    "featureId": "college-of-lore-2024-6-magical-discoveries",
+    "featureName": "Magical Discoveries",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "college-of-lore-2024",
+    "entityName": "College of Lore",
+    "featureId": "college-of-lore-2024-14-peerless-skill",
+    "featureName": "Peerless Skill",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "circle-of-the-land-2024",
+    "entityName": "Circle of the Land",
+    "featureId": "circle-of-the-land-2024-6-natural-recovery",
+    "featureName": "Natural Recovery",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "circle-of-the-land-2024",
+    "entityName": "Circle of the Land",
+    "featureId": "circle-of-the-land-2024-10-nature-s-ward",
+    "featureName": "Nature’s Ward",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "entityId": "thief-2024",
+    "entityName": "Thief",
+    "featureId": "thief-2024-13-use-magic-device",
+    "featureName": "Use Magic Device",
+    "severity": "medium",
+    "issue": "automatable-feature-without-direct-runtime-reference"
+  }
+]

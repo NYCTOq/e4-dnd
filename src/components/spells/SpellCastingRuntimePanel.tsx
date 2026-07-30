@@ -2,25 +2,86 @@ import { useMemo, useState } from "react";
 import {
   applyConcentrationDamage,
   buildSpellRuntimeSnapshot,
+  castCharacterSpell,
   setCharacterConcentration,
   spendCharacterSpellSlot,
   restoreCharacterSpellSlot,
   type SpellCompatibleCharacter,
 } from "../../core/rulesets/spellCharacterCombatAdapter";
 import { recoverSpellcastingResources } from "../../core/rulesets/spellRuntimeCompletion";
+import { resolveSpellOutcome, resolveSpellTargets } from "../../core/rulesets/spellOutcomeResolution";
+import type { SpellDamageRelation } from "../../core/rulesets/spellRuntimeCombatRules";
+import { advanceOngoingSpellEffects, endOngoingSpellEffect, resolveOngoingEffectSave, startOngoingSpellEffect, type OngoingEffectCharacter, type OngoingSpellEffect } from "../../core/rulesets/spellOngoingEffectRuntime";
 
-export type SpellCastingRuntimePanelProps<T extends SpellCompatibleCharacter> = {
+export type SpellCastingRuntimePanelProps<T extends SpellCompatibleCharacter & OngoingEffectCharacter> = {
   character: T;
   onCharacterChange: (character: T) => void;
   compact?: boolean;
 };
 
-export function SpellCastingRuntimePanel<T extends SpellCompatibleCharacter>({ character, onCharacterChange, compact = false }: SpellCastingRuntimePanelProps<T>) {
+export function SpellCastingRuntimePanel<T extends SpellCompatibleCharacter & OngoingEffectCharacter>({ character, onCharacterChange, compact = false }: SpellCastingRuntimePanelProps<T>) {
   const snapshot = useMemo(() => buildSpellRuntimeSnapshot(character), [character]);
   const [concentrationSpellId, setConcentrationSpellId] = useState(String(character.concentrationSpellId ?? ""));
   const [concentrationDamage, setConcentrationDamage] = useState(1);
   const [constitutionSave, setConstitutionSave] = useState(10);
   const [feedback, setFeedback] = useState("Büyü kaynakları hazır.");
+  const availableSpells = Array.isArray(character.spells) ? character.spells : [];
+  const [selectedSpellId, setSelectedSpellId] = useState(String(availableSpells[0]?.id ?? ""));
+  const selectedSpell = availableSpells.find((spell) => String(spell.id) === selectedSpellId) ?? null;
+  const [castLevel, setCastLevel] = useState(Number(selectedSpell?.level ?? 0));
+  const [slotSource, setSlotSource] = useState<"spell" | "pact">("spell");
+  const [targetArmorClass, setTargetArmorClass] = useState(10);
+  const [targetSaveTotal, setTargetSaveTotal] = useState(10);
+  const [targetCount, setTargetCount] = useState(1);
+  const [targetDamageRelation, setTargetDamageRelation] = useState<SpellDamageRelation>("normal");
+  const [ongoingDurationRounds, setOngoingDurationRounds] = useState(10);
+  const [ongoingSaveTotal, setOngoingSaveTotal] = useState(10);
+
+  const castableLevels = useMemo(() => {
+    if (!selectedSpell) return [];
+    if (selectedSpell.level === 0) return [0];
+    const slots = slotSource === "pact" ? snapshot.pactSlots : snapshot.spellSlots;
+    return slots
+      .filter((slot) => slot.level >= selectedSpell.level && slot.used < slot.max)
+      .map((slot) => slot.level);
+  }, [selectedSpell, slotSource, snapshot.pactSlots, snapshot.spellSlots]);
+
+  const selectSpell = (spellId: string) => {
+    setSelectedSpellId(spellId);
+    const spell = availableSpells.find((entry) => String(entry.id) === spellId);
+    setCastLevel(Number(spell?.level ?? 0));
+  };
+
+  const castSelectedSpell = () => {
+    if (!selectedSpell) { setFeedback("Kullanılacak büyüyü seç."); return; }
+    const transaction = castCharacterSpell(character, selectedSpell, castLevel, slotSource);
+    if (!transaction.ok) { setFeedback(transaction.reason ?? "Büyü kullanılamadı."); return; }
+    onCharacterChange(transaction.character as T);
+    const upcast = transaction.castLevel > selectedSpell.level ? " (" + transaction.castLevel + ". seviyede)" : "";
+    const replaced = transaction.replacedConcentrationSpellId ? " Önceki konsantrasyon sona erdi: " + transaction.replacedConcentrationSpellId + "." : "";
+    setFeedback(String(selectedSpell.name ?? selectedSpell.id) + upcast + " kullanıldı." + replaced);
+  };
+
+  const resolveSelectedSpell = () => {
+    if (!selectedSpell) { setFeedback("Çözümlenecek büyüyü seç."); return; }
+    const attackD20 = Math.floor(Math.random() * 20) + 1;
+    const result = resolveSpellOutcome({ spell: selectedSpell, characterLevel: snapshot.characterLevel, castLevel, spellAttackBonus: snapshot.spellAttackBonus, spellSaveDc: snapshot.spellSaveDc, attackD20, targetArmorClass, targetSaveTotal });
+    setFeedback(result.summary);
+  };
+
+  const resolveTargetGroup = () => {
+    if (!selectedSpell) { setFeedback("Çözümlenecek büyüyü seç."); return; }
+    const targets = Array.from({ length: Math.max(1, Math.min(50, targetCount)) }, (_, index) => ({ id: "target-" + (index + 1), label: "Hedef " + (index + 1), armorClass: targetArmorClass, saveTotal: targetSaveTotal, damageRelation: targetDamageRelation }));
+    const result = resolveSpellTargets({ spell: selectedSpell, characterLevel: snapshot.characterLevel, castLevel, spellAttackBonus: snapshot.spellAttackBonus, spellSaveDc: snapshot.spellSaveDc, targets });
+    setFeedback(result.summary + " · " + result.targetOutcomes.map((entry) => entry.targetLabel + ": " + (entry.appliedTotal ?? "etki")).join(", "));
+  };
+
+  const startSelectedOngoingEffect = () => {
+    if (!selectedSpell) { setFeedback("Sürdürülecek büyüyü seç."); return; }
+    const next = startOngoingSpellEffect(character, { spellId: String(selectedSpell.id), spellName: String(selectedSpell.name ?? selectedSpell.id), castLevel, durationRounds: ongoingDurationRounds, concentration: Boolean(selectedSpell.concentration), repeatSaveAbility: typeof selectedSpell.saveAbility === "string" ? selectedSpell.saveAbility : undefined, saveDc: snapshot.spellSaveDc, targetCount });
+    onCharacterChange(next as T);
+    setFeedback(String(selectedSpell.name ?? selectedSpell.id) + " devam eden etki olarak başlatıldı.");
+  };
 
   const mutateSlot = (level: number, mode: "spend" | "restore", pact = false) => {
     const next = mode === "spend"
@@ -75,6 +136,68 @@ export function SpellCastingRuntimePanel<T extends SpellCompatibleCharacter>({ c
           <span data-testid="spell-runtime-cantrip-dice">Cantrip {snapshot.cantripDice} zar</span>
         </div>
       </header>
+
+      <section className="spell-casting-runtime-panel__cast" aria-label="Büyü kullanma kontrolleri" data-testid="spell-runtime-cast-controls">
+        <h3>Büyü Kullan</h3>
+        {availableSpells.length === 0 ? <p>Karakterde kayıtlı büyü bulunmuyor.</p> : (
+          <div>
+            <label>Büyü
+              <select value={selectedSpellId} onChange={(event) => selectSpell(event.target.value)} data-testid="spell-runtime-spell-select">
+                {availableSpells.map((spell) => <option key={String(spell.id)} value={String(spell.id)}>{spell.name ?? spell.id} (Seviye {spell.level})</option>)}
+              </select>
+            </label>
+            {selectedSpell && selectedSpell.level > 0 && (
+              <>
+                <label>Slot kaynağı
+                  <select value={slotSource} onChange={(event) => { const source = event.target.value as "spell" | "pact"; setSlotSource(source); setCastLevel(Number(selectedSpell.level)); }} data-testid="spell-runtime-slot-source">
+                    <option value="spell">Normal slot</option>
+                    {snapshot.pactSlots.length > 0 && <option value="pact">Pact slotu</option>}
+                  </select>
+                </label>
+                <label>Kullanım seviyesi
+                  <select value={castLevel} onChange={(event) => setCastLevel(Number(event.target.value))} data-testid="spell-runtime-cast-level">
+                    {castableLevels.length === 0 && <option value={selectedSpell.level}>Uygun slot yok</option>}
+                    {castableLevels.map((level) => <option key={level} value={level}>{level}. seviye</option>)}
+                  </select>
+                </label>
+              </>
+            )}
+            <button type="button" onClick={castSelectedSpell} disabled={!selectedSpell || (selectedSpell.level > 0 && castableLevels.length === 0)} data-testid="spell-runtime-cast-button">Kullan</button>
+            <label>Hedef AC <input type="number" min="1" value={targetArmorClass} onChange={(event) => setTargetArmorClass(Math.max(1, Number(event.target.value) || 1))} data-testid="spell-runtime-target-ac" /></label>
+            <label>Hedef save toplamı <input type="number" value={targetSaveTotal} onChange={(event) => setTargetSaveTotal(Number(event.target.value) || 0)} data-testid="spell-runtime-target-save" /></label>
+            <button type="button" onClick={resolveSelectedSpell} disabled={!selectedSpell} data-testid="spell-runtime-resolve-button">Etkiyi Zar Atarak Çöz</button>
+            <label>Hedef sayısı <input type="number" min="1" max="50" value={targetCount} onChange={(event) => setTargetCount(Math.max(1, Math.min(50, Number(event.target.value) || 1)))} data-testid="spell-runtime-target-count" /></label>
+            <label>Hasar ilişkisi
+              <select value={targetDamageRelation} onChange={(event) => setTargetDamageRelation(event.target.value as SpellDamageRelation)} data-testid="spell-runtime-damage-relation">
+                <option value="normal">Normal</option>
+                <option value="resistant">Dirençli</option>
+                <option value="immune">Bağışık</option>
+                <option value="vulnerable">Savunmasız</option>
+              </select>
+            </label>
+            <button type="button" onClick={resolveTargetGroup} disabled={!selectedSpell} data-testid="spell-runtime-resolve-group-button">Hedef Grubunu Çöz</button>
+          </div>
+        )}
+      </section>
+
+      <section className="spell-casting-runtime-panel__ongoing" data-testid="spell-runtime-ongoing-effects">
+        <h3>Devam Eden Büyü Etkileri</h3>
+        <div>
+          <label>Süre (tur) <input type="number" min="1" value={ongoingDurationRounds} onChange={(event) => setOngoingDurationRounds(Math.max(1, Number(event.target.value) || 1))} data-testid="spell-runtime-ongoing-duration" /></label>
+          <button type="button" onClick={startSelectedOngoingEffect} disabled={!selectedSpell} data-testid="spell-runtime-start-ongoing">Etkiyi Başlat</button>
+          <button type="button" onClick={() => { onCharacterChange(advanceOngoingSpellEffects(character) as T); setFeedback("Devam eden büyü etkileri bir tur ilerletildi."); }} data-testid="spell-runtime-advance-effects">Turu İlerlet</button>
+        </div>
+        {((character.ongoingSpellEffects ?? []) as OngoingSpellEffect[]).length === 0 ? <p>Devam eden büyü etkisi yok.</p> : ((character.ongoingSpellEffects ?? []) as OngoingSpellEffect[]).map((effect: OngoingSpellEffect) => (
+          <article key={effect.id} data-testid={`spell-runtime-effect-${effect.id}`}>
+            <strong>{effect.spellName}</strong>
+            <span>{effect.remainingRounds === null ? "Süresiz" : effect.remainingRounds + " tur"}</span>
+            <span>{effect.targets.filter((target: OngoingSpellEffect["targets"][number]) => target.active).length}/{effect.targets.length} aktif hedef</span>
+            <label>Tekrar save <input type="number" value={ongoingSaveTotal} onChange={(event) => setOngoingSaveTotal(Number(event.target.value) || 0)} /></label>
+            <button type="button" disabled={!effect.targets.some((target: OngoingSpellEffect["targets"][number]) => target.active)} onClick={() => { const target = effect.targets.find((entry: OngoingSpellEffect["targets"][number]) => entry.active); if (!target) return; const result = resolveOngoingEffectSave(character, effect.id, target.id, ongoingSaveTotal); onCharacterChange(result.character as T); setFeedback(result.succeeded ? target.label + " save başarılı." : target.label + " save başarısız."); }}>Aktif Hedefe Save</button>
+            <button type="button" onClick={() => { onCharacterChange(endOngoingSpellEffect(character, effect.id) as T); setFeedback(effect.spellName + " etkisi sona erdi."); }}>Bitir</button>
+          </article>
+        ))}
+      </section>
 
       <div className="spell-casting-runtime-panel__rest-actions" aria-label="Büyü slotu dinlenme kontrolleri">
         <button type="button" onClick={() => recover("short")} data-testid="spell-runtime-short-rest">Kısa Dinlenme</button>

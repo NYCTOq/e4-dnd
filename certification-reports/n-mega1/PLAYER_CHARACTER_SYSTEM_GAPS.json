@@ -1,0 +1,826 @@
+[
+  {
+    "ruleset": "dnd_2014",
+    "category": "feats",
+    "id": "durable",
+    "name": "Durable",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "feats",
+    "id": "grappler",
+    "name": "Grappler",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "acid-splash",
+    "name": "Acid Splash",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "chill-touch",
+    "name": "Chill Touch",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "druidcraft",
+    "name": "Druidcraft",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "mending",
+    "name": "Mending",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "minor-illusion",
+    "name": "Minor Illusion",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "poison-spray",
+    "name": "Poison Spray",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "prestidigitation",
+    "name": "Prestidigitation",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "produce-flame",
+    "name": "Produce Flame",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "ray-of-frost",
+    "name": "Ray of Frost",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "shillelagh",
+    "name": "Shillelagh",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "shocking-grasp",
+    "name": "Shocking Grasp",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "spare-the-dying",
+    "name": "Spare the Dying",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "thorn-whip",
+    "name": "Thorn Whip",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "faerie-fire",
+    "name": "Faerie Fire",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "inflict-wounds",
+    "name": "Inflict Wounds",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "sleep",
+    "name": "Sleep",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "thunderwave",
+    "name": "Thunderwave",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "aid",
+    "name": "Aid",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "prayer-of-healing",
+    "name": "Prayer of Healing",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "scorching-ray",
+    "name": "Scorching Ray",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "beacon-of-hope",
+    "name": "Beacon of Hope",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "dispel-magic",
+    "name": "Dispel Magic",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "revivify",
+    "name": "Revivify",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "polymorph",
+    "name": "Polymorph",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "greater-restoration",
+    "name": "Greater Restoration",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "mass-cure-wounds",
+    "name": "Mass Cure Wounds",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "spells",
+    "id": "disintegrate",
+    "name": "Disintegrate",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "quarterstaff",
+    "name": "Quarterstaff",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "shortbow",
+    "name": "Shortbow",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "crossbow-light",
+    "name": "Light Crossbow",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "padded-armor",
+    "name": "Padded Armor",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "leather-armor",
+    "name": "Leather Armor",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "studded-leather-armor",
+    "name": "Studded Leather Armor",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "hide-armor",
+    "name": "Hide Armor",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "chain-shirt",
+    "name": "Chain Shirt",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "breastplate",
+    "name": "Breastplate",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "half-plate",
+    "name": "Half Plate",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "ring-mail",
+    "name": "Ring Mail",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "splint-armor",
+    "name": "Splint Armor",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "holy-symbol",
+    "name": "Holy Symbol",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "component-pouch",
+    "name": "Component Pouch",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "explorers-pack",
+    "name": "Explorer's Pack",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "priests-pack",
+    "name": "Priest's Pack",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "healers-kit",
+    "name": "Healer's Kit",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "rope-hempen",
+    "name": "Hempen Rope",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2014",
+    "category": "items",
+    "id": "potion-of-healing",
+    "name": "Potion of Healing",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "crafter",
+    "name": "Crafter",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "magic-initiate-cleric",
+    "name": "Magic Initiate (Cleric)",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "magic-initiate-druid",
+    "name": "Magic Initiate (Druid)",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "magic-initiate-wizard",
+    "name": "Magic Initiate (Wizard)",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "musician",
+    "name": "Musician",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "tavern-brawler",
+    "name": "Tavern Brawler",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "great-weapon-master",
+    "name": "Great Weapon Master",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "boon-of-combat-prowess",
+    "name": "Boon of Combat Prowess",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "feats",
+    "id": "boon-of-fortitude",
+    "name": "Boon of Fortitude",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "acid-splash",
+    "name": "Acid Splash",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "chill-touch",
+    "name": "Chill Touch",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "druidcraft",
+    "name": "Druidcraft",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "mending",
+    "name": "Mending",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "minor-illusion",
+    "name": "Minor Illusion",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "poison-spray",
+    "name": "Poison Spray",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "prestidigitation",
+    "name": "Prestidigitation",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "produce-flame",
+    "name": "Produce Flame",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "ray-of-frost",
+    "name": "Ray of Frost",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "shillelagh",
+    "name": "Shillelagh",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "shocking-grasp",
+    "name": "Shocking Grasp",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "spare-the-dying",
+    "name": "Spare the Dying",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "thorn-whip",
+    "name": "Thorn Whip",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "faerie-fire",
+    "name": "Faerie Fire",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "inflict-wounds",
+    "name": "Inflict Wounds",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "sleep",
+    "name": "Sleep",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "thunderwave",
+    "name": "Thunderwave",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "aid",
+    "name": "Aid",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "prayer-of-healing",
+    "name": "Prayer of Healing",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "scorching-ray",
+    "name": "Scorching Ray",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "beacon-of-hope",
+    "name": "Beacon of Hope",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "dispel-magic",
+    "name": "Dispel Magic",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "revivify",
+    "name": "Revivify",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "polymorph",
+    "name": "Polymorph",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "greater-restoration",
+    "name": "Greater Restoration",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "mass-cure-wounds",
+    "name": "Mass Cure Wounds",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "spells",
+    "id": "disintegrate",
+    "name": "Disintegrate",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "quarterstaff",
+    "name": "Quarterstaff",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "shortbow",
+    "name": "Shortbow",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "crossbow-light",
+    "name": "Light Crossbow",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "padded-armor",
+    "name": "Padded Armor",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "leather-armor",
+    "name": "Leather Armor",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "studded-leather-armor",
+    "name": "Studded Leather Armor",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "hide-armor",
+    "name": "Hide Armor",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "chain-shirt",
+    "name": "Chain Shirt",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "breastplate",
+    "name": "Breastplate",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "half-plate",
+    "name": "Half Plate",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "ring-mail",
+    "name": "Ring Mail",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "splint-armor",
+    "name": "Splint Armor",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "holy-symbol",
+    "name": "Holy Symbol",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "component-pouch",
+    "name": "Component Pouch",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "explorers-pack",
+    "name": "Explorer's Pack",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "priests-pack",
+    "name": "Priest's Pack",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "healers-kit",
+    "name": "Healer's Kit",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "rope-hempen",
+    "name": "Hempen Rope",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  },
+  {
+    "ruleset": "dnd_2024",
+    "category": "items",
+    "id": "potion-of-healing",
+    "name": "Potion of Healing",
+    "severity": "medium",
+    "issue": "no-direct-id-or-name-test-reference"
+  }
+]

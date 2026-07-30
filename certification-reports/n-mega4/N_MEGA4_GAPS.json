@@ -1,0 +1,20 @@
+[
+  {
+    "severity": "high",
+    "code": "tool-proficiency-rules",
+    "message": "tool-proficiency-rules marker not found",
+    "evidence": {
+      "file": "src/core/rulesets/proficiencyRules.ts",
+      "pattern": "/tool/i"
+    }
+  },
+  {
+    "severity": "high",
+    "code": "language-rules",
+    "message": "language-rules marker not found",
+    "evidence": {
+      "file": "src/core/rulesets/proficiencyRules.ts",
+      "pattern": "/language/i"
+    }
+  }
+]

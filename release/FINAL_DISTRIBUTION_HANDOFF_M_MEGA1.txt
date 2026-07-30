@@ -1,0 +1,18 @@
+﻿E4 D&D 6.2.0 FINAL DISTRIBUTION
+
+Git:
+- main pushed
+- v6.2.0 pushed
+
+Release:
+- release\E4_DND_6.2.0_PUBLIC.zip
+- release\E4_DND_6.2.0_PUBLIC.sha256
+
+Hosting:
+- release\E4_DND_6.2.0_APACHE_UPLOAD.zip
+- release\E4_DND_6.2.0_NGINX_UPLOAD.zip
+
+Remaining manual evidence:
+- live URL smoke if BaseUrl was not supplied
+- physical device acceptance
+- staging rollback rehearsal
