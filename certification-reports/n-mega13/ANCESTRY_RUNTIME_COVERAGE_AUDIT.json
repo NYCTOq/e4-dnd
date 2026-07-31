@@ -1,0 +1,329 @@
+{
+  "generatedAt": "2026-07-31T06:20:57.917Z",
+  "note": "Unsupported here only means not interpreted by ancestryRuntimeRules.ts. Another builder or runtime module may still handle it.",
+  "totals": {
+    "traits": 80,
+    "recognizedByAncestryRuntime": 27,
+    "notRecognizedByAncestryRuntime": 53
+  },
+  "unsupported": [
+    {
+      "edition": "dnd_2014",
+      "owner": "Human",
+      "trait": "Extra Language",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Dwarf",
+      "trait": "Darkvision",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Dwarf",
+      "trait": "Stonecunning",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Dwarf / Mountain Dwarf",
+      "trait": "Dwarven Armor Training",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Elf",
+      "trait": "Darkvision",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Elf",
+      "trait": "Keen Senses",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Elf",
+      "trait": "Trance",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Elf / High Elf",
+      "trait": "Elf Weapon Training",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Elf / High Elf",
+      "trait": "Cantrip",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Elf / High Elf",
+      "trait": "Extra Language",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Elf / Wood Elf",
+      "trait": "Mask of the Wild",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Elf / Drow",
+      "trait": "Sunlight Sensitivity",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Elf / Drow",
+      "trait": "Drow Magic",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Halfling",
+      "trait": "Halfling Nimbleness",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Halfling / Lightfoot",
+      "trait": "Naturally Stealthy",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Dragonborn",
+      "trait": "Draconic Ancestry",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Dragonborn",
+      "trait": "Damage Resistance",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Gnome",
+      "trait": "Darkvision",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Gnome / Forest Gnome",
+      "trait": "Natural Illusionist",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Gnome / Forest Gnome",
+      "trait": "Speak with Small Beasts",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Gnome / Rock Gnome",
+      "trait": "Artificer's Lore",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Gnome / Rock Gnome",
+      "trait": "Tinker",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Half-Elf",
+      "trait": "Darkvision",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Half-Elf",
+      "trait": "Skill Versatility",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Half-Orc",
+      "trait": "Darkvision",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Half-Orc",
+      "trait": "Menacing",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Tiefling",
+      "trait": "Darkvision",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2014",
+      "owner": "Tiefling",
+      "trait": "Infernal Legacy",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Aasimar",
+      "trait": "Darkvision",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Aasimar",
+      "trait": "Light Bearer",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Aasimar",
+      "trait": "Celestial Revelation",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Dragonborn",
+      "trait": "Draconic Ancestry",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Dragonborn",
+      "trait": "Damage Resistance",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Dragonborn",
+      "trait": "Darkvision",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Dwarf",
+      "trait": "Darkvision",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Dwarf",
+      "trait": "Stonecunning",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Elf",
+      "trait": "Darkvision",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Elf",
+      "trait": "Elven Lineage",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Elf",
+      "trait": "Keen Senses",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Elf",
+      "trait": "Trance",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Gnome",
+      "trait": "Darkvision",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Gnome",
+      "trait": "Gnomish Lineage",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Goliath",
+      "trait": "Giant Ancestry",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Goliath",
+      "trait": "Powerful Build",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Halfling",
+      "trait": "Halfling Nimbleness",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Halfling",
+      "trait": "Naturally Stealthy",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Human",
+      "trait": "Resourceful",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Human",
+      "trait": "Skillful",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Human",
+      "trait": "Versatile",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Orc",
+      "trait": "Darkvision",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Tiefling",
+      "trait": "Darkvision",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Tiefling",
+      "trait": "Fiendish Legacy",
+      "recognizedByAncestryRuntime": false
+    },
+    {
+      "edition": "dnd_2024",
+      "owner": "Tiefling",
+      "trait": "Otherworldly Presence",
+      "recognizedByAncestryRuntime": false
+    }
+  ]
+}
