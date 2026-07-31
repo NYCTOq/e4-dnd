@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-07-31T06:28:16.686Z",
+  "package": "N-MEGA14",
+  "coverage": {
+    "spellcasting": [
+      "primary class spellcasting ability inference",
+      "spellSources based multiclass ability inference",
+      "explicit ability override compatibility"
+    ],
+    "ancestry": [
+      "selected Dragonborn and Tiefling resistance",
+      "selected lineage spell progression",
+      "2014 Dwarf weapon and tool proficiency contract",
+      "fixed ancestry skills",
+      "trait based saves, resistance, darkvision and HP"
+    ]
+  },
+  "manualFollowUp": [
+    "Wire toolChoiceOptions to a required 2014 Dwarf builder choice.",
+    "Use getSpellSaveDcForSpell/getSpellAttackBonusForSpell on spell-specific multiclass UI.",
+    "Add UI controls for active Aasimar and Goliath ancestry actions where not already present."
+  ]
+}

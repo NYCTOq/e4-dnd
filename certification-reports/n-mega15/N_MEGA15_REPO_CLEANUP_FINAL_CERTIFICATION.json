@@ -1,0 +1,14 @@
+﻿{
+    "package":  "N-MEGA15",
+    "generatedAt":  "2026-07-31T09:32:42.4232753+03:00",
+    "archivedHelperFiles":  84,
+    "removedTemporaryBackups":  3,
+    "lineEndingPolicy":  ".gitattributes",
+    "ignorePolicy":  ".gitignore",
+    "qualityGates":  [
+                         "lint",
+                         "unit/integration tests",
+                         "production build",
+                         "full Playwright E2E"
+                     ]
+}

@@ -29,3 +29,12 @@ playwright-report/
 test-results/
 
 e4_dnd.zip
+# N-MEGA15 generated and local-only artifacts
+test-results/
+playwright-report/
+blob-report/
+*.nmega*.bak
+*.tmp
+*.log
+N_MEGA*_FEEDBACK_ENCODING_DIAG.txt
+release/*_UPLOAD/
