@@ -1,0 +1,15 @@
+﻿{
+    "package":  "N-MEGA17",
+    "generatedAt":  "2026-07-31T09:56:06.4722275+03:00",
+    "lintWarnings":  0,
+    "lintErrors":  0,
+    "fixes":  [
+                  "spell selector useMemo dependency closure",
+                  "class spellcasting draft dependency closure",
+                  "stable level-up classes memoization",
+                  "safe optional spell metadata assertion",
+                  "documented Fast Refresh co-location exceptions"
+              ],
+    "tests":  "passed",
+    "build":  "passed"
+}

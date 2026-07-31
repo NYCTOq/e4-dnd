@@ -1,3 +1,4 @@
+/* eslint-disable react/only-export-components */
 import { createContext, useContext, useMemo, useState } from "react";
 import {
   addRecentItem,

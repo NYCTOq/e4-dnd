@@ -45,9 +45,10 @@ export function LevelUpRuntimePanel<
   onCharacterChange,
   featOptions = [],
 }: LevelUpRuntimePanelProps<T>) {
-  const classes = Array.isArray(character.classes)
-    ? character.classes
-    : [];
+  const classes = useMemo(
+    () => (Array.isArray(character.classes) ? character.classes : []),
+    [character.classes],
+  );
 
   const [classId, setClassId] = useState(
     classes[0]?.classId ?? "",

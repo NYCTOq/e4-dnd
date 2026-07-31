@@ -1,3 +1,4 @@
+/* eslint-disable react/only-export-components */
 import { useEffect, useMemo, useState } from "react";
 import type { DndItemData, DndSpellData, RulesetData } from "../../core/rulesets/ruleset.types";
 import type { Character, CharacterDraft, CharacterHitDiePool } from "../../core/character/character.types";
@@ -561,7 +562,7 @@ export function CharacterSpellSelector({
       const matchesAvailableLevel = spell.level === 0 || spell.level <= highestSpellLevel;
       return matchesClass && matchesLevel && matchesSearch && matchesAvailableLevel;
     });
-  }, [rulesetData, searchTerm, levelFilter, normalizedClassName, highestSpellLevel]);
+  }, [rulesetData, searchTerm, levelFilter, normalizedClassName, highestSpellLevel, spellcastingProfile.spellListClass]);
 
   const knownSpellIdSet = useMemo(
     () => new Set(knownSpellIds),
@@ -806,7 +807,7 @@ export function ClassBasedSpellSelector({
 }) {
   const castingClasses = useMemo(
     () => getCharacterSpellcastingClasses(draft, rulesetData),
-    [draft.classLevels, draft.className, draft.level, draft.subclass, rulesetData],
+    [draft, rulesetData],
   );
   const [activeClass, setActiveClass] = useState("");
 

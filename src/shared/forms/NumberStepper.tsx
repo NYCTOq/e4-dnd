@@ -1,3 +1,4 @@
+/* eslint-disable react/only-export-components */
 export function clampStepValue(value: number, min: number, max: number, delta: number) {
   const safe = Number.isFinite(value) ? value : min;
   return Math.min(max, Math.max(min, safe + delta));

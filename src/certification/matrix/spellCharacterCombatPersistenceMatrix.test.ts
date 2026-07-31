@@ -63,10 +63,10 @@ describe("v5.113C spell character combat persistence matrix", () => {
           expect(restoredSlot.customMetadata).toEqual({
             campaign: "Alabasta",
           });
-          expect(
-            (restoredSlot.spells?.[0] as Record<string, unknown>)
-              .customEffect,
-          ).toBe("sandstorm");
+          const restoredSpell = restoredSlot.spells?.[0] as
+            | Record<string, unknown>
+            | undefined;
+          expect(restoredSpell?.customEffect).toBe("sandstorm");
         });
       }
     }

@@ -1,3 +1,4 @@
+/* eslint-disable react/only-export-components */
 import { useCallback, useEffect, useState } from "react";
 import { useDialogFocus } from "./dialogFocus";
 
